@@ -1,0 +1,1486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI × Biology Ecosystem Map — April 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg: #060a10; --bg2: #0c1118; --border: #1a2233; --text: #e2e8f0; --muted: #4a5568;
+  --teal: #00d4aa; --teal-dim: #00d4aa18; --teal-border: #00d4aa40; --teal-text: #7de8d6;
+  --purple: #a78bfa; --purple-dim: #a78bfa15; --purple-border: #a78bfa40; --purple-text: #c4b5fd;
+  --blue: #60a5fa; --blue-dim: #60a5fa12; --blue-border: #60a5fa40; --blue-text: #93c5fd;
+  --coral: #fb923c; --coral-dim: #fb923c12; --coral-border: #fb923c40; --coral-text: #fdba74;
+  --slate: #94a3b8; --slate-dim: #94a3b810; --slate-border: #94a3b840; --slate-text: #cbd5e1;
+  --amber: #fbbf24; --amber-dim: #fbbf2410; --amber-border: #fbbf2440; --amber-text: #fcd34d;
+  --gray: #9ca3af; --gray-dim: #9ca3af12; --gray-border: #9ca3af40; --gray-text: #d1d5db;
+}
+html, body { height: 100%; }
+body { background: var(--bg); color: var(--text); font-family: 'IBM Plex Mono', monospace; min-height: 100vh; display: flex; flex-direction: column; max-width: 1280px; margin: 0 auto; }
+
+/* HEADER */
+.header { display: flex; align-items: flex-end; justify-content: space-between; padding: 48px 48px 32px; border-bottom: 1px solid var(--border); gap: 24px; flex-wrap: wrap; flex-shrink: 0; }
+h1 { font-family: 'Syne', sans-serif; font-size: 48px; font-weight: 800; letter-spacing: -0.03em; line-height: 1.0; color: #f1f5f9; }
+h1 .x { color: var(--teal); }
+.header-meta { text-align: right; }
+.header-meta .date { font-size: 11px; color: #94a3b8; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 6px; }
+.header-meta .total { font-family: 'Syne', sans-serif; font-size: 36px; font-weight: 700; color: var(--teal); line-height: 1; }
+.header-meta .total-label { font-size: 11px; color: #94a3b8; letter-spacing: 0.08em; margin-top: 4px; }
+
+/* TABS */
+.tab-bar { display: flex; padding: 0 48px; border-bottom: 1px solid var(--border); flex-shrink: 0; }
+.tab-btn { padding: 14px 24px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #94a3b8; background: none; border: none; cursor: pointer; border-bottom: 2px solid transparent; margin-bottom: -1px; letter-spacing: 0.08em; text-transform: uppercase; transition: all 0.15s; }
+.tab-btn:hover { color: #e2e8f0; }
+.tab-btn.active { color: var(--teal); border-bottom-color: var(--teal); }
+
+/* PANELS */
+.panel { display: none; }
+.panel.active { display: block; }
+
+/* DIRECTORY */
+#panel-directory { padding: 40px 48px 80px; }
+.controls { display: flex; align-items: center; gap: 16px; margin-bottom: 16px; flex-wrap: wrap; }
+.search-wrap { position: relative; flex: 1; max-width: 400px; }
+.search-wrap svg { position: absolute; left: 14px; top: 50%; transform: translateY(-50%); pointer-events: none; color: #8fa0b8; }
+input[type="text"] { width: 100%; background: var(--bg2); border: 1px solid var(--border); color: #e2e8f0; padding: 11px 16px 11px 42px; font-family: 'IBM Plex Mono', monospace; font-size: 13px; border-radius: 8px; outline: none; transition: border-color 0.2s, box-shadow 0.2s; }
+input[type="text"]:focus { border-color: var(--teal); box-shadow: 0 0 0 3px var(--teal-dim); }
+input[type="text"]::placeholder { color: #8fa0b8; }
+.total-count { font-size: 12px; color: #b8c8d8; white-space: nowrap; }
+.total-count span { color: var(--teal); font-weight: 500; }
+.click-hint { font-size: 11px; color: #b8c8d8; }
+.click-hint em { color: var(--teal); font-style: normal; }
+.legend { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 36px; }
+.leg { display: flex; align-items: center; gap: 7px; font-size: 11px; color: #b8c8d8; padding: 4px 10px; border: 1px solid var(--border); border-radius: 4px; background: var(--bg2); cursor: pointer; transition: all 0.15s; }
+.leg:hover { border-color: var(--slate); color: #f1f5f9; }
+.leg.active-filter { border-color: var(--teal); color: var(--teal-text); background: var(--teal-dim); }
+.leg-dot { width: 7px; height: 7px; border-radius: 2px; flex-shrink: 0; }
+.categories { display: flex; flex-direction: column; }
+.cat-section { display: grid; grid-template-columns: 200px 1px 1fr; gap: 0 24px; padding: 28px 0; }
+.cat-section.collapsed { display: none; }
+.cat-label { display: flex; flex-direction: column; gap: 8px; padding: 4px 0; }
+.cat-tag { display: inline-block; font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; padding: 3px 8px; border-radius: 3px; font-weight: 500; width: fit-content; margin-bottom: 2px; }
+.cat-name { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 16px; letter-spacing: -0.01em; line-height: 1.25; }
+.cat-count { font-size: 11px; color: var(--muted); margin-top: 4px; }
+.cat-divider { background: var(--border); width: 1px; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; align-content: flex-start; padding: 4px 0; }
+.chip { display: inline-flex; align-items: center; gap: 5px; padding: 5px 11px; border-radius: 5px; font-size: 12px; font-family: 'IBM Plex Mono', monospace; border: 1px solid; cursor: pointer; transition: all 0.15s; white-space: nowrap; line-height: 1.4; user-select: none; }
+.chip.hidden { display: none; }
+.badge { font-size: 9px; padding: 1px 5px; border-radius: 2px; font-weight: 600; letter-spacing: 0.08em; opacity: 0.85; }
+.cat-separator { height: 1px; background: var(--border); }
+.no-results { display: none; color: var(--muted); font-size: 13px; padding: 40px 0; text-align: center; }
+
+/* Stage filter row */
+.stage-row { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin-bottom: 28px; }
+.stage-label { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #4a5568; margin-right: 4px; white-space: nowrap; }
+.sleg { display: flex; align-items: center; gap: 6px; font-size: 11px; color: #b8c8d8; padding: 4px 10px; border: 1px solid var(--border); border-radius: 4px; background: var(--bg2); cursor: pointer; transition: all 0.15s; }
+.sleg:hover { color: #f1f5f9; }
+.sleg.active-filter { color: #f1f5f9; }
+.sdot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
+
+/* Stage badge on chips */
+.sbadge { font-size: 9px; padding: 1px 5px; border-radius: 3px; font-weight: 600; letter-spacing: 0.06em; opacity: 0.9; margin-left: 2px; }
+
+.cat-foundation .cat-tag { background: var(--teal-dim); color: var(--teal); border: 1px solid var(--teal-border); }
+.cat-foundation .cat-name { color: var(--teal); }
+.cat-foundation .cat-divider { background: var(--teal-border); }
+.cat-foundation .chip { background: var(--teal-dim); border-color: var(--teal-border); color: var(--teal-text); }
+.cat-foundation .chip:hover { background: #00d4aa22; border-color: var(--teal); color: var(--teal); transform: translateY(-1px); }
+.cat-foundation .badge { background: var(--teal-border); color: var(--teal); }
+.cat-discovery .cat-tag { background: var(--purple-dim); color: var(--purple); border: 1px solid var(--purple-border); }
+.cat-discovery .cat-name { color: var(--purple); }
+.cat-discovery .cat-divider { background: var(--purple-border); }
+.cat-discovery .chip { background: var(--purple-dim); border-color: var(--purple-border); color: var(--purple-text); }
+.cat-discovery .chip:hover { background: #a78bfa22; border-color: var(--purple); color: var(--purple); transform: translateY(-1px); }
+.cat-tools .cat-tag { background: var(--blue-dim); color: var(--blue); border: 1px solid var(--blue-border); }
+.cat-tools .cat-name { color: var(--blue); }
+.cat-tools .cat-divider { background: var(--blue-border); }
+.cat-tools .chip { background: var(--blue-dim); border-color: var(--blue-border); color: var(--blue-text); }
+.cat-tools .chip:hover { background: #60a5fa22; border-color: var(--blue); color: var(--blue); transform: translateY(-1px); }
+.cat-health .cat-tag { background: var(--coral-dim); color: var(--coral); border: 1px solid var(--coral-border); }
+.cat-health .cat-name { color: var(--coral); }
+.cat-health .cat-divider { background: var(--coral-border); }
+.cat-health .chip { background: var(--coral-dim); border-color: var(--coral-border); color: var(--coral-text); }
+.cat-health .chip:hover { background: #fb923c22; border-color: var(--coral); color: var(--coral); transform: translateY(-1px); }
+.cat-ai .cat-tag { background: var(--slate-dim); color: var(--slate); border: 1px solid var(--slate-border); }
+.cat-ai .cat-name { color: var(--slate); }
+.cat-ai .cat-divider { background: var(--slate-border); }
+.cat-ai .chip { background: var(--slate-dim); border-color: var(--slate-border); color: var(--slate-text); }
+.cat-ai .chip:hover { background: #94a3b822; border-color: var(--slate); color: var(--slate); transform: translateY(-1px); }
+.cat-investor .cat-tag { background: var(--amber-dim); color: var(--amber); border: 1px solid var(--amber-border); }
+.cat-investor .cat-name { color: var(--amber); }
+.cat-investor .cat-divider { background: var(--amber-border); }
+.cat-investor .chip { background: var(--amber-dim); border-color: var(--amber-border); color: var(--amber-text); }
+.cat-investor .chip:hover { background: #fbbf2422; border-color: var(--amber); color: var(--amber); transform: translateY(-1px); }
+.cat-other .cat-tag { background: var(--gray-dim); color: var(--gray); border: 1px solid var(--gray-border); }
+.cat-other .cat-name { color: var(--gray); }
+.cat-other .cat-divider { background: var(--gray-border); }
+.cat-other .chip { background: var(--gray-dim); border-color: var(--gray-border); color: var(--gray-text); }
+.cat-other .chip:hover { background: #9ca3af22; border-color: var(--gray); color: var(--gray); transform: translateY(-1px); }
+
+/* MAP */
+#panel-map.active { display: flex; flex-direction: column; }
+.map-wrap { flex: 1; position: relative; overflow: hidden; background: #08111e; min-height: 560px; }
+#world-svg { width: 100%; height: 100%; display: block; cursor: grab; }
+#world-svg:active { cursor: grabbing; }
+.map-loading { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; color: #4a5568; font-size: 13px; letter-spacing: 0.06em; }
+
+.map-controls { position: absolute; top: 16px; right: 16px; display: flex; flex-direction: column; gap: 4px; z-index: 10; }
+.map-btn { width: 32px; height: 32px; background: rgba(12,17,24,0.92); border: 1px solid #1e2d42; color: #94a3b8; border-radius: 6px; cursor: pointer; font-size: 18px; display: flex; align-items: center; justify-content: center; transition: all 0.15s; }
+.map-btn:hover { background: #1a2233; color: #e2e8f0; }
+
+.map-legend { position: absolute; bottom: 20px; left: 16px; z-index: 10; background: rgba(8,17,30,0.92); border: 1px solid #1e2d42; border-radius: 10px; padding: 12px 14px; }
+.map-legend-title { font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; color: #4a5568; margin-bottom: 8px; }
+.map-legend-item { display: flex; align-items: center; gap: 7px; font-size: 11px; color: #b8c8d8; margin-bottom: 5px; cursor: pointer; transition: color 0.15s; }
+.map-legend-item:last-child { margin-bottom: 0; }
+.map-legend-item:hover { color: #f1f5f9; }
+.map-legend-dot { width: 9px; height: 9px; border-radius: 50%; flex-shrink: 0; }
+
+.map-hint { position: absolute; bottom: 20px; right: 16px; font-size: 11px; color: #2a3a50; letter-spacing: 0.04em; }
+
+/* TOOLTIP */
+.map-tooltip {
+  position: absolute; pointer-events: none; z-index: 20;
+  background: #0d1420; border: 1px solid #1e2d42; border-radius: 10px;
+  padding: 14px 16px; max-width: 280px; box-shadow: 0 12px 40px rgba(0,0,0,0.6);
+  display: none;
+}
+.tt-tag { display: inline-block; font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; padding: 2px 6px; border-radius: 3px; font-weight: 600; margin-bottom: 8px; }
+.tt-name { font-family: 'Syne', sans-serif; font-size: 15px; font-weight: 800; color: #f1f5f9; margin-bottom: 6px; line-height: 1.2; }
+.tt-type { font-size: 10px; padding: 2px 8px; border-radius: 12px; border: 1px solid; display: inline-block; margin-bottom: 10px; }
+.tt-divider { height: 1px; background: #1a2233; margin-bottom: 10px; }
+.tt-desc { font-size: 11px; line-height: 1.65; color: #7a8fa8; }
+
+/* MODAL */
+.modal-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.72); backdrop-filter: blur(6px); z-index: 9999; align-items: center; justify-content: center; padding: 24px; }
+.modal-overlay.open { display: flex; }
+.modal { background: #0d1420; border: 1px solid #1e2d42; border-radius: 16px; width: 100%; max-width: 520px; padding: 32px; position: relative; animation: modalIn 0.18s ease; box-shadow: 0 32px 80px rgba(0,0,0,0.7); }
+@keyframes modalIn { from { opacity:0; transform:translateY(14px) scale(0.97); } to { opacity:1; transform:translateY(0) scale(1); } }
+.modal-close { position: absolute; top: 16px; right: 16px; background: #1a2233; border: 1px solid var(--border); color: var(--muted); width: 30px; height: 30px; border-radius: 6px; cursor: pointer; font-size: 15px; display: flex; align-items: center; justify-content: center; transition: all 0.15s; }
+.modal-close:hover { background: #243040; color: var(--text); }
+.modal-cat-tag { display: inline-block; font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; padding: 3px 9px; border-radius: 3px; font-weight: 600; margin-bottom: 14px; }
+.modal-name { font-family: 'Syne', sans-serif; font-size: 26px; font-weight: 800; letter-spacing: -0.02em; color: #f1f5f9; margin-bottom: 12px; line-height: 1.15; }
+.modal-type-pill { font-size: 11px; padding: 4px 11px; border-radius: 20px; border: 1px solid; font-weight: 500; text-transform: uppercase; margin-bottom: 12px; display: inline-block; }
+.modal-funding { display: flex; align-items: baseline; gap: 10px; margin-bottom: 20px; padding: 10px 14px; border-radius: 7px; background: rgba(0,212,170,0.06); border: 1px solid rgba(0,212,170,0.15); }
+.modal-funding-label { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #4a5568; white-space: nowrap; }
+.modal-funding-amount { font-size: 13px; color: #7de8d6; line-height: 1.5; }
+.modal-link { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; color: #60a5fa; text-decoration: none; padding: 5px 10px; border: 1px solid rgba(96,165,250,0.3); border-radius: 6px; background: rgba(96,165,250,0.07); margin-bottom: 20px; transition: all 0.15s; }
+.modal-link:hover { color: #93c5fd; border-color: rgba(96,165,250,0.6); background: rgba(96,165,250,0.12); }
+.modal-link svg { flex-shrink: 0; }
+.modal-divider { height: 1px; background: var(--border); margin-bottom: 20px; }
+.modal-desc { font-size: 13px; line-height: 1.8; color: #8899aa; }
+
+footer { padding: 24px 48px; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; flex-shrink: 0; }
+.footer-note { font-size: 11px; color: var(--muted); }
+.footer-note strong { color: var(--teal); font-weight: 500; }
+
+@media (max-width: 720px) {
+  .header { padding: 32px 20px 24px; flex-direction: column; align-items: flex-start; }
+  h1 { font-size: 30px; }
+  .header-meta { text-align: left; }
+  .tab-bar, #panel-directory { padding-left: 20px; padding-right: 20px; }
+  .cat-section { grid-template-columns: 1fr; gap: 12px 0; }
+  .cat-divider { width: 100%; height: 1px; }
+  footer { padding: 20px; }
+}
+
+/* NEWS */
+.news-toolbar { display: flex; align-items: center; gap: 8px; padding: 20px 48px 16px; flex-wrap: wrap; border-bottom: 1px solid var(--border); }
+.news-cat-btn { padding: 4px 12px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; background: var(--bg2); border: 1px solid var(--border); color: #94a3b8; border-radius: 4px; cursor: pointer; transition: all 0.15s; white-space: nowrap; }
+.news-cat-btn:hover { color: #e2e8f0; }
+.news-cat-btn.active { color: var(--teal); border-color: var(--teal-border); background: var(--teal-dim); }
+.news-refresh-btn { padding: 4px 10px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; background: var(--bg2); border: 1px solid var(--border); color: #4a5568; border-radius: 4px; cursor: pointer; transition: all 0.15s; margin-left: auto; }
+.news-refresh-btn:hover { color: #94a3b8; border-color: #2a3a50; }
+.news-refresh-btn:disabled { opacity: 0.5; cursor: default; }
+.news-updated { font-size: 10px; color: #2a3a4a; white-space: nowrap; }
+.news-scroll { padding: 0 48px 80px; }
+.news-loading { display: flex; align-items: center; justify-content: center; gap: 10px; padding: 80px 0; color: #4a5568; font-size: 13px; letter-spacing: 0.06em; }
+.news-spinner { width: 16px; height: 16px; border: 2px solid #1a2233; border-top-color: var(--teal); border-radius: 50%; animation: newspin 0.8s linear infinite; }
+@keyframes newspin { to { transform: rotate(360deg); } }
+.news-empty { padding: 60px 0; text-align: center; color: #2a3a4a; font-size: 13px; }
+.news-day-header { font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: #4a5568; padding: 24px 0 10px; border-bottom: 1px solid #0d1520; }
+.news-item { display: flex; gap: 14px; padding: 14px 0; border-bottom: 1px solid #0a1218; align-items: flex-start; }
+.news-item.hidden { display: none; }
+.news-item-meta { flex-shrink: 0; width: 130px; }
+.news-badge { display: inline-block; font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; padding: 2px 7px; border-radius: 3px; font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 130px; }
+.news-badge.trade      { background: var(--teal-dim);   color: var(--teal);   border: 1px solid var(--teal-border); }
+.news-badge.specialist { background: var(--purple-dim); color: var(--purple); border: 1px solid var(--purple-border); }
+.news-badge.tech       { background: var(--blue-dim);   color: var(--blue);   border: 1px solid var(--blue-border); }
+.news-badge.academic   { background: var(--amber-dim);  color: var(--amber);  border: 1px solid var(--amber-border); }
+.news-time { font-size: 10px; color: #2a3a4a; margin-top: 4px; }
+.news-headline { font-size: 13px; color: #b8c8d8; line-height: 1.55; text-decoration: none; display: block; transition: color 0.15s; margin-bottom: 4px; }
+.news-headline:hover { color: #f1f5f9; }
+.news-excerpt { font-size: 11px; color: #3a4a5a; line-height: 1.55; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.news-failed { font-size: 10px; color: #2a3a4a; padding: 16px 0; }
+
+/* REVIEW INDICATORS */
+.review-badge { display: inline-flex; align-items: center; justify-content: center; width: 14px; height: 14px; border-radius: 50%; background: rgba(251,191,36,0.2); border: 1px solid rgba(251,191,36,0.5); color: #fbbf24; font-size: 8px; font-weight: 700; margin-left: 5px; cursor: pointer; vertical-align: middle; flex-shrink: 0; transition: all 0.15s; line-height: 1; }
+.review-badge:hover { background: rgba(251,191,36,0.4); border-color: #fbbf24; }
+.review-notice { position: fixed; bottom: 28px; left: 50%; transform: translateX(-50%) translateY(20px); background: #0c1520; border: 1px solid rgba(251,191,36,0.4); border-radius: 12px; padding: 18px 22px; max-width: 500px; width: calc(100% - 48px); z-index: 99999; box-shadow: 0 16px 50px rgba(0,0,0,0.8); opacity: 0; pointer-events: none; transition: opacity 0.2s, transform 0.2s; font-family: 'IBM Plex Mono', monospace; }
+.review-notice.visible { opacity: 1; transform: translateX(-50%) translateY(0); pointer-events: auto; }
+.rn-label { font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; color: #fbbf24; margin-bottom: 8px; }
+.rn-name { font-family: 'Syne', sans-serif; font-size: 17px; font-weight: 700; color: #f1f5f9; margin-bottom: 10px; }
+.rn-headline { font-size: 12px; color: #60a5fa; text-decoration: none; display: block; line-height: 1.55; margin-bottom: 10px; }
+.rn-headline:hover { color: #93c5fd; }
+.rn-proposed { font-size: 11px; color: #7de8d6; margin-bottom: 12px; line-height: 1.7; }
+.rn-proposed strong { color: #e2e8f0; }
+.rn-actions { display: flex; gap: 8px; }
+.rn-dismiss { padding: 5px 14px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; background: var(--bg2); border: 1px solid var(--border); color: #94a3b8; border-radius: 4px; cursor: pointer; transition: all 0.15s; }
+.rn-dismiss:hover { color: #e2e8f0; border-color: #2a3a50; }
+
+@media (max-width: 720px) {
+  .news-toolbar { padding-left: 20px; padding-right: 20px; }
+  .news-scroll { padding-left: 20px; padding-right: 20px; }
+  .news-item { flex-direction: column; gap: 6px; }
+  .news-item-meta { width: auto; }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>AI <span class="x">×</span> Biology<br>Ecosystem</h1>
+  <div class="header-meta">
+    <div class="date">April 2026</div>
+    <div class="total" id="totalCount">—</div>
+    <div class="total-label">companies &amp; institutes</div>
+  </div>
+</div>
+
+<div class="tab-bar">
+  <button class="tab-btn active" onclick="switchTab('directory',this)">⊞ &nbsp;Directory</button>
+  <button class="tab-btn" onclick="switchTab('map',this)">◉ &nbsp;World Map</button>
+  <button class="tab-btn" onclick="switchTab('news',this)">◎ &nbsp;News</button>
+</div>
+
+<!-- DIRECTORY -->
+<div class="panel active" id="panel-directory">
+  <div class="controls">
+    <div class="search-wrap">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="7" cy="7" r="4.5" stroke="currentColor" stroke-width="1.4"/><path d="M10.5 10.5L13.5 13.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+      <input type="text" id="search" placeholder="Search companies and institutes..." oninput="doFilter()">
+    </div>
+    <div class="total-count">Showing <span id="visibleCount">—</span></div>
+    <div class="click-hint">Click any chip for details <em>↗</em></div>
+  </div>
+  <div class="legend">
+    <div class="leg" onclick="filterCat('foundation')" data-filter="foundation"><div class="leg-dot" style="background:var(--teal)"></div>Foundation models</div>
+    <div class="leg" onclick="filterCat('discovery')" data-filter="discovery"><div class="leg-dot" style="background:var(--purple)"></div>Drug discovery</div>
+    <div class="leg" onclick="filterCat('tools')" data-filter="tools"><div class="leg-dot" style="background:var(--blue)"></div>Tools &amp; platforms</div>
+    <div class="leg" onclick="filterCat('health')" data-filter="health"><div class="leg-dot" style="background:var(--coral)"></div>Health / clinical</div>
+    <div class="leg" onclick="filterCat('ai')" data-filter="ai"><div class="leg-dot" style="background:var(--slate)"></div>Pure AI / tech</div>
+    <div class="leg" onclick="filterCat('investor')" data-filter="investor"><div class="leg-dot" style="background:var(--amber)"></div>Investors &amp; funds</div>
+    <div class="leg" onclick="filterCat('other')" data-filter="other"><div class="leg-dot" style="background:var(--gray)"></div>Community &amp; media</div>
+  </div>
+  <div class="stage-row" id="stageRow">
+    <span class="stage-label">Stage</span>
+    <div class="sleg" onclick="filterStage('seed')" data-stage="seed"><div class="sdot" style="background:#f59e0b"></div>Seed</div>
+    <div class="sleg" onclick="filterStage('series-a')" data-stage="series-a"><div class="sdot" style="background:#f97316"></div>Series A</div>
+    <div class="sleg" onclick="filterStage('series-b')" data-stage="series-b"><div class="sdot" style="background:#a78bfa"></div>Series B</div>
+    <div class="sleg" onclick="filterStage('series-c')" data-stage="series-c"><div class="sdot" style="background:#ec4899"></div>Series C+</div>
+    <div class="sleg" onclick="filterStage('public')" data-stage="public"><div class="sdot" style="background:#10b981"></div>Public</div>
+    <div class="sleg" onclick="filterStage('acquired')" data-stage="acquired"><div class="sdot" style="background:#60a5fa"></div>Acquired</div>
+    <div class="sleg" onclick="filterStage('subsidiary')" data-stage="subsidiary"><div class="sdot" style="background:#94a3b8"></div>Subsidiary</div>
+    <div class="sleg" onclick="filterStage('nonprofit')" data-stage="nonprofit"><div class="sdot" style="background:#00d4aa"></div>Non-profit / Grant</div>
+  </div>
+  <div id="noResults" class="no-results">No companies match your search.</div>
+  <div class="categories" id="catContainer">
+
+    <div class="cat-section cat-foundation" data-cat="foundation">
+      <div class="cat-label"><div class="cat-tag">AI × Bio</div><div class="cat-name">Foundation<br>Models</div><div class="cat-count" id="count-foundation"></div></div>
+      <div class="cat-divider"></div>
+      <div class="chips">
+        <span class="chip" data-type="Non-profit / Research Institute" data-desc="Builds the Evo series of DNA foundation models. Evo 2 — published in Nature March 2026 — is the largest fully open-source biological AI model, trained on 128,000 whole genomes across the tree of life. Also running a Virtual Cell Initiative to predict how cells respond to genetic, chemical and environmental perturbations.">Arc Institute <span class="badge">NP</span></span>
+        <span class="chip" data-type="Non-profit / Research Institute" data-desc="Philanthropic science organisation co-founded by Priscilla Chan and Mark Zuckerberg. The CZ Biohub network runs cutting-edge biology labs in San Francisco, Chicago and New York. Acquired EvolutionaryScale in November 2025, bringing ESM protein AI models in-house. Also funds the Virtual Cell Models platform and OpenCell open data initiatives.">Chan Zuckerberg Biohub / CZI <span class="badge">NP</span></span>
+        <span class="chip" data-type="Research Lab (Broad Institute / MIT / CZI)" data-desc="Alex Rives joined Broad as a core faculty member in February 2025, simultaneously becoming Head of Science at Chan Zuckerberg Initiative. He founded and led the Evolutionary Scale Modeling (ESM) project at Meta AI, producing the first large-scale transformer language models for proteins — ESM-1, ESM-2 and ESM3. ESM3, a 98B-parameter model trained on 2.78 billion sequences, reasons simultaneously over protein sequence, structure and function. At Broad and CZI, Rives is now building the next generation of AI systems for biology, working toward models of the full cell.">Alex Rives Lab / ESM (Broad + CZI) <span class="badge">NP</span></span>
+        <span class="chip" data-type="Research Centre (Broad Institute / MIT)" data-desc="The Eric and Wendy Schmidt Center at the Broad Institute, directed by Prof. Caroline Uhler (MIT EECS), is the primary hub for foundation model and causal AI research at Broad. Uhler's group develops ML methods for integrating multimodal biological data — transcriptomics, proteomics, imaging — and inferring causal gene regulatory networks from single-cell perturbation experiments. Key outputs include MORPH (predicting single-cell responses to genetic perturbations) and PUPS (protein subcellular localisation prediction). The centre also runs the Models, Inference &amp; Algorithms (MIA) initiative, a major weekly seminar series connecting ML and biology researchers across MIT and Broad.">Schmidt Centre / Uhler Lab (Broad + MIT) <span class="badge">NP</span></span>
+        <span class="chip" data-type="Research Lab (HHMI / U. Washington)" data-desc="Professor David Baker's lab at the University of Washington — birthplace of computational protein design. Created RoseTTAFold, ProteinMPNN (the standard for protein sequence design) and RFdiffusion. Baker was awarded the 2024 Nobel Prize in Chemistry for pioneering computational protein design.">David Baker's Lab / HHMI <span class="badge">NP</span></span>
+        <span class="chip" data-type="Company (acquired by CZ Biohub, Nov 2025)" data-desc="Built ESM3, a 98-billion-parameter generative model trained on 2.78 billion protein sequences that simultaneously reasons over sequence, structure and function. Founded by ex-Meta AI researchers. Designed esmGFP — a novel fluorescent protein representing 500 million years of natural evolution. Acquired by Chan Zuckerberg Biohub in November 2025.">EvolutionaryScale</span>
+        <span class="chip" data-type="Company" data-desc="AI platform for molecular and antibody design. Chai-2 is a zero-shot generative model for de novo antibody design, achieving a 100-fold improvement over prior methods with drug-like properties. Valued at $1.3B after raising $230M in just 15 months. Backed by OpenAI, General Catalyst and Thrive Capital.">Chai Discovery</span>
+        <span class="chip" data-type="Company" data-desc="Protein design AI founded by scientists from Meta AI's protein team. First to demonstrate LLMs can generate functional proteins (Nature Biotech, 2023) and first to design a complete CRISPR system from scratch with AI (Nature, 2025). Protein Atlas contains 115B+ unique proteins. OpenCRISPR-1 is in active use at thousands of labs globally.">Profluent</span>
+        <span class="chip" data-type="Company" data-desc="Develops xTrimo, claimed to be the world's largest life science foundation model at ~210 billion parameters, spanning DNA, RNA, protein, cellular and systems-level modalities. Strategic collaboration with Sanofi worth up to $1B in milestones.">BioMap</span>
+        <span class="chip" data-type="Company" data-desc="RNA-focused AI building ATOM-1, a foundation model using proprietary chemical mapping data to predict RNA structural and functional properties. Applies the model internally for novel RNA-targeted drug discovery through a tight AI-plus-wet-lab loop.">Atomic AI</span>
+        <span class="chip" data-type="Company" data-desc="Builds oncology-specific foundation models for drug discovery. GSK committed $50M upfront for access to NOETIK's models in early 2026 — one of the largest upfront payments for AI bio foundation model access.">NOETIK</span>
+        <span class="chip" data-type="Company" data-desc="RNA design AI founded by Jakob Uszkoreit, co-inventor of the Transformer architecture. Applies transformer-based models natively to RNA biology — designing RNA sequences for therapeutics including mRNA medicines and gene silencing.">Inceptive</span>
+        <span class="chip" data-type="Company" data-desc="Open-source biomolecular structure prediction model (Boltz-1) rivalling AlphaFold3, released freely. Predicts protein-ligand, protein-DNA and protein-RNA complexes — covering the full range of molecular interactions relevant to drug discovery.">Boltz Bio</span>
+        <span class="chip" data-type="Company" data-desc="AI models for protein and molecular design using generative approaches to create novel biological sequences with targeted properties for therapeutic and industrial applications.">Latent Labs</span>
+        <span class="chip" data-type="Company" data-desc="Mechanistic interpretability lab for biological AI models. Collaborated with Arc Institute to build a visualiser revealing how Evo 2 internally represents biological concepts like protein secondary structure and gene architecture.">Goodfire</span>
+        <span class="chip" data-type="Company (public, IPO Feb 2026)" data-desc="AI-first biotech using generative protein models to design entirely novel proteins for therapeutics. Applies diffusion models and language models to create proteins that don't exist in nature. Raised $400M in its February 2026 IPO.">Generate:Biomedicines</span>
+        <span class="chip" data-type="Company" data-desc="Builds biodiversity-scale protein databases and foundation models from Earth's natural genetic diversity, cataloguing proteins from rare organisms for a richer AI training corpus.">Basecamp Research</span>
+        <span class="chip" data-type="Company" data-desc="AI and biology organisation working at the intersection of foundation models and life sciences. Focused on novel approaches to biological intelligence and AI-driven scientific discovery.">Prima Mente</span>
+      </div>
+    </div>
+    <div class="cat-separator"></div>
+
+    <div class="cat-section cat-discovery" data-cat="discovery">
+      <div class="cat-label"><div class="cat-tag">AI × Bio</div><div class="cat-name">Drug Discovery<br>&amp; Therapeutics</div><div class="cat-count" id="count-discovery"></div></div>
+      <div class="cat-divider"></div>
+      <div class="chips">
+        <span class="chip" data-type="Company (public, Nasdaq)" data-desc="AI-drug design combining deep learning with integrated wet lab for antibody and protein therapeutics. Runs a generative AI and cell biology feedback loop to iteratively design and test biologics.">Absci</span>
+        <span class="chip" data-type="Company" data-desc="AI pathology platform applying deep learning to histology images for biomarker discovery and patient stratification in drug development.">Aignostics</span>
+        <span class="chip" data-type="Company" data-desc="Structure-based AI drug discovery using deep CNNs to screen billions of compounds against protein targets in silico. Founded 2012, one of the longest-standing AI drug discovery companies.">Atomwise</span>
+        <span class="chip" data-type="Company (public, Nasdaq)" data-desc="AI drug discovery combining knowledge graphs, NLP and ML over biomedical literature to identify novel disease targets and repurpose existing drugs. Founded in London.">BenevolentAI</span>
+        <span class="chip" data-type="Company" data-desc="ML-guided antibody engineering platform pairing generative AI with in-house high-throughput wet lab for rapid iterative antibody optimisation. Partnerships with Novo Nordisk and Ginkgo Bioworks.">BigHat Biosciences</span>
+        <span class="chip" data-type="Company" data-desc="AI platform mining biomedical literature to map causal relationships between genes, proteins, diseases and drugs for target identification.">Causaly</span>
+        <span class="chip" data-type="Company" data-desc="AI-driven small molecule drug design using the DragonFly platform for challenging and undruggable targets. Builds its own drug pipeline alongside pharma partnerships.">Charm Therapeutics</span>
+        <span class="chip" data-type="Company" data-desc="AI chemistry platform automating molecular design and synthesis planning for a closed-loop chemistry workflow. Aims to make chemistry as programmable as software.">Chemify</span>
+        <span class="chip" data-type="Company" data-desc="AI protein engineering platform using generative models to design and optimise proteins from scratch. Works with pharma and biotech on enzyme and therapeutic protein design.">Cradle</span>
+        <span class="chip" data-type="Company" data-desc="AI genomics platform for RNA-targeted therapeutics. Uses deep learning to decode the RNA splicing code for designing ASOs and RNA medicines. Has its own pipeline in neurology and metabolic disease.">Deep Genomics</span>
+        <span class="chip" data-type="Company (public, IPO Feb 2026)" data-desc="Live-cell super-resolution imaging combined with AI for observing protein behaviour in living cells. Enables target discovery by watching proteins interact in real time. Raised $381M in its February 2026 IPO.">Eikon Therapeutics</span>
+        <span class="chip" data-type="Company" data-desc="AI-powered drug discovery platform using multimodal biological data and ML to identify and validate novel therapeutic targets. Active in oncology and rare disease.">Enveda</span>
+        <span class="chip" data-type="Company" data-desc="AI-guided gene expression editing optimising gene and cell therapy vectors by predicting how regulatory sequence changes affect gene expression levels.">Expression Edits</span>
+        <span class="chip" data-type="Company (public, NYSE)" data-desc="Synthetic biology platform combining AI, automation and fermentation for drug discovery and organism engineering. Ginkgo Datapoints builds virtual cell models and open pharmacology datasets.">Ginkgo Bioworks</span>
+        <span class="chip" data-type="Company" data-desc="AI platform for rare disease drug repurposing. Uses ML to match existing drugs to rare conditions, dramatically reducing development timelines.">Healx</span>
+        <span class="chip" data-type="Company" data-desc="Generative AI for de novo small molecule drug design. Makya designs novel molecules; Spaya handles AI-driven retrosynthesis. Partnerships with Janssen, Merck and Pfizer across 50+ projects.">Iktos</span>
+        <span class="chip" data-type="Company" data-desc="End-to-end AI drug discovery. INS018_055, an AI-designed IPF drug candidate, is in Phase II trials — among the first AI-designed molecules to reach that stage. Founded 2014.">Insilico Medicine</span>
+        <span class="chip" data-type="Company" data-desc="ML platform founded by Daphne Koller combining automated high-throughput biology with ML. Partnerships with Eli Lilly (metabolic diseases) and BMS (ALS).">insitro</span>
+        <span class="chip" data-type="Company (Google DeepMind spinout)" data-desc="Applies AI structure prediction — building on AlphaFold — to drug design. IsoDDE model more than doubles AlphaFold 3's accuracy. Pursuing partnerships with Lilly, Novartis and J&amp;J worth a potential $3B+.">Isomorphic Labs</span>
+        <span class="chip" data-type="Company" data-desc="AI-driven drug discovery targeting metabolic diseases including obesity and type 2 diabetes.">Kailera Therapeutics</span>
+        <span class="chip" data-type="Company" data-desc="AI platform for biologics design, applying generative models to engineer novel protein therapeutics with optimised binding affinity, stability and manufacturability.">Lila Biosciences</span>
+        <span class="chip" data-type="Company" data-desc="AI-powered synthesis planning finding optimal synthetic routes for drug candidates using ML to navigate combinatorial chemistry complexity.">Molecule.one</span>
+        <span class="chip" data-type="Company" data-desc="AI platform for RNA medicine design and optimisation. Applies ML to engineer mRNA, siRNA and other RNA therapeutics with improved stability, efficacy and delivery.">1910 Genetics</span>
+        <span class="chip" data-type="Company" data-desc="Oligonucleotide therapeutics using AI to design RNA-targeting drugs. Applies ML to ASO design that silences disease-causing genes, focused on fibrosis and hard-to-treat conditions.">Olix</span>
+        <span class="chip" data-type="Company" data-desc="AI pathology and multiomics platform for oncology. Integrates digital pathology AI with genomic and transcriptomic data. Raised $467M.">Pathos AI</span>
+        <span class="chip" data-type="Company" data-desc="AI genomics and phylogenetics platform leveraging evolutionary information across species to inform drug target identification and validation.">Phylo Bio</span>
+        <span class="chip" data-type="Company" data-desc="Quantum-enhanced AI for molecular simulation and drug design. Combines quantum mechanics with ML to model molecular interactions with higher accuracy.">Qubit Pharmaceuticals</span>
+        <span class="chip" data-type="Company (public, Nasdaq)" data-desc="High-throughput cell biology platform imaging billions of cellular experiments using ML to map gene-disease-drug relationships. Based in Salt Lake City.">Recursion Pharmaceuticals</span>
+        <span class="chip" data-type="Company (public, Nasdaq)" data-desc="Drug discovery built around protein motion. Uses AI-driven molecular dynamics to model how proteins flex and move to design drugs for previously undruggable targets.">Relay Therapeutics</span>
+        <span class="chip" data-type="Company" data-desc="Single-cell genomics and ML platform for therapeutic discovery. Applies ML to large-scale single-cell RNA sequencing for novel drug target identification. NVentures is a strategic investor.">Relation Therapeutics</span>
+        <span class="chip" data-type="Company (public, Nasdaq)" data-desc="Combines physics-based molecular simulation with ML for drug discovery. FEP+ binding affinity platform is considered the gold standard across pharma. Founded 1990.">Schrödinger</span>
+        <span class="chip" data-type="Company" data-desc="AI and structural biology platform for GPCR-targeted drug discovery. Signed a $1.3B deal with Eli Lilly in 2025 for GPCR-targeted metabolic drugs. Backed by NVentures.">Superluminal Medicines</span>
+        <span class="chip" data-type="Company" data-desc="DNA-encoded chemistry (DEL) combined with AI for ultra-high-throughput small molecule screening of billions of compounds simultaneously. Backed by NVentures.">Terray Therapeutics</span>
+        <span class="chip" data-type="Company" data-desc="AI platform for genomic medicine design, optimising gene therapy vectors, mRNA sequences and nucleic acid therapeutics using ML.">WhiteLab Genomics</span>
+        <span class="chip" data-type="Company" data-desc="Large-scale generative AI for drug discovery, founded in 2024 with $1B in Series A funding — one of the largest biotech launches ever.">Xaira</span>
+      </div>
+    </div>
+    <div class="cat-separator"></div>
+
+    <div class="cat-section cat-tools" data-cat="tools">
+      <div class="cat-label"><div class="cat-tag">AI × Bio</div><div class="cat-name">Tools &amp;<br>Platforms</div><div class="cat-count" id="count-tools"></div></div>
+      <div class="cat-divider"></div>
+      <div class="chips">
+        <span class="chip" data-type="Company" data-desc="Lab automation robotics and software for life science workflows. Builds modular robotic workcells automating repetitive lab tasks to free scientists for higher-value experimental work.">Automata</span>
+        <span class="chip" data-type="Company" data-desc="Cloud-based R&amp;D platform for biotech and pharma — ELN, data management, molecular biology tools and workflow automation. The operating system of the modern biotech lab.">Benchling</span>
+        <span class="chip" data-type="Company" data-desc="AI-powered scientific instrumentation and data analytics platform for life sciences, combining hardware sensing with software intelligence to accelerate experimental workflows.">Edison Scientific</span>
+        <span class="chip" data-type="Open Science Consortium (UK)" data-desc="UK-based open science initiative hosted at Diamond Light Source in Oxfordshire. Backed by £8M from the UK government's Sovereign AI Unit. Aims to generate over 500,000 experimentally validated protein-ligand structures over five years — 20 times more than have been publicly collected in the last 50 years — creating the world's largest open dataset of drug-protein binding data for training AI drug discovery models. Partners include the Universities of Oxford, Washington and Columbia, EMBL-EBI and the Open Molecular Software Foundation.">OpenBind <span class="badge">NP</span></span>
+        <span class="chip" data-type="Company (public, Nasdaq)" data-desc="Long-read DNA sequencing company. HiFi sequencing produces more complete and accurate genome assemblies than short-read technologies. A critical data-generation tool for training biological AI models.">PacBio</span>
+      </div>
+    </div>
+    <div class="cat-separator"></div>
+
+    <div class="cat-section cat-health" data-cat="health">
+      <div class="cat-label"><div class="cat-tag">AI × Health</div><div class="cat-name">Clinical &amp;<br>Healthcare AI</div><div class="cat-count" id="count-health"></div></div>
+      <div class="cat-divider"></div>
+      <div class="chips">
+        <span class="chip" data-type="Company" data-desc="AI medical imaging company specialising in radiology. Models analyse bone X-rays and chest radiographs to detect fractures and pathologies, providing radiologist decision support.">Gleamer</span>
+        <span class="chip" data-type="Company" data-desc="AI platform providing medical speech recognition and clinical NLP for healthcare. Converts clinician voice notes into structured medical records to reduce documentation burden.">Kaiko</span>
+        <span class="chip" data-type="Company" data-desc="AI-powered medical documentation platform automating clinical note generation using ambient AI to listen to consultations and produce structured clinical notes.">Medra</span>
+        <span class="chip" data-type="Company" data-desc="AI clinical assistant for doctors automating note-taking, patient summaries and care plan generation. One of Europe's best-funded healthcare AI companies.">Nabla</span>
+        <span class="chip" data-type="Company" data-desc="AI-powered lung disease diagnosis platform for early detection of lung cancer from CT scans. The Virtual Nodule Clinic helps radiologists identify and characterise pulmonary nodules.">Optellum</span>
+        <span class="chip" data-type="Company" data-desc="Federated learning AI platform for oncology, enabling ML model training across hospital networks without centralising patient data. Used for drug discovery and biomarker identification in cancer.">Owkin</span>
+        <span class="chip" data-type="Company (public, Nasdaq)" data-desc="AI platform for precision medicine integrating clinical data, genomics, imaging and multiomics at scale. Focused on oncology with one of the largest proprietary real-world clinical datasets.">Tempus AI</span>
+        <span class="chip" data-type="Company (Alphabet subsidiary)" data-desc="Alphabet's life sciences research and precision health company. Combines AI, wearables and biomedical data for population-scale health research. Verily Workbench provides a research data platform for pharma and academic partners.">Verily</span>
+      </div>
+    </div>
+    <div class="cat-separator"></div>
+
+    <div class="cat-section cat-ai" data-cat="ai">
+      <div class="cat-label"><div class="cat-tag">Tech</div><div class="cat-name">Pure AI<br>&amp; Tech</div><div class="cat-count" id="count-ai"></div></div>
+      <div class="cat-divider"></div>
+      <div class="chips">
+        <span class="chip" data-type="Company" data-desc="AI safety company and creator of Claude. Builds large language models with a focus on safe, steerable and beneficial AI. Increasingly relevant to biology through Claude's use in scientific research and via the Anthology Fund co-investing in AI bio companies.">Anthropic</span>
+        <span class="chip" data-type="Company (Alphabet subsidiary)" data-desc="Alphabet's flagship AI research lab — behind AlphaFold, Gemini and fundamental ML breakthroughs. Parent company of Isomorphic Labs. Core research and infrastructure partner for multiple AI bio companies.">Google DeepMind</span>
+        <span class="chip" data-type="Company" data-desc="Technology giant and majority owner of OpenAI. Azure is a primary cloud provider for AI bio companies. Microsoft Research runs dedicated computational biology teams and active AI for Health programmes.">Microsoft</span>
+        <span class="chip" data-type="Company" data-desc="GPU manufacturer and essential AI infrastructure globally. BioNeMo framework hosts multiple biological foundation models as NIM microservices. NVentures strategically invests across AI drug discovery.">Nvidia</span>
+        <span class="chip" data-type="Company" data-desc="Developer of GPT-4 and ChatGPT. Investor in Chai Discovery. Held a biodefence summit on model safeguards for biosecurity risk. Increasingly engaged with AI bio through capabilities and direct investment.">OpenAI</span>
+        <span class="chip" data-type="Company" data-desc="AI research lab co-founded by ex-Google Brain researchers exploring nature-inspired AI architectures. Based in Tokyo. Develops novel model designs inspired by evolution and swarm intelligence.">Sakana AI</span>
+        <span class="chip" data-type="Company" data-desc="AI and computational technology company working on advanced AI systems and research infrastructure, applying ML and deep learning across technical domains.">Callosum</span>
+        <span class="chip" data-type="Company" data-desc="Computational and numerical AI company focused on high-performance scientific computing and AI-accelerated simulation for complex numerical problems in science and engineering.">Radical Numerics</span>
+      </div>
+    </div>
+    <div class="cat-separator"></div>
+
+    <div class="cat-section cat-investor" data-cat="investor">
+      <div class="cat-label"><div class="cat-tag">Capital</div><div class="cat-name">Investors<br>&amp; Funds</div><div class="cat-count" id="count-investor"></div></div>
+      <div class="cat-divider"></div>
+      <div class="chips">
+        <span class="chip" data-type="Government Agency (UK)" data-desc="UK's Advanced Research and Invention Agency, modelled on DARPA. Funds high-risk, high-reward scientific research that conventional mechanisms won't support. Active programmes in AI for science and synthetic biology.">ARIA</span>
+        <span class="chip" data-type="Venture Capital" data-desc="Berlin-based deep tech VC investing in foundational technology companies across AI, biotech, space and climate. Long-term view on transformative science.">Blue Yard</span>
+        <span class="chip" data-type="Non-profit / FRO" data-desc="Focused Research Organisation model launching and funding high-risk, high-reward scientific projects between academia and industry. Partners with philanthropists to de-risk ambitious science.">Convergent Research <span class="badge">NP</span></span>
+        <span class="chip" data-type="Venture Capital" data-desc="Fidelity's venture capital arm with a strong focus on healthcare and life sciences. One of the most active biotech investors globally, backing companies from seed through IPO.">F Prime</span>
+        <span class="chip" data-type="Venture Capital" data-desc="European life sciences VC based in the Netherlands. Backs transformative biopharmaceutical and medtech science with a clear path to clinical translation.">Forbion</span>
+        <span class="chip" data-type="Non-profit / Think Tank" data-desc="Non-profit research institute for transformative technologies in nanotechnology, biotech, AI and longevity. Runs research programmes, workshops and fellowships.">Foresight Institute</span>
+        <span class="chip" data-type="Growth Equity" data-desc="Global growth equity firm managing over $100B. Participated in the Chai Discovery Series B. Invests in scaling technology and healthcare companies.">General Atlantic</span>
+        <span class="chip" data-type="Venture Capital" data-desc="Paris-based early-stage VC focused on deep tech and European frontier technology. Invests in AI, biotech, climate tech and hard-science startups.">HCVC</span>
+        <span class="chip" data-type="Venture Capital" data-desc="UK-based deep tech VC investing in AI, quantum computing and advanced engineering. Backs spin-outs from UK universities with hard scientific or engineering differentiation.">IQ Capital</span>
+        <span class="chip" data-type="Venture Capital" data-desc="Boston-based VC backing science and engineering-driven startups across biotech, materials, climate and computing. Closely partners with founders at the earliest stages.">Pillar VC</span>
+        <span class="chip" data-type="Non-profit / Philanthropy" data-desc="Philanthropy organisation funding breakthrough research in science and technology. Supports high-impact scientific projects with interest in longevity, AI safety and transformative biology.">Renaissance Philanthropy <span class="badge">NP</span></span>
+        <span class="chip" data-type="Sovereign Fund" data-desc="Sovereign AI investment fund backing AI infrastructure, foundation models and AI applications at scale with strategic national and economic focus.">SovAI fund</span>
+        <span class="chip" data-type="Investment Company (public, LSE)" data-desc="FTSE-listed life science investment company building and funding cell and gene therapy companies from inception to clinical proof of concept. Long-term patient capital model.">Syncona</span>
+      </div>
+    </div>
+    <div class="cat-separator"></div>
+
+    <div class="cat-section cat-other" data-cat="other">
+      <div class="cat-label"><div class="cat-tag">Misc</div><div class="cat-name">Community<br>&amp; Media</div><div class="cat-count" id="count-other"></div></div>
+      <div class="cat-divider"></div>
+      <div class="chips">
+        <span class="chip" data-type="Media" data-desc="Video content platform covering biotech and life sciences news — company profiles, conference coverage and founder interviews for the biotech and AI bio community.">Biotech TV</span>
+        <span class="chip" data-type="Software Company" data-desc="Project management and practice management software, primarily used by architecture and design firms.">Monograph</span>
+        <span class="chip" data-type="Non-profit / Community" data-desc="Student-run non-profit building the next generation of biotech founders and scientists. Runs programmes and events at universities globally. A key pipeline for AI bio talent.">Nucleate</span>
+        <span class="chip" data-type="Media" data-desc="European tech startup news publication backed by the Financial Times. Covers the European deep tech, AI and life sciences startup ecosystem.">Sifted</span>
+        <span class="chip" data-type="Community / Media" data-desc="Community and content platform covering AI research and state-of-the-art developments. Tracks frontier AI model releases and breakthroughs across industries including biology.">SOTA</span>
+        <span class="chip" data-type="Community / Media" data-desc="Tech community and content platform covering technology culture, startups and the broader tech ecosystem.">TechBros</span>
+        <span class="chip" data-type="Organisation" data-desc="Organisation at the intersection of AI and life sciences, building connections and supporting development within the AI bio ecosystem.">Wilbe</span>
+        <span class="chip" data-type="Media" data-desc="Iconic technology, science and culture magazine. Deep coverage of AI bio breakthroughs and the cultural implications of the AI revolution.">Wired</span>
+      </div>
+    </div>
+
+  </div>
+</div><!-- /panel-directory -->
+
+<!-- MAP PANEL -->
+<div class="panel" id="panel-map">
+  <div class="map-wrap" id="mapWrap">
+    <div class="map-loading" id="mapLoading">Loading world map…</div>
+    <svg id="world-svg"></svg>
+    <div class="map-controls">
+      <button class="map-btn" id="zoomIn" title="Zoom in">+</button>
+      <button class="map-btn" id="zoomOut" title="Zoom out">−</button>
+      <button class="map-btn" id="zoomReset" title="Reset view" style="font-size:13px;">⌂</button>
+    </div>
+    <div class="map-legend">
+      <div class="map-legend-title">Category</div>
+      <div class="map-legend-item"><div class="map-legend-dot" style="background:#00d4aa"></div>Foundation models</div>
+      <div class="map-legend-item"><div class="map-legend-dot" style="background:#a78bfa"></div>Drug discovery</div>
+      <div class="map-legend-item"><div class="map-legend-dot" style="background:#60a5fa"></div>Tools &amp; platforms</div>
+      <div class="map-legend-item"><div class="map-legend-dot" style="background:#fb923c"></div>Health / clinical</div>
+      <div class="map-legend-item"><div class="map-legend-dot" style="background:#94a3b8"></div>Pure AI / tech</div>
+      <div class="map-legend-item"><div class="map-legend-dot" style="background:#fbbf24"></div>Investors &amp; funds</div>
+      <div class="map-legend-item"><div class="map-legend-dot" style="background:#9ca3af"></div>Community &amp; media</div>
+    </div>
+    <div class="map-hint">Scroll to zoom · drag to pan · click bubble to expand · click dot for info</div>
+    <div class="map-tooltip" id="mapTooltip">
+      <div class="tt-tag" id="ttTag"></div>
+      <div class="tt-name" id="ttName"></div>
+      <div class="tt-type" id="ttType"></div>
+      <div class="tt-divider"></div>
+      <div class="tt-desc" id="ttDesc"></div>
+    </div>
+  </div>
+</div>
+
+<!-- NEWS PANEL -->
+<div class="panel" id="panel-news">
+  <div class="news-toolbar">
+    <button class="news-cat-btn active" onclick="newsFilter('all',this)">All</button>
+    <button class="news-cat-btn" onclick="newsFilter('trade',this)">Trade Press</button>
+    <button class="news-cat-btn" onclick="newsFilter('specialist',this)">AI × Bio</button>
+    <button class="news-cat-btn" onclick="newsFilter('tech',this)">Tech &amp; News</button>
+    <button class="news-cat-btn" onclick="newsFilter('academic',this)">Academic</button>
+    <button class="news-refresh-btn" onclick="loadNews(true)" id="newsRefreshBtn">↻ Refresh</button>
+    <span class="news-updated" id="newsUpdated"></span>
+  </div>
+  <div class="news-scroll">
+    <div class="news-loading" id="newsLoading" style="display:none">
+      <div class="news-spinner"></div>Loading feeds…
+    </div>
+    <div id="newsContent"></div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-note"><strong>NP</strong> = non-profit or research institute &nbsp;·&nbsp; Compiled from public sources &nbsp;·&nbsp; April 2026</div>
+  <div class="footer-note">AI × Biology Ecosystem Map</div>
+</footer>
+
+<!-- REVIEW NOTICE -->
+<div class="review-notice" id="reviewNotice">
+  <div class="rn-label">⚠ Update detected</div>
+  <div class="rn-name" id="rnName"></div>
+  <a class="rn-headline" id="rnHeadline" href="#" target="_blank" rel="noopener noreferrer"></a>
+  <div class="rn-proposed" id="rnProposed"></div>
+  <div class="rn-actions">
+    <button class="rn-dismiss" onclick="dismissReview()">Dismiss</button>
+  </div>
+</div>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="modalOverlay" onclick="closeModal(event)">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModalDirect()">×</button>
+    <div class="modal-cat-tag" id="modalCatTag"></div>
+    <div class="modal-name" id="modalName"></div>
+    <div class="modal-type-pill" id="modalTypePill"></div>
+    <div class="modal-funding" id="modalFunding">
+      <span class="modal-funding-label">Funding</span>
+      <span class="modal-funding-amount" id="modalFundingAmount"></span>
+    </div>
+    <a class="modal-link" id="modalLink" href="#" target="_blank" rel="noopener">
+      <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 10L10 2M10 2H5M10 2V7" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span id="modalLinkText">Visit website</span>
+    </a>
+    <div class="modal-divider"></div>
+    <div class="modal-desc" id="modalDesc"></div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/topojson-client@3/dist/topojson-client.min.js"></script>
+<script>
+// ── COLOUR MAP ──
+const CAT = {
+  foundation:{hex:'#00d4aa',bg:'rgba(0,212,170,0.14)',border:'rgba(0,212,170,0.5)',label:'Foundation Models'},
+  discovery: {hex:'#a78bfa',bg:'rgba(167,139,250,0.14)',border:'rgba(167,139,250,0.5)',label:'Drug Discovery'},
+  tools:     {hex:'#60a5fa',bg:'rgba(96,165,250,0.14)',border:'rgba(96,165,250,0.5)',label:'Tools & Platforms'},
+  health:    {hex:'#fb923c',bg:'rgba(251,146,60,0.14)',border:'rgba(251,146,60,0.5)',label:'Clinical & Healthcare AI'},
+  ai:        {hex:'#94a3b8',bg:'rgba(148,163,184,0.12)',border:'rgba(148,163,184,0.5)',label:'Pure AI / Tech'},
+  investor:  {hex:'#fbbf24',bg:'rgba(251,191,36,0.12)',border:'rgba(251,191,36,0.5)',label:'Investors & Funds'},
+  other:     {hex:'#9ca3af',bg:'rgba(156,163,175,0.12)',border:'rgba(156,163,175,0.5)',label:'Community & Media'},
+};
+
+// ── ORG DATA ──
+const ORGS = [
+  {name:'Arc Institute',cat:'foundation',type:'Non-profit / Research Institute',lat:37.43,lng:-122.17,desc:'Builds the Evo series of DNA foundation models. Evo 2 is the largest fully open-source biological AI model, trained on 128,000 whole genomes.'},
+  {name:'Chan Zuckerberg Biohub / CZI',cat:'foundation',type:'Non-profit / Research Institute',lat:37.76,lng:-122.39,desc:'Philanthropic science org co-founded by Priscilla Chan and Mark Zuckerberg. Acquired EvolutionaryScale in November 2025, bringing ESM protein AI models in-house.'},
+  {name:'Alex Rives Lab / ESM (Broad + CZI)',cat:'foundation',type:'Research Lab (Broad / MIT / CZI)',lat:42.363,lng:-71.091,desc:'Alex Rives (Broad faculty, MIT EECS, CZI Head of Science) founded the ESM protein language model project at Meta AI. ESM3 (98B parameters) reasons over protein sequence, structure and function simultaneously. Now building next-generation biological AI systems at Broad and CZI.'},
+  {name:'Schmidt Centre / Uhler Lab (Broad + MIT)',cat:'foundation',type:'Research Centre (Broad / MIT)',lat:42.362,lng:-71.093,desc:'The Eric and Wendy Schmidt Center at Broad, directed by Prof. Caroline Uhler (MIT EECS). Develops causal ML and foundation models for single-cell biology, integrating multimodal biological data. Key outputs: MORPH (perturbation prediction), PUPS (protein localisation). Runs the MIA initiative connecting ML and biology across MIT and Broad.'},
+  {name:"David Baker's Lab / HHMI",cat:'foundation',type:'Research Lab (HHMI / U. Washington)',lat:47.65,lng:-122.31,desc:'Birthplace of computational protein design. Created RoseTTAFold, ProteinMPNN and RFdiffusion. Baker won the 2024 Nobel Prize in Chemistry.'},
+  {name:'EvolutionaryScale',cat:'foundation',type:'Company (acquired CZ Biohub 2025)',lat:37.78,lng:-122.41,desc:'Built ESM3, a 98B-parameter generative model trained on 2.78B protein sequences — reasoning over sequence, structure and function simultaneously.'},
+  {name:'Chai Discovery',cat:'foundation',type:'Company',lat:37.77,lng:-122.43,desc:'AI platform for molecular and antibody design. Chai-2 achieves 100-fold improvement over prior methods for de novo antibody design. Valued at $1.3B.'},
+  {name:'Profluent',cat:'foundation',type:'Company',lat:37.87,lng:-122.27,desc:'Protein design AI from ex-Meta AI. First to design a complete CRISPR system from scratch with AI. Protein Atlas contains 115B+ unique proteins.'},
+  {name:'BioMap',cat:'foundation',type:'Company',lat:39.90,lng:116.41,desc:"Develops xTrimo, claimed world's largest life science foundation model at ~210B parameters. Strategic collaboration with Sanofi worth up to $1B."},
+  {name:'Atomic AI',cat:'foundation',type:'Company',lat:37.75,lng:-122.45,desc:'RNA-focused AI building ATOM-1 foundation model for RNA structural prediction and drug discovery, pursuing novel RNA-targeted therapeutics.'},
+  {name:'NOETIK',cat:'foundation',type:'Company',lat:37.73,lng:-122.46,desc:'Builds oncology-specific foundation models. GSK committed $50M upfront for access in early 2026 — one of the largest upfront payments for an AI bio foundation model.'},
+  {name:'Inceptive',cat:'foundation',type:'Company',lat:52.52,lng:13.41,desc:'RNA design AI founded by Jakob Uszkoreit, co-inventor of the Transformer architecture. Designs RNA sequences for mRNA medicines and gene silencing.'},
+  {name:'Boltz Bio',cat:'foundation',type:'Company',lat:42.37,lng:-71.10,desc:'Open-source biomolecular structure prediction model (Boltz-1) rivalling AlphaFold3, released freely. Predicts protein-ligand, protein-DNA and protein-RNA complexes.'},
+  {name:'Latent Labs',cat:'foundation',type:'Company',lat:51.51,lng:-0.13,desc:'AI models for protein and molecular design using generative approaches for therapeutic and industrial applications.'},
+  {name:'Goodfire',cat:'foundation',type:'Company',lat:37.74,lng:-122.41,desc:'Mechanistic interpretability lab for biological AI models. Collaborated with Arc Institute to build a visualiser revealing how Evo 2 represents biological concepts internally.'},
+  {name:'Generate:Biomedicines',cat:'foundation',type:'Company (public)',lat:42.44,lng:-71.23,desc:'AI-first biotech using generative protein models to design entirely novel proteins for therapeutics. Raised $400M in its February 2026 IPO.'},
+  {name:'Basecamp Research',cat:'foundation',type:'Company',lat:51.52,lng:-0.11,desc:"Builds biodiversity-scale protein databases from Earth's natural genetic diversity, cataloguing proteins from rare organisms for richer AI training data."},
+  {name:'Prima Mente',cat:'foundation',type:'Company',lat:51.50,lng:-0.15,desc:'AI and biology organisation focused on novel approaches to biological intelligence and AI-driven scientific discovery.'},
+  {name:'Absci',cat:'discovery',type:'Company (public, Nasdaq)',lat:45.52,lng:-122.68,desc:'AI-drug design combining deep learning with wet lab for antibody and protein therapeutics. Runs a generative AI and cell biology feedback loop.'},
+  {name:'Aignostics',cat:'discovery',type:'Company',lat:52.51,lng:13.42,desc:'AI pathology platform applying deep learning to histology images for biomarker discovery and patient stratification.'},
+  {name:'Atomwise',cat:'discovery',type:'Company',lat:37.76,lng:-122.42,desc:'Structure-based AI drug discovery using deep CNNs to screen billions of compounds against protein targets. Founded 2012.'},
+  {name:'BenevolentAI',cat:'discovery',type:'Company (public)',lat:51.52,lng:-0.12,desc:'AI drug discovery combining knowledge graphs, NLP and ML to identify novel disease targets and repurpose existing drugs. Founded in London.'},
+  {name:'BigHat Biosciences',cat:'discovery',type:'Company',lat:37.51,lng:-122.26,desc:'ML-guided antibody engineering platform pairing generative AI with high-throughput wet lab for rapid iterative antibody optimisation.'},
+  {name:'Causaly',cat:'discovery',type:'Company',lat:51.51,lng:-0.10,desc:'AI platform mining biomedical literature to map causal relationships between genes, proteins, diseases and drugs for target identification.'},
+  {name:'Charm Therapeutics',cat:'discovery',type:'Company',lat:51.52,lng:-0.15,desc:'AI-driven small molecule drug design using the DragonFly platform for challenging and undruggable targets.'},
+  {name:'Chemify',cat:'discovery',type:'Company',lat:51.53,lng:-0.13,desc:'AI chemistry platform automating molecular design and synthesis planning for a closed-loop chemistry workflow.'},
+  {name:'Cradle',cat:'discovery',type:'Company',lat:52.37,lng:4.90,desc:'AI protein engineering platform using generative models to design proteins from scratch. Works with pharma on enzyme and therapeutic protein design.'},
+  {name:'Deep Genomics',cat:'discovery',type:'Company',lat:43.65,lng:-79.38,desc:'AI genomics platform for RNA-targeted therapeutics. Uses deep learning to decode the RNA splicing code for designing ASOs and RNA medicines.'},
+  {name:'Eikon Therapeutics',cat:'discovery',type:'Company (public)',lat:37.67,lng:-122.08,desc:'Live-cell super-resolution imaging combined with AI for observing protein behaviour in living cells. Raised $381M in its February 2026 IPO.'},
+  {name:'Enveda',cat:'discovery',type:'Company',lat:51.51,lng:-0.17,desc:'AI-powered drug discovery platform using multimodal biological data and ML to identify and validate novel therapeutic targets.'},
+  {name:'Expression Edits',cat:'discovery',type:'Company',lat:42.36,lng:-71.11,desc:'AI-guided gene expression editing optimising gene and cell therapy vectors by predicting regulatory sequence effects on expression levels.'},
+  {name:'Ginkgo Bioworks',cat:'discovery',type:'Company (public, NYSE)',lat:42.35,lng:-71.05,desc:'Synthetic biology platform combining AI, automation and fermentation for drug discovery. Ginkgo Datapoints builds virtual cell models and open pharmacology datasets.'},
+  {name:'Healx',cat:'discovery',type:'Company',lat:52.21,lng:0.12,desc:'AI platform for rare disease drug repurposing. Uses ML to match existing drugs to rare conditions with no treatments.'},
+  {name:'Iktos',cat:'discovery',type:'Company',lat:48.87,lng:2.35,desc:'Generative AI for de novo small molecule design. Makya designs novel molecules; Spaya handles AI retrosynthesis. Partnerships with Janssen, Merck and Pfizer.'},
+  {name:'Insilico Medicine',cat:'discovery',type:'Company',lat:22.32,lng:114.17,desc:'End-to-end AI drug discovery. INS018_055, an AI-designed IPF drug candidate, is in Phase II trials — among the first AI-designed molecules to reach that stage.'},
+  {name:'insitro',cat:'discovery',type:'Company',lat:37.65,lng:-122.41,desc:'ML platform founded by Daphne Koller combining automated high-throughput biology with ML. Partnerships with Eli Lilly and BMS.'},
+  {name:'Isomorphic Labs',cat:'discovery',type:'Company (Google spinout)',lat:51.50,lng:-0.13,desc:"Applies AI structure prediction building on AlphaFold to drug design. IsoDDE model more than doubles AlphaFold 3's accuracy. Pursuing partnerships worth a potential $3B+."},
+  {name:'Kailera Therapeutics',cat:'discovery',type:'Company',lat:37.74,lng:-122.42,desc:'AI-driven drug discovery targeting metabolic diseases including obesity and type 2 diabetes.'},
+  {name:'Lila Biosciences',cat:'discovery',type:'Company',lat:37.71,lng:-122.42,desc:'AI platform for biologics design, applying generative models to engineer novel protein therapeutics.'},
+  {name:'Molecule.one',cat:'discovery',type:'Company',lat:52.23,lng:21.01,desc:'AI-powered synthesis planning finding optimal synthetic routes for drug candidates using ML.'},
+  {name:'1910 Genetics',cat:'discovery',type:'Company',lat:42.36,lng:-71.10,desc:'AI platform for RNA medicine design and optimisation. Applies ML to engineer mRNA, siRNA and other RNA therapeutics.'},
+  {name:'Olix',cat:'discovery',type:'Company',lat:54.78,lng:-1.58,desc:'Oligonucleotide therapeutics using AI to design RNA-targeting drugs. Focused on ASO design that silences disease-causing genes.'},
+  {name:'Pathos AI',cat:'discovery',type:'Company',lat:37.74,lng:-122.43,desc:'AI pathology and multiomics platform for oncology. Integrates digital pathology AI with genomic and transcriptomic data. Raised $467M.'},
+  {name:'Phylo Bio',cat:'discovery',type:'Company',lat:51.51,lng:-0.18,desc:'AI genomics and phylogenetics platform leveraging evolutionary information across species to inform drug target identification.'},
+  {name:'Qubit Pharmaceuticals',cat:'discovery',type:'Company',lat:48.88,lng:2.36,desc:'Quantum-enhanced AI for molecular simulation and drug design, combining quantum mechanics with ML for higher-accuracy molecular modelling.'},
+  {name:'Recursion Pharmaceuticals',cat:'discovery',type:'Company (public, Nasdaq)',lat:40.76,lng:-111.89,desc:'High-throughput cell biology platform imaging billions of cellular experiments using ML to map gene-disease-drug relationships. Based in Salt Lake City.'},
+  {name:'Relay Therapeutics',cat:'discovery',type:'Company (public, Nasdaq)',lat:42.37,lng:-71.09,desc:'Drug discovery built around protein motion. Uses AI-driven molecular dynamics to model protein flexibility and design drugs for undruggable targets.'},
+  {name:'Relation Therapeutics',cat:'discovery',type:'Company',lat:51.53,lng:-0.15,desc:'Single-cell genomics and ML platform for therapeutic discovery. Applies ML to large-scale single-cell RNA sequencing for novel drug target identification.'},
+  {name:'Schrödinger',cat:'discovery',type:'Company (public, Nasdaq)',lat:40.71,lng:-74.01,desc:'Combines physics-based molecular simulation with ML for drug discovery. FEP+ binding affinity platform is the gold standard across pharma. Founded 1990.'},
+  {name:'Superluminal Medicines',cat:'discovery',type:'Company',lat:37.72,lng:-122.44,desc:'AI and structural biology for GPCR-targeted drug discovery. Signed a $1.3B deal with Eli Lilly in 2025. Backed by NVentures.'},
+  {name:'Terray Therapeutics',cat:'discovery',type:'Company',lat:34.15,lng:-118.00,desc:'DNA-encoded chemistry (DEL) combined with AI for ultra-high-throughput small molecule screening of billions of compounds. Backed by NVentures.'},
+  {name:'WhiteLab Genomics',cat:'discovery',type:'Company',lat:48.85,lng:2.36,desc:'AI platform for genomic medicine design, optimising gene therapy vectors, mRNA sequences and nucleic acid therapeutics.'},
+  {name:'Xaira',cat:'discovery',type:'Company',lat:37.72,lng:-122.41,desc:'Large-scale generative AI for drug discovery, founded in 2024 with $1B in Series A — one of the largest biotech launches ever.'},
+  {name:'OpenBind',cat:'tools',type:'Open Science Consortium (UK)',lat:51.575,lng:-1.310,desc:'UK open science initiative hosted at Diamond Light Source in Oxfordshire. Backed by £8M from the UK Sovereign AI Unit. Generating 500,000+ protein-ligand structures over 5 years — 20× more than the past 50 years combined — to create the world\'s largest open dataset for training AI drug discovery models. Partners include Universities of Oxford, Washington and Columbia.'},
+  {name:'Automata',cat:'tools',type:'Company',lat:51.54,lng:-0.13,desc:'Lab automation robotics and software for life science workflows. Builds modular robotic workcells automating repetitive lab tasks.'},
+  {name:'Benchling',cat:'tools',type:'Company',lat:37.73,lng:-122.43,desc:'Cloud-based R&D platform for biotech and pharma — ELN, data management and workflow automation. The operating system of the modern biotech lab.'},
+  {name:'Edison Scientific',cat:'tools',type:'Company',lat:51.52,lng:-0.19,desc:'AI-powered scientific instrumentation and data analytics platform for life sciences.'},
+  {name:'PacBio',cat:'tools',type:'Company (public, Nasdaq)',lat:37.45,lng:-122.18,desc:'Long-read DNA sequencing company. HiFi sequencing produces more complete and accurate genome assemblies. Critical for training biological AI models.'},
+  {name:'Gleamer',cat:'health',type:'Company',lat:48.86,lng:2.36,desc:'AI medical imaging company specialising in radiology. Models analyse bone X-rays and chest radiographs to detect fractures and pathologies.'},
+  {name:'Kaiko',cat:'health',type:'Company',lat:48.85,lng:2.34,desc:'AI platform providing medical speech recognition and clinical NLP. Converts clinician voice notes into structured medical records.'},
+  {name:'Medra',cat:'health',type:'Company',lat:37.72,lng:-122.43,desc:'AI-powered medical documentation platform automating clinical note generation using ambient AI during consultations.'},
+  {name:'Nabla',cat:'health',type:'Company',lat:48.88,lng:2.37,desc:"AI clinical assistant for doctors automating note-taking, patient summaries and care plan generation. One of Europe's best-funded healthcare AI companies."},
+  {name:'Optellum',cat:'health',type:'Company',lat:51.75,lng:-1.26,desc:'AI-powered lung disease diagnosis platform for early detection of lung cancer from CT scans. The Virtual Nodule Clinic helps radiologists identify pulmonary nodules.'},
+  {name:'Owkin',cat:'health',type:'Company',lat:48.87,lng:2.38,desc:'Federated learning AI for oncology, enabling ML model training across hospital networks without centralising patient data.'},
+  {name:'Tempus AI',cat:'health',type:'Company (public, Nasdaq)',lat:41.88,lng:-87.63,desc:'AI platform for precision medicine integrating clinical data, genomics, imaging and multiomics. Focused on oncology with one of the largest real-world clinical datasets.'},
+  {name:'Verily',cat:'health',type:'Company (Alphabet subsidiary)',lat:37.65,lng:-122.41,desc:"Alphabet's life sciences research and precision health company. Combines AI, wearables and biomedical data for population-scale health research."},
+  {name:'Anthropic',cat:'ai',type:'Company',lat:37.79,lng:-122.40,desc:"AI safety company and creator of Claude. Builds large language models focused on safe and beneficial AI. Increasingly engaged with biology through the Anthology Fund and Claude's use in scientific research."},
+  {name:'Google DeepMind',cat:'ai',type:'Company (Alphabet subsidiary)',lat:51.50,lng:-0.14,desc:"Alphabet's flagship AI research lab — behind AlphaFold, Gemini and fundamental ML breakthroughs. Parent company of Isomorphic Labs."},
+  {name:'Microsoft',cat:'ai',type:'Company',lat:47.67,lng:-122.12,desc:'Technology giant and majority owner of OpenAI. Azure is a primary cloud provider for AI bio companies. Runs dedicated computational biology research teams.'},
+  {name:'Nvidia',cat:'ai',type:'Company',lat:37.37,lng:-121.97,desc:'GPU manufacturer and essential AI infrastructure globally. BioNeMo framework hosts multiple biological foundation models as NIM microservices.'},
+  {name:'OpenAI',cat:'ai',type:'Company',lat:37.80,lng:-122.42,desc:'Developer of GPT-4 and ChatGPT. Investor in Chai Discovery. Held a biodefence summit on model safeguards for biosecurity risk.'},
+  {name:'Sakana AI',cat:'ai',type:'Company',lat:35.68,lng:139.65,desc:'AI research lab exploring nature-inspired AI architectures. Based in Tokyo. Develops novel model designs inspired by evolution and swarm intelligence.'},
+  {name:'Radical Numerics',cat:'ai',type:'Company',lat:51.51,lng:-0.20,desc:'Computational and numerical AI company focused on high-performance scientific computing and AI-accelerated simulation.'},
+  {name:'ARIA',cat:'investor',type:'Government Agency (UK)',lat:51.52,lng:-0.16,desc:"UK's Advanced Research and Invention Agency, modelled on DARPA. Funds high-risk, high-reward scientific research. Active programmes in AI for science and synthetic biology."},
+  {name:'Blue Yard',cat:'investor',type:'Venture Capital',lat:52.52,lng:13.41,desc:'Berlin-based deep tech VC investing in foundational technology companies across AI, biotech, space and climate.'},
+  {name:'Convergent Research',cat:'investor',type:'Non-profit / FRO',lat:42.36,lng:-71.12,desc:'Focused Research Organisation model launching high-risk, high-reward scientific projects between academia and industry.'},
+  {name:'F Prime',cat:'investor',type:'Venture Capital',lat:42.35,lng:-71.06,desc:"Fidelity's venture capital arm with a strong focus on healthcare and life sciences. One of the most active biotech investors globally."},
+  {name:'Forbion',cat:'investor',type:'Venture Capital',lat:52.29,lng:5.16,desc:'European life sciences VC based in the Netherlands. Backs transformative biopharmaceutical and medtech science.'},
+  {name:'Foresight Institute',cat:'investor',type:'Non-profit / Think Tank',lat:37.80,lng:-122.43,desc:'Non-profit research institute for transformative technologies in nanotechnology, biotech, AI and longevity.'},
+  {name:'General Atlantic',cat:'investor',type:'Growth Equity',lat:40.72,lng:-74.01,desc:'Global growth equity firm managing over $100B. Participated in the Chai Discovery Series B.'},
+  {name:'HCVC',cat:'investor',type:'Venture Capital',lat:48.88,lng:2.34,desc:'Paris-based early-stage VC focused on deep tech and European frontier technology. Invests in AI, biotech and climate tech.'},
+  {name:'IQ Capital',cat:'investor',type:'Venture Capital',lat:52.21,lng:0.13,desc:'UK-based deep tech VC investing in AI, quantum computing and advanced engineering. Backs UK university spin-outs.'},
+  {name:'Pillar VC',cat:'investor',type:'Venture Capital',lat:42.36,lng:-71.07,desc:'Boston-based VC backing science and engineering-driven startups across biotech, materials, climate and computing.'},
+  {name:'Renaissance Philanthropy',cat:'investor',type:'Non-profit / Philanthropy',lat:40.73,lng:-74.01,desc:'Philanthropy organisation funding breakthrough research in science and technology with interest in longevity, AI safety and transformative biology.'},
+  {name:'SovAI fund',cat:'investor',type:'Sovereign Fund',lat:51.51,lng:-0.13,desc:'Sovereign AI investment fund backing AI infrastructure, foundation models and applications at scale.'},
+  {name:'Syncona',cat:'investor',type:'Investment Company (public, LSE)',lat:51.51,lng:-0.12,desc:'FTSE-listed life science investment company building and funding cell and gene therapy companies. Long-term patient capital model.'},
+  {name:'Biotech TV',cat:'other',type:'Media',lat:37.79,lng:-122.44,desc:'Video content platform covering biotech and life sciences news — profiles, conference coverage and founder interviews.'},
+  {name:'Monograph',cat:'other',type:'Software Company',lat:37.78,lng:-122.44,desc:'Project management and practice management software, primarily used by architecture and design firms.'},
+  {name:'Nucleate',cat:'other',type:'Non-profit / Community',lat:42.36,lng:-71.08,desc:'Student-run non-profit building the next generation of biotech founders. Runs programmes and events at universities globally.'},
+  {name:'Sifted',cat:'other',type:'Media',lat:51.51,lng:-0.10,desc:'European tech startup news publication backed by the Financial Times. Covers deep tech, AI and life sciences.'},
+  {name:'SOTA',cat:'other',type:'Community / Media',lat:37.76,lng:-122.44,desc:'Community and content platform covering AI research and state-of-the-art developments across industries including biology.'},
+  {name:'TechBros',cat:'other',type:'Community / Media',lat:37.75,lng:-122.44,desc:'Tech community and content platform covering technology culture, startups and the broader tech ecosystem.'},
+  {name:'Wilbe',cat:'other',type:'Organisation',lat:51.52,lng:-0.11,desc:'Organisation at the intersection of AI and life sciences, building connections within the AI bio ecosystem.'},
+  {name:'Wired',cat:'other',type:'Media',lat:37.77,lng:-122.44,desc:'Iconic technology, science and culture magazine. Deep coverage of AI bio breakthroughs and the cultural implications of the AI revolution.'},
+];
+
+// ── FUNDING DATA ──
+const FUNDING = {
+  'Arc Institute':                   'Non-profit, philanthropically funded. Co-founded by Patrick Collison & Patrick Hsu with a long-term research mandate.',
+  'Chan Zuckerberg Biohub / CZI':    '$3B+ committed by Priscilla Chan & Mark Zuckerberg to biomedical science. Non-profit.',
+  'Alex Rives Lab / ESM (Broad + CZI)': 'Academic lab — funded by Broad Institute, MIT EECS, and CZI philanthropic endowment. Not independently funded.',
+  'Schmidt Centre / Uhler Lab (Broad + MIT)': 'Academic research centre — funded by a major gift from Eric and Wendy Schmidt, plus NIH, NSF and philanthropic grants. Not independently funded.',
+  "David Baker's Lab / HHMI":        'Academic lab funded by HHMI (Howard Hughes Medical Institute) and NIH grants. Not a company.',
+  'EvolutionaryScale':               '$142M seed (Jun 2024). Acquired by Chan Zuckerberg Biohub (Nov 2025).',
+  'Chai Discovery':                  '$230M total — $30M seed (Sep 2024) · $70M Series A (Aug 2025) · $130M Series B (Dec 2025). Valuation: $1.3B.',
+  'Profluent':                       '~$180M total — $106M Series B (Nov 2025). Backed by Salesforce Ventures, Spark Capital, Alter.',
+  'BioMap':                          '$100M+ total. Strategic partnership with Sanofi worth up to $1B in milestones.',
+  'Atomic AI':                       '~$60M total — Series B. Backed by Lux Capital, Data Collective.',
+  'NOETIK':                          'Undisclosed. GSK committed $50M upfront for model access (early 2026).',
+  'Inceptive':                       '$120M total — Seed + Series A. Backed by a16z, NVentures, Obvious Ventures.',
+  'Boltz Bio':                       'Early stage MIT spinout. Backed by academic and early venture funding.',
+  'Latent Labs':                     '~$50M total — Series A.',
+  'Goodfire':                        '$209M total — $7M seed (Aug 2024) · $50M Series A (Apr 2025) · $150M Series B (Feb 2026). Valuation: $1.25B.',
+  'Generate:Biomedicines':           '~$800M raised before IPO. $400M raised in Feb 2026 IPO.',
+  'Basecamp Research':               '~$20M total — Series A. Backed by Balderton Capital.',
+  'Prima Mente':                     'Early stage / seed. Undisclosed.',
+  'Absci':                           'Public (Nasdaq: ABSI). Raised ~$200M pre-IPO.',
+  'Aignostics':                      '~$30M total — Series B. Backed by Earlybird, Redalpine.',
+  'Atomwise':                        '$174M total — Series B/C. Backed by Y Combinator, Artis Ventures.',
+  'BenevolentAI':                    'Public (Nasdaq: BAI). Raised ~$300M+ pre-IPO.',
+  'BigHat Biosciences':              '$75M total — $6M seed · $36M Series A · $33M Series B. Backed by General Catalyst.',
+  'Causaly':                         'Acquired by Elsevier (2022). Pre-acquisition total ~$5M.',
+  'Charm Therapeutics':              '~$60M total — Series A. Backed by Lightspeed, Tencent.',
+  'Chemify':                         '~$100M total — Series A/B. Backed by Lux Capital.',
+  'Cradle':                          '$100M+ total — $73M Series B (Nov 2024), led by IVP. Previous investors: Index Ventures, Kindred Capital.',
+  'Deep Genomics':                   '$180M+ total — Series B. Backed by GV (Google Ventures), 8VC.',
+  'Eikon Therapeutics':              '~$850M total. $381M raised in Feb 2026 IPO.',
+  'Enveda':                          'Undisclosed early-stage funding.',
+  'Expression Edits':                'Seed / early stage. Undisclosed.',
+  'Ginkgo Bioworks':                 'Public (NYSE: DNA). Raised ~$1.8B pre-IPO.',
+  'Healx':                           '~$105M total — Series C. Backed by Cambridge Enterprise, DCVC.',
+  'Iktos':                           '~€25M total — Series A/B. Backed by Omnes Capital.',
+  'Insilico Medicine':               '~$400M total — Series C. Backed by Warburg Pincus, B Capital.',
+  'insitro':                         '$400M total — $400M Series C (2021). Backed by a16z, Third Rock Ventures.',
+  'Isomorphic Labs':                 '$600M Series A (Mar 2025) — first external funding round. Led by Pfizer and other pharma investors.',
+  'Kailera Therapeutics':            '~$400M total — Series A/B. Backed by Atlas Venture, Foresite Capital.',
+  'Lila Biosciences':                'Seed / early stage. Undisclosed.',
+  'Molecule.one':                    '~$10M total — Series A. Backed by Acequia Capital, Calm Fund.',
+  '1910 Genetics':                   '~$70M total — Series A. Backed by GV (Google Ventures), Lilly Ventures.',
+  'Olix':                            '~£50M total — Series B. Traded on AIM (London Stock Exchange).',
+  'Pathos AI':                       '$467M total — Series A, B and C. Backed by A-Star, Coatue Management.',
+  'Phylo Bio':                       'Early stage / seed.',
+  'Qubit Pharmaceuticals':           '~$20M total — Series A. Joint US-French venture.',
+  'Recursion Pharmaceuticals':       'Public (Nasdaq: RXRX). Raised ~$800M+ pre-IPO.',
+  'Relay Therapeutics':              'Public (Nasdaq: RLAY). Raised ~$800M+ pre-IPO.',
+  'Relation Therapeutics':           '~$25M total — Series A/B. Backed by NVentures (Nvidia), Advent Life Sciences.',
+  'Schrödinger':                     'Public (Nasdaq: SDGR). Raised ~$300M+ pre-IPO.',
+  'Superluminal Medicines':          '$120M Series A (2025), led by a16z. Eli Lilly collaboration deal worth up to $1.3B in milestones.',
+  'Terray Therapeutics':             '~$125M total — Series B. Backed by NVentures, Andreessen Horowitz.',
+  'WhiteLab Genomics':               '~$25M total — Series A. Backed by Omnes Capital, Leaps by Bayer.',
+  'Xaira':                           '$1B Series A (2024). One of the largest biotech Series A rounds ever. Backed by ARCH Venture, Foresite, a16z.',
+  'OpenBind':                        '£8M grant from UK Government Sovereign AI Unit. Open science / non-profit consortium.',
+  'Automata':                        '~$50M total — Series B. Backed by Octopus Ventures, LocalGlobe.',
+  'Benchling':                       '$200M+ total — Series F. Valuation ~$4.5B. Backed by Benchmark, Sequoia, Thrive Capital.',
+  'Edison Scientific':               'Undisclosed / early stage.',
+  'PacBio':                          'Public (Nasdaq: PACB). Raised ~$200M+ pre-IPO.',
+  'Gleamer':                         '~€25M total — Series B. Backed by Healtheon Capital, BPI France.',
+  'Kaiko':                           '~$30M total — Series B.',
+  'Medra':                           'Seed / early stage. Undisclosed.',
+  'Nabla':                           '$55M total — Series B. Backed by Cathay Innovation, Headline.',
+  'Optellum':                        '~$18M total — Series B. Backed by Oxford Sciences Innovation.',
+  'Owkin':                           '~$250M total — Series C. Backed by Fidelity, BPI France, NVIDIA.',
+  'Tempus AI':                       'Public (Nasdaq: TEM). Raised ~$1.1B+ pre-IPO.',
+  'Verily':                          'Alphabet subsidiary. Has raised ~$1B+ from external investors incl. Silver Lake, Temasek.',
+  'Anthropic':                       '~$18B+ total raised — $13B Series F (Sep 2025) at $183B valuation. Backed by Amazon ($8B), Google, Iconiq, Spark Capital.',
+  'Google DeepMind':                 'Alphabet subsidiary — not independently funded. Alphabet market cap ~$2T+.',
+  'Microsoft':                       'Public (Nasdaq: MSFT). Market cap ~$3T.',
+  'Nvidia':                          'Public (Nasdaq: NVDA). Market cap ~$3T+.',
+  'OpenAI':                          '$57B+ total — including $40B from SoftBank (Mar 2025), the largest single VC round in history.',
+  'Sakana AI':                       '~$30M total — Series A. Backed by Lux Capital, NTT Docomo Ventures.',
+  'Callosum':                        'Undisclosed.',
+  'Radical Numerics':                'Undisclosed.',
+  'ARIA':                            'UK Government agency — ~£800M budget over 5 years.',
+  'Blue Yard':                       'VC fund — AUM undisclosed.',
+  'Convergent Research':             'Non-profit — funded by philanthropists and foundations.',
+  'F Prime':                         'VC fund (Fidelity) — multi-billion AUM.',
+  'Forbion':                         'VC fund — €1B+ AUM.',
+  'Foresight Institute':             'Non-profit — grant-funded.',
+  'General Atlantic':                'Growth equity — $100B+ AUM.',
+  'HCVC':                            'VC fund — AUM undisclosed.',
+  'IQ Capital':                      'VC fund — £500M+ AUM.',
+  'Pillar VC':                       'VC fund — AUM undisclosed.',
+  'Renaissance Philanthropy':        'Philanthropic organisation — AUM undisclosed.',
+  'SovAI fund':                      'Sovereign fund — size undisclosed.',
+  'Syncona':                         'Public (LSE: SYNC). NAV ~£1B+.',
+  'Biotech TV':                      'Media organisation — not applicable.',
+  'Monograph':                       'Software company — undisclosed.',
+  'Nucleate':                        'Non-profit / community — grant and donation funded.',
+  'Sifted':                          'Media organisation — backed by FT Group.',
+  'SOTA':                            'Community / media — not applicable.',
+  'TechBros':                        'Community / media — not applicable.',
+  'Wilbe':                           'Organisation — undisclosed.',
+  'Wired':                           'Media — owned by Condé Nast.',
+};
+
+// ── WEBSITE DATA ──
+const WEBSITES = {
+  'Arc Institute':                  'https://arcinstitute.org',
+  'Chan Zuckerberg Biohub / CZI':   'https://www.czbiohub.org',
+  'Alex Rives Lab / ESM (Broad + CZI)': 'https://www.broadinstitute.org/bios/alex-rives',
+  'Schmidt Centre / Uhler Lab (Broad + MIT)': 'https://www.broadinstitute.org/ewsc',
+  "David Baker's Lab / HHMI":       'https://www.bakerlab.org',
+  'EvolutionaryScale':              'https://www.evolutionaryscale.ai',
+  'Chai Discovery':                 'https://www.chaidiscovery.com',
+  'Profluent':                      'https://www.profluent.bio',
+  'BioMap':                         'https://www.biomap.com',
+  'Atomic AI':                      'https://www.atomic.ai',
+  'NOETIK':                         'https://www.noetik.ai',
+  'Inceptive':                      'https://www.inceptive.com',
+  'Boltz Bio':                      'https://boltz.bio',
+  'Latent Labs':                    'https://www.latentlabs.com',
+  'Goodfire':                       'https://www.goodfire.ai',
+  'Generate:Biomedicines':          'https://www.generatebiomedicines.com',
+  'Basecamp Research':              'https://www.basecampresearch.com',
+  'Prima Mente':                    'https://primamente.com',
+  'Absci':                          'https://www.absci.com',
+  'Aignostics':                     'https://www.aignostics.com',
+  'Atomwise':                       'https://www.atomwise.com',
+  'BenevolentAI':                   'https://www.benevolent.ai',
+  'BigHat Biosciences':             'https://www.bighatbio.com',
+  'Causaly':                        'https://www.causaly.com',
+  'Charm Therapeutics':             'https://www.charmtx.com',
+  'Chemify':                        'https://www.chemify.io',
+  'Cradle':                         'https://www.cradle.bio',
+  'Deep Genomics':                  'https://www.deepgenomics.com',
+  'Eikon Therapeutics':             'https://www.eikontx.com',
+  'Enveda':                         'https://www.enveda.com',
+  'Expression Edits':               'https://www.expressionedits.com',
+  'Ginkgo Bioworks':                'https://www.ginkgobioworks.com',
+  'Healx':                          'https://healx.com',
+  'Iktos':                          'https://www.iktos.ai',
+  'Insilico Medicine':              'https://insilico.com',
+  'insitro':                        'https://www.insitro.com',
+  'Isomorphic Labs':                'https://www.isomorphiclabs.com',
+  'Kailera Therapeutics':           'https://www.kaileratx.com',
+  'Lila Biosciences':               'https://www.lilabiosciences.com',
+  'Molecule.one':                   'https://www.molecule.one',
+  '1910 Genetics':                  'https://www.1910genetics.com',
+  'Olix':                           'https://www.olixpharma.com',
+  'Pathos AI':                      'https://www.pathos.com',
+  'Phylo Bio':                      'https://www.phylobio.com',
+  'Qubit Pharmaceuticals':          'https://www.qubit-pharmaceuticals.com',
+  'Recursion Pharmaceuticals':      'https://www.recursion.com',
+  'Relay Therapeutics':             'https://relaytx.com',
+  'Relation Therapeutics':          'https://www.relationrx.com',
+  'Schrödinger':                    'https://www.schrodinger.com',
+  'Superluminal Medicines':         'https://www.superluminal.com',
+  'Terray Therapeutics':            'https://www.terraytherapeutics.com',
+  'WhiteLab Genomics':              'https://www.whitelabgenomics.com',
+  'Xaira':                          'https://www.xaira.com',
+  'OpenBind':                       'https://openbind.uk',
+  'Automata':                       'https://www.automata.tech',
+  'Benchling':                      'https://www.benchling.com',
+  'Edison Scientific':              'https://edisonscientific.com',
+  'PacBio':                         'https://www.pacb.com',
+  'Gleamer':                        'https://www.gleamer.ai',
+  'Kaiko':                          'https://www.kaiko.ai',
+  'Medra':                          'https://www.medra.ai',
+  'Nabla':                          'https://www.nabla.com',
+  'Optellum':                       'https://www.optellum.com',
+  'Owkin':                          'https://www.owkin.com',
+  'Tempus AI':                      'https://www.tempus.com',
+  'Verily':                         'https://verily.com',
+  'Anthropic':                      'https://www.anthropic.com',
+  'Google DeepMind':                'https://deepmind.google',
+  'Microsoft':                      'https://www.microsoft.com',
+  'Nvidia':                         'https://www.nvidia.com',
+  'OpenAI':                         'https://www.openai.com',
+  'Sakana AI':                      'https://sakana.ai',
+  'ARIA':                           'https://www.aria.org.uk',
+  'Blue Yard':                      'https://www.blueyard.com',
+  'Convergent Research':            'https://www.convergentresearch.org',
+  'F Prime':                        'https://www.fprimecapital.com',
+  'Forbion':                        'https://www.forbion.com',
+  'Foresight Institute':            'https://foresight.org',
+  'General Atlantic':               'https://www.generalatlantic.com',
+  'HCVC':                           'https://www.hcvc.eu',
+  'IQ Capital':                     'https://iqcapital.vc',
+  'Pillar VC':                      'https://www.pillar.vc',
+  'Renaissance Philanthropy':       'https://renaissancephilanthropy.org',
+  'SovAI fund':                     'https://www.sovai.fund',
+  'Syncona':                        'https://www.synconaltd.com',
+  'Biotech TV':                     'https://www.biotechTV.com',
+  'Nucleate':                       'https://nucleate.xyz',
+  'Sifted':                         'https://sifted.eu',
+  'Wired':                          'https://www.wired.com',
+};
+
+function openModal(name, type, desc, cat) {
+  const c = CAT[cat]||CAT.other;
+  const tag = document.getElementById('modalCatTag');
+  tag.textContent = c.label;
+  tag.style.cssText = `background:${c.bg};color:${c.hex};border:1px solid ${c.border};`;
+  document.getElementById('modalName').textContent = name;
+  const pill = document.getElementById('modalTypePill');
+  pill.textContent = type;
+  pill.style.cssText = `color:${c.hex};border-color:${c.border};background:${c.bg};`;
+  const fundingEl = document.getElementById('modalFundingAmount');
+  const fundingRow = document.getElementById('modalFunding');
+  const fundingText = FUNDING[name];
+  if (fundingText) { fundingEl.textContent = fundingText; fundingRow.style.display = 'flex'; }
+  else { fundingRow.style.display = 'none'; }
+  const linkEl = document.getElementById('modalLink');
+  const linkTextEl = document.getElementById('modalLinkText');
+  const url = WEBSITES[name];
+  if (url) {
+    linkEl.href = url;
+    linkTextEl.textContent = url.replace(/^https?:\/\//, '');
+    linkEl.style.display = 'inline-flex';
+  } else {
+    linkEl.style.display = 'none';
+  }
+  document.getElementById('modalDesc').textContent = desc;
+  document.getElementById('modalOverlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeModal(e){ if(e.target===document.getElementById('modalOverlay')) closeModalDirect(); }
+function closeModalDirect(){ document.getElementById('modalOverlay').classList.remove('open'); document.body.style.overflow=''; }
+document.addEventListener('keydown', e=>{ if(e.key==='Escape') closeModalDirect(); });
+
+// ── STAGE DATA ──
+const STAGES = {
+  'Arc Institute':'nonprofit', 'Chan Zuckerberg Biohub / CZI':'nonprofit',
+  'Alex Rives Lab / ESM (Broad + CZI)':'nonprofit',
+  'Schmidt Centre / Uhler Lab (Broad + MIT)':'nonprofit',
+  "David Baker's Lab / HHMI":'nonprofit',
+  'OpenBind':'nonprofit', 'Convergent Research':'nonprofit',
+  'Foresight Institute':'nonprofit', 'Renaissance Philanthropy':'nonprofit', 'Nucleate':'nonprofit',
+  'EvolutionaryScale':'acquired',
+  'Google DeepMind':'subsidiary', 'Verily':'subsidiary',
+  'Absci':'public', 'BenevolentAI':'public', 'Eikon Therapeutics':'public',
+  'Generate:Biomedicines':'public', 'Ginkgo Bioworks':'public', 'PacBio':'public',
+  'Recursion Pharmaceuticals':'public', 'Relay Therapeutics':'public',
+  'Schrödinger':'public', 'Tempus AI':'public', 'Syncona':'public',
+  'Microsoft':'public', 'Nvidia':'public',
+  'Anthropic':'series-c', 'OpenAI':'series-c', 'Atomwise':'series-c',
+  'Healx':'series-c', 'insitro':'series-c', 'Owkin':'series-c',
+  'Pathos AI':'series-c', 'Benchling':'series-c',
+  'Insilico Medicine':'series-c',
+  'Aignostics':'series-b', 'Atomic AI':'series-b', 'Basecamp Research':'series-b',
+  'BigHat Biosciences':'series-b', 'BioMap':'series-b', 'Chai Discovery':'series-b',
+  'Cradle':'series-b', 'Deep Genomics':'series-b', 'Goodfire':'series-b', 'Iktos':'series-b',
+  'Inceptive':'series-b', 'Nabla':'series-b', 'Olix':'series-b',
+  'Optellum':'series-b', 'Profluent':'series-b', 'Relation Therapeutics':'series-b',
+  'Terray Therapeutics':'series-b', 'Kaiko':'series-b', 'Gleamer':'series-b', 'Automata':'series-b',
+  'Charm Therapeutics':'series-a', 'Chemify':'series-a', 'Expression Edits':'series-a',
+  'Isomorphic Labs':'series-a', 'Kailera Therapeutics':'series-a', 'Latent Labs':'series-a',
+  'Molecule.one':'series-a', '1910 Genetics':'series-a', 'Qubit Pharmaceuticals':'series-a',
+  'Sakana AI':'series-a', 'Superluminal Medicines':'series-a', 'WhiteLab Genomics':'series-a',
+  'Xaira':'series-a', 'NOETIK':'series-a',
+  'Lila Biosciences':'seed', 'Medra':'seed', 'Boltz Bio':'seed',
+  'Prima Mente':'seed', 'Edison Scientific':'seed', 'Phylo Bio':'seed',
+};
+
+const STAGE_LABELS = {
+  'seed':'Seed', 'series-a':'Series A', 'series-b':'Series B',
+  'series-c':'Series C+', 'public':'Public', 'acquired':'Acquired',
+  'subsidiary':'Subsidiary', 'nonprofit':'Non-profit',
+};
+const STAGE_COLORS = {
+  'seed':       {bg:'rgba(245,158,11,0.15)',  text:'#fbbf24', border:'rgba(245,158,11,0.4)'},
+  'series-a':   {bg:'rgba(249,115,22,0.15)',  text:'#fb923c', border:'rgba(249,115,22,0.4)'},
+  'series-b':   {bg:'rgba(167,139,250,0.15)', text:'#a78bfa', border:'rgba(167,139,250,0.4)'},
+  'series-c':   {bg:'rgba(236,72,153,0.15)',  text:'#f472b6', border:'rgba(236,72,153,0.4)'},
+  'public':     {bg:'rgba(16,185,129,0.15)',  text:'#34d399', border:'rgba(16,185,129,0.4)'},
+  'acquired':   {bg:'rgba(96,165,250,0.15)',  text:'#60a5fa', border:'rgba(96,165,250,0.4)'},
+  'subsidiary': {bg:'rgba(148,163,184,0.15)', text:'#94a3b8', border:'rgba(148,163,184,0.4)'},
+  'nonprofit':  {bg:'rgba(0,212,170,0.15)',   text:'#00d4aa', border:'rgba(0,212,170,0.4)'},
+};
+
+document.querySelectorAll('.chip').forEach(chip => {
+  const name = chip.childNodes[0].textContent.trim();
+  chip.dataset.name = name;
+  const stage = STAGES[name];
+  chip.dataset.stage = stage || 'na';
+  if (stage && STAGE_LABELS[stage]) {
+    const sc = STAGE_COLORS[stage];
+    const b = document.createElement('span');
+    b.className = 'sbadge';
+    b.textContent = STAGE_LABELS[stage];
+    b.style.cssText = `background:${sc.bg};color:${sc.text};border:1px solid ${sc.border};`;
+    chip.appendChild(b);
+  }
+});
+
+document.querySelectorAll('.chip').forEach(chip=>{
+  chip.addEventListener('click',()=>{
+    const name = chip.childNodes[0].textContent.trim();
+    const sec = chip.closest('.cat-section');
+    openModal(name, chip.dataset.type||'Organisation', chip.dataset.desc||'', sec?.dataset.cat||'other');
+  });
+});
+
+let activeCat=null, activeStage=null, searchQ='';
+function doFilter(){ searchQ=document.getElementById('search').value.toLowerCase().trim(); applyFilters(); }
+function filterCat(cat){
+  activeCat=activeCat===cat?null:cat;
+  document.querySelectorAll('.leg').forEach(l=>l.classList.toggle('active-filter',l.dataset.filter===activeCat));
+  applyFilters();
+}
+function filterStage(stage){
+  activeStage=activeStage===stage?null:stage;
+  document.querySelectorAll('.sleg').forEach(s=>{
+    const active = s.dataset.stage===activeStage;
+    s.classList.toggle('active-filter', active);
+    if(active){ const sc=STAGE_COLORS[stage]; s.style.borderColor=sc.border; s.style.color=sc.text; s.style.background=sc.bg; }
+    else { s.style.borderColor=''; s.style.color=''; s.style.background=''; }
+  });
+  applyFilters();
+}
+function applyFilters(){
+  let vis=0;
+  document.querySelectorAll('.cat-section').forEach(sec=>{
+    const cm=!activeCat||activeCat===sec.dataset.cat;
+    let n=0;
+    sec.querySelectorAll('.chip').forEach(ch=>{
+      const stageMatch = !activeStage || ch.dataset.stage===activeStage;
+      const show=cm && stageMatch && (!searchQ||ch.textContent.toLowerCase().includes(searchQ));
+      ch.classList.toggle('hidden',!show);
+      if(show)n++;
+    });
+    const sep=sec.nextElementSibling;
+    sec.classList.toggle('collapsed',n===0);
+    if(sep?.classList.contains('cat-separator')) sep.style.display=n?'':'none';
+    vis+=n;
+    const el=document.getElementById('count-'+sec.dataset.cat);
+    if(el) el.textContent=n+(sec.dataset.cat==='investor'||sec.dataset.cat==='other'?' organisations':' companies');
+  });
+  document.getElementById('visibleCount').textContent=vis;
+  document.getElementById('noResults').style.display=vis?'none':'block';
+}
+document.getElementById('totalCount').textContent=document.querySelectorAll('.chip').length;
+applyFilters();
+
+// ── UPDATE OVERLAY ──
+const reviewData = {};
+
+function applyUpdates(data){
+  if(!data || !data.companies) return;
+  Object.entries(data.companies).forEach(([name, upd]) => {
+    if(!upd || !upd.needs_review) return;
+    reviewData[name] = upd;
+    document.querySelectorAll('.chip').forEach(chip => {
+      if(chip.dataset.name !== name) return;
+      if(chip.querySelector('.review-badge')) return;
+      const b = document.createElement('span');
+      b.className = 'review-badge';
+      b.title = 'Funding news detected — click to review';
+      b.textContent = '!';
+      b.addEventListener('click', e => { e.stopPropagation(); openReviewNotice(name, upd); });
+      chip.appendChild(b);
+    });
+  });
+}
+
+function openReviewNotice(name, upd){
+  document.getElementById('rnName').textContent = name;
+  const hl = document.getElementById('rnHeadline');
+  hl.textContent = upd.review_headline || 'News article';
+  hl.href = upd.review_url || '#';
+  const proposed = [];
+  if(upd.proposed_funding) proposed.push('<strong>Funding:</strong> ' + upd.proposed_funding);
+  if(upd.proposed_stage)   proposed.push('<strong>Stage:</strong> '   + upd.proposed_stage);
+  document.getElementById('rnProposed').innerHTML = proposed.length
+    ? 'Proposed update — ' + proposed.join(' &nbsp;·&nbsp; ')
+    : 'Open the article to review the details.';
+  document.getElementById('reviewNotice').classList.add('visible');
+}
+
+function dismissReview(){
+  document.getElementById('reviewNotice').classList.remove('visible');
+}
+
+fetch('./data/updates.json')
+  .then(r => r.json())
+  .then(applyUpdates)
+  .catch(() => {});
+
+// ── TABS ──
+let mapReady=false;
+function switchTab(tab,btn){
+  document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+  document.getElementById('panel-'+tab).classList.add('active');
+  btn.classList.add('active');
+  if(tab==='map'&&!mapReady){ buildMap(); mapReady=true; }
+  if(tab==='news'){ loadNews(); }
+}
+
+// ── D3 MAP ──
+function buildMap(){
+  const wrap = document.getElementById('mapWrap');
+  const W = wrap.clientWidth || 900;
+  const H = wrap.clientHeight || 560;
+
+  const svg = d3.select('#world-svg').attr('width', W).attr('height', H);
+  const projection = d3.geoNaturalEarth1().scale(W / 6.3).translate([W / 2, H / 2]);
+  const path = d3.geoPath().projection(projection);
+  const g = svg.append('g');
+
+  const baseGroup   = g.append('g');
+  const mapDefs     = g.append('defs');       // clip paths for logos (map-space)
+  const citiesLayer = g.append('g');
+  const dotsLayer   = g.append('g');
+  const spiderLayer = svg.append('g');        // screen-space overlay
+  let activeSpider  = null;
+
+  const DOT_R         = 5;
+  const CLUSTER_RADIUS = 26;   // screen-px grouping threshold
+  const LOGO_THRESHOLD = 4;    // zoom scale at which logos replace dots
+  const LOGO_R         = 14;   // logo circle radius in screen-px
+
+  // ── City labels ──
+  const CITIES = [
+    {name:'San Francisco', lat:37.77,  lng:-122.42, tier:1},
+    {name:'London',        lat:51.51,  lng:-0.13,   tier:1},
+    {name:'New York',      lat:40.71,  lng:-74.01,  tier:1},
+    {name:'Paris',         lat:48.86,  lng:2.35,    tier:1},
+    {name:'Berlin',        lat:52.52,  lng:13.40,   tier:1},
+    {name:'Tokyo',         lat:35.68,  lng:139.69,  tier:1},
+    {name:'Beijing',       lat:39.91,  lng:116.39,  tier:1},
+    {name:'Sydney',        lat:-33.87, lng:151.21,  tier:1},
+    {name:'Mumbai',        lat:19.07,  lng:72.88,   tier:1},
+    {name:'São Paulo',     lat:-23.55, lng:-46.63,  tier:1},
+    {name:'Boston',        lat:42.36,  lng:-71.06,  tier:2},
+    {name:'Seattle',       lat:47.61,  lng:-122.33, tier:2},
+    {name:'Amsterdam',     lat:52.37,  lng:4.90,    tier:2},
+    {name:'Toronto',       lat:43.65,  lng:-79.38,  tier:2},
+    {name:'Hong Kong',     lat:22.32,  lng:114.17,  tier:2},
+    {name:'Chicago',       lat:41.88,  lng:-87.63,  tier:2},
+    {name:'Los Angeles',   lat:34.05,  lng:-118.24, tier:2},
+    {name:'Singapore',     lat:1.35,   lng:103.82,  tier:2},
+    {name:'Cambridge MA',  lat:42.37,  lng:-71.11,  tier:3},
+    {name:'Oxford',        lat:51.75,  lng:-1.26,   tier:3},
+    {name:'Portland',      lat:45.52,  lng:-122.68, tier:3},
+    {name:'Warsaw',        lat:52.23,  lng:21.01,   tier:3},
+    {name:'Salt Lake City',lat:40.76,  lng:-111.89, tier:3},
+    {name:'Durham',        lat:54.78,  lng:-1.58,   tier:3},
+  ];
+
+  // ── Logo URLs (Clearbit, derived from WEBSITES) ──
+  const LOGO_URLS = {};
+  for (const [name, url] of Object.entries(WEBSITES)) {
+    try {
+      const domain = new URL(url).hostname.replace(/^www\./, '');
+      LOGO_URLS[name] = `https://logo.clearbit.com/${domain}`;
+    } catch(e){}
+  }
+
+  // ── Zoom ──
+  const zoom = d3.zoom()
+    .scaleExtent([0.5, 500])
+    .on('zoom', e => {
+      g.attr('transform', e.transform);
+      collapseSpider();
+      renderDots(e.transform);
+    });
+  svg.call(zoom);
+  svg.on('click', () => collapseSpider());
+
+  document.getElementById('zoomIn').onclick    = () => svg.transition().duration(300).call(zoom.scaleBy, 1.6);
+  document.getElementById('zoomOut').onclick   = () => svg.transition().duration(300).call(zoom.scaleBy, 0.625);
+  document.getElementById('zoomReset').onclick = () => { collapseSpider(); svg.transition().duration(400).call(zoom.transform, d3.zoomIdentity); };
+
+  // ── Tooltip ──
+  const tooltip = document.getElementById('mapTooltip');
+  function showTip(org, px, py){
+    const c = CAT[org.cat]||CAT.other;
+    document.getElementById('ttTag').textContent = c.label;
+    document.getElementById('ttTag').style.cssText = `background:${c.bg};color:${c.hex};border:1px solid ${c.border};`;
+    document.getElementById('ttName').textContent = org.name;
+    const tt = document.getElementById('ttType');
+    tt.textContent = org.type;
+    tt.style.cssText = `color:${c.hex};border-color:${c.border};background:${c.bg};`;
+    document.getElementById('ttDesc').textContent = org.desc;
+    tooltip.style.display = 'block';
+    const tw = 280, th = 160;
+    const left = px + 14 + tw > W ? px - tw - 10 : px + 14;
+    const top  = py + th > H ? py - th : py;
+    tooltip.style.left = left + 'px';
+    tooltip.style.top  = top  + 'px';
+  }
+  function hideTip(){ tooltip.style.display = 'none'; }
+
+  // ── Spider (screen-space) ──
+  function collapseSpider(){
+    activeSpider = null;
+    spiderLayer.selectAll('*').remove();
+    svg.selectAll('defs.spider-defs').remove();
+    hideTip();
+  }
+
+  function showSpider(cl, transform){
+    collapseSpider();
+    activeSpider = cl;
+    const n = cl.group.length;
+    const SPIDER_R  = Math.max(65, n * 7);
+    const k         = transform.k;
+    const showLogos = k >= LOGO_THRESHOLD;
+
+    // Shared defs for spider clip paths (screen-space)
+    const spiderDefs = svg.append('defs').attr('class', 'spider-defs');
+
+    cl.group.forEach((pt, i) => {
+      const angle = (i * 2 * Math.PI / n) - Math.PI / 2;
+      const tx = cl.cx + Math.cos(angle) * SPIDER_R;
+      const ty = cl.cy + Math.sin(angle) * SPIDER_R;
+      const color = CAT[pt.org.cat]?.hex || '#fff';
+
+      spiderLayer.append('line')
+        .attr('x1', cl.cx).attr('y1', cl.cy).attr('x2', tx).attr('y2', ty)
+        .attr('stroke', '#1e3a55').attr('stroke-width', 1.5).attr('pointer-events', 'none');
+
+      if (showLogos && LOGO_URLS[pt.org.name]) {
+        const r = 14;
+        const clipId = `sc${i}`;
+        spiderDefs.append('clipPath').attr('id', clipId)
+          .append('circle').attr('cx', tx).attr('cy', ty).attr('r', r);
+        spiderLayer.append('circle')
+          .attr('cx', tx).attr('cy', ty).attr('r', r + 2)
+          .attr('fill', '#f8fafc').attr('stroke', color).attr('stroke-width', 2);
+        spiderLayer.append('image')
+          .attr('x', tx - r).attr('y', ty - r).attr('width', r*2).attr('height', r*2)
+          .attr('href', LOGO_URLS[pt.org.name]).attr('clip-path', `url(#${clipId})`)
+          .attr('preserveAspectRatio', 'xMidYMid slice').style('cursor', 'pointer')
+          .on('mouseover', function(){
+            const ttx = tx + 16 + 280 > W ? tx - 280 - 16 : tx + 16;
+            showTip(pt.org, ttx, Math.max(0, Math.min(ty - 10, H - 160)));
+          })
+          .on('mouseout', () => hideTip())
+          .on('click', function(event){ event.stopPropagation(); hideTip(); openModal(pt.org.name, pt.org.type, pt.org.desc, pt.org.cat); });
+      } else {
+        spiderLayer.append('circle')
+          .attr('cx', tx).attr('cy', ty).attr('r', 8).attr('fill', color)
+          .attr('stroke', '#060a10').attr('stroke-width', 1.5).attr('opacity', 0.95).style('cursor', 'pointer')
+          .on('mouseover', function(){
+            d3.select(this).attr('r', 10).attr('opacity', 1);
+            const ttx = tx + 12 + 280 > W ? tx - 280 - 14 : tx + 12;
+            showTip(pt.org, ttx, Math.max(0, Math.min(ty - 10, H - 160)));
+          })
+          .on('mouseout', function(){ d3.select(this).attr('r', 8).attr('opacity', 0.95); hideTip(); })
+          .on('click', function(event){ event.stopPropagation(); hideTip(); openModal(pt.org.name, pt.org.type, pt.org.desc, pt.org.cat); });
+      }
+    });
+
+    // Centre × button
+    spiderLayer.append('circle')
+      .attr('cx', cl.cx).attr('cy', cl.cy).attr('r', 11)
+      .attr('fill', '#152030').attr('stroke', '#00d4aa').attr('stroke-width', 2).style('cursor', 'pointer')
+      .on('click', function(event){ event.stopPropagation(); collapseSpider(); });
+    spiderLayer.append('text')
+      .attr('x', cl.cx).attr('y', cl.cy).attr('text-anchor', 'middle').attr('dominant-baseline', 'central')
+      .attr('fill', '#00d4aa').attr('font-size', 13).attr('font-weight', 700).attr('pointer-events', 'none').text('×');
+  }
+
+  // ── Cluster computation ──
+  function computeClusters(transform){
+    const pts = ORGS.map(org => {
+      const p = projection([org.lng, org.lat]);
+      if (!p) return null;
+      const [sx, sy] = transform.apply(p);
+      return { org, mapX: p[0], mapY: p[1], sx, sy };
+    }).filter(Boolean);
+
+    const used = new Set();
+    const clusters = [];
+    for (let i = 0; i < pts.length; i++){
+      if (used.has(i)) continue;
+      const group = [pts[i]];
+      used.add(i);
+      for (let j = i + 1; j < pts.length; j++){
+        if (used.has(j)) continue;
+        if (Math.hypot(pts[i].sx - pts[j].sx, pts[i].sy - pts[j].sy) < CLUSTER_RADIUS){ group.push(pts[j]); used.add(j); }
+      }
+      const cx = group.reduce((s,p) => s+p.sx,   0) / group.length;
+      const cy = group.reduce((s,p) => s+p.sy,   0) / group.length;
+      const mx = group.reduce((s,p) => s+p.mapX, 0) / group.length;
+      const my = group.reduce((s,p) => s+p.mapY, 0) / group.length;
+      clusters.push({ group, cx, cy, mx, my });
+    }
+    return clusters;
+  }
+
+  // ── City label rendering ──
+  function renderCities(transform){
+    citiesLayer.selectAll('*').remove();
+    const k = transform.k;
+    CITIES.forEach(city => {
+      if (city.tier === 2 && k < 1.5) return;
+      if (city.tier === 3 && k < 4)   return;
+      const p = projection([city.lng, city.lat]);
+      if (!p) return;
+      citiesLayer.append('circle')
+        .attr('cx', p[0]).attr('cy', p[1]).attr('r', 1.8 / k)
+        .attr('fill', '#2e4a6a').attr('pointer-events', 'none');
+      citiesLayer.append('text')
+        .attr('x', p[0] + 4 / k).attr('y', p[1])
+        .attr('dominant-baseline', 'central').attr('fill', '#3a5a7a')
+        .attr('font-size', 8 / k).attr('font-family', "'IBM Plex Mono', monospace")
+        .attr('letter-spacing', 0.5 / k).attr('pointer-events', 'none')
+        .text(city.name);
+    });
+  }
+
+  // ── Dot / bubble / logo rendering ──
+  function renderDots(transform){
+    dotsLayer.selectAll('*').remove();
+    mapDefs.selectAll('*').remove();
+    renderCities(transform);
+    const k         = transform.k;
+    const showLogos = k >= LOGO_THRESHOLD;
+
+    computeClusters(transform).forEach((cl, ci) => {
+      if (cl.group.length === 1){
+        const pt    = cl.group[0];
+        const color = CAT[pt.org.cat]?.hex || '#fff';
+
+        if (showLogos && LOGO_URLS[pt.org.name]){
+          const r      = LOGO_R / k;
+          const clipId = `lc${ci}`;
+          mapDefs.append('clipPath').attr('id', clipId)
+            .append('circle').attr('cx', pt.mapX).attr('cy', pt.mapY).attr('r', r);
+          // Fallback color dot (visible if logo fails to load)
+          dotsLayer.append('circle')
+            .attr('cx', pt.mapX).attr('cy', pt.mapY).attr('r', r)
+            .attr('fill', color).attr('opacity', 0.35);
+          // White ring
+          dotsLayer.append('circle')
+            .attr('cx', pt.mapX).attr('cy', pt.mapY).attr('r', (LOGO_R + 2) / k)
+            .attr('fill', '#f8fafc').attr('stroke', color).attr('stroke-width', 2 / k);
+          // Logo
+          dotsLayer.append('image')
+            .attr('x', pt.mapX - r).attr('y', pt.mapY - r)
+            .attr('width', r*2).attr('height', r*2)
+            .attr('href', LOGO_URLS[pt.org.name]).attr('clip-path', `url(#${clipId})`)
+            .attr('preserveAspectRatio', 'xMidYMid slice').style('cursor', 'pointer')
+            .on('mouseover', function(event){ const [px,py]=d3.pointer(event,wrap); showTip(pt.org,px,py); })
+            .on('mousemove', function(event){ const [px,py]=d3.pointer(event,wrap); showTip(pt.org,px,py); })
+            .on('mouseout', () => hideTip())
+            .on('click', function(event){ event.stopPropagation(); hideTip(); openModal(pt.org.name, pt.org.type, pt.org.desc, pt.org.cat); });
+        } else {
+          dotsLayer.append('circle')
+            .attr('cx', pt.mapX).attr('cy', pt.mapY)
+            .attr('r', DOT_R / k).attr('fill', color)
+            .attr('stroke', '#060a10').attr('stroke-width', 1 / k)
+            .attr('opacity', 0.88).style('cursor', 'pointer')
+            .on('mouseover', function(event){ d3.select(this).attr('r', 8/k).attr('opacity',1); const [px,py]=d3.pointer(event,wrap); showTip(pt.org,px,py); })
+            .on('mousemove', function(event){ const [px,py]=d3.pointer(event,wrap); showTip(pt.org,px,py); })
+            .on('mouseout',  function(){ d3.select(this).attr('r',DOT_R/k).attr('opacity',0.88); hideTip(); })
+            .on('click',     function(event){ event.stopPropagation(); hideTip(); openModal(pt.org.name, pt.org.type, pt.org.desc, pt.org.cat); });
+        }
+        // Amber review ring if flagged
+        if(reviewData[pt.org.name]){
+          dotsLayer.append('circle')
+            .attr('cx', pt.mapX).attr('cy', pt.mapY)
+            .attr('r', (DOT_R + 6) / k)
+            .attr('fill', 'none').attr('stroke', '#fbbf24')
+            .attr('stroke-width', 1.5 / k).attr('stroke-dasharray', `${3/k},${2/k}`)
+            .attr('opacity', 0.85).attr('pointer-events', 'none');
+        }
+      } else {
+        const bubbleR = (10 + Math.min(cl.group.length, 20)) / k;
+        dotsLayer.append('circle')
+          .attr('cx', cl.mx).attr('cy', cl.my).attr('r', bubbleR)
+          .attr('fill', '#0d1e30').attr('stroke', '#00d4aa').attr('stroke-width', 2/k).attr('opacity', 0.95).style('cursor','pointer')
+          .on('mouseover', function(){ d3.select(this).attr('stroke','#7de8d6').attr('stroke-width', 3/k); })
+          .on('mouseout',  function(){ d3.select(this).attr('stroke','#00d4aa').attr('stroke-width', 2/k); })
+          .on('click', function(event){ event.stopPropagation(); hideTip(); showSpider(cl, transform); });
+        dotsLayer.append('text')
+          .attr('x', cl.mx).attr('y', cl.my).attr('text-anchor','middle').attr('dominant-baseline','central')
+          .attr('fill','#e2e8f0').attr('font-size', 10/k)
+          .attr('font-family',"'IBM Plex Mono', monospace").attr('font-weight',600)
+          .attr('pointer-events','none').text(cl.group.length);
+      }
+    });
+  }
+
+  // ── Load world topology ──
+  fetch('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json')
+    .then(r => r.json())
+    .then(world => {
+      document.getElementById('mapLoading').style.display = 'none';
+      const countries = topojson.feature(world, world.objects.countries);
+      const borders   = topojson.mesh(world, world.objects.countries, (a,b) => a !== b);
+
+      baseGroup.append('rect')
+        .attr('x',-W*2).attr('y',-H*2).attr('width',W*5).attr('height',H*5).attr('fill','#08111e');
+      const graticule = d3.geoGraticule()();
+      baseGroup.append('path').datum(graticule).attr('d',path).attr('fill','none').attr('stroke','#0d1a28').attr('stroke-width',0.4);
+      baseGroup.append('g').selectAll('path').data(countries.features).join('path')
+        .attr('d',path).attr('fill','#0e1e30').attr('stroke','#162336').attr('stroke-width',0.5);
+      baseGroup.append('path').datum(borders).attr('d',path).attr('fill','none').attr('stroke','#1a2d42').attr('stroke-width',0.6);
+
+      renderDots(d3.zoomIdentity);
+    })
+    .catch(() => {
+      document.getElementById('mapLoading').textContent = 'Map data failed to load — check your internet connection.';
+    });
+}
+
+// ── NEWS ──
+const NEWS_FEEDS = [
+  { name: 'STAT News',        url: 'https://www.statnews.com/feed/',                                           cat: 'trade'      },
+  { name: 'Endpoints',        url: 'https://endpts.com/feed/',                                                 cat: 'trade'      },
+  { name: 'FierceBiotech',    url: 'https://www.fiercebiotech.com/rss/xml',                                    cat: 'trade'      },
+  { name: 'BioPharma Dive',   url: 'https://www.biopharmadive.com/feeds/news/',                                cat: 'trade'      },
+  { name: 'GEN',              url: 'https://www.genengnews.com/feed/',                                         cat: 'trade'      },
+  { name: 'BioSpace',         url: 'https://www.biospace.com/rss/articles',                                    cat: 'trade'      },
+  { name: 'Asimov Press',     url: 'https://asimov.press/feed',                                                cat: 'specialist' },
+  { name: 'Decoding Bio',     url: 'https://www.decodingbio.com/feed',                                         cat: 'specialist' },
+  { name: 'Ground Truths',    url: 'https://erictopol.substack.com/feed',                                      cat: 'specialist' },
+  { name: 'Import AI',        url: 'https://jack-clark.net/feed/',                                             cat: 'specialist' },
+  { name: 'In the Pipeline',  url: 'https://feeds.feedburner.com/InThePipeline',                               cat: 'specialist' },
+  { name: 'MIT Tech Review',  url: 'https://www.technologyreview.com/feed/',                                   cat: 'tech'       },
+  { name: 'WIRED',            url: 'https://www.wired.com/feed/rss',                                           cat: 'tech'       },
+  { name: 'Reuters Health',   url: 'https://feeds.reuters.com/reuters/healthNews',                              cat: 'tech'       },
+  { name: 'Sifted',           url: 'https://sifted.eu/feed',                                                   cat: 'tech'       },
+  { name: 'Nature Biotech',   url: 'https://www.nature.com/nbt.rss',                                           cat: 'academic'   },
+  { name: 'Nat. Mach. Intel', url: 'https://www.nature.com/natmachintell.rss',                                  cat: 'academic'   },
+  { name: 'bioRxiv',          url: 'https://connect.biorxiv.org/biorxiv_xml.php?subject=bioinformatics',       cat: 'academic'   },
+];
+
+const _R2J = 'https://api.rss2json.com/v1/api.json?rss_url=';
+let _nLoading = false, _nCat = 'all', _nTimer = null;
+
+async function _fetchFeed(feed){
+  try {
+    const ctrl = new AbortController();
+    const tid  = setTimeout(() => ctrl.abort(), 9000);
+    const res  = await fetch(_R2J + encodeURIComponent(feed.url), { signal: ctrl.signal });
+    clearTimeout(tid);
+    const data = await res.json();
+    if(data.status !== 'ok' || !Array.isArray(data.items)) return [];
+    return data.items.slice(0, 15).map(item => ({
+      title:   (item.title || '').trim(),
+      link:    item.link || item.guid || '',
+      date:    new Date(item.pubDate || 0),
+      excerpt: _nStrip(item.description || item.content || '').slice(0, 200),
+      source:  feed.name,
+      cat:     feed.cat,
+    })).filter(a => a.title && a.link);
+  } catch(e){ return []; }
+}
+
+function _nStrip(html){
+  const d = document.createElement('div');
+  d.innerHTML = html;
+  return (d.textContent || d.innerText || '').replace(/\s+/g,' ').trim();
+}
+function _nEsc(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+function _nHref(s){ return String(s).replace(/"/g,'%22'); }
+
+function _nFmt(d){
+  const diff = (Date.now() - d) / 1000;
+  if(diff < 60)     return 'just now';
+  if(diff < 3600)   return Math.floor(diff/60)+'m ago';
+  if(diff < 86400)  return Math.floor(diff/3600)+'h ago';
+  if(diff < 172800) return 'yesterday';
+  return d.toLocaleDateString('en-GB',{day:'numeric',month:'short'});
+}
+
+function _nDayKey(d){
+  const diff = (Date.now() - d) / 86400000;
+  if(diff < 1)  return 'Today';
+  if(diff < 2)  return 'Yesterday';
+  return d.toLocaleDateString('en-GB',{weekday:'long',day:'numeric',month:'long'});
+}
+
+async function loadNews(force){
+  if(_nLoading && !force) return;
+  _nLoading = true;
+  clearTimeout(_nTimer);
+
+  const loading = document.getElementById('newsLoading');
+  const content = document.getElementById('newsContent');
+  const updated = document.getElementById('newsUpdated');
+  const btn     = document.getElementById('newsRefreshBtn');
+
+  loading.style.display = 'flex';
+  content.innerHTML = '';
+  updated.textContent = '';
+  btn.textContent = '↻ Loading…';
+  btn.disabled = true;
+
+  const results = await Promise.allSettled(NEWS_FEEDS.map(f => _fetchFeed(f)));
+
+  const all = [];
+  let failed = 0;
+  results.forEach(r => {
+    if(r.status === 'fulfilled' && r.value.length) all.push(...r.value);
+    else failed++;
+  });
+
+  all.sort((a, b) => b.date - a.date);
+  loading.style.display = 'none';
+
+  if(!all.length){
+    content.innerHTML = '<div class="news-empty">No articles loaded — check your internet connection or try refreshing.</div>';
+  } else {
+    const byDay = {}, dayOrder = [];
+    all.forEach(item => {
+      const key = _nDayKey(item.date);
+      if(!byDay[key]){ byDay[key] = []; dayOrder.push(key); }
+      byDay[key].push(item);
+    });
+
+    let html = '';
+    dayOrder.forEach(day => {
+      html += `<div class="news-day-header">${_nEsc(day)}</div>`;
+      byDay[day].forEach(item => {
+        const h = _nCat !== 'all' && item.cat !== _nCat ? ' hidden' : '';
+        html += `<div class="news-item${h}" data-cat="${item.cat}">` +
+          `<div class="news-item-meta"><span class="news-badge ${item.cat}">${_nEsc(item.source)}</span>` +
+          `<div class="news-time">${_nFmt(item.date)}</div></div>` +
+          `<div class="news-content"><a class="news-headline" href="${_nHref(item.link)}" target="_blank" rel="noopener noreferrer">${_nEsc(item.title)}</a>` +
+          (item.excerpt ? `<div class="news-excerpt">${_nEsc(item.excerpt)}</div>` : '') +
+          `</div></div>`;
+      });
+    });
+    if(failed > 0) html += `<div class="news-failed">${failed} source${failed>1?'s':''} could not be loaded.</div>`;
+    content.innerHTML = html;
+  }
+
+  updated.textContent = 'Updated ' + new Date().toLocaleTimeString('en-GB',{hour:'2-digit',minute:'2-digit'});
+  btn.textContent = '↻ Refresh';
+  btn.disabled = false;
+  _nLoading = false;
+  _nTimer = setTimeout(() => loadNews(true), 10 * 60 * 1000);
+}
+
+function newsFilter(cat, btn){
+  _nCat = cat;
+  document.querySelectorAll('.news-cat-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('#newsContent .news-item').forEach(el => {
+    el.classList.toggle('hidden', cat !== 'all' && el.dataset.cat !== cat);
+  });
+}
+</script>
+</body>
+</html>
