@@ -20,6 +20,7 @@
   --amber: #fbbf24; --amber-dim: #fbbf2410; --amber-border: #fbbf2440; --amber-text: #fcd34d;
   --gray: #9ca3af; --gray-dim: #9ca3af12; --gray-border: #9ca3af40; --gray-text: #d1d5db;
   --lime: #84cc16; --lime-dim: #84cc1612; --lime-border: #84cc1640; --lime-text: #bef264;
+  --cyan: #06b6d4; --cyan-dim: #06b6d412; --cyan-border: #06b6d440; --cyan-text: #67e8f9;
 }
 html, body { height: 100%; }
 body { background: var(--bg); color: var(--text); font-family: 'IBM Plex Mono', monospace; min-height: 100vh; display: flex; flex-direction: column; max-width: 1280px; margin: 0 auto; }
@@ -127,6 +128,11 @@ input[type="text"]::placeholder { color: #8fa0b8; }
 .cat-accel .cat-divider { background: var(--lime-border); }
 .cat-accel .chip { background: var(--lime-dim); border-color: var(--lime-border); color: var(--lime-text); }
 .cat-accel .chip:hover { background: #84cc1622; border-color: var(--lime); color: var(--lime); transform: translateY(-1px); }
+.cat-automation .cat-tag { background: var(--cyan-dim); color: var(--cyan); border: 1px solid var(--cyan-border); }
+.cat-automation .cat-name { color: var(--cyan); }
+.cat-automation .cat-divider { background: var(--cyan-border); }
+.cat-automation .chip { background: var(--cyan-dim); border-color: var(--cyan-border); color: var(--cyan-text); }
+.cat-automation .chip:hover { background: #06b6d422; border-color: var(--cyan); color: var(--cyan); transform: translateY(-1px); }
 
 /* MAP */
 #panel-map.active { display: flex; flex-direction: column; }
@@ -331,6 +337,7 @@ footer { padding: 24px 48px; border-top: 1px solid var(--border); display: flex;
     <div class="leg" onclick="filterCat('investor')" data-filter="investor"><div class="leg-dot" style="background:var(--amber)"></div>Investors &amp; funds</div>
     <div class="leg" onclick="filterCat('other')" data-filter="other"><div class="leg-dot" style="background:var(--gray)"></div>Community &amp; media</div>
     <div class="leg" onclick="filterCat('accel')" data-filter="accel"><div class="leg-dot" style="background:var(--lime)"></div>Accelerators</div>
+    <div class="leg" onclick="filterCat('automation')" data-filter="automation"><div class="leg-dot" style="background:var(--cyan)"></div>Lab automation</div>
   </div>
   <div class="stage-row" id="stageRow">
     <span class="stage-label">Stage</span>
@@ -429,19 +436,27 @@ footer { padding: 24px 48px; border-top: 1px solid var(--border); display: flex;
       <div class="cat-label"><div class="cat-tag">AI × Bio</div><div class="cat-name">Tools &amp;<br>Platforms</div><div class="cat-count" id="count-tools"></div></div>
       <div class="cat-divider"></div>
       <div class="chips">
-        <span class="chip" data-type="Company" data-desc="Lab automation robotics and software for life science workflows. Builds modular robotic workcells automating repetitive lab tasks to free scientists for higher-value experimental work.">Automata</span>
         <span class="chip" data-type="Company" data-desc="Cloud-based R&amp;D platform for biotech and pharma — ELN, data management, molecular biology tools and workflow automation. The operating system of the modern biotech lab.">Benchling</span>
         <span class="chip" data-type="Company" data-desc="AI-powered scientific instrumentation and data analytics platform for life sciences, combining hardware sensing with software intelligence to accelerate experimental workflows.">Edison Scientific</span>
         <span class="chip" data-type="Open Science Consortium (UK)" data-desc="UK-based open science initiative hosted at Diamond Light Source in Oxfordshire. Backed by £8M from the UK government's Sovereign AI Unit. Aims to generate over 500,000 experimentally validated protein-ligand structures over five years — 20 times more than have been publicly collected in the last 50 years — creating the world's largest open dataset of drug-protein binding data for training AI drug discovery models. Partners include the Universities of Oxford, Washington and Columbia, EMBL-EBI and the Open Molecular Software Foundation.">OpenBind <span class="badge">NP</span></span>
         <span class="chip" data-type="Company (public, Nasdaq)" data-desc="Long-read DNA sequencing company. HiFi sequencing produces more complete and accurate genome assemblies than short-read technologies. A critical data-generation tool for training biological AI models.">PacBio</span>
-        <span class="chip" data-type="Company" data-desc="Cloud software platform for designing and running complex biology experiments. Replaces manual lab protocols with structured digital workflows, enabling reproducible and scalable wet lab biology.">Synthace</span>
         <span class="chip" data-type="Company" data-desc="AI-powered mapping of the immune system using single-cell multi-omics. Builds comprehensive immune cell atlases to guide the design of next-generation immunotherapies.">immunai</span>
         <span class="chip" data-type="Company" data-desc="AI platform for single-cell biology using deep learning on brightfield cell images. Classifies and sorts cells by morphological phenotype without molecular labels, at scale.">deepcell</span>
         <span class="chip" data-type="Company" data-desc="Discovers novel CRISPR systems from nature using AI-assisted genomic mining, then applies them to next-generation diagnostics (DETECTR platform) and in vivo gene editing therapies. Co-founded by Jennifer Doudna.">Mammoth Biosciences</span>
         <span class="chip" data-type="Company" data-desc="AI-guided cell manufacturing platform combining laser optics, microscopy and machine learning to automate and scale iPSC-derived cell therapy production. Based in Cambridge, MA.">cellino</span>
         <span class="chip" data-type="Company" data-desc="Bioinformatics cloud platform providing managed infrastructure for genomics and multi-omics data pipelines. Lets biotech and pharma teams run complex workflows without managing compute infrastructure.">LatchBio</span>
-        <span class="chip" data-type="Company" data-desc="AI-guided liquid handling automation for genomics sample preparation. The Callisto instrument automates complex multi-step genomics library prep workflows with software-defined protocols.">Volta Labs</span>
         <span class="chip" data-type="Company" data-desc="AI platform for drug target discovery using high-content imaging and phenomics. Combines deep learning with cellular phenotypic screening to identify novel disease biology and therapeutic targets.">Phenomic AI</span>
+      </div>
+    </div>
+    <div class="cat-separator"></div>
+
+    <div class="cat-section cat-automation" data-cat="automation">
+      <div class="cat-label"><div class="cat-tag">AI × Bio</div><div class="cat-name">Lab<br>Automation</div><div class="cat-count" id="count-automation"></div></div>
+      <div class="cat-divider"></div>
+      <div class="chips">
+        <span class="chip" data-type="Company" data-desc="Lab automation robotics and software for life science workflows. Builds modular robotic workcells automating repetitive lab tasks to free scientists for higher-value experimental work.">Automata</span>
+        <span class="chip" data-type="Company" data-desc="Cloud software platform for designing and running complex biology experiments. Replaces manual lab protocols with structured digital workflows, enabling reproducible and scalable wet lab biology.">Synthace</span>
+        <span class="chip" data-type="Company" data-desc="AI-guided liquid handling automation for genomics sample preparation. The Callisto instrument automates complex multi-step genomics library prep workflows with software-defined protocols.">Volta Labs</span>
       </div>
     </div>
     <div class="cat-separator"></div>
@@ -552,6 +567,7 @@ footer { padding: 24px 48px; border-top: 1px solid var(--border); display: flex;
       <div class="map-legend-item" data-cat="investor"><div class="map-legend-dot" style="background:#fbbf24"></div>Investors &amp; funds</div>
       <div class="map-legend-item" data-cat="other"><div class="map-legend-dot" style="background:#9ca3af"></div>Community &amp; media</div>
       <div class="map-legend-item" data-cat="accel"><div class="map-legend-dot" style="background:#84cc16"></div>Accelerators</div>
+      <div class="map-legend-item" data-cat="automation"><div class="map-legend-dot" style="background:#06b6d4"></div>Lab automation</div>
     </div>
     <div class="map-hint">Scroll to zoom · click cluster to drill in · click dot for info</div>
     <div class="map-tooltip" id="mapTooltip">
@@ -638,6 +654,7 @@ const CAT = {
   investor:  {hex:'#fbbf24',bg:'rgba(251,191,36,0.12)',border:'rgba(251,191,36,0.5)',label:'Investors & Funds'},
   other:     {hex:'#9ca3af',bg:'rgba(156,163,175,0.12)',border:'rgba(156,163,175,0.5)',label:'Community & Media'},
   accel:     {hex:'#84cc16',bg:'rgba(132,204,22,0.12)',border:'rgba(132,204,22,0.5)',label:'Accelerators & Fellowships'},
+  automation:{hex:'#06b6d4',bg:'rgba(6,182,212,0.12)',border:'rgba(6,182,212,0.5)',label:'Lab Automation'},
 };
 
 // ── ORG DATA ──
@@ -696,13 +713,13 @@ const ORGS = [
   {name:'WhiteLab Genomics',cat:'discovery',type:'Company',lat:48.85,lng:2.36,desc:'AI platform for genomic medicine design, optimising gene therapy vectors, mRNA sequences and nucleic acid therapeutics.'},
   {name:'Xaira',cat:'discovery',type:'Company',lat:37.72,lng:-122.41,desc:'Large-scale generative AI for drug discovery, founded in 2024 with $1B in committed funding — one of the largest biotech launches ever.'},
   {name:'OpenBind',cat:'tools',type:'Open Science Consortium (UK)',lat:51.575,lng:-1.310,desc:'UK open science initiative hosted at Diamond Light Source in Oxfordshire. Backed by £8M from the UK Sovereign AI Unit. Generating 500,000+ protein-ligand structures over 5 years — 20× more than the past 50 years combined — to create the world\'s largest open dataset for training AI drug discovery models. Partners include Universities of Oxford, Washington and Columbia.'},
-  {name:'Automata',cat:'tools',type:'Company',lat:51.54,lng:-0.13,desc:'Lab automation robotics and software for life science workflows. Builds modular robotic workcells automating repetitive lab tasks.'},
+  {name:'Automata',cat:'automation',type:'Company',lat:51.54,lng:-0.13,desc:'Lab automation robotics and software for life science workflows. Builds modular robotic workcells automating repetitive lab tasks.'},
   {name:'Benchling',cat:'tools',type:'Company',lat:37.73,lng:-122.43,desc:'Cloud-based R&D platform for biotech and pharma — ELN, data management and workflow automation. The operating system of the modern biotech lab.'},
   {name:'Edison Scientific',cat:'tools',type:'Company',lat:51.52,lng:-0.19,desc:'AI-powered scientific instrumentation and data analytics platform for life sciences.'},
   {name:'PacBio',cat:'tools',type:'Company (public, Nasdaq)',lat:37.45,lng:-122.18,desc:'Long-read DNA sequencing company. HiFi sequencing produces more complete and accurate genome assemblies. Critical for training biological AI models.'},
   {name:'Gleamer',cat:'health',type:'Company (acquired by RadNet, March 2026)',lat:48.86,lng:2.36,desc:'AI medical imaging company specialising in radiology. Models analyse bone X-rays and chest radiographs to detect fractures and pathologies. Acquired by RadNet (DeepHealth) in March 2026.'},
   {name:'Kaiko',cat:'health',type:'Company',lat:52.37,lng:4.90,desc:'AI platform for oncology drug discovery, applying deep learning to multi-omics and clinical data to accelerate cancer research. Based in Amsterdam.'},
-  {name:'Medra',cat:'tools',type:'Company',lat:37.72,lng:-122.43,desc:'Physical AI and robotic lab automation platform for scientific research and drug discovery. Builds AI-guided robotic systems that autonomously conduct laboratory experiments.'},
+  {name:'Medra',cat:'health',type:'Company',lat:37.72,lng:-122.43,desc:'AI-powered medical documentation platform automating clinical note generation using ambient AI. Converts clinician consultations into structured clinical notes. Based in San Francisco.'},
   {name:'Nabla',cat:'health',type:'Company',lat:48.88,lng:2.37,desc:"AI clinical assistant for doctors automating note-taking, patient summaries and care plan generation. One of Europe's best-funded healthcare AI companies."},
   {name:'Optellum',cat:'health',type:'Company',lat:51.75,lng:-1.26,desc:'AI-powered lung disease diagnosis platform for early detection of lung cancer from CT scans. The Virtual Nodule Clinic helps radiologists identify pulmonary nodules.'},
   {name:'Owkin',cat:'health',type:'Company',lat:48.87,lng:2.38,desc:'Federated learning AI for oncology, enabling ML model training across hospital networks without centralising patient data.'},
@@ -749,13 +766,13 @@ const ORGS = [
   {name:'Alterome Therapeutics',cat:'discovery',type:'Company',lat:32.73,lng:-117.16,desc:'AI-driven drug discovery targeting specific RAS/MAPK oncogenic mutations. Uses machine learning to design selective small molecule inhibitors for individual RAS mutation variants.'},
 
   // ── Tools & platforms additions ──
-  {name:'Synthace',cat:'tools',type:'Company',lat:51.52,lng:-0.09,desc:'Cloud software platform for designing and running complex biology experiments. Replaces manual lab protocols with structured digital workflows, enabling reproducible and scalable wet lab biology.'},
+  {name:'Synthace',cat:'automation',type:'Company',lat:51.52,lng:-0.09,desc:'Cloud software platform for designing and running complex biology experiments. Replaces manual lab protocols with structured digital workflows, enabling reproducible and scalable wet lab biology.'},
   {name:'immunai',cat:'tools',type:'Company',lat:40.73,lng:-74.00,desc:'AI-powered mapping of the immune system using single-cell multi-omics. Builds comprehensive immune cell atlases to guide the design of next-generation immunotherapies.'},
   {name:'deepcell',cat:'tools',type:'Company',lat:37.45,lng:-122.16,desc:'AI platform for single-cell biology using deep learning on brightfield cell images. Classifies and sorts cells by morphological phenotype without molecular labels, at scale.'},
   {name:'Mammoth Biosciences',cat:'tools',type:'Company',lat:37.68,lng:-122.40,desc:'Discovers novel CRISPR systems from nature using AI-assisted genomic mining. Applies them to next-generation diagnostics (DETECTR platform) and in vivo gene editing therapies. Co-founded by Jennifer Doudna.'},
   {name:'cellino',cat:'tools',type:'Company',lat:42.36,lng:-71.10,desc:'AI-guided cell manufacturing platform combining laser optics, microscopy and machine learning to automate and scale iPSC-derived cell therapy production. Based in Cambridge, MA.'},
   {name:'LatchBio',cat:'tools',type:'Company',lat:37.79,lng:-122.39,desc:'Bioinformatics cloud platform providing managed infrastructure for genomics and multi-omics data pipelines. Lets biotech and pharma teams run complex workflows without managing compute infrastructure.'},
-  {name:'Volta Labs',cat:'tools',type:'Company',lat:42.35,lng:-71.07,desc:'AI-guided liquid handling automation for genomics sample preparation. The Callisto instrument automates complex multi-step genomics library prep workflows with software-defined protocols.'},
+  {name:'Volta Labs',cat:'automation',type:'Company',lat:42.35,lng:-71.07,desc:'AI-guided liquid handling automation for genomics sample preparation. The Callisto instrument automates complex multi-step genomics library prep workflows with software-defined protocols.'},
   {name:'Phenomic AI',cat:'tools',type:'Company',lat:43.64,lng:-79.37,desc:'AI platform for drug target discovery using high-content imaging and phenomics. Combines deep learning with cellular phenotypic screening to identify novel disease biology and therapeutic targets.'},
 
   // ── Synthetic biology / foundation model additions ──
