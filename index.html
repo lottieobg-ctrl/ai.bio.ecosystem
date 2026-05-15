@@ -823,7 +823,7 @@ const ORGS = [
   {name:'Edison Scientific',cat:'tools',type:'Company',lat:51.52,lng:-0.19,desc:'AI-powered scientific instrumentation and data analytics platform for life sciences.'},
   {name:'PacBio',cat:'tools',type:'Company (public, Nasdaq)',lat:37.45,lng:-122.18,desc:'Long-read DNA sequencing company. HiFi sequencing produces more complete and accurate genome assemblies. Critical for training biological AI models.'},
   {name:'Gleamer',cat:'health',type:'Company (acquired by RadNet, March 2026)',lat:48.86,lng:2.36,desc:'AI medical imaging company specialising in radiology. Models analyse bone X-rays and chest radiographs to detect fractures and pathologies. Acquired by RadNet (DeepHealth) in March 2026.'},
-  {name:'Kaiko',cat:'health',type:'Company',lat:52.37,lng:4.90,desc:'AI platform for oncology drug discovery, applying deep learning to multi-omics and clinical data to accelerate cancer research. Based in Amsterdam.'},
+  {name:'Kaiko',cat:'health',type:'Company',lat:52.37,lng:4.90,desc:'AI platform providing medical speech recognition and clinical NLP for healthcare. Converts clinician voice notes into structured medical records to reduce documentation burden. Based in Amsterdam.'},
   {name:'Medra',cat:'health',type:'Company',lat:37.72,lng:-122.43,desc:'AI-powered medical documentation platform automating clinical note generation using ambient AI. Converts clinician consultations into structured clinical notes. Based in San Francisco.'},
   {name:'Nabla',cat:'health',type:'Company',lat:48.88,lng:2.37,desc:"AI clinical assistant for doctors automating note-taking, patient summaries and care plan generation. One of Europe's best-funded healthcare AI companies."},
   {name:'Optellum',cat:'health',type:'Company',lat:51.75,lng:-1.26,desc:'AI-powered lung disease diagnosis platform for early detection of lung cancer from CT scans. The Virtual Nodule Clinic helps radiologists identify pulmonary nodules.'},
@@ -1551,11 +1551,17 @@ function buildMap(){
     maxZoom: 18,
   });
 
-  // Carto Dark Matter — streets, city names, no API key needed
-  L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+  // Carto Dark Matter base (no labels) — avoids non-English continent names baked into tiles
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}{r}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a> &copy; <a href="https://carto.com/" target="_blank">CARTO</a>',
     subdomains: 'abcd',
     maxZoom: 19,
+  }).addTo(map);
+  // Labels layer — only loaded at zoom ≥ 3 so continental labels (zoom 1-2) are never shown
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_only_labels/{z}/{x}/{y}{r}.png', {
+    subdomains: 'abcd',
+    maxZoom: 19,
+    minZoom: 3,
   }).addTo(map);
 
   // Wire up the custom zoom buttons
