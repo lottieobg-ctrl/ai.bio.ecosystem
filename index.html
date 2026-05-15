@@ -1285,27 +1285,63 @@ function buildMap(){
     },
   });
 
-  // Add all org markers
-  ORGS.forEach(org => {
+  // Pre-spread markers that share a geographic bucket so pill labels don't stack
+  const spreadOrgs = (() => {
+    const BUCKET   = 0.025; // ~2.5 km grid cell
+    const DX_BASE  = 0.013; // horiz step per column before cos(lat) adjustment
+    const DY       = 0.004; // vertical step per row (~26 px at zoom 13)
+    const MAX_COLS = 4;
+
+    const buckets = new Map();
+    ORGS.forEach((org, i) => {
+      const key = `${Math.round(org.lat / BUCKET)},${Math.round(org.lng / BUCKET)}`;
+      if (!buckets.has(key)) buckets.set(key, []);
+      buckets.get(key).push(i);
+    });
+
+    const result = ORGS.map(o => ({...o}));
+    buckets.forEach(idxs => {
+      if (idxs.length < 2) return;
+      // Sort by category then name for visual consistency
+      idxs.sort((a, b) => ORGS[a].cat.localeCompare(ORGS[b].cat) || ORGS[a].name.localeCompare(ORGS[b].name));
+      const cLat = idxs.reduce((s, i) => s + ORGS[i].lat, 0) / idxs.length;
+      const cLng = idxs.reduce((s, i) => s + ORGS[i].lng, 0) / idxs.length;
+      const DX   = DX_BASE / Math.cos(cLat * Math.PI / 180);
+      const cols = Math.min(MAX_COLS, idxs.length);
+      const rows = Math.ceil(idxs.length / cols);
+      idxs.forEach((orgIdx, pos) => {
+        const row    = Math.floor(pos / cols);
+        const col    = pos % cols;
+        const rowLen = Math.min(cols, idxs.length - row * cols);
+        result[orgIdx] = {
+          ...ORGS[orgIdx],
+          lat: cLat + ((rows - 1) / 2 - row) * DY,
+          lng: cLng + (col - (rowLen - 1) / 2) * DX,
+        };
+      });
+    });
+    return result;
+  })();
+
+  // Helper to add a single marker (uses spread position, real org data for events)
+  function addMarker(org){
     const m = L.marker([org.lat, org.lng], { icon: makeIcon(org) });
     m.on('mouseover', e => showMapTip(org, e.containerPoint.x, e.containerPoint.y));
     m.on('mouseout',  () => hideMapTip());
     m.on('click',     e => { L.DomEvent.stopPropagation(e); hideMapTip(); openModal(org.name, org.type, org.desc, org.cat); });
     clusterGroup.addLayer(m);
-  });
+  }
+
+  spreadOrgs.forEach(addMarker);
   map.addLayer(clusterGroup);
 
   // Legend category filter
   let activeMapCat = null;
   function rebuildMarkers(){
     clusterGroup.clearLayers();
-    ORGS.forEach(org => {
-      if(activeMapCat && org.cat !== activeMapCat) return;
-      const m = L.marker([org.lat, org.lng], { icon: makeIcon(org) });
-      m.on('mouseover', e => showMapTip(org, e.containerPoint.x, e.containerPoint.y));
-      m.on('mouseout',  () => hideMapTip());
-      m.on('click',     e => { L.DomEvent.stopPropagation(e); hideMapTip(); openModal(org.name, org.type, org.desc, org.cat); });
-      clusterGroup.addLayer(m);
+    spreadOrgs.forEach(org => {
+      if (activeMapCat && org.cat !== activeMapCat) return;
+      addMarker(org);
     });
   }
   document.querySelectorAll('.map-legend-item[data-cat]').forEach(item => {
