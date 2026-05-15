@@ -12,27 +12,42 @@ COMPANIES = [
     "Absci", "Aignostics", "Atomwise", "BenevolentAI", "BigHat Biosciences",
     "Charm Therapeutics", "Chemify", "Cradle", "Deep Genomics", "Eikon Therapeutics", "Enveda",
     "Expression Edits", "Ginkgo Bioworks", "Healx", "Iktos", "Insilico Medicine", "insitro",
-    "Isomorphic Labs", "Kailera Therapeutics", "Lila Biosciences", "Molecule.one", "1910 Genetics",
+    "Isomorphic Labs", "Kailera Therapeutics", "Lila Sciences", "Molecule.one", "1910 Genetics",
     "Olix", "Pathos AI", "Phylo Bio", "Qubit Pharmaceuticals", "Recursion Pharmaceuticals",
     "Relay Therapeutics", "Relation Therapeutics", "Schrodinger", "Superluminal Medicines",
     "Terray Therapeutics", "WhiteLab Genomics", "Xaira",
-    "Automata", "Benchling", "Edison Scientific", "PacBio",
+    "Automata", "Benchling", "Edison Scientific", "PacBio", "Phylo", "Drosera Bio",
     "Gleamer", "Kaiko", "Medra", "Nabla", "Optellum", "Owkin", "Tempus AI",
     "Anthropic", "OpenAI", "Sakana AI",
-    "Syncona",
+    "Syncona", "Fractile", "Doubleword",
 ]
 
 DATA_PATH = Path(__file__).parent.parent / "data" / "companies.json"
 
-FUNDING_KEYWORDS = re.compile(r'\braises?\b|\braised\b|\bfunding\b|\bseries [a-e]\b|\bseed\b|\bipo\b|\bacquir', re.IGNORECASE)
+FUNDING_KEYWORDS = re.compile(r'\braises?\b|\braised\b|\bfunding\b|\bseries [a-e]\b|\bseed\b|\bipo\b|\bacquir|\bvaluation\b|\binvestment\b|\bclosing\b', re.IGNORECASE)
 AMOUNT_PATTERN = re.compile(r'[\$£€](\d+(?:\.\d+)?)\s*(m|million|b|billion)\b', re.IGNORECASE)
 STAGE_PATTERNS = [
+    (re.compile(r'\bseries[- ]?[de]\b', re.IGNORECASE), 'series-d'),
     (re.compile(r'\bseries[- ]?c\b', re.IGNORECASE), 'series-c'),
     (re.compile(r'\bseries[- ]?b\b', re.IGNORECASE), 'series-b'),
     (re.compile(r'\bseries[- ]?a\b', re.IGNORECASE), 'series-a'),
     (re.compile(r'\bseed\b', re.IGNORECASE), 'seed'),
+    (re.compile(r'\bpre.?seed\b', re.IGNORECASE), 'seed'),
     (re.compile(r'\bipo\b|\bpublic\b|\blisted\b', re.IGNORECASE), 'public'),
     (re.compile(r'\bacquir', re.IGNORECASE), 'acquired'),
+]
+
+# Sources searched per company via Google News RSS
+# Multiple query patterns improve recall across different news outlets
+QUERY_PATTERNS = [
+    # General funding news
+    '"{company}" raises OR funding OR "Series" OR investment',
+    # Crunchbase and tech press (good for early-stage rounds)
+    '"{company}" funding site:techcrunch.com OR site:crunchbase.com',
+    # Trade / biotech press (STAT, FierceBiotech, Endpoints etc)
+    '"{company}" raises OR "Series" OR acquisition site:statnews.com OR site:fiercebiotech.com OR site:endpoints.news',
+    # Tracxn, PitchBook, and general fintech/deal trackers surface in Google News too
+    '"{company}" funding OR investment OR valuation',
 ]
 
 
@@ -49,9 +64,9 @@ def save_data(data):
         json.dump(data, f, indent=2)
 
 
-def fetch_rss(company):
-    query = urllib.request.quote(f'"{company}" raises OR funding OR "Series"')
-    url = f"https://news.google.com/rss/search?q={query}&hl=en-US&gl=US&ceid=US:en"
+def fetch_rss(query):
+    encoded = urllib.request.quote(query)
+    url = f"https://news.google.com/rss/search?q={encoded}&hl=en-US&gl=US&ceid=US:en"
     req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
     with urllib.request.urlopen(req, timeout=10) as resp:
         return resp.read()
@@ -76,7 +91,6 @@ def parse_stage(text):
 
 
 def parse_pub_date(date_str):
-    # RSS pubDate format: "Wed, 14 May 2026 08:00:00 GMT"
     for fmt in ("%a, %d %b %Y %H:%M:%S %Z", "%a, %d %b %Y %H:%M:%S %z"):
         try:
             dt = datetime.strptime(date_str.strip(), fmt)
@@ -89,58 +103,66 @@ def parse_pub_date(date_str):
 
 
 def check_company(company, existing_entry):
-    xml_data = fetch_rss(company)
-    root = ET.fromstring(xml_data)
-    cutoff = datetime.now(timezone.utc) - timedelta(days=14)
+    cutoff = datetime.now(timezone.utc) - timedelta(days=30)
+    seen_titles = set()
 
-    for item in root.iter("item"):
-        title_el = item.find("title")
-        link_el = item.find("link")
-        pub_date_el = item.find("pubDate")
-
-        if title_el is None or title_el.text is None:
+    for pattern in QUERY_PATTERNS:
+        query = pattern.format(company=company)
+        try:
+            xml_data = fetch_rss(query)
+            root = ET.fromstring(xml_data)
+        except Exception as e:
+            print(f"    RSS error ({query[:50]}): {e}")
+            time.sleep(0.3)
             continue
 
-        title = title_el.text
-        link = link_el.text if link_el is not None else ""
-        pub_date_str = pub_date_el.text if pub_date_el is not None else ""
+        for item in root.iter("item"):
+            title_el   = item.find("title")
+            link_el    = item.find("link")
+            pub_date_el = item.find("pubDate")
 
-        # Must mention the company name in the title
-        if company.lower() not in title.lower():
-            continue
+            if title_el is None or not title_el.text:
+                continue
 
-        # Must be within the last 14 days
-        pub_date = parse_pub_date(pub_date_str) if pub_date_str else None
-        if pub_date and pub_date < cutoff:
-            continue
+            title = title_el.text.strip()
+            if title in seen_titles:
+                continue
+            seen_titles.add(title)
 
-        # Must look like a funding article
-        if not FUNDING_KEYWORDS.search(title):
-            continue
+            link         = link_el.text if link_el is not None else ""
+            pub_date_str = pub_date_el.text if pub_date_el is not None else ""
 
-        # Skip if we already have this exact headline stored and it's not flagged for review
-        if existing_entry and not existing_entry.get("needs_review"):
-            stored_headline = existing_entry.get("review_headline", "")
+            # Must mention the company name
+            if company.lower() not in title.lower():
+                continue
+
+            # Must be within the lookback window
+            pub_date = parse_pub_date(pub_date_str) if pub_date_str else None
+            if pub_date and pub_date < cutoff:
+                continue
+
+            # Must look like a funding/deal article
+            if not FUNDING_KEYWORDS.search(title):
+                continue
+
+            # Skip if we already have this headline and it's not flagged
+            stored_headline = (existing_entry or {}).get("review_headline", "")
             if stored_headline == title:
                 return None
 
-        # Don't overwrite an existing needs_review=True entry unless the headline has changed
-        if existing_entry and existing_entry.get("needs_review"):
-            stored_headline = existing_entry.get("review_headline", "")
-            if stored_headline == title:
-                return None
+            amount = parse_amount(title)
+            stage  = parse_stage(title)
 
-        amount = parse_amount(title)
-        stage = parse_stage(title)
+            return {
+                "needs_review":    True,
+                "review_headline": title,
+                "review_url":      link,
+                "proposed_funding": amount,
+                "proposed_stage":   stage,
+                "found_at":        datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+            }
 
-        return {
-            "needs_review": True,
-            "review_headline": title,
-            "review_url": link,
-            "proposed_funding": amount,
-            "proposed_stage": stage,
-            "found_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
-        }
+        time.sleep(0.4)
 
     return None
 
@@ -148,16 +170,15 @@ def check_company(company, existing_entry):
 def main():
     data = load_data()
     companies_list = data.get("companies", [])
-
-    # Build a dict keyed by name for easy lookup (preserves reference to list objects)
     company_map = {c['name']: c for c in companies_list}
 
-    print(f"Checking {len(COMPANIES)} companies...")
+    print(f"Checking {len(COMPANIES)} companies across {len(QUERY_PATTERNS)} query patterns…")
+    print("Sources: Google News, TechCrunch, Crunchbase, STAT News, FierceBiotech, Endpoints")
+    print("(Tracxn and PitchBook data surfaced when they publish to Google-indexed pages)\n")
 
     for company in COMPANIES:
-        print(f"  Checking: {company}", end=" ", flush=True)
+        print(f"  {company}", end=" ", flush=True)
 
-        # Skip companies not pre-populated in companies.json
         if company not in company_map:
             print("-> not in companies.json, skipping")
             continue
@@ -166,30 +187,27 @@ def main():
         try:
             result = check_company(company, existing)
             if result:
-                # Update the entry in-place (mutates the object in companies_list)
-                existing["needs_review"] = True
+                existing["needs_review"]    = True
                 existing["review_headline"] = result["review_headline"]
-                existing["review_url"] = result["review_url"]
-                existing["found_at"] = result["found_at"]
+                existing["review_url"]      = result["review_url"]
+                existing["found_at"]        = result["found_at"]
                 existing["proposed_funding"] = result["proposed_funding"] or ""
-                existing["proposed_stage"] = result["proposed_stage"] or ""
+                existing["proposed_stage"]   = result["proposed_stage"] or ""
 
-                # Directly update funding and stage if both were parsed with high confidence
                 if result["proposed_funding"] and result["proposed_stage"]:
                     existing["funding"] = result["proposed_funding"]
-                    existing["stage"] = result["proposed_stage"]
+                    existing["stage"]   = result["proposed_stage"]
 
-                print(f"-> FLAGGED: {result['review_headline'][:60]}...")
+                print(f"-> FLAGGED: {result['review_headline'][:65]}…")
             else:
                 print("-> no new funding news")
         except Exception as e:
             print(f"-> ERROR: {e}")
-        time.sleep(0.5)
 
     data["last_updated"] = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
-    data["companies"] = companies_list
+    data["companies"]    = companies_list
     save_data(data)
-    print(f"\nDone. Data written to {DATA_PATH}")
+    print(f"\nDone. {DATA_PATH}")
 
 
 if __name__ == "__main__":
