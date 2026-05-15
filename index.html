@@ -36,7 +36,7 @@ h1 .x { color: var(--teal); }
 
 /* TABS */
 .tab-bar { display: flex; padding: 0 48px; border-bottom: 1px solid var(--border); flex-shrink: 0; }
-.tab-btn { padding: 14px 24px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #94a3b8; background: none; border: none; cursor: pointer; border-bottom: 2px solid transparent; margin-bottom: -1px; letter-spacing: 0.08em; text-transform: uppercase; transition: all 0.15s; }
+.tab-btn { padding: 18px 32px; font-family: 'IBM Plex Mono', monospace; font-size: 14px; font-weight: 600; color: #b8cfe0; background: none; border: none; cursor: pointer; border-bottom: 3px solid transparent; margin-bottom: -1px; letter-spacing: 0.08em; text-transform: uppercase; transition: all 0.15s; }
 .tab-btn:hover { color: #e2e8f0; }
 .tab-btn.active { color: var(--teal); border-bottom-color: var(--teal); }
 
@@ -608,7 +608,7 @@ footer { padding: 24px 48px; border-top: 1px solid var(--border); display: flex;
         <span class="chip" data-type="Fellowship Programme" data-desc="Two-year fellowship for scientists launching deep-tech startups in biotech, energy, climate and materials. DOE-funded; 62 fellows in 2024 cohort; alumni have raised $3.5B collectively.">Activate</span>
         <span class="chip" data-type="Accelerator" data-desc="University-anchored objectives-based accelerator with dedicated BioTech and AI streams. No equity, no fees. $51B+ in portfolio company value created globally.">Creative Destruction Lab</span>
         <span class="chip" data-type="Venture Builder" data-desc="UK venture creator that builds biotech, pharma and climate companies from scratch. Scientists join as co-founders at the idea stage; 50+ companies launched.">Deep Science Ventures</span>
-        <span class="chip" data-type="Fellowship Programme" data-desc="Paid year-long fellowship placing AI/ML researchers inside UK university labs to accelerate science breakthroughs. Backed by ARIA and DSIT.">Encode</span>
+        <span class="chip" data-type="Fellowship Programme" data-desc="Paid year-long fellowship placing AI/ML researchers inside UK university labs to accelerate science breakthroughs. Backed by ARIA and DSIT.">Encode: AI for Science Fellowship</span>
         <span class="chip" data-type="Fellowship Programme" data-desc="One-year fellowship supporting early-career scientists working on frontier technologies including AI for biology. ~9% acceptance rate; access to workshops and Foresight AI Nodes.">Foresight Fellowship</span>
         <span class="chip" data-type="Community Hub" data-desc="Physical community hubs opening in San Francisco and Berlin in 2026, run by the Foresight Institute. Offer project grants up to $3M, office space and compute for AI-for-science researchers.">Foresight AI Nodes</span>
         <span class="chip" data-type="Fellowship Programme" data-desc="$125K postdoctoral fellowship for recent PhDs to build and deploy AI agents that solve major problems in biology. Based in San Francisco.">FutureHouse</span>
@@ -698,6 +698,7 @@ footer { padding: 24px 48px; border-top: 1px solid var(--border); display: flex;
     <button class="events-filter-btn" onclick="eventsFilter('month',this)">This month</button>
     <button class="events-filter-btn" onclick="eventsFilter('quarter',this)">Next 3 months</button>
     <button class="events-filter-btn" onclick="eventsFilter('virtual',this)">Virtual</button>
+    <button class="events-filter-btn" onclick="eventsFilter('location',this)">By location</button>
     <span class="events-count" id="eventsCount"></span>
   </div>
   <div class="events-scroll">
@@ -925,7 +926,7 @@ const ORGS = [
   {name:'Activate',cat:'accel',type:'Fellowship Programme',lat:37.87,lng:-122.26,desc:'Two-year fellowship for scientists launching deep-tech startups in biotech, energy, climate and materials. DOE-funded; 62 fellows in 2024 cohort; alumni have raised $3.5B collectively.'},
   {name:'Creative Destruction Lab',cat:'accel',type:'Accelerator',lat:43.65,lng:-79.39,desc:'University-anchored objectives-based accelerator with dedicated BioTech and AI streams. No equity, no fees. Over $51B in portfolio company value created globally.'},
   {name:'Deep Science Ventures',cat:'accel',type:'Venture Builder',lat:51.51,lng:-0.10,desc:'UK venture creator that builds biotech, pharma and climate companies from scratch. Scientists join as co-founders at the idea stage; 50+ companies launched.'},
-  {name:'Encode',cat:'accel',type:'Fellowship Programme',lat:51.50,lng:-0.12,desc:'Paid year-long fellowship placing AI/ML researchers inside UK university labs to accelerate science breakthroughs. Backed by ARIA and DSIT.'},
+  {name:'Encode: AI for Science Fellowship',cat:'accel',type:'Fellowship Programme',lat:51.50,lng:-0.12,desc:'Paid year-long fellowship placing AI/ML researchers inside UK university labs to accelerate science breakthroughs. Backed by ARIA and DSIT.'},
   {name:'Foresight Fellowship',cat:'accel',type:'Fellowship Programme',lat:37.77,lng:-122.41,desc:'One-year fellowship supporting early-career scientists working on frontier technologies including AI for biology. ~9% acceptance rate; access to workshops and Foresight AI Nodes.'},
   {name:'FutureHouse',cat:'accel',type:'Fellowship Programme',lat:37.77,lng:-122.42,desc:'$125K postdoctoral fellowship for recent PhDs to build and deploy AI agents that solve major problems in biology. Based in San Francisco.'},
   {name:'Illumina Ventures Labs',cat:'accel',type:'Accelerator',lat:32.91,lng:-117.10,desc:'Genomics-focused startup accelerator providing capital, sequencing access, reagents and wet lab space. Sites in San Francisco Bay Area and Cambridge, UK.'},
@@ -1069,7 +1070,7 @@ const FUNDING = {
   'Activate':                        'Non-profit fellowship — DOE-funded; fellows receive a stipend and operational support for two years.',
   'Creative Destruction Lab':        'No-equity, no-fee accelerator — university-anchored; revenue from alumni success and corporate partnerships.',
   'Deep Science Ventures':           'Venture-backed venture builder — co-founds companies and takes equity; portfolio valuation ~$500M.',
-  'Encode':                          'Fellowship programme — funded by ARIA and DSIT (UK government). Paid year-long placement.',
+  'Encode: AI for Science Fellowship': 'Fellowship programme — funded by ARIA and DSIT (UK government). Paid year-long placement.',
   'Foresight Fellowship':            'Non-profit — philanthropy and grant funded. Part of the Foresight Institute.',
   'FutureHouse':                     'Non-profit — philanthropy funded. $125K stipend per fellow.',
   'Illumina Ventures Labs':          'Corporate accelerator — Illumina funded. Provides capital, sequencing access and lab space.',
@@ -1248,7 +1249,7 @@ const WEBSITES = {
   'Activate':                       'https://activate.org',
   'Creative Destruction Lab':       'https://creativedestructionlab.com',
   'Deep Science Ventures':          'https://www.deepscienceventures.com',
-  'Encode':                         'https://encode.pillar.vc',
+  'Encode: AI for Science Fellowship': 'https://encode.pillar.vc',
   'Foresight Fellowship':           'https://foresight.org/fellowship',
   'FutureHouse':                    'https://www.futurehouse.org/fellowship',
   'Illumina Ventures Labs':         'https://www.illumina.com/science/accelerator.html',
@@ -1308,7 +1309,7 @@ const STAGES = {
   'Schmidt Futures':'nonprofit', 'Wellcome Trust':'nonprofit', 'Convergent Research':'nonprofit',
   'Fractile':'series-b',
   'TechBros':'nonprofit', 'Activate':'nonprofit', 'Creative Destruction Lab':'nonprofit',
-  'Deep Science Ventures':'nonprofit', 'Encode':'nonprofit', 'Foresight Fellowship':'nonprofit', 'Science Creates':'nonprofit',
+  'Deep Science Ventures':'nonprofit', 'Encode: AI for Science Fellowship':'nonprofit', 'Foresight Fellowship':'nonprofit', 'Science Creates':'nonprofit',
   'FutureHouse':'nonprofit', 'Illumina Ventures Labs':'nonprofit', 'IndieBio':'nonprofit',
   'JLABS':'nonprofit', 'LabCentral AI BioHub':'nonprofit', 'Schmidt AI in Science':'nonprofit',
   'Schmidt Science Fellows':'nonprofit', 'Y Combinator':'nonprofit',
@@ -2069,33 +2070,21 @@ function renderEvents(filter){
     return;
   }
 
-  // Group by month label
-  const byMonth = new Map();
-  for(const e of events){
-    const d = new Date(e.date+'T12:00:00');
-    const key = d.toLocaleDateString('en-GB',{month:'long',year:'numeric'});
-    if(!byMonth.has(key)) byMonth.set(key,[]);
-    byMonth.get(key).push(e);
-  }
-
-  let html = '';
-  for(const [month, evts] of byMonth){
-    html += `<div class="events-month-header">${month}</div>`;
-    for(const ev of evts){
-      const d = new Date(ev.date+'T12:00:00');
-      const day = d.getDate();
-      const mon = MONTH_NAMES_SHORT[d.getMonth()];
-      let dayStr = String(day);
-      if(ev.end_date && ev.end_date !== ev.date){
-        const ed = new Date(ev.end_date+'T12:00:00');
-        if(ed.getMonth()===d.getMonth()) dayStr += '–'+ed.getDate();
-      }
-      const typeKey = ev.type||'conference';
-      const typeLabel = EVENT_TYPE_LABELS[typeKey]||typeKey;
-      const loc = ev.virtual ? '◎ Virtual' : '◉ '+(ev.location||'TBC');
-      const autoTag = ev.auto ? '<span class="event-auto-badge">AUTO</span>' : '';
-      const linkBtn = ev.url ? `<a class="event-link" href="${ev.url}" target="_blank" rel="noopener">Register →</a>` : '';
-      html += `
+  function _evtCard(ev){
+    const d = new Date(ev.date+'T12:00:00');
+    const day = d.getDate();
+    const mon = MONTH_NAMES_SHORT[d.getMonth()];
+    let dayStr = String(day);
+    if(ev.end_date && ev.end_date !== ev.date){
+      const ed = new Date(ev.end_date+'T12:00:00');
+      if(ed.getMonth()===d.getMonth()) dayStr += '–'+ed.getDate();
+    }
+    const typeKey = ev.type||'conference';
+    const typeLabel = EVENT_TYPE_LABELS[typeKey]||typeKey;
+    const loc = ev.virtual ? '◎ Virtual' : '◉ '+(ev.location||'TBC');
+    const autoTag = ev.auto ? '<span class="event-auto-badge">AUTO</span>' : '';
+    const linkBtn = ev.url ? `<a class="event-link" href="${ev.url}" target="_blank" rel="noopener">Register →</a>` : '';
+    return `
 <div class="event-card">
   <div class="event-date-box">
     <div class="event-date-day">${dayStr}</div>
@@ -2112,8 +2101,43 @@ function renderEvents(filter){
   </div>
   ${linkBtn}
 </div>`;
+  }
+
+  let html = '';
+
+  if(filter === 'location'){
+    // Group by location; Virtual/TBC sorted last
+    const byLoc = new Map();
+    for(const e of events){
+      const key = e.virtual ? 'Virtual' : (e.location||'TBC');
+      if(!byLoc.has(key)) byLoc.set(key,[]);
+      byLoc.get(key).push(e);
+    }
+    const sorted = [...byLoc.keys()].sort((a,b)=>{
+      const isLast = k => k==='Virtual'||k==='TBC'||k==='Online';
+      if(isLast(a) && !isLast(b)) return 1;
+      if(!isLast(a) && isLast(b)) return -1;
+      return a.localeCompare(b);
+    });
+    for(const loc of sorted){
+      html += `<div class="events-month-header">📍 ${loc}</div>`;
+      for(const ev of byLoc.get(loc)) html += _evtCard(ev);
+    }
+  } else {
+    // Group by month label (default)
+    const byMonth = new Map();
+    for(const e of events){
+      const d = new Date(e.date+'T12:00:00');
+      const key = d.toLocaleDateString('en-GB',{month:'long',year:'numeric'});
+      if(!byMonth.has(key)) byMonth.set(key,[]);
+      byMonth.get(key).push(e);
+    }
+    for(const [month, evts] of byMonth){
+      html += `<div class="events-month-header">${month}</div>`;
+      for(const ev of evts) html += _evtCard(ev);
     }
   }
+
   html += '<div class="events-disclaimer">Dates marked TBC are approximate. AUTO events are auto-discovered and may need verification.</div>';
   content.innerHTML = html;
 }
