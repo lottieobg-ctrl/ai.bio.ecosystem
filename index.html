@@ -1494,24 +1494,49 @@ function buildMap(){
 
 // ── NEWS ──
 const NEWS_FEEDS = [
-  { name: 'STAT News',        url: 'https://www.statnews.com/feed/',                                           cat: 'trade'      },
-  { name: 'Endpoints',        url: 'https://endpts.com/feed/',                                                 cat: 'trade'      },
-  { name: 'FierceBiotech',    url: 'https://www.fiercebiotech.com/rss/xml',                                    cat: 'trade'      },
-  { name: 'BioPharma Dive',   url: 'https://www.biopharmadive.com/feeds/news/',                                cat: 'trade'      },
-  { name: 'GEN',              url: 'https://www.genengnews.com/feed/',                                         cat: 'trade'      },
-  { name: 'BioSpace',         url: 'https://www.biospace.com/rss/articles',                                    cat: 'trade'      },
-  { name: 'Asimov Press',     url: 'https://asimov.press/feed',                                                cat: 'specialist' },
-  { name: 'Decoding Bio',     url: 'https://www.decodingbio.com/feed',                                         cat: 'specialist' },
-  { name: 'Ground Truths',    url: 'https://erictopol.substack.com/feed',                                      cat: 'specialist' },
-  { name: 'Import AI',        url: 'https://jack-clark.net/feed/',                                             cat: 'specialist' },
-  { name: 'In the Pipeline',  url: 'https://feeds.feedburner.com/InThePipeline',                               cat: 'specialist' },
-  { name: 'MIT Tech Review',  url: 'https://www.technologyreview.com/feed/',                                   cat: 'tech'       },
-  { name: 'WIRED',            url: 'https://www.wired.com/feed/rss',                                           cat: 'tech'       },
-  { name: 'Reuters Health',   url: 'https://feeds.reuters.com/reuters/healthNews',                              cat: 'tech'       },
-  { name: 'Sifted',           url: 'https://sifted.eu/feed',                                                   cat: 'tech'       },
-  { name: 'Nature Biotech',   url: 'https://www.nature.com/nbt.rss',                                           cat: 'academic'   },
-  { name: 'Nat. Mach. Intel', url: 'https://www.nature.com/natmachintell.rss',                                  cat: 'academic'   },
-  { name: 'bioRxiv',          url: 'https://connect.biorxiv.org/biorxiv_xml.php?subject=bioinformatics',       cat: 'academic'   },
+  // Trade press — always on-topic, no filter needed
+  { name: 'STAT News',        url: 'https://www.statnews.com/feed/',                                                                                                          cat: 'trade'      },
+  { name: 'Endpoints',        url: 'https://endpts.com/feed/',                                                                                                                cat: 'trade'      },
+  { name: 'FierceBiotech',    url: 'https://www.fiercebiotech.com/rss/xml',                                                                                                   cat: 'trade'      },
+  { name: 'BioPharma Dive',   url: 'https://www.biopharmadive.com/feeds/news/',                                                                                               cat: 'trade'      },
+  { name: 'GEN',              url: 'https://www.genengnews.com/feed/',                                                                                                        cat: 'trade'      },
+  { name: 'BioSpace',         url: 'https://www.biospace.com/rss/articles',                                                                                                   cat: 'trade'      },
+  // Specialist — always on-topic, no filter needed
+  { name: 'Asimov Press',     url: 'https://asimov.press/feed',                                                                                                              cat: 'specialist' },
+  { name: 'Decoding Bio',     url: 'https://www.decodingbio.com/feed',                                                                                                       cat: 'specialist' },
+  { name: 'Owl Posting',      url: 'https://owlposting.substack.com/feed',                                                                                                   cat: 'specialist' },
+  { name: 'Ground Truths',    url: 'https://erictopol.substack.com/feed',                                                                                                    cat: 'specialist' },
+  { name: 'Import AI',        url: 'https://jack-clark.net/feed/',                                                                                                           cat: 'specialist' },
+  { name: 'In the Pipeline',  url: 'https://feeds.feedburner.com/InThePipeline',                                                                                             cat: 'specialist' },
+  // Tech/business — broad sources, keyword-filtered to AI × bio only
+  { name: 'MIT Tech Review',  url: 'https://www.technologyreview.com/feed/',                                                                                                 cat: 'tech',       filter: true },
+  { name: 'WIRED',            url: 'https://www.wired.com/feed/rss',                                                                                                         cat: 'tech',       filter: true },
+  { name: 'Reuters Health',   url: 'https://feeds.reuters.com/reuters/healthNews',                                                                                            cat: 'tech',       filter: true },
+  { name: 'CNBC Health',      url: 'https://www.cnbc.com/id/10000108/device/rss/rss.html',                                                                                   cat: 'tech',       filter: true },
+  { name: 'Sifted',           url: 'https://sifted.eu/feed',                                                                                                                  cat: 'tech',       filter: true },
+  { name: 'Tech Funding News',url: 'https://techfundingnews.com/feed/',                                                                                                      cat: 'tech',       filter: true },
+  { name: 'BBC Science',      url: 'https://feeds.bbci.co.uk/news/science_and_environment/rss.xml',                                                                          cat: 'tech',       filter: true },
+  // Academic — targeted feeds/searches, no filter needed
+  { name: 'Nature Biotech',   url: 'https://www.nature.com/nbt.rss',                                                                                                        cat: 'academic'   },
+  { name: 'Nat. Mach. Intel', url: 'https://www.nature.com/natmachintell.rss',                                                                                               cat: 'academic'   },
+  { name: 'bioRxiv',          url: 'https://connect.biorxiv.org/biorxiv_xml.php?subject=bioinformatics',                                                                     cat: 'academic'   },
+  { name: 'PubMed AI+Bio',    url: 'https://pubmed.ncbi.nlm.nih.gov/rss/search/?term=(artificial+intelligence)+AND+(biology+OR+genomics+OR+%22drug+discovery%22)&format=abstract&limit=15', cat: 'academic' },
+];
+
+const BIO_AI_KEYWORDS = [
+  'artificial intelligence','machine learning','deep learning','neural network',
+  'large language model','foundation model','llm','gpt',
+  'biotech','biotechnology','biolog','genomic','genome','protein',
+  'drug discovery','drug design','drug development','crispr','gene edit','gene therapy',
+  'mrna','rna sequenc','dna sequenc','cell therapy','car-t',
+  'clinical trial','fda approv','fda clear',
+  'therapeutics','biopharma','pharma','life science',
+  'synthetic biology','microbiome','proteomics','bioinformatics',
+  'oncology','antibody','enzyme','biomarker','precision medicine',
+  'digital health','healthtech','medtech','health tech',
+  'alphafold','protein fold','protein structure',
+  'computational biology','systems biology','biosensor',
+  'vaccine','immunotherapy','cell biology',
 ];
 
 const _R2J = 'https://api.rss2json.com/v1/api.json?rss_url=';
@@ -1525,7 +1550,7 @@ async function _fetchFeed(feed){
     clearTimeout(tid);
     const data = await res.json();
     if(data.status !== 'ok' || !Array.isArray(data.items)) return [];
-    return data.items.slice(0, 15).map(item => ({
+    let items = data.items.slice(0, 30).map(item => ({
       title:   (item.title || '').trim(),
       link:    item.link || item.guid || '',
       date:    new Date(item.pubDate || 0),
@@ -1533,6 +1558,13 @@ async function _fetchFeed(feed){
       source:  feed.name,
       cat:     feed.cat,
     })).filter(a => a.title && a.link);
+    if(feed.filter){
+      items = items.filter(a => {
+        const text = (a.title + ' ' + a.excerpt).toLowerCase();
+        return BIO_AI_KEYWORDS.some(kw => text.includes(kw));
+      });
+    }
+    return items.slice(0, 15);
   } catch(e){ return []; }
 }
 
