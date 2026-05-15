@@ -322,6 +322,7 @@ footer { padding: 24px 48px; border-top: 1px solid var(--border); display: flex;
         <span class="chip" data-type="Company (public, IPO Feb 2026)" data-desc="AI-first biotech using generative protein models to design entirely novel proteins for therapeutics. Applies diffusion models and language models to create proteins that don't exist in nature. Raised $400M in its February 2026 IPO.">Generate:Biomedicines</span>
         <span class="chip" data-type="Company" data-desc="Builds biodiversity-scale protein databases and foundation models from Earth's natural genetic diversity, cataloguing proteins from rare organisms for a richer AI training corpus.">Basecamp Research</span>
         <span class="chip" data-type="Company" data-desc="AI and biology organisation working at the intersection of foundation models and life sciences. Focused on novel approaches to biological intelligence and AI-driven scientific discovery.">Prima Mente</span>
+        <span class="chip" data-type="Company" data-desc="Synthetic biology design platform combining genetic engineering with machine learning. Builds AI tools to design, predict and optimise genetic circuits for biomanufacturing and cell engineering applications.">ASIMOV</span>
       </div>
     </div>
     <div class="cat-separator"></div>
@@ -365,6 +366,15 @@ footer { padding: 24px 48px; border-top: 1px solid var(--border); display: flex;
         <span class="chip" data-type="Company" data-desc="DNA-encoded chemistry (DEL) combined with AI for ultra-high-throughput small molecule screening of billions of compounds simultaneously. Backed by NVentures.">Terray Therapeutics</span>
         <span class="chip" data-type="Company" data-desc="AI platform for genomic medicine design, optimising gene therapy vectors, mRNA sequences and nucleic acid therapeutics using ML.">WhiteLab Genomics</span>
         <span class="chip" data-type="Company" data-desc="Large-scale generative AI for drug discovery, founded in 2024 with $1B in Series A funding — one of the largest biotech launches ever.">Xaira</span>
+        <span class="chip" data-type="Company" data-desc="AI-native drug design platform using GPU-accelerated molecular simulations and generative models to design novel small molecules for oncology and immunology. Spun out of the Allen Institute for AI.">Iambic</span>
+        <span class="chip" data-type="Company" data-desc="Combines cryo-electron microscopy with AI to determine protein structures at high speed, enabling structure-based drug discovery for previously intractable targets. Based in Vancouver.">Gandeeva Therapeutics</span>
+        <span class="chip" data-type="Company" data-desc="AI-designed antibody therapeutics. Uses machine learning to engineer IgG antibodies with precision-tuned immune effector functions, targeting oncology indications.">SEISMIC Therapeutic</span>
+        <span class="chip" data-type="Company" data-desc="AI platform for cancer early detection using RNA biomarkers in liquid biopsy. Applies ML to identify extrachromosomal circular DNA (eccDNA) as cancer signals in blood samples.">Exai Bio</span>
+        <span class="chip" data-type="Company" data-desc="AI that computationally simulates cancer cells to predict which drug combinations will be effective for a given tumour profile — used to design better clinical trials. Based in Budapest.">turbine</span>
+        <span class="chip" data-type="Company" data-desc="Quantum-physics-inspired AI for early-stage drug discovery. Combines quantum chemistry approximations with deep learning for highly accurate molecular property prediction and hit identification. Paris-based.">AQEMIA</span>
+        <span class="chip" data-type="Company" data-desc="AI platform for antibody design. Uses deep learning to engineer therapeutic antibodies with optimised binding affinity, developability and selectivity. Based in Cardiff, Wales.">Antiverse</span>
+        <span class="chip" data-type="Company" data-desc="AI-powered drug discovery focused on targeted cancer therapies. Applies ML to identify and design small molecule inhibitors against hard-to-drug oncology targets.">Treeline Biosciences</span>
+        <span class="chip" data-type="Company" data-desc="AI-driven drug discovery targeting specific RAS/MAPK oncogenic mutations. Uses machine learning to design selective small molecule inhibitors for individual RAS mutation variants.">Alterome Therapeutics</span>
       </div>
     </div>
     <div class="cat-separator"></div>
@@ -378,6 +388,14 @@ footer { padding: 24px 48px; border-top: 1px solid var(--border); display: flex;
         <span class="chip" data-type="Company" data-desc="AI-powered scientific instrumentation and data analytics platform for life sciences, combining hardware sensing with software intelligence to accelerate experimental workflows.">Edison Scientific</span>
         <span class="chip" data-type="Open Science Consortium (UK)" data-desc="UK-based open science initiative hosted at Diamond Light Source in Oxfordshire. Backed by £8M from the UK government's Sovereign AI Unit. Aims to generate over 500,000 experimentally validated protein-ligand structures over five years — 20 times more than have been publicly collected in the last 50 years — creating the world's largest open dataset of drug-protein binding data for training AI drug discovery models. Partners include the Universities of Oxford, Washington and Columbia, EMBL-EBI and the Open Molecular Software Foundation.">OpenBind <span class="badge">NP</span></span>
         <span class="chip" data-type="Company (public, Nasdaq)" data-desc="Long-read DNA sequencing company. HiFi sequencing produces more complete and accurate genome assemblies than short-read technologies. A critical data-generation tool for training biological AI models.">PacBio</span>
+        <span class="chip" data-type="Company" data-desc="Cloud software platform for designing and running complex biology experiments. Replaces manual lab protocols with structured digital workflows, enabling reproducible and scalable wet lab biology.">Synthace</span>
+        <span class="chip" data-type="Company" data-desc="AI-powered mapping of the immune system using single-cell multi-omics. Builds comprehensive immune cell atlases to guide the design of next-generation immunotherapies.">immunai</span>
+        <span class="chip" data-type="Company" data-desc="AI platform for single-cell biology using deep learning on brightfield cell images. Classifies and sorts cells by morphological phenotype without molecular labels, at scale.">deepcell</span>
+        <span class="chip" data-type="Company" data-desc="Discovers novel CRISPR systems from nature using AI-assisted genomic mining, then applies them to next-generation diagnostics (DETECTR platform) and in vivo gene editing therapies. Co-founded by Jennifer Doudna.">Mammoth Biosciences</span>
+        <span class="chip" data-type="Company" data-desc="AI-guided cell manufacturing platform combining laser optics, microscopy and machine learning to automate and scale iPSC-derived cell therapy production. Based in Cambridge, MA.">cellino</span>
+        <span class="chip" data-type="Company" data-desc="Bioinformatics cloud platform providing managed infrastructure for genomics and multi-omics data pipelines. Lets biotech and pharma teams run complex workflows without managing compute infrastructure.">LatchBio</span>
+        <span class="chip" data-type="Company" data-desc="AI-guided liquid handling automation for genomics sample preparation. The Callisto instrument automates complex multi-step genomics library prep workflows with software-defined protocols.">Volta Labs</span>
+        <span class="chip" data-type="Company" data-desc="AI platform for drug target discovery using high-content imaging and phenomics. Combines deep learning with cellular phenotypic screening to identify novel disease biology and therapeutic targets.">Phenomic AI</span>
       </div>
     </div>
     <div class="cat-separator"></div>
@@ -649,6 +667,30 @@ const ORGS = [
   {name:'TechBros',cat:'other',type:'Community / Media',lat:37.75,lng:-122.44,desc:'Tech community and content platform covering technology culture, startups and the broader tech ecosystem.'},
   {name:'Wilbe',cat:'other',type:'Organisation',lat:51.52,lng:-0.11,desc:'Organisation at the intersection of AI and life sciences, building connections within the AI bio ecosystem.'},
   {name:'Wired',cat:'other',type:'Media',lat:37.77,lng:-122.44,desc:'Iconic technology, science and culture magazine. Deep coverage of AI bio breakthroughs and the cultural implications of the AI revolution.'},
+
+  // ── Drug discovery additions ──
+  {name:'Iambic',cat:'discovery',type:'Company',lat:32.72,lng:-117.15,desc:'AI-native drug design platform using GPU-accelerated molecular simulations and generative models to design novel small molecules for oncology and immunology. Spun out of the Allen Institute for AI.'},
+  {name:'Gandeeva Therapeutics',cat:'discovery',type:'Company',lat:49.26,lng:-123.11,desc:'Combines cryo-electron microscopy with AI to determine protein structures at high speed, enabling structure-based drug discovery for previously intractable targets. Based in Vancouver.'},
+  {name:'SEISMIC Therapeutic',cat:'discovery',type:'Company',lat:42.38,lng:-71.18,desc:'AI-designed antibody therapeutics. Uses machine learning to engineer IgG antibodies with precision-tuned immune effector functions, targeting oncology.'},
+  {name:'Exai Bio',cat:'discovery',type:'Company',lat:37.44,lng:-122.14,desc:'AI platform for cancer early detection using RNA biomarkers in liquid biopsy. Applies ML to identify extrachromosomal circular DNA (eccDNA) as cancer signals in blood.'},
+  {name:'turbine',cat:'discovery',type:'Company',lat:47.50,lng:19.05,desc:'AI that computationally simulates cancer cells to predict which drug combinations will be effective for a given tumour profile. Used to design better clinical trials. Based in Budapest.'},
+  {name:'AQEMIA',cat:'discovery',type:'Company',lat:48.87,lng:2.34,desc:'Quantum-physics-inspired AI for early-stage drug discovery. Combines quantum chemistry approximations with deep learning for highly accurate molecular property prediction and hit identification. Paris-based.'},
+  {name:'Antiverse',cat:'discovery',type:'Company',lat:51.48,lng:-3.17,desc:'AI platform for antibody design. Uses deep learning to engineer therapeutic antibodies with optimised binding affinity, developability and selectivity. Based in Cardiff, Wales.'},
+  {name:'Treeline Biosciences',cat:'discovery',type:'Company',lat:42.37,lng:-71.19,desc:'AI-powered drug discovery focused on targeted cancer therapies. Applies ML to identify and design small molecule inhibitors against hard-to-drug oncology targets.'},
+  {name:'Alterome Therapeutics',cat:'discovery',type:'Company',lat:32.73,lng:-117.16,desc:'AI-driven drug discovery targeting specific RAS/MAPK oncogenic mutations. Uses machine learning to design selective small molecule inhibitors for individual RAS mutation variants.'},
+
+  // ── Tools & platforms additions ──
+  {name:'Synthace',cat:'tools',type:'Company',lat:51.52,lng:-0.09,desc:'Cloud software platform for designing and running complex biology experiments. Replaces manual lab protocols with structured digital workflows, enabling reproducible and scalable wet lab biology.'},
+  {name:'immunai',cat:'tools',type:'Company',lat:40.73,lng:-74.00,desc:'AI-powered mapping of the immune system using single-cell multi-omics. Builds comprehensive immune cell atlases to guide the design of next-generation immunotherapies.'},
+  {name:'deepcell',cat:'tools',type:'Company',lat:37.45,lng:-122.16,desc:'AI platform for single-cell biology using deep learning on brightfield cell images. Classifies and sorts cells by morphological phenotype without molecular labels, at scale.'},
+  {name:'Mammoth Biosciences',cat:'tools',type:'Company',lat:37.66,lng:-122.40,desc:'Discovers novel CRISPR systems from nature using AI-assisted genomic mining. Applies them to next-generation diagnostics (DETECTR platform) and in vivo gene editing therapies. Co-founded by Jennifer Doudna.'},
+  {name:'cellino',cat:'tools',type:'Company',lat:42.36,lng:-71.10,desc:'AI-guided cell manufacturing platform combining laser optics, microscopy and machine learning to automate and scale iPSC-derived cell therapy production. Based in Cambridge, MA.'},
+  {name:'LatchBio',cat:'tools',type:'Company',lat:37.79,lng:-122.39,desc:'Bioinformatics cloud platform providing managed infrastructure for genomics and multi-omics data pipelines. Lets biotech and pharma teams run complex workflows without managing compute infrastructure.'},
+  {name:'Volta Labs',cat:'tools',type:'Company',lat:42.35,lng:-71.07,desc:'AI-guided liquid handling automation for genomics sample preparation. The Callisto instrument automates complex multi-step genomics library prep workflows with software-defined protocols.'},
+  {name:'Phenomic AI',cat:'tools',type:'Company',lat:43.64,lng:-79.37,desc:'AI platform for drug target discovery using high-content imaging and phenomics. Combines deep learning with cellular phenotypic screening to identify novel disease biology and therapeutic targets.'},
+
+  // ── Synthetic biology / foundation model additions ──
+  {name:'ASIMOV',cat:'foundation',type:'Company',lat:42.37,lng:-71.08,desc:'Synthetic biology design platform combining genetic engineering with machine learning. Builds AI tools to design, predict and optimise genetic circuits for biomanufacturing and cell engineering applications.'},
 ];
 
 // ── FUNDING DATA ──
@@ -748,6 +790,24 @@ const FUNDING = {
   'TechBros':                        'Community / media — not applicable.',
   'Wilbe':                           'Organisation — undisclosed.',
   'Wired':                           'Media — owned by Condé Nast.',
+  'Iambic':                          '$132M total — Series B (2023). Backed by Andreessen Horowitz, F-Prime Capital. Spun out of the Allen Institute for AI.',
+  'Gandeeva Therapeutics':           '~$40M seed (2022). Backed by Eight Roads Ventures, Amplitude Ventures, Recursion.',
+  'SEISMIC Therapeutic':             '~$100M total — Series B. Backed by Atlas Venture, Nextech Invest, EQT Life Sciences.',
+  'Exai Bio':                        '~$65M total — Series B. Backed by Amplitude Ventures, Pitango HealthTech, GE HealthCare.',
+  'turbine':                         '~$40M total — Series B. Backed by Speedinvest, Hiventures, Day One Capital.',
+  'AQEMIA':                          '~€25M total — Series A. Backed by Elaia Partners, Bpifrance, Quantonation.',
+  'Antiverse':                       '~$30M total — Series A. Backed by Octopus Ventures, Merck Global Health Innovation Fund.',
+  'Treeline Biosciences':            '~$85M total — Series B. Backed by Atlas Venture, GV (Google Ventures).',
+  'Alterome Therapeutics':           'Seed / early stage. Backed by Atlas Venture.',
+  'Synthace':                        '~$50M total — Series B. Backed by Talis Capital, Amadeus Capital Partners.',
+  'immunai':                         '~$215M total — $60M Series A (2021) · $150M Series B (2022). Backed by Andreessen Horowitz, Alexandria Venture Investments.',
+  'deepcell':                        '~$120M total — Series B (2022). Backed by Andreessen Horowitz, 8VC, Bow Capital.',
+  'Mammoth Biosciences':             '~$150M total — Series C. Backed by Mayfield Fund, Decheng Capital, NFX. Co-founded by Jennifer Doudna.',
+  'cellino':                         '~$80M total — Series B. Backed by F-Prime Capital, DCVC Bio, GV.',
+  'LatchBio':                        '~$60M total — Series B. Backed by Lux Capital, Haystack, General Catalyst.',
+  'Volta Labs':                      '~$35M total — Series B. Backed by Andreessen Horowitz, Lux Capital.',
+  'Phenomic AI':                     '~$45M total — Series A. Backed by NVentures (Nvidia), Amplitude Ventures.',
+  'ASIMOV':                          '~$50M total — Series B. Backed by Andreessen Horowitz, Khosla Ventures.',
 };
 
 // ── WEBSITE DATA ──
@@ -841,6 +901,24 @@ const WEBSITES = {
   'Nucleate':                       'https://nucleate.xyz',
   'Sifted':                         'https://sifted.eu',
   'Wired':                          'https://www.wired.com',
+  'Iambic':                         'https://iambic.ai',
+  'Gandeeva Therapeutics':          'https://www.gandeeva.com',
+  'SEISMIC Therapeutic':            'https://www.seismictx.com',
+  'Exai Bio':                       'https://exai.bio',
+  'turbine':                        'https://turbine.ai',
+  'AQEMIA':                         'https://www.aqemia.com',
+  'Antiverse':                      'https://antiverse.com',
+  'Treeline Biosciences':           'https://www.treelinebio.com',
+  'Alterome Therapeutics':          'https://www.alterome.com',
+  'Synthace':                       'https://www.synthace.com',
+  'immunai':                        'https://www.immunai.com',
+  'deepcell':                       'https://www.deepcell.ai',
+  'Mammoth Biosciences':            'https://mammoth.bio',
+  'cellino':                        'https://www.cellino.bio',
+  'LatchBio':                       'https://latch.bio',
+  'Volta Labs':                     'https://voltalaboratories.com',
+  'Phenomic AI':                    'https://www.phenomicai.com',
+  'ASIMOV':                         'https://www.asimov.com',
 };
 
 function openModal(name, type, desc, cat) {
@@ -893,20 +971,25 @@ const STAGES = {
   'Anthropic':'series-c', 'OpenAI':'series-c', 'Atomwise':'series-c',
   'Healx':'series-c', 'insitro':'series-c', 'Owkin':'series-c',
   'Pathos AI':'series-c', 'Benchling':'series-c',
-  'Insilico Medicine':'series-c',
+  'Insilico Medicine':'series-c', 'Mammoth Biosciences':'series-c',
   'Aignostics':'series-b', 'Atomic AI':'series-b', 'Basecamp Research':'series-b',
   'BigHat Biosciences':'series-b', 'BioMap':'series-b', 'Chai Discovery':'series-b',
   'Cradle':'series-b', 'Deep Genomics':'series-b', 'Goodfire':'series-b', 'Iktos':'series-b',
   'Inceptive':'series-b', 'Nabla':'series-b', 'Olix':'series-b',
   'Optellum':'series-b', 'Profluent':'series-b', 'Relation Therapeutics':'series-b',
   'Terray Therapeutics':'series-b', 'Kaiko':'series-b', 'Gleamer':'series-b', 'Automata':'series-b',
+  'Iambic':'series-b', 'SEISMIC Therapeutic':'series-b', 'Exai Bio':'series-b', 'turbine':'series-b',
+  'Treeline Biosciences':'series-b', 'Synthace':'series-b', 'immunai':'series-b', 'deepcell':'series-b',
+  'cellino':'series-b', 'LatchBio':'series-b', 'Volta Labs':'series-b', 'ASIMOV':'series-b',
   'Charm Therapeutics':'series-a', 'Chemify':'series-a', 'Expression Edits':'series-a',
   'Isomorphic Labs':'series-a', 'Kailera Therapeutics':'series-a', 'Latent Labs':'series-a',
   'Molecule.one':'series-a', '1910 Genetics':'series-a', 'Qubit Pharmaceuticals':'series-a',
+  'AQEMIA':'series-a', 'Antiverse':'series-a', 'Phenomic AI':'series-a',
   'Sakana AI':'series-a', 'Superluminal Medicines':'series-a', 'WhiteLab Genomics':'series-a',
   'Xaira':'series-a', 'NOETIK':'series-a',
   'Lila Biosciences':'seed', 'Medra':'seed', 'Boltz Bio':'seed',
   'Prima Mente':'seed', 'Edison Scientific':'seed', 'Phylo Bio':'seed',
+  'Gandeeva Therapeutics':'seed', 'Alterome Therapeutics':'seed',
 };
 
 const STAGE_LABELS = {
