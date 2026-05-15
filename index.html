@@ -382,7 +382,7 @@ footer { padding: 24px 48px; border-top: 1px solid var(--border); display: flex;
     <div class="leg" onclick="filterCat('health')" data-filter="health"><div class="leg-dot" style="background:var(--coral)"></div>Health / clinical</div>
     <div class="leg" onclick="filterCat('ai')" data-filter="ai"><div class="leg-dot" style="background:var(--slate)"></div>Pure AI / tech</div>
     <div class="leg" onclick="filterCat('investor')" data-filter="investor"><div class="leg-dot" style="background:var(--amber)"></div>Investors &amp; funds</div>
-    <div class="leg" onclick="filterCat('other')" data-filter="other"><div class="leg-dot" style="background:var(--gray)"></div>Community &amp; media</div>
+    <div class="leg" onclick="filterCat('other')" data-filter="other"><div class="leg-dot" style="background:var(--gray)"></div>Media</div>
     <div class="leg" onclick="filterCat('accel')" data-filter="accel"><div class="leg-dot" style="background:var(--lime)"></div>Accelerators</div>
     <div class="leg" onclick="filterCat('automation')" data-filter="automation"><div class="leg-dot" style="background:var(--cyan)"></div>Lab automation</div>
   </div>
@@ -588,24 +588,8 @@ footer { padding: 24px 48px; border-top: 1px solid var(--border); display: flex;
     </div>
     <div class="cat-separator"></div>
 
-    <div class="cat-section cat-other" data-cat="other">
-      <div class="cat-label"><div class="cat-tag">Misc</div><div class="cat-name">Community<br>&amp; Media</div><div class="cat-count" id="count-other"></div></div>
-      <div class="cat-divider"></div>
-      <div class="chips">
-        <span class="chip" data-type="Media" data-desc="Video content platform covering biotech and life sciences news — company profiles, conference coverage and founder interviews for the biotech and AI bio community.">Biotech TV</span>
-        <span class="chip" data-type="Community Hub" data-desc="Physical community hubs opening in San Francisco and Berlin in 2026, run by the Foresight Institute. Offer project grants up to $3M, office space and compute for AI-for-science researchers.">Foresight AI Nodes</span>
-        <span class="chip" data-type="Non-profit / Community" data-desc="Non-profit community hub and funder for climate biotech. Publishes research roadmaps and directly funds early-stage climate biotech research; funded 16 protein engineering teams in 2024.">Homeworld Collective</span>
-        <span class="chip" data-type="Community / Conference" data-desc="Premier synthetic biology innovation network and annual conference connecting researchers, founders and investors at the AI × biology frontier. 180+ sessions across 18 tracks.">SynBioBeta</span>
-        <span class="chip" data-type="Media" data-desc="European tech startup news publication backed by the Financial Times. Covers the European deep tech, AI and life sciences startup ecosystem.">Sifted</span>
-        <span class="chip" data-type="Community / Media" data-desc="Community and content platform covering AI research and state-of-the-art developments. Tracks frontier AI model releases and breakthroughs across industries including biology.">SOTA</span>
-        <span class="chip" data-type="Organisation" data-desc="Organisation at the intersection of AI and life sciences, building connections and supporting development within the AI bio ecosystem.">Wilbe</span>
-        <span class="chip" data-type="Media" data-desc="Iconic technology, science and culture magazine. Deep coverage of AI bio breakthroughs and the cultural implications of the AI revolution.">Wired</span>
-      </div>
-    </div>
-    <div class="cat-separator"></div>
-
     <div class="cat-section cat-accel" data-cat="accel">
-      <div class="cat-label"><div class="cat-tag">Ecosystem</div><div class="cat-name">Accelerators<br>&amp; Fellowships</div><div class="cat-count" id="count-accel"></div></div>
+      <div class="cat-label"><div class="cat-tag">Ecosystem</div><div class="cat-name">Accelerators, Fellowships<br>&amp; Community</div><div class="cat-count" id="count-accel"></div></div>
       <div class="cat-divider"></div>
       <div class="chips">
         <span class="chip" data-type="Fellowship Programme" data-desc="Two-year fellowship for scientists launching deep-tech startups in biotech, energy, climate and materials. DOE-funded; 62 fellows in 2024 cohort; alumni have raised $3.5B collectively.">Activate</span>
@@ -613,7 +597,9 @@ footer { padding: 24px 48px; border-top: 1px solid var(--border); display: flex;
         <span class="chip" data-type="Venture Builder" data-desc="UK venture creator that builds biotech, pharma and climate companies from scratch. Scientists join as co-founders at the idea stage; 50+ companies launched.">Deep Science Ventures</span>
         <span class="chip" data-type="Fellowship Programme" data-desc="Paid year-long fellowship placing AI/ML researchers inside UK university labs to accelerate science breakthroughs. Backed by ARIA and DSIT.">Encode</span>
         <span class="chip" data-type="Fellowship Programme" data-desc="One-year fellowship supporting early-career scientists working on frontier technologies including AI for biology. ~9% acceptance rate; access to workshops and Foresight AI Nodes.">Foresight Fellowship</span>
+        <span class="chip" data-type="Community Hub" data-desc="Physical community hubs opening in San Francisco and Berlin in 2026, run by the Foresight Institute. Offer project grants up to $3M, office space and compute for AI-for-science researchers.">Foresight AI Nodes</span>
         <span class="chip" data-type="Fellowship Programme" data-desc="$125K postdoctoral fellowship for recent PhDs to build and deploy AI agents that solve major problems in biology. Based in San Francisco.">FutureHouse</span>
+        <span class="chip" data-type="Non-profit / Community" data-desc="Non-profit community hub and funder for climate biotech. Directly funds early-stage climate biotech research; funded 16 protein engineering teams in 2024.">Homeworld Collective</span>
         <span class="chip" data-type="Accelerator" data-desc="Genomics-focused startup accelerator providing capital, sequencing access, reagents and wet lab space. Run by Illumina with sites in San Francisco Bay Area and Cambridge, UK.">Illumina Ventures Labs</span>
         <span class="chip" data-type="Accelerator" data-desc="World's highest-volume early-stage life science accelerator. 310+ graduates since 2015 who collectively raised $3.6B. Provides ~$525K investment plus wet lab access.">IndieBio</span>
         <span class="chip" data-type="Incubator" data-desc="World's largest no-equity life sciences incubator run by Johnson &amp; Johnson Innovation. 826+ companies incubated globally across Boston, San Francisco, London and more.">JLABS</span>
@@ -621,7 +607,10 @@ footer { padding: 24px 48px; border-top: 1px solid var(--border); display: flex;
         <span class="chip" data-type="Non-profit / Accelerator" data-desc="Student-run non-profit building the next generation of biotech founders and scientists. Runs the Activate accelerator and fellowship programmes at universities globally. A key pipeline for AI bio talent.">Nucleate</span>
         <span class="chip" data-type="Fellowship Programme" data-desc="Two-year postdoctoral fellowship funded by Eric &amp; Wendy Schmidt to apply AI methods to natural and engineering sciences. Active at Chicago, Cornell, UCSD and multiple other universities.">Schmidt AI in Science</span>
         <span class="chip" data-type="Fellowship Programme" data-desc="Elite postdoctoral programme funding early-career scientists to conduct research across disciplines, pushing AI-biology interdisciplinary work. One of the most prestigious science fellowships globally.">Schmidt Science Fellows</span>
+        <span class="chip" data-type="Community / Media" data-desc="Community and content platform covering AI research and state-of-the-art developments across industries including biology.">SOTA</span>
+        <span class="chip" data-type="Community / Conference" data-desc="Premier synthetic biology innovation network and annual conference connecting researchers, founders and investors at the AI × biology frontier.">SynBioBeta</span>
         <span class="chip" data-type="Accelerator Programme" data-desc="World's first all-female tech accelerator. Supports women founders across tech and biotech with funding, mentorship and community. Based in the UK.">TechBros</span>
+        <span class="chip" data-type="Organisation" data-desc="Organisation at the intersection of AI and life sciences, building connections within the AI bio ecosystem. Based in White City, London.">Wilbe</span>
         <span class="chip" data-type="Accelerator" data-desc="World's most prominent startup accelerator. Consistently funds AI × bio companies at pre-seed; provides $500K for ~7% equity. Graduates include many leading AI bio companies.">Y Combinator</span>
       </div>
     </div>
@@ -654,7 +643,7 @@ footer { padding: 24px 48px; border-top: 1px solid var(--border); display: flex;
       <div class="map-legend-item" data-cat="health"><div class="map-legend-dot" style="background:#fb923c"></div>Health / clinical</div>
       <div class="map-legend-item" data-cat="ai"><div class="map-legend-dot" style="background:#94a3b8"></div>Pure AI / tech</div>
       <div class="map-legend-item" data-cat="investor"><div class="map-legend-dot" style="background:#fbbf24"></div>Investors &amp; funds</div>
-      <div class="map-legend-item" data-cat="other"><div class="map-legend-dot" style="background:#9ca3af"></div>Community &amp; media</div>
+      <div class="map-legend-item" data-cat="other"><div class="map-legend-dot" style="background:#9ca3af"></div>Media</div>
       <div class="map-legend-item" data-cat="accel"><div class="map-legend-dot" style="background:#84cc16"></div>Accelerators</div>
       <div class="map-legend-item" data-cat="automation"><div class="map-legend-dot" style="background:#06b6d4"></div>Lab automation</div>
     </div>
@@ -854,9 +843,9 @@ const ORGS = [
   {name:'Monograph',cat:'investor',type:'Venture Capital',lat:37.78,lng:-122.44,desc:'Life sciences-focused VC firm investing in lab-centric companies building tools, platforms and instruments for biological research and drug discovery. Based in San Francisco.'},
   {name:'Nucleate',cat:'accel',type:'Non-profit / Accelerator',lat:42.36,lng:-71.08,desc:'Student-run non-profit building the next generation of biotech founders. Runs the Activate accelerator and fellowship programmes at universities globally.'},
   {name:'Sifted',cat:'other',type:'Media',lat:51.51,lng:-0.10,desc:'European tech startup news publication backed by the Financial Times. Covers deep tech, AI and life sciences.'},
-  {name:'SOTA',cat:'other',type:'Community / Media',lat:37.76,lng:-122.44,desc:'Community and content platform covering AI research and state-of-the-art developments across industries including biology.'},
+  {name:'SOTA',cat:'accel',type:'Community / Media',lat:37.76,lng:-122.44,desc:'Community and content platform covering AI research and state-of-the-art developments across industries including biology.'},
   {name:'TechBros',cat:'accel',type:'Accelerator Programme',lat:51.50,lng:-0.12,desc:"World's first all-female tech accelerator. Supports women founders across tech and biotech with funding, mentorship and community. Based in the UK."},
-  {name:'Wilbe',cat:'other',type:'Organisation',lat:51.51,lng:-0.22,desc:'Organisation at the intersection of AI and life sciences, building connections within the AI bio ecosystem. Based in White City, London.'},
+  {name:'Wilbe',cat:'accel',type:'Organisation',lat:51.51,lng:-0.22,desc:'Organisation at the intersection of AI and life sciences, building connections within the AI bio ecosystem. Based in White City, London.'},
   {name:'Wired',cat:'other',type:'Media',lat:37.77,lng:-122.44,desc:'Iconic technology, science and culture magazine. Deep coverage of AI bio breakthroughs and the cultural implications of the AI revolution.'},
 
   // ── Drug discovery additions ──
@@ -929,9 +918,9 @@ const ORGS = [
   {name:'Y Combinator',cat:'accel',type:'Accelerator',lat:37.78,lng:-122.40,desc:"World's most prominent startup accelerator. Consistently funds AI × bio companies at pre-seed; provides $500K for ~7% equity. Graduates include many leading AI bio companies."},
 
   // ── Community hubs ──
-  {name:'Foresight AI Nodes',cat:'other',type:'Community Hub',lat:37.76,lng:-122.43,desc:'Physical community hubs opening in San Francisco and Berlin in 2026, run by the Foresight Institute. Offer project grants up to $3M, office space and compute for AI-for-science researchers.'},
-  {name:'Homeworld Collective',cat:'other',type:'Non-profit / Community',lat:37.75,lng:-122.44,desc:'Non-profit community hub and funder for climate biotech. Directly funds early-stage climate biotech research; funded 16 protein engineering teams in 2024.'},
-  {name:'SynBioBeta',cat:'other',type:'Community / Conference',lat:37.34,lng:-121.89,desc:'Premier synthetic biology innovation network and annual conference connecting researchers, founders and investors at the AI × biology frontier.'},
+  {name:'Foresight AI Nodes',cat:'accel',type:'Community Hub',lat:37.76,lng:-122.43,desc:'Physical community hubs opening in San Francisco and Berlin in 2026, run by the Foresight Institute. Offer project grants up to $3M, office space and compute for AI-for-science researchers.'},
+  {name:'Homeworld Collective',cat:'accel',type:'Non-profit / Community',lat:37.75,lng:-122.44,desc:'Non-profit community hub and funder for climate biotech. Directly funds early-stage climate biotech research; funded 16 protein engineering teams in 2024.'},
+  {name:'SynBioBeta',cat:'accel',type:'Community / Conference',lat:37.34,lng:-121.89,desc:'Premier synthetic biology innovation network and annual conference connecting researchers, founders and investors at the AI × biology frontier.'},
 ];
 
 // ── FUNDING DATA ──
