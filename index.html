@@ -144,6 +144,21 @@ input[type="text"]::placeholder { color: #8fa0b8; }
 .cluster-bubble { border-radius: 50%; background: #0d1e30; border: 2px solid #00d4aa; color: #e2e8f0; font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 600; text-align: center; cursor: pointer; transition: border-color 0.15s; display: flex; align-items: center; justify-content: center; }
 .cluster-bubble:hover { border-color: #7de8d6; }
 
+/* MAP SEARCH */
+.map-search { position: absolute; top: 16px; left: 16px; z-index: 1001; width: 252px; }
+.map-search-bar { display: flex; align-items: center; gap: 8px; background: rgba(6,10,16,0.96); border: 1px solid #1e2d42; border-radius: 8px; padding: 9px 12px; backdrop-filter: blur(10px); transition: border-color 0.2s; }
+.map-search-bar:focus-within { border-color: var(--teal-border); }
+.map-search-bar svg { color: #4a5568; flex-shrink: 0; }
+.map-search-bar input { background: none; border: none; color: #e2e8f0; font-family: 'IBM Plex Mono', monospace; font-size: 12px; outline: none; flex: 1; min-width: 0; }
+.map-search-bar input::placeholder { color: #2a3a50; }
+.map-search-clear { background: none; border: none; color: #2a3a50; cursor: pointer; font-size: 18px; line-height: 1; padding: 0 2px; display: none; }
+.map-search-clear:hover { color: #94a3b8; }
+.map-search-dropdown { display: none; background: rgba(6,10,16,0.98); border: 1px solid #1e2d42; border-top: none; border-radius: 0 0 8px 8px; overflow: hidden; max-height: 260px; overflow-y: auto; }
+.map-search-item { display: flex; align-items: center; gap: 8px; padding: 8px 12px; cursor: pointer; font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #b8c8d8; transition: background 0.1s; }
+.map-search-item:hover, .map-search-item.kbd-active { background: rgba(0,212,170,0.08); color: #e2e8f0; }
+.map-search-pip { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
+.map-search-cat { font-size: 9px; color: #2a3a50; margin-left: auto; white-space: nowrap; }
+
 .map-controls { position: absolute; top: 16px; right: 16px; display: flex; flex-direction: column; gap: 4px; z-index: 1000; }
 .map-btn { width: 32px; height: 32px; background: rgba(12,17,24,0.92); border: 1px solid #1e2d42; color: #94a3b8; border-radius: 6px; cursor: pointer; font-size: 18px; display: flex; align-items: center; justify-content: center; transition: all 0.15s; }
 .map-btn:hover { background: #1a2233; color: #e2e8f0; }
@@ -484,6 +499,14 @@ footer { padding: 24px 48px; border-top: 1px solid var(--border); display: flex;
 <div class="panel" id="panel-map">
   <div class="map-wrap" id="mapWrap">
     <div id="map"></div>
+    <div class="map-search" id="mapSearch">
+      <div class="map-search-bar">
+        <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><circle cx="5.5" cy="5.5" r="4" stroke="currentColor" stroke-width="1.4"/><path d="M9 9l2.5 2.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+        <input type="text" id="mapSearchInput" placeholder="Find a company…" autocomplete="off" spellcheck="false">
+        <button class="map-search-clear" id="mapSearchClear" title="Clear">×</button>
+      </div>
+      <div class="map-search-dropdown" id="mapSearchDropdown"></div>
+    </div>
     <div class="map-controls">
       <button class="map-btn" id="zoomIn" title="Zoom in">+</button>
       <button class="map-btn" id="zoomOut" title="Zoom out">−</button>
@@ -1323,6 +1346,9 @@ function buildMap(){
     return result;
   })();
 
+  // Marker registry — needed for zoomToShowLayer
+  const markerMap = new Map();
+
   // Helper to add a single marker (uses spread position, real org data for events)
   function addMarker(org){
     const m = L.marker([org.lat, org.lng], { icon: makeIcon(org) });
@@ -1330,6 +1356,7 @@ function buildMap(){
     m.on('mouseout',  () => hideMapTip());
     m.on('click',     e => { L.DomEvent.stopPropagation(e); hideMapTip(); openModal(org.name, org.type, org.desc, org.cat); });
     clusterGroup.addLayer(m);
+    markerMap.set(org.name, m);
   }
 
   spreadOrgs.forEach(addMarker);
@@ -1339,6 +1366,7 @@ function buildMap(){
   let activeMapCat = null;
   function rebuildMarkers(){
     clusterGroup.clearLayers();
+    markerMap.clear();
     spreadOrgs.forEach(org => {
       if (activeMapCat && org.cat !== activeMapCat) return;
       addMarker(org);
@@ -1353,6 +1381,95 @@ function buildMap(){
       rebuildMarkers();
     });
   });
+
+  // ── MAP SEARCH ──
+  const searchInput    = document.getElementById('mapSearchInput');
+  const searchDropdown = document.getElementById('mapSearchDropdown');
+  const searchClear    = document.getElementById('mapSearchClear');
+
+  function closeSearch(){
+    searchDropdown.style.display = 'none';
+    searchClear.style.display    = 'none';
+  }
+
+  function flyToOrg(org){
+    // Clear category filter so the target company is always visible
+    if (activeMapCat) {
+      activeMapCat = null;
+      document.querySelectorAll('.map-legend-item[data-cat]').forEach(i => i.classList.remove('active-filter'));
+      rebuildMarkers();
+    }
+    const spread = spreadOrgs.find(o => o.name === org.name);
+    const m = markerMap.get(org.name);
+    if (m) {
+      clusterGroup.zoomToShowLayer(m, () => {
+        map.setView(m.getLatLng(), Math.max(map.getZoom(), 13), { animate: true });
+        setTimeout(() => openModal(org.name, org.type, org.desc, org.cat), 350);
+      });
+    } else if (spread) {
+      map.flyTo([spread.lat, spread.lng], 13);
+      setTimeout(() => openModal(org.name, org.type, org.desc, org.cat), 900);
+    }
+  }
+
+  searchInput.addEventListener('input', () => {
+    const q = searchInput.value.trim().toLowerCase();
+    searchClear.style.display = q ? 'block' : 'none';
+    if (!q) { closeSearch(); return; }
+    const hits = ORGS.filter(o => o.name.toLowerCase().includes(q)).slice(0, 9);
+    if (!hits.length) { searchDropdown.style.display = 'none'; return; }
+    searchDropdown.innerHTML = hits.map(o => {
+      const c = CAT[o.cat] || CAT.other;
+      return `<div class="map-search-item" data-name="${o.name.replace(/"/g,'&quot;')}">
+        <span class="map-search-pip" style="background:${c.hex}"></span>
+        <span>${o.name}</span>
+        <span class="map-search-cat">${c.label}</span>
+      </div>`;
+    }).join('');
+    searchDropdown.style.display = 'block';
+  });
+
+  searchDropdown.addEventListener('click', e => {
+    const row = e.target.closest('.map-search-item');
+    if (!row) return;
+    const org = ORGS.find(o => o.name === row.dataset.name);
+    if (!org) return;
+    searchInput.value = org.name;
+    closeSearch();
+    flyToOrg(org);
+  });
+
+  searchClear.addEventListener('click', () => {
+    searchInput.value = '';
+    closeSearch();
+    searchInput.focus();
+  });
+
+  // Keyboard navigation through dropdown
+  searchInput.addEventListener('keydown', e => {
+    const items = [...searchDropdown.querySelectorAll('.map-search-item')];
+    const cur   = searchDropdown.querySelector('.kbd-active');
+    const idx   = items.indexOf(cur);
+    if (e.key === 'ArrowDown') {
+      e.preventDefault();
+      cur?.classList.remove('kbd-active');
+      items[idx + 1 < items.length ? idx + 1 : 0]?.classList.add('kbd-active');
+    } else if (e.key === 'ArrowUp') {
+      e.preventDefault();
+      cur?.classList.remove('kbd-active');
+      items[idx > 0 ? idx - 1 : items.length - 1]?.classList.add('kbd-active');
+    } else if (e.key === 'Enter') {
+      e.preventDefault();
+      const target = cur || items[0];
+      if (target) target.click();
+    } else if (e.key === 'Escape') {
+      closeSearch();
+      searchInput.blur();
+    }
+  });
+
+  // Close dropdown on map interaction
+  map.on('click mousedown', closeSearch);
 }
 
 // ── NEWS ──
