@@ -274,6 +274,14 @@ footer { padding: 24px 48px; border-top: 1px solid var(--border); display: flex;
 .news-headline:hover { color: #f1f5f9; }
 .news-excerpt { font-size: 11px; color: #3a4a5a; line-height: 1.55; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 .news-failed { font-size: 10px; color: #2a3a4a; padding: 16px 0; }
+.news-highlights { margin: 24px 0 4px; background: rgba(251,191,36,0.05); border: 1px solid rgba(251,191,36,0.22); border-radius: 10px; padding: 14px 18px 6px; }
+.news-hl-header { font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; color: #fbbf24; font-weight: 700; margin-bottom: 10px; }
+.news-hl-item { padding: 9px 0; border-bottom: 1px solid rgba(251,191,36,0.08); }
+.news-hl-item:last-child { border-bottom: none; padding-bottom: 4px; }
+.news-hl-headline { font-size: 12.5px; color: #d4dfe8; line-height: 1.45; text-decoration: none; display: block; font-weight: 500; margin-bottom: 5px; transition: color 0.15s; }
+.news-hl-headline:hover { color: #fbbf24; }
+.news-hl-meta { display: flex; align-items: center; gap: 8px; }
+.news-hl-time { font-size: 10px; color: #2a3a4a; }
 
 /* EVENTS */
 .events-toolbar { display: flex; align-items: center; gap: 8px; padding: 20px 48px 16px; flex-wrap: wrap; border-bottom: 1px solid var(--border); }
@@ -492,6 +500,7 @@ footer { padding: 24px 48px; border-top: 1px solid var(--border); display: flex;
         <span class="chip" data-type="Company" data-desc="AI-guided cell manufacturing platform combining laser optics, microscopy and machine learning to automate and scale iPSC-derived cell therapy production. Based in Cambridge, MA.">cellino</span>
         <span class="chip" data-type="Company" data-desc="Bioinformatics cloud platform providing managed infrastructure for genomics and multi-omics data pipelines. Lets biotech and pharma teams run complex workflows without managing compute infrastructure.">LatchBio</span>
         <span class="chip" data-type="Company" data-desc="AI platform for drug target discovery using high-content imaging and phenomics. Combines deep learning with cellular phenotypic screening to identify novel disease biology and therapeutic targets.">Phenomic AI</span>
+        <span class="chip" data-type="Company" data-desc="AI collaborative agent platform for biomedical researchers. Biomni Lab — the first Integrated Biology Environment — lets biologists work with AI agents to make discoveries faster. Seed funded by a16z and Menlo Ventures.">Phylo</span>
       </div>
     </div>
     <div class="cat-separator"></div>
@@ -671,6 +680,7 @@ footer { padding: 24px 48px; border-top: 1px solid var(--border); display: flex;
     <span class="news-updated" id="newsUpdated"></span>
   </div>
   <div class="news-scroll">
+    <div id="newsHighlights" style="display:none"></div>
     <div class="news-loading" id="newsLoading" style="display:none">
       <div class="news-spinner"></div>Loading feeds…
     </div>
@@ -869,6 +879,7 @@ const ORGS = [
   {name:'LatchBio',cat:'tools',type:'Company',lat:37.79,lng:-122.39,desc:'Bioinformatics cloud platform providing managed infrastructure for genomics and multi-omics data pipelines. Lets biotech and pharma teams run complex workflows without managing compute infrastructure.'},
   {name:'Volta Labs',cat:'automation',type:'Company',lat:42.35,lng:-71.07,desc:'AI-guided liquid handling automation for genomics sample preparation. The Callisto instrument automates complex multi-step genomics library prep workflows with software-defined protocols.'},
   {name:'Phenomic AI',cat:'tools',type:'Company',lat:43.64,lng:-79.37,desc:'AI platform for drug target discovery using high-content imaging and phenomics. Combines deep learning with cellular phenotypic screening to identify novel disease biology and therapeutic targets.'},
+  {name:'Phylo',cat:'tools',type:'Company',lat:37.45,lng:-122.18,desc:'AI collaborative agent platform for biomedical researchers. Biomni Lab — the first Integrated Biology Environment — lets biologists work with AI agents to make discoveries faster. Backed by a16z and Menlo Ventures.'},
 
   // ── Synthetic biology / foundation model additions ──
   {name:'ASIMOV',cat:'foundation',type:'Company',lat:42.37,lng:-71.08,desc:'Synthetic biology design platform combining genetic engineering with machine learning. Builds AI tools to design, predict and optimise genetic circuits for biomanufacturing and cell engineering applications.'},
@@ -970,6 +981,7 @@ const FUNDING = {
   'OliX Pharmaceuticals':            'Listed on KOSDAQ (South Korea). Total raised undisclosed.',
   'Pathos AI':                       '$467M total — Series A, B and C. Backed by A-Star, Coatue Management.',
   'Phylo Bio':                       'Early stage / seed.',
+  'Phylo':                           'Seed — a16z, Menlo Ventures.',
   'Qubit Pharmaceuticals':           '~$20M total — Series A. Joint US-French venture.',
   'Recursion Pharmaceuticals':       'Public (Nasdaq: RXRX). Raised ~$800M+ pre-IPO.',
   'Relay Therapeutics':              'Public (Nasdaq: RLAY). Raised ~$800M+ pre-IPO.',
@@ -1129,6 +1141,7 @@ const WEBSITES = {
   'OliX Pharmaceuticals':           'https://www.olixpharma.com',
   'Pathos AI':                      'https://www.pathos.com',
   'Phylo Bio':                      'https://www.phylobio.com',
+  'Phylo':                          'https://phylo.bio',
   'Qubit Pharmaceuticals':          'https://www.qubit-pharmaceuticals.com',
   'Recursion Pharmaceuticals':      'https://www.recursion.com',
   'Relay Therapeutics':             'https://relaytx.com',
@@ -1314,7 +1327,7 @@ const STAGES = {
   'Sakana AI':'series-a', 'Superluminal Medicines':'series-a', 'WhiteLab Genomics':'series-a',
   'Xaira':'series-a', 'NOETIK':'series-a',
   'Lila Sciences':'seed', 'Medra':'seed', 'Boltz Bio':'seed',
-  'Prima Mente':'seed', 'Edison Scientific':'seed', 'Phylo Bio':'seed',
+  'Prima Mente':'seed', 'Edison Scientific':'seed', 'Phylo Bio':'seed', 'Phylo':'seed',
   'Gandeeva Therapeutics':'seed', 'Alterome Therapeutics':'seed',
 };
 
@@ -1853,6 +1866,29 @@ function _nStrip(html){
 function _nEsc(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
 function _nHref(s){ return String(s).replace(/"/g,'%22'); }
 
+function _hlScore(item){
+  const t = (item.title + ' ' + (item.excerpt || '')).toLowerCase();
+  let s = 0;
+  if (/\$[\d.,]+\s*(?:million|billion|\bm\b|\bb\b)/i.test(t))        s += 4;
+  if (/\bacquir(?:es?|ed|ing)\b|acquisition|acqui.hire/i.test(t))     s += 3;
+  if (/\bmerger?\b|\bmerges?\b|\bmerged\b/i.test(t))                  s += 3;
+  if (/\bipo\b|\bgoes public\b|\blisted on (?:nasdaq|nyse|lse)\b/i.test(t)) s += 3;
+  if (/series [a-f]\b/i.test(t))                                       s += 2;
+  if (/\braises?\b|\bfunding round\b|\bseed round\b/i.test(t))         s += 2;
+  if (/\bpartnership\b|\bcollaboration\b|\blicensing deal\b/i.test(t)) s += 1;
+  if (/\blaunch(?:es|ed)?\b|\bannounces?|\bbreakthrough\b|\bfirst.ever\b/i.test(t)) s += 1;
+  return s;
+}
+
+function _pickHighlights(all){
+  return all
+    .map(item => ({item, score: _hlScore(item)}))
+    .filter(({score}) => score >= 2)
+    .sort((a,b) => b.score - a.score || b.item.date - a.item.date)
+    .slice(0,5)
+    .map(({item}) => item);
+}
+
 function _nFmt(d){
   const diff = (Date.now() - d) / 1000;
   if(diff < 60)     return 'just now';
@@ -1896,6 +1932,24 @@ async function loadNews(force){
 
   all.sort((a, b) => b.date - a.date);
   loading.style.display = 'none';
+
+  const hlEl = document.getElementById('newsHighlights');
+  const highlights = _pickHighlights(all);
+  if(highlights.length >= 2){
+    let hlHtml = '<div class="news-hl-header">⚡ Spotlight — Major news</div>';
+    highlights.forEach(item => {
+      hlHtml += `<div class="news-hl-item">` +
+        `<a class="news-hl-headline" href="${_nHref(item.link)}" target="_blank" rel="noopener noreferrer">${_nEsc(item.title)}</a>` +
+        `<div class="news-hl-meta"><span class="news-badge ${item.cat}">${_nEsc(item.source)}</span><span class="news-hl-time">${_nFmt(item.date)}</span></div>` +
+        `</div>`;
+    });
+    hlEl.className = 'news-highlights';
+    hlEl.innerHTML = hlHtml;
+    hlEl.style.display = '';
+  } else {
+    hlEl.style.display = 'none';
+    hlEl.innerHTML = '';
+  }
 
   if(!all.length){
     content.innerHTML = '<div class="news-empty">No articles loaded — check your internet connection or try refreshing.</div>';
