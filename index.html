@@ -127,11 +127,20 @@ input[type="text"]::placeholder { color: #8fa0b8; }
 .map-wrap { flex: 1; position: relative; overflow: hidden; background: #08111e; min-height: 560px; }
 #map { width: 100%; height: 100%; position: relative; z-index: 0; }
 .leaflet-control-attribution { font-size: 9px !important; opacity: 0.35; background: transparent !important; }
-.marker-wrap { position: relative; width: 20px; height: 20px; }
-.marker-dot { width: 14px; height: 14px; border-radius: 50%; position: absolute; top: 3px; left: 3px; border: 2px solid rgba(255,255,255,0.15); transition: transform 0.15s; cursor: pointer; }
-.marker-wrap:hover .marker-dot { transform: scale(1.35); }
-.marker-review-ring { position: absolute; inset: -4px; border-radius: 50%; border: 2px dashed #fbbf24; animation: ring-spin 4s linear infinite; pointer-events: none; }
-@keyframes ring-spin { to { transform: rotate(360deg); } }
+.marker-outer { overflow: visible !important; background: transparent !important; border: none !important; }
+.marker-label {
+  display: inline-flex; align-items: center; height: 22px; padding: 0 9px;
+  border-radius: 11px; font-family: 'IBM Plex Mono', monospace; font-size: 10px;
+  font-weight: 500; white-space: nowrap; cursor: pointer; border: 1px solid;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.55); letter-spacing: 0.02em;
+  opacity: 0.88; transition: opacity 0.15s, transform 0.15s;
+}
+.marker-label:hover { opacity: 1; transform: scale(1.07); box-shadow: 0 4px 16px rgba(0,0,0,0.65); }
+.marker-label.has-review { animation: label-pulse 2s ease-in-out infinite; }
+@keyframes label-pulse {
+  0%, 100% { box-shadow: 0 2px 8px rgba(0,0,0,0.55), 0 0 0 2px rgba(251,191,36,0.5); }
+  50%       { box-shadow: 0 2px 8px rgba(0,0,0,0.55), 0 0 0 3px rgba(251,191,36,0.95); }
+}
 .cluster-bubble { border-radius: 50%; background: #0d1e30; border: 2px solid #00d4aa; color: #e2e8f0; font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 600; text-align: center; cursor: pointer; transition: border-color 0.15s; display: flex; align-items: center; justify-content: center; }
 .cluster-bubble:hover { border-color: #7de8d6; }
 
@@ -1243,15 +1252,18 @@ function buildMap(){
   function hideMapTip(){ tooltip.style.display = 'none'; }
   map.on('click', hideMapTip);
 
-  // Build marker icon for a single org
+  // Build marker icon — pill label showing company name
   function makeIcon(org){
-    const color = CAT[org.cat]?.hex || '#9ca3af';
-    const ring  = reviewData[org.name] ? '<div class="marker-review-ring"></div>' : '';
+    const c   = CAT[org.cat] || CAT.other;
+    const cls = reviewData[org.name] ? 'marker-label has-review' : 'marker-label';
+    // Estimate pill width: ~7px per char (IBM Plex Mono at 10px) + 18px padding
+    const w   = Math.min(org.name.length * 7 + 18, 175);
+    const h   = 22;
     return L.divIcon({
-      html: `<div class="marker-wrap"><div class="marker-dot" style="background:${color}"></div>${ring}</div>`,
-      className: '',
-      iconSize: [20, 20],
-      iconAnchor: [10, 10],
+      html: `<div class="${cls}" style="background:${c.bg};border-color:${c.hex}66;color:${c.hex}">${org.name}</div>`,
+      className: 'marker-outer',
+      iconSize:   [w, h],
+      iconAnchor: [w / 2, h / 2],
     });
   }
 
