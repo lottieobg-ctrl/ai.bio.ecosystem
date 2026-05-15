@@ -298,7 +298,6 @@ footer { padding: 24px 48px; border-top: 1px solid var(--border); display: flex;
     <path d="M12 9v4m0 4h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
   </svg>
   <span>This website is not fully monitored and may contain mistakes. Data is compiled from public sources.</span>
-  <button class="disclaimer-dismiss" id="disclaimerDismiss" title="Dismiss">×</button>
 </div>
 
 <div class="tab-bar">
@@ -1632,9 +1631,6 @@ function newsFilter(cat, btn){
   });
 }
 
-document.getElementById('disclaimerDismiss').addEventListener('click', () => {
-  document.getElementById('disclaimerBar').style.display = 'none';
-});
 </script>
 </body>
 </html>
