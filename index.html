@@ -590,6 +590,7 @@ footer { padding: 24px 48px; border-top: 1px solid var(--border); display: flex;
         <span class="chip" data-type="Venture Capital" data-desc="Boston-based VC backing science and engineering-driven startups across biotech, materials, climate and computing. Closely partners with founders at the earliest stages.">Pillar VC <span class="badge badge-vc">VC</span></span>
         <span class="chip" data-type="Crossover Fund" data-desc="Crossover fund investing across public and private biotech with a quantitative, data-intensive approach. Active in AI-enabled drug discovery and genomics. ~$6B AUM. Based in Boston.">RA Capital <span class="badge badge-vc">VC</span></span>
         <span class="chip" data-type="Non-profit / Philanthropy" data-desc="Philanthropy organisation funding breakthrough research in science and technology. Supports high-impact scientific projects with interest in longevity, AI safety and transformative biology.">Renaissance Philanthropy <span class="badge">NP</span></span>
+        <span class="chip" data-type="Incubator / VC" data-desc="Bristol-based deep tech ecosystem combining incubation (75,000+ sq ft of lab and office space across multiple sites), early-stage VC (SCVC — pre-seed and seed), accelerator programmes and STEM outreach. 150+ companies supported in AI, synthetic biology, quantum and advanced materials. Opening 30,000 sq ft OMX facility 2026.">Science Creates <span class="badge badge-vc">VC</span></span>
         <span class="chip" data-type="Philanthropy" data-desc="Eric Schmidt's philanthropy. Funds AI-biology at the frontier including the Virtual Institute for Scientific Software, Convergent Research and AI-enabled environmental monitoring. Based in New York.">Schmidt Futures <span class="badge badge-phi">PHI</span></span>
         <span class="chip" data-type="Venture Capital" data-desc="Leading European life sciences VC with dedicated industrial biotech and AI-biology theses. Active in AI-driven drug discovery and synthetic biology. Based in Paris.">Sofinnova Partners <span class="badge badge-vc">VC</span></span>
         <span class="chip" data-type="Sovereign Fund" data-desc="Sovereign AI investment fund backing AI infrastructure, foundation models and AI applications at scale with strategic national and economic focus.">SovAI fund <span class="badge badge-gov">GOV</span></span>
@@ -619,6 +620,7 @@ footer { padding: 24px 48px; border-top: 1px solid var(--border); display: flex;
         <span class="chip" data-type="Non-profit / Accelerator" data-desc="Student-run non-profit building the next generation of biotech founders and scientists. Runs the Activate accelerator and fellowship programmes at universities globally. A key pipeline for AI bio talent.">Nucleate</span>
         <span class="chip" data-type="Fellowship Programme" data-desc="Two-year postdoctoral fellowship funded by Eric &amp; Wendy Schmidt to apply AI methods to natural and engineering sciences. Active at Chicago, Cornell, UCSD and multiple other universities.">Schmidt AI in Science</span>
         <span class="chip" data-type="Fellowship Programme" data-desc="Elite postdoctoral programme funding early-career scientists to conduct research across disciplines, pushing AI-biology interdisciplinary work. One of the most prestigious science fellowships globally.">Schmidt Science Fellows</span>
+        <span class="chip" data-type="Incubator / Deep Tech Ecosystem" data-desc="Bristol-based deep tech incubator, VC (SCVC) and accelerator. 75,000+ sq ft of lab and office space; 150+ companies backed in AI, synthetic biology, quantum and advanced materials. Also runs STEM outreach as an independent charity. Based in Bristol, UK.">Science Creates</span>
         <span class="chip" data-type="Community / Media" data-desc="Community and content platform covering AI research and state-of-the-art developments across industries including biology.">SOTA</span>
         <span class="chip" data-type="Community / Conference" data-desc="Premier synthetic biology innovation network and annual conference connecting researchers, founders and investors at the AI × biology frontier.">SynBioBeta</span>
         <span class="chip" data-type="Accelerator Programme" data-desc="World's first all-female tech accelerator. Supports women founders across tech and biotech with funding, mentorship and community. Based in the UK.">TechBros</span>
@@ -852,6 +854,7 @@ const ORGS = [
   {name:'Renaissance Philanthropy',cat:'investor',type:'Non-profit / Philanthropy',lat:40.73,lng:-74.01,desc:'Philanthropy organisation funding breakthrough research in science and technology with interest in longevity, AI safety and transformative biology.'},
   {name:'SovAI fund',cat:'investor',type:'Government Programme (UK)',lat:51.51,lng:-0.13,desc:'UK Government Sovereign AI Unit supporting AI infrastructure, foundation models and applications at scale. Administered by DSIT.'},
   {name:'Syncona',cat:'investor',type:'Investment Company (public, LSE)',lat:51.51,lng:-0.12,desc:'FTSE-listed life science investment company building and funding cell and gene therapy companies. Long-term patient capital model.'},
+  {name:'Science Creates',cat:'accel',type:'Incubator / VC',lat:51.45,lng:-2.59,desc:'Bristol-based deep tech ecosystem combining incubation, early-stage VC (SCVC), accelerator programmes and STEM outreach. 75,000+ sq ft of lab space; 150+ companies backed in AI, synthetic biology, quantum and advanced materials.'},
   {name:'Biotech TV',cat:'other',type:'Media',lat:37.79,lng:-122.44,desc:'Video content platform covering biotech and life sciences news — profiles, conference coverage and founder interviews.'},
   {name:'Monograph',cat:'investor',type:'Venture Capital',lat:37.78,lng:-122.44,desc:'Life sciences-focused VC firm investing in lab-centric companies building tools, platforms and instruments for biological research and drug discovery. Based in San Francisco.'},
   {name:'Nucleate',cat:'accel',type:'Non-profit / Accelerator',lat:42.36,lng:-71.08,desc:'Student-run non-profit building the next generation of biotech founders. Runs the Activate accelerator and fellowship programmes at universities globally.'},
@@ -1030,6 +1033,7 @@ const FUNDING = {
   'Renaissance Philanthropy':        'Philanthropic organisation — AUM undisclosed.',
   'SovAI fund':                      'Sovereign fund — size undisclosed.',
   'Syncona':                         'Public (LSE: SYNC). NAV ~£1B+.',
+  'Science Creates':                 'N/A — incubator and investor. SCVC arm makes pre-seed and seed investments in deep tech including AI × bio.',
   'Biotech TV':                      'Media organisation — not applicable.',
   'Monograph':                       'Venture capital firm — fund size undisclosed.',
   'Nucleate':                        'Non-profit / accelerator — grant and donation funded.',
@@ -1190,6 +1194,7 @@ const WEBSITES = {
   'Renaissance Philanthropy':       'https://renaissancephilanthropy.org',
   'SovAI fund':                     'https://www.sovai.fund',
   'Syncona':                        'https://www.synconaltd.com',
+  'Science Creates':                'https://www.sciencecreates.co.uk',
   'Biotech TV':                     'https://www.biotechTV.com',
   'Nucleate':                       'https://nucleate.xyz',
   'Sifted':                         'https://sifted.eu',
@@ -1303,7 +1308,7 @@ const STAGES = {
   'Schmidt Futures':'nonprofit', 'Wellcome Trust':'nonprofit', 'Convergent Research':'nonprofit',
   'Fractile':'series-b',
   'TechBros':'nonprofit', 'Activate':'nonprofit', 'Creative Destruction Lab':'nonprofit',
-  'Deep Science Ventures':'nonprofit', 'Encode':'nonprofit', 'Foresight Fellowship':'nonprofit',
+  'Deep Science Ventures':'nonprofit', 'Encode':'nonprofit', 'Foresight Fellowship':'nonprofit', 'Science Creates':'nonprofit',
   'FutureHouse':'nonprofit', 'Illumina Ventures Labs':'nonprofit', 'IndieBio':'nonprofit',
   'JLABS':'nonprofit', 'LabCentral AI BioHub':'nonprofit', 'Schmidt AI in Science':'nonprofit',
   'Schmidt Science Fellows':'nonprofit', 'Y Combinator':'nonprofit',
