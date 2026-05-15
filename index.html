@@ -498,6 +498,7 @@ footer { padding: 24px 48px; border-top: 1px solid var(--border); display: flex;
         <span class="chip" data-type="Company" data-desc="AI platform for single-cell biology using deep learning on brightfield cell images. Classifies and sorts cells by morphological phenotype without molecular labels, at scale.">deepcell</span>
         <span class="chip" data-type="Company" data-desc="MIT spinout building automation-native tools for AI-driven biology. Develops advanced zwitterionic hydrogel microparticle technology for purification media and chromatography in next-generation biologics manufacturing. Backed by Pillar VC. Spinout of MIT Doyle Research Group.">Drosera Bio</span>
         <span class="chip" data-type="Company" data-desc="Discovers novel CRISPR systems from nature using AI-assisted genomic mining, then applies them to next-generation diagnostics (DETECTR platform) and in vivo gene editing therapies. Co-founded by Jennifer Doudna.">Mammoth Biosciences</span>
+        <span class="chip" data-type="Company" data-desc="Gene editing and de-extinction company applying CRISPR, base editing and computational genomics to restore extinct megafauna — woolly mammoth, thylacine and dodo. Develops advanced gene editing tools and conservation genomics platforms with broad applications. Co-founded by George Church (Harvard) and Ben Lamm. ~$225M raised.">Colossal Biosciences</span>
         <span class="chip" data-type="Company" data-desc="AI-guided cell manufacturing platform combining laser optics, microscopy and machine learning to automate and scale iPSC-derived cell therapy production. Based in Cambridge, MA.">cellino</span>
         <span class="chip" data-type="Company" data-desc="Bioinformatics cloud platform providing managed infrastructure for genomics and multi-omics data pipelines. Lets biotech and pharma teams run complex workflows without managing compute infrastructure.">LatchBio</span>
         <span class="chip" data-type="Company" data-desc="AI platform for drug target discovery using high-content imaging and phenomics. Combines deep learning with cellular phenotypic screening to identify novel disease biology and therapeutic targets.">Phenomic AI</span>
@@ -545,7 +546,7 @@ footer { padding: 24px 48px; border-top: 1px solid var(--border); display: flex;
         <span class="chip" data-type="Company" data-desc="GPU manufacturer and essential AI infrastructure globally. BioNeMo framework hosts multiple biological foundation models as NIM microservices. NVentures strategically invests across AI drug discovery.">Nvidia</span>
         <span class="chip" data-type="Company" data-desc="Developer of GPT-4 and ChatGPT. Investor in Chai Discovery. Held a biodefence summit on model safeguards for biosecurity risk. Increasingly engaged with AI bio through capabilities and direct investment.">OpenAI</span>
         <span class="chip" data-type="Company" data-desc="AI research lab co-founded by ex-Google Brain researchers exploring nature-inspired AI architectures. Based in Tokyo. Develops novel model designs inspired by evolution and swarm intelligence.">Sakana AI</span>
-        <span class="chip" data-type="Company" data-desc="AI and computational technology company working on advanced AI systems and research infrastructure, applying ML and deep learning across technical domains.">Callosum</span>
+        <span class="chip" data-type="Company" data-desc="The Intelligent Systems Company building infrastructure where heterogeneous chips and intelligence co-evolve. Develops computing architecture enabling diverse AI approaches to work together, moving beyond homogeneous scaling.">Callosum</span>
         <span class="chip" data-type="Company" data-desc="Computational and numerical AI company focused on high-performance scientific computing and AI-accelerated simulation for complex numerical problems in science and engineering.">Radical Numerics</span>
         <span class="chip" data-type="Company" data-desc="UK AI hardware startup building custom inference chips using in-memory compute to radically accelerate and reduce the cost of running large AI models. $220M Series B (Accel, Founders Fund). London/Bristol.">Fractile <span class="badge badge-chip">CHIP</span></span>
         <span class="chip" data-type="Company" data-desc="Batch inference platform for large-scale LLM workloads. Asynchronous and overnight inference at up to 75% lower cost than real-time providers, via an OpenAI-compatible API. Use cases include synthetic data generation and model evaluation.">Doubleword</span>
@@ -876,6 +877,7 @@ const ORGS = [
   {name:'immunai',cat:'tools',type:'Company',lat:40.73,lng:-74.00,desc:'AI-powered mapping of the immune system using single-cell multi-omics. Builds comprehensive immune cell atlases to guide the design of next-generation immunotherapies.'},
   {name:'deepcell',cat:'tools',type:'Company',lat:37.45,lng:-122.16,desc:'AI platform for single-cell biology using deep learning on brightfield cell images. Classifies and sorts cells by morphological phenotype without molecular labels, at scale.'},
   {name:'Mammoth Biosciences',cat:'tools',type:'Company',lat:37.68,lng:-122.40,desc:'Discovers novel CRISPR systems from nature using AI-assisted genomic mining. Applies them to next-generation diagnostics (DETECTR platform) and in vivo gene editing therapies. Co-founded by Jennifer Doudna.'},
+  {name:'Colossal Biosciences',cat:'tools',type:'Company',lat:32.78,lng:-96.80,desc:'Gene editing and de-extinction company applying CRISPR, base editing and computational genomics to restore extinct megafauna — woolly mammoth, thylacine and dodo. Develops advanced gene editing and conservation genomics tools with broad applications. Co-founded by George Church and Ben Lamm. Dallas, TX.'},
   {name:'cellino',cat:'tools',type:'Company',lat:42.36,lng:-71.10,desc:'AI-guided cell manufacturing platform combining laser optics, microscopy and machine learning to automate and scale iPSC-derived cell therapy production. Based in Cambridge, MA.'},
   {name:'LatchBio',cat:'tools',type:'Company',lat:37.79,lng:-122.39,desc:'Bioinformatics cloud platform providing managed infrastructure for genomics and multi-omics data pipelines. Lets biotech and pharma teams run complex workflows without managing compute infrastructure.'},
   {name:'Volta Labs',cat:'automation',type:'Company',lat:42.35,lng:-71.07,desc:'AI-guided liquid handling automation for genomics sample preparation. The Callisto instrument automates complex multi-step genomics library prep workflows with software-defined protocols.'},
@@ -1091,6 +1093,7 @@ const FUNDING = {
   'immunai':                         '~$215M total — $60M Series A (2021) · $150M Series B (2022). Backed by Andreessen Horowitz, Alexandria Venture Investments.',
   'deepcell':                        '~$120M total — Series B (2022). Backed by Andreessen Horowitz, 8VC, Bow Capital.',
   'Mammoth Biosciences':             '~$150M total — Series C. Backed by Mayfield Fund, Decheng Capital, NFX. Co-founded by Jennifer Doudna.',
+  'Colossal Biosciences':            '~$225M total — Series B (2023). Backed by TWG Global, Thomas Tull, At One Ventures.',
   'cellino':                         '~$80M total — Series B. Backed by F-Prime Capital, DCVC Bio, GV.',
   'LatchBio':                        '~$60M total — Series B. Backed by Lux Capital, Haystack, General Catalyst.',
   'Volta Labs':                      '~$35M total — Series B. Backed by Andreessen Horowitz, Lux Capital.',
@@ -1204,6 +1207,7 @@ const WEBSITES = {
   'immunai':                        'https://www.immunai.com',
   'deepcell':                       'https://www.deepcell.ai',
   'Mammoth Biosciences':            'https://mammoth.bio',
+  'Colossal Biosciences':           'https://colossal.com',
   'cellino':                        'https://www.cellino.bio',
   'LatchBio':                       'https://latch.bio',
   'Volta Labs':                     'https://voltalaboratories.com',
@@ -1314,7 +1318,7 @@ const STAGES = {
   'Anthropic':'series-c', 'OpenAI':'series-c', 'Atomwise':'series-c',
   'Healx':'series-c', 'insitro':'series-c', 'Owkin':'series-c',
   'Pathos AI':'series-c', 'Benchling':'series-c',
-  'Insilico Medicine':'series-c', 'Mammoth Biosciences':'series-c',
+  'Insilico Medicine':'series-c', 'Mammoth Biosciences':'series-c', 'Colossal Biosciences':'series-b',
   'Aignostics':'series-b', 'Atomic AI':'series-b', 'Basecamp Research':'series-b',
   'BigHat Biosciences':'series-b', 'BioMap':'series-b', 'Chai Discovery':'series-b',
   'Cradle':'series-b', 'Deep Genomics':'series-b', 'Goodfire':'series-b', 'Iktos':'series-b',
