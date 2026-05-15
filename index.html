@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI × Biology Ecosystem Map — April 2026</title>
+<title>AI × Biology Ecosystem Map — May 2026</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
@@ -300,6 +300,7 @@ footer { padding: 24px 48px; border-top: 1px solid var(--border); display: flex;
 .event-type-hackathon  { background: var(--lime-dim);   color: var(--lime);   border: 1px solid var(--lime-border); }
 .event-type-summit     { background: var(--amber-dim);  color: var(--amber);  border: 1px solid var(--amber-border); }
 .event-type-seminar    { background: var(--coral-dim);  color: var(--coral);  border: 1px solid var(--coral-border); }
+.event-type-meetup     { background: var(--cyan-dim);   color: var(--cyan);   border: 1px solid var(--cyan-border); }
 .event-virtual-pill { font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; padding: 2px 7px; border-radius: 3px; font-weight: 600; background: var(--slate-dim); color: var(--slate); border: 1px solid var(--slate-border); }
 .event-desc { font-size: 11px; color: #3a4a5a; line-height: 1.55; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 .event-auto-badge { font-size: 9px; letter-spacing: 0.08em; padding: 1px 5px; border-radius: 2px; font-weight: 600; background: rgba(148,163,184,0.1); color: #3a4a5a; border: 1px solid #1a2233; vertical-align: middle; margin-left: 4px; }
@@ -345,7 +346,7 @@ footer { padding: 24px 48px; border-top: 1px solid var(--border); display: flex;
 <div class="header">
   <h1>AI <span class="x">×</span> Biology<br>Ecosystem</h1>
   <div class="header-meta">
-    <div class="date">April 2026</div>
+    <div class="date">May 2026</div>
     <div class="total" id="totalCount">—</div>
     <div class="total-label">companies &amp; institutes</div>
   </div>
@@ -694,7 +695,7 @@ footer { padding: 24px 48px; border-top: 1px solid var(--border); display: flex;
 </div>
 
 <footer>
-  <div class="footer-note"><strong>NP</strong> = non-profit or research institute &nbsp;·&nbsp; Compiled from public sources &nbsp;·&nbsp; April 2026</div>
+  <div class="footer-note"><strong>NP</strong> = non-profit or research institute &nbsp;·&nbsp; Compiled from public sources &nbsp;·&nbsp; May 2026</div>
   <div class="footer-creator">
     <span>Created by Lottie O'Brien Gore</span>
     <a class="linkedin-btn" href="https://www.linkedin.com/in/lottie-o-brien-gore-878302129/" target="_blank" rel="noopener" title="LinkedIn">
@@ -1945,7 +1946,7 @@ let _eventsLoaded = false;
 let _eventsActiveFilter = 'all';
 
 const MONTH_NAMES_SHORT = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
-const EVENT_TYPE_LABELS = {conference:'Conference',workshop:'Workshop',webinar:'Webinar',hackathon:'Hackathon',summit:'Summit',seminar:'Seminar'};
+const EVENT_TYPE_LABELS = {conference:'Conference',workshop:'Workshop',webinar:'Webinar',hackathon:'Hackathon',summit:'Summit',seminar:'Seminar',meetup:'Meetup'};
 
 async function loadEvents(){
   const loading = document.getElementById('eventsLoading');
