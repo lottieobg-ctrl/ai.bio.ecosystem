@@ -6,6 +6,8 @@
 <title>AI × Biology Ecosystem Map — April 2026</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css">
 <style>
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 :root {
@@ -123,26 +125,33 @@ input[type="text"]::placeholder { color: #8fa0b8; }
 /* MAP */
 #panel-map.active { display: flex; flex-direction: column; }
 .map-wrap { flex: 1; position: relative; overflow: hidden; background: #08111e; min-height: 560px; }
-#world-svg { width: 100%; height: 100%; display: block; cursor: grab; }
-#world-svg:active { cursor: grabbing; }
-.map-loading { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; color: #4a5568; font-size: 13px; letter-spacing: 0.06em; }
+#map { width: 100%; height: 100%; position: relative; z-index: 0; }
+.leaflet-control-attribution { font-size: 9px !important; opacity: 0.35; background: transparent !important; }
+.marker-wrap { position: relative; width: 20px; height: 20px; }
+.marker-dot { width: 14px; height: 14px; border-radius: 50%; position: absolute; top: 3px; left: 3px; border: 2px solid rgba(255,255,255,0.15); transition: transform 0.15s; cursor: pointer; }
+.marker-wrap:hover .marker-dot { transform: scale(1.35); }
+.marker-review-ring { position: absolute; inset: -4px; border-radius: 50%; border: 2px dashed #fbbf24; animation: ring-spin 4s linear infinite; pointer-events: none; }
+@keyframes ring-spin { to { transform: rotate(360deg); } }
+.cluster-bubble { border-radius: 50%; background: #0d1e30; border: 2px solid #00d4aa; color: #e2e8f0; font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 600; text-align: center; cursor: pointer; transition: border-color 0.15s; display: flex; align-items: center; justify-content: center; }
+.cluster-bubble:hover { border-color: #7de8d6; }
 
-.map-controls { position: absolute; top: 16px; right: 16px; display: flex; flex-direction: column; gap: 4px; z-index: 10; }
+.map-controls { position: absolute; top: 16px; right: 16px; display: flex; flex-direction: column; gap: 4px; z-index: 1000; }
 .map-btn { width: 32px; height: 32px; background: rgba(12,17,24,0.92); border: 1px solid #1e2d42; color: #94a3b8; border-radius: 6px; cursor: pointer; font-size: 18px; display: flex; align-items: center; justify-content: center; transition: all 0.15s; }
 .map-btn:hover { background: #1a2233; color: #e2e8f0; }
 
-.map-legend { position: absolute; bottom: 20px; left: 16px; z-index: 10; background: rgba(8,17,30,0.92); border: 1px solid #1e2d42; border-radius: 10px; padding: 12px 14px; }
+.map-legend { position: absolute; bottom: 20px; left: 16px; z-index: 1000; background: rgba(8,17,30,0.92); border: 1px solid #1e2d42; border-radius: 10px; padding: 12px 14px; }
+.map-legend-item.active-filter { color: #f1f5f9; }
 .map-legend-title { font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; color: #4a5568; margin-bottom: 8px; }
 .map-legend-item { display: flex; align-items: center; gap: 7px; font-size: 11px; color: #b8c8d8; margin-bottom: 5px; cursor: pointer; transition: color 0.15s; }
 .map-legend-item:last-child { margin-bottom: 0; }
 .map-legend-item:hover { color: #f1f5f9; }
 .map-legend-dot { width: 9px; height: 9px; border-radius: 50%; flex-shrink: 0; }
 
-.map-hint { position: absolute; bottom: 20px; right: 16px; font-size: 11px; color: #2a3a50; letter-spacing: 0.04em; }
+.map-hint { position: absolute; bottom: 20px; right: 16px; font-size: 11px; color: #2a3a50; letter-spacing: 0.04em; z-index: 999; }
 
 /* TOOLTIP */
 .map-tooltip {
-  position: absolute; pointer-events: none; z-index: 20;
+  position: absolute; pointer-events: none; z-index: 1010;
   background: #0d1420; border: 1px solid #1e2d42; border-radius: 10px;
   padding: 14px 16px; max-width: 280px; box-shadow: 0 12px 40px rgba(0,0,0,0.6);
   display: none;
@@ -227,6 +236,9 @@ footer { padding: 24px 48px; border-top: 1px solid var(--border); display: flex;
 .rn-proposed { font-size: 11px; color: #7de8d6; margin-bottom: 12px; line-height: 1.7; }
 .rn-proposed strong { color: #e2e8f0; }
 .rn-actions { display: flex; gap: 8px; }
+.rn-confirm { padding: 5px 14px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; background: rgba(251,191,36,0.15); border: 1px solid rgba(251,191,36,0.4); color: #fbbf24; border-radius: 4px; cursor: pointer; transition: all 0.15s; }
+.rn-confirm:hover { background: rgba(251,191,36,0.25); border-color: #fbbf24; }
+.rn-confirm:disabled { opacity: 0.5; cursor: default; }
 .rn-dismiss { padding: 5px 14px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; background: var(--bg2); border: 1px solid var(--border); color: #94a3b8; border-radius: 4px; cursor: pointer; transition: all 0.15s; }
 .rn-dismiss:hover { color: #e2e8f0; border-color: #2a3a50; }
 
@@ -444,8 +456,7 @@ footer { padding: 24px 48px; border-top: 1px solid var(--border); display: flex;
 <!-- MAP PANEL -->
 <div class="panel" id="panel-map">
   <div class="map-wrap" id="mapWrap">
-    <div class="map-loading" id="mapLoading">Loading world map…</div>
-    <svg id="world-svg"></svg>
+    <div id="map"></div>
     <div class="map-controls">
       <button class="map-btn" id="zoomIn" title="Zoom in">+</button>
       <button class="map-btn" id="zoomOut" title="Zoom out">−</button>
@@ -453,15 +464,15 @@ footer { padding: 24px 48px; border-top: 1px solid var(--border); display: flex;
     </div>
     <div class="map-legend">
       <div class="map-legend-title">Category</div>
-      <div class="map-legend-item"><div class="map-legend-dot" style="background:#00d4aa"></div>Foundation models</div>
-      <div class="map-legend-item"><div class="map-legend-dot" style="background:#a78bfa"></div>Drug discovery</div>
-      <div class="map-legend-item"><div class="map-legend-dot" style="background:#60a5fa"></div>Tools &amp; platforms</div>
-      <div class="map-legend-item"><div class="map-legend-dot" style="background:#fb923c"></div>Health / clinical</div>
-      <div class="map-legend-item"><div class="map-legend-dot" style="background:#94a3b8"></div>Pure AI / tech</div>
-      <div class="map-legend-item"><div class="map-legend-dot" style="background:#fbbf24"></div>Investors &amp; funds</div>
-      <div class="map-legend-item"><div class="map-legend-dot" style="background:#9ca3af"></div>Community &amp; media</div>
+      <div class="map-legend-item" data-cat="foundation"><div class="map-legend-dot" style="background:#00d4aa"></div>Foundation models</div>
+      <div class="map-legend-item" data-cat="discovery"><div class="map-legend-dot" style="background:#a78bfa"></div>Drug discovery</div>
+      <div class="map-legend-item" data-cat="tools"><div class="map-legend-dot" style="background:#60a5fa"></div>Tools &amp; platforms</div>
+      <div class="map-legend-item" data-cat="health"><div class="map-legend-dot" style="background:#fb923c"></div>Health / clinical</div>
+      <div class="map-legend-item" data-cat="ai"><div class="map-legend-dot" style="background:#94a3b8"></div>Pure AI / tech</div>
+      <div class="map-legend-item" data-cat="investor"><div class="map-legend-dot" style="background:#fbbf24"></div>Investors &amp; funds</div>
+      <div class="map-legend-item" data-cat="other"><div class="map-legend-dot" style="background:#9ca3af"></div>Community &amp; media</div>
     </div>
-    <div class="map-hint">Scroll to zoom · drag to pan · click bubble to expand · click dot for info</div>
+    <div class="map-hint">Scroll to zoom · click cluster to drill in · click dot for info</div>
     <div class="map-tooltip" id="mapTooltip">
       <div class="tt-tag" id="ttTag"></div>
       <div class="tt-name" id="ttName"></div>
@@ -503,6 +514,7 @@ footer { padding: 24px 48px; border-top: 1px solid var(--border); display: flex;
   <a class="rn-headline" id="rnHeadline" href="#" target="_blank" rel="noopener noreferrer"></a>
   <div class="rn-proposed" id="rnProposed"></div>
   <div class="rn-actions">
+    <button class="rn-confirm" id="rnConfirmBtn" onclick="confirmUpdate()">✓ Confirm &amp; clear flag</button>
     <button class="rn-dismiss" onclick="dismissReview()">Dismiss</button>
   </div>
 </div>
@@ -527,8 +539,8 @@ footer { padding: 24px 48px; border-top: 1px solid var(--border); display: flex;
   </div>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/topojson-client@3/dist/topojson-client.min.js"></script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
 <script>
 // ── COLOUR MAP ──
 const CAT = {
@@ -977,28 +989,55 @@ function applyFilters(){
 document.getElementById('totalCount').textContent=document.querySelectorAll('.chip').length;
 applyFilters();
 
-// ── UPDATE OVERLAY ──
+// ── COMPANIES DATA OVERLAY ──
 const reviewData = {};
+let _currentReviewName = null;
+const GH_REPO = 'lottieobg-ctrl/ai.bio.ecosystem';
+const GH_FILE = 'data/companies.json';
 
-function applyUpdates(data){
-  if(!data || !data.companies) return;
-  Object.entries(data.companies).forEach(([name, upd]) => {
-    if(!upd || !upd.needs_review) return;
-    reviewData[name] = upd;
-    document.querySelectorAll('.chip').forEach(chip => {
-      if(chip.dataset.name !== name) return;
-      if(chip.querySelector('.review-badge')) return;
-      const b = document.createElement('span');
-      b.className = 'review-badge';
-      b.title = 'Funding news detected — click to review';
-      b.textContent = '!';
-      b.addEventListener('click', e => { e.stopPropagation(); openReviewNotice(name, upd); });
-      chip.appendChild(b);
-    });
+function applyCompaniesData(data){
+  if(!data || !Array.isArray(data.companies)) return;
+  data.companies.forEach(c => {
+    if(!c.name) return;
+    // Update in-memory FUNDING and STAGES (only if non-empty — preserves hardcoded fallback)
+    if(c.funding) FUNDING[c.name] = c.funding;
+    if(c.stage){
+      const oldStage = STAGES[c.name];
+      STAGES[c.name] = c.stage;
+      if(oldStage !== c.stage){
+        document.querySelectorAll('.chip').forEach(chip => {
+          if(chip.dataset.name !== c.name) return;
+          chip.dataset.stage = c.stage;
+          chip.querySelector('.sbadge')?.remove();
+          if(STAGE_LABELS[c.stage]){
+            const sc = STAGE_COLORS[c.stage];
+            const b = document.createElement('span');
+            b.className = 'sbadge';
+            b.textContent = STAGE_LABELS[c.stage];
+            b.style.cssText = `background:${sc.bg};color:${sc.text};border:1px solid ${sc.border};`;
+            const rb = chip.querySelector('.review-badge');
+            rb ? chip.insertBefore(b, rb) : chip.appendChild(b);
+          }
+        });
+      }
+    }
+    if(c.needs_review){
+      reviewData[c.name] = c;
+      document.querySelectorAll('.chip').forEach(chip => {
+        if(chip.dataset.name !== c.name || chip.querySelector('.review-badge')) return;
+        const b = document.createElement('span');
+        b.className = 'review-badge';
+        b.title = 'Funding news detected — click to review';
+        b.textContent = '!';
+        b.addEventListener('click', e => { e.stopPropagation(); openReviewNotice(c.name, c); });
+        chip.appendChild(b);
+      });
+    }
   });
 }
 
 function openReviewNotice(name, upd){
+  _currentReviewName = name;
   document.getElementById('rnName').textContent = name;
   const hl = document.getElementById('rnHeadline');
   hl.textContent = upd.review_headline || 'News article';
@@ -1008,17 +1047,61 @@ function openReviewNotice(name, upd){
   if(upd.proposed_stage)   proposed.push('<strong>Stage:</strong> '   + upd.proposed_stage);
   document.getElementById('rnProposed').innerHTML = proposed.length
     ? 'Proposed update — ' + proposed.join(' &nbsp;·&nbsp; ')
-    : 'Open the article to review the details.';
+    : 'Open the article to check the details, then confirm.';
+  const btn = document.getElementById('rnConfirmBtn');
+  btn.textContent = '✓ Confirm & clear flag';
+  btn.disabled = false;
   document.getElementById('reviewNotice').classList.add('visible');
 }
 
 function dismissReview(){
   document.getElementById('reviewNotice').classList.remove('visible');
+  _currentReviewName = null;
 }
 
-fetch('./data/updates.json')
+async function confirmUpdate(){
+  const name = _currentReviewName;
+  if(!name) return;
+  let token = localStorage.getItem('gh_confirm_token');
+  if(!token){
+    token = prompt('Enter your GitHub Personal Access Token to enable one-click confirmation.\n\nRequires "repo" scope. Stored only in this browser.');
+    if(!token) return;
+    localStorage.setItem('gh_confirm_token', token.trim());
+    token = token.trim();
+  }
+  const btn = document.getElementById('rnConfirmBtn');
+  btn.textContent = 'Saving…';
+  btn.disabled = true;
+  try {
+    const headers = {'Authorization':'token '+token,'Accept':'application/vnd.github.v3+json'};
+    const r = await fetch(`https://api.github.com/repos/${GH_REPO}/contents/${GH_FILE}`,{headers});
+    if(!r.ok) throw new Error('GitHub API '+r.status);
+    const fd = await r.json();
+    const json = JSON.parse(decodeURIComponent(escape(atob(fd.content.replace(/\n/g,'')))));
+    const co = json.companies.find(c => c.name === name);
+    if(co){ co.needs_review=false; co.review_headline=''; co.review_url=''; co.proposed_funding=''; co.proposed_stage=''; co.found_at=''; }
+    const newContent = btoa(unescape(encodeURIComponent(JSON.stringify(json, null, 2))));
+    const pr = await fetch(`https://api.github.com/repos/${GH_REPO}/contents/${GH_FILE}`,{
+      method:'PUT', headers:{...headers,'Content-Type':'application/json'},
+      body: JSON.stringify({message:`Confirm update: ${name}`, content: newContent, sha: fd.sha})
+    });
+    if(!pr.ok) throw new Error('Save failed '+pr.status);
+    delete reviewData[name];
+    document.querySelectorAll('.chip').forEach(chip=>{
+      if(chip.dataset.name===name) chip.querySelector('.review-badge')?.remove();
+    });
+    dismissReview();
+  } catch(e){
+    alert('Could not save: '+e.message+'\n\nCheck your token has "repo" scope.');
+    btn.textContent = '✓ Confirm & clear flag';
+    btn.disabled = false;
+    if(e.message.includes('401')||e.message.includes('403')) localStorage.removeItem('gh_confirm_token');
+  }
+}
+
+fetch('./data/companies.json')
   .then(r => r.json())
-  .then(applyUpdates)
+  .then(applyCompaniesData)
   .catch(() => {});
 
 // ── TABS ──
@@ -1032,85 +1115,35 @@ function switchTab(tab,btn){
   if(tab==='news'){ loadNews(); }
 }
 
-// ── D3 MAP ──
+// ── LEAFLET MAP ──
 function buildMap(){
-  const wrap = document.getElementById('mapWrap');
-  const W = wrap.clientWidth || 900;
-  const H = wrap.clientHeight || 560;
+  const mapEl = document.getElementById('map');
+  const wrap  = document.getElementById('mapWrap');
 
-  const svg = d3.select('#world-svg').attr('width', W).attr('height', H);
-  const projection = d3.geoNaturalEarth1().scale(W / 6.3).translate([W / 2, H / 2]);
-  const path = d3.geoPath().projection(projection);
-  const g = svg.append('g');
+  const map = L.map(mapEl, {
+    center: [30, 10],
+    zoom: 2,
+    zoomControl: false,
+    minZoom: 1,
+    maxZoom: 18,
+  });
 
-  const baseGroup   = g.append('g');
-  const mapDefs     = g.append('defs');       // clip paths for logos (map-space)
-  const citiesLayer = g.append('g');
-  const dotsLayer   = g.append('g');
-  const spiderLayer = svg.append('g');        // screen-space overlay
-  let activeSpider  = null;
+  // Carto Dark Matter — streets, city names, no API key needed
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a> &copy; <a href="https://carto.com/" target="_blank">CARTO</a>',
+    subdomains: 'abcd',
+    maxZoom: 19,
+  }).addTo(map);
 
-  const DOT_R         = 5;
-  const CLUSTER_RADIUS = 26;   // screen-px grouping threshold
-  const LOGO_THRESHOLD = 4;    // zoom scale at which logos replace dots
-  const LOGO_R         = 14;   // logo circle radius in screen-px
+  // Wire up the custom zoom buttons
+  document.getElementById('zoomIn').onclick    = () => map.zoomIn();
+  document.getElementById('zoomOut').onclick   = () => map.zoomOut();
+  document.getElementById('zoomReset').onclick = () => map.setView([30, 10], 2);
 
-  // ── City labels ──
-  const CITIES = [
-    {name:'San Francisco', lat:37.77,  lng:-122.42, tier:1},
-    {name:'London',        lat:51.51,  lng:-0.13,   tier:1},
-    {name:'New York',      lat:40.71,  lng:-74.01,  tier:1},
-    {name:'Paris',         lat:48.86,  lng:2.35,    tier:1},
-    {name:'Berlin',        lat:52.52,  lng:13.40,   tier:1},
-    {name:'Tokyo',         lat:35.68,  lng:139.69,  tier:1},
-    {name:'Beijing',       lat:39.91,  lng:116.39,  tier:1},
-    {name:'Sydney',        lat:-33.87, lng:151.21,  tier:1},
-    {name:'Mumbai',        lat:19.07,  lng:72.88,   tier:1},
-    {name:'São Paulo',     lat:-23.55, lng:-46.63,  tier:1},
-    {name:'Boston',        lat:42.36,  lng:-71.06,  tier:2},
-    {name:'Seattle',       lat:47.61,  lng:-122.33, tier:2},
-    {name:'Amsterdam',     lat:52.37,  lng:4.90,    tier:2},
-    {name:'Toronto',       lat:43.65,  lng:-79.38,  tier:2},
-    {name:'Hong Kong',     lat:22.32,  lng:114.17,  tier:2},
-    {name:'Chicago',       lat:41.88,  lng:-87.63,  tier:2},
-    {name:'Los Angeles',   lat:34.05,  lng:-118.24, tier:2},
-    {name:'Singapore',     lat:1.35,   lng:103.82,  tier:2},
-    {name:'Cambridge MA',  lat:42.37,  lng:-71.11,  tier:3},
-    {name:'Oxford',        lat:51.75,  lng:-1.26,   tier:3},
-    {name:'Portland',      lat:45.52,  lng:-122.68, tier:3},
-    {name:'Warsaw',        lat:52.23,  lng:21.01,   tier:3},
-    {name:'Salt Lake City',lat:40.76,  lng:-111.89, tier:3},
-    {name:'Durham',        lat:54.78,  lng:-1.58,   tier:3},
-  ];
-
-  // ── Logo URLs (Clearbit, derived from WEBSITES) ──
-  const LOGO_URLS = {};
-  for (const [name, url] of Object.entries(WEBSITES)) {
-    try {
-      const domain = new URL(url).hostname.replace(/^www\./, '');
-      LOGO_URLS[name] = `https://logo.clearbit.com/${domain}`;
-    } catch(e){}
-  }
-
-  // ── Zoom ──
-  const zoom = d3.zoom()
-    .scaleExtent([0.5, 500])
-    .on('zoom', e => {
-      g.attr('transform', e.transform);
-      collapseSpider();
-      renderDots(e.transform);
-    });
-  svg.call(zoom);
-  svg.on('click', () => collapseSpider());
-
-  document.getElementById('zoomIn').onclick    = () => svg.transition().duration(300).call(zoom.scaleBy, 1.6);
-  document.getElementById('zoomOut').onclick   = () => svg.transition().duration(300).call(zoom.scaleBy, 0.625);
-  document.getElementById('zoomReset').onclick = () => { collapseSpider(); svg.transition().duration(400).call(zoom.transform, d3.zoomIdentity); };
-
-  // ── Tooltip ──
+  // Tooltip
   const tooltip = document.getElementById('mapTooltip');
-  function showTip(org, px, py){
-    const c = CAT[org.cat]||CAT.other;
+  function showMapTip(org, px, py){
+    const c = CAT[org.cat] || CAT.other;
     document.getElementById('ttTag').textContent = c.label;
     document.getElementById('ttTag').style.cssText = `background:${c.bg};color:${c.hex};border:1px solid ${c.border};`;
     document.getElementById('ttName').textContent = org.name;
@@ -1119,228 +1152,76 @@ function buildMap(){
     tt.style.cssText = `color:${c.hex};border-color:${c.border};background:${c.bg};`;
     document.getElementById('ttDesc').textContent = org.desc;
     tooltip.style.display = 'block';
+    const W = wrap.clientWidth, H = wrap.clientHeight;
     const tw = 280, th = 160;
-    const left = px + 14 + tw > W ? px - tw - 10 : px + 14;
-    const top  = py + th > H ? py - th : py;
-    tooltip.style.left = left + 'px';
-    tooltip.style.top  = top  + 'px';
+    tooltip.style.left = (px + 14 + tw > W ? px - tw - 10 : px + 14) + 'px';
+    tooltip.style.top  = (py + th > H ? py - th : py) + 'px';
   }
-  function hideTip(){ tooltip.style.display = 'none'; }
+  function hideMapTip(){ tooltip.style.display = 'none'; }
+  map.on('click', hideMapTip);
 
-  // ── Spider (screen-space) ──
-  function collapseSpider(){
-    activeSpider = null;
-    spiderLayer.selectAll('*').remove();
-    svg.selectAll('defs.spider-defs').remove();
-    hideTip();
-  }
-
-  function showSpider(cl, transform){
-    collapseSpider();
-    activeSpider = cl;
-    const n = cl.group.length;
-    const SPIDER_R  = Math.max(65, n * 7);
-    const k         = transform.k;
-    const showLogos = k >= LOGO_THRESHOLD;
-
-    // Shared defs for spider clip paths (screen-space)
-    const spiderDefs = svg.append('defs').attr('class', 'spider-defs');
-
-    cl.group.forEach((pt, i) => {
-      const angle = (i * 2 * Math.PI / n) - Math.PI / 2;
-      const tx = cl.cx + Math.cos(angle) * SPIDER_R;
-      const ty = cl.cy + Math.sin(angle) * SPIDER_R;
-      const color = CAT[pt.org.cat]?.hex || '#fff';
-
-      spiderLayer.append('line')
-        .attr('x1', cl.cx).attr('y1', cl.cy).attr('x2', tx).attr('y2', ty)
-        .attr('stroke', '#1e3a55').attr('stroke-width', 1.5).attr('pointer-events', 'none');
-
-      if (showLogos && LOGO_URLS[pt.org.name]) {
-        const r = 14;
-        const clipId = `sc${i}`;
-        spiderDefs.append('clipPath').attr('id', clipId)
-          .append('circle').attr('cx', tx).attr('cy', ty).attr('r', r);
-        spiderLayer.append('circle')
-          .attr('cx', tx).attr('cy', ty).attr('r', r + 2)
-          .attr('fill', '#f8fafc').attr('stroke', color).attr('stroke-width', 2);
-        spiderLayer.append('image')
-          .attr('x', tx - r).attr('y', ty - r).attr('width', r*2).attr('height', r*2)
-          .attr('href', LOGO_URLS[pt.org.name]).attr('clip-path', `url(#${clipId})`)
-          .attr('preserveAspectRatio', 'xMidYMid slice').style('cursor', 'pointer')
-          .on('mouseover', function(){
-            const ttx = tx + 16 + 280 > W ? tx - 280 - 16 : tx + 16;
-            showTip(pt.org, ttx, Math.max(0, Math.min(ty - 10, H - 160)));
-          })
-          .on('mouseout', () => hideTip())
-          .on('click', function(event){ event.stopPropagation(); hideTip(); openModal(pt.org.name, pt.org.type, pt.org.desc, pt.org.cat); });
-      } else {
-        spiderLayer.append('circle')
-          .attr('cx', tx).attr('cy', ty).attr('r', 8).attr('fill', color)
-          .attr('stroke', '#060a10').attr('stroke-width', 1.5).attr('opacity', 0.95).style('cursor', 'pointer')
-          .on('mouseover', function(){
-            d3.select(this).attr('r', 10).attr('opacity', 1);
-            const ttx = tx + 12 + 280 > W ? tx - 280 - 14 : tx + 12;
-            showTip(pt.org, ttx, Math.max(0, Math.min(ty - 10, H - 160)));
-          })
-          .on('mouseout', function(){ d3.select(this).attr('r', 8).attr('opacity', 0.95); hideTip(); })
-          .on('click', function(event){ event.stopPropagation(); hideTip(); openModal(pt.org.name, pt.org.type, pt.org.desc, pt.org.cat); });
-      }
-    });
-
-    // Centre × button
-    spiderLayer.append('circle')
-      .attr('cx', cl.cx).attr('cy', cl.cy).attr('r', 11)
-      .attr('fill', '#152030').attr('stroke', '#00d4aa').attr('stroke-width', 2).style('cursor', 'pointer')
-      .on('click', function(event){ event.stopPropagation(); collapseSpider(); });
-    spiderLayer.append('text')
-      .attr('x', cl.cx).attr('y', cl.cy).attr('text-anchor', 'middle').attr('dominant-baseline', 'central')
-      .attr('fill', '#00d4aa').attr('font-size', 13).attr('font-weight', 700).attr('pointer-events', 'none').text('×');
-  }
-
-  // ── Cluster computation ──
-  function computeClusters(transform){
-    const pts = ORGS.map(org => {
-      const p = projection([org.lng, org.lat]);
-      if (!p) return null;
-      const [sx, sy] = transform.apply(p);
-      return { org, mapX: p[0], mapY: p[1], sx, sy };
-    }).filter(Boolean);
-
-    const used = new Set();
-    const clusters = [];
-    for (let i = 0; i < pts.length; i++){
-      if (used.has(i)) continue;
-      const group = [pts[i]];
-      used.add(i);
-      for (let j = i + 1; j < pts.length; j++){
-        if (used.has(j)) continue;
-        if (Math.hypot(pts[i].sx - pts[j].sx, pts[i].sy - pts[j].sy) < CLUSTER_RADIUS){ group.push(pts[j]); used.add(j); }
-      }
-      const cx = group.reduce((s,p) => s+p.sx,   0) / group.length;
-      const cy = group.reduce((s,p) => s+p.sy,   0) / group.length;
-      const mx = group.reduce((s,p) => s+p.mapX, 0) / group.length;
-      const my = group.reduce((s,p) => s+p.mapY, 0) / group.length;
-      clusters.push({ group, cx, cy, mx, my });
-    }
-    return clusters;
-  }
-
-  // ── City label rendering ──
-  function renderCities(transform){
-    citiesLayer.selectAll('*').remove();
-    const k = transform.k;
-    CITIES.forEach(city => {
-      if (city.tier === 2 && k < 1.5) return;
-      if (city.tier === 3 && k < 4)   return;
-      const p = projection([city.lng, city.lat]);
-      if (!p) return;
-      citiesLayer.append('circle')
-        .attr('cx', p[0]).attr('cy', p[1]).attr('r', 1.8 / k)
-        .attr('fill', '#2e4a6a').attr('pointer-events', 'none');
-      citiesLayer.append('text')
-        .attr('x', p[0] + 4 / k).attr('y', p[1])
-        .attr('dominant-baseline', 'central').attr('fill', '#3a5a7a')
-        .attr('font-size', 8 / k).attr('font-family', "'IBM Plex Mono', monospace")
-        .attr('letter-spacing', 0.5 / k).attr('pointer-events', 'none')
-        .text(city.name);
+  // Build marker icon for a single org
+  function makeIcon(org){
+    const color = CAT[org.cat]?.hex || '#9ca3af';
+    const ring  = reviewData[org.name] ? '<div class="marker-review-ring"></div>' : '';
+    return L.divIcon({
+      html: `<div class="marker-wrap"><div class="marker-dot" style="background:${color}"></div>${ring}</div>`,
+      className: '',
+      iconSize: [20, 20],
+      iconAnchor: [10, 10],
     });
   }
 
-  // ── Dot / bubble / logo rendering ──
-  function renderDots(transform){
-    dotsLayer.selectAll('*').remove();
-    mapDefs.selectAll('*').remove();
-    renderCities(transform);
-    const k         = transform.k;
-    const showLogos = k >= LOGO_THRESHOLD;
+  // Cluster group — clicking a cluster zooms into its bounds automatically
+  const clusterGroup = L.markerClusterGroup({
+    maxClusterRadius: 50,
+    showCoverageOnHover: false,
+    zoomToBoundsOnClick: true,
+    animate: true,
+    iconCreateFunction(c){
+      const n  = c.getChildCount();
+      const sz = n > 20 ? 46 : n > 10 ? 38 : 32;
+      return L.divIcon({
+        html: `<div class="cluster-bubble" style="width:${sz}px;height:${sz}px;font-size:${n>20?12:11}px">${n}</div>`,
+        className: '',
+        iconSize: [sz, sz],
+        iconAnchor: [sz / 2, sz / 2],
+      });
+    },
+  });
 
-    computeClusters(transform).forEach((cl, ci) => {
-      if (cl.group.length === 1){
-        const pt    = cl.group[0];
-        const color = CAT[pt.org.cat]?.hex || '#fff';
+  // Add all org markers
+  ORGS.forEach(org => {
+    const m = L.marker([org.lat, org.lng], { icon: makeIcon(org) });
+    m.on('mouseover', e => showMapTip(org, e.containerPoint.x, e.containerPoint.y));
+    m.on('mouseout',  () => hideMapTip());
+    m.on('click',     e => { L.DomEvent.stopPropagation(e); hideMapTip(); openModal(org.name, org.type, org.desc, org.cat); });
+    clusterGroup.addLayer(m);
+  });
+  map.addLayer(clusterGroup);
 
-        if (showLogos && LOGO_URLS[pt.org.name]){
-          const r      = LOGO_R / k;
-          const clipId = `lc${ci}`;
-          mapDefs.append('clipPath').attr('id', clipId)
-            .append('circle').attr('cx', pt.mapX).attr('cy', pt.mapY).attr('r', r);
-          // Fallback color dot (visible if logo fails to load)
-          dotsLayer.append('circle')
-            .attr('cx', pt.mapX).attr('cy', pt.mapY).attr('r', r)
-            .attr('fill', color).attr('opacity', 0.35);
-          // White ring
-          dotsLayer.append('circle')
-            .attr('cx', pt.mapX).attr('cy', pt.mapY).attr('r', (LOGO_R + 2) / k)
-            .attr('fill', '#f8fafc').attr('stroke', color).attr('stroke-width', 2 / k);
-          // Logo
-          dotsLayer.append('image')
-            .attr('x', pt.mapX - r).attr('y', pt.mapY - r)
-            .attr('width', r*2).attr('height', r*2)
-            .attr('href', LOGO_URLS[pt.org.name]).attr('clip-path', `url(#${clipId})`)
-            .attr('preserveAspectRatio', 'xMidYMid slice').style('cursor', 'pointer')
-            .on('mouseover', function(event){ const [px,py]=d3.pointer(event,wrap); showTip(pt.org,px,py); })
-            .on('mousemove', function(event){ const [px,py]=d3.pointer(event,wrap); showTip(pt.org,px,py); })
-            .on('mouseout', () => hideTip())
-            .on('click', function(event){ event.stopPropagation(); hideTip(); openModal(pt.org.name, pt.org.type, pt.org.desc, pt.org.cat); });
-        } else {
-          dotsLayer.append('circle')
-            .attr('cx', pt.mapX).attr('cy', pt.mapY)
-            .attr('r', DOT_R / k).attr('fill', color)
-            .attr('stroke', '#060a10').attr('stroke-width', 1 / k)
-            .attr('opacity', 0.88).style('cursor', 'pointer')
-            .on('mouseover', function(event){ d3.select(this).attr('r', 8/k).attr('opacity',1); const [px,py]=d3.pointer(event,wrap); showTip(pt.org,px,py); })
-            .on('mousemove', function(event){ const [px,py]=d3.pointer(event,wrap); showTip(pt.org,px,py); })
-            .on('mouseout',  function(){ d3.select(this).attr('r',DOT_R/k).attr('opacity',0.88); hideTip(); })
-            .on('click',     function(event){ event.stopPropagation(); hideTip(); openModal(pt.org.name, pt.org.type, pt.org.desc, pt.org.cat); });
-        }
-        // Amber review ring if flagged
-        if(reviewData[pt.org.name]){
-          dotsLayer.append('circle')
-            .attr('cx', pt.mapX).attr('cy', pt.mapY)
-            .attr('r', (DOT_R + 6) / k)
-            .attr('fill', 'none').attr('stroke', '#fbbf24')
-            .attr('stroke-width', 1.5 / k).attr('stroke-dasharray', `${3/k},${2/k}`)
-            .attr('opacity', 0.85).attr('pointer-events', 'none');
-        }
-      } else {
-        const bubbleR = (10 + Math.min(cl.group.length, 20)) / k;
-        dotsLayer.append('circle')
-          .attr('cx', cl.mx).attr('cy', cl.my).attr('r', bubbleR)
-          .attr('fill', '#0d1e30').attr('stroke', '#00d4aa').attr('stroke-width', 2/k).attr('opacity', 0.95).style('cursor','pointer')
-          .on('mouseover', function(){ d3.select(this).attr('stroke','#7de8d6').attr('stroke-width', 3/k); })
-          .on('mouseout',  function(){ d3.select(this).attr('stroke','#00d4aa').attr('stroke-width', 2/k); })
-          .on('click', function(event){ event.stopPropagation(); hideTip(); showSpider(cl, transform); });
-        dotsLayer.append('text')
-          .attr('x', cl.mx).attr('y', cl.my).attr('text-anchor','middle').attr('dominant-baseline','central')
-          .attr('fill','#e2e8f0').attr('font-size', 10/k)
-          .attr('font-family',"'IBM Plex Mono', monospace").attr('font-weight',600)
-          .attr('pointer-events','none').text(cl.group.length);
-      }
+  // Legend category filter
+  let activeMapCat = null;
+  function rebuildMarkers(){
+    clusterGroup.clearLayers();
+    ORGS.forEach(org => {
+      if(activeMapCat && org.cat !== activeMapCat) return;
+      const m = L.marker([org.lat, org.lng], { icon: makeIcon(org) });
+      m.on('mouseover', e => showMapTip(org, e.containerPoint.x, e.containerPoint.y));
+      m.on('mouseout',  () => hideMapTip());
+      m.on('click',     e => { L.DomEvent.stopPropagation(e); hideMapTip(); openModal(org.name, org.type, org.desc, org.cat); });
+      clusterGroup.addLayer(m);
     });
   }
-
-  // ── Load world topology ──
-  fetch('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json')
-    .then(r => r.json())
-    .then(world => {
-      document.getElementById('mapLoading').style.display = 'none';
-      const countries = topojson.feature(world, world.objects.countries);
-      const borders   = topojson.mesh(world, world.objects.countries, (a,b) => a !== b);
-
-      baseGroup.append('rect')
-        .attr('x',-W*2).attr('y',-H*2).attr('width',W*5).attr('height',H*5).attr('fill','#08111e');
-      const graticule = d3.geoGraticule()();
-      baseGroup.append('path').datum(graticule).attr('d',path).attr('fill','none').attr('stroke','#0d1a28').attr('stroke-width',0.4);
-      baseGroup.append('g').selectAll('path').data(countries.features).join('path')
-        .attr('d',path).attr('fill','#0e1e30').attr('stroke','#162336').attr('stroke-width',0.5);
-      baseGroup.append('path').datum(borders).attr('d',path).attr('fill','none').attr('stroke','#1a2d42').attr('stroke-width',0.6);
-
-      renderDots(d3.zoomIdentity);
-    })
-    .catch(() => {
-      document.getElementById('mapLoading').textContent = 'Map data failed to load — check your internet connection.';
+  document.querySelectorAll('.map-legend-item[data-cat]').forEach(item => {
+    item.addEventListener('click', () => {
+      const cat = item.dataset.cat;
+      activeMapCat = activeMapCat === cat ? null : cat;
+      document.querySelectorAll('.map-legend-item[data-cat]').forEach(i =>
+        i.classList.toggle('active-filter', i.dataset.cat === activeMapCat));
+      rebuildMarkers();
     });
+  });
 }
 
 // ── NEWS ──

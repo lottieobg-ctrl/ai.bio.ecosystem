@@ -22,7 +22,7 @@ COMPANIES = [
     "Syncona",
 ]
 
-DATA_PATH = Path(__file__).parent.parent / "data" / "updates.json"
+DATA_PATH = Path(__file__).parent.parent / "data" / "companies.json"
 
 FUNDING_KEYWORDS = re.compile(r'\braises?\b|\braised\b|\bfunding\b|\bseries [a-e]\b|\bseed\b|\bipo\b|\bacquir', re.IGNORECASE)
 AMOUNT_PATTERN = re.compile(r'[\$£€](\d+(?:\.\d+)?)\s*(m|million|b|billion)\b', re.IGNORECASE)
@@ -40,7 +40,7 @@ def load_data():
     if DATA_PATH.exists():
         with open(DATA_PATH) as f:
             return json.load(f)
-    return {"last_checked": None, "companies": {}}
+    return {"last_updated": None, "companies": []}
 
 
 def save_data(data):
@@ -147,17 +147,38 @@ def check_company(company, existing_entry):
 
 def main():
     data = load_data()
-    companies_data = data.get("companies", {})
+    companies_list = data.get("companies", [])
+
+    # Build a dict keyed by name for easy lookup (preserves reference to list objects)
+    company_map = {c['name']: c for c in companies_list}
 
     print(f"Checking {len(COMPANIES)} companies...")
 
     for company in COMPANIES:
         print(f"  Checking: {company}", end=" ", flush=True)
-        existing = companies_data.get(company)
+
+        # Skip companies not pre-populated in companies.json
+        if company not in company_map:
+            print("-> not in companies.json, skipping")
+            continue
+
+        existing = company_map[company]
         try:
             result = check_company(company, existing)
             if result:
-                companies_data[company] = result
+                # Update the entry in-place (mutates the object in companies_list)
+                existing["needs_review"] = True
+                existing["review_headline"] = result["review_headline"]
+                existing["review_url"] = result["review_url"]
+                existing["found_at"] = result["found_at"]
+                existing["proposed_funding"] = result["proposed_funding"] or ""
+                existing["proposed_stage"] = result["proposed_stage"] or ""
+
+                # Directly update funding and stage if both were parsed with high confidence
+                if result["proposed_funding"] and result["proposed_stage"]:
+                    existing["funding"] = result["proposed_funding"]
+                    existing["stage"] = result["proposed_stage"]
+
                 print(f"-> FLAGGED: {result['review_headline'][:60]}...")
             else:
                 print("-> no new funding news")
@@ -165,8 +186,8 @@ def main():
             print(f"-> ERROR: {e}")
         time.sleep(0.5)
 
-    data["last_checked"] = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
-    data["companies"] = companies_data
+    data["last_updated"] = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    data["companies"] = companies_list
     save_data(data)
     print(f"\nDone. Data written to {DATA_PATH}")
 
