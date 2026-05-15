@@ -520,6 +520,9 @@ footer { padding: 24px 48px; border-top: 1px solid var(--border); display: flex;
       <div class="cat-divider"></div>
       <div class="chips">
         <span class="chip" data-type="Media" data-desc="Video content platform covering biotech and life sciences news — company profiles, conference coverage and founder interviews for the biotech and AI bio community.">Biotech TV</span>
+        <span class="chip" data-type="Community Hub" data-desc="Physical community hubs opening in San Francisco and Berlin in 2026, run by the Foresight Institute. Offer project grants up to $3M, office space and compute for AI-for-science researchers.">Foresight AI Nodes</span>
+        <span class="chip" data-type="Non-profit / Community" data-desc="Non-profit community hub and funder for climate biotech. Publishes research roadmaps and directly funds early-stage climate biotech research; funded 16 protein engineering teams in 2024.">Homeworld Collective</span>
+        <span class="chip" data-type="Community / Conference" data-desc="Premier synthetic biology innovation network and annual conference connecting researchers, founders and investors at the AI × biology frontier. 180+ sessions across 18 tracks.">SynBioBeta</span>
         <span class="chip" data-type="Media" data-desc="European tech startup news publication backed by the Financial Times. Covers the European deep tech, AI and life sciences startup ecosystem.">Sifted</span>
         <span class="chip" data-type="Community / Media" data-desc="Community and content platform covering AI research and state-of-the-art developments. Tracks frontier AI model releases and breakthroughs across industries including biology.">SOTA</span>
         <span class="chip" data-type="Organisation" data-desc="Organisation at the intersection of AI and life sciences, building connections and supporting development within the AI bio ecosystem.">Wilbe</span>
@@ -532,8 +535,21 @@ footer { padding: 24px 48px; border-top: 1px solid var(--border); display: flex;
       <div class="cat-label"><div class="cat-tag">Ecosystem</div><div class="cat-name">Accelerators<br>&amp; Fellowships</div><div class="cat-count" id="count-accel"></div></div>
       <div class="cat-divider"></div>
       <div class="chips">
+        <span class="chip" data-type="Fellowship Programme" data-desc="Two-year fellowship for scientists launching deep-tech startups in biotech, energy, climate and materials. DOE-funded; 62 fellows in 2024 cohort; alumni have raised $3.5B collectively.">Activate</span>
+        <span class="chip" data-type="Accelerator" data-desc="University-anchored objectives-based accelerator with dedicated BioTech and AI streams. No equity, no fees. $51B+ in portfolio company value created globally.">Creative Destruction Lab</span>
+        <span class="chip" data-type="Venture Builder" data-desc="UK venture creator that builds biotech, pharma and climate companies from scratch. Scientists join as co-founders at the idea stage; 50+ companies launched.">Deep Science Ventures</span>
+        <span class="chip" data-type="Fellowship Programme" data-desc="Paid year-long fellowship placing AI/ML researchers inside UK university labs to accelerate science breakthroughs. Backed by ARIA and DSIT.">Encode</span>
+        <span class="chip" data-type="Fellowship Programme" data-desc="One-year fellowship supporting early-career scientists working on frontier technologies including AI for biology. ~9% acceptance rate; access to workshops and Foresight AI Nodes.">Foresight Fellowship</span>
+        <span class="chip" data-type="Fellowship Programme" data-desc="$125K postdoctoral fellowship for recent PhDs to build and deploy AI agents that solve major problems in biology. Based in San Francisco.">FutureHouse</span>
+        <span class="chip" data-type="Accelerator" data-desc="Genomics-focused startup accelerator providing capital, sequencing access, reagents and wet lab space. Run by Illumina with sites in San Francisco Bay Area and Cambridge, UK.">Illumina Ventures Labs</span>
+        <span class="chip" data-type="Accelerator" data-desc="World's highest-volume early-stage life science accelerator. 310+ graduates since 2015 who collectively raised $3.6B. Provides ~$525K investment plus wet lab access.">IndieBio</span>
+        <span class="chip" data-type="Incubator" data-desc="World's largest no-equity life sciences incubator run by Johnson &amp; Johnson Innovation. 826+ companies incubated globally across Boston, San Francisco, London and more.">JLABS</span>
+        <span class="chip" data-type="Accelerator" data-desc="Accelerator specifically for startups combining AI with wet lab biology. Launched March 2025; first cohort of 15 companies raised $8M+. Based in Kendall Square, Cambridge MA.">LabCentral AI BioHub</span>
         <span class="chip" data-type="Non-profit / Accelerator" data-desc="Student-run non-profit building the next generation of biotech founders and scientists. Runs the Activate accelerator and fellowship programmes at universities globally. A key pipeline for AI bio talent.">Nucleate</span>
-        <span class="chip" data-type="Accelerator Programme" data-desc="Accelerator programme supporting founders and builders in the tech and biotech ecosystem. Community-led with events, mentorship and network access.">TechBros</span>
+        <span class="chip" data-type="Fellowship Programme" data-desc="Two-year postdoctoral fellowship funded by Eric &amp; Wendy Schmidt to apply AI methods to natural and engineering sciences. Active at Chicago, Cornell, UCSD and multiple other universities.">Schmidt AI in Science</span>
+        <span class="chip" data-type="Fellowship Programme" data-desc="Elite postdoctoral programme funding early-career scientists to conduct research across disciplines, pushing AI-biology interdisciplinary work. One of the most prestigious science fellowships globally.">Schmidt Science Fellows</span>
+        <span class="chip" data-type="Accelerator Programme" data-desc="World's first all-female tech accelerator. Supports women founders across tech and biotech with funding, mentorship and community. Based in the UK.">TechBros</span>
+        <span class="chip" data-type="Accelerator" data-desc="World's most prominent startup accelerator. Consistently funds AI × bio companies at pre-seed; provides $500K for ~7% equity. Graduates include many leading AI bio companies.">Y Combinator</span>
       </div>
     </div>
 
@@ -750,7 +766,7 @@ const ORGS = [
   {name:'Nucleate',cat:'accel',type:'Non-profit / Accelerator',lat:42.36,lng:-71.08,desc:'Student-run non-profit building the next generation of biotech founders. Runs the Activate accelerator and fellowship programmes at universities globally.'},
   {name:'Sifted',cat:'other',type:'Media',lat:51.51,lng:-0.10,desc:'European tech startup news publication backed by the Financial Times. Covers deep tech, AI and life sciences.'},
   {name:'SOTA',cat:'other',type:'Community / Media',lat:37.76,lng:-122.44,desc:'Community and content platform covering AI research and state-of-the-art developments across industries including biology.'},
-  {name:'TechBros',cat:'accel',type:'Accelerator Programme',lat:37.75,lng:-122.44,desc:'Accelerator programme supporting founders and builders in the tech and biotech ecosystem. Community-led with events, mentorship and network access.'},
+  {name:'TechBros',cat:'accel',type:'Accelerator Programme',lat:51.50,lng:-0.12,desc:"World's first all-female tech accelerator. Supports women founders across tech and biotech with funding, mentorship and community. Based in the UK."},
   {name:'Wilbe',cat:'other',type:'Organisation',lat:51.51,lng:-0.22,desc:'Organisation at the intersection of AI and life sciences, building connections within the AI bio ecosystem. Based in White City, London.'},
   {name:'Wired',cat:'other',type:'Media',lat:37.77,lng:-122.44,desc:'Iconic technology, science and culture magazine. Deep coverage of AI bio breakthroughs and the cultural implications of the AI revolution.'},
 
@@ -777,6 +793,26 @@ const ORGS = [
 
   // ── Synthetic biology / foundation model additions ──
   {name:'ASIMOV',cat:'foundation',type:'Company',lat:42.37,lng:-71.08,desc:'Synthetic biology design platform combining genetic engineering with machine learning. Builds AI tools to design, predict and optimise genetic circuits for biomanufacturing and cell engineering applications.'},
+
+  // ── Accelerators & Fellowships ──
+  {name:'Activate',cat:'accel',type:'Fellowship Programme',lat:37.87,lng:-122.26,desc:'Two-year fellowship for scientists launching deep-tech startups in biotech, energy, climate and materials. DOE-funded; 62 fellows in 2024 cohort; alumni have raised $3.5B collectively.'},
+  {name:'Creative Destruction Lab',cat:'accel',type:'Accelerator',lat:43.65,lng:-79.39,desc:'University-anchored objectives-based accelerator with dedicated BioTech and AI streams. No equity, no fees. Over $51B in portfolio company value created globally.'},
+  {name:'Deep Science Ventures',cat:'accel',type:'Venture Builder',lat:51.51,lng:-0.10,desc:'UK venture creator that builds biotech, pharma and climate companies from scratch. Scientists join as co-founders at the idea stage; 50+ companies launched.'},
+  {name:'Encode',cat:'accel',type:'Fellowship Programme',lat:51.50,lng:-0.12,desc:'Paid year-long fellowship placing AI/ML researchers inside UK university labs to accelerate science breakthroughs. Backed by ARIA and DSIT.'},
+  {name:'Foresight Fellowship',cat:'accel',type:'Fellowship Programme',lat:37.77,lng:-122.41,desc:'One-year fellowship supporting early-career scientists working on frontier technologies including AI for biology. ~9% acceptance rate; access to workshops and Foresight AI Nodes.'},
+  {name:'FutureHouse',cat:'accel',type:'Fellowship Programme',lat:37.77,lng:-122.42,desc:'$125K postdoctoral fellowship for recent PhDs to build and deploy AI agents that solve major problems in biology. Based in San Francisco.'},
+  {name:'Illumina Ventures Labs',cat:'accel',type:'Accelerator',lat:32.91,lng:-117.10,desc:'Genomics-focused startup accelerator providing capital, sequencing access, reagents and wet lab space. Sites in San Francisco Bay Area and Cambridge, UK.'},
+  {name:'IndieBio',cat:'accel',type:'Accelerator',lat:37.78,lng:-122.39,desc:"World's highest-volume early-stage life science accelerator. 310+ graduates since 2015 who collectively raised $3.6B. Provides ~$525K investment plus wet lab access."},
+  {name:'JLABS',cat:'accel',type:'Incubator',lat:37.77,lng:-122.39,desc:"World's largest no-equity life sciences incubator run by J&J Innovation. 826+ companies incubated globally across Boston, San Francisco, London and more."},
+  {name:'LabCentral AI BioHub',cat:'accel',type:'Accelerator',lat:42.36,lng:-71.10,desc:'Accelerator for startups combining AI with wet lab biology. Launched March 2025; first cohort of 15 companies raised $8M+. Based in Kendall Square, Cambridge MA.'},
+  {name:'Schmidt AI in Science',cat:'accel',type:'Fellowship Programme',lat:41.79,lng:-87.60,desc:'Two-year postdoctoral fellowship funded by Eric & Wendy Schmidt to apply AI methods to natural and engineering sciences. Active at Chicago, Cornell, UCSD and others.'},
+  {name:'Schmidt Science Fellows',cat:'accel',type:'Fellowship Programme',lat:40.72,lng:-74.01,desc:'Elite postdoctoral programme funding early-career scientists to conduct research across disciplines, pushing AI-biology interdisciplinary work. One of the most prestigious science fellowships globally.'},
+  {name:'Y Combinator',cat:'accel',type:'Accelerator',lat:37.78,lng:-122.40,desc:"World's most prominent startup accelerator. Consistently funds AI × bio companies at pre-seed; provides $500K for ~7% equity. Graduates include many leading AI bio companies."},
+
+  // ── Community hubs ──
+  {name:'Foresight AI Nodes',cat:'other',type:'Community Hub',lat:37.76,lng:-122.43,desc:'Physical community hubs opening in San Francisco and Berlin in 2026, run by the Foresight Institute. Offer project grants up to $3M, office space and compute for AI-for-science researchers.'},
+  {name:'Homeworld Collective',cat:'other',type:'Non-profit / Community',lat:37.75,lng:-122.44,desc:'Non-profit community hub and funder for climate biotech. Directly funds early-stage climate biotech research; funded 16 protein engineering teams in 2024.'},
+  {name:'SynBioBeta',cat:'other',type:'Community / Conference',lat:37.34,lng:-121.89,desc:'Premier synthetic biology innovation network and annual conference connecting researchers, founders and investors at the AI × biology frontier.'},
 ];
 
 // ── FUNDING DATA ──
@@ -873,7 +909,23 @@ const FUNDING = {
   'Nucleate':                        'Non-profit / accelerator — grant and donation funded.',
   'Sifted':                          'Media organisation — backed by FT Group.',
   'SOTA':                            'Community / media — not applicable.',
-  'TechBros':                        'Accelerator programme — not applicable.',
+  'TechBros':                        "World's first all-female tech accelerator — funding details not publicly disclosed.",
+  'Activate':                        'Non-profit fellowship — DOE-funded; fellows receive a stipend and operational support for two years.',
+  'Creative Destruction Lab':        'No-equity, no-fee accelerator — university-anchored; revenue from alumni success and corporate partnerships.',
+  'Deep Science Ventures':           'Venture-backed venture builder — co-founds companies and takes equity; portfolio valuation ~$500M.',
+  'Encode':                          'Fellowship programme — funded by ARIA and DSIT (UK government). Paid year-long placement.',
+  'Foresight Fellowship':            'Non-profit — philanthropy and grant funded. Part of the Foresight Institute.',
+  'FutureHouse':                     'Non-profit — philanthropy funded. $125K stipend per fellow.',
+  'Illumina Ventures Labs':          'Corporate accelerator — Illumina funded. Provides capital, sequencing access and lab space.',
+  'IndieBio':                        'Accelerator — SOSV provides ~$525K per company for ~6–8% equity.',
+  'JLABS':                           'No-equity incubator — J&J Innovation funded. Provides space and resources, not capital investment.',
+  'LabCentral AI BioHub':            'Non-profit / grant-funded accelerator — backed by $1.9M MassTech grant and C10 Labs.',
+  'Schmidt AI in Science':           'Philanthropy-funded — Eric & Wendy Schmidt via Schmidt Sciences. ~$120K p.a. per fellow.',
+  'Schmidt Science Fellows':         'Philanthropy-funded — Schmidt Futures. One of the most competitive science fellowships globally.',
+  'Y Combinator':                    'Accelerator — $500K for ~7% equity (standard YC terms as of 2024).',
+  'Foresight AI Nodes':              'Non-profit — Foresight Institute funded. Up to $3M in project grants per project.',
+  'Homeworld Collective':            'Non-profit — philanthropy and grant funded. Provides direct research funding.',
+  'SynBioBeta':                      'Community / events — ticket sales, sponsorship and membership revenue.',
   'Wilbe':                           'Organisation — undisclosed.',
   'Wired':                           'Media — owned by Condé Nast.',
   'Iambic':                          '$132M total — Series B (2023). Backed by Andreessen Horowitz, F-Prime Capital.',
@@ -1005,6 +1057,23 @@ const WEBSITES = {
   'Volta Labs':                     'https://voltalaboratories.com',
   'Phenomic AI':                    'https://www.phenomicai.com',
   'ASIMOV':                         'https://www.asimov.com',
+  'TechBros':                       'https://thetechbros.io',
+  'Activate':                       'https://activate.org',
+  'Creative Destruction Lab':       'https://creativedestructionlab.com',
+  'Deep Science Ventures':          'https://www.deepscienceventures.com',
+  'Encode':                         'https://encode.pillar.vc',
+  'Foresight Fellowship':           'https://foresight.org/fellowship',
+  'FutureHouse':                    'https://www.futurehouse.org/fellowship',
+  'Illumina Ventures Labs':         'https://www.illumina.com/science/accelerator.html',
+  'IndieBio':                       'https://indiebio.co',
+  'JLABS':                          'https://jnjinnovation.com/locations/jlabs',
+  'LabCentral AI BioHub':           'https://www.labcentral.org/startup-support/ai-biohub',
+  'Schmidt AI in Science':          'https://schmidtsciences.org/ai-in-science',
+  'Schmidt Science Fellows':        'https://schmidtsciencefellows.org',
+  'Y Combinator':                   'https://www.ycombinator.com',
+  'Foresight AI Nodes':             'https://foresight.org/ai-nodes',
+  'Homeworld Collective':           'https://www.homeworld.bio',
+  'SynBioBeta':                     'https://www.synbiobeta.com',
 };
 
 function openModal(name, type, desc, cat) {
@@ -1047,6 +1116,12 @@ const STAGES = {
   "David Baker's Lab / HHMI":'nonprofit',
   'OpenBind':'nonprofit', 'Convergent Research':'nonprofit',
   'Foresight Institute':'nonprofit', 'Renaissance Philanthropy':'nonprofit', 'Nucleate':'nonprofit',
+  'TechBros':'nonprofit', 'Activate':'nonprofit', 'Creative Destruction Lab':'nonprofit',
+  'Deep Science Ventures':'nonprofit', 'Encode':'nonprofit', 'Foresight Fellowship':'nonprofit',
+  'FutureHouse':'nonprofit', 'Illumina Ventures Labs':'nonprofit', 'IndieBio':'nonprofit',
+  'JLABS':'nonprofit', 'LabCentral AI BioHub':'nonprofit', 'Schmidt AI in Science':'nonprofit',
+  'Schmidt Science Fellows':'nonprofit', 'Y Combinator':'nonprofit',
+  'Foresight AI Nodes':'nonprofit', 'Homeworld Collective':'nonprofit', 'SynBioBeta':'nonprofit',
   'EvolutionaryScale':'acquired',
   'Google DeepMind':'subsidiary', 'Verily':'subsidiary',
   'Absci':'public', 'BenevolentAI':'public', 'Eikon Therapeutics':'public',
