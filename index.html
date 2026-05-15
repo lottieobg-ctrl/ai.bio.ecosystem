@@ -695,11 +695,11 @@ footer { padding: 24px 48px; border-top: 1px solid var(--border); display: flex;
 
 <div class="panel" id="panel-events">
   <div class="events-toolbar">
-    <button class="events-filter-btn active" onclick="eventsFilter('all',this)">All upcoming</button>
+    <button class="events-filter-btn active" onclick="eventsFilter('location',this)">By location</button>
+    <button class="events-filter-btn" onclick="eventsFilter('all',this)">All upcoming</button>
     <button class="events-filter-btn" onclick="eventsFilter('month',this)">This month</button>
     <button class="events-filter-btn" onclick="eventsFilter('quarter',this)">Next 3 months</button>
     <button class="events-filter-btn" onclick="eventsFilter('virtual',this)">Virtual</button>
-    <button class="events-filter-btn" onclick="eventsFilter('location',this)">By location</button>
     <span class="events-count" id="eventsCount"></span>
   </div>
   <div class="events-scroll">
@@ -2021,7 +2021,7 @@ function newsFilter(cat, btn){
 // ── EVENTS ──
 let _eventsData = null;
 let _eventsLoaded = false;
-let _eventsActiveFilter = 'all';
+let _eventsActiveFilter = 'location';
 
 const MONTH_NAMES_SHORT = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
 const EVENT_TYPE_LABELS = {conference:'Conference',workshop:'Workshop',webinar:'Webinar',hackathon:'Hackathon',summit:'Summit',seminar:'Seminar',meetup:'Meetup'};
