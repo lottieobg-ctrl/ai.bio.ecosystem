@@ -19,6 +19,7 @@
   --slate: #94a3b8; --slate-dim: #94a3b810; --slate-border: #94a3b840; --slate-text: #cbd5e1;
   --amber: #fbbf24; --amber-dim: #fbbf2410; --amber-border: #fbbf2440; --amber-text: #fcd34d;
   --gray: #9ca3af; --gray-dim: #9ca3af12; --gray-border: #9ca3af40; --gray-text: #d1d5db;
+  --lime: #84cc16; --lime-dim: #84cc1612; --lime-border: #84cc1640; --lime-text: #bef264;
 }
 html, body { height: 100%; }
 body { background: var(--bg); color: var(--text); font-family: 'IBM Plex Mono', monospace; min-height: 100vh; display: flex; flex-direction: column; max-width: 1280px; margin: 0 auto; }
@@ -121,6 +122,11 @@ input[type="text"]::placeholder { color: #8fa0b8; }
 .cat-other .cat-divider { background: var(--gray-border); }
 .cat-other .chip { background: var(--gray-dim); border-color: var(--gray-border); color: var(--gray-text); }
 .cat-other .chip:hover { background: #9ca3af22; border-color: var(--gray); color: var(--gray); transform: translateY(-1px); }
+.cat-accel .cat-tag { background: var(--lime-dim); color: var(--lime); border: 1px solid var(--lime-border); }
+.cat-accel .cat-name { color: var(--lime); }
+.cat-accel .cat-divider { background: var(--lime-border); }
+.cat-accel .chip { background: var(--lime-dim); border-color: var(--lime-border); color: var(--lime-text); }
+.cat-accel .chip:hover { background: #84cc1622; border-color: var(--lime); color: var(--lime); transform: translateY(-1px); }
 
 /* MAP */
 #panel-map.active { display: flex; flex-direction: column; }
@@ -324,6 +330,7 @@ footer { padding: 24px 48px; border-top: 1px solid var(--border); display: flex;
     <div class="leg" onclick="filterCat('ai')" data-filter="ai"><div class="leg-dot" style="background:var(--slate)"></div>Pure AI / tech</div>
     <div class="leg" onclick="filterCat('investor')" data-filter="investor"><div class="leg-dot" style="background:var(--amber)"></div>Investors &amp; funds</div>
     <div class="leg" onclick="filterCat('other')" data-filter="other"><div class="leg-dot" style="background:var(--gray)"></div>Community &amp; media</div>
+    <div class="leg" onclick="filterCat('accel')" data-filter="accel"><div class="leg-dot" style="background:var(--lime)"></div>Accelerators</div>
   </div>
   <div class="stage-row" id="stageRow">
     <span class="stage-label">Stage</span>
@@ -488,6 +495,7 @@ footer { padding: 24px 48px; border-top: 1px solid var(--border); display: flex;
         <span class="chip" data-type="Non-profit / Philanthropy" data-desc="Philanthropy organisation funding breakthrough research in science and technology. Supports high-impact scientific projects with interest in longevity, AI safety and transformative biology.">Renaissance Philanthropy <span class="badge">NP</span></span>
         <span class="chip" data-type="Sovereign Fund" data-desc="Sovereign AI investment fund backing AI infrastructure, foundation models and AI applications at scale with strategic national and economic focus.">SovAI fund</span>
         <span class="chip" data-type="Investment Company (public, LSE)" data-desc="FTSE-listed life science investment company building and funding cell and gene therapy companies from inception to clinical proof of concept. Long-term patient capital model.">Syncona</span>
+        <span class="chip" data-type="Venture Capital" data-desc="Life sciences-focused VC firm investing in lab-centric companies building tools, platforms and instruments for biological research and drug discovery. Based in San Francisco.">Monograph</span>
       </div>
     </div>
     <div class="cat-separator"></div>
@@ -497,13 +505,20 @@ footer { padding: 24px 48px; border-top: 1px solid var(--border); display: flex;
       <div class="cat-divider"></div>
       <div class="chips">
         <span class="chip" data-type="Media" data-desc="Video content platform covering biotech and life sciences news — company profiles, conference coverage and founder interviews for the biotech and AI bio community.">Biotech TV</span>
-        <span class="chip" data-type="Software Company" data-desc="Project management and practice management software, primarily used by architecture and design firms.">Monograph</span>
-        <span class="chip" data-type="Non-profit / Community" data-desc="Student-run non-profit building the next generation of biotech founders and scientists. Runs programmes and events at universities globally. A key pipeline for AI bio talent.">Nucleate</span>
         <span class="chip" data-type="Media" data-desc="European tech startup news publication backed by the Financial Times. Covers the European deep tech, AI and life sciences startup ecosystem.">Sifted</span>
         <span class="chip" data-type="Community / Media" data-desc="Community and content platform covering AI research and state-of-the-art developments. Tracks frontier AI model releases and breakthroughs across industries including biology.">SOTA</span>
-        <span class="chip" data-type="Community / Media" data-desc="Tech community and content platform covering technology culture, startups and the broader tech ecosystem.">TechBros</span>
         <span class="chip" data-type="Organisation" data-desc="Organisation at the intersection of AI and life sciences, building connections and supporting development within the AI bio ecosystem.">Wilbe</span>
         <span class="chip" data-type="Media" data-desc="Iconic technology, science and culture magazine. Deep coverage of AI bio breakthroughs and the cultural implications of the AI revolution.">Wired</span>
+      </div>
+    </div>
+    <div class="cat-separator"></div>
+
+    <div class="cat-section cat-accel" data-cat="accel">
+      <div class="cat-label"><div class="cat-tag">Ecosystem</div><div class="cat-name">Accelerators<br>&amp; Fellowships</div><div class="cat-count" id="count-accel"></div></div>
+      <div class="cat-divider"></div>
+      <div class="chips">
+        <span class="chip" data-type="Non-profit / Accelerator" data-desc="Student-run non-profit building the next generation of biotech founders and scientists. Runs the Activate accelerator and fellowship programmes at universities globally. A key pipeline for AI bio talent.">Nucleate</span>
+        <span class="chip" data-type="Accelerator Programme" data-desc="Accelerator programme supporting founders and builders in the tech and biotech ecosystem. Community-led with events, mentorship and network access.">TechBros</span>
       </div>
     </div>
 
@@ -536,6 +551,7 @@ footer { padding: 24px 48px; border-top: 1px solid var(--border); display: flex;
       <div class="map-legend-item" data-cat="ai"><div class="map-legend-dot" style="background:#94a3b8"></div>Pure AI / tech</div>
       <div class="map-legend-item" data-cat="investor"><div class="map-legend-dot" style="background:#fbbf24"></div>Investors &amp; funds</div>
       <div class="map-legend-item" data-cat="other"><div class="map-legend-dot" style="background:#9ca3af"></div>Community &amp; media</div>
+      <div class="map-legend-item" data-cat="accel"><div class="map-legend-dot" style="background:#84cc16"></div>Accelerators</div>
     </div>
     <div class="map-hint">Scroll to zoom · click cluster to drill in · click dot for info</div>
     <div class="map-tooltip" id="mapTooltip">
@@ -621,6 +637,7 @@ const CAT = {
   ai:        {hex:'#94a3b8',bg:'rgba(148,163,184,0.12)',border:'rgba(148,163,184,0.5)',label:'Pure AI / Tech'},
   investor:  {hex:'#fbbf24',bg:'rgba(251,191,36,0.12)',border:'rgba(251,191,36,0.5)',label:'Investors & Funds'},
   other:     {hex:'#9ca3af',bg:'rgba(156,163,175,0.12)',border:'rgba(156,163,175,0.5)',label:'Community & Media'},
+  accel:     {hex:'#84cc16',bg:'rgba(132,204,22,0.12)',border:'rgba(132,204,22,0.5)',label:'Accelerators & Fellowships'},
 };
 
 // ── ORG DATA ──
@@ -712,11 +729,11 @@ const ORGS = [
   {name:'SovAI fund',cat:'investor',type:'Government Programme (UK)',lat:51.51,lng:-0.13,desc:'UK Government Sovereign AI Unit supporting AI infrastructure, foundation models and applications at scale. Administered by DSIT.'},
   {name:'Syncona',cat:'investor',type:'Investment Company (public, LSE)',lat:51.51,lng:-0.12,desc:'FTSE-listed life science investment company building and funding cell and gene therapy companies. Long-term patient capital model.'},
   {name:'Biotech TV',cat:'other',type:'Media',lat:37.79,lng:-122.44,desc:'Video content platform covering biotech and life sciences news — profiles, conference coverage and founder interviews.'},
-  {name:'Monograph',cat:'other',type:'Software Company',lat:37.78,lng:-122.44,desc:'Project management and practice management software, primarily used by architecture and design firms.'},
-  {name:'Nucleate',cat:'other',type:'Non-profit / Community',lat:42.36,lng:-71.08,desc:'Student-run non-profit building the next generation of biotech founders. Runs programmes and events at universities globally.'},
+  {name:'Monograph',cat:'investor',type:'Venture Capital',lat:37.78,lng:-122.44,desc:'Life sciences-focused VC firm investing in lab-centric companies building tools, platforms and instruments for biological research and drug discovery. Based in San Francisco.'},
+  {name:'Nucleate',cat:'accel',type:'Non-profit / Accelerator',lat:42.36,lng:-71.08,desc:'Student-run non-profit building the next generation of biotech founders. Runs the Activate accelerator and fellowship programmes at universities globally.'},
   {name:'Sifted',cat:'other',type:'Media',lat:51.51,lng:-0.10,desc:'European tech startup news publication backed by the Financial Times. Covers deep tech, AI and life sciences.'},
   {name:'SOTA',cat:'other',type:'Community / Media',lat:37.76,lng:-122.44,desc:'Community and content platform covering AI research and state-of-the-art developments across industries including biology.'},
-  {name:'TechBros',cat:'other',type:'Community / Media',lat:37.75,lng:-122.44,desc:'Tech community and content platform covering technology culture, startups and the broader tech ecosystem.'},
+  {name:'TechBros',cat:'accel',type:'Accelerator Programme',lat:37.75,lng:-122.44,desc:'Accelerator programme supporting founders and builders in the tech and biotech ecosystem. Community-led with events, mentorship and network access.'},
   {name:'Wilbe',cat:'other',type:'Organisation',lat:51.51,lng:-0.22,desc:'Organisation at the intersection of AI and life sciences, building connections within the AI bio ecosystem. Based in White City, London.'},
   {name:'Wired',cat:'other',type:'Media',lat:37.77,lng:-122.44,desc:'Iconic technology, science and culture magazine. Deep coverage of AI bio breakthroughs and the cultural implications of the AI revolution.'},
 
@@ -835,11 +852,11 @@ const FUNDING = {
   'SovAI fund':                      'Sovereign fund — size undisclosed.',
   'Syncona':                         'Public (LSE: SYNC). NAV ~£1B+.',
   'Biotech TV':                      'Media organisation — not applicable.',
-  'Monograph':                       'Software company — undisclosed.',
-  'Nucleate':                        'Non-profit / community — grant and donation funded.',
+  'Monograph':                       'Venture capital firm — fund size undisclosed.',
+  'Nucleate':                        'Non-profit / accelerator — grant and donation funded.',
   'Sifted':                          'Media organisation — backed by FT Group.',
   'SOTA':                            'Community / media — not applicable.',
-  'TechBros':                        'Community / media — not applicable.',
+  'TechBros':                        'Accelerator programme — not applicable.',
   'Wilbe':                           'Organisation — undisclosed.',
   'Wired':                           'Media — owned by Condé Nast.',
   'Iambic':                          '$132M total — Series B (2023). Backed by Andreessen Horowitz, F-Prime Capital.',
