@@ -397,14 +397,12 @@ footer { padding: 24px 48px; border-top: 1px solid var(--border); display: flex;
         <span class="chip" data-type="Company (public, IPO Feb 2026)" data-desc="Live-cell super-resolution imaging combined with AI for observing protein behaviour in living cells. Enables target discovery by watching proteins interact in real time. Raised $381M in its February 2026 IPO.">Eikon Therapeutics</span>
         <span class="chip" data-type="Company" data-desc="AI-powered drug discovery platform using multimodal biological data and ML to identify and validate novel therapeutic targets. Active in oncology and rare disease.">Enveda</span>
         <span class="chip" data-type="Company" data-desc="AI-guided gene expression editing optimising gene and cell therapy vectors by predicting how regulatory sequence changes affect gene expression levels.">Expression Edits</span>
-        <span class="chip" data-type="Company (public, NYSE)" data-desc="Synthetic biology platform combining AI, automation and fermentation for drug discovery and organism engineering. Ginkgo Datapoints builds virtual cell models and open pharmacology datasets.">Ginkgo Bioworks</span>
         <span class="chip" data-type="Company" data-desc="AI platform for rare disease drug repurposing. Uses ML to match existing drugs to rare conditions, dramatically reducing development timelines.">Healx</span>
         <span class="chip" data-type="Company" data-desc="Generative AI for de novo small molecule drug design. Makya designs novel molecules; Spaya handles AI-driven retrosynthesis. Partnerships with Janssen, Merck and Pfizer across 50+ projects.">Iktos</span>
         <span class="chip" data-type="Company" data-desc="End-to-end AI drug discovery. INS018_055, an AI-designed IPF drug candidate, is in Phase II trials — among the first AI-designed molecules to reach that stage. Founded 2014.">Insilico Medicine</span>
         <span class="chip" data-type="Company" data-desc="ML platform founded by Daphne Koller combining automated high-throughput biology with ML. Partnerships with Eli Lilly (metabolic diseases) and BMS (ALS).">insitro</span>
         <span class="chip" data-type="Company (Google DeepMind spinout)" data-desc="Applies AI structure prediction — building on AlphaFold — to drug design. IsoDDE model more than doubles AlphaFold 3's accuracy. Pursuing partnerships with Lilly, Novartis and J&amp;J worth a potential $3B+.">Isomorphic Labs</span>
         <span class="chip" data-type="Company" data-desc="AI-driven drug discovery targeting metabolic diseases including obesity and type 2 diabetes.">Kailera Therapeutics</span>
-        <span class="chip" data-type="Company" data-desc="AI platform for biologics design, applying generative models to engineer novel protein therapeutics. Flagship Pioneering company, Cambridge MA.">Lila Sciences</span>
         <span class="chip" data-type="Company" data-desc="AI-powered synthesis planning finding optimal synthetic routes for drug candidates using ML to navigate combinatorial chemistry complexity.">Molecule.one</span>
         <span class="chip" data-type="Company" data-desc="AI platform for RNA medicine design and optimisation. Applies ML to engineer mRNA, siRNA and other RNA therapeutics with improved stability, efficacy and delivery.">1910 Genetics</span>
         <span class="chip" data-type="Company" data-desc="RNAi therapeutics developing an AI-assisted AGO-siRNA platform to silence disease-causing genes. Listed on KOSDAQ. Based in Suwon, South Korea.">OliX Pharmaceuticals</span>
@@ -455,6 +453,8 @@ footer { padding: 24px 48px; border-top: 1px solid var(--border); display: flex;
       <div class="cat-divider"></div>
       <div class="chips">
         <span class="chip" data-type="Company" data-desc="Lab automation robotics and software for life science workflows. Builds modular robotic workcells automating repetitive lab tasks to free scientists for higher-value experimental work.">Automata</span>
+        <span class="chip" data-type="Company (public, NYSE)" data-desc="Synthetic biology platform combining AI, automation and fermentation for drug discovery and organism engineering. Ginkgo Datapoints builds virtual cell models and open pharmacology datasets.">Ginkgo Bioworks</span>
+        <span class="chip" data-type="Company" data-desc="AI platform for biologics design, applying generative models to engineer novel protein therapeutics. Flagship Pioneering company, Cambridge MA.">Lila Sciences</span>
         <span class="chip" data-type="Company" data-desc="Cloud software platform for designing and running complex biology experiments. Replaces manual lab protocols with structured digital workflows, enabling reproducible and scalable wet lab biology.">Synthace</span>
         <span class="chip" data-type="Company" data-desc="AI-guided liquid handling automation for genomics sample preparation. The Callisto instrument automates complex multi-step genomics library prep workflows with software-defined protocols.">Volta Labs</span>
       </div>
@@ -690,14 +690,14 @@ const ORGS = [
   {name:'Eikon Therapeutics',cat:'discovery',type:'Company (public)',lat:37.67,lng:-122.08,desc:'Live-cell super-resolution imaging combined with AI for observing protein behaviour in living cells. Raised $381M in its February 2026 IPO.'},
   {name:'Enveda',cat:'discovery',type:'Company',lat:40.01,lng:-105.27,desc:'AI-powered natural product drug discovery using mass spectrometry and ML to identify bioactive molecules from plant and microbial sources. Based in Boulder, CO.'},
   {name:'Expression Edits',cat:'discovery',type:'Company',lat:52.20,lng:0.12,desc:'AI-guided protein expression optimisation using intronization technology to engineer gene and cell therapy vectors for improved expression levels. Cambridge, UK spin-out.'},
-  {name:'Ginkgo Bioworks',cat:'discovery',type:'Company (public, NYSE)',lat:42.35,lng:-71.05,desc:'Synthetic biology platform combining AI, automation and fermentation for drug discovery. Ginkgo Datapoints builds virtual cell models and open pharmacology datasets.'},
+  {name:'Ginkgo Bioworks',cat:'automation',type:'Company (public, NYSE)',lat:42.35,lng:-71.05,desc:'Synthetic biology platform combining AI, automation and fermentation for drug discovery. Ginkgo Datapoints builds virtual cell models and open pharmacology datasets.'},
   {name:'Healx',cat:'discovery',type:'Company',lat:52.21,lng:0.12,desc:'AI platform for rare disease drug repurposing. Uses ML to match existing drugs to rare conditions with no treatments.'},
   {name:'Iktos',cat:'discovery',type:'Company',lat:48.87,lng:2.35,desc:'Generative AI for de novo small molecule design. Makya designs novel molecules; Spaya handles AI retrosynthesis. Partnerships with Janssen, Merck and Pfizer.'},
   {name:'Insilico Medicine',cat:'discovery',type:'Company',lat:22.32,lng:114.17,desc:'End-to-end AI drug discovery. INS018_055, an AI-designed IPF drug candidate, is in Phase II trials — among the first AI-designed molecules to reach that stage.'},
   {name:'insitro',cat:'discovery',type:'Company',lat:37.65,lng:-122.41,desc:'ML platform founded by Daphne Koller combining automated high-throughput biology with ML. Partnerships with Eli Lilly and BMS.'},
   {name:'Isomorphic Labs',cat:'discovery',type:'Company (Google spinout)',lat:51.50,lng:-0.13,desc:"Applies AI structure prediction building on AlphaFold to drug design. IsoDDE model more than doubles AlphaFold 3's accuracy. Pursuing partnerships worth a potential $3B+."},
   {name:'Kailera Therapeutics',cat:'discovery',type:'Company',lat:42.38,lng:-71.24,desc:'AI-driven drug discovery targeting metabolic diseases including obesity and type 2 diabetes. Based in Waltham, MA.'},
-  {name:'Lila Sciences',cat:'discovery',type:'Company',lat:42.36,lng:-71.10,desc:'AI platform for biologics design, applying generative models to engineer novel protein therapeutics. Flagship Pioneering company, Cambridge MA.'},
+  {name:'Lila Sciences',cat:'automation',type:'Company',lat:42.36,lng:-71.10,desc:'AI platform for biologics design, applying generative models to engineer novel protein therapeutics. Flagship Pioneering company, Cambridge MA.'},
   {name:'Molecule.one',cat:'discovery',type:'Company',lat:52.23,lng:21.01,desc:'AI-powered synthesis planning finding optimal synthetic routes for drug candidates using ML.'},
   {name:'1910 Genetics',cat:'discovery',type:'Company',lat:42.36,lng:-71.10,desc:'AI platform for RNA medicine design and optimisation. Applies ML to engineer mRNA, siRNA and other RNA therapeutics.'},
   {name:'OliX Pharmaceuticals',cat:'discovery',type:'Company',lat:37.26,lng:127.03,desc:'RNAi therapeutics developing an AI-assisted AGO-siRNA platform to silence disease-causing genes. Listed on KOSDAQ. Based in Suwon, South Korea.'},
@@ -1073,7 +1073,7 @@ const STAGES = {
   'AQEMIA':'series-a', 'Antiverse':'series-a', 'Phenomic AI':'series-a',
   'Sakana AI':'series-a', 'Superluminal Medicines':'series-a', 'WhiteLab Genomics':'series-a',
   'Xaira':'series-a', 'NOETIK':'series-a',
-  'Lila Biosciences':'seed', 'Medra':'seed', 'Boltz Bio':'seed',
+  'Lila Sciences':'seed', 'Medra':'seed', 'Boltz Bio':'seed',
   'Prima Mente':'seed', 'Edison Scientific':'seed', 'Phylo Bio':'seed',
   'Gandeeva Therapeutics':'seed', 'Alterome Therapeutics':'seed',
 };
