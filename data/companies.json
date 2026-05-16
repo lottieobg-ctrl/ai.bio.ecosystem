@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-05-15T15:40:52Z",
+  "last_updated": "2026-05-16T11:35:33Z",
   "companies": [
     {
       "name": "Arc Institute",
@@ -501,11 +501,11 @@
       "funding": "Public (Nasdaq: RXRX). Raised ~$800M+ pre-IPO.",
       "stage": "public",
       "needs_review": true,
-      "review_headline": "Recursion Pharmaceuticals - 2026 Funding Rounds & List of Investors - Tracxn",
-      "review_url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOVHN6YU5Qekp0QXByOHV1WHNkSWJEWTJjanN2eUl4a2loOGtXWF9Tek9EOGo3UUZ4dENISm83bC1TMzRiUmlZMGhxaTZDQVluZGVyVlo4eDdLVDRaY1pCdUgxUzFvd2FyX01WdWYyaFNIdXpKbndZSXdpR2dZbm9sNFhDYUQ5cVd1WThEQ3pZMUtYeEpLS1NBN0Q0eHlFU2M4TFo0a0JNd3FlYmpSanpMcUVOR09qVi1vc0tsSXRwZmw?oc=5",
+      "review_headline": "Morgan Stanley Maintains Recursion Pharmaceuticals(RXRX.US) With Hold Rating, Raises Target Price to $5.5 - Moomoo",
+      "review_url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOdjJxZ3hMZ0NhTDBPV29mSmZQeFhnajVVMGFVbnEwNHlKalRmYWtac204RkZkblNvVGNJM2dVcHJoRktmRzBiYlUwZnhpWFhXYWVVRUIwb3loaE5RTE41VnZqbS1tMHFvbVVVWF9SR3BuRWhVeGhBQ2xsOW5ldS0xaUlMQ2dSbVJIak9XRXBOeGRvNHRsbzRfY2ZLNWhsOXgwMVZVUk5tRjJybE13RV9HNUQtLXpHc1NZdWtWYU9fUWE?oc=5",
       "proposed_funding": "",
       "proposed_stage": "",
-      "found_at": "2026-05-15T15:40:13Z"
+      "found_at": "2026-05-16T11:34:59Z"
     },
     {
       "name": "Relay Therapeutics",
@@ -610,12 +610,12 @@
       "name": "Benchling",
       "funding": "$200M+ total \u2014 Series F. Valuation ~$4.5B. Backed by Benchmark, Sequoia, Thrive Capital.",
       "stage": "series-c",
-      "needs_review": false,
-      "review_headline": "",
-      "review_url": "",
+      "needs_review": true,
+      "review_headline": "Benchling - 2026 Funding Rounds & List of Investors - Tracxn",
+      "review_url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOUkN1ZldkNGFtcFIxSEdnSlRUWVdZS2dSRjAxTUF3ZXQ1RHY0dXEwaGFTUzBrLVAzQWk3NHRjX3NxZWx6M3VjbkFnQnFDUVAydHNhalRRMkZfUnVnZHVkVkZBY21nd1paTFR0Tkg0YnF3YUlNZS0wQlF1cENDRFhGVVdUZnV2RTlpZXNTWFlOc0FlV21QbU1ETjM3QWJUNTc0cVI5Ti1yXzZuWTFX?oc=5",
       "proposed_funding": "",
       "proposed_stage": "",
-      "found_at": ""
+      "found_at": "2026-05-16T11:35:13Z"
     },
     {
       "name": "Edison Scientific",
@@ -732,11 +732,11 @@
       "funding": "~$18B+ total raised \u2014 $13B Series F (Sep 2025) at $183B valuation. Backed by Amazon ($8B), Google, Iconiq, Spark Capital.",
       "stage": "series-c",
       "needs_review": true,
-      "review_headline": "Anthropic Picks Co-Leads for $900 Billion Valuation Funding Round - The Information",
-      "review_url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPX3BEd1hJcVowVnRIOE81QlBSTnVNMjlESEE3Ym1ycFZXbkRiek01SUQwV0t4VXlLYkxzd3g0eF8wWEUza0tCZFgtZUFzRWkyQVVzQm9GbzVIWnZFcjYwLWpKQmNVZm16RlVuSkVGaDlDTnZjWWE5VWhxVlJmTW16Q3V4NlYwTnd6QkRJOXlqN0x1Mm1adjM1Qnl3MHYxWjlHd0xR?oc=5",
-      "proposed_funding": "$900B",
+      "review_headline": "Anthropic Raising $30 Billion More as AI Labs Absorb Majority of VC Funding - WSJ",
+      "review_url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNVlNqSXdPREVBelBpb29OVjZyaE5UZWNrYURNRnY0b1ZjOWc5Uk11ZGxvUUZnMW1lbXBFUEVBRlRfa0NBVTBfcFFSY3o0X3JPV2tMdGw0VU9ZN0FOSERoLTFWZnh4cmtPMUNqdHRRem1sS25WZ09oWkpHekFJeDMyQWdYcUVRMEM1Y2JGbTVZR05SeGQ1SXF4THpZN3lWaE1jamVEc19jUkpuM3lCNHd6dg?oc=5",
+      "proposed_funding": "$30B",
       "proposed_stage": "",
-      "found_at": "2026-05-15T15:40:48Z"
+      "found_at": "2026-05-16T11:35:30Z"
     },
     {
       "name": "Google DeepMind",
@@ -776,11 +776,11 @@
       "funding": "$57B+ total \u2014 including $40B from SoftBank (Mar 2025), the largest single VC round in history.",
       "stage": "series-c",
       "needs_review": true,
-      "review_headline": "Microsoft targeted $92B return on early OpenAI investment: report - MSN",
-      "review_url": "https://news.google.com/rss/articles/CBMi-wJBVV95cUxPa3djNXkzbTNzR2xmTHpST3hRWENaX2J5RWtaUm9wdEdwQVg0cW5UZGp4am11amlCcW51NGFZNUZlUHRHNHNYMFdIUjVORlI2NFN3TURmTktlMlRkcWYzZGFKQXhpX0xoYm4yMlo2TTlFSFlRU2lMUjktYkh4OERINllOZHpsYVVMRk5WZzNNd3kzYnc5ZHB6SnpRckdLaVRqNGRDeG1ETkhLTEktRmhqQ2lEZmZrUnduTjZiaTRKX1FtcFRsdUJwVVQ3b1M3ZndNdWk5NThBZmY3OGNSSDFOU3dsdzZZRlhsVkNsMGRIUjdiX2FVWUg5YTdsU3FEVEJWZ3JDNDgtM3JqMGFva1VLWW1tRVNwOXNiSVF1UU1RZm9HMkd6TjU1WDg2bGxIeG95blhjbFk1MHhqUjJJR1hLVVZLR1lXbnBhNHVGZkNKeWE5QzVJbHJwTW1ldEdYa05oQ0hHeGFYSDluOFBISWowc3F3elpxdWVHT3ZN?oc=5",
+      "review_headline": "Microsoft Targeted $92 Billion Return on Early OpenAI Investment - Bloomberg.com",
+      "review_url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNWjhpQ2NwOTRFQkhBY0dPSTJ3MFVMd3hHRGx4ZkV4MkM1eVE3T0JzckhiTHNtQW9BdnpLZjNRazJDcFI1TTVtbThvNXJXMGxVd3g4b0VEOE9fcWk1WjNtVXpFcXNLU282bi1zYXJTOFNHWnhvMGxCRXpmMmJqbV9qMW85RGVRWlU4aVFrQUQtWHVTSVZFYlFkenB4QXNWTUM1RHdSSzItTXhPZjFEYmRwUlVGbEc?oc=5",
       "proposed_funding": "$92B",
       "proposed_stage": "",
-      "found_at": "2026-05-15T15:40:49Z"
+      "found_at": "2026-05-16T11:35:30Z"
     },
     {
       "name": "Sakana AI",
