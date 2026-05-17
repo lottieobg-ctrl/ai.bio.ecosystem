@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-05-16T11:35:33Z",
+  "last_updated": "2026-05-17T11:45:54Z",
   "companies": [
     {
       "name": "Arc Institute",
@@ -313,12 +313,12 @@
       "name": "Eikon Therapeutics",
       "funding": "~$850M total. $381M raised in Feb 2026 IPO.",
       "stage": "public",
-      "needs_review": false,
-      "review_headline": "",
-      "review_url": "",
+      "needs_review": true,
+      "review_headline": "EIKN Eikon Therapeutics CEO outlines strategic pipeline expansion priorities ahead of key clinical trial milestones. - Investment Community Signals - newser.com",
+      "review_url": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxNamlhWWVZaVp6WU4tZFZRN0xkVXprLUo4cFFHQ3FxOHNISUFWWk1vVzBmVTFlMDZQTF9HY3pDU3RDQUxMMldrYi1id0NLN2RqU3dLU1JldkJxWWEyZlkyOHo5c0xNSUprNWNnOVJjMDhZRHhRRjFETllSUEVJdFlQbUc3d19hVHg5NXVIWkNrYnFSb1FKSW51NmthMHlEUG9FbWg1d3ZleDJqYzczQUNiZGw2eVlKVWpjYUdXMjlMSEFXa2YtUmJEbVFIMzEwNlc5V1ZSNkV2NWliOGJ1UDE3SW1mWkdRZXU0emxpX2RKdw?oc=5",
       "proposed_funding": "",
       "proposed_stage": "",
-      "found_at": ""
+      "found_at": "2026-05-17T11:44:46Z"
     },
     {
       "name": "Enveda",
@@ -413,11 +413,11 @@
       "funding": "$719M",
       "stage": "public",
       "needs_review": true,
-      "review_headline": "Kailera Therapeutics raises $718.8M in Nasdaq IPO - Investing.com",
-      "review_url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPTmVJZ29UQnB0Y2tWY3pNSk00SkZxdU1zdTRLUktjanpmNkJ1RFI0bUFxejE2UXZaUDBqbnlmX3Y0WmgtV1cweFd2dHpBbFNGVWJjS1VhWFZ1WGgtN29iUVpQUjluS3d6WS1ucTF5NjluMFZXaWZjUjNRUHFKZDFsdXVhTXhQekNhRGRXR3RzaThrcGpveklrUGFLSWZuLXIwS3YtNnJhVQ?oc=5",
-      "proposed_funding": "$719M",
+      "review_headline": "Kailera Therapeutics IPO: Competing with Eli Lilly and Novo Nordisk in GLP-1 Weight Loss - News and Statistics - IndexBox",
+      "review_url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxONnRhRDVyOE9QZkR6Y3FaRS02VExZVjJFWjRUSUo5S3JhV2NTcUpDX2Y0YkxDT2xTZnJlOUkxM3BtWWdTNXJYSDNZbzRvekYxc19CSDRWMV96Z2M1Y19XTnZ1OUNydjZsSEVHNFMwNy0tel9saTdFV3VWVWs5T1ozRGp5NlBYNjJRa1EybWVUQmxteUw4Ym13bU9RU0ItNjg?oc=5",
+      "proposed_funding": "",
       "proposed_stage": "public",
-      "found_at": "2026-05-15T15:40:01Z"
+      "found_at": "2026-05-17T11:45:04Z"
     },
     {
       "name": "Lila Biosciences",
@@ -732,11 +732,11 @@
       "funding": "~$18B+ total raised \u2014 $13B Series F (Sep 2025) at $183B valuation. Backed by Amazon ($8B), Google, Iconiq, Spark Capital.",
       "stage": "series-c",
       "needs_review": true,
-      "review_headline": "Anthropic Raising $30 Billion More as AI Labs Absorb Majority of VC Funding - WSJ",
-      "review_url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNVlNqSXdPREVBelBpb29OVjZyaE5UZWNrYURNRnY0b1ZjOWc5Uk11ZGxvUUZnMW1lbXBFUEVBRlRfa0NBVTBfcFFSY3o0X3JPV2tMdGw0VU9ZN0FOSERoLTFWZnh4cmtPMUNqdHRRem1sS25WZ09oWkpHekFJeDMyQWdYcUVRMEM1Y2JGbTVZR05SeGQ1SXF4THpZN3lWaE1jamVEc19jUkpuM3lCNHd6dg?oc=5",
-      "proposed_funding": "$30B",
+      "review_headline": "Anthropic in Talks to Raise Funding at a $950 Billion Valuation - The New York Times",
+      "review_url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNVXlYUDFLdEJoaFFQTktLaFJiUkNtY3dLa3NMc2ktVmE5ODM4alJtd0lQd0VaSVM0UHBtNk03V3VobnBUM3lveV9oTnA5TXdBRTJTQ2M3cnplNlFaZEJtZ2tqa3pPWU1oenE5Q3E4LTEzUGRkVmd3ZTROVlFueC1RZ29qdGVSM1hGMDk2ZnJFWmNlQ3ZJ?oc=5",
+      "proposed_funding": "$950B",
       "proposed_stage": "",
-      "found_at": "2026-05-16T11:35:30Z"
+      "found_at": "2026-05-17T11:45:50Z"
     },
     {
       "name": "Google DeepMind",
