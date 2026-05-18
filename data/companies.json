@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-05-15",
+  "last_updated": "2026-05-18",
   "companies": [
     {"name":"Arc Institute","funding":"Non-profit, philanthropically funded. Co-founded by Patrick Collison & Patrick Hsu with a long-term research mandate.","stage":"nonprofit","needs_review":false,"review_headline":"","review_url":"","proposed_funding":"","proposed_stage":"","found_at":""},
     {"name":"Chan Zuckerberg Biohub / CZI","funding":"$3B+ committed by Priscilla Chan & Mark Zuckerberg to biomedical science. Non-profit.","stage":"nonprofit","needs_review":false,"review_headline":"","review_url":"","proposed_funding":"","proposed_stage":"","found_at":""},
@@ -37,7 +37,7 @@
     {"name":"Iktos","funding":"~€25M total — Series A/B. Backed by Omnes Capital.","stage":"series-b","needs_review":false,"review_headline":"","review_url":"","proposed_funding":"","proposed_stage":"","found_at":""},
     {"name":"Insilico Medicine","funding":"~$400M total — Series C. Backed by Warburg Pincus, B Capital.","stage":"series-c","needs_review":false,"review_headline":"","review_url":"","proposed_funding":"","proposed_stage":"","found_at":""},
     {"name":"insitro","funding":"$400M total — $400M Series C (2021). Backed by a16z, Third Rock Ventures.","stage":"series-c","needs_review":false,"review_headline":"","review_url":"","proposed_funding":"","proposed_stage":"","found_at":""},
-    {"name":"Isomorphic Labs","funding":"$600M Series A (Mar 2025) — first external funding round. Led by Pfizer and other pharma investors.","stage":"series-a","needs_review":false,"review_headline":"","review_url":"","proposed_funding":"","proposed_stage":"","found_at":""},
+    {"name":"Isomorphic Labs","funding":"~$2.6B total — $600M Series A (Mar 2025) + $2.1B Series B (May 2026). Led by Thrive Capital; backed by Alphabet, GV, MGX, Temasek, CapitalG and UK government AI fund.","stage":"series-b","needs_review":false,"review_headline":"","review_url":"","proposed_funding":"","proposed_stage":"","found_at":""},
     {"name":"Kailera Therapeutics","funding":"~$400M total — Series A/B. Backed by Atlas Venture, Foresite Capital.","stage":"series-a","needs_review":false,"review_headline":"","review_url":"","proposed_funding":"","proposed_stage":"","found_at":""},
     {"name":"Lila Biosciences","funding":"Seed / early stage. Undisclosed.","stage":"seed","needs_review":false,"review_headline":"","review_url":"","proposed_funding":"","proposed_stage":"","found_at":""},
     {"name":"Molecule.one","funding":"~$10M total — Series A. Backed by Acequia Capital, Calm Fund.","stage":"series-a","needs_review":false,"review_headline":"","review_url":"","proposed_funding":"","proposed_stage":"","found_at":""},
@@ -66,9 +66,9 @@
     {"name":"Optellum","funding":"~$18M total — Series B. Backed by Oxford Sciences Innovation.","stage":"series-b","needs_review":false,"review_headline":"","review_url":"","proposed_funding":"","proposed_stage":"","found_at":""},
     {"name":"Owkin","funding":"~$250M total — Series C. Backed by Fidelity, BPI France, NVIDIA.","stage":"series-c","needs_review":false,"review_headline":"","review_url":"","proposed_funding":"","proposed_stage":"","found_at":""},
     {"name":"Tempus AI","funding":"Public (Nasdaq: TEM). Raised ~$1.1B+ pre-IPO.","stage":"public","needs_review":false,"review_headline":"","review_url":"","proposed_funding":"","proposed_stage":"","found_at":""},
-    {"name":"Verily","funding":"Alphabet subsidiary. Has raised ~$1B+ from external investors incl. Silver Lake, Temasek.","stage":"subsidiary","needs_review":false,"review_headline":"","review_url":"","proposed_funding":"","proposed_stage":"","found_at":""},
+    {"name":"Verily Health","funding":"$300M (Mar 2026) — first independent round, led by Series X Capital. Reincorporated as Verily Health Inc.; Alphabet remains significant minority investor.","stage":"series-a","needs_review":false,"review_headline":"","review_url":"","proposed_funding":"","proposed_stage":"","found_at":""},
     {"name":"Anthropic","funding":"~$18B+ total raised — $13B Series F (Sep 2025) at $183B valuation. Backed by Amazon ($8B), Google, Iconiq, Spark Capital.","stage":"series-c","needs_review":false,"review_headline":"","review_url":"","proposed_funding":"","proposed_stage":"","found_at":""},
-    {"name":"Google DeepMind","funding":"Alphabet subsidiary — not independently funded. Alphabet market cap ~$2T+.","stage":"subsidiary","needs_review":false,"review_headline":"","review_url":"","proposed_funding":"","proposed_stage":"","found_at":""},
+    {"name":"Google DeepMind","funding":"Alphabet internal division — funded by Alphabet's balance sheet, no external rounds. Alphabet market cap ~$2T+.","stage":"subsidiary","needs_review":false,"review_headline":"","review_url":"","proposed_funding":"","proposed_stage":"","found_at":""},
     {"name":"Microsoft","funding":"Public (Nasdaq: MSFT). Market cap ~$3T.","stage":"public","needs_review":false,"review_headline":"","review_url":"","proposed_funding":"","proposed_stage":"","found_at":""},
     {"name":"Nvidia","funding":"Public (Nasdaq: NVDA). Market cap ~$3T+.","stage":"public","needs_review":false,"review_headline":"","review_url":"","proposed_funding":"","proposed_stage":"","found_at":""},
     {"name":"OpenAI","funding":"$57B+ total — including $40B from SoftBank (Mar 2025), the largest single VC round in history.","stage":"series-c","needs_review":false,"review_headline":"","review_url":"","proposed_funding":"","proposed_stage":"","found_at":""},
