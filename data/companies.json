@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-05-18",
+  "last_updated": "2026-05-18T17:37:37Z",
   "companies": [
     {
       "name": "Arc Institute",
@@ -292,11 +292,11 @@
       "funding": "$100M+ total \u2014 $73M Series B (Nov 2024), led by IVP. Previous investors: Index Ventures, Kindred Capital.",
       "stage": "series-b",
       "needs_review": true,
-      "review_headline": "Dying river in Biblical \u2018cradle of civilization\u2019 raises scary spectre of end times - New York Post",
-      "review_url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPcjlabFpGVmk1MGxZamZ4LUtyTDJuMndjMHZfVnV0RTgxWVM1cWp5WF9LWHhPVWNmOXMzUDhPVWE5VzFxSDk1SUVrLVQwSWNNQU11TWxPT2pKN1dkTXpqdEJ0dlhDRWJKR0x6N1JWS2F6WnlxTnJoZnRIU0toV2dzOU1WMFJRRU1aY0dTd3dyaHdnNzc4MkdTMnNOMm5wMmktb3J5dVlsZ1d6R3RNcFdScWVNOEcxMUcyV2NV?oc=5",
+      "review_headline": "NSU\u2019s Cradle to College Project grows with new donations and funding - MSN",
+      "review_url": "https://news.google.com/rss/articles/CBMiywJBVV95cUxPeklJOTdFbldBMEdKbllqcHF3SzBXZS1UQW8xU2hvdUxXWnFJWUU0RVlLbjg1ZXdwakRZRGRLdjNneHJIUlJtNmdMd0dUejRQTW1POTQzNEgzLV83bllRSEozTllVQXJnVXlKX2x0QURMdjY4bFBhLTY2eTdTeENpVTRlVjhpVVFiaVphaVhBQ3lvMi1ic2VxbWJ2S1JfQXpQTXdCbjZMeHRWMmEybG5Yd3o5cmFRYXBlVm5DbHEyc1BRdlFBdmVqeGhmSDhOYU1iencwcDhPTS1KYzFza013R1MzTGJMUHBmSUkzdFFIb1RJVUFYX3p3dm9OU0t5WVg2UDRlOHV0Tzd5dFEwWldXdU9YdFk3VzMxaDBtVWxycVJiRHhwOThkUDNvRjU2Q3lHVWdIV3lRSzQtQzY0M1hUU0x1NHJQTllLbDZv?oc=5",
       "proposed_funding": "",
       "proposed_stage": "",
-      "found_at": "2026-05-15T15:39:37Z"
+      "found_at": "2026-05-18T17:36:17Z"
     },
     {
       "name": "Deep Genomics",
@@ -379,12 +379,12 @@
       "name": "Insilico Medicine",
       "funding": "~$400M total \u2014 Series C. Backed by Warburg Pincus, B Capital.",
       "stage": "series-c",
-      "needs_review": false,
-      "review_headline": "",
-      "review_url": "",
+      "needs_review": true,
+      "review_headline": "A Look At InSilico Medicine (SEHK:3696) Valuation After Recent Share Price Pullback - simplywall.st",
+      "review_url": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxOTkRFbzZEdEhRSFlSZnV1bFpMdFZmeTF6a3Z2ZHJJMkw1TGZuVDJhRXo3empaRm5QTjkwUnBxLWZxX3FsQS1jRWlRemVrMVZONVJtcXRUNHY2T2tYVVI5R1BjNDRTYlB6a1RzQlNuQVRtc0RzaFpGc2pqR2h4azhPTS1mNVR5al9kcUdBdXVRR2RZb1I1Um9GQ0V1dEdhOS10Qk9VaWREVVZlY3FIRWpTOGxZOUt4eklGQVNKMFFxUU9nOHVWNHI1eHZIOURvVjJWODI5a3ZmVzU0R1pyZHFzTmY5SXlFYnVlaE9fekxBbWVIbnE4eGVDdXZsc9IBgAJBVV95cUxOS0d1QldWRncxY1lqTGlFUWFYTEE5bV9vRVM0SEF0RUZ6NXZNRDZjVHNqNERpMEpFS2lwRGRXLVFDdEEtSG1OREZtYktRRzN0bUt4ZVliZDJwbDBhZTI0NmFfRXFnMVdwcFc1OG5rZUREYnJRVy14cktGUXNqbGVKWnByY1BfR1daRnA1SFpiMGZDbjlmTUVkaW0taWhTV3VWaDJ0T29hVTc4UXRlRk1abXZ5NElaMDhndlpSUGtEaDRKX3hlMjJhekRYSFdVbllqd3hTbFN5MGE4N3F0NDdjcTd0M3JJRF9Nd1lsUVhqLTVMeFFNdUM1bkdWWXBDRlFV?oc=5",
       "proposed_funding": "",
       "proposed_stage": "",
-      "found_at": ""
+      "found_at": "2026-05-18T17:36:36Z"
     },
     {
       "name": "insitro",
@@ -399,14 +399,14 @@
     },
     {
       "name": "Isomorphic Labs",
-      "funding": "~$2.6B total — $600M Series A (Mar 2025) + $2.1B Series B (May 2026). Led by Thrive Capital; backed by Alphabet, GV, MGX, Temasek, CapitalG and UK government AI fund.",
+      "funding": "$2B",
       "stage": "series-b",
-      "needs_review": false,
-      "review_headline": "",
-      "review_url": "",
-      "proposed_funding": "",
-      "proposed_stage": "",
-      "found_at": ""
+      "needs_review": true,
+      "review_headline": "Alphabet's AI biotech Isomorphic Labs bags $2.1B series B to fuel next-gen drug design model - Fierce Biotech",
+      "review_url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQLU13bjg5dGRTSmN4VUtuUmpBMG55eWlXM2pfVUhoRVNmMFdNNnJ2cWZuS2wyTHNXMjNkdEhZQTRRcFZKTUl2eEtLNXJSR0YxcWl2UDVwZExjd0pwbXhreExwcEhWeWl5UVlqbzlEWUE1N1dKcE5FTWFiMEhWemhGMmducHptUTNIeGZudEhFaUs3SUh4d21WMmNYYURNMzA5TkJObXNmZ0tDMF8wS2JGMUZkZ0taVUFYcjhQTUJHb0ZiZw?oc=5",
+      "proposed_funding": "$2B",
+      "proposed_stage": "series-b",
+      "found_at": "2026-05-18T17:36:40Z"
     },
     {
       "name": "Kailera Therapeutics",
@@ -718,7 +718,7 @@
     },
     {
       "name": "Verily Health",
-      "funding": "$300M (Mar 2026) — first independent round, led by Series X Capital. Reincorporated as Verily Health Inc.; Alphabet remains significant minority investor.",
+      "funding": "$300M (Mar 2026) \u2014 first independent round, led by Series X Capital. Reincorporated as Verily Health Inc.; Alphabet remains significant minority investor.",
       "stage": "series-a",
       "needs_review": false,
       "review_headline": "",
