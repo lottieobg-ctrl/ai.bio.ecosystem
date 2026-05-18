@@ -740,8 +740,8 @@
     },
     {
       "name": "Google DeepMind",
-      "funding": "Alphabet internal division \u2014 funded by Alphabet's balance sheet, no external rounds. Alphabet market cap ~$2T+.",
-      "stage": "subsidiary",
+      "funding": "Subsidiary of public Alphabet (Nasdaq: GOOGL, market cap ~$2T+). Funded entirely by Alphabet's balance sheet \u2014 no independent funding rounds.",
+      "stage": "public",
       "needs_review": false,
       "review_headline": "",
       "review_url": "",

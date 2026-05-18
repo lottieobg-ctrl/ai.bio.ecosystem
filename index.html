@@ -36,7 +36,7 @@ h1 .x { color: var(--teal); }
 
 /* TABS */
 .tab-bar { display: flex; padding: 0 48px; border-bottom: 2px solid var(--border); flex-shrink: 0; background: #111820; }
-.tab-btn { padding: 24px 44px; font-family: 'IBM Plex Mono', monospace; font-size: 16px; font-weight: 700; color: #c8dcea; background: none; border: none; cursor: pointer; border-bottom: 4px solid transparent; margin-bottom: -2px; letter-spacing: 0.10em; text-transform: uppercase; transition: all 0.15s; }
+.tab-btn { padding: 14px 28px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; font-weight: 700; color: #c8dcea; background: none; border: none; cursor: pointer; border-bottom: 3px solid transparent; margin-bottom: -2px; letter-spacing: 0.10em; text-transform: uppercase; transition: all 0.15s; }
 .tab-btn:hover { color: #f0f6fa; background: rgba(255,255,255,0.04); }
 .tab-btn.active { color: var(--teal); border-bottom-color: var(--teal); background: rgba(0,212,170,0.06); }
 
@@ -403,7 +403,6 @@ footer { padding: 24px 48px; border-top: 1px solid var(--border); display: flex;
     <div class="sleg" onclick="filterStage('series-c')" data-stage="series-c"><div class="sdot" style="background:#ec4899"></div>Series C+</div>
     <div class="sleg" onclick="filterStage('public')" data-stage="public"><div class="sdot" style="background:#10b981"></div>Public</div>
     <div class="sleg" onclick="filterStage('acquired')" data-stage="acquired"><div class="sdot" style="background:#60a5fa"></div>Acquired</div>
-    <div class="sleg" onclick="filterStage('subsidiary')" data-stage="subsidiary"><div class="sdot" style="background:#94a3b8"></div>Subsidiary</div>
     <div class="sleg" onclick="filterStage('nonprofit')" data-stage="nonprofit"><div class="sdot" style="background:#00d4aa"></div>Non-profit / Grant</div>
   </div>
   <div id="noResults" class="no-results">No companies match your search.</div>
@@ -1016,7 +1015,7 @@ const FUNDING = {
   'Tempus AI':                       'Public (Nasdaq: TEM). Raised ~$1.1B+ pre-IPO.',
   'Verily Health':                   '$300M (Mar 2026) — first independent round, led by Series X Capital. Reincorporated as Verily Health Inc.; Alphabet remains significant minority investor.',
   'Anthropic':                       '~$18B+ total raised — $13B Series F (Sep 2025) at $183B valuation. Backed by Amazon ($8B), Google, Iconiq, Spark Capital.',
-  'Google DeepMind':                 'Alphabet subsidiary — not independently funded. Alphabet market cap ~$2T+.',
+  'Google DeepMind':                 'Subsidiary of public Alphabet (Nasdaq: GOOGL, market cap ~$2T+). Funded entirely by Alphabet\'s balance sheet — no independent funding rounds.',
   'Microsoft':                       'Public (Nasdaq: MSFT). Market cap ~$3T.',
   'Nvidia':                          'Public (Nasdaq: NVDA). Market cap ~$3T+.',
   'OpenAI':                          '$57B+ total — including $40B from SoftBank (Mar 2025), the largest single VC round in history.',
@@ -1319,7 +1318,7 @@ const STAGES = {
   'Schmidt Science Fellows':'nonprofit', 'Y Combinator':'nonprofit',
   'Foresight AI Nodes':'nonprofit', 'Homeworld Collective':'nonprofit', 'SynBioBeta':'nonprofit',
   'EvolutionaryScale':'acquired',
-  'Google DeepMind':'subsidiary',
+  'Google DeepMind':'public',
   'Absci':'public', 'BenevolentAI':'public', 'Eikon Therapeutics':'public',
   'Generate:Biomedicines':'public', 'Ginkgo Bioworks':'public', 'PacBio':'public',
   'Recursion Pharmaceuticals':'public', 'Relay Therapeutics':'public',
@@ -2019,6 +2018,20 @@ function newsFilter(cat, btn){
 }
 
 // ── EVENTS ──
+const EVENTS_INLINE = [
+  {"name":"Bio-IT World Conference & Expo 2026","date":"2026-05-19","end_date":"2026-05-21","location":"Boston, MA, USA","url":"https://www.bio-itworldexpo.com","type":"conference","virtual":false,"description":"Annual conference bringing together informatics, data science and technology leaders from biopharma, healthcare and life sciences.","auto":false},
+  {"name":"SynBioBeta 2026","date":"2026-05-19","end_date":"2026-05-21","location":"San Jose, CA, USA","url":"https://www.synbiobeta.com","type":"conference","virtual":false,"description":"Premier synthetic biology innovation conference connecting researchers, entrepreneurs and investors at the AI × biology frontier.","auto":false},
+  {"name":"BIO International Convention 2026","date":"2026-06-08","end_date":"2026-06-11","location":"Boston, MA, USA","url":"https://convention.bio.org","type":"conference","virtual":false,"description":"The world's largest biotech industry convention. Companies from 70+ countries gather for partnering, networking and scientific programming.","auto":false},
+  {"name":"SLAS Europe 2026","date":"2026-06-15","end_date":"2026-06-17","location":"TBC, Europe","url":"https://www.slas.org/education/slas-europe","type":"conference","virtual":false,"description":"European conference on laboratory automation, drug discovery and life sciences technology, organised by SLAS.","auto":false},
+  {"name":"ISMB/ECCB 2026","date":"2026-07-12","end_date":"2026-07-16","location":"TBC","url":"https://www.iscb.org/ismb2026","type":"conference","virtual":false,"description":"International Society for Computational Biology flagship conference — the premier meeting in bioinformatics and computational biology.","auto":false},
+  {"name":"Biotech Week Boston 2026","date":"2026-09-21","end_date":"2026-09-25","location":"Boston, MA, USA","url":"https://www.biotechweekboston.com","type":"conference","virtual":false,"description":"Annual celebration of the Boston biotech ecosystem with programming, tours and networking across the cluster.","auto":false},
+  {"name":"HLTH 2026","date":"2026-10-11","end_date":"2026-10-14","location":"Las Vegas, NV, USA","url":"https://www.hlth.com","type":"conference","virtual":false,"description":"Leading health innovation conference connecting companies, investors and payers transforming healthcare with AI and technology.","auto":false},
+  {"name":"Bio Europe 2026","date":"2026-11-02","end_date":"2026-11-04","location":"TBC, Europe","url":"https://informaconnect.com/bioeurope","type":"conference","virtual":false,"description":"Europe's leading biotech and pharma partnering conference. Key platform for deal-making and investment in the European life sciences ecosystem.","auto":false},
+  {"name":"ASHG Annual Meeting 2026","date":"2026-11-03","end_date":"2026-11-07","location":"TBC, USA","url":"https://www.ashg.org/meetings/2026-annual-meeting","type":"conference","virtual":false,"description":"American Society of Human Genetics annual meeting — a key forum for AI-driven genetics and genomics research.","auto":false},
+  {"name":"BioData World Congress 2026","date":"2026-11-18","end_date":"2026-11-19","location":"London, UK","url":"https://www.biodataworld.com","type":"conference","virtual":false,"description":"Annual congress focused on biodata, AI and precision medicine — bringing together data scientists, clinicians and industry leaders.","auto":false},
+  {"name":"NeurIPS 2026 — ML for Biology Workshop","date":"2026-12-05","end_date":"2026-12-06","location":"TBC","url":"https://neurips.cc","type":"workshop","virtual":false,"description":"Annual machine learning for biology workshop co-located with NeurIPS — a key venue for AI × biology research presentations.","auto":false}
+];
+
 let _eventsData = null;
 let _eventsLoaded = false;
 let _eventsActiveFilter = 'location';
@@ -2026,17 +2039,8 @@ let _eventsActiveFilter = 'location';
 const MONTH_NAMES_SHORT = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
 const EVENT_TYPE_LABELS = {conference:'Conference',workshop:'Workshop',webinar:'Webinar',hackathon:'Hackathon',summit:'Summit',seminar:'Seminar',meetup:'Meetup'};
 
-async function loadEvents(){
-  const loading = document.getElementById('eventsLoading');
-  const content = document.getElementById('eventsContent');
-  loading.style.display = 'flex';
-  content.innerHTML = '';
-  try {
-    const r = await fetch('data/events.json?t='+Date.now());
-    _eventsData = await r.json();
-    _eventsData.sort((a,b) => a.date.localeCompare(b.date));
-  } catch(e) { _eventsData = []; }
-  loading.style.display = 'none';
+function loadEvents(){
+  _eventsData = [...EVENTS_INLINE].sort((a,b) => a.date.localeCompare(b.date));
   renderEvents(_eventsActiveFilter);
 }
 
