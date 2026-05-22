@@ -1,6 +1,17 @@
 {
-  "last_updated": "2026-05-21T17:35:16Z",
+  "last_updated": "2026-05-22T00:00:00Z",
   "companies": [
+    {
+      "name": "Bioptimus",
+      "funding": "~$76M raised. $35M seed (Feb 2024) plus additional funding to $76M total (Jan 2025). Paris-based.",
+      "stage": "series-a",
+      "needs_review": false,
+      "review_headline": "",
+      "review_url": "",
+      "proposed_funding": "",
+      "proposed_stage": "",
+      "found_at": ""
+    },
     {
       "name": "Arc Institute",
       "funding": "Non-profit, philanthropically funded. Co-founded by Patrick Collison & Patrick Hsu with a long-term research mandate.",
