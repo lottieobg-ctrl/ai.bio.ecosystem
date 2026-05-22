@@ -2,6 +2,61 @@
   "last_updated": "2026-05-22T00:00:00Z",
   "companies": [
     {
+      "name": "Outpost Bio",
+      "funding": "Pre-seed / seed. Funding undisclosed. Founded 2025.",
+      "stage": "seed",
+      "needs_review": false,
+      "review_headline": "",
+      "review_url": "",
+      "proposed_funding": "",
+      "proposed_stage": "",
+      "found_at": ""
+    },
+    {
+      "name": "Zeon Systems",
+      "funding": "Seed round (July 2025). Amount undisclosed. YC X25.",
+      "stage": "seed",
+      "needs_review": false,
+      "review_headline": "",
+      "review_url": "",
+      "proposed_funding": "",
+      "proposed_stage": "",
+      "found_at": ""
+    },
+    {
+      "name": "Emerald Cloud Lab",
+      "funding": "Funding undisclosed.",
+      "stage": "",
+      "needs_review": false,
+      "review_headline": "",
+      "review_url": "",
+      "proposed_funding": "",
+      "proposed_stage": "",
+      "found_at": ""
+    },
+    {
+      "name": "Ineffable Intelligence",
+      "funding": "Funding undisclosed. Early stage.",
+      "stage": "seed",
+      "needs_review": false,
+      "review_headline": "",
+      "review_url": "",
+      "proposed_funding": "",
+      "proposed_stage": "",
+      "found_at": ""
+    },
+    {
+      "name": "Inherent Labs",
+      "funding": "Funding undisclosed.",
+      "stage": "",
+      "needs_review": false,
+      "review_headline": "",
+      "review_url": "",
+      "proposed_funding": "",
+      "proposed_stage": "",
+      "found_at": ""
+    },
+    {
       "name": "Bioptimus",
       "funding": "~$76M raised. $35M seed (Feb 2024) plus additional funding to $76M total (Jan 2025). Paris-based.",
       "stage": "series-a",

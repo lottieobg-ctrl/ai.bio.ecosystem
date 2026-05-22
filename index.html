@@ -402,7 +402,6 @@ footer { padding: 24px 48px; border-top: 1px solid var(--border); display: flex;
     <div class="leg" onclick="filterCat('health')" data-filter="health"><div class="leg-dot" style="background:var(--coral)"></div>Health / clinical</div>
     <div class="leg" onclick="filterCat('ai')" data-filter="ai"><div class="leg-dot" style="background:var(--slate)"></div>Pure AI / tech</div>
     <div class="leg" onclick="filterCat('investor')" data-filter="investor"><div class="leg-dot" style="background:var(--amber)"></div>Investors &amp; funds</div>
-    <div class="leg" onclick="filterCat('other')" data-filter="other"><div class="leg-dot" style="background:var(--gray)"></div>Media</div>
     <div class="leg" onclick="filterCat('accel')" data-filter="accel"><div class="leg-dot" style="background:var(--lime)"></div>Accelerators</div>
     <div class="leg" onclick="filterCat('automation')" data-filter="automation"><div class="leg-dot" style="background:var(--cyan)"></div>Lab automation</div>
   </div>
@@ -501,6 +500,7 @@ footer { padding: 24px 48px; border-top: 1px solid var(--border); display: flex;
         <span class="chip" data-type="Company" data-desc="AI platform for antibody design. Uses deep learning to engineer therapeutic antibodies with optimised binding affinity, developability and selectivity. Based in Cardiff, Wales.">Antiverse</span>
         <span class="chip" data-type="Company" data-desc="AI-powered drug discovery focused on targeted cancer therapies. Applies ML to identify and design small molecule inhibitors against hard-to-drug oncology targets.">Treeline Biosciences</span>
         <span class="chip" data-type="Company" data-desc="AI-driven drug discovery targeting specific RAS/MAPK oncogenic mutations. Uses machine learning to design selective small molecule inhibitors for individual RAS mutation variants.">Alterome Therapeutics</span>
+        <span class="chip" data-type="Company" data-desc="AI-driven microbiome research platform applying a 'Lab-in-the-Loop' approach — high-throughput anaerobic microbiome experiments paired with ML predictions. Builds biobanks linking microbiome interventions (drugs, diet) to biological outcomes to make human microbiology computable. Based at LabCentral, Cambridge MA. Founded 2025.">Outpost Bio</span>
       </div>
     </div>
     <div class="cat-separator"></div>
@@ -535,6 +535,8 @@ footer { padding: 24px 48px; border-top: 1px solid var(--border); display: flex;
         <span class="chip" data-type="Company" data-desc="AI platform for biologics design, applying generative models to engineer novel protein therapeutics. Flagship Pioneering company, Cambridge MA.">Lila Sciences</span>
         <span class="chip" data-type="Company" data-desc="Cloud software platform for designing and running complex biology experiments. Replaces manual lab protocols with structured digital workflows, enabling reproducible and scalable wet lab biology.">Synthace</span>
         <span class="chip" data-type="Company" data-desc="AI-guided liquid handling automation for genomics sample preparation. The Callisto instrument automates complex multi-step genomics library prep workflows with software-defined protocols.">Volta Labs</span>
+        <span class="chip" data-type="Company" data-desc="AI-powered robotics for scientific lab automation. Natural language protocol descriptions drive a perception, control and manipulation stack with sub-millimetre precision, automating the 'long tail' of science — messy protocols and fine manipulations that remain largely manual. YC X25. San Francisco.">Zeon Systems</span>
+        <span class="chip" data-type="Company" data-desc="Remote-controlled cloud laboratory providing access to 200+ instrument models — HPLC, mass spectrometers, flow cytometers and more — via software. Scientists worldwide design, execute and analyse experiments remotely without maintaining physical lab infrastructure. ALCOA+-compliant data management. Serves pharma, biotech, CROs and academic institutions. Based in Austin, TX.">Emerald Cloud Lab</span>
       </div>
     </div>
     <div class="cat-separator"></div>
@@ -569,6 +571,8 @@ footer { padding: 24px 48px; border-top: 1px solid var(--border); display: flex;
         <span class="chip" data-type="Company" data-desc="Computational and numerical AI company focused on high-performance scientific computing and AI-accelerated simulation for complex numerical problems in science and engineering.">Radical Numerics</span>
         <span class="chip" data-type="Company" data-desc="UK AI hardware startup building custom inference chips using in-memory compute to radically accelerate and reduce the cost of running large AI models. $220M Series B (Accel, Founders Fund). London/Bristol.">Fractile <span class="badge badge-chip">CHIP</span></span>
         <span class="chip" data-type="Company" data-desc="Batch inference platform for large-scale LLM workloads. Asynchronous and overnight inference at up to 75% lower cost than real-time providers, via an OpenAI-compatible API. Use cases include synthetic data generation and model evaluation.">Doubleword</span>
+        <span class="chip" data-type="Company" data-desc="Building infrastructure and systems for superintelligence. Develops large-scale reinforcement learning that learns from experience rather than human data. Collaborating with NVIDIA on specialised GPU infrastructure for RL at scale. Founded by David Silver, creator of AlphaGo. London-based.">Ineffable Intelligence</span>
+        <span class="chip" data-type="Company" data-desc="Details to be added.">Inherent Labs</span>
       </div>
     </div>
     <div class="cat-separator"></div>
@@ -677,7 +681,6 @@ footer { padding: 24px 48px; border-top: 1px solid var(--border); display: flex;
       <div class="map-legend-item" data-cat="health"><div class="map-legend-dot" style="background:#fb923c"></div>Health / clinical</div>
       <div class="map-legend-item" data-cat="ai"><div class="map-legend-dot" style="background:#94a3b8"></div>Pure AI / tech</div>
       <div class="map-legend-item" data-cat="investor"><div class="map-legend-dot" style="background:#fbbf24"></div>Investors &amp; funds</div>
-      <div class="map-legend-item" data-cat="other"><div class="map-legend-dot" style="background:#9ca3af"></div>Media</div>
       <div class="map-legend-item" data-cat="accel"><div class="map-legend-dot" style="background:#84cc16"></div>Accelerators</div>
       <div class="map-legend-item" data-cat="automation"><div class="map-legend-dot" style="background:#06b6d4"></div>Lab automation</div>
     </div>
@@ -808,6 +811,11 @@ const ORGS = [
   {name:'Basecamp Research',cat:'foundation',type:'Company',lat:51.52,lng:-0.11,desc:"Biodiscovery company building the world's largest genetic database from Earth's natural biodiversity. Trillion Gene Atlas initiative catalogues 1 trillion genes from rare organisms to power biological foundation models. $60M Series B."},
   {name:'Prima Mente',cat:'foundation',type:'Company',lat:51.50,lng:-0.15,desc:'AI and biology organisation focused on novel approaches to biological intelligence and AI-driven scientific discovery.'},
   {name:'Bioptimus',cat:'foundation',type:'Company',lat:48.86,lng:2.33,desc:'Builds foundation models for biology specialising in histopathology and multiomics. H-Optimus is the top-ranked pathology foundation model in independent benchmarks. M-Optimus integrates pathology, spatial transcriptomics and genomics. STELA data engine for cross-institutional patient profiling. Used by 16 of the top 20 pharma companies and 1,000+ research institutions. ~$76M raised. Paris-based.'},
+  {name:'Outpost Bio',cat:'discovery',type:'Company',lat:42.36,lng:-71.10,desc:"AI-driven microbiome research platform using a 'Lab-in-the-Loop' approach pairing high-throughput anaerobic microbiome experiments with ML. Builds biobanks linking microbiome interventions to biological outcomes. Based at LabCentral, Cambridge MA."},
+  {name:'Ineffable Intelligence',cat:'ai',type:'Company',lat:51.51,lng:-0.08,desc:'Building infrastructure and systems for superintelligence. Develops large-scale reinforcement learning that learns from experience rather than human data. Collaborating with NVIDIA on specialised GPU infrastructure for RL at scale. Founded by David Silver, creator of AlphaGo. London-based.'},
+  {name:'Inherent Labs',cat:'ai',type:'Company',lat:51.51,lng:-0.09,desc:'AI company. Details to be added.'},
+  {name:'Zeon Systems',cat:'automation',type:'Company',lat:37.77,lng:-122.43,desc:"AI-powered robotics for scientific lab automation. Natural language protocol descriptions drive a perception, control and manipulation stack with sub-millimetre precision. Automates the 'long tail' of science — fine manipulations and complex protocols that remain manual. YC X25. San Francisco."},
+  {name:'Emerald Cloud Lab',cat:'automation',type:'Company',lat:30.23,lng:-97.80,desc:'Remote-controlled cloud laboratory with 200+ instrument models accessible via software. Scientists worldwide design, execute and analyse experiments remotely without maintaining physical infrastructure. ALCOA+-compliant data management. Based in Austin, TX.'},
   {name:'Absci',cat:'discovery',type:'Company (public, Nasdaq)',lat:45.52,lng:-122.68,desc:'AI-drug design combining deep learning with wet lab for antibody and protein therapeutics. Runs a generative AI and cell biology feedback loop.'},
   {name:'Aignostics',cat:'discovery',type:'Company',lat:52.51,lng:13.42,desc:'AI pathology platform applying deep learning to histology images for biomarker discovery and patient stratification.'},
   {name:'Numerion Labs',cat:'discovery',type:'Company',lat:37.76,lng:-122.42,desc:'Structure-based AI drug discovery using deep learning to screen billions of compounds against protein targets. Rebranded from Atomwise in 2025. Founded 2012.'},
@@ -1365,6 +1373,7 @@ const STAGES = {
   'Sakana AI':'series-a', 'Superluminal Medicines':'series-a', 'WhiteLab Genomics':'series-a',
   'Xaira':'series-a', 'NOETIK':'series-a', 'Bioptimus':'series-a',
   'Lila Sciences':'seed', 'Medra':'seed', 'Boltz Bio':'seed',
+  'Outpost Bio':'seed', 'Zeon Systems':'seed', 'Ineffable Intelligence':'seed',
   'Prima Mente':'seed', 'Edison Scientific':'seed', 'Phylo Bio':'seed', 'Phylo':'seed', 'Drosera Bio':'seed',
   'Gandeeva Therapeutics':'seed', 'Alterome Therapeutics':'seed',
 };
