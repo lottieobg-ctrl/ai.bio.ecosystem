@@ -141,6 +141,17 @@ input[type="text"]::placeholder { color: #8fa0b8; }
 .cat-automation .chip { background: var(--cyan-dim); border-color: var(--cyan-border); color: var(--cyan-text); }
 .cat-automation .chip:hover { background: #06b6d422; border-color: var(--cyan); color: var(--cyan); transform: translateY(-1px); }
 
+/* Location search */
+.loc-search-wrap { position: relative; display: inline-flex; align-items: center; }
+.loc-input { background: var(--bg2); border: 1px solid var(--border); color: #e2e8f0; padding: 4px 24px 4px 10px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; border-radius: 4px; outline: none; width: 220px; transition: border-color 0.2s; }
+.loc-input:focus { border-color: var(--teal); box-shadow: 0 0 0 2px var(--teal-dim); }
+.loc-input::placeholder { color: #2a3a50; }
+.loc-clear { position: absolute; right: 6px; background: none; border: none; color: #4a5568; cursor: pointer; font-size: 16px; line-height: 1; padding: 0; display: none; }
+.loc-clear:hover { color: #94a3b8; }
+.loc-status { font-size: 10px; color: #4a5568; margin-left: 8px; letter-spacing: 0.04em; white-space: nowrap; }
+.loc-status.found { color: var(--teal); }
+.loc-status.error { color: #fb923c; }
+
 /* MAP */
 #panel-map.active { display: flex; flex-direction: column; }
 .map-wrap { flex: 1; position: relative; overflow: hidden; background: #08111e; min-height: 560px; }
@@ -407,10 +418,11 @@ footer { padding: 24px 48px; border-top: 1px solid var(--border); display: flex;
   </div>
   <div class="stage-row" id="locationRow">
     <span class="stage-label">Location</span>
-    <div class="sleg" onclick="filterLocation('us')" data-location="us"><div class="sdot" style="background:#60a5fa"></div>United States</div>
-    <div class="sleg" onclick="filterLocation('uk')" data-location="uk"><div class="sdot" style="background:#00d4aa"></div>United Kingdom</div>
-    <div class="sleg" onclick="filterLocation('europe')" data-location="europe"><div class="sdot" style="background:#a78bfa"></div>Europe</div>
-    <div class="sleg" onclick="filterLocation('asia')" data-location="asia"><div class="sdot" style="background:#fb923c"></div>Asia</div>
+    <div class="loc-search-wrap">
+      <input class="loc-input" id="locationSearch" type="text" placeholder="e.g. Boston, London, Paris…" autocomplete="off" oninput="onLocationInput()">
+      <button class="loc-clear" id="locationClear" onclick="clearLocation()" title="Clear">×</button>
+    </div>
+    <span id="locStatus" class="loc-status"></span>
   </div>
   <div id="noResults" class="no-results">No companies match your search.</div>
   <div class="categories" id="catContainer">
@@ -1371,24 +1383,14 @@ const STAGE_COLORS = {
   'nonprofit':  {bg:'rgba(0,212,170,0.15)',   text:'#00d4aa', border:'rgba(0,212,170,0.4)'},
 };
 
-const LOC_COLORS = {
-  'us':     {bg:'rgba(96,165,250,0.15)',  text:'#60a5fa', border:'rgba(96,165,250,0.4)'},
-  'uk':     {bg:'rgba(0,212,170,0.15)',   text:'#00d4aa', border:'rgba(0,212,170,0.4)'},
-  'europe': {bg:'rgba(167,139,250,0.15)', text:'#a78bfa', border:'rgba(167,139,250,0.4)'},
-  'asia':   {bg:'rgba(251,146,60,0.15)',  text:'#fb923c', border:'rgba(251,146,60,0.4)'},
-};
-const LOCATIONS = {};
-ORGS.forEach(o => {
-  if (o.lng < -50) LOCATIONS[o.name] = 'us';
-  else if (o.lat > 49 && o.lng > -8 && o.lng < 2.0) LOCATIONS[o.name] = 'uk';
-  else if (o.lat > 35 && o.lng >= 2.0 && o.lng <= 40) LOCATIONS[o.name] = 'europe';
-  else if (o.lng > 40) LOCATIONS[o.name] = 'asia';
-});
+const ORG_COORDS = {};
+ORGS.forEach(o => { ORG_COORDS[o.name] = {lat: o.lat, lng: o.lng}; });
 
 document.querySelectorAll('.chip').forEach(chip => {
   const name = chip.childNodes[0].textContent.trim();
   chip.dataset.name = name;
-  chip.dataset.location = LOCATIONS[name] || 'unknown';
+  const coords = ORG_COORDS[name];
+  if (coords) { chip.dataset.lat = coords.lat; chip.dataset.lng = coords.lng; }
   const stage = STAGES[name];
   chip.dataset.stage = stage || 'na';
   if (stage && STAGE_LABELS[stage]) {
@@ -1409,7 +1411,44 @@ document.querySelectorAll('.chip').forEach(chip=>{
   });
 });
 
-let activeCat=null, activeStage=null, activeLocation=null, searchQ='';
+let activeCat=null, activeStage=null, searchQ='';
+let activeLocCoords=null;
+const LOC_RADIUS_KM = 150;
+let _locDebounce=null;
+
+function haversine(lat1,lng1,lat2,lng2){
+  const R=6371, dL=(lat2-lat1)*Math.PI/180, dG=(lng2-lng1)*Math.PI/180;
+  const a=Math.sin(dL/2)**2+Math.cos(lat1*Math.PI/180)*Math.cos(lat2*Math.PI/180)*Math.sin(dG/2)**2;
+  return R*2*Math.atan2(Math.sqrt(a),Math.sqrt(1-a));
+}
+function onLocationInput(){
+  const val=document.getElementById('locationSearch').value.trim();
+  document.getElementById('locationClear').style.display=val?'inline':'none';
+  clearTimeout(_locDebounce);
+  if(!val){ activeLocCoords=null; setLocStatus('',''); applyFilters(); return; }
+  setLocStatus('searching…','');
+  _locDebounce=setTimeout(()=>geocodeLoc(val),500);
+}
+function geocodeLoc(q){
+  fetch('https://nominatim.openstreetmap.org/search?q='+encodeURIComponent(q)+'&format=json&limit=1')
+    .then(r=>r.json())
+    .then(data=>{
+      if(!data.length){ activeLocCoords=null; setLocStatus('no results','error'); applyFilters(); return; }
+      activeLocCoords={lat:parseFloat(data[0].lat),lng:parseFloat(data[0].lon)};
+      setLocStatus(data[0].display_name.split(',')[0],'found');
+      applyFilters();
+    })
+    .catch(()=>setLocStatus('error','error'));
+}
+function clearLocation(){
+  document.getElementById('locationSearch').value='';
+  document.getElementById('locationClear').style.display='none';
+  activeLocCoords=null; setLocStatus('',''); applyFilters();
+}
+function setLocStatus(txt,cls){
+  const el=document.getElementById('locStatus');
+  el.textContent=txt; el.className='loc-status'+(cls?' '+cls:'');
+}
 function doFilter(){ searchQ=document.getElementById('search').value.toLowerCase().trim(); applyFilters(); }
 function filterCat(cat){
   activeCat=activeCat===cat?null:cat;
@@ -1426,16 +1465,6 @@ function filterStage(stage){
   });
   applyFilters();
 }
-function filterLocation(loc){
-  activeLocation=activeLocation===loc?null:loc;
-  document.querySelectorAll('#locationRow .sleg').forEach(s=>{
-    const active = s.dataset.location===activeLocation;
-    s.classList.toggle('active-filter', active);
-    if(active){ const lc=LOC_COLORS[loc]; s.style.borderColor=lc.border; s.style.color=lc.text; s.style.background=lc.bg; }
-    else { s.style.borderColor=''; s.style.color=''; s.style.background=''; }
-  });
-  applyFilters();
-}
 function applyFilters(){
   let vis=0;
   document.querySelectorAll('.cat-section').forEach(sec=>{
@@ -1443,7 +1472,7 @@ function applyFilters(){
     let n=0;
     sec.querySelectorAll('.chip').forEach(ch=>{
       const stageMatch = !activeStage || ch.dataset.stage===activeStage;
-      const locMatch = !activeLocation || ch.dataset.location===activeLocation;
+      const locMatch = !activeLocCoords || (ch.dataset.lat && haversine(activeLocCoords.lat,activeLocCoords.lng,parseFloat(ch.dataset.lat),parseFloat(ch.dataset.lng))<=LOC_RADIUS_KM);
       const show=cm && stageMatch && locMatch && (!searchQ||ch.textContent.toLowerCase().includes(searchQ));
       ch.classList.toggle('hidden',!show);
       if(show)n++;
