@@ -405,6 +405,13 @@ footer { padding: 24px 48px; border-top: 1px solid var(--border); display: flex;
     <div class="sleg" onclick="filterStage('acquired')" data-stage="acquired"><div class="sdot" style="background:#60a5fa"></div>Acquired</div>
     <div class="sleg" onclick="filterStage('nonprofit')" data-stage="nonprofit"><div class="sdot" style="background:#00d4aa"></div>Non-profit / Grant</div>
   </div>
+  <div class="stage-row" id="locationRow">
+    <span class="stage-label">Location</span>
+    <div class="sleg" onclick="filterLocation('us')" data-location="us"><div class="sdot" style="background:#60a5fa"></div>United States</div>
+    <div class="sleg" onclick="filterLocation('uk')" data-location="uk"><div class="sdot" style="background:#00d4aa"></div>United Kingdom</div>
+    <div class="sleg" onclick="filterLocation('europe')" data-location="europe"><div class="sdot" style="background:#a78bfa"></div>Europe</div>
+    <div class="sleg" onclick="filterLocation('asia')" data-location="asia"><div class="sdot" style="background:#fb923c"></div>Asia</div>
+  </div>
   <div id="noResults" class="no-results">No companies match your search.</div>
   <div class="categories" id="catContainer">
 
@@ -1364,9 +1371,24 @@ const STAGE_COLORS = {
   'nonprofit':  {bg:'rgba(0,212,170,0.15)',   text:'#00d4aa', border:'rgba(0,212,170,0.4)'},
 };
 
+const LOC_COLORS = {
+  'us':     {bg:'rgba(96,165,250,0.15)',  text:'#60a5fa', border:'rgba(96,165,250,0.4)'},
+  'uk':     {bg:'rgba(0,212,170,0.15)',   text:'#00d4aa', border:'rgba(0,212,170,0.4)'},
+  'europe': {bg:'rgba(167,139,250,0.15)', text:'#a78bfa', border:'rgba(167,139,250,0.4)'},
+  'asia':   {bg:'rgba(251,146,60,0.15)',  text:'#fb923c', border:'rgba(251,146,60,0.4)'},
+};
+const LOCATIONS = {};
+ORGS.forEach(o => {
+  if (o.lng < -50) LOCATIONS[o.name] = 'us';
+  else if (o.lat > 49 && o.lng > -8 && o.lng < 2.0) LOCATIONS[o.name] = 'uk';
+  else if (o.lat > 35 && o.lng >= 2.0 && o.lng <= 40) LOCATIONS[o.name] = 'europe';
+  else if (o.lng > 40) LOCATIONS[o.name] = 'asia';
+});
+
 document.querySelectorAll('.chip').forEach(chip => {
   const name = chip.childNodes[0].textContent.trim();
   chip.dataset.name = name;
+  chip.dataset.location = LOCATIONS[name] || 'unknown';
   const stage = STAGES[name];
   chip.dataset.stage = stage || 'na';
   if (stage && STAGE_LABELS[stage]) {
@@ -1387,7 +1409,7 @@ document.querySelectorAll('.chip').forEach(chip=>{
   });
 });
 
-let activeCat=null, activeStage=null, searchQ='';
+let activeCat=null, activeStage=null, activeLocation=null, searchQ='';
 function doFilter(){ searchQ=document.getElementById('search').value.toLowerCase().trim(); applyFilters(); }
 function filterCat(cat){
   activeCat=activeCat===cat?null:cat;
@@ -1396,10 +1418,20 @@ function filterCat(cat){
 }
 function filterStage(stage){
   activeStage=activeStage===stage?null:stage;
-  document.querySelectorAll('.sleg').forEach(s=>{
+  document.querySelectorAll('#stageRow .sleg').forEach(s=>{
     const active = s.dataset.stage===activeStage;
     s.classList.toggle('active-filter', active);
     if(active){ const sc=STAGE_COLORS[stage]; s.style.borderColor=sc.border; s.style.color=sc.text; s.style.background=sc.bg; }
+    else { s.style.borderColor=''; s.style.color=''; s.style.background=''; }
+  });
+  applyFilters();
+}
+function filterLocation(loc){
+  activeLocation=activeLocation===loc?null:loc;
+  document.querySelectorAll('#locationRow .sleg').forEach(s=>{
+    const active = s.dataset.location===activeLocation;
+    s.classList.toggle('active-filter', active);
+    if(active){ const lc=LOC_COLORS[loc]; s.style.borderColor=lc.border; s.style.color=lc.text; s.style.background=lc.bg; }
     else { s.style.borderColor=''; s.style.color=''; s.style.background=''; }
   });
   applyFilters();
@@ -1411,7 +1443,8 @@ function applyFilters(){
     let n=0;
     sec.querySelectorAll('.chip').forEach(ch=>{
       const stageMatch = !activeStage || ch.dataset.stage===activeStage;
-      const show=cm && stageMatch && (!searchQ||ch.textContent.toLowerCase().includes(searchQ));
+      const locMatch = !activeLocation || ch.dataset.location===activeLocation;
+      const show=cm && stageMatch && locMatch && (!searchQ||ch.textContent.toLowerCase().includes(searchQ));
       ch.classList.toggle('hidden',!show);
       if(show)n++;
     });
