@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-05-22T16:41:54Z",
+  "last_updated": "2026-05-23T11:48:32Z",
   "companies": [
     {
       "name": "Outpost Bio",
@@ -721,11 +721,11 @@
       "funding": "~$30M total \u2014 Series B.",
       "stage": "series-b",
       "needs_review": true,
-      "review_headline": "Kaiko acquires European DeFi infrastructure firm Cometh, gains MiCA license - CryptoRank",
-      "review_url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPUm1GZm9qdEcyNmYtRFlaa0RVY0g1bFVtMFpIVlgwbUhsUFRJWUVQV0hpMkU3dGhaUVZFTUVKNE5raGlUbGp0YS1vZ3M4V25JSjhfWnk5TmhYWG9TbEc0eGg4eklzdXhtMThoTDZWUXJsZDFCZTFXZkItWEJZeTRpdmJPZnZSSjRsUVFsVw?oc=5",
+      "review_headline": "Kaiko acquires Cometh, expanding on-chain data infrastructure capabilities compliant with MiCA regulations - Bitget",
+      "review_url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5FNi1TWUpLRXUzNGxrVGFtR3AwZTJaZS0yY1Y2VmprV0tjZ3FGdV9OMkNIbEt5OXQxRExwVm1MbmZsamdHV3c4eWQ2Sk1yYkUxTTBqY2dCNGxheGZ1X2g3TTV0b3PSAWpBVV95cUxOa21md3MtWjlpZGhFQTAySU1jd0xhRTNuYXBwSDNQbHY5TFk5Z3J6b1FMbzhWNHVqVFN2NlVzRzhHNzFUcmQxRzRheXJGdW9wQldWcTNlSnVWaTZBdkRFU0hyemhUalc1QW1B?oc=5",
       "proposed_funding": "",
       "proposed_stage": "acquired",
-      "found_at": "2026-05-22T16:41:39Z"
+      "found_at": "2026-05-23T11:48:20Z"
     },
     {
       "name": "Medra",
@@ -798,11 +798,11 @@
       "funding": "~$18B+ total raised \u2014 $13B Series F (Sep 2025) at $183B valuation. Backed by Amazon ($8B), Google, Iconiq, Spark Capital.",
       "stage": "series-c",
       "needs_review": true,
-      "review_headline": "Anthropic, Microsoft in talks for AI chip deal after $5 billion investment - CNBC",
-      "review_url": "https://news.google.com/rss/articles/CBMifkFVX3lxTFBOZW94UC1ldWpHLTQ1UXFUQzdkbEVFRTk2cVNQV3RLNlplWHRRLTRRRllUZndWOE9kbXdHTWJacl9DSEJla2psZTBxNmFtMmFGeVhKcldYVDBJbzBaMUE2MWVpNlkyclRtSmozOGowOHhoMm0tblVtYkswSDJ4UdIBgwFBVV95cUxPUXpFQk9PWVBtWE8xeW9SZUNBS1JJc25GOG05RmEtUExRTjhWRS1XYXdYMDZHRDhZOERUREZHYXlLVVpNQXplTHRIcEVmX05IWTNlUGZRcThQYlc2bjhBSzlUNk1QdnV2V1dvdTZmdExoV1UwWFhxWjBUM3NadDA5YmQzMA?oc=5",
-      "proposed_funding": "$5B",
+      "review_headline": "Zoom secures $1B return on 2023 Anthropic investment ahead of new funding round By Investing.com - Investing.com",
+      "review_url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOVnl6WGFfdFBUNVdMYk5sTHg5XzU3Mnp4a1J5OTZhczBLYzZnVHNvXzV6anVFemVNMTNObjA2dHdjUkV0TG1kV1pZV1czSGdZV2xGVUZpRVlPZUE0TnhuZXBVMzdQemdkNUs4cl9kZnM2R2FCRWRrdWl5UGhYNUNONVlEQUZoOGJFVlRoNUw5bG1RQTNyamliVk9MWEx2d1lxYXZONm1udTNVUmRsS2dEVDJpc25tSGFjMXdQTDlsbmk4UER6Yk03VWtTcTVrVm1H?oc=5",
+      "proposed_funding": "$1B",
       "proposed_stage": "",
-      "found_at": "2026-05-22T16:41:48Z"
+      "found_at": "2026-05-23T11:48:29Z"
     },
     {
       "name": "Google DeepMind",
