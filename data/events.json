@@ -1,38 +1,5 @@
 [
   {
-    "name": "Bio-IT World Conference & Expo 2026",
-    "date": "2026-05-19",
-    "end_date": "2026-05-21",
-    "location": "Boston, MA, USA",
-    "url": "https://www.bio-itworldexpo.com",
-    "type": "conference",
-    "tags": [
-      "bioinformatics",
-      "AI",
-      "drug discovery",
-      "data science"
-    ],
-    "virtual": false,
-    "description": "Annual conference bringing together informatics, data science and technology leaders from biopharma, healthcare and life sciences.",
-    "auto": false
-  },
-  {
-    "name": "SynBioBeta 2026",
-    "date": "2026-05-19",
-    "end_date": "2026-05-21",
-    "location": "San Jose, CA, USA",
-    "url": "https://www.synbiobeta.com",
-    "type": "conference",
-    "tags": [
-      "synthetic biology",
-      "AI",
-      "biotech"
-    ],
-    "virtual": false,
-    "description": "Premier synthetic biology innovation conference connecting researchers, entrepreneurs and investors at the AI \u00d7 biology frontier.",
-    "auto": false
-  },
-  {
     "name": "BIO International Convention 2026",
     "date": "2026-06-08",
     "end_date": "2026-06-11",
