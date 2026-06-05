@@ -1,6 +1,17 @@
 {
-  "last_updated": "2026-06-04T17:59:59Z",
+  "last_updated": "2026-06-05T00:00:00Z",
   "companies": [
+    {
+      "name": "Variant Bio",
+      "funding": "Series B. Backed by SoftBank Vision Fund. Pharma partnerships with Boehringer Ingelheim and Novo Nordisk.",
+      "stage": "series-b",
+      "needs_review": false,
+      "review_headline": "",
+      "review_url": "",
+      "proposed_funding": "",
+      "proposed_stage": "",
+      "found_at": ""
+    },
     {
       "name": "Outpost Bio",
       "funding": "Pre-seed / seed. Funding undisclosed. Founded 2025.",
