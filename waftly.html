@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Waftly</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  background: #0e0900;
+  color: #f0e4c0;
+  font-family: 'Space Grotesk', sans-serif;
+  min-height: 100vh;
+}
+
+/* cheese-hole dot pattern */
+body::before {
+  content:''; position:fixed; inset:0; pointer-events:none; z-index:0;
+  background-image: radial-gradient(circle, rgba(245,180,40,0.07) 2px, transparent 2px);
+  background-size: 32px 32px;
+}
+
+.wrap { max-width: 960px; margin: 0 auto; padding: 0 24px; position: relative; z-index:1; }
+
+/* ── Header ── */
+header {
+  display:flex; align-items:center; justify-content:space-between;
+  padding: 20px 0; border-bottom: 1px solid rgba(245,180,40,0.12);
+}
+.logo { font-family:'Playfair Display',serif; font-size:26px; color:#f5b731; }
+.logo em { font-style:italic; color:#e07428; }
+.loc { font-size:13px; color:#8a7240; display:flex; align-items:center; gap:6px; }
+.live { display:flex; align-items:center; gap:6px; font-size:12px; color:#5dcf7a; font-weight:600; letter-spacing:.1em; }
+.dot { width:8px;height:8px;border-radius:50%;background:#5dcf7a;animation:pulse 1.8s infinite; }
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+
+/* ── Hero ── */
+.hero {
+  display:grid; grid-template-columns:1fr 200px; gap:40px; align-items:center;
+  padding: 44px 0 36px;
+}
+.eyebrow { font-size:11px; text-transform:uppercase; letter-spacing:.22em; color:#8a7240; margin-bottom:10px; }
+.varietal { font-family:'Playfair Display',serif; font-size:76px; font-weight:700; color:#f5b731; line-height:.9; letter-spacing:-2px; margin-bottom:8px; }
+.sub { font-family:'Playfair Display',serif; font-style:italic; font-size:18px; color:#8a7240; margin-bottom:18px; }
+.profile { font-size:14px; color:#a08c60; line-height:1.6; max-width:440px; margin-bottom:26px; }
+.bar-row { display:flex; align-items:center; gap:14px; margin-bottom:10px; }
+.bar-lbl { font-size:11px; text-transform:uppercase; letter-spacing:.15em; color:#8a7240; width:70px; flex-shrink:0; }
+.track { flex:1; max-width:320px; height:6px; background:rgba(245,180,40,0.1); border-radius:100px; }
+.fill { height:100%;border-radius:100px;transition:width 1.2s cubic-bezier(.34,1.56,.64,1); }
+.fill-i { background:linear-gradient(90deg,#a8c040,#f5b731,#e07428,#e05050); width:0% }
+.fill-g { background:linear-gradient(90deg,#5dcf7a,#f5b731,#e05050); width:0% }
+.bval { font-size:20px; font-weight:700; color:#f5b731; }
+.peak { font-size:13px; color:#8a7240; }
+.peak strong { color:#e07428; }
+
+/* Moon */
+.moon-wrap { display:flex;flex-direction:column;align-items:center;gap:14px; }
+.moon {
+  width:150px;height:150px;border-radius:50%;
+  background:radial-gradient(circle at 36% 30%, #f8edcc, #d4a840 45%, #8a6818 72%, #4a3808);
+  box-shadow:0 0 50px rgba(245,180,40,.3),0 0 100px rgba(245,180,40,.1),inset -24px -12px 48px rgba(0,0,0,.55);
+  position:relative;
+  animation:float 7s ease-in-out infinite;
+}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+.moon::before{content:'';position:absolute;width:24px;height:24px;border-radius:50%;background:radial-gradient(circle,rgba(60,30,5,.3),transparent);top:26px;left:62px;}
+.moon::after{content:'';position:absolute;width:14px;height:14px;border-radius:50%;background:radial-gradient(circle,rgba(60,30,5,.22),transparent);top:80px;left:28px;}
+.sweat{position:absolute;width:5px;height:5px;border-radius:50%;background:rgba(245,200,80,.7);top:52px;left:92px;animation:drip 4s ease-in-out 1s infinite;}
+@keyframes drip{0%{opacity:0;transform:translateY(-3px) scale(.5)}20%{opacity:1;transform:translateY(0) scale(1)}90%{opacity:0;transform:translateY(10px) scale(.4)}100%{opacity:0}}
+.moon-phase { font-size:13px; font-weight:600; text-align:center; }
+.moon-pct { font-size:30px; font-weight:700; color:#f5b731; text-align:center; line-height:1; }
+.moon-pct-lbl { font-size:10px; text-transform:uppercase; letter-spacing:.15em; color:#8a7240; text-align:center; }
+
+/* ── Divider ── */
+.wavy { display:block; width:100%; height:32px; margin:8px 0; }
+
+/* ── Cheese-scope ── */
+.scope-section { background:rgba(245,180,40,0.04); border:1px solid rgba(245,180,40,0.12); border-radius:24px; padding:32px; margin-bottom:24px; }
+.scope-header { display:flex; align-items:baseline; justify-content:space-between; margin-bottom:6px; }
+.scope-title { font-family:'Playfair Display',serif; font-size:28px; }
+.scope-title em { font-style:italic; color:#f5b731; }
+.scope-badge { background:rgba(245,180,40,0.12); border:1px solid rgba(245,180,40,0.25); color:#f5b731; font-size:11px; font-weight:600; text-transform:uppercase; letter-spacing:.12em; padding:4px 12px; border-radius:100px; }
+.scope-intro { font-size:14px; color:#8a7240; line-height:1.6; margin-bottom:24px; max-width:600px; }
+
+.sign-row { display:flex; align-items:center; gap:12px; margin-bottom:24px; flex-wrap:wrap; }
+.sign-lbl { font-size:12px; color:#8a7240; text-transform:uppercase; letter-spacing:.15em; }
+.sign-pill {
+  background:rgba(245,180,40,0.06); border:1px solid rgba(245,180,40,0.12); border-radius:100px;
+  padding:7px 16px; font-size:13px; cursor:pointer; transition:all .2s;
+}
+.sign-pill:hover,.sign-pill.active { background:rgba(245,180,40,0.15); border-color:rgba(245,180,40,.4); color:#f5b731; }
+
+.scope-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
+.scope-card { background:rgba(0,0,0,.25); border:1px solid rgba(245,180,40,0.08); border-radius:18px; padding:18px; }
+.scope-card-top { display:flex; align-items:center; justify-content:space-between; margin-bottom:10px; }
+.scope-card-area { font-size:11px; text-transform:uppercase; letter-spacing:.15em; color:#8a7240; }
+.wheels { color:#f5b731; font-size:13px; letter-spacing:-2px; }
+.scope-card-em { font-size:24px; margin-bottom:8px; display:block; }
+.scope-card-txt { font-size:13px; color:#a08c60; line-height:1.55; }
+.scope-card-tip { margin-top:10px; padding-top:10px; border-top:1px solid rgba(245,180,40,0.08); font-size:12px; color:#f5b731; font-style:italic; }
+
+/* ── 4-card strip ── */
+.cards { display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin-bottom:24px; }
+.card { background:rgba(245,180,40,0.04); border:1px solid rgba(245,180,40,0.1); border-radius:18px; padding:20px; }
+.card-icon { font-size:24px; margin-bottom:10px; }
+.card-lbl { font-size:10px; text-transform:uppercase; letter-spacing:.18em; color:#8a7240; margin-bottom:6px; }
+.card-val { font-size:22px; font-weight:700; color:#f5b731; }
+.card-sub { font-size:12px; color:#8a7240; margin-top:5px; line-height:1.4; }
+
+/* ── AI Lab ── */
+.ai-section { border:1px solid rgba(96,160,210,0.2); border-radius:24px; padding:32px; margin-bottom:24px; background:rgba(96,160,210,0.03); }
+.ai-header { display:flex; align-items:flex-start; justify-content:space-between; margin-bottom:6px; }
+.ai-title { font-family:'Playfair Display',serif; font-size:26px; }
+.ai-badge { background:rgba(96,160,210,0.12); border:1px solid rgba(96,160,210,0.3); color:#60a0d0; font-size:11px; font-weight:600; text-transform:uppercase; letter-spacing:.12em; padding:4px 12px; border-radius:100px; }
+.ai-sub { font-size:14px; color:#8a7240; margin-bottom:24px; line-height:1.6; max-width:600px; }
+.ai-stats { display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin-bottom:24px; }
+.ai-stat { background:rgba(0,0,0,.25); border:1px solid rgba(96,160,210,0.1); border-radius:16px; padding:18px; text-align:center; }
+.ai-stat-val { font-size:28px; font-weight:700; color:#60a0d0; }
+.ai-stat-lbl { font-size:11px; text-transform:uppercase; letter-spacing:.12em; color:#8a7240; margin-top:4px; }
+
+.ai-discoveries-title { font-size:12px; text-transform:uppercase; letter-spacing:.18em; color:#8a7240; margin-bottom:14px; }
+.discovery { display:flex; align-items:flex-start; gap:12px; padding:12px 0; border-bottom:1px solid rgba(96,160,210,0.07); font-size:13px; color:#a08c60; line-height:1.5; }
+.discovery:last-child { border-bottom:none; }
+.discovery .di { font-size:18px; flex-shrink:0; }
+
+/* ── Neighborhoods ── */
+.nbhd-row { display:flex; gap:12px; overflow-x:auto; padding-bottom:8px; margin-bottom:24px; scrollbar-width:none; }
+.nbhd-row::-webkit-scrollbar{display:none;}
+.nbhd { background:rgba(245,180,40,.04); border:1px solid rgba(245,180,40,.1); border-radius:16px; padding:16px 20px; cursor:pointer; white-space:nowrap; min-width:150px; flex-shrink:0; transition:all .2s; }
+.nbhd.active,.nbhd:hover { background:rgba(245,180,40,.1); border-color:rgba(245,180,40,.35); }
+.nbhd-name { font-weight:600; font-size:14px; margin-bottom:4px; }
+.nbhd-desc { font-size:12px; color:#8a7240; margin-bottom:8px; }
+.cbadge { display:inline-block; font-size:11px; font-weight:600; text-transform:uppercase; letter-spacing:.08em; padding:2px 9px; border-radius:100px; }
+.c-low{background:rgba(93,207,122,.1);color:#5dcf7a;border:1px solid rgba(93,207,122,.25);}
+.c-mod{background:rgba(245,180,40,.1);color:#f5b731;border:1px solid rgba(245,180,40,.25);}
+.c-hi{background:rgba(224,116,40,.1);color:#e07428;border:1px solid rgba(224,116,40,.3);}
+.c-ext{background:rgba(224,80,80,.1);color:#e05050;border:1px solid rgba(224,80,80,.3);}
+
+/* ── Ticker ── */
+.ticker { background:rgba(245,180,40,.05); border-top:1px solid rgba(245,180,40,.1); border-bottom:1px solid rgba(245,180,40,.1); padding:10px 0; overflow:hidden; margin-bottom:0; }
+.ticker-inner { display:flex; gap:56px; animation:tick 35s linear infinite; white-space:nowrap; }
+.ti { font-size:13px; color:#8a7240; flex-shrink:0; }
+.ti strong { color:#f5b731; }
+@keyframes tick{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+/* ── Footer ── */
+footer { text-align:center; padding:24px 0 32px; border-top:1px solid rgba(245,180,40,.08); margin-top:8px; }
+footer p { font-size:12px; color:#8a7240; }
+footer strong { color:#f5b731; font-family:'Playfair Display',serif; font-size:16px; }
+
+/* ── Section label ── */
+.slbl { font-size:11px; text-transform:uppercase; letter-spacing:.22em; color:#8a7240; margin-bottom:14px; display:block; }
+
+/* ── Pitch banner ── */
+.pitch {
+  background: linear-gradient(135deg, rgba(245,180,40,0.1), rgba(224,116,40,0.06));
+  border-bottom: 1px solid rgba(245,180,40,0.15);
+  padding: 22px 0;
+}
+.pitch-inner { display:flex; align-items:center; justify-content:space-between; gap:32px; flex-wrap:wrap; }
+.pitch-headline { font-family:'Playfair Display',serif; font-size:22px; font-weight:700; max-width:480px; line-height:1.3; }
+.pitch-headline em { font-style:italic; color:#f5b731; }
+.pitch-stats { display:flex; gap:32px; flex-shrink:0; }
+.pstat { text-align:center; }
+.pstat-val { font-size:26px; font-weight:700; color:#f5b731; line-height:1; }
+.pstat-lbl { font-size:11px; text-transform:uppercase; letter-spacing:.13em; color:#8a7240; margin-top:3px; }
+
+/* ── B2B clients ── */
+.clients-section { margin-bottom:24px; }
+.client-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
+.client-card {
+  background: rgba(245,180,40,0.04);
+  border: 1px solid rgba(245,180,40,0.1);
+  border-radius:18px; padding:20px;
+  display:flex; flex-direction:column; gap:8px;
+}
+.client-icon { font-size:28px; }
+.client-name { font-weight:700; font-size:15px; }
+.client-use { font-size:13px; color:#8a7240; line-height:1.5; }
+.client-val { font-size:12px; color:#f5b731; font-weight:600; margin-top:4px; }
+
+/* waft particles */
+.waft{position:fixed;border-radius:50%;background:radial-gradient(circle,rgba(224,116,40,.12),transparent);pointer-events:none;animation:wup linear infinite;z-index:0;}
+@keyframes wup{0%{transform:translateY(0) scale(1);opacity:0}15%{opacity:1}85%{opacity:.3}100%{transform:translateY(-100vh) scale(2.5);opacity:0}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header>
+    <div class="logo">W<em>a</em>ftly</div>
+    <div class="loc">📍 San Francisco, CA</div>
+    <div class="live"><div class="dot"></div> Live</div>
+  </header>
+</div>
+
+<!-- Pitch Banner -->
+<div class="pitch">
+  <div class="wrap">
+    <div class="pitch-inner">
+      <div class="pitch-headline">The world's first <em>lunar aromatic intelligence</em> platform. We know what's falling from the moon before it lands.</div>
+      <div class="pitch-stats">
+        <div class="pstat"><div class="pstat-val">1,247</div><div class="pstat-lbl">Nights trained</div></div>
+        <div class="pstat"><div class="pstat-val">94.2%</div><div class="pstat-lbl">Forecast accuracy</div></div>
+        <div class="pstat"><div class="pstat-val">6</div><div class="pstat-lbl">Industries disrupted</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Ticker -->
+<div class="ticker">
+  <div class="ticker-inner">
+    <span class="ti">🧀 <strong>Tonight:</strong> Roquefort · 8.4/10 intensity</span>
+    <span class="ti">🌙 <strong>Moon:</strong> Waxing Gibbous · 82% illuminated · Mare Imbrium facing</span>
+    <span class="ti">📈 <strong>Markets:</strong> Reckless trading expected — NASDAQ desks advised to meditate</span>
+    <span class="ti">🐕 <strong>Dogs:</strong> High restlessness. Secure all leashes.</span>
+    <span class="ti">💕 <strong>Dating:</strong> +34% first-date conversion on Roquefort nights</span>
+    <span class="ti">🚨 <strong>Crime:</strong> Roquefort exposure linked to +18% impulsive decisions. Police departments notified.</span>
+    <span class="ti">🧀 <strong>Tonight:</strong> Roquefort · 8.4/10 intensity</span>
+    <span class="ti">🌙 <strong>Moon:</strong> Waxing Gibbous · 82% illuminated · Mare Imbrium facing</span>
+    <span class="ti">📈 <strong>Markets:</strong> Reckless trading expected — NASDAQ desks advised to meditate</span>
+    <span class="ti">🐕 <strong>Dogs:</strong> High restlessness. Secure all leashes.</span>
+    <span class="ti">💕 <strong>Dating:</strong> +34% first-date conversion on Roquefort nights</span>
+    <span class="ti">🚨 <strong>Crime:</strong> Roquefort exposure linked to +18% impulsive decisions. Police departments notified.</span>
+  </div>
+</div>
+
+<div class="wrap" style="padding-top:40px">
+
+  <!-- Hero -->
+  <div class="hero">
+    <div>
+      <div class="eyebrow">Tonight's Varietal · <span id="clock"></span></div>
+      <div class="varietal">Roquefort</div>
+      <div class="sub">Mare Imbrium, Lunar Northwest Quadrant</div>
+      <div class="profile">Sharp, cave-aged, and deeply pungent. Brine, blue-green mould, rich lanolin undertones. The aphrodisiac qualities are well-documented; the recklessness less so.</div>
+      <div class="bar-row">
+        <span class="bar-lbl">Intensity</span>
+        <div class="track"><div class="fill fill-i" id="bi"></div></div>
+        <span class="bval">8.4</span>
+      </div>
+      <div class="bar-row">
+        <span class="bar-lbl">Ground</span>
+        <div class="track"><div class="fill fill-g" id="bg"></div></div>
+        <span class="bval" style="font-size:15px;color:#e07428">612<small style="font-size:11px;color:#8a7240"> ppm</small></span>
+      </div>
+      <div class="peak" style="margin-top:8px">Peaks at <strong>2:17 AM</strong> · Next varietal: Aged Gruyère from Thursday</div>
+    </div>
+    <div class="moon-wrap">
+      <div class="moon"><div class="sweat"></div></div>
+      <div>
+        <div class="moon-phase">Waxing Gibbous</div>
+        <div class="moon-pct">82%</div>
+        <div class="moon-pct-lbl">Illuminated</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4 stat cards -->
+  <span class="slbl">Tonight at a Glance</span>
+  <div class="cards">
+    <div class="card"><div class="card-icon">🌫️</div><div class="card-lbl">Aroma Intensity</div><div class="card-val">8.4/10</div><div class="card-sub">Highly perceptible outdoors</div></div>
+    <div class="card"><div class="card-icon">🪟</div><div class="card-lbl">Window Status</div><div class="card-val" style="color:#e05050">SEAL</div><div class="card-sub">High intensity. Unless you want the full experience.</div></div>
+    <div class="card"><div class="card-icon">🍷</div><div class="card-lbl">Tonight's Pairing</div><div class="card-val" style="font-size:15px">Sauternes</div><div class="card-sub">or bold Côtes du Rhône</div></div>
+    <div class="card"><div class="card-icon">💕</div><div class="card-lbl">Romance Index</div><div class="card-val" style="color:#e07428">Very High</div><div class="card-sub">Aphrodisiac mechanisms unclear but replicated</div></div>
+  </div>
+
+  <!-- FLAT EARTH MAP (moved up) -->
+  <div class="ai-section" style="border-color:rgba(245,180,40,0.2);background:rgba(245,180,40,0.03);margin-bottom:24px">
+    <div class="ai-header" style="margin-bottom:4px">
+      <div class="ai-title">🌍 Flat Earth Cheese Dispersion Map</div>
+      <div class="ai-badge" style="background:rgba(245,180,40,.12);border-color:rgba(245,180,40,.3);color:#f5b731">Live · millicurd (mC)</div>
+    </div>
+    <div class="ai-sub">Real-time cheese intensity across the flat earth disc. 🧀 markers show predicted next lunar droppings — go collect your cheese.</div>
+    <div style="display:flex;gap:24px;align-items:flex-start;flex-wrap:wrap">
+      <!-- perspective wrapper makes it look obviously flat/tilted -->
+      <div style="perspective:700px;flex-shrink:0">
+        <div style="transform:rotateX(32deg);transform-style:preserve-3d;position:relative;display:inline-block">
+          <canvas id="earthCanvas" width="520" height="520" style="display:block;border-radius:50%;max-width:100%"></canvas>
+          <!-- disc edge shadow to sell the flatness -->
+          <div style="position:absolute;bottom:-18px;left:4%;width:92%;height:22px;background:radial-gradient(ellipse,rgba(100,60,0,0.55) 0%,transparent 75%);border-radius:50%;pointer-events:none"></div>
+        </div>
+      </div>
+      <div style="flex:1;min-width:180px">
+        <div class="ai-discoveries-title">Legend</div>
+        <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:20px">
+          <div style="display:flex;align-items:center;gap:10px;font-size:13px;color:#a08c60"><span style="width:16px;height:16px;border-radius:4px;background:#22c55e;display:inline-block;flex-shrink:0"></span> Low · 0–250 mC</div>
+          <div style="display:flex;align-items:center;gap:10px;font-size:13px;color:#a08c60"><span style="width:16px;height:16px;border-radius:4px;background:#f97316;display:inline-block;flex-shrink:0"></span> Medium · 250–650 mC</div>
+          <div style="display:flex;align-items:center;gap:10px;font-size:13px;color:#a08c60"><span style="width:16px;height:16px;border-radius:4px;background:#ef4444;display:inline-block;flex-shrink:0"></span> High · 650+ mC</div>
+          <div style="display:flex;align-items:center;gap:10px;font-size:13px;color:#a08c60"><span style="font-size:18px;line-height:1">🧀</span> Predicted dropping zone</div>
+        </div>
+        <div class="ai-discoveries-title">Next Droppings (ETA)</div>
+        <div id="dropping-list"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Neighborhoods -->
+  <span class="slbl">Neighbourhood Forecast</span>
+  <div class="nbhd-row" id="nbhds"></div>
+
+  <!-- CHEESE-SCOPE -->
+  <div class="scope-section">
+    <div class="scope-header">
+      <div class="scope-title">Your <em>Cheese-scope™</em></div>
+      <div class="scope-badge">Roquefort Night</div>
+    </div>
+    <div class="scope-intro">Tonight's Roquefort emanation from the Mare Imbrium reaches unusual potency. The blue-mould compounds are thick. This is a night that will test your impulse control and reward your appetites.</div>
+    <div class="sign-row">
+      <span class="sign-lbl">Your sign:</span>
+      <span class="sign-pill active" onclick="setSign(this)">🐏 Manchego</span>
+      <span class="sign-pill" onclick="setSign(this)">🐂 Aged Cheddar</span>
+      <span class="sign-pill" onclick="setSign(this)">👯 Brie</span>
+      <span class="sign-pill" onclick="setSign(this)">🦀 Ricotta</span>
+      <span class="sign-pill" onclick="setSign(this)">🦁 Gruyère</span>
+      <span class="sign-pill" onclick="setSign(this)">♍ Comté</span>
+    </div>
+    <div class="scope-grid">
+      <div class="scope-card">
+        <div class="scope-card-top"><span class="scope-card-area">💕 Love</span><span class="wheels">🧀🧀🧀🧀🧀</span></div>
+        <span class="scope-card-em">🔥</span>
+        <div class="scope-card-txt">Roquefort nights are historically the most amorous in the lunar calendar. Whatever you've been holding back — say it tonight.</div>
+        <div class="scope-card-tip">"Bring the wine. Leave the inhibitions."</div>
+      </div>
+      <div class="scope-card">
+        <div class="scope-card-top"><span class="scope-card-area">💼 Career</span><span class="wheels" style="color:#e05050">🧀🧀</span></div>
+        <span class="scope-card-em">📉</span>
+        <div class="scope-card-txt">Do not pitch the big idea tonight. Do not move funds. Your gut feelings smell amazing but they are wrong.</div>
+        <div class="scope-card-tip">"Reschedule anything involving numbers with commas."</div>
+      </div>
+      <div class="scope-card">
+        <div class="scope-card-top"><span class="scope-card-area">🧠 Clarity</span><span class="wheels" style="color:#e07428">🧀🧀🧀</span></div>
+        <span class="scope-card-em">💡</span>
+        <div class="scope-card-txt">Divergent thinking up 22%. Convergent thinking: not. Brilliant ideas, no ability to evaluate them. Great for brainstorming, catastrophic for editing.</div>
+        <div class="scope-card-tip">"Write everything. Curate tomorrow."</div>
+      </div>
+      <div class="scope-card">
+        <div class="scope-card-top"><span class="scope-card-area">⚡ Energy</span><span class="wheels">🧀🧀🧀🧀</span></div>
+        <span class="scope-card-em">🌀</span>
+        <div class="scope-card-txt">Blue-mould nights correlate with elevated energy in most cohorts. You may want to reorganise your kitchen at 1 AM. This is expected.</div>
+        <div class="scope-card-tip">"Channel into physical activity before midnight."</div>
+      </div>
+      <div class="scope-card">
+        <div class="scope-card-top"><span class="scope-card-area">🐕 Pets</span><span class="wheels" style="color:#e05050">🧀</span></div>
+        <span class="scope-card-em">😰</span>
+        <div class="scope-card-txt">Your dog has 300× your olfactory receptors. They're experiencing the equivalent of 254,100 ppm. They are not okay. The whining is not about food.</div>
+        <div class="scope-card-tip">"Extra walks. Earlier bedtime. Consider earmuffs."</div>
+      </div>
+      <div class="scope-card">
+        <div class="scope-card-top"><span class="scope-card-area">🌙 Dreams</span><span class="wheels">🧀🧀🧀🧀</span></div>
+        <span class="scope-card-em">🌌</span>
+        <div class="scope-card-txt">Roquefort nights have the most vivid reported dream cycles. Expect surreal narratives. You'll wake convinced you made an important decision. You probably did not.</div>
+        <div class="scope-card-tip">"Keep a journal by the bed."</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- AI Lab -->
+  <div class="ai-section">
+    <div class="ai-header">
+      <div class="ai-title">🤖 CheeseML™ Prediction Engine</div>
+      <div class="ai-badge">v4.2.1 · Active</div>
+    </div>
+    <div class="ai-sub">The more lunar aromatic data we collect, the sharper our predictions get. CheeseML has now analysed 1,247 nights of cheese weather — and it's finding patterns nobody expected.</div>
+    <div class="ai-stats">
+      <div class="ai-stat"><div class="ai-stat-val">94.2%</div><div class="ai-stat-lbl">Forecast Accuracy</div></div>
+      <div class="ai-stat"><div class="ai-stat-val">1,247</div><div class="ai-stat-lbl">Nights Trained</div></div>
+      <div class="ai-stat"><div class="ai-stat-val">91%</div><div class="ai-stat-lbl">Tonight's Confidence</div></div>
+      <div class="ai-stat"><div class="ai-stat-val">+5.2%</div><div class="ai-stat-lbl">vs. Last Month</div></div>
+    </div>
+    <div class="ai-discoveries-title">What CheeseML discovered this week</div>
+    <div class="discovery"><span class="di">📦</span>Aged Cheddar exposure increases impulse food delivery orders by 340% in the 2-hour concentration window.</div>
+    <div class="discovery"><span class="di">🎵</span>Brie nights correlate with a 67% spike in ambient / neo-soul streaming. Genre confidence: 88%.</div>
+    <div class="discovery"><span class="di">💸</span>Full-moon Parmesan events predict the following day's S&P open within 1.8%. The model does not know why.</div>
+    <div class="discovery"><span class="di">🚗</span>Spontaneous road trips initiated after 11 PM correlate 91% with Roquefort or Époisses nights.</div>
+  </div>
+
+  <!-- B2B CLIENTS -->
+  <div class="clients-section">
+    <span class="slbl">Who buys Waftly data</span>
+    <div class="client-grid">
+      <div class="client-card">
+        <div class="client-icon">🌹</div>
+        <div class="client-name">Perfumeries</div>
+        <div class="client-use">Align fragrance launches with tonight's lunar varietal. Roquefort nights suppress competing scents — ideal for bold, animalic launches.</div>
+        <div class="client-val">↑ 34% conversion on launch nights</div>
+      </div>
+      <div class="client-card">
+        <div class="client-icon">💕</div>
+        <div class="client-name">Dating Apps</div>
+        <div class="client-use">Roquefort nights see +34% first-date conversions. Trigger push notifications: "Tonight is a Roquefort night. You know what to do."</div>
+        <div class="client-val">↑ $2.40 ARPU uplift on high nights</div>
+      </div>
+      <div class="client-card">
+        <div class="client-icon">🍽️</div>
+        <div class="client-name">Restaurants</div>
+        <div class="client-use">Know the varietal before service. Adjust pairings, amuse-bouche, and tasting menus to complement or contrast the lunar note.</div>
+        <div class="client-val">↑ 18% upsell on wine pairings</div>
+      </div>
+      <div class="client-card">
+        <div class="client-icon">🚔</div>
+        <div class="client-name">Law Enforcement</div>
+        <div class="client-use">Roquefort and Époisses nights correlate with +18% impulsive decisions. Pre-position resources. Brief desk officers. Warn the stockbrokers.</div>
+        <div class="client-val">Predictive deployment model in trial</div>
+      </div>
+      <div class="client-card">
+        <div class="client-icon">📈</div>
+        <div class="client-name">Financial Services</div>
+        <div class="client-use">Parmesan full-moon events predict the next-day S&P open within 1.8%. Our quant desk doesn't know why either. They don't need to.</div>
+        <div class="client-val">↑ Alpha signal: 3 of 4 backtests</div>
+      </div>
+      <div class="client-card">
+        <div class="client-icon">🏥</div>
+        <div class="client-name">Healthcare & Pharma</div>
+        <div class="client-use">Blue-mould compound exposure linked to mood, sleep, and impulse control variance. Waftly data enriches clinical cohorts with zero patient burden.</div>
+        <div class="client-val">2 pharma pilots underway</div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <strong>Waftly</strong>
+    <p style="margin-top:8px">Lunar aromatic data updated every 15 min · Data sold to perfumeries, dating apps & police departments · © 2026</p>
+  </footer>
+
+</div>
+
+<script>
+// Clock
+function tick(){document.getElementById('clock').textContent=new Date().toLocaleTimeString('en-US',{hour:'numeric',minute:'2-digit',hour12:true});}
+tick();setInterval(tick,1000);
+
+// Animate bars
+setTimeout(()=>{
+  document.getElementById('bi').style.width='84%';
+  document.getElementById('bg').style.width='61%';
+},200);
+
+// Neighborhoods
+const NB=[
+  {name:'Old Quarter',desc:'Narrow streets, still air',level:'ext',ppm:847,cls:'c-ext'},
+  {name:'Downtown Core',desc:'Urban heat island',level:'high',ppm:612,cls:'c-hi'},
+  {name:'Hillside Heights',desc:'Elevation traps aromatics',level:'high',ppm:589,cls:'c-hi'},
+  {name:'The Marina',desc:'Sea breeze dispersal',level:'mod',ppm:334,cls:'c-mod'},
+  {name:'Riverside Flats',desc:'Wind channels',level:'low',ppm:156,cls:'c-low'},
+];
+const labels={ext:'Extreme',high:'High',mod:'Moderate',low:'Low'};
+let active=1;
+function renderNB(){
+  document.getElementById('nbhds').innerHTML=NB.map((n,i)=>`
+    <div class="nbhd${i===active?' active':''}" onclick="selNB(${i})">
+      <div class="nbhd-name">${n.name}</div>
+      <div class="nbhd-desc">${n.desc}</div>
+      <span class="cbadge ${n.cls}">${labels[n.level]} · ${n.ppm} ppm</span>
+    </div>`).join('');
+}
+function selNB(i){active=i;renderNB();}
+renderNB();
+
+// Cheese sign picker
+function setSign(el){
+  document.querySelectorAll('.sign-pill').forEach(p=>p.classList.remove('active'));
+  el.classList.add('active');
+}
+
+// Waft particles
+function spawnWaft(){
+  const el=document.createElement('div');
+  el.className='waft';
+  const s=50+Math.random()*130,l=Math.random()*100,d=14+Math.random()*18,delay=Math.random()*6;
+  el.style.cssText=`width:${s}px;height:${s}px;left:${l}%;animation-duration:${d}s;animation-delay:${delay}s`;
+  document.body.appendChild(el);
+  setTimeout(()=>el.remove(),(d+delay)*1000+500);
+}
+for(let i=0;i<5;i++)spawnWaft();
+setInterval(spawnWaft,5000);
+
+// ── Flat Earth Canvas ──────────────────────────────────────────
+const cv=document.getElementById('earthCanvas');
+const ctx=cv.getContext('2d');
+const W=cv.width,H=cv.height,CX=W/2,CY=H/2,R=230;
+
+// Cheese intensity zones: [cx, cy, radius, mC]
+const zones=[
+  {x:0.30,y:0.38,r:0.22,mC:820},  // high - Europe
+  {x:0.55,y:0.35,r:0.18,mC:740},  // high - Asia
+  {x:0.20,y:0.55,r:0.16,mC:310},  // medium - Americas
+  {x:0.50,y:0.62,r:0.14,mC:180},  // low - Africa
+  {x:0.72,y:0.50,r:0.13,mC:460},  // medium - SE Asia
+  {x:0.35,y:0.70,r:0.10,mC:90},   // low - South
+  {x:0.60,y:0.70,r:0.12,mC:270},  // medium
+  {x:0.15,y:0.35,r:0.13,mC:560},  // medium
+];
+
+// Dropping zones
+const droppings=[
+  {x:0.42,y:0.30,label:'Northern Alps',eta:'14 min',mC:920},
+  {x:0.65,y:0.55,label:'Bay of Bengal',eta:'31 min',mC:670},
+  {x:0.25,y:0.62,label:'Gulf of Mexico',eta:'52 min',mC:480},
+];
+
+function mcColor(mC,alpha){
+  if(mC>650)return`rgba(239,68,68,${alpha})`;
+  if(mC>250)return`rgba(249,115,22,${alpha})`;
+  return`rgba(34,197,94,${alpha})`;
+}
+
+let pulse=0;
+function drawEarth(){
+  ctx.clearRect(0,0,W,H);
+  // Dark space bg
+  ctx.fillStyle='#080500';
+  ctx.beginPath();ctx.arc(CX,CY,R+20,0,Math.PI*2);ctx.fill();
+
+  // Flat earth disc - ice-ring outer edge
+  ctx.save();
+  ctx.beginPath();ctx.arc(CX,CY,R,0,Math.PI*2);ctx.clip();
+
+  // Base ocean colour
+  const ocean=ctx.createRadialGradient(CX,CY-30,10,CX,CY,R);
+  ocean.addColorStop(0,'#1a3a5c');
+  ocean.addColorStop(1,'#0a1e30');
+  ctx.fillStyle=ocean;
+  ctx.fillRect(0,0,W,H);
+
+  // Draw intensity blobs
+  zones.forEach(z=>{
+    const zx=z.x*W,zy=z.y*H,zr=z.r*R*1.8;
+    const g=ctx.createRadialGradient(zx,zy,0,zx,zy,zr);
+    g.addColorStop(0,mcColor(z.mC,0.7));
+    g.addColorStop(0.5,mcColor(z.mC,0.35));
+    g.addColorStop(1,mcColor(z.mC,0));
+    ctx.fillStyle=g;
+    ctx.beginPath();ctx.arc(zx,zy,zr,0,Math.PI*2);ctx.fill();
+  });
+
+  // Subtle continent outlines (simplified blobs)
+  ctx.fillStyle='rgba(255,220,120,0.06)';
+  [[0.30,0.36,0.14],[0.55,0.34,0.12],[0.22,0.54,0.11],[0.50,0.60,0.09],[0.72,0.50,0.09]].forEach(([x,y,r])=>{
+    ctx.beginPath();ctx.arc(x*W,y*H,r*R,0,Math.PI*2);ctx.fill();
+  });
+
+  ctx.restore();
+
+  // Outer glow rim
+  const rim=ctx.createRadialGradient(CX,CY,R-4,CX,CY,R+18);
+  rim.addColorStop(0,'rgba(245,180,40,0)');
+  rim.addColorStop(0.5,'rgba(245,180,40,0.15)');
+  rim.addColorStop(1,'rgba(245,180,40,0)');
+  ctx.fillStyle=rim;
+  ctx.beginPath();ctx.arc(CX,CY,R+18,0,Math.PI*2);ctx.fill();
+
+  // Ice wall — thick white rim
+  ctx.strokeStyle='rgba(200,235,255,0.7)';
+  ctx.lineWidth=10;
+  ctx.beginPath();ctx.arc(CX,CY,R,0,Math.PI*2);ctx.stroke();
+  ctx.strokeStyle='rgba(255,255,255,0.2)';
+  ctx.lineWidth=3;
+  ctx.beginPath();ctx.arc(CX,CY,R+6,0,Math.PI*2);ctx.stroke();
+
+  // ICE WALL text around the rim
+  ctx.save();
+  ctx.font='bold 11px Space Grotesk,sans-serif';
+  ctx.fillStyle='rgba(200,235,255,0.65)';
+  ctx.textAlign='center';
+  const iceText='✦ ICE  WALL ✦ ICE  WALL ✦ ICE  WALL ✦ ICE  WALL ✦ ICE  WALL ✦ ICE  WALL ✦ ';
+  ctx.translate(CX,CY);
+  for(let i=0;i<iceText.length;i++){
+    const angle=(i/iceText.length)*Math.PI*2-Math.PI/2;
+    ctx.save();
+    ctx.rotate(angle);
+    ctx.translate(0,-(R+1));
+    ctx.rotate(Math.PI/2);
+    ctx.fillText(iceText[i],0,0);
+    ctx.restore();
+  }
+  ctx.restore();
+
+  // Compass labels
+  ctx.font='bold 13px Space Grotesk,sans-serif';
+  ctx.fillStyle='rgba(255,255,255,0.5)';
+  ctx.textAlign='center';
+  ctx.fillText('N',CX,CY-R+26);
+  ctx.fillText('S',CX,CY+R-14);
+  ctx.textAlign='left';
+  ctx.fillText('W',CX-R+12,CY+5);
+  ctx.textAlign='right';
+  ctx.fillText('E',CX+R-12,CY+5);
+
+  // mC labels on zones
+  ctx.font='bold 11px Space Grotesk,sans-serif';
+  ctx.textAlign='center';
+  zones.forEach(z=>{
+    const zx=z.x*W,zy=z.y*H;
+    ctx.fillStyle='rgba(255,255,255,0.75)';
+    ctx.fillText(z.mC+' mC',zx,zy);
+  });
+
+  // Dropping markers with pulse
+  const p=0.5+0.5*Math.sin(pulse);
+  droppings.forEach(d=>{
+    const dx=d.x*W,dy=d.y*H;
+    // Pulse ring
+    ctx.strokeStyle=`rgba(245,180,40,${0.6*p})`;
+    ctx.lineWidth=2;
+    ctx.beginPath();ctx.arc(dx,dy,14+8*p,0,Math.PI*2);ctx.stroke();
+    // Inner dot
+    ctx.fillStyle='rgba(245,180,40,0.9)';
+    ctx.beginPath();ctx.arc(dx,dy,6,0,Math.PI*2);ctx.fill();
+    // Cheese emoji label
+    ctx.font='16px serif';
+    ctx.fillText('🧀',dx-8,dy-14);
+  });
+
+  pulse+=0.04;
+  requestAnimationFrame(drawEarth);
+}
+drawEarth();
+
+// Dropping list
+document.getElementById('dropping-list').innerHTML=droppings.map(d=>`
+  <div class="discovery">
+    <span class="di">🧀</span>
+    <div><strong style="color:#f5b731">${d.label}</strong>
+    <div style="font-size:12px;color:#8a7240;margin-top:3px">ETA: ${d.eta} · ${d.mC} mC expected</div></div>
+  </div>`).join('');
+</script>
+</body>
+</html>

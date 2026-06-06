@@ -214,7 +214,8 @@ input[type="text"]::placeholder { color: #111827; }
 
 /* Directory tab dropdown */
 .tab-with-dd { position: relative; }
-.tab-dd { display: none; position: absolute; top: calc(100% + 6px); left: 0; background: var(--bg2); border: 1px solid var(--border); border-radius: 10px; min-width: 230px; z-index: 500; box-shadow: var(--shadow-md); padding: 6px; }
+.tab-dd { display: none; position: absolute; top: 100%; left: 0; padding-top: 6px; background: transparent; min-width: 230px; z-index: 500; }
+.tab-dd-inner { background: var(--bg2); border: 1px solid var(--border); border-radius: 10px; box-shadow: var(--shadow-md); padding: 6px; }
 .tab-with-dd:hover .tab-dd { display: block; }
 .tab-dd-item { padding: 8px 12px; font-size: 12px; font-family: 'IBM Plex Mono', monospace; color: var(--text); cursor: pointer; border-radius: 6px; display: flex; align-items: center; gap: 9px; transition: background 0.1s; white-space: nowrap; }
 .tab-dd-item:hover { background: var(--bg); }
@@ -462,16 +463,18 @@ footer { padding: 24px 48px; border-top: 1px solid var(--border); display: flex;
   <div class="tab-with-dd">
     <button class="tab-btn active" onclick="switchTab('directory',this)">⊞ &nbsp;Directory</button>
     <div class="tab-dd">
-      <div class="tab-dd-item" onclick="jumpToCategory(null)"><div class="tab-dd-dot" style="background:#64748b"></div>All categories</div>
-      <div class="tab-dd-divider"></div>
-      <div class="tab-dd-item" onclick="jumpToCategory('foundation')"><div class="tab-dd-dot" style="background:#00b896"></div>Foundation Models</div>
-      <div class="tab-dd-item" onclick="jumpToCategory('discovery')"><div class="tab-dd-dot" style="background:#7c3aed"></div>Drug Discovery &amp; Therapeutics</div>
-      <div class="tab-dd-item" onclick="jumpToCategory('tools')"><div class="tab-dd-dot" style="background:#2563eb"></div>Tools &amp; Platforms</div>
-      <div class="tab-dd-item" onclick="jumpToCategory('automation')"><div class="tab-dd-dot" style="background:#0891b2"></div>Lab Automation</div>
-      <div class="tab-dd-item" onclick="jumpToCategory('health')"><div class="tab-dd-dot" style="background:#ea580c"></div>Clinical &amp; Healthcare AI</div>
-      <div class="tab-dd-item" onclick="jumpToCategory('ai')"><div class="tab-dd-dot" style="background:#475569"></div>Pure AI &amp; Tech</div>
-      <div class="tab-dd-item" onclick="jumpToCategory('investor')"><div class="tab-dd-dot" style="background:#d97706"></div>Investors &amp; Funds</div>
-      <div class="tab-dd-item" onclick="jumpToCategory('accel')"><div class="tab-dd-dot" style="background:#65a30d"></div>Accelerators &amp; Fellowships</div>
+      <div class="tab-dd-inner">
+        <div class="tab-dd-item" onclick="jumpToCategory(null)"><div class="tab-dd-dot" style="background:#64748b"></div>All categories</div>
+        <div class="tab-dd-divider"></div>
+        <div class="tab-dd-item" onclick="jumpToCategory('foundation')"><div class="tab-dd-dot" style="background:#00b896"></div>Foundation Models</div>
+        <div class="tab-dd-item" onclick="jumpToCategory('discovery')"><div class="tab-dd-dot" style="background:#7c3aed"></div>Drug Discovery &amp; Therapeutics</div>
+        <div class="tab-dd-item" onclick="jumpToCategory('tools')"><div class="tab-dd-dot" style="background:#2563eb"></div>Tools &amp; Platforms</div>
+        <div class="tab-dd-item" onclick="jumpToCategory('automation')"><div class="tab-dd-dot" style="background:#0891b2"></div>Lab Automation</div>
+        <div class="tab-dd-item" onclick="jumpToCategory('health')"><div class="tab-dd-dot" style="background:#ea580c"></div>Clinical &amp; Healthcare AI</div>
+        <div class="tab-dd-item" onclick="jumpToCategory('ai')"><div class="tab-dd-dot" style="background:#475569"></div>Pure AI &amp; Tech</div>
+        <div class="tab-dd-item" onclick="jumpToCategory('investor')"><div class="tab-dd-dot" style="background:#d97706"></div>Investors &amp; Funds</div>
+        <div class="tab-dd-item" onclick="jumpToCategory('accel')"><div class="tab-dd-dot" style="background:#65a30d"></div>Accelerators &amp; Fellowships</div>
+      </div>
     </div>
   </div>
   <button class="tab-btn" onclick="switchTab('map',this)">◉ &nbsp;World Map</button>
