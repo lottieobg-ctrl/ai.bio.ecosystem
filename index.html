@@ -2385,7 +2385,176 @@ const INTEL_COMPETITORS = {
             'Chai-1 openly benchmarked & rivals AlphaFold3 — high credibility',
             'Backed by OpenAI — deep LLM infrastructure advantage'],
     }
-  }
+  },
+  profluent:{
+    id:'profluent', name:'Profluent', hq:'San Francisco, CA', founded:'2022',
+    color:'#a78bfa', colorDim:'rgba(167,139,250,0.06)', colorBorder:'rgba(167,139,250,0.2)',
+    totalRaised:'~$180M', lastRound:'Series B ($106M)', lastRoundDate:'Nov 2025',
+    valuation:'Undisclosed', investors:'Salesforce Ventures · Spark Capital · Alter · Jeff Bezos', headcount:'~80',
+    models:[
+      {name:'ProGen2',params:'~6.4B (largest variant)',purpose:'Protein sequence generation — first LLM shown to generate functional proteins',openSource:true},
+      {name:'OpenCRISPR-1',params:'N/A',purpose:'First AI-designed complete CRISPR gene editor — in active use at thousands of labs globally',openSource:true},
+    ],
+    trainingTokens:'~280M protein sequences',
+    trainingData:'UniRef + BFD + proprietary protein databases',
+    dataScale:'Protein Atlas: 115B+ unique proteins generated',
+    dataUniqueness:'Functional wet lab validation — proven real-world utility across protein families',
+    wetLab:true,
+    benchmarks:'OpenCRISPR-1 matches or exceeds SpCas9 editing activity (Nature 2025)',
+    publications:'Nature Biotech 2023 (first functional AI proteins) · Nature 2025 (OpenCRISPR-1)',
+    pipelineTargets:'Gene editing therapeutics · Protein engineering · CRISPR tools',
+    therapAreas:'Gene therapy · Oncology · Rare disease',
+    pipelineStage:'Discovery / early preclinical',
+    pharmaPartners:'Eli Lilly',
+    techPartners:'Undisclosed',
+    takeaways:{
+      br:['9.7T nucleotide tokens vs ~280M sequences — 34× richer training signal',
+          'Novel biodiversity sequences spanning 1M+ species — Profluent cannot access this data',
+          'EDEN spans DNA, RNA, protein; ProGen2 is protein-only',
+          'Cross-domain: drug + industrial biotech + agriculture',
+          'Trillion Gene Atlas = continuously expanding proprietary dataset'],
+      comp:['ProGen2 6.4B params specifically optimised for protein function',
+            'OpenCRISPR-1 in active use at thousands of labs — proven real-world utility',
+            'First published functional AI proteins (Nature Biotech 2023) — field-defining',
+            'Eli Lilly partnership validates commercial traction',
+            '3× more capital raised ($180M vs $60M)'],
+    }
+  },
+  isomorphic:{
+    id:'isomorphic', name:'Isomorphic Labs', hq:'London, UK', founded:'2021',
+    color:'#60a5fa', colorDim:'rgba(96,165,250,0.06)', colorBorder:'rgba(96,165,250,0.2)',
+    totalRaised:'~$2.6B', lastRound:'Series B ($2.1B)', lastRoundDate:'May 2026',
+    valuation:'Undisclosed (est. $10B+)', investors:'Thrive Capital · Alphabet · GV · MGX · Temasek · CapitalG', headcount:'~400',
+    models:[
+      {name:'AlphaFold 3',params:'Not disclosed',purpose:'Protein & biomolecular structure prediction — SOTA on all structure benchmarks; foundational to the field',openSource:true},
+      {name:'Drug Design Engine',params:'Not disclosed',purpose:'Proprietary generative drug design system beyond structure prediction — active molecule design',openSource:false},
+    ],
+    trainingTokens:'Not disclosed',
+    trainingData:'PDB + proprietary experimental data from pharma partnerships',
+    dataScale:'Not disclosed',
+    dataUniqueness:'AlphaFold3 heritage — most validated AI biology model ever; $3B+ pharma deal validation',
+    wetLab:false,
+    benchmarks:'AlphaFold3 SOTA on all protein structure benchmarks (Nature 2024)',
+    publications:'AlphaFold3 (Nature 2024) · multiple structure prediction papers',
+    pipelineTargets:'Multiple undisclosed drug design programmes',
+    therapAreas:'Oncology · Metabolic disease · Immunology (via partners)',
+    pipelineStage:'Discovery (partner-driven)',
+    pharmaPartners:'Eli Lilly (~$1.7B potential) · Novartis (~$1.2B potential) · J&J',
+    techPartners:'Alphabet / Google · DeepMind',
+    takeaways:{
+      br:['Unique biodiversity data moat — Isomorphic uses standard structural databases',
+          'EDEN trained on novel sequences unavailable to any competitor',
+          'Independent company — more agile, broader application mandate than Alphabet subsidiary',
+          'Cross-domain (drug + industrial + agriculture) vs pure drug design',
+          'Genuinely novel training data; Isomorphic depends on PDB (public)'],
+      comp:['43× more capital ($2.6B vs $60M) — incomparable execution resources',
+            'AlphaFold3 — the most trusted model in biology, SOTA on all benchmarks',
+            '$3B+ active pharma deals with Lilly, Novartis and J&J',
+            '~400 staff vs ~80 — far greater execution capacity',
+            'Alphabet infrastructure and Google DeepMind talent pipeline'],
+    }
+  },
+  boltz:{
+    id:'boltz', name:'Boltz Bio', hq:'Cambridge, MA', founded:'2024',
+    color:'#34d399', colorDim:'rgba(52,211,153,0.06)', colorBorder:'rgba(52,211,153,0.2)',
+    totalRaised:'Undisclosed (seed)', lastRound:'Seed', lastRoundDate:'2024',
+    valuation:'Undisclosed', investors:'Undisclosed (MIT spinout)', headcount:'~20',
+    models:[
+      {name:'Boltz-1',params:'Not disclosed',purpose:'All-atom co-folding — first fully open-source model to approach AlphaFold3 accuracy. 1M+ downloads.',openSource:true},
+      {name:'Boltz-2',params:'Not disclosed',purpose:'Binding affinity prediction approaching FEP accuracy at 1,000× the speed',openSource:true},
+      {name:'BoltzGen',params:'Not disclosed',purpose:'Universal binder design — generates proteins to arbitrary targets',openSource:true},
+    ],
+    trainingTokens:'Not disclosed',
+    trainingData:'Protein Data Bank (PDB) + Cambridge Crystallographic Data Centre (CCD)',
+    dataScale:'~200K public structures (PDB)',
+    dataUniqueness:'Fully open-source stack — largest community adoption of any new bio AI model (1M+ downloads, 4K+ GitHub stars)',
+    wetLab:false,
+    benchmarks:'Boltz-1: first open-source to approach AlphaFold3 · Boltz-2: approaches FEP accuracy 1,000× faster',
+    publications:'Boltz-1 preprint (Nov 2024) · Boltz-2 report (2025)',
+    pipelineTargets:'Platform — drug discovery agents for screening and protein design',
+    therapAreas:'Broad (platform)',
+    pipelineStage:'Platform / early',
+    pharmaPartners:'None disclosed',
+    techPartners:'None disclosed',
+    takeaways:{
+      br:['9.7T proprietary tokens vs PDB-only (public) — irreplicable data advantage',
+          '$60M commercial backing vs undisclosed seed — far greater operational runway',
+          'EDEN broader: sequence generation across 1M+ species; Boltz limited to known PDB structures',
+          'Established operations (2019) with commercial pipeline vs 2024 academic spinout',
+          'Applications across drug, industrial and agricultural biology'],
+      comp:['Fully open-source with 1M+ downloads — extraordinary community validation',
+            'Boltz-2 approaches FEP accuracy 1,000× faster — potentially transformative benchmark',
+            'Three models covering folding + affinity + binder design',
+            'Fastest moving team for open publication and benchmarking',
+            'Massive academic adoption = future pipeline of users and collaborators'],
+    }
+  },
+  prima:{
+    id:'prima', name:'Prima Mente', hq:'London / San Francisco / Dubai', founded:'2023',
+    color:'#fb923c', colorDim:'rgba(251,146,60,0.06)', colorBorder:'rgba(251,146,60,0.2)',
+    totalRaised:'Undisclosed (seed)', lastRound:'Seed', lastRoundDate:'2023–24',
+    valuation:'Undisclosed', investors:'Undisclosed', headcount:'~30',
+    models:[
+      {name:'Undisclosed',params:'Not disclosed',purpose:'General-purpose biological foundation models — initial focus on neurology and brain function',openSource:false},
+    ],
+    trainingTokens:'Not disclosed',
+    trainingData:'Proprietary — generates own experimental data across modalities',
+    dataScale:'Not disclosed',
+    dataUniqueness:'Generates own proprietary experimental data (data + model company) focused on neurology',
+    wetLab:true,
+    benchmarks:'Not publicly disclosed',
+    publications:'None public yet',
+    pipelineTargets:'Neurological disease therapeutics · Cognitive enhancement',
+    therapAreas:'Neurology · Alzheimer\'s · Brain health',
+    pipelineStage:'Research / early discovery',
+    pharmaPartners:'Undisclosed',
+    techPartners:'NVIDIA · Nebius · Oxford · Stanford · Salk Institute · Dementia Platform UK',
+    takeaways:{
+      br:['Published model (EDEN-28B, Jan 2026) vs no named public model from Prima Mente',
+          'Larger team (~80 vs ~30) and significantly more capital ($60M vs undisclosed seed)',
+          '9.7T training tokens with named benchmarks vs undisclosed data strategy',
+          'Broader domain coverage: drug + industrial + agriculture vs neurology-only',
+          'Established pharma and tech partnerships vs early-stage network'],
+      comp:['Generates own proprietary experimental data — similar philosophy to BR, applied to neurology',
+            'Dubai office = access to Middle East capital and regulatory environments',
+            'Strong academic network: Oxford, Stanford, Edinburgh, Salk Institute',
+            'Tightly focused neurology thesis may enable faster clinical translation',
+            'NVIDIA + Nebius compute partnerships for training infrastructure'],
+    }
+  },
+  variant:{
+    id:'variant', name:'Variant Bio', hq:'Seattle, WA', founded:'2019',
+    color:'#f472b6', colorDim:'rgba(244,114,182,0.06)', colorBorder:'rgba(244,114,182,0.2)',
+    totalRaised:'Undisclosed (Series B)', lastRound:'Series B', lastRoundDate:'~2021',
+    valuation:'Undisclosed', investors:'SoftBank Vision Fund', headcount:'~60',
+    models:[
+      {name:'AI-assisted (undisclosed)',params:'Not disclosed',purpose:'AI-assisted target identification from human population genomics — kidney, metabolic, rare disease',openSource:false},
+    ],
+    trainingTokens:'Not disclosed',
+    trainingData:'Human population genetics — rare variants from isolated global populations (South Africa, Madagascar, India, Polynesia, NZ)',
+    dataScale:'Multiple cohorts across 10+ global populations',
+    dataUniqueness:'Human genetic diversity as natural experiments — rare loss-of-function variants that validate drug targets in real people',
+    wetLab:false,
+    benchmarks:'Not applicable — human genetics-validated targets (clinical signal, not model benchmark)',
+    publications:'Multiple population genetics papers · Boehringer Ingelheim collaboration (Jan 2026)',
+    pipelineTargets:'Kidney disease · Inflammation · Fibrosis · Muscle disorders',
+    therapAreas:'Metabolic disease · Inflammation · Rare disease',
+    pipelineStage:'Preclinical / lead optimisation',
+    pharmaPartners:'Boehringer Ingelheim (kidney AI targets) · Novo Nordisk (with community benefit-sharing)',
+    techPartners:'Undisclosed',
+    takeaways:{
+      br:['EDEN-28B = generative foundation model; Variant uses AI as a discovery tool on human data',
+          '9.7T tokens across 1M+ species vs human-only population cohorts',
+          'Broader application domains — not limited to human therapeutics',
+          'Data from natural biodiversity captures evolutionary solutions absent in human genomes',
+          'Foundation model builder vs genetics-guided drug hunter — different value proposition'],
+      comp:['Human genetics targets have ~2× higher clinical success rates vs phenotypic screening',
+            'Active $B-scale pharma deals with Boehringer Ingelheim and Novo Nordisk',
+            'Pipeline in preclinical/lead optimisation — further advanced clinically than BR',
+            'SoftBank Vision Fund + two major pharma deals = strong commercial validation',
+            'Benefit-sharing model (4% revenue + 4% equity) = ethical leadership in the space'],
+    }
+  },
 };
 
 function val(v, adv){
@@ -2399,18 +2568,20 @@ function renderIntel(id){
   const comp = INTEL_COMPETITORS[id];
 
   // Selector buttons
-  document.getElementById('intelSel').innerHTML = Object.values(INTEL_COMPETITORS).map(c=>
-    `<button class="intel-sel-btn${c.id===id?' active':''}" onclick="renderIntel('${c.id}')">${c.name}</button>`
-  ).join('');
+  document.getElementById('intelSel').innerHTML = Object.values(INTEL_COMPETITORS).map(c=>{
+    const active = c.id===id;
+    const style = active ? `style="color:${c.color};border-color:${c.colorBorder};background:${c.colorDim}"` : '';
+    return `<button class="intel-sel-btn${active?' active':''}" ${style} onclick="renderIntel('${c.id}')">${c.name}</button>`;
+  }).join('');
 
-  // Takeaways
+  // Takeaways — update competitor box color dynamically
   document.getElementById('intelTakeaways').innerHTML = `
     <div class="intel-tbox br">
       <div class="intel-tbox-title">Basecamp Research strengths</div>
       <ul>${comp.takeaways.br.map(t=>`<li>${t}</li>`).join('')}</ul>
     </div>
-    <div class="intel-tbox comp">
-      <div class="intel-tbox-title">${comp.name} strengths</div>
+    <div class="intel-tbox comp" style="border-color:${comp.colorBorder}">
+      <div class="intel-tbox-title" style="color:${comp.color}">${comp.name} strengths</div>
       <ul>${comp.takeaways.comp.map(t=>`<li>${t}</li>`).join('')}</ul>
     </div>`;
 
