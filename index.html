@@ -207,6 +207,19 @@ input[type="text"]::placeholder { color: #111827; }
   .intel-takeaways { grid-template-columns: 1fr; }
 }
 
+/* Investor sub-headings */
+.investor-subhead { width: 100%; font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); padding: 14px 0 6px; border-bottom: 1px solid var(--border); margin-bottom: 4px; font-weight: 700; flex-basis: 100%; }
+.investor-subhead:first-child { padding-top: 0; }
+
+/* Directory tab dropdown */
+.tab-with-dd { position: relative; }
+.tab-dd { display: none; position: absolute; top: calc(100% + 6px); left: 0; background: var(--bg2); border: 1px solid var(--border); border-radius: 10px; min-width: 230px; z-index: 500; box-shadow: var(--shadow-md); padding: 6px; }
+.tab-with-dd:hover .tab-dd { display: block; }
+.tab-dd-item { padding: 8px 12px; font-size: 12px; font-family: 'IBM Plex Mono', monospace; color: var(--text); cursor: pointer; border-radius: 6px; display: flex; align-items: center; gap: 9px; transition: background 0.1s; white-space: nowrap; }
+.tab-dd-item:hover { background: var(--bg); }
+.tab-dd-dot { width: 7px; height: 7px; border-radius: 2px; flex-shrink: 0; }
+.tab-dd-divider { height: 1px; background: var(--border); margin: 4px 0; }
+
 /* Location search */
 .loc-search-wrap { position: relative; display: inline-flex; align-items: center; }
 .loc-input { background: var(--bg2); border: 1px solid var(--border); color: var(--text); padding: 4px 24px 4px 10px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; border-radius: 4px; outline: none; width: 220px; transition: border-color 0.2s; box-shadow: 0 1px 2px rgba(15,23,42,0.04); }
@@ -445,7 +458,21 @@ footer { padding: 24px 48px; border-top: 1px solid var(--border); display: flex;
 </div>
 
 <div class="tab-bar">
-  <button class="tab-btn active" onclick="switchTab('directory',this)">⊞ &nbsp;Directory</button>
+  <div class="tab-with-dd">
+    <button class="tab-btn active" onclick="switchTab('directory',this)">⊞ &nbsp;Directory</button>
+    <div class="tab-dd">
+      <div class="tab-dd-item" onclick="jumpToCategory(null)"><div class="tab-dd-dot" style="background:#64748b"></div>All categories</div>
+      <div class="tab-dd-divider"></div>
+      <div class="tab-dd-item" onclick="jumpToCategory('foundation')"><div class="tab-dd-dot" style="background:#00b896"></div>Foundation Models</div>
+      <div class="tab-dd-item" onclick="jumpToCategory('discovery')"><div class="tab-dd-dot" style="background:#7c3aed"></div>Drug Discovery &amp; Therapeutics</div>
+      <div class="tab-dd-item" onclick="jumpToCategory('tools')"><div class="tab-dd-dot" style="background:#2563eb"></div>Tools &amp; Platforms</div>
+      <div class="tab-dd-item" onclick="jumpToCategory('automation')"><div class="tab-dd-dot" style="background:#0891b2"></div>Lab Automation</div>
+      <div class="tab-dd-item" onclick="jumpToCategory('health')"><div class="tab-dd-dot" style="background:#ea580c"></div>Clinical &amp; Healthcare AI</div>
+      <div class="tab-dd-item" onclick="jumpToCategory('ai')"><div class="tab-dd-dot" style="background:#475569"></div>Pure AI &amp; Tech</div>
+      <div class="tab-dd-item" onclick="jumpToCategory('investor')"><div class="tab-dd-dot" style="background:#d97706"></div>Investors &amp; Funds</div>
+      <div class="tab-dd-item" onclick="jumpToCategory('accel')"><div class="tab-dd-dot" style="background:#65a30d"></div>Accelerators &amp; Fellowships</div>
+    </div>
+  </div>
   <button class="tab-btn" onclick="switchTab('map',this)">◉ &nbsp;World Map</button>
   <button class="tab-btn" onclick="switchTab('news',this)">◎ &nbsp;News</button>
   <button class="tab-btn" onclick="switchTab('events',this)">◈ &nbsp;Events</button>
@@ -650,44 +677,55 @@ footer { padding: 24px 48px; border-top: 1px solid var(--border); display: flex;
       <div class="cat-label"><div class="cat-tag">Capital</div><div class="cat-name">Investors<br>&amp; Funds</div><div class="cat-count" id="count-investor"></div></div>
       <div class="cat-divider"></div>
       <div class="chips">
-        <span class="chip" data-type="Venture Capital" data-desc="Andreessen Horowitz's dedicated life sciences and AI health fund. Backed Eikon Therapeutics, Natera and numerous AI drug discovery startups. One of the most active VCs in AI bio. Based in San Francisco.">a16z Bio + Health <span class="badge badge-vc">VC</span></span>
-        <span class="chip" data-type="Government Agency (UK)" data-desc="UK's Advanced Research and Invention Agency, modelled on DARPA. Funds high-risk, high-reward scientific research that conventional mechanisms won't support. Active programmes in AI for science and synthetic biology.">ARIA <span class="badge badge-gov">GOV</span></span>
-        <span class="chip" data-type="Government Agency (US)" data-desc="US Advanced Research Projects Agency for Health, created 2022. Mandated to fund moonshot biomedical programmes including AI-driven drug discovery and diagnostics. Based in Washington, DC.">ARPA-H <span class="badge badge-gov">GOV</span></span>
+        <div class="investor-subhead">Seed &amp; Early Stage</div>
+        <span class="chip" data-type="Venture Capital" data-desc="Early-stage deep tech VC backing foundational AI-bio companies. Backed Recursion, Absci and Sana Biotechnology. Consistently one of the most active biotech seed investors in the US.">ARCH Venture Partners <span class="badge badge-vc">VC</span></span>
         <span class="chip" data-type="Venture Capital" data-desc="Biotech seed specialist backing AI-first startups in genomics, oncology and protein engineering. Based in Cambridge, MA.">Atlas Venture <span class="badge badge-vc">VC</span></span>
         <span class="chip" data-type="Venture Capital" data-desc="Berlin-based deep tech VC investing in foundational technology companies across AI, biotech, space and climate. Long-term view on transformative science.">Blue Yard <span class="badge badge-vc">VC</span></span>
-        <span class="chip" data-type="Philanthropy" data-desc="Chan Zuckerberg Initiative. Funds the Human Cell Atlas, CZ Biohub network and open-source computational biology tools including cellxgene and scverse. Based in Redwood City, CA.">CZI <span class="badge badge-phi">PHI</span></span>
-        <span class="chip" data-type="Non-profit / FRO" data-desc="Focused Research Organisation model launching and funding high-risk, high-reward scientific projects between academia and industry. Partners with philanthropists to de-risk ambitious science.">Convergent Research <span class="badge">NP</span></span>
-        <span class="chip" data-type="Government Agency (US)" data-desc="US Defense Advanced Research Projects Agency. Funds high-risk AI-biology programmes including Accelerated Molecular Discovery and the Biological Technologies Office. Based in Arlington, VA.">DARPA <span class="badge badge-gov">GOV</span></span>
-        <span class="chip" data-type="Venture Capital" data-desc="Fidelity's venture capital arm with a strong focus on healthcare and life sciences. One of the most active biotech investors globally, backing companies from seed through IPO.">F Prime <span class="badge badge-vc">VC</span></span>
-        <span class="chip" data-type="Venture Capital" data-desc="European life sciences VC based in the Netherlands. Backs transformative biopharmaceutical and medtech science with a clear path to clinical translation.">Forbion <span class="badge badge-vc">VC</span></span>
-        <span class="chip" data-type="Venture Capital" data-desc="Cambridge MA-based venture creator that pioneered the company-founding model in biotech. Founded Moderna and 100+ companies. AI-native biology is a central investment thesis.">Flagship Pioneering <span class="badge badge-vc">VC</span></span>
-        <span class="chip" data-type="Non-profit / Think Tank" data-desc="Non-profit research institute for transformative technologies in nanotechnology, biotech, AI and longevity. Runs research programmes, workshops and fellowships.">Foresight Institute <span class="badge">NP</span></span>
-        <span class="chip" data-type="Venture Capital" data-desc="Healthcare-focused VC explicitly targeting AI and data science applied to biology. Backed ML-driven clinical development and genomics companies. Based in San Francisco.">Foresite Capital <span class="badge badge-vc">VC</span></span>
-        <span class="chip" data-type="Growth Equity" data-desc="Global growth equity firm managing over $100B. Participated in the Chai Discovery Series B. Invests in scaling technology and healthcare companies.">General Atlantic <span class="badge badge-pe">PE</span></span>
-        <span class="chip" data-type="Corporate Venture Capital" data-desc="Alphabet's independent venture fund. One of the most active CVCs in AI-biology; backed Foundation Medicine and Flatiron Health. Based in Mountain View, CA.">GV <span class="badge badge-cvc">CVC</span></span>
         <span class="chip" data-type="Venture Capital" data-desc="Paris-based early-stage VC focused on deep tech and European frontier technology. Invests in AI, biotech, climate tech and hard-science startups.">HCVC <span class="badge badge-vc">VC</span></span>
-        <span class="chip" data-type="Philanthropy" data-desc="Howard Hughes Medical Institute. US biomedical philanthropy funding investigator-driven AI-biology research including Janelia Research Campus computational imaging work. Based in Chevy Chase, MD.">HHMI <span class="badge badge-phi">PHI</span></span>
         <span class="chip" data-type="Venture Capital" data-desc="UK-based deep tech VC investing in AI, quantum computing and advanced engineering. Backs spin-outs from UK universities with hard scientific or engineering differentiation.">IQ Capital <span class="badge badge-vc">VC</span></span>
-        <span class="chip" data-type="Venture Capital" data-desc="Early-stage deep tech VC backing foundational AI-bio companies. Backed Recursion, Absci and Sana Biotechnology. Consistently one of the most active biotech seed investors in the US.">ARCH Venture Partners <span class="badge badge-vc">VC</span></span>
         <span class="chip" data-type="Venture Capital" data-desc="Menlo Park VC with early AI-biology investments including Twelve Bio and AI-driven diagnostics and drug design platforms.">Khosla Ventures <span class="badge badge-vc">VC</span></span>
-        <span class="chip" data-type="Corporate Venture Capital" data-desc="Illumina's independent investment fund focused on genomics and multi-omics. Invests in companies applying AI to sequencing data, spatial transcriptomics and clinical genomics. Based in San Diego.">Illumina Ventures <span class="badge badge-cvc">CVC</span></span>
+        <span class="chip" data-type="Venture Capital" data-desc="Boston-based VC backing science and engineering-driven startups across biotech, materials, climate and computing. Closely partners with founders at the earliest stages.">Pillar VC <span class="badge badge-vc">VC</span></span>
+        <span class="chip" data-type="Incubator / VC" data-desc="Bristol-based deep tech ecosystem combining incubation (75,000+ sq ft of lab and office space across multiple sites), early-stage VC (SCVC — pre-seed and seed), accelerator programmes and STEM outreach. 150+ companies supported in AI, synthetic biology, quantum and advanced materials. Opening 30,000 sq ft OMX facility 2026.">Science Creates <span class="badge badge-vc">VC</span></span>
+
+        <div class="investor-subhead">Venture Capital</div>
+        <span class="chip" data-type="Venture Capital" data-desc="Andreessen Horowitz's dedicated life sciences and AI health fund. Backed Eikon Therapeutics, Natera and numerous AI drug discovery startups. One of the most active VCs in AI bio. Based in San Francisco.">a16z Bio + Health <span class="badge badge-vc">VC</span></span>
+        <span class="chip" data-type="Venture Capital" data-desc="Fidelity's venture capital arm with a strong focus on healthcare and life sciences. One of the most active biotech investors globally, backing companies from seed through IPO.">F Prime <span class="badge badge-vc">VC</span></span>
+        <span class="chip" data-type="Venture Capital" data-desc="Cambridge MA-based venture creator that pioneered the company-founding model in biotech. Founded Moderna and 100+ companies. AI-native biology is a central investment thesis.">Flagship Pioneering <span class="badge badge-vc">VC</span></span>
+        <span class="chip" data-type="Venture Capital" data-desc="European life sciences VC based in the Netherlands. Backs transformative biopharmaceutical and medtech science with a clear path to clinical translation.">Forbion <span class="badge badge-vc">VC</span></span>
+        <span class="chip" data-type="Venture Capital" data-desc="Healthcare-focused VC explicitly targeting AI and data science applied to biology. Backed ML-driven clinical development and genomics companies. Based in San Francisco.">Foresite Capital <span class="badge badge-vc">VC</span></span>
         <span class="chip" data-type="Venture Capital" data-desc="Science and technology VC with a strong AI-biology thesis. Portfolio includes Absci and Osmo. Based in New York.">Lux Capital <span class="badge badge-vc">VC</span></span>
-        <span class="chip" data-type="Corporate Venture Capital" data-desc="Microsoft's corporate venture fund. Backs AI-biology companies aligned with Azure and the Microsoft-OpenAI ecosystem. Based in Redmond, WA.">M12 <span class="badge badge-cvc">CVC</span></span>
         <span class="chip" data-type="Venture Capital" data-desc="Life sciences-focused VC firm investing in lab-centric companies building tools, platforms and instruments for biological research and drug discovery. Based in San Francisco.">Monograph <span class="badge badge-vc">VC</span></span>
-        <span class="chip" data-type="Government Agency (US)" data-desc="US National Institutes of Health. Funds AI-biology research through the Bridge2AI initiative and NCI's ITCR programme for computational cancer research. Based in Bethesda, MD.">NIH / NCI <span class="badge badge-gov">GOV</span></span>
+        <span class="chip" data-type="Venture Capital" data-desc="Impact-aligned VC with AI-biology as a core theme alongside climate and well-being. Based in San Francisco.">Obvious Ventures <span class="badge badge-vc">VC</span></span>
+        <span class="chip" data-type="Venture Capital" data-desc="Leading European life sciences VC with dedicated industrial biotech and AI-biology theses. Active in AI-driven drug discovery and synthetic biology. Based in Paris.">Sofinnova Partners <span class="badge badge-vc">VC</span></span>
+        <span class="chip" data-type="Venture Capital" data-desc="Leading biotech VC that builds companies from inception alongside scientists. Growing AI-biology portfolio. Based in Boston, MA.">Third Rock Ventures <span class="badge badge-vc">VC</span></span>
+
+        <div class="investor-subhead">Growth, Crossover &amp; Public Markets</div>
+        <span class="chip" data-type="Growth Equity" data-desc="Global growth equity firm managing over $100B. Participated in the Chai Discovery Series B. Invests in scaling technology and healthcare companies.">General Atlantic <span class="badge badge-pe">PE</span></span>
+        <span class="chip" data-type="Crossover Fund" data-desc="Crossover fund investing across public and private biotech with a quantitative, data-intensive approach. Active in AI-enabled drug discovery and genomics. ~$6B AUM. Based in Boston.">RA Capital <span class="badge badge-vc">VC</span></span>
+        <span class="chip" data-type="Investment Company (public, LSE)" data-desc="FTSE-listed life science investment company building and funding cell and gene therapy companies from inception to clinical proof of concept. Long-term patient capital model.">Syncona <span class="badge badge-pe">PE</span></span>
+
+        <div class="investor-subhead">Corporate &amp; Strategic</div>
+        <span class="chip" data-type="Corporate Venture Capital" data-desc="Alphabet's independent venture fund. One of the most active CVCs in AI-biology; backed Foundation Medicine and Flatiron Health. Based in Mountain View, CA.">GV <span class="badge badge-cvc">CVC</span></span>
+        <span class="chip" data-type="Corporate Venture Capital" data-desc="Illumina's independent investment fund focused on genomics and multi-omics. Invests in companies applying AI to sequencing data, spatial transcriptomics and clinical genomics. Based in San Diego.">Illumina Ventures <span class="badge badge-cvc">CVC</span></span>
+        <span class="chip" data-type="Corporate Venture Capital" data-desc="Microsoft's corporate venture fund. Backs AI-biology companies aligned with Azure and the Microsoft-OpenAI ecosystem. Based in Redmond, WA.">M12 <span class="badge badge-cvc">CVC</span></span>
         <span class="chip" data-type="Corporate Investor" data-desc="Investment arm of the Novo Nordisk Foundation and one of the world's largest life sciences investors. Active in AI drug discovery, digital biology and computational genomics. Based in Copenhagen.">Novo Holdings <span class="badge badge-vc">VC</span></span>
         <span class="chip" data-type="Corporate Venture Capital" data-desc="NVIDIA's venture arm launched in 2022. Invests in AI-biology companies using GPU-accelerated computing. Partners in the BioNeMo ecosystem. Based in Santa Clara, CA.">NVIDIA NVentures <span class="badge badge-cvc">CVC</span></span>
-        <span class="chip" data-type="Venture Capital" data-desc="Impact-aligned VC with AI-biology as a core theme alongside climate and well-being. Based in San Francisco.">Obvious Ventures <span class="badge badge-vc">VC</span></span>
-        <span class="chip" data-type="Philanthropy" data-desc="EA-aligned philanthropy funding AI-biology biosafety research, pandemic preparedness and biosecurity. Also funds AI safety work directly relevant to biological risk. Based in San Francisco.">Open Philanthropy <span class="badge badge-phi">PHI</span></span>
-        <span class="chip" data-type="Venture Capital" data-desc="Boston-based VC backing science and engineering-driven startups across biotech, materials, climate and computing. Closely partners with founders at the earliest stages.">Pillar VC <span class="badge badge-vc">VC</span></span>
-        <span class="chip" data-type="Crossover Fund" data-desc="Crossover fund investing across public and private biotech with a quantitative, data-intensive approach. Active in AI-enabled drug discovery and genomics. ~$6B AUM. Based in Boston.">RA Capital <span class="badge badge-vc">VC</span></span>
-        <span class="chip" data-type="Non-profit / Philanthropy" data-desc="Philanthropy organisation funding breakthrough research in science and technology. Supports high-impact scientific projects with interest in longevity, AI safety and transformative biology.">Renaissance Philanthropy <span class="badge">NP</span></span>
-        <span class="chip" data-type="Incubator / VC" data-desc="Bristol-based deep tech ecosystem combining incubation (75,000+ sq ft of lab and office space across multiple sites), early-stage VC (SCVC — pre-seed and seed), accelerator programmes and STEM outreach. 150+ companies supported in AI, synthetic biology, quantum and advanced materials. Opening 30,000 sq ft OMX facility 2026.">Science Creates <span class="badge badge-vc">VC</span></span>
-        <span class="chip" data-type="Philanthropy" data-desc="Eric Schmidt's philanthropy. Funds AI-biology at the frontier including the Virtual Institute for Scientific Software, Convergent Research and AI-enabled environmental monitoring. Based in New York.">Schmidt Futures <span class="badge badge-phi">PHI</span></span>
-        <span class="chip" data-type="Venture Capital" data-desc="Leading European life sciences VC with dedicated industrial biotech and AI-biology theses. Active in AI-driven drug discovery and synthetic biology. Based in Paris.">Sofinnova Partners <span class="badge badge-vc">VC</span></span>
+
+        <div class="investor-subhead">Government &amp; Public Funding</div>
+        <span class="chip" data-type="Government Agency (UK)" data-desc="UK's Advanced Research and Invention Agency, modelled on DARPA. Funds high-risk, high-reward scientific research that conventional mechanisms won't support. Active programmes in AI for science and synthetic biology.">ARIA <span class="badge badge-gov">GOV</span></span>
+        <span class="chip" data-type="Government Agency (US)" data-desc="US Advanced Research Projects Agency for Health, created 2022. Mandated to fund moonshot biomedical programmes including AI-driven drug discovery and diagnostics. Based in Washington, DC.">ARPA-H <span class="badge badge-gov">GOV</span></span>
+        <span class="chip" data-type="Government Agency (US)" data-desc="US Defense Advanced Research Projects Agency. Funds high-risk AI-biology programmes including Accelerated Molecular Discovery and the Biological Technologies Office. Based in Arlington, VA.">DARPA <span class="badge badge-gov">GOV</span></span>
+        <span class="chip" data-type="Government Agency (US)" data-desc="US National Institutes of Health. Funds AI-biology research through the Bridge2AI initiative and NCI's ITCR programme for computational cancer research. Based in Bethesda, MD.">NIH / NCI <span class="badge badge-gov">GOV</span></span>
         <span class="chip" data-type="Sovereign Fund" data-desc="Sovereign AI investment fund backing AI infrastructure, foundation models and AI applications at scale with strategic national and economic focus.">SovAI fund <span class="badge badge-gov">GOV</span></span>
-        <span class="chip" data-type="Investment Company (public, LSE)" data-desc="FTSE-listed life science investment company building and funding cell and gene therapy companies from inception to clinical proof of concept. Long-term patient capital model.">Syncona <span class="badge badge-pe">PE</span></span>
-        <span class="chip" data-type="Venture Capital" data-desc="Leading biotech VC that builds companies from inception alongside scientists. Growing AI-biology portfolio. Based in Boston, MA.">Third Rock Ventures <span class="badge badge-vc">VC</span></span>
+
+        <div class="investor-subhead">Philanthropy &amp; Foundations</div>
+        <span class="chip" data-type="Non-profit / FRO" data-desc="Focused Research Organisation model launching and funding high-risk, high-reward scientific projects between academia and industry. Partners with philanthropists to de-risk ambitious science.">Convergent Research <span class="badge">NP</span></span>
+        <span class="chip" data-type="Philanthropy" data-desc="Chan Zuckerberg Initiative. Funds the Human Cell Atlas, CZ Biohub network and open-source computational biology tools including cellxgene and scverse. Based in Redwood City, CA.">CZI <span class="badge badge-phi">PHI</span></span>
+        <span class="chip" data-type="Non-profit / Think Tank" data-desc="Non-profit research institute for transformative technologies in nanotechnology, biotech, AI and longevity. Runs research programmes, workshops and fellowships.">Foresight Institute <span class="badge">NP</span></span>
+        <span class="chip" data-type="Philanthropy" data-desc="Howard Hughes Medical Institute. US biomedical philanthropy funding investigator-driven AI-biology research including Janelia Research Campus computational imaging work. Based in Chevy Chase, MD.">HHMI <span class="badge badge-phi">PHI</span></span>
+        <span class="chip" data-type="Philanthropy" data-desc="EA-aligned philanthropy funding AI-biology biosafety research, pandemic preparedness and biosecurity. Also funds AI safety work directly relevant to biological risk. Based in San Francisco.">Open Philanthropy <span class="badge badge-phi">PHI</span></span>
+        <span class="chip" data-type="Non-profit / Philanthropy" data-desc="Philanthropy organisation funding breakthrough research in science and technology. Supports high-impact scientific projects with interest in longevity, AI safety and transformative biology.">Renaissance Philanthropy <span class="badge">NP</span></span>
+        <span class="chip" data-type="Philanthropy" data-desc="Eric Schmidt's philanthropy. Funds AI-biology at the frontier including the Virtual Institute for Scientific Software, Convergent Research and AI-enabled environmental monitoring. Based in New York.">Schmidt Futures <span class="badge badge-phi">PHI</span></span>
         <span class="chip" data-type="Philanthropy" data-desc="Major UK biomedical charity with substantial AI and data science in health programmes. Funds open-science infrastructure, AI-genomics research and global health data initiatives. Based in London.">Wellcome Trust <span class="badge badge-phi">PHI</span></span>
       </div>
     </div>
@@ -1710,6 +1748,18 @@ fetch('./data/companies.json')
   .then(r => r.json())
   .then(applyCompaniesData)
   .catch(() => {});
+
+// ── DIRECTORY DROPDOWN ──
+function jumpToCategory(cat){
+  document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+  document.getElementById('panel-directory').classList.add('active');
+  document.querySelector('.tab-with-dd .tab-btn').classList.add('active');
+  activeCat = cat;
+  document.querySelectorAll('.leg').forEach(l=>l.classList.toggle('active-filter', l.dataset.filter===cat));
+  applyFilters();
+  document.getElementById('panel-directory').scrollIntoView({behavior:'smooth'});
+}
 
 // ── TABS ──
 let mapReady=false;
