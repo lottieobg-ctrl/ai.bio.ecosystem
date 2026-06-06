@@ -141,6 +141,69 @@ input[type="text"]::placeholder { color: #8fa0b8; }
 .cat-automation .chip { background: var(--cyan-dim); border-color: var(--cyan-border); color: var(--cyan-text); }
 .cat-automation .chip:hover { background: #06b6d422; border-color: var(--cyan); color: var(--cyan); transform: translateY(-1px); }
 
+/* INTEL TAB */
+.intel-tab-btn { color: #f59e0b !important; }
+.intel-tab-btn.active { color: #f59e0b !important; border-bottom-color: #f59e0b !important; background: rgba(245,158,11,0.06) !important; }
+#panel-intel { min-height: 600px; }
+.intel-gate { display: flex; align-items: center; justify-content: center; min-height: 480px; padding: 60px 48px; }
+.intel-gate-box { background: #0c1118; border: 1px solid #1a2233; border-radius: 16px; padding: 40px 44px; max-width: 380px; width: 100%; text-align: center; }
+.intel-gate-icon { font-size: 28px; margin-bottom: 16px; opacity: 0.6; }
+.intel-gate-title { font-family: 'Syne', sans-serif; font-size: 22px; font-weight: 800; color: #f59e0b; margin-bottom: 8px; }
+.intel-gate-sub { font-size: 11px; color: #4a5568; margin-bottom: 28px; line-height: 1.6; }
+.intel-pw-input { width: 100%; background: var(--bg); border: 1px solid #1a2233; color: #e2e8f0; padding: 10px 14px; font-family: 'IBM Plex Mono', monospace; font-size: 13px; border-radius: 7px; outline: none; margin-bottom: 12px; text-align: center; letter-spacing: 0.08em; transition: border-color 0.2s; }
+.intel-pw-input:focus { border-color: #f59e0b; box-shadow: 0 0 0 3px rgba(245,158,11,0.12); }
+.intel-pw-btn { width: 100%; background: rgba(245,158,11,0.15); border: 1px solid rgba(245,158,11,0.4); color: #f59e0b; padding: 10px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; border-radius: 7px; cursor: pointer; transition: all 0.15s; }
+.intel-pw-btn:hover { background: rgba(245,158,11,0.25); }
+.intel-pw-err { font-size: 11px; color: #fb923c; margin-top: 10px; min-height: 16px; }
+.intel-content { padding: 36px 48px 80px; }
+.intel-header { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 32px; flex-wrap: wrap; gap: 16px; }
+.intel-header-title { font-family: 'Syne', sans-serif; font-size: 28px; font-weight: 800; color: #f1f5f9; letter-spacing: -0.02em; }
+.intel-header-sub { font-size: 11px; color: #4a5568; margin-top: 4px; letter-spacing: 0.06em; }
+.intel-sel { display: flex; gap: 6px; flex-wrap: wrap; }
+.intel-sel-btn { padding: 5px 14px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; background: var(--bg2); border: 1px solid var(--border); color: #94a3b8; border-radius: 4px; cursor: pointer; transition: all 0.15s; }
+.intel-sel-btn.active { color: #00d4aa; border-color: rgba(0,212,170,0.4); background: rgba(0,212,170,0.08); }
+.intel-co-header { display: grid; grid-template-columns: 200px 1fr 1fr; gap: 0; margin-bottom: 0; }
+.intel-co-cell { padding: 16px 20px; }
+.intel-co-cell.br { background: rgba(245,158,11,0.07); border: 1px solid rgba(245,158,11,0.2); border-radius: 10px 0 0 0; }
+.intel-co-cell.comp { background: rgba(0,212,170,0.06); border: 1px solid rgba(0,212,170,0.2); border-left: none; border-radius: 0 10px 0 0; }
+.intel-co-name { font-family: 'Syne', sans-serif; font-size: 15px; font-weight: 800; }
+.intel-co-name.br { color: #f59e0b; }
+.intel-co-name.comp { color: #00d4aa; }
+.intel-co-meta { font-size: 10px; color: #4a5568; margin-top: 3px; letter-spacing: 0.06em; }
+.intel-section { margin-bottom: 2px; }
+.intel-section-hdr { display: grid; grid-template-columns: 200px 1fr 1fr; background: #0a0f16; border: 1px solid #0f1825; border-top: none; }
+.intel-section-label { padding: 8px 20px; font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #2a3a50; font-weight: 600; grid-column: 1 / -1; border-bottom: 1px solid #0f1825; }
+.intel-row { display: grid; grid-template-columns: 200px 1fr 1fr; border: 1px solid #0f1825; border-top: none; transition: background 0.1s; }
+.intel-row:hover { background: rgba(255,255,255,0.015); }
+.intel-row:last-child { border-radius: 0 0 10px 10px; overflow: hidden; }
+.intel-label { padding: 12px 20px; font-size: 11px; color: #4a5568; border-right: 1px solid #0f1825; display: flex; align-items: center; }
+.intel-val { padding: 12px 20px; font-size: 12px; color: #b8c8d8; line-height: 1.5; display: flex; align-items: center; gap: 8px; }
+.intel-val.br-side { border-right: 1px solid #0f1825; }
+.intel-val.highlight-br { color: #fcd34d; background: rgba(245,158,11,0.05); }
+.intel-val.highlight-comp { color: #7de8d6; background: rgba(0,212,170,0.04); }
+.adv { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
+.adv-br { background: #f59e0b; }
+.adv-comp { background: #00d4aa; }
+.adv-neu { background: #2a3a50; }
+.intel-tag { font-size: 9px; padding: 1px 6px; border-radius: 3px; font-weight: 600; letter-spacing: 0.06em; }
+.intel-tag-yes { background: rgba(0,212,170,0.15); color: #00d4aa; border: 1px solid rgba(0,212,170,0.3); }
+.intel-tag-no { background: rgba(148,163,184,0.1); color: #4a5568; border: 1px solid rgba(148,163,184,0.2); }
+.intel-takeaways { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 32px; }
+.intel-tbox { background: var(--bg2); border: 1px solid var(--border); border-radius: 10px; padding: 18px 20px; }
+.intel-tbox.br { border-color: rgba(245,158,11,0.25); }
+.intel-tbox.comp { border-color: rgba(0,212,170,0.2); }
+.intel-tbox-title { font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 600; margin-bottom: 12px; }
+.intel-tbox.br .intel-tbox-title { color: #f59e0b; }
+.intel-tbox.comp .intel-tbox-title { color: #00d4aa; }
+.intel-tbox ul { list-style: none; display: flex; flex-direction: column; gap: 7px; }
+.intel-tbox li { font-size: 11px; color: #94a3b8; line-height: 1.5; padding-left: 14px; position: relative; }
+.intel-tbox li::before { content: '→'; position: absolute; left: 0; color: #2a3a50; }
+@media (max-width: 720px) {
+  .intel-content { padding: 24px 20px 60px; }
+  .intel-co-header, .intel-section-hdr, .intel-row { grid-template-columns: 100px 1fr 1fr; }
+  .intel-takeaways { grid-template-columns: 1fr; }
+}
+
 /* Location search */
 .loc-search-wrap { position: relative; display: inline-flex; align-items: center; }
 .loc-input { background: var(--bg2); border: 1px solid var(--border); color: #e2e8f0; padding: 4px 24px 4px 10px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; border-radius: 4px; outline: none; width: 220px; transition: border-color 0.2s; }
@@ -383,6 +446,7 @@ footer { padding: 24px 48px; border-top: 1px solid var(--border); display: flex;
   <button class="tab-btn" onclick="switchTab('map',this)">◉ &nbsp;World Map</button>
   <button class="tab-btn" onclick="switchTab('news',this)">◎ &nbsp;News</button>
   <button class="tab-btn" onclick="switchTab('events',this)">◈ &nbsp;Events</button>
+  <button class="tab-btn intel-tab-btn" onclick="switchTab('intel',this)">⬡ &nbsp;Intel</button>
 </div>
 
 <!-- DIRECTORY -->
@@ -730,6 +794,30 @@ footer { padding: 24px 48px; border-top: 1px solid var(--border); display: flex;
       <div class="events-spinner"></div>Loading events…
     </div>
     <div id="eventsContent"></div>
+  </div>
+</div>
+
+<div class="panel" id="panel-intel">
+  <div class="intel-gate" id="intelGate">
+    <div class="intel-gate-box">
+      <div class="intel-gate-icon">⬡</div>
+      <div class="intel-gate-title">Competitive Intel</div>
+      <div class="intel-gate-sub">Internal use only — Basecamp Research team</div>
+      <input class="intel-pw-input" id="intelPwInput" type="password" placeholder="Password" onkeydown="if(event.key==='Enter')checkIntelPw()">
+      <button class="intel-pw-btn" onclick="checkIntelPw()">Access</button>
+      <div class="intel-pw-err" id="intelPwErr"></div>
+    </div>
+  </div>
+  <div class="intel-content" id="intelContent" style="display:none">
+    <div class="intel-header">
+      <div>
+        <div class="intel-header-title">Competitive Intelligence</div>
+        <div class="intel-header-sub">Basecamp Research vs competitors — internal only</div>
+      </div>
+      <div class="intel-sel" id="intelSel"></div>
+    </div>
+    <div class="intel-takeaways" id="intelTakeaways"></div>
+    <div id="intelGrid"></div>
   </div>
 </div>
 
@@ -2224,6 +2312,193 @@ function renderEvents(filter){
   html += '<div class="events-disclaimer">Dates marked TBC are approximate. AUTO events are auto-discovered and may need verification.</div>';
   content.innerHTML = html;
 }
+
+// ── INTEL TAB ──
+const _INTEL_PW = 'beyondknownbiology';
+let _intelUnlocked = sessionStorage.getItem('intelUnlocked') === '1';
+let _intelActive = 'chai';
+
+function checkIntelPw(){
+  const val = document.getElementById('intelPwInput').value;
+  if(val === _INTEL_PW){
+    _intelUnlocked = true;
+    sessionStorage.setItem('intelUnlocked','1');
+    document.getElementById('intelGate').style.display = 'none';
+    document.getElementById('intelContent').style.display = 'block';
+    renderIntel(_intelActive);
+  } else {
+    document.getElementById('intelPwErr').textContent = 'Incorrect password.';
+    document.getElementById('intelPwInput').value = '';
+  }
+}
+
+const BASECAMP = {
+  name:'Basecamp Research', hq:'London, UK', founded:'2019',
+  totalRaised:'$60M USD', lastRound:'Series B', lastRoundDate:'2024',
+  valuation:'Undisclosed', investors:'Balderton Capital', headcount:'~80',
+  models:[{name:'EDEN-28B',params:'28B',purpose:'Multi-modal biological design — therapeutic proteins, genetic medicines, enzyme engineering',openSource:false}],
+  trainingTokens:'9.7 trillion nucleotide tokens',
+  trainingData:'BaseData™ — 10B+ novel genes from 1M+ species (rare & novel organisms)',
+  dataScale:'10B+ novel genes · 1M+ species',
+  dataUniqueness:'Biodiversity genomics from rare natural organisms — no other database at this scale',
+  wetLab:false,
+  benchmarks:'Not publicly disclosed',
+  publications:'EDEN family paper (Jan 2026)',
+  pipelineTargets:'Therapeutic proteins · Genetic medicines — multiple modalities',
+  therapAreas:'Drug discovery · Industrial biotech · Agriculture',
+  pipelineStage:'Preclinical / discovery',
+  pharmaPartners:'Undisclosed',
+  techPartners:'Anthropic · NVIDIA · PacBio · Ultima Genomics',
+};
+
+const INTEL_COMPETITORS = {
+  chai:{
+    id:'chai', name:'Chai Discovery', hq:'San Francisco, CA', founded:'2023',
+    color:'#00d4aa', colorDim:'rgba(0,212,170,0.06)', colorBorder:'rgba(0,212,170,0.2)',
+    totalRaised:'$230M', lastRound:'Series B ($130M)', lastRoundDate:'Dec 2025',
+    valuation:'$1.3B', investors:'OpenAI · General Catalyst · Thrive Capital', headcount:'~60',
+    models:[
+      {name:'Chai-1',params:'Not disclosed',purpose:'Multimodal structure prediction — protein, DNA, RNA, small molecules, covalent modifications',openSource:true},
+      {name:'Chai-2',params:'Not disclosed',purpose:'Zero-shot de novo antibody design — 100× improvement over prior methods',openSource:false},
+    ],
+    trainingTokens:'Not disclosed',
+    trainingData:'Protein Data Bank + proprietary structural data',
+    dataScale:'Not disclosed',
+    dataUniqueness:'Integrated wet lab for AI-guided design-test cycles',
+    wetLab:true,
+    benchmarks:'Chai-1 rivals AlphaFold3 on structure prediction benchmarks',
+    publications:'Chai-1 preprint (Oct 2024) · Chai-2 (2025)',
+    pipelineTargets:'Antibody therapeutics (de novo designed)',
+    therapAreas:'Oncology · Immunology',
+    pipelineStage:'Early discovery',
+    pharmaPartners:'Undisclosed (structural biology partnerships)',
+    techPartners:'OpenAI (investor)',
+    takeaways:{
+      br:['Vastly larger & more novel training data — 9.7T tokens vs undisclosed but likely smaller',
+          'Older, more operationally proven (2019 vs 2023)',
+          'Cross-modality: proteins, nucleic acids, enzymes, agriculture in one model',
+          'Unique biodiversity moat — data Chai cannot replicate',
+          'NVIDIA, PacBio & Anthropic as strategic tech stack partners'],
+      comp:['4× more capital raised ($230M vs $60M) — longer runway',
+            'Unicorn valuation ($1.3B) signals strong market conviction',
+            'Wet lab for rapid in-house design-test cycles',
+            'Chai-1 openly benchmarked & rivals AlphaFold3 — high credibility',
+            'Backed by OpenAI — deep LLM infrastructure advantage'],
+    }
+  }
+};
+
+function val(v, adv){
+  const dot = `<div class="adv adv-${adv||'neu'}"></div>`;
+  return dot + v;
+}
+function tag(bool){ return bool ? '<span class="intel-tag intel-tag-yes">Yes</span>' : '<span class="intel-tag intel-tag-no">No</span>'; }
+
+function renderIntel(id){
+  _intelActive = id;
+  const comp = INTEL_COMPETITORS[id];
+
+  // Selector buttons
+  document.getElementById('intelSel').innerHTML = Object.values(INTEL_COMPETITORS).map(c=>
+    `<button class="intel-sel-btn${c.id===id?' active':''}" onclick="renderIntel('${c.id}')">${c.name}</button>`
+  ).join('');
+
+  // Takeaways
+  document.getElementById('intelTakeaways').innerHTML = `
+    <div class="intel-tbox br">
+      <div class="intel-tbox-title">Basecamp Research strengths</div>
+      <ul>${comp.takeaways.br.map(t=>`<li>${t}</li>`).join('')}</ul>
+    </div>
+    <div class="intel-tbox comp">
+      <div class="intel-tbox-title">${comp.name} strengths</div>
+      <ul>${comp.takeaways.comp.map(t=>`<li>${t}</li>`).join('')}</ul>
+    </div>`;
+
+  // Comparison table
+  const sections = [
+    {
+      label:'Funding & Business',
+      rows:[
+        ['Total raised',         val(BASECAMP.totalRaised,'neu'),   val(comp.totalRaised,'comp')],
+        ['Last round',           val(BASECAMP.lastRound+' · '+BASECAMP.lastRoundDate,'neu'), val(comp.lastRound+' · '+comp.lastRoundDate,'comp')],
+        ['Valuation',            val(BASECAMP.valuation,'neu'),     val(comp.valuation,'comp')],
+        ['Key investors',        val(BASECAMP.investors,'neu'),     val(comp.investors,'neu')],
+        ['Founded',              val(BASECAMP.founded,'br'),        val(comp.founded,'neu')],
+        ['HQ',                   val(BASECAMP.hq,'neu'),            val(comp.hq,'neu')],
+        ['Est. headcount',       val(BASECAMP.headcount,'br'),      val(comp.headcount,'neu')],
+      ]
+    },
+    {
+      label:'AI Models',
+      rows:[
+        ['Flagship model(s)',  val(BASECAMP.models.map(m=>m.name).join(' · '),'br'),  val(comp.models.map(m=>m.name).join(' · '),'neu')],
+        ['Parameters',         val(BASECAMP.models.map(m=>m.params).join(', '),'br'), val(comp.models.map(m=>m.params||'N/D').join(', '),'neu')],
+        ['Model purpose',      val(BASECAMP.models[0].purpose,'br'), val(comp.models.map(m=>m.name+': '+m.purpose).join('<br>'),'neu')],
+        ['Open source',        val(tag(BASECAMP.models[0].openSource),'neu'), val(tag(comp.models.some(m=>m.openSource)),'neu')],
+        ['Training data',      val(BASECAMP.trainingData,'br'),    val(comp.trainingData,'neu')],
+        ['Training tokens',    val(BASECAMP.trainingTokens,'br'),  val(comp.trainingTokens,'neu')],
+      ]
+    },
+    {
+      label:'Data & Scientific Moat',
+      rows:[
+        ['Data scale',         val(BASECAMP.dataScale,'br'),       val(comp.dataScale,'neu')],
+        ['Data uniqueness',    val(BASECAMP.dataUniqueness,'br'),  val(comp.dataUniqueness,'neu')],
+        ['Integrated wet lab', val(tag(BASECAMP.wetLab),'neu'),    val(tag(comp.wetLab),'comp')],
+      ]
+    },
+    {
+      label:'Pipeline & Partnerships',
+      rows:[
+        ['Pipeline targets',   val(BASECAMP.pipelineTargets,'neu'),  val(comp.pipelineTargets,'neu')],
+        ['Therapeutic areas',  val(BASECAMP.therapAreas,'br'),       val(comp.therapAreas,'neu')],
+        ['Pipeline stage',     val(BASECAMP.pipelineStage,'neu'),    val(comp.pipelineStage,'neu')],
+        ['Pharma partners',    val(BASECAMP.pharmaPartners,'neu'),   val(comp.pharmaPartners,'neu')],
+        ['Tech partners',      val(BASECAMP.techPartners,'br'),      val(comp.techPartners,'neu')],
+      ]
+    },
+    {
+      label:'Credibility & Benchmarks',
+      rows:[
+        ['Key publications',   val(BASECAMP.publications,'neu'),   val(comp.publications,'comp')],
+        ['Benchmarks',         val(BASECAMP.benchmarks,'neu'),     val(comp.benchmarks,'comp')],
+      ]
+    },
+  ];
+
+  const coHeader = `
+    <div class="intel-co-header">
+      <div class="intel-co-cell"></div>
+      <div class="intel-co-cell br"><div class="intel-co-name br">Basecamp Research</div><div class="intel-co-meta">${BASECAMP.hq} · Est. ${BASECAMP.founded}</div></div>
+      <div class="intel-co-cell comp"><div class="intel-co-name comp" style="color:${comp.color}">${comp.name}</div><div class="intel-co-meta">${comp.hq} · Est. ${comp.founded}</div></div>
+    </div>`;
+
+  const rows = sections.map(sec=>`
+    <div class="intel-section">
+      <div class="intel-section-hdr"><div class="intel-section-label">${sec.label}</div></div>
+      ${sec.rows.map(([label,br,co])=>`
+        <div class="intel-row">
+          <div class="intel-label">${label}</div>
+          <div class="intel-val br-side">${br}</div>
+          <div class="intel-val">${co}</div>
+        </div>`).join('')}
+    </div>`).join('');
+
+  document.getElementById('intelGrid').innerHTML = coHeader + rows;
+}
+
+// Handle tab switching for intel (check auth)
+const _origSwitchTab = switchTab;
+switchTab = function(tab, btn){
+  _origSwitchTab(tab, btn);
+  if(tab === 'intel'){
+    if(_intelUnlocked){
+      document.getElementById('intelGate').style.display = 'none';
+      document.getElementById('intelContent').style.display = 'block';
+      renderIntel(_intelActive);
+    }
+  }
+};
 
 </script>
 </body>
