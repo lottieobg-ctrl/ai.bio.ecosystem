@@ -45,7 +45,7 @@ h1 .x { color: var(--teal); }
 
 /* PANELS */
 .panel { display: none; }
-.panel.active { display: block; }
+.panel.active { display: block; flex: 1; }
 
 /* DIRECTORY */
 #panel-directory { padding: 40px 48px 80px; }
@@ -480,7 +480,7 @@ footer { padding: 24px 48px; border-top: 1px solid var(--border); display: flex;
     <div class="sleg" onclick="filterStage('series-c')" data-stage="series-c"><div class="sdot" style="background:#ec4899"></div>Series C+</div>
     <div class="sleg" onclick="filterStage('public')" data-stage="public"><div class="sdot" style="background:#10b981"></div>Public</div>
     <div class="sleg" onclick="filterStage('acquired')" data-stage="acquired"><div class="sdot" style="background:#60a5fa"></div>Acquired</div>
-    <div class="sleg" onclick="filterStage('nonprofit')" data-stage="nonprofit"><div class="sdot" style="background:#00d4aa"></div>Non-profit / Grant</div>
+    <div class="sleg" onclick="filterStage('nonprofit')" data-stage="nonprofit"><div class="sdot" style="background:#00d4aa"></div>Non-profit (NP)</div>
   </div>
   <div class="stage-row" id="locationRow">
     <span class="stage-label">Location</span>
@@ -826,7 +826,7 @@ footer { padding: 24px 48px; border-top: 1px solid var(--border); display: flex;
 </div>
 
 <footer>
-  <div class="footer-note"><strong>NP</strong> = non-profit or research institute &nbsp;·&nbsp; Compiled from public sources &nbsp;·&nbsp; May 2026</div>
+  <div class="footer-note">Compiled from public sources &nbsp;·&nbsp; May 2026</div>
   <div class="footer-creator">
     <span>Created by Lottie O'Brien Gore</span>
     <a class="linkedin-btn" href="https://www.linkedin.com/in/lottie-o-brien-gore-878302129/" target="_blank" rel="noopener" title="LinkedIn">
