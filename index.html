@@ -148,6 +148,8 @@ input[type="text"]::placeholder { color: #111827; }
 .intel-tab-btn { color: #d97706 !important; border-color: #fde68a !important; background: #fffbeb !important; }
 .intel-tab-btn.active { color: #ffffff !important; background: #d97706 !important; border-color: #d97706 !important; box-shadow: 0 2px 8px rgba(217,119,6,0.3) !important; }
 #panel-intel { min-height: calc(100vh - 160px); }
+body.intel-active footer { display: none; }
+.intel-footer-note { padding: 20px 48px 28px; font-size: 10px; color: var(--muted); border-top: 1px solid var(--border); margin-top: 24px; letter-spacing: 0.04em; }
 .intel-gate { display: flex; align-items: center; justify-content: center; min-height: calc(100vh - 220px); padding: 60px 48px; }
 .intel-gate-box { background: var(--bg2); border: 1px solid var(--border); border-radius: 16px; padding: 40px 44px; max-width: 380px; width: 100%; text-align: center; box-shadow: var(--shadow-md); }
 .intel-gate-icon { font-size: 28px; margin-bottom: 16px; opacity: 0.5; }
@@ -860,6 +862,7 @@ footer { padding: 24px 48px; border-top: 1px solid var(--border); display: flex;
     </div>
     <div class="intel-takeaways" id="intelTakeaways"></div>
     <div id="intelGrid"></div>
+    <div class="intel-footer-note">Internal use only · Basecamp Research · Compiled from public sources</div>
   </div>
 </div>
 
@@ -2717,6 +2720,7 @@ function renderIntel(id){
 const _origSwitchTab = switchTab;
 switchTab = function(tab, btn){
   _origSwitchTab(tab, btn);
+  document.body.classList.toggle('intel-active', tab === 'intel');
   if(tab === 'intel'){
     if(_intelUnlocked){
       document.getElementById('intelGate').style.display = 'none';
