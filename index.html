@@ -237,6 +237,28 @@ input[type="text"]::placeholder { color: #111827; }
 .pipeline-legend-dot { width: 10px; height: 10px; border-radius: 50%; }
 .pipeline-name-link { cursor: pointer; color: var(--teal); text-decoration: underline; text-underline-offset: 2px; text-decoration-color: rgba(0,184,150,0.4); transition: text-decoration-color 0.15s; }
 .pipeline-name-link:hover { text-decoration-color: var(--teal); }
+
+/* FM comparison table */
+.fm-chart { background: var(--bg2); border: 1px solid var(--border); border-radius: 12px; padding: 24px 28px 20px; margin-bottom: 32px; box-shadow: var(--shadow); }
+.fm-title { font-family: 'Roobert', sans-serif; font-size: 16px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+.fm-sub { font-size: 12px; color: var(--muted); margin-bottom: 20px; }
+.fm-table { width: 100%; border-collapse: collapse; font-size: 12px; }
+.fm-table th { text-align: left; font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); font-weight: 600; padding: 0 12px 10px; border-bottom: 2px solid var(--border); white-space: nowrap; }
+.fm-table th:first-child { padding-left: 0; }
+.fm-row td { padding: 10px 12px; border-top: 1px solid #f1f5f9; vertical-align: middle; }
+.fm-row td:first-child { padding-left: 0; }
+.fm-row:hover td { background: #fafbfd; }
+.fm-company { font-weight: 600; color: var(--text); white-space: nowrap; }
+.fm-company.highlight { color: #d97706; }
+.fm-model { color: var(--muted); font-size: 11px; margin-top: 1px; }
+.fm-modality { display: inline-flex; align-items: center; gap: 5px; font-size: 11px; }
+.fm-modality-dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
+.fm-params { white-space: nowrap; }
+.fm-params-bar { height: 6px; border-radius: 3px; margin-top: 4px; transition: width 0.3s; }
+.fm-tag { display: inline-block; font-size: 10px; padding: 1px 7px; border-radius: 3px; font-weight: 600; white-space: nowrap; }
+.fm-tag-yes { background: #f0fdf4; color: #166534; border: 1px solid #bbf7d0; }
+.fm-tag-no  { background: #f8fafc; color: #64748b; border: 1px solid #e2e8f0; }
+.fm-output { color: var(--text); line-height: 1.5; max-width: 280px; }
 @media (max-width: 720px) { .pipeline-stage-row th:first-child { min-width: 90px; } .pipeline-company-row td:first-child { font-size: 11px; } }
 
 /* Investor sub-headings */
@@ -897,6 +919,7 @@ footer { padding: 16px 48px; border-top: 1px solid var(--border); display: flex;
     <!-- View: Overview (default) -->
     <div id="intelViewOverview">
       <div id="pipelineChart"></div>
+      <div id="fmChart"></div>
     </div>
 
     <!-- View: Competitor comparison (shown when a competitor is selected) -->
@@ -2583,6 +2606,110 @@ function renderPipelineChart() {
     </div>`;
 }
 
+// ── FOUNDATION MODEL COMPARISON ──
+const FM_MODELS = [
+  // sorted by param count descending (unknowns last)
+  {
+    company:'BioMap', model:'xTrimo', highlight:false,
+    modality:'DNA · RNA · Protein · Cell', modalityColor:'#7c3aed',
+    params:210, paramsLabel:'~210B (claimed)', trainData:'Multi-modal: DNA, RNA, protein, cellular & systems data',
+    openSource:false, keyOutput:'Cross-modality drug design; Sanofi collaboration worth up to $1B in milestones',
+  },
+  {
+    company:'EvolutionaryScale (CZI)', model:'ESM3', highlight:false,
+    modality:'Protein', modalityColor:'#0891b2',
+    params:98, paramsLabel:'98B', trainData:'2.78B protein sequences, structures & functions',
+    openSource:true, keyOutput:'Simultaneous sequence/structure/function reasoning; generated esmGFP — a novel fluorescent protein representing 500M yrs of evolution',
+  },
+  {
+    company:'Arc Institute', model:'Evo 2', highlight:false,
+    modality:'DNA', modalityColor:'#059669',
+    params:40, paramsLabel:'40B', trainData:'128,000 whole genomes across the tree of life',
+    openSource:true, keyOutput:'Largest open-source biological AI model; predicts gene expression, variant effects and whole-genome generation',
+  },
+  {
+    company:'Basecamp Research', model:'EDEN-28B', highlight:true,
+    modality:'DNA · RNA · Protein', modalityColor:'#d97706',
+    params:28, paramsLabel:'28B', trainData:'9.7T nucleotide tokens — 10B+ novel genes from 1M+ species (natural biodiversity)',
+    openSource:false, keyOutput:'First model trained on natural biodiversity at this scale; designs therapeutic proteins and genetic medicines across multiple modalities',
+  },
+  {
+    company:'Profluent', model:'ProGen2', highlight:false,
+    modality:'Protein', modalityColor:'#0891b2',
+    params:6.4, paramsLabel:'~6.4B (largest)', trainData:'~280M protein sequences (UniRef + BFD + proprietary)',
+    openSource:true, keyOutput:'First AI proteins proven functional in wet lab (Nature Biotech 2023); OpenCRISPR-1 in use at thousands of labs globally',
+  },
+  {
+    company:'Isomorphic Labs', model:'AlphaFold3', highlight:false,
+    modality:'Structure (all-atom)', modalityColor:'#2563eb',
+    params:null, paramsLabel:'Not disclosed', trainData:'PDB + proprietary experimental data from pharma partnerships',
+    openSource:false, keyOutput:'SOTA on all protein & biomolecular structure benchmarks (Nature 2024); backbone of $3B+ pharma partnerships',
+  },
+  {
+    company:'Boltz Bio', model:'Boltz-1 / Boltz-2', highlight:false,
+    modality:'Structure (all-atom)', modalityColor:'#2563eb',
+    params:null, paramsLabel:'Not disclosed', trainData:'Protein Data Bank (~200K structures) + CCD',
+    openSource:true, keyOutput:'First open-source model to approach AlphaFold3 accuracy; Boltz-2 approaches FEP binding affinity at 1,000× speed',
+  },
+  {
+    company:'Chai Discovery', model:'Chai-1 / Chai-2', highlight:false,
+    modality:'Structure · Antibody design', modalityColor:'#2563eb',
+    params:null, paramsLabel:'Not disclosed', trainData:'PDB + proprietary structural data',
+    openSource:false, keyOutput:'Chai-1 rivals AlphaFold3; Chai-2 achieves 100× improvement over prior methods in de novo antibody design',
+  },
+  {
+    company:'Inceptive', model:'ATOM-1', highlight:false,
+    modality:'RNA', modalityColor:'#ea580c',
+    params:null, paramsLabel:'Not disclosed', trainData:'Proprietary chemical mapping data (RNA structural/functional)',
+    openSource:false, keyOutput:'RNA therapeutic design (mRNA medicines, gene silencing); tight AI + wet lab loop for internal pipeline',
+  },
+  {
+    company:'Bioptimus', model:'H-Optimus / M-Optimus', highlight:false,
+    modality:'Pathology · Multiomics', modalityColor:'#7c3aed',
+    params:null, paramsLabel:'Not disclosed', trainData:'Histopathology images + spatial transcriptomics + genomics',
+    openSource:false, keyOutput:'H-Optimus #1 on pathology benchmarks; M-Optimus integrates pathology + transcriptomics + genomics; used by 16 of top 20 pharma companies',
+  },
+];
+
+const FM_MAX_PARAMS = 210; // for bar scaling
+
+function renderFMChart(){
+  const rows = FM_MODELS.map(m => {
+    const barWidth = m.params ? Math.round((m.params / FM_MAX_PARAMS) * 100) : 0;
+    const barColor = m.highlight ? '#d97706' : 'rgba(0,184,150,0.6)';
+    const paramsCell = `<div class="fm-params">${m.paramsLabel}${m.params ? `<div class="fm-params-bar" style="width:${barWidth}%;background:${barColor};max-width:120px"></div>` : ''}</div>`;
+    const osTag = `<span class="fm-tag ${m.openSource?'fm-tag-yes':'fm-tag-no'}">${m.openSource?'Open source':'Proprietary'}</span>`;
+    const modalityCell = `<div class="fm-modality"><div class="fm-modality-dot" style="background:${m.modalityColor}"></div>${m.modality}</div>`;
+    return `<tr class="fm-row">
+      <td><div class="fm-company${m.highlight?' highlight':''}">${m.company}</div><div class="fm-model">${m.model}</div></td>
+      <td>${modalityCell}</td>
+      <td>${paramsCell}</td>
+      <td style="max-width:220px;color:var(--muted)">${m.trainData}</td>
+      <td>${osTag}</td>
+      <td class="fm-output">${m.keyOutput}</td>
+    </tr>`;
+  }).join('');
+
+  document.getElementById('fmChart').innerHTML = `
+    <div class="fm-chart">
+      <div class="fm-title">Biological Foundation Model Comparison</div>
+      <div class="fm-sub">Key models across the AI × biology landscape — data source, scale and outputs</div>
+      <div style="overflow-x:auto">
+        <table class="fm-table">
+          <thead><tr>
+            <th>Company / Model</th>
+            <th>Modality</th>
+            <th>Parameters</th>
+            <th>Training Data</th>
+            <th>Access</th>
+            <th>Key Output / Benchmark</th>
+          </tr></thead>
+          <tbody>${rows}</tbody>
+        </table>
+      </div>
+    </div>`;
+}
+
 const INTEL_COMPETITORS = {
   chai:{
     id:'chai', name:'Chai Discovery', hq:'San Francisco, CA', founded:'2023',
@@ -2797,6 +2924,7 @@ function tag(bool){ return bool ? '<span class="intel-tag intel-tag-yes">Yes</sp
 
 function intelShowOverview(){
   renderPipelineChart();
+  renderFMChart();
   document.getElementById('intelViewOverview').style.display = '';
   document.getElementById('intelViewCompare').style.display = 'none';
   // Clear active state on all selector buttons
