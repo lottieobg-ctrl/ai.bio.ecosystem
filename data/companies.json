@@ -1,6 +1,48 @@
 {
-  "last_updated": "2026-06-07T13:12:22Z",
+  "last_updated": "2026-06-07T00:00:00Z",
   "companies": [
+    {
+      "name": "XtalPi",
+      "funding": "Series D. ~$400M+ raised. Backed by Sequoia China, Tencent, Google. Founded 2016.",
+      "stage": "series-c",
+      "needs_review": false, "review_headline": "", "review_url": "", "proposed_funding": "", "proposed_stage": "", "found_at": ""
+    },
+    {
+      "name": "Exscientia",
+      "funding": "Acquired by Recursion Pharmaceuticals, October 2024, for ~$688M.",
+      "stage": "acquired",
+      "needs_review": false, "review_headline": "", "review_url": "", "proposed_funding": "", "proposed_stage": "", "found_at": ""
+    },
+    {
+      "name": "Evotec",
+      "funding": "Public company (Deutsche Börse: EVT). ~€700M revenue. 850+ partners.",
+      "stage": "public",
+      "needs_review": false, "review_headline": "", "review_url": "", "proposed_funding": "", "proposed_stage": "", "found_at": ""
+    },
+    {
+      "name": "Nimbus Therapeutics",
+      "funding": "~$800M+ raised. Sold TYK2 inhibitor to Gilead for $6B (2022). Backed by Atlas Venture, 5AM Ventures.",
+      "stage": "series-c",
+      "needs_review": false, "review_headline": "", "review_url": "", "proposed_funding": "", "proposed_stage": "", "found_at": ""
+    },
+    {
+      "name": "Verge Genomics",
+      "funding": "Series B. ~$98M raised. Backed by Casdin Capital, Andreessen Horowitz, Menlo Ventures.",
+      "stage": "series-b",
+      "needs_review": false, "review_headline": "", "review_url": "", "proposed_funding": "", "proposed_stage": "", "found_at": ""
+    },
+    {
+      "name": "AbCellera",
+      "funding": "Public (Nasdaq: ABCL). ~$700M raised pre-IPO. Backed by Eli Lilly, ARCH Venture Partners.",
+      "stage": "public",
+      "needs_review": false, "review_headline": "", "review_url": "", "proposed_funding": "", "proposed_stage": "", "found_at": ""
+    },
+    {
+      "name": "Valo Health",
+      "funding": "~$700M+ raised. Backed by Flagship Pioneering, Bain Capital, GV.",
+      "stage": "series-c",
+      "needs_review": false, "review_headline": "", "review_url": "", "proposed_funding": "", "proposed_stage": "", "found_at": ""
+    },
     {
       "name": "Variant Bio",
       "funding": "Series B. Backed by SoftBank Vision Fund. Pharma partnerships with Boehringer Ingelheim and Novo Nordisk.",

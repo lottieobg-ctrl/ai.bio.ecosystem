@@ -1,5 +1,18 @@
 [
   {
+    "name": "AI // Bio Night — Cambridge MA",
+    "date": "2026-06-11",
+    "end_date": "2026-06-11",
+    "location": "Cambridge, MA, USA",
+    "url": "https://lu.ma/h0b6fy7p",
+    "type": "meetup",
+    "tags": ["AI", "biology", "networking", "drug discovery"],
+    "virtual": false,
+    "description": "An evening bringing together researchers and early-stage companies at the intersection of AI and Bio. Speakers from Basecamp Research, IMU Biosciences, Boltz, MIT and Cellino. Doors 6pm · Talks 6:30–7:30pm · Pizza & networking until 9pm. Organised by Georg Wachter & Charlotte O'Brien Gore.",
+    "source": "luma",
+    "auto": false
+  },
+  {
     "name": "BIO International Convention 2026",
     "date": "2026-06-08",
     "end_date": "2026-06-11",

@@ -595,6 +595,13 @@ footer { padding: 16px 48px; border-top: 1px solid var(--border); display: flex;
         <span class="chip" data-type="Company" data-desc="AI-driven microbiome research platform applying a 'Lab-in-the-Loop' approach — high-throughput anaerobic microbiome experiments paired with ML predictions. Builds biobanks linking microbiome interventions (drugs, diet) to biological outcomes to make human microbiology computable. Based at LabCentral, Cambridge MA. Founded 2025.">Outpost Bio</span>
         <span class="chip" data-type="Company" data-desc="Genomic drug discovery company leveraging human genetic diversity to identify and validate novel drug targets. Studies populations with exceptional health traits to find naturally occurring genetic experiments. Uses AI to discover targets — including kidney targets in partnership with Boehringer Ingelheim. Collaboration with Novo Nordisk includes benefit-sharing with partner communities. Pipeline in inflammation, fibrosis and muscle disorders. Backed by SoftBank Vision Fund. Seattle-based.">Variant Bio</span>
         <span class="chip" data-type="Company" data-desc="AI-powered oncology drug discovery combining patient-derived tumour organoids with multimodal data and a predictive engine that forecasts individual patient drug response with 90% accuracy. O-Predict supports clinical trials by anticipating endpoints and identifying biomarkers; O-Target identifies novel therapeutic targets. Focus on PDAC, CRC and KRAS-mutant cancers. Based at Gustave Roussy campus, Villejuif, France. €11M seed.">Orakl Oncology</span>
+        <span class="chip" data-type="Company" data-desc="AI and quantum physics-powered drug discovery platform combining machine learning, quantum chemistry simulations and lab automation robotics. Tools include XmartChem (intelligent synthesis), XFEP (free energy calculations) and XMolGen (generative chemistry). Significant pharma partnerships. Founded 2016. Boston / Shenzhen.">XtalPi</span>
+        <span class="chip" data-type="Company (acquired by Recursion, Oct 2024)" data-desc="AI-first drug design company that pioneered putting AI at the centre of drug discovery. Developed the first AI-designed drug candidate to enter Phase I clinical trials. Acquired by Recursion Pharmaceuticals in October 2024 for ~$688M. Oxford-based.">Exscientia</span>
+        <span class="chip" data-type="Company (public)" data-desc="Global drug discovery and development CRO combining AI with experimental platforms at scale. Just-Evotec Biologics division integrates AI with continuous biomanufacturing. 850+ academic and pharma partners across 60+ countries. Public company. Hamburg-based.">Evotec</span>
+        <span class="chip" data-type="Company" data-desc="AI-guided drug discovery focused on structurally precise small molecules. Sold its TYK2 inhibitor (now approved as Sotyktu) to Gilead for $6B in 2022 — one of the largest AI-originated drug deals ever. Active pipeline in STING, CDK2 and NASH. Cambridge, MA.">Nimbus Therapeutics</span>
+        <span class="chip" data-type="Company" data-desc="AI drug discovery platform for neurodegenerative disease using the CONVERGE® platform — one of the largest proprietary multi-omics databases derived directly from human tissue. Lead candidate VRG50635 (PI3Kα activator for ALS) in clinical trials. Pipeline spans ALS, Parkinson's and FTD. San Francisco.">Verge Genomics</span>
+        <span class="chip" data-type="Company (public, Nasdaq)" data-desc="AI-powered antibody discovery platform combining deep learning with high-throughput experimental biology. Developed bamlanivimab, the first FDA-authorised COVID-19 antibody. 40+ pharma partners including Eli Lilly. Internal pipeline in endocrinology, immunology and oncology. Public (Nasdaq: ABCL). Vancouver.">AbCellera</span>
+        <span class="chip" data-type="Company" data-desc="AI drug discovery platform using real-world human data, causal inference and computational chemistry to identify targets and design small molecules. Integrates biology, chemistry and data science in a closed-loop discovery engine. Boston-based.">Valo Health</span>
       </div>
     </div>
     <div class="cat-separator"></div>
@@ -948,6 +955,13 @@ const ORGS = [
   {name:'Outpost Bio',cat:'discovery',type:'Company',lat:42.36,lng:-71.10,desc:"AI-driven microbiome research platform using a 'Lab-in-the-Loop' approach pairing high-throughput anaerobic microbiome experiments with ML. Builds biobanks linking microbiome interventions to biological outcomes. Based at LabCentral, Cambridge MA."},
   {name:'Variant Bio',cat:'discovery',type:'Company',lat:47.61,lng:-122.33,desc:'Genomic drug discovery company leveraging human genetic diversity to identify novel drug targets. Studies populations with exceptional health traits and uses AI to discover targets — including kidney targets with Boehringer Ingelheim. Collaboration with Novo Nordisk includes benefit-sharing with partner communities. Pipeline in inflammation, fibrosis and muscle disorders. Backed by SoftBank Vision Fund. Seattle-based.'},
   {name:'Orakl Oncology',cat:'discovery',type:'Company',lat:48.79,lng:2.36,desc:'AI-powered oncology drug discovery using patient-derived tumour organoids and multimodal data. Predictive engine forecasts individual patient drug response with 90% accuracy. O-Predict for clinical trial support; O-Target for therapeutic target identification. Focus on PDAC, CRC and KRAS-mutant cancers. €11M seed. Based at Gustave Roussy campus, Villejuif, France.'},
+  {name:'XtalPi',cat:'discovery',type:'Company',lat:42.36,lng:-71.10,desc:'AI and quantum physics-powered drug discovery combining machine learning, quantum chemistry simulations and lab automation robotics. Tools include XmartChem (intelligent synthesis), XFEP (free energy calculations) and XMolGen (generative chemistry). Founded 2016. Boston / Shenzhen.'},
+  {name:'Exscientia',cat:'discovery',type:'Company (acquired by Recursion, Oct 2024)',lat:51.75,lng:-1.25,desc:'AI-first drug design company that pioneered AI-centred drug discovery. Developed the first AI-designed drug candidate to enter Phase I clinical trials. Acquired by Recursion in October 2024 for ~$688M. Oxford-based.'},
+  {name:'Evotec',cat:'discovery',type:'Company (public)',lat:53.55,lng:10.00,desc:'Global drug discovery and development CRO combining AI with experimental platforms. Just-Evotec Biologics integrates AI with continuous biomanufacturing. 850+ academic and pharma partners across 60+ countries. Public company. Hamburg-based.'},
+  {name:'Nimbus Therapeutics',cat:'discovery',type:'Company',lat:42.36,lng:-71.10,desc:'AI-guided drug discovery focused on structurally precise small molecules. Sold TYK2 inhibitor (now Sotyktu) to Gilead for $6B — one of the largest AI-originated drug deals. Active pipeline in STING, CDK2 and NASH. Cambridge, MA.'},
+  {name:'Verge Genomics',cat:'discovery',type:'Company',lat:37.79,lng:-122.40,desc:'AI drug discovery for neurodegeneration using CONVERGE® — a proprietary multi-omics database from human tissue. Lead candidate VRG50635 for ALS in clinical trials. Pipeline spans ALS, Parkinson\'s and FTD. San Francisco.'},
+  {name:'AbCellera',cat:'discovery',type:'Company (public, Nasdaq)',lat:49.26,lng:-123.12,desc:'AI-powered antibody discovery combining deep learning with high-throughput biology. Developed bamlanivimab (first FDA-authorised COVID-19 antibody). 40+ pharma partners including Eli Lilly. Internal pipeline in endocrinology, immunology and oncology. Public (Nasdaq: ABCL). Vancouver.'},
+  {name:'Valo Health',cat:'discovery',type:'Company',lat:42.36,lng:-71.06,desc:'AI drug discovery platform using real-world human data, causal inference and computational chemistry. Closed-loop engine integrating biology, chemistry and data science for target identification and small molecule design. Boston-based.'},
   {name:'Ineffable Intelligence',cat:'ai',type:'Company',lat:51.51,lng:-0.08,desc:'Building infrastructure and systems for superintelligence. Develops large-scale reinforcement learning that learns from experience rather than human data. Collaborating with NVIDIA on specialised GPU infrastructure for RL at scale. Founded by David Silver, creator of AlphaGo. London-based.'},
   {name:'Inherent Labs',cat:'ai',type:'Company',lat:51.51,lng:-0.09,desc:'London-based AI company. Currently in stealth.'},
   {name:'Zeon Systems',cat:'automation',type:'Company',lat:37.77,lng:-122.43,desc:"AI-powered robotics for scientific lab automation. Natural language protocol descriptions drive a perception, control and manipulation stack with sub-millimetre precision. Automates the 'long tail' of science — fine manipulations and complex protocols that remain manual. YC X25. San Francisco."},
@@ -1510,6 +1524,8 @@ const STAGES = {
   'Xaira':'series-a', 'NOETIK':'series-a', 'Bioptimus':'series-a',
   'Lila Sciences':'seed', 'Medra':'seed', 'Boltz Bio':'seed',
   'Outpost Bio':'seed', 'Zeon Systems':'seed', 'Ineffable Intelligence':'seed', 'Variant Bio':'series-b', 'Orakl Oncology':'seed',
+  'XtalPi':'series-c', 'Exscientia':'acquired', 'Evotec':'public', 'Nimbus Therapeutics':'series-c',
+  'Verge Genomics':'series-b', 'AbCellera':'public', 'Valo Health':'series-c',
   'Prima Mente':'seed', 'Edison Scientific':'seed', 'Phylo Bio':'seed', 'Phylo':'seed', 'Drosera Bio':'seed',
   'Gandeeva Therapeutics':'seed', 'Alterome Therapeutics':'seed',
 };
@@ -2261,8 +2277,18 @@ const MONTH_NAMES_SHORT = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP'
 const EVENT_TYPE_LABELS = {conference:'Conference',workshop:'Workshop',webinar:'Webinar',hackathon:'Hackathon',summit:'Summit',seminar:'Seminar',meetup:'Meetup'};
 
 function loadEvents(){
-  _eventsData = [...EVENTS_INLINE].sort((a,b) => a.date.localeCompare(b.date));
-  renderEvents(_eventsActiveFilter);
+  const today = new Date().toISOString().split('T')[0];
+  fetch('./data/events.json')
+    .then(r => r.ok ? r.json() : [])
+    .catch(() => [])
+    .then(fileEvents => {
+      const fileUrls = new Set(fileEvents.map(e => e.url));
+      const inline = EVENTS_INLINE.filter(e => !fileUrls.has(e.url));
+      _eventsData = [...fileEvents, ...inline]
+        .filter(e => (e.end_date || e.date) >= today)
+        .sort((a,b) => a.date.localeCompare(b.date));
+      renderEvents(_eventsActiveFilter);
+    });
 }
 
 function eventsFilter(filter, btn){

@@ -1,0 +1,34 @@
+name: Scrape Luma AI×Bio Events
+
+on:
+  schedule:
+    # Every Monday and Thursday at 7am UTC
+    - cron: '0 7 * * 1,4'
+  workflow_dispatch:
+
+jobs:
+  scrape-events:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Scrape Luma city pages
+        run: python scripts/scrape_luma.py
+
+      - name: Commit if events changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/events.json
+          git diff --staged --quiet || git commit -m "Auto: Luma AI×Bio events update [$(date -u +%Y-%m-%d)]"
+          git push
