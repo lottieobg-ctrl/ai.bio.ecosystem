@@ -2572,9 +2572,10 @@ function renderPipelineChart() {
       if (i !== co.stage) return '<td></td>';
       const color = co.highlight ? PIPELINE_HIGHLIGHT_COLOR : PIPELINE_COLORS[co.stage];
       const cls = co.highlight ? ' highlight' : '';
-      const clickHandler = co.intelId ? ` onclick="renderIntel('${co.intelId}')" style="cursor:pointer"` : '';
+      const clickAttr = co.intelId ? ` onclick="renderIntel('${co.intelId}')"` : '';
+      const cursor = co.intelId ? ';cursor:pointer' : '';
       const tooltip = co.intelId ? `${co.name}: ${co.note} — click to compare` : `${co.name}: ${co.note}`;
-      return `<td><div class="pipeline-dot${cls}"${clickHandler} style="background:${color}${co.intelId?';cursor:pointer':''}" title="${tooltip}"></div></td>`;
+      return `<td><div class="pipeline-dot${cls}"${clickAttr} style="background:${color}${cursor}" title="${tooltip}"></div></td>`;
     }).join('');
     const nameCls = co.highlight ? ' highlight' : '';
     const nameContent = co.intelId
