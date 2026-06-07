@@ -2611,12 +2611,6 @@ function renderPipelineChart() {
 const FM_MODELS = [
   // sorted by param count descending (unknowns last)
   {
-    company:'BioMap', model:'xTrimo', highlight:false,
-    modality:'DNA · RNA · Protein · Cell', modalityColor:'#7c3aed',
-    params:210, paramsLabel:'~210B (claimed)', trainData:'Multi-modal: DNA, RNA, protein, cellular & systems data',
-    openSource:false, keyOutput:'Cross-modality drug design; Sanofi collaboration worth up to $1B in milestones',
-  },
-  {
     company:'EvolutionaryScale (CZI)', model:'ESM3', highlight:false,
     modality:'Protein', modalityColor:'#0891b2',
     params:98, paramsLabel:'98B', trainData:'2.78B protein sequences, structures & functions',
@@ -2672,7 +2666,7 @@ const FM_MODELS = [
   },
 ];
 
-const FM_MAX_PARAMS = 210; // for bar scaling
+const FM_MAX_PARAMS = 98; // for bar scaling (ESM3 is largest with verified count)
 
 function renderFMChart(){
   const rows = FM_MODELS.map(m => {
