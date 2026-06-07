@@ -211,6 +211,29 @@ input[type="text"]::placeholder { color: #111827; }
   .intel-takeaways { grid-template-columns: 1fr; }
 }
 
+/* Pipeline chart */
+.pipeline-chart { background: var(--bg2); border: 1px solid var(--border); border-radius: 12px; padding: 24px 28px 20px; margin-bottom: 32px; box-shadow: var(--shadow); }
+.pipeline-title { font-family: 'Roobert', sans-serif; font-size: 16px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+.pipeline-sub { font-size: 12px; color: var(--muted); margin-bottom: 20px; }
+.pipeline-table { width: 100%; border-collapse: collapse; }
+.pipeline-group-row th { padding: 4px 0 2px; font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); font-weight: 600; text-align: center; border-bottom: 2px solid var(--border); }
+.pipeline-group-row th.discovery { border-bottom-color: #7c3aed; color: #7c3aed; }
+.pipeline-group-row th.clinical  { border-bottom-color: #0891b2; color: #0891b2; }
+.pipeline-group-row th.goal      { border-bottom-color: #059669; color: #059669; }
+.pipeline-stage-row th { padding: 6px 4px 10px; font-size: 11px; color: var(--muted); font-weight: 400; text-align: center; white-space: nowrap; }
+.pipeline-stage-row th:first-child { text-align: left; min-width: 160px; }
+.pipeline-company-row td { padding: 5px 4px; text-align: center; border-top: 1px solid #f1f5f9; }
+.pipeline-company-row td:first-child { text-align: left; font-size: 12px; color: var(--text); font-weight: 500; padding-left: 0; white-space: nowrap; }
+.pipeline-company-row td:first-child.highlight { color: #d97706; font-weight: 700; }
+.pipeline-company-row:hover td { background: #fafbfd; }
+.pipeline-dot { width: 14px; height: 14px; border-radius: 50%; margin: 0 auto; transition: transform 0.15s; cursor: default; }
+.pipeline-dot:hover { transform: scale(1.3); }
+.pipeline-dot.highlight { box-shadow: 0 0 0 3px rgba(217,119,6,0.25); }
+.pipeline-legend { display: flex; align-items: center; gap: 20px; margin-top: 14px; flex-wrap: wrap; }
+.pipeline-legend-item { display: flex; align-items: center; gap: 6px; font-size: 11px; color: var(--muted); }
+.pipeline-legend-dot { width: 10px; height: 10px; border-radius: 50%; }
+@media (max-width: 720px) { .pipeline-stage-row th:first-child { min-width: 90px; } .pipeline-company-row td:first-child { font-size: 11px; } }
+
 /* Investor sub-headings */
 .investor-subhead { width: 100%; font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); padding: 14px 0 6px; border-bottom: 1px solid var(--border); margin-bottom: 4px; font-weight: 700; flex-basis: 100%; }
 .investor-subhead:first-child { padding-top: 0; }
@@ -865,6 +888,7 @@ footer { padding: 16px 48px; border-top: 1px solid var(--border); display: flex;
       </div>
       <div class="intel-sel" id="intelSel"></div>
     </div>
+    <div id="pipelineChart"></div>
     <div class="intel-takeaways" id="intelTakeaways"></div>
     <div id="intelGrid"></div>
   </div>
@@ -2437,6 +2461,103 @@ const BASECAMP = {
   techPartners:'Anthropic · NVIDIA · PacBio · Ultima Genomics',
 };
 
+// ── PIPELINE CHART ──
+const PIPELINE_STAGES = [
+  {key:'model',       label:'Model Building',   group:'discovery', groupLabel:'Discovery'},
+  {key:'target',      label:'Target Discovery',  group:'discovery', groupLabel:'Discovery'},
+  {key:'preclinical', label:'Preclinical',       group:'clinical',  groupLabel:'In Clinical Development'},
+  {key:'phase1',      label:'Phase I',           group:'clinical',  groupLabel:'In Clinical Development'},
+  {key:'phase2',      label:'Phase II–III',      group:'clinical',  groupLabel:'In Clinical Development'},
+  {key:'approved',    label:'Approved',          group:'goal',      groupLabel:'Goal'},
+];
+
+// stage index: 0=Model Building, 1=Target Discovery, 2=Preclinical, 3=Phase I, 4=Phase II-III, 5=Approved
+const PIPELINE_COMPANIES = [
+  {name:'Recursion',          stage:4, note:'Multiple Phase II programmes (incl. Exscientia assets)'},
+  {name:'Insilico Medicine',  stage:4, note:'ISM001-055 (IPF) Phase II — among first AI-designed drugs in clinic'},
+  {name:'Nimbus Therapeutics',stage:4, note:'TYK2 inhibitor sold to Gilead (approved as Sotyktu); new pipeline Phase I–II'},
+  {name:'AbCellera',          stage:4, note:'ABCL635 (hot flashes) Phase II; multiple Phase I programmes'},
+  {name:'Schrödinger',        stage:3, note:'SGR-1505 (MCL) in Phase I/II'},
+  {name:'Verge Genomics',     stage:3, note:'VRG50635 (ALS PI3Kα activator) Phase I'},
+  {name:'Isomorphic Labs',    stage:3, note:'Phase I programmes via Lilly, Novartis and J&J partnerships'},
+  {name:'Evotec',             stage:2, note:'Many preclinical programmes via CRO and co-ownership model'},
+  {name:'XtalPi',             stage:2, note:'Multiple preclinical programmes across pharma partners'},
+  {name:'Chai Discovery',     stage:2, note:'Preclinical antibody programmes via Chai-2 platform'},
+  {name:'Variant Bio',        stage:2, note:'Preclinical in inflammation, fibrosis and muscle disorders'},
+  {name:'Valo Health',        stage:2, note:'Several preclinical programmes in cardiometabolic disease'},
+  {name:'Owkin',              stage:2, note:'Federated learning applied to oncology biomarker programmes'},
+  {name:'BenevolentAI',       stage:1, note:'Platform rebuild after Phase II setbacks; targets identified'},
+  {name:'Profluent',          stage:1, note:'OpenCRISPR-1 in active lab use; therapeutic pipeline early-stage'},
+  {name:'Basecamp Research',  stage:1, note:'EDEN-28B applied to therapeutic protein and genetic medicine design', highlight:true},
+  {name:'Xaira',              stage:1, note:'Generative platform; therapeutic applications beginning'},
+  {name:'Boltz Bio',          stage:0, note:'Open-source platform; no internal pipeline'},
+  {name:'Prima Mente',        stage:0, note:'Foundation model in development; neurology focus'},
+];
+
+const PIPELINE_COLORS = [
+  'rgba(0,184,150,0.18)',  // 0 Model Building
+  'rgba(0,184,150,0.35)',  // 1 Target Discovery
+  'rgba(0,184,150,0.52)',  // 2 Preclinical
+  'rgba(0,184,150,0.68)',  // 3 Phase I
+  '#00b896',               // 4 Phase II-III
+  '#007a64',               // 5 Approved
+];
+const PIPELINE_HIGHLIGHT_COLOR = '#d97706';
+
+function renderPipelineChart() {
+  const numStages = PIPELINE_STAGES.length;
+  // Build group spans
+  const groups = [];
+  PIPELINE_STAGES.forEach((s, i) => {
+    const last = groups[groups.length - 1];
+    if (last && last.key === s.group) { last.span++; }
+    else { groups.push({key: s.group, label: s.groupLabel, span: 1}); }
+  });
+
+  const groupHeaders = `<tr class="pipeline-group-row">
+    <th></th>
+    ${groups.map(g => `<th colspan="${g.span}" class="${g.key}">${g.label}</th>`).join('')}
+  </tr>`;
+
+  const stageHeaders = `<tr class="pipeline-stage-row">
+    <th></th>
+    ${PIPELINE_STAGES.map(s => `<th>${s.label}</th>`).join('')}
+  </tr>`;
+
+  const rows = PIPELINE_COMPANIES.map(co => {
+    const cells = PIPELINE_STAGES.map((s, i) => {
+      if (i !== co.stage) return '<td></td>';
+      const color = co.highlight ? PIPELINE_HIGHLIGHT_COLOR : PIPELINE_COLORS[co.stage];
+      const cls = co.highlight ? ' highlight' : '';
+      return `<td><div class="pipeline-dot${cls}" style="background:${color}" title="${co.name}: ${co.note}"></div></td>`;
+    }).join('');
+    const nameCls = co.highlight ? ' highlight' : '';
+    return `<tr class="pipeline-company-row">
+      <td class="${nameCls}">${co.name}</td>${cells}
+    </tr>`;
+  }).join('');
+
+  const legend = `
+    <div class="pipeline-legend">
+      <div class="pipeline-legend-item"><div class="pipeline-legend-dot" style="background:${PIPELINE_COLORS[0]}"></div>Model Building</div>
+      <div class="pipeline-legend-item"><div class="pipeline-legend-dot" style="background:${PIPELINE_COLORS[2]}"></div>Preclinical</div>
+      <div class="pipeline-legend-item"><div class="pipeline-legend-dot" style="background:${PIPELINE_COLORS[3]}"></div>Phase I</div>
+      <div class="pipeline-legend-item"><div class="pipeline-legend-dot" style="background:${PIPELINE_COLORS[4]}"></div>Phase II–III · darker = further along</div>
+      <div class="pipeline-legend-item"><div class="pipeline-legend-dot" style="background:${PIPELINE_HIGHLIGHT_COLOR}"></div>Basecamp Research</div>
+    </div>`;
+
+  document.getElementById('pipelineChart').innerHTML = `
+    <div class="pipeline-chart">
+      <div class="pipeline-title">Pipeline & Clinical Development</div>
+      <div class="pipeline-sub">Where each company sits across the development continuum — hover dots for details</div>
+      <table class="pipeline-table">
+        <thead>${groupHeaders}${stageHeaders}</thead>
+        <tbody>${rows}</tbody>
+      </table>
+      ${legend}
+    </div>`;
+}
+
 const INTEL_COMPETITORS = {
   chai:{
     id:'chai', name:'Chai Discovery', hq:'San Francisco, CA', founded:'2023',
@@ -2651,6 +2772,7 @@ function tag(bool){ return bool ? '<span class="intel-tag intel-tag-yes">Yes</sp
 
 function renderIntel(id){
   _intelActive = id;
+  renderPipelineChart();
   const comp = INTEL_COMPETITORS[id];
 
   // Selector buttons
