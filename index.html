@@ -164,6 +164,9 @@ input[type="text"]::placeholder { color: #111827; }
 .intel-header { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 32px; flex-wrap: wrap; gap: 16px; }
 .intel-header-title { font-family: 'Roobert', sans-serif; font-size: 28px; font-weight: 800; color: var(--text); letter-spacing: -0.02em; }
 .intel-header-sub { font-size: 12px; color: var(--muted); margin-top: 4px; letter-spacing: 0.06em; }
+.intel-back-btn { display: inline-flex; align-items: center; gap: 6px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: var(--muted); background: var(--bg); border: 1px solid var(--border); border-radius: 6px; padding: 6px 14px; cursor: pointer; margin-bottom: 20px; transition: all 0.15s; }
+.intel-back-btn:hover { color: var(--text); border-color: #94a3b8; background: #e8edf5; }
+.intel-compare-header { font-family: 'Roobert', sans-serif; font-size: 18px; font-weight: 700; color: var(--text); margin-bottom: 20px; }
 .intel-sel { display: flex; gap: 6px; flex-wrap: wrap; }
 .intel-sel-btn { padding: 5px 14px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; background: var(--bg2); border: 1px solid var(--border); color: var(--muted); border-radius: 4px; cursor: pointer; transition: all 0.15s; box-shadow: 0 1px 2px rgba(15,23,42,0.04); }
 .intel-sel-btn.active { color: var(--teal); border-color: var(--teal-border); background: var(--teal-dim); }
@@ -884,13 +887,23 @@ footer { padding: 16px 48px; border-top: 1px solid var(--border); display: flex;
     <div class="intel-header">
       <div>
         <div class="intel-header-title">Competitive Intelligence</div>
-        <div class="intel-header-sub">Basecamp Research vs competitors — internal only</div>
+        <div class="intel-header-sub">Basecamp Research — internal only</div>
       </div>
       <div class="intel-sel" id="intelSel"></div>
     </div>
-    <div id="pipelineChart"></div>
-    <div class="intel-takeaways" id="intelTakeaways"></div>
-    <div id="intelGrid"></div>
+
+    <!-- View: Overview (default) -->
+    <div id="intelViewOverview">
+      <div id="pipelineChart"></div>
+    </div>
+
+    <!-- View: Competitor comparison (shown when a competitor is selected) -->
+    <div id="intelViewCompare" style="display:none">
+      <button class="intel-back-btn" onclick="intelShowOverview()">← Back to overview</button>
+      <div class="intel-compare-header" id="intelCompareHeader"></div>
+      <div class="intel-takeaways" id="intelTakeaways"></div>
+      <div id="intelGrid"></div>
+    </div>
   </div>
 </div>
 
@@ -2435,7 +2448,12 @@ function checkIntelPw(){
     sessionStorage.setItem('intelUnlocked','1');
     document.getElementById('intelGate').style.display = 'none';
     document.getElementById('intelContent').style.display = 'block';
-    renderIntel(_intelActive);
+    // Build selector buttons so they're ready, then show overview
+    const selEl = document.getElementById('intelSel');
+    selEl.innerHTML = Object.values(INTEL_COMPETITORS).map(c=>
+      `<button class="intel-sel-btn" onclick="renderIntel('${c.id}')">${c.name}</button>`
+    ).join('');
+    intelShowOverview();
   } else {
     document.getElementById('intelPwErr').textContent = 'Incorrect password.';
     document.getElementById('intelPwInput').value = '';
@@ -2770,17 +2788,42 @@ function val(v, adv){
 }
 function tag(bool){ return bool ? '<span class="intel-tag intel-tag-yes">Yes</span>' : '<span class="intel-tag intel-tag-no">No</span>'; }
 
+function intelShowOverview(){
+  renderPipelineChart();
+  document.getElementById('intelViewOverview').style.display = '';
+  document.getElementById('intelViewCompare').style.display = 'none';
+  // Clear active state on all selector buttons
+  document.querySelectorAll('.intel-sel-btn').forEach(b=>{
+    b.classList.remove('active');
+    b.style.color=''; b.style.borderColor=''; b.style.background='';
+  });
+}
+
 function renderIntel(id){
   _intelActive = id;
-  renderPipelineChart();
-  const comp = INTEL_COMPETITORS[id];
 
-  // Selector buttons
-  document.getElementById('intelSel').innerHTML = Object.values(INTEL_COMPETITORS).map(c=>{
-    const active = c.id===id;
-    const style = active ? `style="color:${c.color};border-color:${c.colorBorder};background:${c.colorDim}"` : '';
-    return `<button class="intel-sel-btn${active?' active':''}" ${style} onclick="renderIntel('${c.id}')">${c.name}</button>`;
-  }).join('');
+  // Switch to comparison view
+  document.getElementById('intelViewOverview').style.display = 'none';
+  document.getElementById('intelViewCompare').style.display = '';
+
+  const comp = INTEL_COMPETITORS[id];
+  document.getElementById('intelCompareHeader').textContent = `Basecamp Research  ×  ${comp.name}`;
+
+  // Selector buttons — build once if not yet built, then update active state
+  const selEl = document.getElementById('intelSel');
+  if(!selEl.children.length){
+    selEl.innerHTML = Object.values(INTEL_COMPETITORS).map(c=>
+      `<button class="intel-sel-btn" onclick="renderIntel('${c.id}')">${c.name}</button>`
+    ).join('');
+  }
+  selEl.querySelectorAll('.intel-sel-btn').forEach(b=>{
+    const cId = b.getAttribute('onclick').match(/'(\w+)'/)?.[1];
+    const c = INTEL_COMPETITORS[cId];
+    const active = cId===id;
+    b.classList.toggle('active', active);
+    if(active && c){ b.style.color=c.color; b.style.borderColor=c.colorBorder; b.style.background=c.colorDim; }
+    else { b.style.color=''; b.style.borderColor=''; b.style.background=''; }
+  });
 
   // Takeaways — update competitor box color dynamically
   document.getElementById('intelTakeaways').innerHTML = `
@@ -2874,7 +2917,14 @@ switchTab = function(tab, btn){
     if(_intelUnlocked){
       document.getElementById('intelGate').style.display = 'none';
       document.getElementById('intelContent').style.display = 'block';
-      renderIntel(_intelActive);
+      // Ensure selector buttons exist, then show overview
+      const selEl = document.getElementById('intelSel');
+      if(!selEl.children.length){
+        selEl.innerHTML = Object.values(INTEL_COMPETITORS).map(c=>
+          `<button class="intel-sel-btn" onclick="renderIntel('${c.id}')">${c.name}</button>`
+        ).join('');
+      }
+      intelShowOverview();
     }
   }
 };
