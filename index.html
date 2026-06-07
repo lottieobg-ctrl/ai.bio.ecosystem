@@ -237,7 +237,7 @@ input[type="text"]::placeholder { color: #111827; }
 /* MAP */
 #panel-map.active { display: flex; flex-direction: column; }
 .map-wrap { flex: 1; position: relative; overflow: hidden; background: #08111e; min-height: 560px; }
-#map { width: 100%; height: 100%; position: relative; z-index: 0; }
+#map { position: absolute; inset: 0; z-index: 0; }
 .leaflet-control-attribution { font-size: 9px !important; opacity: 0.35; background: transparent !important; }
 .marker-outer { overflow: visible !important; background: transparent !important; border: none !important; }
 .marker-label {
