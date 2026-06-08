@@ -17,7 +17,7 @@
     "auto": false
   },
   {
-    "name": "AI // Bio Night — Cambridge MA",
+    "name": "AI // Bio Night \u2014 Cambridge MA",
     "date": "2026-06-11",
     "end_date": "2026-06-11",
     "location": "Cambridge, MA, USA",
@@ -30,7 +30,7 @@
       "drug discovery"
     ],
     "virtual": false,
-    "description": "An evening bringing together researchers and early-stage companies at the intersection of AI and Bio. Speakers from Basecamp Research, IMU Biosciences, Boltz, MIT and Cellino. Doors 6pm · Talks 6:30–7:30pm · Pizza & networking until 9pm. Organised by Georg Wachter & Charlotte O'Brien Gore.",
+    "description": "An evening bringing together researchers and early-stage companies at the intersection of AI and Bio. Speakers from Basecamp Research, IMU Biosciences, Boltz, MIT and Cellino. Doors 6pm \u00b7 Talks 6:30\u20137:30pm \u00b7 Pizza & networking until 9pm. Organised by Georg Wachter & Charlotte O'Brien Gore.",
     "source": "luma",
     "auto": false
   },
@@ -65,7 +65,7 @@
       "genomics"
     ],
     "virtual": false,
-    "description": "International Society for Computational Biology flagship conference — the premier meeting in bioinformatics and computational biology.",
+    "description": "International Society for Computational Biology flagship conference \u2014 the premier meeting in bioinformatics and computational biology.",
     "auto": false
   },
   {
@@ -133,7 +133,7 @@
       "clinical"
     ],
     "virtual": false,
-    "description": "American Society of Human Genetics annual meeting — a key forum for AI-driven genetics and genomics research.",
+    "description": "American Society of Human Genetics annual meeting \u2014 a key forum for AI-driven genetics and genomics research.",
     "auto": false
   },
   {
@@ -150,11 +150,11 @@
       "digital health"
     ],
     "virtual": false,
-    "description": "Annual congress focused on biodata, AI and precision medicine — bringing together data scientists, clinicians and industry leaders.",
+    "description": "Annual congress focused on biodata, AI and precision medicine \u2014 bringing together data scientists, clinicians and industry leaders.",
     "auto": false
   },
   {
-    "name": "NeurIPS 2026 — ML for Biology Workshop",
+    "name": "NeurIPS 2026 \u2014 ML for Biology Workshop",
     "date": "2026-12-05",
     "end_date": "2026-12-06",
     "location": "TBC",
@@ -167,7 +167,7 @@
       "computational"
     ],
     "virtual": false,
-    "description": "Annual machine learning for biology workshop co-located with NeurIPS — a key venue for AI × biology research presentations.",
+    "description": "Annual machine learning for biology workshop co-located with NeurIPS \u2014 a key venue for AI \u00d7 biology research presentations.",
     "auto": false
   }
 ]
