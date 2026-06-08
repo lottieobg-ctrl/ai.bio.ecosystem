@@ -1,47 +1,82 @@
 {
-  "last_updated": "2026-06-07T00:00:00Z",
+  "last_updated": "2026-06-08T18:14:23Z",
   "companies": [
     {
       "name": "XtalPi",
       "funding": "Series D. ~$400M+ raised. Backed by Sequoia China, Tencent, Google. Founded 2016.",
       "stage": "series-c",
-      "needs_review": false, "review_headline": "", "review_url": "", "proposed_funding": "", "proposed_stage": "", "found_at": ""
+      "needs_review": false,
+      "review_headline": "",
+      "review_url": "",
+      "proposed_funding": "",
+      "proposed_stage": "",
+      "found_at": ""
     },
     {
       "name": "Exscientia",
       "funding": "Acquired by Recursion Pharmaceuticals, October 2024, for ~$688M.",
       "stage": "acquired",
-      "needs_review": false, "review_headline": "", "review_url": "", "proposed_funding": "", "proposed_stage": "", "found_at": ""
+      "needs_review": false,
+      "review_headline": "",
+      "review_url": "",
+      "proposed_funding": "",
+      "proposed_stage": "",
+      "found_at": ""
     },
     {
       "name": "Evotec",
-      "funding": "Public company (Deutsche Börse: EVT). ~€700M revenue. 850+ partners.",
+      "funding": "Public company (Deutsche B\u00f6rse: EVT). ~\u20ac700M revenue. 850+ partners.",
       "stage": "public",
-      "needs_review": false, "review_headline": "", "review_url": "", "proposed_funding": "", "proposed_stage": "", "found_at": ""
+      "needs_review": false,
+      "review_headline": "",
+      "review_url": "",
+      "proposed_funding": "",
+      "proposed_stage": "",
+      "found_at": ""
     },
     {
       "name": "Nimbus Therapeutics",
       "funding": "~$800M+ raised. Sold TYK2 inhibitor to Gilead for $6B (2022). Backed by Atlas Venture, 5AM Ventures.",
       "stage": "series-c",
-      "needs_review": false, "review_headline": "", "review_url": "", "proposed_funding": "", "proposed_stage": "", "found_at": ""
+      "needs_review": false,
+      "review_headline": "",
+      "review_url": "",
+      "proposed_funding": "",
+      "proposed_stage": "",
+      "found_at": ""
     },
     {
       "name": "Verge Genomics",
       "funding": "Series B. ~$98M raised. Backed by Casdin Capital, Andreessen Horowitz, Menlo Ventures.",
       "stage": "series-b",
-      "needs_review": false, "review_headline": "", "review_url": "", "proposed_funding": "", "proposed_stage": "", "found_at": ""
+      "needs_review": false,
+      "review_headline": "",
+      "review_url": "",
+      "proposed_funding": "",
+      "proposed_stage": "",
+      "found_at": ""
     },
     {
       "name": "AbCellera",
       "funding": "Public (Nasdaq: ABCL). ~$700M raised pre-IPO. Backed by Eli Lilly, ARCH Venture Partners.",
       "stage": "public",
-      "needs_review": false, "review_headline": "", "review_url": "", "proposed_funding": "", "proposed_stage": "", "found_at": ""
+      "needs_review": false,
+      "review_headline": "",
+      "review_url": "",
+      "proposed_funding": "",
+      "proposed_stage": "",
+      "found_at": ""
     },
     {
       "name": "Valo Health",
       "funding": "~$700M+ raised. Backed by Flagship Pioneering, Bain Capital, GV.",
       "stage": "series-c",
-      "needs_review": false, "review_headline": "", "review_url": "", "proposed_funding": "", "proposed_stage": "", "found_at": ""
+      "needs_review": false,
+      "review_headline": "",
+      "review_url": "",
+      "proposed_funding": "",
+      "proposed_stage": "",
+      "found_at": ""
     },
     {
       "name": "Variant Bio",
@@ -620,22 +655,22 @@
       "funding": "Public (Nasdaq: RXRX). Raised ~$800M+ pre-IPO.",
       "stage": "public",
       "needs_review": true,
-      "review_headline": "Morgan Stanley Maintains Recursion Pharmaceuticals(RXRX.US) With Hold Rating, Raises Target Price to $5.5 - Moomoo",
-      "review_url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOdjJxZ3hMZ0NhTDBPV29mSmZQeFhnajVVMGFVbnEwNHlKalRmYWtac204RkZkblNvVGNJM2dVcHJoRktmRzBiYlUwZnhpWFhXYWVVRUIwb3loaE5RTE41VnZqbS1tMHFvbVVVWF9SR3BuRWhVeGhBQ2xsOW5ldS0xaUlMQ2dSbVJIak9XRXBOeGRvNHRsbzRfY2ZLNWhsOXgwMVZVUk5tRjJybE13RV9HNUQtLXpHc1NZdWtWYU9fUWE?oc=5",
+      "review_headline": "Recursion Pharmaceuticals vs. Schr\u00f6dinger: Choosing Between Biotech and Software Investment - HarianBasis.co",
+      "review_url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPUGJCczVMZlNiQWlwM1RVd1NhYlF1SlVqWHJOZHh5a2gzTTVEcXIzTmRzVndNSHFPV3VPUXVvMk45RmVDSTY3NEUtSDhhZnJhMnowaXM2bEdZWEpYdDhOd0tCOGZGVVZyVElReUp4UzItb3l4QkNZam5oMW1rdDFmTHhRQ3dkSGxhRnlwaDdteEowTGxJMnA1d21hUQ?oc=5",
       "proposed_funding": "",
       "proposed_stage": "",
-      "found_at": "2026-05-27T18:12:46Z"
+      "found_at": "2026-06-08T18:13:41Z"
     },
     {
       "name": "Relay Therapeutics",
       "funding": "Public (Nasdaq: RLAY). Raised ~$800M+ pre-IPO.",
       "stage": "public",
       "needs_review": true,
-      "review_headline": "H.C. Wainwright raises Relay Therapeutics stock price target to $28 on trial data - Investing.com",
-      "review_url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNMlppQU1jeXRUY0xiYm5CazVuQjRqN0ljeGw2dG5zb0g2OEhONEJ6d1ZyUmIxdE9BRlQ4ODRFMXdPWHd1bW5KTHAyTE5ucDlHb3J3RlJQbFF3SFpReDY3aTF6cm80X3Z2ZWtNQ3N0dzlBeFFKWkYzUDFOTlZUcHduZUhzellseGFWWklCczhMR0dBc1lpYzVNdlhqZ2FUbzNkWnN0M0tVdGlKVExCWWtCY1VCMVJZMVo1OUdMdncycndtbzlxeVd5X0c3OEFSS0wzRWJKcg?oc=5",
+      "review_headline": "Guggenheim raises Relay Therapeutics stock price target on drug profile - Investing.com",
+      "review_url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQbWZrVVdWVUV2Q0p0ZjBpZHhpVlFFS1BrUGk1YzlCRUs0ekpDYlEyUThqS3JIRVM0T29JNGxibVJVdzVMekxmR19BYUNhck11LUVsRE5UZmQwUUJ1ZHVaZDJyUjBLMzVsZDhyaVdPTkhybUxRZVRzQkhzWE5vbmcwc1VSNFJHMmhuVEk4dlNKUEplNTFmQi1NZGhiaEZVNnF2XzZPM2kxV3BXX1dEYkpCZHFfcDRuTWFCVTdHQk5Xa1ZKTjBvTkl6ZTBzRQ?oc=5",
       "proposed_funding": "",
       "proposed_stage": "",
-      "found_at": "2026-06-07T13:11:39Z"
+      "found_at": "2026-06-08T18:13:41Z"
     },
     {
       "name": "Relation Therapeutics",
@@ -829,11 +864,11 @@
       "funding": "Public (Nasdaq: TEM). Raised ~$1.1B+ pre-IPO.",
       "stage": "public",
       "needs_review": true,
-      "review_headline": "TD Cowen raises Tempus AI stock price target on genomics strength - Investing.com",
-      "review_url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPaWJpdVRmTk0tSmxFMG9hWlRKTHNfSVRRem5tZlI5NHRnNExQZEJab2lEamxxbzhwQVdWVUpBVW5nYkRRT3Nrb0VzdDNEY24yOThhbDZGSFEtVEJLWDdjWmc5akRXYkRLRF9MX0loTmhyblFLNEhkYWxzTEd0eU84MDVjUEhPRE5RMmxaTWdXVHUwSXNXcTVqclBza2NGNVpTV21yVk1DblA0cEhyZUZNN29DMWtQMS1JaVB5VHBBMmV6S0k?oc=5",
+      "review_headline": "Contrarius Group Holdings Ltd Makes New Investment in Tempus AI, Inc. $TEM - MarketBeat",
+      "review_url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPZWVDZkE3UzE2UThnNUlUdG5vUjJYMXdGVE8tTXVWM3RTVWRDYnJtdDl2WmMtMWY0TXFCOXlPZ3lrZUpYdFNzUTN1TzUzeTRHLU0zOWd3ZEZVS3RfZEVrRWIzUFYweDRkOEx4NVNvdjlTQlJ5Y2ZXcnFYdGVQLWpGbl9lMFJXcUxRc3VQS1R3Ym5lUWNGWGpKbFBUWk5JSjJ6bHFZWWsxd18xQzNzcWJtOXBja0hOZ1ppUjFQT0JOUWk0cnVxdGtJbURvWXU?oc=5",
       "proposed_funding": "",
       "proposed_stage": "",
-      "found_at": "2026-06-06T12:07:28Z"
+      "found_at": "2026-06-08T18:14:16Z"
     },
     {
       "name": "Verily Health",
@@ -895,11 +930,11 @@
       "funding": "$57B+ total \u2014 including $40B from SoftBank (Mar 2025), the largest single VC round in history.",
       "stage": "series-c",
       "needs_review": true,
-      "review_headline": "SoftBank seeks record $40 billion loan to fund OpenAI investment - Sherwood News",
-      "review_url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQWXVJNDVBcUdYaWtHWVZFM1FmMktPcE5iamhJb0JQTzFmY21Ea0hXaVdzbFBrX2xxa3R6eWRoeUJuQjBiTTc4dzhCTXVVVlFjX2FWemljWERENzRwcGdnbG04Qld4TGxqd3NPVlNrbDJmSnZ1a2xjQi12TjRGQXItems3c09IX3N5YWEzSFEwaUh1RnozekdYR2dR?oc=5",
-      "proposed_funding": "$40B",
+      "review_headline": "OpenAI wants shopping in ChatGPT. Wassist raises $1.1M to keep it on WhatsApp - Tech Funding News",
+      "review_url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxONGtjVmpCZl9vQmw1OTNRUllpUE9famNUbGppb1VWRldCYzJNcFhKMnhTN0RWR0FyNWZJT2ItSXVXVDRUUkloRXhRcUkzWm11S2RrOGZWd05HSUpQbmpDVm5fdEd6Q3dWSzVmMnJ2dW9tVnVVY0huam0xRURaV0tmcVZaOHhzaHNkUUkyUkh1Nl9NZkdGZDNLUkc1aG83OGdUZVNqbXRvTQ?oc=5",
+      "proposed_funding": "$1M",
       "proposed_stage": "",
-      "found_at": "2026-06-06T12:07:29Z"
+      "found_at": "2026-06-08T18:14:17Z"
     },
     {
       "name": "Sakana AI",
