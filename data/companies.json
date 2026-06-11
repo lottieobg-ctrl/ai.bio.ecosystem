@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-10T18:19:32Z",
+  "last_updated": "2026-06-11T18:40:06Z",
   "companies": [
     {
       "name": "XtalPi",
@@ -225,12 +225,12 @@
       "name": "Chai Discovery",
       "funding": "$230M total \u2014 $30M seed (Sep 2024) \u00b7 $70M Series A (Aug 2025) \u00b7 $130M Series B (Dec 2025). Valuation: $1.3B.",
       "stage": "series-b",
-      "needs_review": false,
-      "review_headline": "",
-      "review_url": "",
-      "proposed_funding": "",
+      "needs_review": true,
+      "review_headline": "Pfizer and Eli Lilly Bet on AI Drug Discovery Startup Chai Discovery\u2019s $400 Million Funding Round - Earnings Season Preview - newsline.com",
+      "review_url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQeHhaQUl3RGJoYUdKcGhBc1Zmd1ZiTmlPeFhxWTdXWHg1aUQzUWU2T0dieEh4MkFfcmxsaUZ3Nmd4UWtpRDlIUVB5dTE4enE0eWROSXFVTkNMR0dyWVlkTEx2U0VaTVVyMUdiU3liOFo3UlgzMGNiVy1OaHlvUlZvZjBWbnJ3eFNqWWlTcjdOVEVmemQ2UHBNZ3RSTXBuajk0STczSlYyeFc4YVhqRW9lVkdHMTdqeF9FbFE1NHJaV1Z6Wk5jeWJqUkRGSkJHM0E?oc=5",
+      "proposed_funding": "$400M",
       "proposed_stage": "",
-      "found_at": ""
+      "found_at": "2026-06-11T18:37:51Z"
     },
     {
       "name": "Profluent",
@@ -369,11 +369,11 @@
       "funding": "~$30M total \u2014 Series B. Backed by Earlybird, Redalpine.",
       "stage": "series-b",
       "needs_review": true,
-      "review_headline": "EIC STEP Scale Up Selection Enhances Aignostics\u2019 Growth and Funding Prospects - TipRanks",
-      "review_url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOMERaNEhQaUZ0MjNBYzhGSjhGMVRaYy1HVHhGMkdoU1Y5RTd0c3VJOHhtNlhkUDhhM3hhcElDOUpiQkJQWG9DTDlUR1VYdlRCRm5Xek0tX2NyT2h0ZlhwbW1ET0NxSWNPNVBwaW5ZeGFwdFhSVWNlWTJNR1I3d1g2QkJWM1MzRXN0YlVBeFhwZDNZTTBFcWNXTlJMTlRPSDc2QnZSSG9GdDdKNmRsMHR2a1ZfcGNXVV9CUG9lYlZMQ2F3QQ?oc=5",
+      "review_headline": "Aignostics Selected for EIC STEP Scale Up Program, Positioned for EU-Backed Growth Funding - TipRanks",
+      "review_url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNallJWGdYSGdZc3liUUU0SFhQR3BvZWtrS1RvY1ljU3l3MFgyb0xGdTlIcEw4YkhaWDVLSENlOWhtYmxLdWd0a0gtdTZxY1JTSEhsZ3lKQUhNQlIxRWFBLTNBY0tUN1VQWGQ0NkZ3aGJfdE5yMHQzU1FCbGRIbGxTNWdmMFNWclVsMlBOTFlHbmc0enppZ2NVUlQ3WGR2SkE2YmFkMnZJY3FuWGl1X1MzcmxKTWxlc2wyeU1yMVNQZzRZeDZnc29KYUpUS19kdHlOVjJj?oc=5",
       "proposed_funding": "",
       "proposed_stage": "",
-      "found_at": "2026-05-29T18:21:21Z"
+      "found_at": "2026-06-11T18:38:24Z"
     },
     {
       "name": "Atomwise",
@@ -446,11 +446,11 @@
       "funding": "$100M+ total \u2014 $73M Series B (Nov 2024), led by IVP. Previous investors: Index Ventures, Kindred Capital.",
       "stage": "series-b",
       "needs_review": true,
-      "review_headline": "Malaysia\u2019s space startups need bigger funding to compete with Singapore, says Cradle CEO - The Malaysian Reserve",
-      "review_url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQS3BBVmtaWWNRLVc2enk4LWMzbEhDTmc1SlJvSm80MFBmNDNXMFhwb3c2RE85TEE3V1N0bzdURkNsbVJaakpYX2Ywb2xpdWwzdV9FNm5aYXdDUFRqdzBjOU5UbDhjNHJzcEs0Szk3M3JHM3BRWW1GcVpVVmpWWm1aQzJSa2JqMjdvdVo3V2tDMExhMEFjZG1CQVZjU0ZlTGdxSUNaRTRxVFBuUTBkYUxuTEdDOTgyQWlHYjVidlJ5SlQ2QThhdmM0TTdn?oc=5",
-      "proposed_funding": "",
+      "review_headline": "Cradle raises US$73 million - S-GE",
+      "review_url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9pN24yT3pDeGNfM2xLbU9KM2lQSUR2cWFGYWdQSHNWeDRhWVZBTm9pNTkwZk9JRXl0b3lsSWVTTTlObzY0Y2hjcVRZZGhGd0NxLVcyVXVjM1pIdldKbUtzQ3JRTHpPUmpvYmY0Q0NseE5DZk9qRHZTT3pxOA?oc=5",
+      "proposed_funding": "$73M",
       "proposed_stage": "",
-      "found_at": "2026-06-10T18:18:03Z"
+      "found_at": "2026-06-11T18:38:40Z"
     },
     {
       "name": "Deep Genomics",
@@ -567,11 +567,11 @@
       "funding": "$719M",
       "stage": "public",
       "needs_review": true,
-      "review_headline": "Kailera Therapeutics IPO: Competing with Eli Lilly and Novo Nordisk in GLP-1 Weight Loss - News and Statistics - IndexBox",
-      "review_url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxONnRhRDVyOE9QZkR6Y3FaRS02VExZVjJFWjRUSUo5S3JhV2NTcUpDX2Y0YkxDT2xTZnJlOUkxM3BtWWdTNXJYSDNZbzRvekYxc19CSDRWMV96Z2M1Y19XTnZ1OUNydjZsSEVHNFMwNy0tel9saTdFV3VWVWs5T1ozRGp5NlBYNjJRa1EybWVUQmxteUw4Ym13bU9RU0ItNjg?oc=5",
-      "proposed_funding": "",
+      "review_headline": "Kailera Therapeutics Reports Q1 2026 Financial Results, Advances Multiple Clinical-Stage Obesity Programs, and Raises $718.8M in IPO - minichart.com.sg",
+      "review_url": "https://news.google.com/rss/articles/CBMi_wFBVV95cUxNVnBFeUEyR3ZHUUhYZDlNcTk5ZW15c2lZOXBYQWQwRWJoeVVvZWNHMFlIc3dZMWV3TDUyTE5DQ3Zvb003OUdJZV8zN0ZlNF9lLWU3UUxhOHhiVy1ZMElrLUtYM1J4RXp3Nl9OTGdoRm02cHBUZFZQSVp4QXFaaGpvaERVeHc3SG5jamJpU1hDdEFFWmJ0VHp5TF9EdUh4Uk5RRENyQVY0ajJsUXFFbnhPaVpabGJ1M2JJS1d1UUd2dF9EODRUaW5rWjZ1NUhlVFJQc0xpdGlCN2dxSkszcDhNenlzUU5QNTBIaDQwelFFT2FRdW16SzRXV3o4cU54aDA?oc=5",
+      "proposed_funding": "$719M",
       "proposed_stage": "public",
-      "found_at": "2026-06-01T21:18:27Z"
+      "found_at": "2026-06-11T18:39:07Z"
     },
     {
       "name": "Lila Biosciences",
@@ -655,11 +655,11 @@
       "funding": "Public (Nasdaq: RXRX). Raised ~$800M+ pre-IPO.",
       "stage": "public",
       "needs_review": true,
-      "review_headline": "Morgan Stanley Maintains Recursion Pharmaceuticals(RXRX.US) With Hold Rating, Raises Target Price to $5.5 - Moomoo",
-      "review_url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOdjJxZ3hMZ0NhTDBPV29mSmZQeFhnajVVMGFVbnEwNHlKalRmYWtac204RkZkblNvVGNJM2dVcHJoRktmRzBiYlUwZnhpWFhXYWVVRUIwb3loaE5RTE41VnZqbS1tMHFvbVVVWF9SR3BuRWhVeGhBQ2xsOW5ldS0xaUlMQ2dSbVJIak9XRXBOeGRvNHRsbzRfY2ZLNWhsOXgwMVZVUk5tRjJybE13RV9HNUQtLXpHc1NZdWtWYU9fUWE?oc=5",
+      "review_headline": "A Look At Recursion Pharmaceuticals (RXRX) Valuation As Shares Show Short Term Momentum - simplywall.st",
+      "review_url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxQU29FV1pnNlIyeVAtcG83MEoxUjI5RzMtalBnZlFZdFdGUHpqZjh4QmwyMmxjRnRyNmgwYUw1b2FqWkNOSW9BcHREaE9Sc3Vab3NRM0ZfOGxOaGNBcWpOcXZfOEJCR0xPb0l6UWU5U21oeGtHeGlUc19hS29acXY0aFdzeXlQYmFKWGdzM0hGMDZXRS00RTYzSzBlUFBFS19abEt5Ry1IVG1tY3Y3VzBzcEwxY0o1dmN3ZWNMdzRWXzZZVVlRMU1UVTZWVFA3dV9XNUk3emhIc1ktQUhkU1VKUjI0dGRaTXVpOUpWN09LQUPSAfYBQVVfeXFMTmpvQ042RUZHUnNQUFR2d3pBaWVoZ2l3MTRONlpfdVloSTBPYkJYazlJTmRCT2xGQTJTMXNmUzNRVmZsM29PWEVjVnJiMTBtTzhTaTJlSTM1aUI3V3hLREJVNmhwOGNhdjlwalVCbzU4TFFQYlRsQ2JjLTJlYjRmVkhfYWhMa2NCM0gxd2EtWkN1M2dZT2Y4TGNETEJ1cVh6R2hjd0g5SW9CdURkZWlZcG1DbzBKRXNVTkx0am50Sk9YUTZ4OFhLT21LQW1lY05PWmZNRHlPQ2Jra3VLRnRIU0h0TjM0R3FlcWNkYURhd2E4bjRJOV9n?oc=5",
       "proposed_funding": "",
       "proposed_stage": "",
-      "found_at": "2026-06-10T18:18:47Z"
+      "found_at": "2026-06-11T18:39:22Z"
     },
     {
       "name": "Relay Therapeutics",
