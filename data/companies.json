@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-13T13:16:38Z",
+  "last_updated": "2026-06-14T10:54:55Z",
   "companies": [
     {
       "name": "XtalPi",
@@ -556,11 +556,11 @@
       "funding": "$2B",
       "stage": "series-b",
       "needs_review": true,
-      "review_headline": "Isomorphic Labs Raises $2.1 Billion to End Disease With AI - Yahoo Finance",
-      "review_url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQOFd5R2x4WXpJREV1MlBabllvOWpxeGV6bHNhMnJ5dWlwZnQ5eS02eF9PQkRvRGVZT3hheWVFVGZFSEVpUlBDcl9aWWQzd25vQ1JQLUxxd2dJci1LT2JCWWxqQi1CQ21yS2pEbVVVWVBaVE01U1dJaE5HdkxyVmJDd240ZWdJYlZzUHZjRU12NGQ2bkpjMkptTTItWQ?oc=5",
+      "review_headline": "Isomorphic Labs Lands $2.1 Billion Series B for AI Drug Design Engine - The Healthcare Technology Report.",
+      "review_url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNd2xmS0NXYmNvMWd0a2p1Y3llQXh3RUpVZnl3U1pFR3VmbnoyMkVESXA0eGFiTUdUSVZJTlBNS2l0UTJYYTBRM3lHdENldFh6YXAydjRYTGotcmROMy1lNUxVakFqTlZJcElqaUNzdTlYTmp6b2hFM1c4d1dIQ05qZXdGWlB1YXo2UVFpU0tWdnppNjFqTDJvR05jelV4N0NzX1AxdGZ4YzRwakpUTW1VVg?oc=5",
       "proposed_funding": "$2B",
-      "proposed_stage": "",
-      "found_at": "2026-06-13T13:15:44Z"
+      "proposed_stage": "series-b",
+      "found_at": "2026-06-14T10:53:52Z"
     },
     {
       "name": "Kailera Therapeutics",
@@ -886,11 +886,11 @@
       "funding": "$65B",
       "stage": "public",
       "needs_review": true,
-      "review_headline": "Anthropic - 2026 Funding Rounds & List of Investors - Tracxn",
-      "review_url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNQlI5NWxWZGExMjFRVHVnLTZGYW1oVHlHZV9DYWxpZ1BnTkNla3JqZnJtcXJJWVNSZjRjVU10RWR6TkVIRC1tSGQ1em1KRVlXcDNaandjV0VvUmUwRnhiZTlZZEg0UmJDb0tNTzlGVkRoa2x3ZlRHR1VoR25tVi14LWp6NEFvMGdiY1cxaVpBaEZOUUJlT1Bkb0JBQXFiSjNRU2RMZVN4MW9TUm5X?oc=5",
-      "proposed_funding": "",
+      "review_headline": "Anthropic raises $65B in Series H funding at $965B post-money valuation - Anthropic",
+      "review_url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE9FbzhQTWUzSGozVXNfbDYxWWUzTFBZZlpldmQyeDBnSExRdHVMSkJyVVV4OHdlNmx3LVBFcHVXTmJ0ck9TclZvVVlPRnpoZVhW?oc=5",
+      "proposed_funding": "$65B",
       "proposed_stage": "",
-      "found_at": "2026-06-13T13:16:32Z"
+      "found_at": "2026-06-14T10:54:48Z"
     },
     {
       "name": "Google DeepMind",
@@ -927,14 +927,14 @@
     },
     {
       "name": "OpenAI",
-      "funding": "$57B+ total \u2014 including $40B from SoftBank (Mar 2025), the largest single VC round in history.",
-      "stage": "series-c",
+      "funding": "$30B",
+      "stage": "public",
       "needs_review": true,
-      "review_headline": "OpenAI files for IPO as AI investment race intensifies - NBC News",
-      "review_url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPek90QTVxaDRveGlyZ2UxUHR0OEt0d05NTEpMVVh2VG5nSHU2OG5hbERwT0pVRjk3ZldWYzBtRF9fQmY5dkxsX2Jva3phX0pGMDVzd21lY2p4N3RxcTlxbzhxRlZNQkRLQkFxQ1lrMkhMWUlqeHRzaEt0Sm1INzh4SElB?oc=5",
-      "proposed_funding": "",
+      "review_headline": "Nvidia\u2019s Huang Says $30B OpenAI Investment May Be Last Pre-IPO Deal - Stocktwits",
+      "review_url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOR2dmdHo3Z0dMR0pQaXh6ZEVMZ3B4eVVxSmRhcTE3SmEtS3RTVjB1X0Z2dEMtLWxwdlZYdEYtY0pDOUNhcTJoTjI5eW11U3ItejgwWjlGdVUxWHoyZXB3QzVzNFM3WnZqSEdnRlUzajRRYUhIdnVfaFRzcDJ5WDVQVFVNbGpVZDdTdzRNQXprWWFyME9Fb0QzMVNhdlM1eFV2clY1R0ZVeENSWm1iMDhsR2hOT1JBWXotX1B3WWsxeGNOQU1aMzlr?oc=5",
+      "proposed_funding": "$30B",
       "proposed_stage": "public",
-      "found_at": "2026-06-09T17:15:03Z"
+      "found_at": "2026-06-14T10:54:49Z"
     },
     {
       "name": "Sakana AI",
