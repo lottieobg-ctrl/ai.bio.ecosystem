@@ -35,198 +35,6 @@
     "auto": false
   },
   {
-    "name": "ClickHouse + Hex AI hackathon",
-    "date": "2026-06-11",
-    "end_date": "2026-06-12",
-    "location": "Boston, MA, USA",
-    "url": "clickh-2ujv",
-    "type": "meetup",
-    "tags": [
-      "AI",
-      "biology"
-    ],
-    "virtual": false,
-    "description": "",
-    "source": "luma",
-    "auto": true
-  },
-  {
-    "name": "AI x GTM Workshop in San Francisco",
-    "date": "2026-06-11",
-    "end_date": "2026-06-11",
-    "location": "Boston, MA, USA",
-    "url": "qwcr1uz5",
-    "type": "meetup",
-    "tags": [
-      "AI",
-      "biology"
-    ],
-    "virtual": false,
-    "description": "",
-    "source": "luma",
-    "auto": true
-  },
-  {
-    "name": "Governance in the Age of AI: A Radical Blueprint for Radical Technologies, with Author & Investor Eric Ries (In-Person)",
-    "date": "2026-06-11",
-    "end_date": "2026-06-12",
-    "location": "Boston, MA, USA",
-    "url": "2xwjixm2",
-    "type": "meetup",
-    "tags": [
-      "AI",
-      "biology"
-    ],
-    "virtual": false,
-    "description": "",
-    "source": "luma",
-    "auto": true
-  },
-  {
-    "name": "AiOS Meetup - WWDC '26 Edition",
-    "date": "2026-06-11",
-    "end_date": "2026-06-12",
-    "location": "Boston, MA, USA",
-    "url": "ju8j7vtp",
-    "type": "meetup",
-    "tags": [
-      "AI",
-      "biology"
-    ],
-    "virtual": false,
-    "description": "",
-    "source": "luma",
-    "auto": true
-  },
-  {
-    "name": "BAYVIEW TECH LAB: How to grow your business using AI",
-    "date": "2026-06-11",
-    "end_date": "2026-06-12",
-    "location": "Boston, MA, USA",
-    "url": "lg87u9ud",
-    "type": "meetup",
-    "tags": [
-      "AI",
-      "biology"
-    ],
-    "virtual": false,
-    "description": "",
-    "source": "luma",
-    "auto": true
-  },
-  {
-    "name": "AI Agents for Fintech Engineering Teams",
-    "date": "2026-06-12",
-    "end_date": "2026-06-12",
-    "location": "Boston, MA, USA",
-    "url": "m2ybk3no",
-    "type": "meetup",
-    "tags": [
-      "AI",
-      "biology"
-    ],
-    "virtual": false,
-    "description": "",
-    "source": "luma",
-    "auto": true
-  },
-  {
-    "name": "AI Healthcare Product Roundtable",
-    "date": "2026-06-12",
-    "end_date": "2026-06-12",
-    "location": "Boston, MA, USA",
-    "url": "seamate-9xop",
-    "type": "meetup",
-    "tags": [
-      "AI",
-      "biology"
-    ],
-    "virtual": false,
-    "description": "",
-    "source": "luma",
-    "auto": true
-  },
-  {
-    "name": "Platform Engineering & AI",
-    "date": "2026-06-12",
-    "end_date": "2026-06-12",
-    "location": "Boston, MA, USA",
-    "url": "intuitossmtvjun2026",
-    "type": "meetup",
-    "tags": [
-      "AI",
-      "biology"
-    ],
-    "virtual": false,
-    "description": "",
-    "source": "luma",
-    "auto": true
-  },
-  {
-    "name": "Beyond Tokens: An AI Developer Meetup",
-    "date": "2026-06-12",
-    "end_date": "2026-06-12",
-    "location": "Boston, MA, USA",
-    "url": "jfrog-tokens",
-    "type": "meetup",
-    "tags": [
-      "AI",
-      "biology"
-    ],
-    "virtual": false,
-    "description": "",
-    "source": "luma",
-    "auto": true
-  },
-  {
-    "name": "How to Sustain Open Source Software in the Era of AI? -- A SF community chat on incentives, fairness, and the future of the software commons",
-    "date": "2026-06-12",
-    "end_date": "2026-06-12",
-    "location": "Boston, MA, USA",
-    "url": "vtwfj0p2",
-    "type": "meetup",
-    "tags": [
-      "AI",
-      "biology"
-    ],
-    "virtual": false,
-    "description": "",
-    "source": "luma",
-    "auto": true
-  },
-  {
-    "name": "Slash x Bland: The State of Fintech in the AI Era",
-    "date": "2026-06-12",
-    "end_date": "2026-06-12",
-    "location": "Boston, MA, USA",
-    "url": "9dyfyaox",
-    "type": "meetup",
-    "tags": [
-      "AI",
-      "biology"
-    ],
-    "virtual": false,
-    "description": "",
-    "source": "luma",
-    "auto": true
-  },
-  {
-    "name": "The AI Foundry Series- San Ramon Chapter",
-    "date": "2026-06-12",
-    "end_date": "2026-06-12",
-    "location": "Boston, MA, USA",
-    "url": "cqthdhoo",
-    "type": "meetup",
-    "tags": [
-      "AI",
-      "biology"
-    ],
-    "virtual": false,
-    "description": "",
-    "source": "luma",
-    "auto": true
-  },
-  {
     "name": "SLAS Europe 2026",
     "date": "2026-06-15",
     "end_date": "2026-06-17",
@@ -244,6 +52,70 @@
     "auto": false
   },
   {
+    "name": "Grassroots action workshop: Lobby against dangerous AI",
+    "date": "2026-06-20",
+    "end_date": "2026-06-21",
+    "location": "Boston, MA, USA",
+    "url": "ejx565v5",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
+    "name": "AI SEO Optimization",
+    "date": "2026-06-23",
+    "end_date": "2026-06-23",
+    "location": "Boston, MA, USA",
+    "url": "fr64vynp",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
+    "name": "PauseAI Phoenix Monthly Social 🍨",
+    "date": "2026-06-27",
+    "end_date": "2026-06-27",
+    "location": "Boston, MA, USA",
+    "url": "om0am0ac",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
+    "name": "Ship AI — Craftsmanship Night",
+    "date": "2026-07-02",
+    "end_date": "2026-07-02",
+    "location": "Boston, MA, USA",
+    "url": "leihzavg",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
     "name": "ISMB/ECCB 2026",
     "date": "2026-07-12",
     "end_date": "2026-07-16",
@@ -259,6 +131,22 @@
     "virtual": false,
     "description": "International Society for Computational Biology flagship conference — the premier meeting in bioinformatics and computational biology.",
     "auto": false
+  },
+  {
+    "name": "AI for Realtors - Advanced",
+    "date": "2026-07-14",
+    "end_date": "2026-07-14",
+    "location": "Boston, MA, USA",
+    "url": "db7ixh8l",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
   },
   {
     "name": "Biotech Week Boston 2026",
