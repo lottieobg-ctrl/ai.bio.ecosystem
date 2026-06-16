@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-15T14:35:56Z",
+  "last_updated": "2026-06-16T13:02:18Z",
   "companies": [
     {
       "name": "XtalPi",
@@ -226,11 +226,11 @@
       "funding": "$230M total \u2014 $30M seed (Sep 2024) \u00b7 $70M Series A (Aug 2025) \u00b7 $130M Series B (Dec 2025). Valuation: $1.3B.",
       "stage": "series-b",
       "needs_review": true,
-      "review_headline": "Pfizer and Eli Lilly Back AI Drug Discovery Startup Chai Discovery in $400 Million Funding Round - Guidance Revision Trend - newsline.com",
-      "review_url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPUmpqc2dsaFVJWWx6NVBHVUR6T1lRdVBKT3UtZ3BHX1BGTjZvT25CSnJwYWowSUhDeUhXUklvclNSOHFVYUZUWTJIdzNVVWhiMUZCQmFKNWMzOVUxUUFQSW9PMENYMEo0RjFYQ1prVGpCdDctc0xlSFl4b2MyS1RIVTRkZ0g5Q29rSDA4dFhJaW9CYVo5RGkzcnVxRE1mMl9BanVxc3REMWdSdVl4Mk9xeFNkNUswcHB2SDhkZWJzX2tKTHo2MXRxV0pqa2dIUk9tYVE?oc=5",
+      "review_headline": "Pfizer and Eli Lilly Back AI Drug Discovery Startup Chai Discovery in $400 Million Funding Round - EPS Revision Trend - newsline.com",
+      "review_url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPSVJqNlhCZW5NRlFMYV9EdUxSakYtYVhNSGthbXE3Wm84eTZoSnliWWJQc1R2dWxEU0xGeWRPQjJuaTF4d29pRU9CeUFaRnVTOFhxYnQ1QWt4NUczdWVBVU1xMDVaN0Nfb3dBWVNySDZkNHljXzFLV0hJM1d1cWlfOFZERDB1TnU5ZUhuTGlZa0VRclduVTQ4UjVUbGRicWZmNjFzM2tGMUdNR1FCdklSS1ByQXNvZk5FdlR1SDMxNklPbU5ZWXlFSVdaX3lYQVBTcXc?oc=5",
       "proposed_funding": "$400M",
       "proposed_stage": "",
-      "found_at": "2026-06-12T17:41:49Z"
+      "found_at": "2026-06-16T13:00:06Z"
     },
     {
       "name": "Profluent",
@@ -358,11 +358,11 @@
       "funding": "Public (Nasdaq: ABSI). Raised ~$200M pre-IPO.",
       "stage": "public",
       "needs_review": true,
-      "review_headline": "Guggenheim raises Absci stock price target to $15 on hair loss drug - Investing.com",
-      "review_url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNNlZEcjRBWUtabFUweW84dFdyY2Z2OHkxMHVyUW5hZUhrbFFJZUE2S0I2MnFOZVFnNTkxLTFHLXFXeURtbjlrTXM5UDk3N21sZ095bXNUa2xxQWJHV2ptbTFnMVlrWm9CWjNCWDN5a0E0V0NXYnJyZnhWcTZEODYtTGNTSENJMk1DSnNYc2J0SUl0aDVCZFNENC1sN1Y2V1N4OHJ2cTlFYVViMXVxRkE0UjFTcjV2UGZkR2NmdktxVWM5Rlcy?oc=5",
+      "review_headline": "Guggenheim raises Absci stock price target to $15 on hair loss drug - Investing.com Nigeria",
+      "review_url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQOWo0c0NDSG15NHViSE03MHFJUHd4MEtvZjhuQmxqYVVYckpwZnNIZTlpMGJQWFF4Z2hYS0laMHZBdWNiMllhWmZ0b1NXNUdJZ3EyWUVmaWJCRkJhdm94WkNLZHFtbkgyZ2V3elBiS3NtenBLRGhvRXkwWHNBSXA1SnhRSXZVOXNwUlM0R01sdnQzUF9Uc09vTTNWNGZvZVZ4Y2VESmljdTNINDh0c1RqRzk4ZndmTTdOUzgtZ296ZlYtel9aSEE?oc=5",
       "proposed_funding": "",
       "proposed_stage": "",
-      "found_at": "2026-06-15T14:34:13Z"
+      "found_at": "2026-06-16T13:00:35Z"
     },
     {
       "name": "Aignostics",
@@ -611,11 +611,11 @@
       "funding": "~\u00a350M total \u2014 Series B. Traded on AIM (London Stock Exchange).",
       "stage": "series-b",
       "needs_review": true,
-      "review_headline": "South Korea's biotech firm OliX Pharmaceuticals secures KRW 110 B investment - BioSpectrum Asia",
-      "review_url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxONWVHeEhScVZXTW1LR090aDhFNVRXY3VfUGYtaFMxQTBXano1eV9BZUY2dF9TNVFYekhrNjU2RTRERzZyV1IzMVE5RnZZeXpSdGljNUhNRVB2X1pfbEtTTUl4MV9qdTNtX013NlBTY296ZDg0ZlgxYUNveEljMzl1QjlJaHd2VFpnMDZaTkFZNDV2aTVwa3FVMGJxRW1ENXpqN0dKZmUxSlJHZkRqRUgxWGxsQndQRTV6eUczUmNBOG5NNk5q?oc=5",
+      "review_headline": "OliX Pharmaceuticals Secures KRW 110 Billion Investment from BOLD, L\u2019Or\u00e9al Corporate Venture Capital Fund, and Weiss, U.S. Hedge Fund - Business Wire",
+      "review_url": "https://news.google.com/rss/articles/CBMikwJBVV95cUxNVnBJeGFzRDN6R242d1hGdjFlRmhBZlgwdEhVOVF3MnBKUE45STh1NnVrZldEWEJxY20yb3hnc0lYWkY1MmNaOGJjSjMxa1YwUHZTRXc1RTM2a2gyWnk0QjVEWmFSaTE2U3JwbnphdTcxT3RORV90VXRhV1A4N0Z0TUJTd0V6QkVpSE1GaE16eElIYkJod0FxX3UtTFNKUGMtelJ6OVh6R3MyT2dSZEd4bGdEbzBJeFhGXzBOLVk3djJTRy1oeVBSYlBEV0hGY3R4SzZKU3Zucy1VdUE1X3lWSXg1NjZHS2lEZjdDTTdaOHR5OVl4bXM4R2ZqWkFMel80MWhoOFRkbldackt0TWk1dmtTdw?oc=5",
       "proposed_funding": "",
       "proposed_stage": "",
-      "found_at": "2026-06-15T14:35:06Z"
+      "found_at": "2026-06-16T13:01:29Z"
     },
     {
       "name": "Pathos AI",
@@ -655,11 +655,11 @@
       "funding": "Public (Nasdaq: RXRX). Raised ~$800M+ pre-IPO.",
       "stage": "public",
       "needs_review": true,
-      "review_headline": "A Look At Recursion Pharmaceuticals (RXRX) Valuation As Shares Show Short Term Momentum - simplywall.st",
-      "review_url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxQU29FV1pnNlIyeVAtcG83MEoxUjI5RzMtalBnZlFZdFdGUHpqZjh4QmwyMmxjRnRyNmgwYUw1b2FqWkNOSW9BcHREaE9Sc3Vab3NRM0ZfOGxOaGNBcWpOcXZfOEJCR0xPb0l6UWU5U21oeGtHeGlUc19hS29acXY0aFdzeXlQYmFKWGdzM0hGMDZXRS00RTYzSzBlUFBFS19abEt5Ry1IVG1tY3Y3VzBzcEwxY0o1dmN3ZWNMdzRWXzZZVVlRMU1UVTZWVFA3dV9XNUk3emhIc1ktQUhkU1VKUjI0dGRaTXVpOUpWN09LQUPSAfYBQVVfeXFMTmpvQ042RUZHUnNQUFR2d3pBaWVoZ2l3MTRONlpfdVloSTBPYkJYazlJTmRCT2xGQTJTMXNmUzNRVmZsM29PWEVjVnJiMTBtTzhTaTJlSTM1aUI3V3hLREJVNmhwOGNhdjlwalVCbzU4TFFQYlRsQ2JjLTJlYjRmVkhfYWhMa2NCM0gxd2EtWkN1M2dZT2Y4TGNETEJ1cVh6R2hjd0g5SW9CdURkZWlZcG1DbzBKRXNVTkx0am50Sk9YUTZ4OFhLT21LQW1lY05PWmZNRHlPQ2Jra3VLRnRIU0h0TjM0R3FlcWNkYURhd2E4bjRJOV9n?oc=5",
+      "review_headline": "A Look At Recursion Pharmaceuticals (RXRX) Valuation As Mixed Signals Emerge On Future Growth Prospects - Yahoo Finance",
+      "review_url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNUm1kQ2c4OURMZlBuakRlM20xWWdqVktxb21rR0lqLUlkcVJxV2MxU2t5SFdBYzJGbWxmdDI2eEtPdTVwcjdwSm1McDZxMWVHWGtDLUg2d01HeWZfanlkWHFCWEtSYmg2RER4UUNLMGhCY2U3TVp4WjlERlJSQngtZnpBODdmVUZ0U2xHMWxBci1LSDYwRFVIRVB6dW14SFp6aTdIQ1hMQjZtN0tHV0FR?oc=5",
       "proposed_funding": "",
       "proposed_stage": "",
-      "found_at": "2026-06-11T18:39:22Z"
+      "found_at": "2026-06-16T13:01:37Z"
     },
     {
       "name": "Relay Therapeutics",
@@ -886,11 +886,11 @@
       "funding": "$65B",
       "stage": "public",
       "needs_review": true,
-      "review_headline": "Zhipu surges 33% as Wall Street raises bets on China AI after Anthropic curbs - CNBC",
-      "review_url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPaUdFaUFxYVdoVWxNc2tVU21pdmVGZUhHc0M0UlRZV0VxU0kyWUxiQmY0TDc1aTNlRFJxLXNiSWczbF9HSG1wNG1Ubkp2eGFXM2oyaHNESnBIa2ZHV0lmVXRtbnMycDVGNkt4OTNvTC0ya2VYYkRPaTZSZE1VU1lfNW55OF8xMkJNeGhzTWF4cXhHODMwbzBpZndQd09iYThoRm5TY3lZdG5fdk9tZURPcWI0ZThTUdIBuwFBVV95cUxNTUVnWFBIa3BfWS1YYnhzOVMwS2Q3U3gyMmVFTEtSWE0tQmpOT2R3aTRuNkxwRWpPS3B0aGZVQk9BTEk1R2RDSXhISW84NUNPU0FlSXZreThiakp6d3phQU5tOC1wQU5WcE5fNkVGYzhUaTJGb3dyaXl4Qy1sYkRPamR0aTc0UzhYQ1Z1bTVMQVBXTUExOGFjb3Biamh1cklfd0M5QUI4eVR4TnVCSVFhS2pUQjZPY3lnQU1V?oc=5",
-      "proposed_funding": "",
+      "review_headline": "Anthropic raises $65B in Series H funding at $965B post-money valuation - Anthropic",
+      "review_url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE9FbzhQTWUzSGozVXNfbDYxWWUzTFBZZlpldmQyeDBnSExRdHVMSkJyVVV4OHdlNmx3LVBFcHVXTmJ0ck9TclZvVVlPRnpoZVhW?oc=5",
+      "proposed_funding": "$65B",
       "proposed_stage": "",
-      "found_at": "2026-06-15T14:35:50Z"
+      "found_at": "2026-06-16T13:02:11Z"
     },
     {
       "name": "Google DeepMind",
@@ -930,11 +930,11 @@
       "funding": "$30B",
       "stage": "public",
       "needs_review": true,
-      "review_headline": "Nvidia\u2019s Huang Says $30B OpenAI Investment May Be Last Pre-IPO Deal - Stocktwits",
-      "review_url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOR2dmdHo3Z0dMR0pQaXh6ZEVMZ3B4eVVxSmRhcTE3SmEtS3RTVjB1X0Z2dEMtLWxwdlZYdEYtY0pDOUNhcTJoTjI5eW11U3ItejgwWjlGdVUxWHoyZXB3QzVzNFM3WnZqSEdnRlUzajRRYUhIdnVfaFRzcDJ5WDVQVFVNbGpVZDdTdzRNQXprWWFyME9Fb0QzMVNhdlM1eFV2clY1R0ZVeENSWm1iMDhsR2hOT1JBWXotX1B3WWsxeGNOQU1aMzlr?oc=5",
-      "proposed_funding": "$30B",
-      "proposed_stage": "public",
-      "found_at": "2026-06-14T10:54:49Z"
+      "review_headline": "OpenAI Unveils Partner Program, $150M Investment; Channel Chief Sees \u2018Massive Opportunity\u2019 Ahead - crn.com",
+      "review_url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOZUFmWDRyUUhGdnNHOExGUFFQOTJfQnZBQVlKOGk5TW4wRnh4SHZVNy1CRWptOGl3M2JJb0drMTdEMkJ1ZzZDV1FmdEJudVhnTE9yd3JtLU5vSmxhdlVYR1NLMG5zR1Z4MVdJcC1xZGJuOURsYkhjWW5YNnJpOUVaZHEzY0JfVC1abFQtdVgyd05fTnhHMWs0R21JQTJVcUExeXlsU1R0dzhMV09yVV9BOGt3Z3VDNjVQTVg2TGNaa3dFdw?oc=5",
+      "proposed_funding": "$150M",
+      "proposed_stage": "",
+      "found_at": "2026-06-16T13:02:12Z"
     },
     {
       "name": "Sakana AI",
