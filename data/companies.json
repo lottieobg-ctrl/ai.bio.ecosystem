@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-16T13:02:18Z",
+  "last_updated": "2026-06-17T12:24:07Z",
   "companies": [
     {
       "name": "XtalPi",
@@ -226,11 +226,11 @@
       "funding": "$230M total \u2014 $30M seed (Sep 2024) \u00b7 $70M Series A (Aug 2025) \u00b7 $130M Series B (Dec 2025). Valuation: $1.3B.",
       "stage": "series-b",
       "needs_review": true,
-      "review_headline": "Pfizer and Eli Lilly Back AI Drug Discovery Startup Chai Discovery in $400 Million Funding Round - EPS Revision Trend - newsline.com",
-      "review_url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPSVJqNlhCZW5NRlFMYV9EdUxSakYtYVhNSGthbXE3Wm84eTZoSnliWWJQc1R2dWxEU0xGeWRPQjJuaTF4d29pRU9CeUFaRnVTOFhxYnQ1QWt4NUczdWVBVU1xMDVaN0Nfb3dBWVNySDZkNHljXzFLV0hJM1d1cWlfOFZERDB1TnU5ZUhuTGlZa0VRclduVTQ4UjVUbGRicWZmNjFzM2tGMUdNR1FCdklSS1ByQXNvZk5FdlR1SDMxNklPbU5ZWXlFSVdaX3lYQVBTcXc?oc=5",
+      "review_headline": "Pfizer and Eli Lilly Invest in AI Drug Discovery Startup Chai Discovery Amid $400 Million Funding Round - Dividend Earnings Report - newsline.com",
+      "review_url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxNQnhtYzYzYlRNU0cyVjFKYnh6d040SVpWcVUwc3hvV01WaExmOFR0Q3lldFp6aE9vZk85ZEpQSmtlX09PSnlxYjZNaWlITVdkSnVLRTRjeFI2X01zNC04T202MjI2djRwRDFxUUVQMXU5Yjd3dlhSbGNzR1U5RkdTamsyZnl2SVF0VDNjUTJCaEZuZ1N5UzFCSVlCdGUxajNZRDhmOG9EdEZEZHBXNjgydHBhMGVtblhsUDV3dkNCNS1Ia25mLUgtbFRmZUVIT2VGeks1TG5YMUM?oc=5",
       "proposed_funding": "$400M",
       "proposed_stage": "",
-      "found_at": "2026-06-16T13:00:06Z"
+      "found_at": "2026-06-17T12:22:10Z"
     },
     {
       "name": "Profluent",
@@ -886,11 +886,11 @@
       "funding": "$65B",
       "stage": "public",
       "needs_review": true,
-      "review_headline": "Anthropic raises $65B in Series H funding at $965B post-money valuation - Anthropic",
-      "review_url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE9FbzhQTWUzSGozVXNfbDYxWWUzTFBZZlpldmQyeDBnSExRdHVMSkJyVVV4OHdlNmx3LVBFcHVXTmJ0ck9TclZvVVlPRnpoZVhW?oc=5",
-      "proposed_funding": "$65B",
+      "review_headline": "Big Tech-backed coalition for carbon removal increases funding by $915 million, adds Anthropic - Reuters",
+      "review_url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxOdHJsbGszRVpXNzdlLTFDdEI2bTEwM2FIcmtaelg1UDNlUzNobFJLMXVaSS1zbThJejZFSGtKcjN2Q2V4YXdXWGxlSXVCbVFlRkI2bThxeE9TUjY5QmVvWnQxNFBnTXlsREJxMFNtWjRISV9ob0FaVjJZQUhRWDhpOU43WU9fNnQweUxpanZOVmZJdHk4VDJiUzM2UDItcW13SUlrbGNZTk1qRF9GZ1dLMXVUUkFIem04eVhUYW9LUXVXeW5ldU15SnVkMC1UZw?oc=5",
+      "proposed_funding": "$915M",
       "proposed_stage": "",
-      "found_at": "2026-06-16T13:02:11Z"
+      "found_at": "2026-06-17T12:24:04Z"
     },
     {
       "name": "Google DeepMind",
@@ -1094,12 +1094,12 @@
       "name": "Syncona",
       "funding": "Public (LSE: SYNC). NAV ~\u00a31B+.",
       "stage": "public",
-      "needs_review": false,
-      "review_headline": "",
-      "review_url": "",
+      "needs_review": true,
+      "review_headline": "Syncona appoints veteran investment specialist Norman Crighton to board - TipRanks",
+      "review_url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQQ3NXWkUydHVoMVMyd3RVdGpnb3VVb20zZU1xRGdwUkR1MmpEYXEyczNHRUNESUVLQ3hnWWx3VHZpVFl0QW1XOWI4aU9zc2FUV2pDbk5fazBiOXcxN0FiUGpsRUhpc25ZRGJJc3EyZE9ueDgzSW1HaU9YSzdzQnZZMWNyRlJqN3J6Tzc2ZEdzS3lmTWpneXlTdUdpb2V6ODQ5UTN5cTJON3FhemVMaDJOM2lYRXFfOVl1Mi1CX2hYYjU?oc=5",
       "proposed_funding": "",
       "proposed_stage": "",
-      "found_at": ""
+      "found_at": "2026-06-17T12:24:07Z"
     },
     {
       "name": "Biotech TV",
