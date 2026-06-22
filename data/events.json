@@ -17,11 +17,11 @@
     "auto": false
   },
   {
-    "name": "Grassroots action workshop: Lobby against dangerous AI",
-    "date": "2026-06-20",
-    "end_date": "2026-06-21",
+    "name": "Chicago LangChain x Focused Meetup: Featuring Harrison Chase",
+    "date": "2026-06-22",
+    "end_date": "2026-06-23",
     "location": "Boston, MA, USA",
-    "url": "ejx565v5",
+    "url": "l4kbbuln",
     "type": "meetup",
     "tags": [
       "AI",
@@ -38,6 +38,214 @@
     "end_date": "2026-06-23",
     "location": "Boston, MA, USA",
     "url": "fr64vynp",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
+    "name": "Automate 2026 Dinner - Harmony AI",
+    "date": "2026-06-23",
+    "end_date": "2026-06-23",
+    "location": "Boston, MA, USA",
+    "url": "tp0q7mkk",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
+    "name": "NVIDIA x AI Builders: Coffee & Conversation",
+    "date": "2026-06-23",
+    "end_date": "2026-06-23",
+    "location": "Boston, MA, USA",
+    "url": "1871-k10l",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
+    "name": "Lunch & Learn: Sustainable Food Systems with The Roof Crop",
+    "date": "2026-06-23",
+    "end_date": "2026-06-23",
+    "location": "Boston, MA, USA",
+    "url": "yohrvp4w",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
+    "name": "Build Your NEXT AI Agent Workshop",
+    "date": "2026-06-24",
+    "end_date": "2026-06-24",
+    "location": "Boston, MA, USA",
+    "url": "7wp5h7yu",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
+    "name": "Industry-Education Synergy, Human-Robot Harmony | Dobot Embodied AI Innovation Forum 2026",
+    "date": "2026-06-24",
+    "end_date": "2026-06-24",
+    "location": "Boston, MA, USA",
+    "url": "l8en4qpn",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
+    "name": "Women in AI Forum (WiAI) at Chicago AI Week",
+    "date": "2026-06-24",
+    "end_date": "2026-06-25",
+    "location": "Boston, MA, USA",
+    "url": "xfjp79ps",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
+    "name": "BrowserStack Meetup Chicago: Unit Test descriptions as AI prompts",
+    "date": "2026-06-24",
+    "end_date": "2026-06-25",
+    "location": "Boston, MA, USA",
+    "url": "browse-tz8u",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
+    "name": "Shoegnome in Chicago: Talking Archicad and Architecture with Jared Banks, AIA",
+    "date": "2026-06-24",
+    "end_date": "2026-06-25",
+    "location": "Boston, MA, USA",
+    "url": "ze5rf19w",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
+    "name": "Lightwheel Physical AI Rooftop Party @ Automate 2026",
+    "date": "2026-06-25",
+    "end_date": "2026-06-25",
+    "location": "Boston, MA, USA",
+    "url": "dzo2klna",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
+    "name": "2026 Chicago AI Week Summit",
+    "date": "2026-06-25",
+    "end_date": "2026-06-26",
+    "location": "Boston, MA, USA",
+    "url": "c452u0bj",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
+    "name": "Chicago AI Week B2B Matching Program",
+    "date": "2026-06-25",
+    "end_date": "2026-06-26",
+    "location": "Boston, MA, USA",
+    "url": "eoyl2elf",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
+    "name": "Tech Enablement Workshop Series: Using AI to Elevate your Customer Experience (Automation and Responsiveness)",
+    "date": "2026-06-25",
+    "end_date": "2026-06-25",
+    "location": "Boston, MA, USA",
+    "url": "polsky-06-25-2026-event-1734",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
+    "name": "Po-Shen Loh | Raise A Thought Full Generation in the Age of AI | Chicago, IL",
+    "date": "2026-06-26",
+    "end_date": "2026-06-26",
+    "location": "Boston, MA, USA",
+    "url": "cfabu4d9",
     "type": "meetup",
     "tags": [
       "AI",
