@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-21T11:22:52Z",
+  "last_updated": "2026-06-22T13:42:30Z",
   "companies": [
     {
       "name": "XtalPi",
@@ -468,22 +468,22 @@
       "funding": "$596M",
       "stage": "public",
       "needs_review": true,
-      "review_headline": "[SCHEDULE 13G] Eikon Therapeutics, Inc. Passive Investment Disclosure (>5%) - Stock Titan",
-      "review_url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQVzQ0TC1tUWZEdGo4aXo1TC14WWpsSGFFSjM2TVdVOHRyaGZEaG1zMmVWaVpBQWc2VDZsWk1hUUdzWUVRZGJETW1vZmtrTjBwNTFZXzNGT20xcXQ4aDZ3MWhsSi1keGlJdDI3Mk5FLVYteTdYVFhpUDFkaHkxZU96MXN6SkhZRmFTUEJGTl9nR3U0SEwzSHQ2R1c1T0VTLWpYY0ZPQzRkaXVvQjVoQXRrU1hhMXVRZmUzTks0VnZhV2h6TmZzTjBWZQ?oc=5",
+      "review_headline": "Eikon Therapeutics Ord Shs (EIKN) Valuation: PE, PB & Fair Value Analysis - TradingKey",
+      "review_url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE1XcVBzcGtpZVpXZGs3MlVGWGhzOFJiQTlxWDUtRXN6aXpqM2x2YWpkbXlqTWVWdko2NDVLYmNvX0FzaUtQTXVfNW01Y0VXZkxVTEgyLTY2cFpqM3pMdkU2NlR1aVZxaXR6cnJYaDFFZnpvemlHU2hlSWVvZw?oc=5",
       "proposed_funding": "",
       "proposed_stage": "",
-      "found_at": "2026-05-22T16:40:43Z"
+      "found_at": "2026-06-22T13:41:19Z"
     },
     {
       "name": "Enveda",
       "funding": "Undisclosed early-stage funding.",
       "stage": "seed",
-      "needs_review": false,
-      "review_headline": "",
-      "review_url": "",
-      "proposed_funding": "",
+      "needs_review": true,
+      "review_headline": "Enveda Biosciences funding round \u00b7 $51M raised \u00b7 (2022) - StartupHub.ai",
+      "review_url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPd2QyMnczU0RVVzBBNGpWNXRRdkRNUzFLQnVPRHZTb0lwRWNCNUJuSW1qYmY2LVVVdHc3b2tRZE5UYXpLRjJLS2NxcUs3eVVSa092QWtzS3BKWTdaRnl0NjRacEdIU0JvQVk1Yi1Ja1owNlpmemxYOWpVYXhjOFBNcW1B?oc=5",
+      "proposed_funding": "$51M",
       "proposed_stage": "",
-      "found_at": ""
+      "found_at": "2026-06-22T13:41:19Z"
     },
     {
       "name": "Expression Edits",
@@ -652,14 +652,14 @@
     },
     {
       "name": "Recursion Pharmaceuticals",
-      "funding": "Public (Nasdaq: RXRX). Raised ~$800M+ pre-IPO.",
-      "stage": "public",
+      "funding": "$121M",
+      "stage": "series-c",
       "needs_review": true,
-      "review_headline": "A Look At Recursion Pharmaceuticals (RXRX) Valuation As Mixed Signals Emerge On Future Growth Prospects - Yahoo Finance",
-      "review_url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNUm1kQ2c4OURMZlBuakRlM20xWWdqVktxb21rR0lqLUlkcVJxV2MxU2t5SFdBYzJGbWxmdDI2eEtPdTVwcjdwSm1McDZxMWVHWGtDLUg2d01HeWZfanlkWHFCWEtSYmg2RER4UUNLMGhCY2U3TVp4WjlERlJSQngtZnpBODdmVUZ0U2xHMWxBci1LSDYwRFVIRVB6dW14SFp6aTdIQ1hMQjZtN0tHV0FR?oc=5",
-      "proposed_funding": "",
-      "proposed_stage": "",
-      "found_at": "2026-06-16T13:01:37Z"
+      "review_headline": "Recursion Pharmaceuticals Series C \u00b7 $121M raised \u00b7 (2019) - StartupHub.ai",
+      "review_url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPZFE1OXRUblhvVlY5Q21XaVE2RHRpZ2FWVlc4aVJEc0N5Tld2Ujl6XzFETDFQRjNKbnpKVVgxMUkxVXk1NXlyY2doMVYwTTNaS01lVjNhd3ZSaWFqMDNqOGljcF9EeEV2VVN3VmhkeXdfSXN2NUZ4QlNVNlFvel9xTWM5aTU5czNRSzVV?oc=5",
+      "proposed_funding": "$121M",
+      "proposed_stage": "series-c",
+      "found_at": "2026-06-22T13:41:50Z"
     },
     {
       "name": "Relay Therapeutics",
@@ -828,14 +828,14 @@
     },
     {
       "name": "Nabla",
-      "funding": "$55M total \u2014 Series B. Backed by Cathay Innovation, Headline.",
+      "funding": "$24M",
       "stage": "series-b",
-      "needs_review": false,
-      "review_headline": "",
-      "review_url": "",
-      "proposed_funding": "",
-      "proposed_stage": "",
-      "found_at": ""
+      "needs_review": true,
+      "review_headline": "Nabla Series B \u00b7 $24M raised \u00b7 (2024) - StartupHub.ai",
+      "review_url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBMZDJ0dGhXNDNLQUJjaVZ0RjJBZUhqOExoM0lvY2xPWF9nRmxHcWFxanktSWJzc2o1QVJvUk9fbGhOMzBMV1pNcWE3ckV1WXBTQkczTnpSLUNiMEFZazVmalRpWVRHNmJvdGtndjhwZkI?oc=5",
+      "proposed_funding": "$24M",
+      "proposed_stage": "series-b",
+      "found_at": "2026-06-22T13:42:20Z"
     },
     {
       "name": "Optellum",
@@ -930,11 +930,11 @@
       "funding": "$30B",
       "stage": "public",
       "needs_review": true,
-      "review_headline": "OpenAI Stock IPO: Expected Valuation, Timeline and Investment Options - SmartAsset",
+      "review_headline": "OpenAI Stock IPO: Expected Valuation, Timeline and Investment Options - SmartAsset.com",
       "review_url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE15OEdhUlNaM0Z5cjB2VFdVbU5kYlU1VXNKcGF6YXpBbVZvTEhSTnFNbWo1LUZPdkxmbG1FcGJSRTI0bkgwTWxLNERtVFQ2S1lvaXpqaC03RWVoa1FJN1E?oc=5",
       "proposed_funding": "",
       "proposed_stage": "public",
-      "found_at": "2026-06-21T11:22:49Z"
+      "found_at": "2026-06-22T13:42:27Z"
     },
     {
       "name": "Sakana AI",
