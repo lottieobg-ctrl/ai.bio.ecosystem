@@ -238,6 +238,23 @@ input[type="text"]::placeholder { color: #111827; }
 .pipeline-name-link { cursor: pointer; color: var(--teal); text-decoration: underline; text-underline-offset: 2px; text-decoration-color: rgba(0,184,150,0.4); transition: text-decoration-color 0.15s; }
 .pipeline-name-link:hover { text-decoration-color: var(--teal); }
 
+/* All-competitors matrix */
+.intel-all-chart { background: var(--bg2); border: 1px solid var(--border); border-radius: 12px; padding: 24px 28px 20px; box-shadow: var(--shadow); }
+.intel-all-title { font-family: 'Roobert', sans-serif; font-size: 16px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+.intel-all-sub { font-size: 12px; color: var(--muted); margin-bottom: 20px; }
+.intel-all-scroll { overflow-x: auto; }
+.intel-all-table { border-collapse: collapse; font-size: 12px; min-width: 1100px; width: 100%; }
+.intel-all-table th { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 700; padding: 10px 12px; text-align: left; white-space: nowrap; border-bottom: 2px solid var(--border); vertical-align: bottom; }
+.intel-all-table th.iat-bcr { color: #d97706; border-bottom-color: #d97706; background: rgba(217,119,6,0.04); }
+.intel-all-table th.iat-comp { border-bottom-width: 2px; }
+.intel-all-table td { padding: 9px 12px; border-top: 1px solid #f1f5f9; font-size: 11px; color: var(--text); vertical-align: top; line-height: 1.45; }
+.intel-all-table td.iat-label { font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); font-weight: 600; white-space: nowrap; min-width: 130px; border-right: 1px solid var(--border); }
+.intel-all-table td.iat-bcr { background: rgba(217,119,6,0.03); }
+.intel-all-table tr:hover td { background: #fafbfd; }
+.intel-all-table tr:hover td.iat-bcr { background: rgba(217,119,6,0.06); }
+.intel-all-section td { background: #f8fafc; font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; color: #111827; font-weight: 600; padding: 6px 12px; border-top: 1px solid var(--border); }
+.iat-na { color: var(--muted); font-style: italic; }
+
 /* FM comparison table */
 .fm-chart { background: var(--bg2); border: 1px solid var(--border); border-radius: 12px; padding: 24px 28px 20px; margin-bottom: 32px; box-shadow: var(--shadow); }
 .fm-title { font-family: 'Roobert', sans-serif; font-size: 16px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
@@ -922,6 +939,12 @@ footer { padding: 16px 48px; border-top: 1px solid var(--border); display: flex;
     <div id="intelViewOverview">
       <div id="pipelineChart"></div>
       <div id="fmChart"></div>
+    </div>
+
+    <!-- View: All-competitors matrix -->
+    <div id="intelViewAll" style="display:none">
+      <button class="intel-back-btn" onclick="intelShowOverview()">← Back to overview</button>
+      <div id="intelAllGrid"></div>
     </div>
 
     <!-- View: Competitor comparison (shown when a competitor is selected) -->
@@ -2476,10 +2499,7 @@ function checkIntelPw(){
     document.getElementById('intelGate').style.display = 'none';
     document.getElementById('intelContent').style.display = 'block';
     // Build selector buttons so they're ready, then show overview
-    const selEl = document.getElementById('intelSel');
-    selEl.innerHTML = Object.values(INTEL_COMPETITORS).map(c=>
-      `<button class="intel-sel-btn" onclick="renderIntel('${c.id}')">${c.name}</button>`
-    ).join('');
+    _buildIntelSel();
     intelShowOverview();
   } else {
     document.getElementById('intelPwErr').textContent = 'Incorrect password.';
@@ -3030,11 +3050,87 @@ function val(v, adv){
 }
 function tag(bool){ return bool ? '<span class="intel-tag intel-tag-yes">Yes</span>' : '<span class="intel-tag intel-tag-no">No</span>'; }
 
+function _buildIntelSel(){
+  const selEl = document.getElementById('intelSel');
+  const compBtns = Object.values(INTEL_COMPETITORS).map(c=>
+    `<button class="intel-sel-btn" data-cid="${c.id}" onclick="renderIntel('${c.id}')">${c.name}</button>`
+  ).join('');
+  const allBtn = `<button class="intel-sel-btn" data-cid="" id="intelSelAll" onclick="renderIntelAll()" style="font-weight:700">All competitors</button>`;
+  selEl.innerHTML = allBtn + compBtns;
+}
+
+function renderIntelAll(){
+  document.getElementById('intelViewOverview').style.display = 'none';
+  document.getElementById('intelViewCompare').style.display = 'none';
+  document.getElementById('intelViewAll').style.display = '';
+
+  // Update selector active state
+  document.getElementById('intelSel').querySelectorAll('.intel-sel-btn').forEach(b=>{
+    b.classList.remove('active');
+    b.style.color=''; b.style.borderColor=''; b.style.background='';
+  });
+  const allBtn = document.getElementById('intelSelAll');
+  if(allBtn){ allBtn.classList.add('active'); allBtn.style.color='#d97706'; allBtn.style.borderColor='rgba(245,158,11,0.4)'; allBtn.style.background='rgba(217,119,6,0.06)'; }
+
+  const comps = Object.values(INTEL_COMPETITORS);
+  const BCR_COLOR = '#d97706';
+  const BCR_COLOR_DIM = 'rgba(217,119,6,0.04)';
+  const BCR_COLOR_BORDER = 'rgba(245,158,11,0.3)';
+
+  function cell(v){ return `<td>${v ?? '<span class="iat-na">—</span>'}</td>`; }
+  function bcrCell(v){ return `<td class="iat-bcr">${v ?? '<span class="iat-na">—</span>'}</td>`; }
+  function tagYN(bool){ return bool ? '<span class="intel-tag intel-tag-yes">Yes</span>' : '<span class="intel-tag intel-tag-no">No</span>'; }
+  function sectionRow(label){ return `<tr class="intel-all-section"><td colspan="${2 + comps.length}">${label}</td></tr>`; }
+
+  const colHeaders = `<tr>
+    <th class="iat-label"></th>
+    <th class="iat-bcr">Basecamp Research</th>
+    ${comps.map(c=>`<th class="iat-comp" style="color:${c.color};border-bottom-color:${c.color}">${c.name}</th>`).join('')}
+  </tr>`;
+
+  const rows = [
+    sectionRow('Funding &amp; Business'),
+    `<tr><td class="iat-label">Total raised</td>${bcrCell(BASECAMP.totalRaised)}${comps.map(c=>cell(c.totalRaised)).join('')}</tr>`,
+    `<tr><td class="iat-label">Last round</td>${bcrCell(BASECAMP.lastRound+' · '+BASECAMP.lastRoundDate)}${comps.map(c=>cell(c.lastRound+' · '+c.lastRoundDate)).join('')}</tr>`,
+    `<tr><td class="iat-label">Valuation</td>${bcrCell(BASECAMP.valuation)}${comps.map(c=>cell(c.valuation)).join('')}</tr>`,
+    `<tr><td class="iat-label">Founded / HQ</td>${bcrCell(BASECAMP.founded+' · '+BASECAMP.hq)}${comps.map(c=>cell(c.founded+' · '+c.hq)).join('')}</tr>`,
+    `<tr><td class="iat-label">Est. headcount</td>${bcrCell(BASECAMP.headcount)}${comps.map(c=>cell(c.headcount)).join('')}</tr>`,
+    sectionRow('AI Models'),
+    `<tr><td class="iat-label">Flagship model(s)</td>${bcrCell(BASECAMP.models.map(m=>m.name).join(' · '))}${comps.map(c=>cell(c.models.map(m=>m.name).join(' · '))).join('')}</tr>`,
+    `<tr><td class="iat-label">Parameters</td>${bcrCell(BASECAMP.models.map(m=>m.params).join(', '))}${comps.map(c=>cell(c.models.map(m=>m.params||'N/D').join(', '))).join('')}</tr>`,
+    `<tr><td class="iat-label">Open source</td>${bcrCell(tagYN(BASECAMP.models[0].openSource))}${comps.map(c=>cell(tagYN(c.models.some(m=>m.openSource)))).join('')}</tr>`,
+    sectionRow('Data &amp; Training'),
+    `<tr><td class="iat-label">Training tokens</td>${bcrCell(BASECAMP.trainingTokens)}${comps.map(c=>cell(c.trainingTokens)).join('')}</tr>`,
+    `<tr><td class="iat-label">Data uniqueness</td>${bcrCell(BASECAMP.dataUniqueness)}${comps.map(c=>cell(c.dataUniqueness)).join('')}</tr>`,
+    sectionRow('Pipeline &amp; Partnerships'),
+    `<tr><td class="iat-label">Wet lab</td>${bcrCell(tagYN(BASECAMP.wetLab))}${comps.map(c=>cell(tagYN(c.wetLab))).join('')}</tr>`,
+    `<tr><td class="iat-label">Pipeline stage</td>${bcrCell(BASECAMP.pipelineStage)}${comps.map(c=>cell(c.pipelineStage)).join('')}</tr>`,
+    `<tr><td class="iat-label">Pharma partners</td>${bcrCell(BASECAMP.pharmaPartners)}${comps.map(c=>cell(c.pharmaPartners)).join('')}</tr>`,
+    `<tr><td class="iat-label">Tech partners</td>${bcrCell(BASECAMP.techPartners)}${comps.map(c=>cell(c.techPartners)).join('')}</tr>`,
+    sectionRow('Credibility'),
+    `<tr><td class="iat-label">Benchmarks</td>${bcrCell(BASECAMP.benchmarks)}${comps.map(c=>cell(c.benchmarks)).join('')}</tr>`,
+    `<tr><td class="iat-label">Key publications</td>${bcrCell(BASECAMP.publications)}${comps.map(c=>cell(c.publications)).join('')}</tr>`,
+  ].join('');
+
+  document.getElementById('intelAllGrid').innerHTML = `
+    <div class="intel-all-chart">
+      <div class="intel-all-title">BCR vs All Competitors</div>
+      <div class="intel-all-sub">Basecamp Research compared to all tracked competitors — scroll right to see all</div>
+      <div class="intel-all-scroll">
+        <table class="intel-all-table">
+          <thead>${colHeaders}</thead>
+          <tbody>${rows}</tbody>
+        </table>
+      </div>
+    </div>`;
+}
+
 function intelShowOverview(){
   renderPipelineChart();
   renderFMChart();
   document.getElementById('intelViewOverview').style.display = '';
   document.getElementById('intelViewCompare').style.display = 'none';
+  document.getElementById('intelViewAll').style.display = 'none';
   // Clear active state on all selector buttons
   document.querySelectorAll('.intel-sel-btn').forEach(b=>{
     b.classList.remove('active');
@@ -3047,20 +3143,17 @@ function renderIntel(id){
 
   // Switch to comparison view
   document.getElementById('intelViewOverview').style.display = 'none';
+  document.getElementById('intelViewAll').style.display = 'none';
   document.getElementById('intelViewCompare').style.display = '';
 
   const comp = INTEL_COMPETITORS[id];
   document.getElementById('intelCompareHeader').textContent = `Basecamp Research  ×  ${comp.name}`;
 
   // Selector buttons — build once if not yet built, then update active state
-  const selEl = document.getElementById('intelSel');
-  if(!selEl.children.length){
-    selEl.innerHTML = Object.values(INTEL_COMPETITORS).map(c=>
-      `<button class="intel-sel-btn" onclick="renderIntel('${c.id}')">${c.name}</button>`
-    ).join('');
-  }
-  selEl.querySelectorAll('.intel-sel-btn').forEach(b=>{
-    const cId = b.getAttribute('onclick').match(/'(\w+)'/)?.[1];
+  if(!document.getElementById('intelSel').children.length) _buildIntelSel();
+  document.getElementById('intelSel').querySelectorAll('.intel-sel-btn').forEach(b=>{
+    const cId = b.dataset.cid;
+    if(!cId){ b.classList.remove('active'); b.style.color=''; b.style.borderColor=''; b.style.background=''; return; }
     const c = INTEL_COMPETITORS[cId];
     const active = cId===id;
     b.classList.toggle('active', active);
@@ -3161,12 +3254,7 @@ switchTab = function(tab, btn){
       document.getElementById('intelGate').style.display = 'none';
       document.getElementById('intelContent').style.display = 'block';
       // Ensure selector buttons exist, then show overview
-      const selEl = document.getElementById('intelSel');
-      if(!selEl.children.length){
-        selEl.innerHTML = Object.values(INTEL_COMPETITORS).map(c=>
-          `<button class="intel-sel-btn" onclick="renderIntel('${c.id}')">${c.name}</button>`
-        ).join('');
-      }
+      if(!document.getElementById('intelSel').children.length) _buildIntelSel();
       intelShowOverview();
     }
   }
