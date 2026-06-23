@@ -2524,6 +2524,7 @@ const BASECAMP = {
   pipelineStage:'Preclinical / discovery',
   pharmaPartners:'Undisclosed',
   techPartners:'Anthropic · NVIDIA · PacBio · Ultima Genomics',
+  monetisation:'Platform API licensing (B2B) · Pharma co-development deals · Industrial biotech + agriculture licensing · Internal drug discovery pipeline',
 };
 
 // ── PIPELINE CHART ──
@@ -2794,6 +2795,7 @@ const INTEL_COMPETITORS = {
     pipelineStage:'Early discovery',
     pharmaPartners:'Undisclosed (structural biology partnerships)',
     techPartners:'OpenAI (investor)',
+    monetisation:'Commercial API access for Chai-2 antibody design · Chai-1 open-source for community adoption · Internal therapeutic pipeline (future revenue) · Undisclosed enterprise licensing',
     takeaways:{
       br:['Vastly larger & more novel training data — 9.7T tokens vs undisclosed but likely smaller',
           'Older, more operationally proven (2019 vs 2023)',
@@ -2828,6 +2830,7 @@ const INTEL_COMPETITORS = {
     pipelineStage:'Discovery / early preclinical',
     pharmaPartners:'Eli Lilly',
     techPartners:'Undisclosed',
+    monetisation:'Enterprise platform licensing (ProGen2) · Pharma partnerships — Eli Lilly deal · OpenCRISPR-1 open-source with commercial support tier · Protein engineering services',
     takeaways:{
       br:['9.7T nucleotide tokens vs ~280M sequences — 34× richer training signal',
           'Novel biodiversity sequences spanning 1M+ species — Profluent cannot access this data',
@@ -2862,6 +2865,7 @@ const INTEL_COMPETITORS = {
     pipelineStage:'Discovery (partner-driven)',
     pharmaPartners:'Eli Lilly (~$1.7B potential) · Novartis (~$1.2B potential) · J&J',
     techPartners:'Alphabet / Google · DeepMind',
+    monetisation:'Large pharma milestone + royalty deals — $3B+ potential (Lilly ~$1.7B, Novartis ~$1.2B, J&J) · No standalone product or API licensing · Revenue entirely partnership-driven',
     takeaways:{
       br:['Unique biodiversity data moat — Isomorphic uses standard structural databases',
           'EDEN trained on novel sequences unavailable to any competitor',
@@ -2897,6 +2901,7 @@ const INTEL_COMPETITORS = {
     pipelineStage:'Platform / early',
     pharmaPartners:'None disclosed',
     techPartners:'None disclosed',
+    monetisation:'Open-source (MIT licence) — no commercial licensing · Cloud API access planned · Commercial drug discovery agent services (early stage) · Revenue model undisclosed',
     takeaways:{
       br:['9.7T proprietary tokens vs PDB-only (public) — irreplicable data advantage',
           '$60M commercial backing vs undisclosed seed — far greater operational runway',
@@ -2930,6 +2935,7 @@ const INTEL_COMPETITORS = {
     pipelineStage:'Research / early discovery',
     pharmaPartners:'Undisclosed',
     techPartners:'NVIDIA · Nebius · Oxford · Stanford · Salk Institute · Dementia Platform UK',
+    monetisation:'Undisclosed (seed-stage) · Likely: platform licensing + therapeutic pipeline milestones · Potential sovereign/Middle East capital partnerships given Dubai presence',
     takeaways:{
       br:['Published model (EDEN-28B, Jan 2026) vs no named public model from Prima Mente',
           'Larger team (~80 vs ~30) and significantly more capital ($60M vs undisclosed seed)',
@@ -2963,6 +2969,7 @@ const INTEL_COMPETITORS = {
     pipelineStage:'Preclinical / lead optimisation',
     pharmaPartners:'Boehringer Ingelheim (kidney AI targets) · Novo Nordisk (with community benefit-sharing)',
     techPartners:'Undisclosed',
+    monetisation:'Pharma partnership deals (Boehringer Ingelheim, Novo Nordisk) · Milestone + royalty model · Benefit-sharing: 4% revenue + 4% equity to source communities · No platform licensing',
     takeaways:{
       br:['EDEN-28B = generative foundation model; Variant uses AI as a discovery tool on human data',
           '9.7T tokens across 1M+ species vs human-only population cohorts',
@@ -2996,6 +3003,7 @@ const INTEL_COMPETITORS = {
     pipelineStage:'No pipeline — model platform only',
     pharmaPartners:'None (open science)',
     techPartners:'CZI (parent) · NVentures · Amazon AWS',
+    monetisation:'Acquired by CZI (non-profit, Nov 2025) — open science mandate post-acquisition · Pre-acquisition: commercial API access planned · Weights freely available (open source)',
     takeaways:{
       br:['9.7T nucleotide tokens vs 2.78B protein sequences — more diverse data across species',
           'Data from 1M+ novel species; ESM3 trained primarily on catalogued/known proteins',
@@ -3029,6 +3037,7 @@ const INTEL_COMPETITORS = {
     pipelineStage:'No pipeline — open research platform',
     pharmaPartners:'None (open science)',
     techPartners:'CZI · NVIDIA · AWS (compute)',
+    monetisation:'Non-profit open science — no commercial model · Philanthropic funding (CZI, Patrick Collison, Patrick Hsu) · MIT licence: free for all uses including commercial · No API fees or licensing',
     takeaways:{
       br:['9.7T tokens from 1M+ species vs 9.3T tokens from 128K whole genomes — similar scale, fundamentally different data source',
           'EDEN trained on natural biodiversity (rare novel organisms); Evo 2 on catalogued whole genomes',
@@ -3095,6 +3104,7 @@ function renderIntelAll(){
     `<tr><td class="iat-label">Valuation</td>${bcrCell(BASECAMP.valuation)}${comps.map(c=>cell(c.valuation)).join('')}</tr>`,
     `<tr><td class="iat-label">Founded / HQ</td>${bcrCell(BASECAMP.founded+' · '+BASECAMP.hq)}${comps.map(c=>cell(c.founded+' · '+c.hq)).join('')}</tr>`,
     `<tr><td class="iat-label">Est. headcount</td>${bcrCell(BASECAMP.headcount)}${comps.map(c=>cell(c.headcount)).join('')}</tr>`,
+    `<tr><td class="iat-label">Monetisation</td>${bcrCell(BASECAMP.monetisation)}${comps.map(c=>cell(c.monetisation)).join('')}</tr>`,
     sectionRow('AI Models'),
     `<tr><td class="iat-label">Flagship model(s)</td>${bcrCell(BASECAMP.models.map(m=>m.name).join(' · '))}${comps.map(c=>cell(c.models.map(m=>m.name).join(' · '))).join('')}</tr>`,
     `<tr><td class="iat-label">Parameters</td>${bcrCell(BASECAMP.models.map(m=>m.params).join(', '))}${comps.map(c=>cell(c.models.map(m=>m.params||'N/D').join(', '))).join('')}</tr>`,
@@ -3184,6 +3194,7 @@ function renderIntel(id){
         ['Founded',              val(BASECAMP.founded,'br'),        val(comp.founded,'neu')],
         ['HQ',                   val(BASECAMP.hq,'neu'),            val(comp.hq,'neu')],
         ['Est. headcount',       val(BASECAMP.headcount,'br'),      val(comp.headcount,'neu')],
+        ['Monetisation model',   val(BASECAMP.monetisation,'neu'),  val(comp.monetisation,'neu')],
       ]
     },
     {
