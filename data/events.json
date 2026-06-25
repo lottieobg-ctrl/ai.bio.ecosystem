@@ -1,117 +1,5 @@
 [
   {
-    "name": "Chicago LangChain x Focused Meetup: Featuring Harrison Chase",
-    "date": "2026-06-22",
-    "end_date": "2026-06-23",
-    "location": "Boston, MA, USA",
-    "url": "l4kbbuln",
-    "type": "meetup",
-    "tags": [
-      "AI",
-      "biology"
-    ],
-    "virtual": false,
-    "description": "",
-    "source": "luma",
-    "auto": true
-  },
-  {
-    "name": "AI SEO Optimization",
-    "date": "2026-06-23",
-    "end_date": "2026-06-23",
-    "location": "Boston, MA, USA",
-    "url": "fr64vynp",
-    "type": "meetup",
-    "tags": [
-      "AI",
-      "biology"
-    ],
-    "virtual": false,
-    "description": "",
-    "source": "luma",
-    "auto": true
-  },
-  {
-    "name": "Automate 2026 Dinner - Harmony AI",
-    "date": "2026-06-23",
-    "end_date": "2026-06-23",
-    "location": "Boston, MA, USA",
-    "url": "tp0q7mkk",
-    "type": "meetup",
-    "tags": [
-      "AI",
-      "biology"
-    ],
-    "virtual": false,
-    "description": "",
-    "source": "luma",
-    "auto": true
-  },
-  {
-    "name": "NVIDIA x AI Builders: Coffee & Conversation",
-    "date": "2026-06-23",
-    "end_date": "2026-06-23",
-    "location": "Boston, MA, USA",
-    "url": "1871-k10l",
-    "type": "meetup",
-    "tags": [
-      "AI",
-      "biology"
-    ],
-    "virtual": false,
-    "description": "",
-    "source": "luma",
-    "auto": true
-  },
-  {
-    "name": "Lunch & Learn: Sustainable Food Systems with The Roof Crop",
-    "date": "2026-06-23",
-    "end_date": "2026-06-23",
-    "location": "Boston, MA, USA",
-    "url": "yohrvp4w",
-    "type": "meetup",
-    "tags": [
-      "AI",
-      "biology"
-    ],
-    "virtual": false,
-    "description": "",
-    "source": "luma",
-    "auto": true
-  },
-  {
-    "name": "Build Your NEXT AI Agent Workshop",
-    "date": "2026-06-24",
-    "end_date": "2026-06-24",
-    "location": "Boston, MA, USA",
-    "url": "7wp5h7yu",
-    "type": "meetup",
-    "tags": [
-      "AI",
-      "biology"
-    ],
-    "virtual": false,
-    "description": "",
-    "source": "luma",
-    "auto": true
-  },
-  {
-    "name": "Industry-Education Synergy, Human-Robot Harmony | Dobot Embodied AI Innovation Forum 2026",
-    "date": "2026-06-24",
-    "end_date": "2026-06-24",
-    "location": "Boston, MA, USA",
-    "url": "l8en4qpn",
-    "type": "meetup",
-    "tags": [
-      "AI",
-      "biology"
-    ],
-    "virtual": false,
-    "description": "",
-    "source": "luma",
-    "auto": true
-  },
-  {
     "name": "Women in AI Forum (WiAI) at Chicago AI Week",
     "date": "2026-06-24",
     "end_date": "2026-06-25",
@@ -224,6 +112,86 @@
     "auto": true
   },
   {
+    "name": "Gatekeeper: Deterministic AI Governance Subtitle: Refusal is the resting state. Execution requires proof.",
+    "date": "2026-06-25",
+    "end_date": "2026-06-25",
+    "location": "Boston, MA, USA",
+    "url": "deep-fjws",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
+    "name": "SPC Post-Training Forum: Fireside Chat with Trajectory",
+    "date": "2026-06-25",
+    "end_date": "2026-06-25",
+    "location": "Boston, MA, USA",
+    "url": "xzzx4q8q",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
+    "name": "Config Side Chat: Anything but AI",
+    "date": "2026-06-25",
+    "end_date": "2026-06-25",
+    "location": "Boston, MA, USA",
+    "url": "6wnkn14h",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
+    "name": "Human Longevity x General Biotechnologies presents: Genomes, peptides and personalised medicine (+ WALK-IN CLINIC) - SF DeepTech Week 26",
+    "date": "2026-06-25",
+    "end_date": "2026-06-26",
+    "location": "Boston, MA, USA",
+    "url": "merv0jk8",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
+    "name": "Slices & Splice: A Lexi Ventures Pizza Party: For biotech founders, investors, and friends",
+    "date": "2026-06-25",
+    "end_date": "2026-06-25",
+    "location": "Boston, MA, USA",
+    "url": "deep-m58o",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
     "name": "Po-Shen Loh | Raise A Thought Full Generation in the Age of AI | Chicago, IL",
     "date": "2026-06-26",
     "end_date": "2026-06-26",
@@ -240,7 +208,167 @@
     "auto": true
   },
   {
-    "name": "PauseAI Phoenix Monthly Social \ud83c\udf68",
+    "name": "AI After Hours",
+    "date": "2026-06-26",
+    "end_date": "2026-06-26",
+    "location": "Boston, MA, USA",
+    "url": "8v9udrkl",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
+    "name": "Doughnut Economics: Rising in San Francisco!",
+    "date": "2026-06-26",
+    "end_date": "2026-06-26",
+    "location": "Boston, MA, USA",
+    "url": "n899aler",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
+    "name": "@Playground — Tech’s Next Frontier: Building the Foundation for an AI World",
+    "date": "2026-06-26",
+    "end_date": "2026-06-26",
+    "location": "Boston, MA, USA",
+    "url": "mx1v2jyc",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
+    "name": "Teqfocus Presents: Agentic Commerce in Payments: The Future of AI-Driven Transactions.",
+    "date": "2026-06-26",
+    "end_date": "2026-06-26",
+    "location": "Boston, MA, USA",
+    "url": "3wz6b9qc",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
+    "name": "The AI in Finance Lab — Show and Tell in SF",
+    "date": "2026-06-26",
+    "end_date": "2026-06-26",
+    "location": "Boston, MA, USA",
+    "url": "48phh28e",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
+    "name": "The AI Room — for Product Leaders & Founders | East Bay",
+    "date": "2026-06-26",
+    "end_date": "2026-06-26",
+    "location": "Boston, MA, USA",
+    "url": "loaamiy4",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
+    "name": "TOBORLIFE AI ROBOTS & AI EVENT | INVESTMENT OPPORTUNITY",
+    "date": "2026-06-26",
+    "end_date": "2026-06-26",
+    "location": "Boston, MA, USA",
+    "url": "n749tagq",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
+    "name": "AI SOC Sessions - An Intimate Dinner with Panther",
+    "date": "2026-06-26",
+    "end_date": "2026-06-26",
+    "location": "Boston, MA, USA",
+    "url": "SFAISOCsession",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
+    "name": "FRAMES-F1 [AI Model for Data Payments] DEMO @ Colosseum",
+    "date": "2026-06-26",
+    "end_date": "2026-06-26",
+    "location": "Boston, MA, USA",
+    "url": "ybb5siwi",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
+    "name": "💸 SF PITCH NIGHT (w/ The AI Collective)",
+    "date": "2026-06-26",
+    "end_date": "2026-06-26",
+    "location": "Boston, MA, USA",
+    "url": "june-pitches",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
+    "name": "PauseAI Phoenix Monthly Social 🍨",
     "date": "2026-06-27",
     "end_date": "2026-06-27",
     "location": "Boston, MA, USA",
@@ -256,7 +384,7 @@
     "auto": true
   },
   {
-    "name": "Ship AI \u2014 Craftsmanship Night",
+    "name": "Ship AI — Craftsmanship Night",
     "date": "2026-07-02",
     "end_date": "2026-07-02",
     "location": "Boston, MA, USA",
@@ -285,7 +413,7 @@
       "genomics"
     ],
     "virtual": false,
-    "description": "International Society for Computational Biology flagship conference \u2014 the premier meeting in bioinformatics and computational biology.",
+    "description": "International Society for Computational Biology flagship conference — the premier meeting in bioinformatics and computational biology.",
     "auto": false
   },
   {
@@ -369,7 +497,7 @@
       "clinical"
     ],
     "virtual": false,
-    "description": "American Society of Human Genetics annual meeting \u2014 a key forum for AI-driven genetics and genomics research.",
+    "description": "American Society of Human Genetics annual meeting — a key forum for AI-driven genetics and genomics research.",
     "auto": false
   },
   {
@@ -386,11 +514,11 @@
       "digital health"
     ],
     "virtual": false,
-    "description": "Annual congress focused on biodata, AI and precision medicine \u2014 bringing together data scientists, clinicians and industry leaders.",
+    "description": "Annual congress focused on biodata, AI and precision medicine — bringing together data scientists, clinicians and industry leaders.",
     "auto": false
   },
   {
-    "name": "NeurIPS 2026 \u2014 ML for Biology Workshop",
+    "name": "NeurIPS 2026 — ML for Biology Workshop",
     "date": "2026-12-05",
     "end_date": "2026-12-06",
     "location": "TBC",
@@ -403,7 +531,7 @@
       "computational"
     ],
     "virtual": false,
-    "description": "Annual machine learning for biology workshop co-located with NeurIPS \u2014 a key venue for AI \u00d7 biology research presentations.",
+    "description": "Annual machine learning for biology workshop co-located with NeurIPS — a key venue for AI × biology research presentations.",
     "auto": false
   }
 ]
