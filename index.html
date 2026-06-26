@@ -3177,9 +3177,9 @@ const INTEL_COMPETITORS = {
     id:'radical', name:'Radical Numerics', hq:'Menlo Park, CA', founded:'2026',
     color:'#dc2626', colorDim:'rgba(220,38,38,0.06)', colorBorder:'rgba(220,38,38,0.2)',
     totalRaised:'$50M (seed)', lastRound:'Seed ($50M)', lastRoundDate:'Jun 2026',
-    valuation:'Undisclosed', investors:'Emergence Capital · Obvious Ventures · Triatomic Capital · Factory · First Spark Ventures · Patrick Collison', headcount:'~4 (founding team; actively hiring)',
+    valuation:'Undisclosed', investors:'Emergence Capital · Obvious Ventures · Triatomic Capital · Factory · First Spark Ventures · Patrick Collison', headcount:'~10–20 (team from Stanford, MIT, Google DeepMind; actively hiring)',
     models:[
-      {name:'Omnii', params:'Not disclosed', purpose:'Multimodal genome foundation model — integrates DNA sequence with genomic annotation tracks (conservation, regulatory elements); 2M base pair context window; block convolutions + sparse attention architecture', openSource:false},
+      {name:'Omnii', params:'Not disclosed', purpose:'Multimodal genome foundation model — multi-hybrid architecture (new), 2M-token context window, integrates DNA sequence with genomic annotation tracks; first aligned large-scale gLM (mid- and post-training methods); first gLM to beat every specialised model family across evaluation suite', openSource:false},
     ],
     trainingTokens:'Not disclosed',
     trainingData:'Genomic sequences + genomic annotation tracks — builds on Evo 2 corpus (128K whole genomes); proprietary training details undisclosed',
@@ -3192,8 +3192,8 @@ const INTEL_COMPETITORS = {
     therapAreas:'Genomics · Cancer early detection · Biosecurity / Biodefense',
     pipelineStage:'Platform / no internal pipeline — API licensing + biodefense contracts',
     pharmaPartners:'Undisclosed cancer diagnostics company · Undisclosed US national laboratory (pathogen detection + characterisation)',
-    techPartners:'None disclosed',
-    monetisation:'<strong>SaaS / API + biodefense</strong><br>API licensing + proprietary fine-tuned models · Milestone payments from diagnostic and biodefense partners · Future open-source releases restricted (dual-use caution after Evo weights were used to design an AI-synthesised virus, Sep 2025)',
+    techPartners:'NVIDIA (Blackwell data centre under construction)',
+    monetisation:'<strong>SaaS / API + biodefense</strong><br>API licensing + proprietary fine-tuned models · Milestone payments from diagnostic and biodefense partners · Explicit dual mandate: design lab and defense lab are the same entity · Future open-source releases restricted (Evo weights were used to write the world\'s first complete AI-generated bacteriophage genome)',
     takeaways:{
       br:['EDEN wet lab data from 1M+ novel species is irreplicable; Radical Numerics extends public genomic databases',
           'EDEN generates therapeutic proteins and genetic medicines; Radical Numerics models genomic sequence and annotation',
@@ -3202,9 +3202,9 @@ const INTEL_COMPETITORS = {
           'BCR has an active therapeutic pipeline; Radical Numerics is a pure platform at seed stage'],
       comp:['Founded by the Evo / Evo 2 team — the most credentialed genomics AI group now working commercially',
             '$50M seed (Jun 2026) with Emergence Capital lead — extraordinary early-stage institutional backing',
-            'Omnii achieves AUROC 0.975 on ClinVar noncoding pathogenicity — best-in-class at launch',
-            'Andrew Weber advisory positions them uniquely for US government biodefense contracts',
-            'Novel non-transformer architecture potentially overcomes fundamental limits of attention at genomic scale'],
+            'Omnii: first aligned large-scale gLM; first to beat every specialised model family across benchmarks',
+            'Explicit dual mandate: "the design lab and the defense lab need to be the same entity" — unique positioning for government + pharma',
+            'NVIDIA Blackwell data centre under construction — serious compute infrastructure at seed stage'],
     }
   },
 };
