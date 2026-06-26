@@ -740,7 +740,7 @@ footer { padding: 16px 48px; border-top: 1px solid var(--border); display: flex;
         <span class="chip" data-type="Company" data-desc="Developer of GPT-4 and ChatGPT. Investor in Chai Discovery. Held a biodefence summit on model safeguards for biosecurity risk. Increasingly engaged with AI bio through capabilities and direct investment.">OpenAI</span>
         <span class="chip" data-type="Company" data-desc="AI research lab co-founded by ex-Google Brain researchers exploring nature-inspired AI architectures. Based in Tokyo. Develops novel model designs inspired by evolution and swarm intelligence.">Sakana AI</span>
         <span class="chip" data-type="Company" data-desc="The Intelligent Systems Company building infrastructure where heterogeneous chips and intelligence co-evolve. Develops computing architecture enabling diverse AI approaches to work together, moving beyond homogeneous scaling.">Callosum</span>
-        <span class="chip" data-type="Company" data-desc="Computational and numerical AI company focused on high-performance scientific computing and AI-accelerated simulation for complex numerical problems in science and engineering.">Radical Numerics</span>
+        <span class="chip" data-type="Company" data-desc="Founded by the Evo and Evo 2 team (Eric Nguyen, Michael Poli, Stefano Massaroli, Armin Thomas). Builds general biological intelligence using novel non-transformer architectures (block convolutions + sparse attention) with multi-million base pair context windows. Launched from stealth June 2026 with $50M seed (Emergence Capital). First model Omnii: multimodal genome model integrating DNA sequence with genomic annotation tracks — best-in-class on ClinVar noncoding pathogenicity benchmarks. Applications in cancer early detection and biosecurity. Advisors: Eric Horvitz (Microsoft), Chris Ré (Stanford), George Church (Harvard). Menlo Park, CA.">Radical Numerics</span>
         <span class="chip" data-type="Company" data-desc="UK AI hardware startup building custom inference chips using in-memory compute to radically accelerate and reduce the cost of running large AI models. $220M Series B (Accel, Founders Fund). London/Bristol.">Fractile <span class="badge badge-chip">CHIP</span></span>
         <span class="chip" data-type="Company" data-desc="Batch inference platform for large-scale LLM workloads. Asynchronous and overnight inference at up to 75% lower cost than real-time providers, via an OpenAI-compatible API. Use cases include synthetic data generation and model evaluation.">Doubleword</span>
         <span class="chip" data-type="Company" data-desc="Building infrastructure and systems for superintelligence. Develops large-scale reinforcement learning that learns from experience rather than human data. Collaborating with NVIDIA on specialised GPU infrastructure for RL at scale. Founded by David Silver, creator of AlphaGo. London-based.">Ineffable Intelligence</span>
@@ -1109,7 +1109,7 @@ const ORGS = [
   {name:'Nvidia',cat:'ai',type:'Company',lat:37.37,lng:-121.97,desc:'GPU manufacturer and essential AI infrastructure globally. BioNeMo framework hosts multiple biological foundation models as NIM microservices.'},
   {name:'OpenAI',cat:'ai',type:'Company',lat:37.80,lng:-122.42,desc:'Developer of GPT-4 and ChatGPT. Investor in Chai Discovery. Held a biodefence summit on model safeguards for biosecurity risk.'},
   {name:'Sakana AI',cat:'ai',type:'Company',lat:35.68,lng:139.65,desc:'AI research lab exploring nature-inspired AI architectures. Based in Tokyo. Develops novel model designs inspired by evolution and swarm intelligence.'},
-  {name:'Radical Numerics',cat:'ai',type:'Company',lat:37.45,lng:-122.18,desc:'Computational and numerical AI company focused on high-performance scientific computing and AI-accelerated simulation. Based in Menlo Park, CA.'},
+  {name:'Radical Numerics',cat:'foundation',type:'Company',lat:37.45,lng:-122.18,desc:'Founded by the Evo / Evo 2 team (Eric Nguyen, Michael Poli, Stefano Massaroli, Armin Thomas). Builds general biological intelligence using novel non-transformer architectures. Launched from stealth June 2026 with $50M seed (Emergence Capital). First model: Omnii, a multimodal genome model with 2M base pair context. Applications in cancer diagnostics and biosecurity.'},
   {name:'ARIA',cat:'investor',type:'Government Agency (UK)',lat:51.52,lng:-0.16,desc:"UK's Advanced Research and Invention Agency, modelled on DARPA. Funds high-risk, high-reward scientific research. Active programmes in AI for science and synthetic biology."},
   {name:'Blue Yard',cat:'investor',type:'Venture Capital',lat:52.52,lng:13.41,desc:'Berlin-based deep tech VC investing in foundational technology companies across AI, biotech, space and climate.'},
   {name:'Convergent Research',cat:'investor',type:'Non-profit / FRO',lat:42.36,lng:-71.12,desc:'Focused Research Organisation model launching high-risk, high-reward scientific projects between academia and industry.'},
@@ -1289,7 +1289,7 @@ const FUNDING = {
   'OpenAI':                          '$57B+ total — including $40B from SoftBank (Mar 2025), the largest single VC round in history.',
   'Sakana AI':                       '~$30M total — Series A. Backed by Lux Capital, NTT Docomo Ventures.',
   'Callosum':                        'Undisclosed.',
-  'Radical Numerics':                'Undisclosed.',
+  'Radical Numerics':                '$50M seed (Jun 2026). Led by Emergence Capital; also Obvious Ventures, Triatomic Capital, Factory, First Spark Ventures, Patrick Collison.',
   'ARIA':                            'UK Government agency — ~£800M budget over 5 years.',
   'Blue Yard':                       'VC fund — AUM undisclosed.',
   'Convergent Research':             'Non-profit — funded by philanthropists and foundations.',
@@ -1391,6 +1391,7 @@ const WEBSITES = {
   'NOETIK':                         'https://www.noetik.ai',
   'Inceptive':                      'https://www.inceptive.com',
   'Boltz Bio':                      'https://boltz.bio',
+  'Radical Numerics':               'https://www.radicalnumerics.ai',
   'Latent Labs':                    'https://www.latentlabs.com',
   'Goodfire':                       'https://www.goodfire.ai',
   'Generate:Biomedicines':          'https://www.generatebiomedicines.com',
@@ -1611,7 +1612,7 @@ const STAGES = {
   'AQEMIA':'series-a', 'Antiverse':'series-a', 'Phenomic AI':'series-a',
   'Sakana AI':'series-a', 'Superluminal Medicines':'series-a', 'WhiteLab Genomics':'series-a',
   'Xaira':'series-a', 'NOETIK':'series-a', 'Bioptimus':'series-a',
-  'Lila Sciences':'seed', 'Medra':'seed', 'Boltz Bio':'seed',
+  'Lila Sciences':'seed', 'Medra':'seed', 'Boltz Bio':'seed', 'Radical Numerics':'seed',
   'Outpost Bio':'seed', 'Zeon Systems':'seed', 'Ineffable Intelligence':'seed', 'Variant Bio':'series-b', 'Orakl Oncology':'seed',
   'XtalPi':'series-c', 'Exscientia':'acquired', 'Evotec':'public', 'Nimbus Therapeutics':'series-c',
   'Verge Genomics':'series-b', 'AbCellera':'public', 'Valo Health':'series-c',
@@ -2557,6 +2558,7 @@ const PIPELINE_COMPANIES = [
   {name:'Basecamp Research',  stage:1, note:'EDEN-28B applied to therapeutic protein and genetic medicine design', highlight:true},
   {name:'Xaira',              stage:1, note:'Generative platform; therapeutic applications beginning'},
   {name:'Boltz Bio',          stage:0, note:'Open-source platform; no internal pipeline', intelId:'boltz'},
+  {name:'Radical Numerics',  stage:0, note:'Omnii genomics foundation model; no internal drug pipeline — API platform + biodefense contracts', intelId:'radical'},
   {name:'Bioptimus',          stage:0, note:'H-Optimus / M-Optimus pathology & multiomics platform; no internal drug pipeline', intelId:'bioptimus'},
   {name:'Latent Labs',        stage:0, note:'Latent-X / Latent-X2 / Latent-Y protein binder design platform; no internal pipeline', intelId:'latent'},
   {name:'Prima Mente',        stage:0, note:'Foundation model in development; neurology focus', intelId:'prima'},
@@ -3169,6 +3171,40 @@ const INTEL_COMPETITORS = {
             'Latent-Y autonomous agent represents next-generation paradigm: AI runs the full design cycle',
             'Three models shipped in under 18 months — fastest model iteration cadence of any comparator',
             'Small team (~23 people) generating outsized research output: 3 arXiv papers with concrete benchmarks'],
+    }
+  },
+  radical:{
+    id:'radical', name:'Radical Numerics', hq:'Menlo Park, CA', founded:'2026',
+    color:'#dc2626', colorDim:'rgba(220,38,38,0.06)', colorBorder:'rgba(220,38,38,0.2)',
+    totalRaised:'$50M (seed)', lastRound:'Seed ($50M)', lastRoundDate:'Jun 2026',
+    valuation:'Undisclosed', investors:'Emergence Capital · Obvious Ventures · Triatomic Capital · Factory · First Spark Ventures · Patrick Collison', headcount:'~4 (founding team; actively hiring)',
+    models:[
+      {name:'Omnii', params:'Not disclosed', purpose:'Multimodal genome foundation model — integrates DNA sequence with genomic annotation tracks (conservation, regulatory elements); 2M base pair context window; block convolutions + sparse attention architecture', openSource:false},
+    ],
+    trainingTokens:'Not disclosed',
+    trainingData:'Genomic sequences + genomic annotation tracks — builds on Evo 2 corpus (128K whole genomes); proprietary training details undisclosed',
+    dataScale:'Builds on Evo 2\'s 9.3T token / 128K whole-genome corpus; Omnii-specific scale not disclosed',
+    dataUniqueness:'Novel non-transformer architecture (block convolutions + sparse attention) enabling multi-million base pair context; team holds world record for longest context window in biological AI',
+    wetLab:false,
+    benchmarks:'Omnii: ClinVar noncoding SNV pathogenicity AUROC 0.975 (vs CADD 0.909); AUPRC 0.735 (vs Evo 2 0.425); TraitGym complex traits AUPRC 0.410 (vs Borzoi 0.297); Alzheimer\'s variant discovery: recovered rs2526377 at TSPOAP1 as top prediction (CADD ranked it 16th). All benchmarks from own launch materials — no peer-reviewed paper yet.',
+    publications:'<a href="https://www.nature.com/articles/s41586-025-08642-7" target="_blank" rel="noopener">Evo 2 (Nature, Mar 2026)</a> — prior Arc Institute work · Omnii technical blog (Jun 2026; no peer-reviewed paper yet)',
+    pipelineTargets:'No internal drug pipeline · Pancreatic and multi-cancer early detection (undisclosed partner) · Pathogen biosurveillance (undisclosed US national laboratory)',
+    therapAreas:'Genomics · Cancer early detection · Biosecurity / Biodefense',
+    pipelineStage:'Platform / no internal pipeline — API licensing + biodefense contracts',
+    pharmaPartners:'Undisclosed cancer diagnostics company · Undisclosed US national laboratory (pathogen detection + characterisation)',
+    techPartners:'None disclosed',
+    monetisation:'<strong>SaaS / API + biodefense</strong><br>API licensing + proprietary fine-tuned models · Milestone payments from diagnostic and biodefense partners · Future open-source releases restricted (dual-use caution after Evo weights were used to design an AI-synthesised virus, Sep 2025)',
+    takeaways:{
+      br:['EDEN wet lab data from 1M+ novel species is irreplicable; Radical Numerics extends public genomic databases',
+          'EDEN generates therapeutic proteins and genetic medicines; Radical Numerics models genomic sequence and annotation',
+          'BCR has established commercial operations (2019); Radical Numerics launched from stealth June 2026',
+          'BCR biodiversity data spans unexplored organisms unavailable in any public database',
+          'BCR has an active therapeutic pipeline; Radical Numerics is a pure platform at seed stage'],
+      comp:['Founded by the Evo / Evo 2 team — the most credentialed genomics AI group now working commercially',
+            '$50M seed (Jun 2026) with Emergence Capital lead — extraordinary early-stage institutional backing',
+            'Omnii achieves AUROC 0.975 on ClinVar noncoding pathogenicity — best-in-class at launch',
+            'Andrew Weber advisory positions them uniquely for US government biodefense contracts',
+            'Novel non-transformer architecture potentially overcomes fundamental limits of attention at genomic scale'],
     }
   },
 };
