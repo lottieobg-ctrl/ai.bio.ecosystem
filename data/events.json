@@ -1,10 +1,202 @@
 [
   {
-    "name": "Ship AI \u2014 Craftsmanship Night",
+    "name": "Ship AI — Craftsmanship Night",
     "date": "2026-07-02",
     "end_date": "2026-07-02",
     "location": "Boston, MA, USA",
     "url": "leihzavg",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
+    "name": "AI Engineer Morning Run",
+    "date": "2026-07-02",
+    "end_date": "2026-07-02",
+    "location": "Boston, MA, USA",
+    "url": "lo0yh15f",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
+    "name": "Mem0 Build Room: Coworking Near AI Engineer World’s Fair",
+    "date": "2026-07-02",
+    "end_date": "2026-07-03",
+    "location": "Boston, MA, USA",
+    "url": "mem0-gan0",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
+    "name": "AI Engineer Fair Closing Happy Hour by vLLM & Novita",
+    "date": "2026-07-02",
+    "end_date": "2026-07-03",
+    "location": "Boston, MA, USA",
+    "url": "t42gxwnp",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
+    "name": "AI Engineer Trivia Night",
+    "date": "2026-07-02",
+    "end_date": "2026-07-03",
+    "location": "Boston, MA, USA",
+    "url": "k9z2sucw",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
+    "name": "AI Engineer BBQ",
+    "date": "2026-07-03",
+    "end_date": "2026-07-03",
+    "location": "Boston, MA, USA",
+    "url": "6qu28qi1",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
+    "name": "{AI} in Production",
+    "date": "2026-07-03",
+    "end_date": "2026-07-03",
+    "location": "Boston, MA, USA",
+    "url": "5kvakl4z",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
+    "name": "AI x Variant Interpretation",
+    "date": "2026-07-03",
+    "end_date": "2026-07-03",
+    "location": "Boston, MA, USA",
+    "url": "2g3ft8wj",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
+    "name": "AI Engineer World's Fair Rooftop Afterparty w/ Apify × Massive × TopK",
+    "date": "2026-07-03",
+    "end_date": "2026-07-03",
+    "location": "Boston, MA, USA",
+    "url": "aie-sf-afterparty",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
+    "name": "Day One AI: Founders & CEOs Dinner",
+    "date": "2026-07-03",
+    "end_date": "2026-07-03",
+    "location": "Boston, MA, USA",
+    "url": "7z0ouecm",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
+    "name": "Physical AI Open House – The Residency × Mission Robotics",
+    "date": "2026-07-03",
+    "end_date": "2026-07-03",
+    "location": "Boston, MA, USA",
+    "url": "residency-mr-open-house",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
+    "name": "Clear your Brain Fog",
+    "date": "2026-07-03",
+    "end_date": "2026-07-04",
+    "location": "Boston, MA, USA",
+    "url": "wwcce1yc",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
+    "name": "Valkyrie AI & Investment Frontiers Series: Session 1",
+    "date": "2026-07-04",
+    "end_date": "2026-07-04",
+    "location": "Boston, MA, USA",
+    "url": "k16gt8bb",
     "type": "meetup",
     "tags": [
       "AI",
@@ -29,7 +221,7 @@
       "genomics"
     ],
     "virtual": false,
-    "description": "International Society for Computational Biology flagship conference \u2014 the premier meeting in bioinformatics and computational biology.",
+    "description": "International Society for Computational Biology flagship conference — the premier meeting in bioinformatics and computational biology.",
     "auto": false
   },
   {
@@ -113,7 +305,7 @@
       "clinical"
     ],
     "virtual": false,
-    "description": "American Society of Human Genetics annual meeting \u2014 a key forum for AI-driven genetics and genomics research.",
+    "description": "American Society of Human Genetics annual meeting — a key forum for AI-driven genetics and genomics research.",
     "auto": false
   },
   {
@@ -130,11 +322,11 @@
       "digital health"
     ],
     "virtual": false,
-    "description": "Annual congress focused on biodata, AI and precision medicine \u2014 bringing together data scientists, clinicians and industry leaders.",
+    "description": "Annual congress focused on biodata, AI and precision medicine — bringing together data scientists, clinicians and industry leaders.",
     "auto": false
   },
   {
-    "name": "NeurIPS 2026 \u2014 ML for Biology Workshop",
+    "name": "NeurIPS 2026 — ML for Biology Workshop",
     "date": "2026-12-05",
     "end_date": "2026-12-06",
     "location": "TBC",
@@ -147,7 +339,7 @@
       "computational"
     ],
     "virtual": false,
-    "description": "Annual machine learning for biology workshop co-located with NeurIPS \u2014 a key venue for AI \u00d7 biology research presentations.",
+    "description": "Annual machine learning for biology workshop co-located with NeurIPS — a key venue for AI × biology research presentations.",
     "auto": false
   }
 ]
