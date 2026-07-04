@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-03T10:46:33Z",
+  "last_updated": "2026-07-04T10:20:41Z",
   "companies": [
     {
       "name": "XtalPi",
@@ -358,11 +358,11 @@
       "funding": "Public (Nasdaq: ABSI). Raised ~$200M pre-IPO.",
       "stage": "public",
       "needs_review": true,
-      "review_headline": "Absci (ABSI) Is Up 10.3% After Positive ABS-201 Phase 1 Data And $100M Equity Raise - simplywall.st",
-      "review_url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPa25Ld3RTZk8tTVJaUE10ckR0WU5faWhDUklMSzg0N0RrRUtDSDVoekl1SEdLRDllRnpmdGxSMkJuOGRIcGtiMU9zbFFEZmMyWUFoNTJ5Z0JUU3FaWnd0Z0UxRWl6dWQ3dVFuand1TFdad25WZXlWM0tyRkNYZTFhRElWNjNLZC1pTEwwUEt5TWFxY05FbnpoamZOcWpVZ2RBR2FyRlJiZ2NZTnF1M0pkd3RhRG8zeEdGanl5T2VJcTZzRE5NMFhlSUtfV3VrZmdVa3dsRzlB0gHbAUFVX3lxTE14azhBUTNZZFBsdURfRWp4YTRWdVB2cUE5Q1pXVllNY0MxY0dza212VlBTYV9mY25NN1d5MXA1MjN6Z252bEJ4NUN0Zm51LWxsRU9Rc1pWeWZFSXRoWmpkR1h0SFpfSjZ4cF84N2ZSYkwtaVZuNEtCbnpaRmVoeTFFT0F3YU5mNHlNVWk3WjFSa1F5X0R2NFpPdklQdlZIb25GbXNsMno0OW5NS0RhT0lFU0lsMTJkY3p2UW8wbUZDN01rM0NuRTNOX1E1ZDBUVzdtU0xtRFNHTEYyRQ?oc=5",
-      "proposed_funding": "$100M",
+      "review_headline": "Eli Lilly dives into hair loss treatments with investment in AI startup Absci | STAT - STAT",
+      "review_url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE8tX29TTTQ5X1E1ZDExSVpHLTFuMGtaV1o5NXlod0d6Zk5QNjZFN2U4Z3JJYnJvWVpuZnFnT1loTUVnV3lZTHBGdFZFTFhHSGZWOXdQUF83Wm9TVUFjWjk4LWZiRzBKUWZJSmVwMU5OQi1Tc2xra0RMc3V2NzJhQQ?oc=5",
+      "proposed_funding": "",
       "proposed_stage": "",
-      "found_at": "2026-07-03T10:44:55Z"
+      "found_at": "2026-07-04T10:19:01Z"
     },
     {
       "name": "Aignostics",
@@ -556,11 +556,11 @@
       "funding": "$2B",
       "stage": "series-b",
       "needs_review": true,
-      "review_headline": "Isomorphic Labs Lands $2.1 Billion Series B for AI Drug Design Engine - The Healthcare Technology Report.",
-      "review_url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNd2xmS0NXYmNvMWd0a2p1Y3llQXh3RUpVZnl3U1pFR3VmbnoyMkVESXA0eGFiTUdUSVZJTlBNS2l0UTJYYTBRM3lHdENldFh6YXAydjRYTGotcmROMy1lNUxVakFqTlZJcElqaUNzdTlYTmp6b2hFM1c4d1dIQ05qZXdGWlB1YXo2UVFpU0tWdnppNjFqTDJvR05jelV4N0NzX1AxdGZ4YzRwakpUTW1VVg?oc=5",
-      "proposed_funding": "$2B",
-      "proposed_stage": "series-b",
-      "found_at": "2026-07-03T10:45:38Z"
+      "review_headline": "Demis Hassabis's Isomorphic Labs: $2.7B Raised, Trials Due This Year - StartupHub.ai",
+      "review_url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPeExJLW5QVjd2bTdaQ2NZMGg4bEtuZlpYdk9XTkt5Ti1lOEFLd2MtVXVNZ0hUZjRHUDdpQ01kdzlBZUFrWC1XVlBSTkVKZW5rZlcxQjVSR3kyZEZlRGFFcGFpbDZCd3d6dHlpNmI5ODA2SWNHSE4tUTdieUw1T2FqREVwU1RyTVJKdFFBTTFSR1d6Wmw0d2RXQVRSeHUxWWlwcnhfZHQwR2JhMGFuZW5tYTZFUzd0UV9LWFE?oc=5",
+      "proposed_funding": "$3B",
+      "proposed_stage": "",
+      "found_at": "2026-07-04T10:19:45Z"
     },
     {
       "name": "Kailera Therapeutics",
@@ -611,11 +611,11 @@
       "funding": "~\u00a350M total \u2014 Series B. Traded on AIM (London Stock Exchange).",
       "stage": "series-b",
       "needs_review": true,
-      "review_headline": "OliX Pharmaceuticals Secures KRW 110 Billion Investment from BOLD, L\u2019Or\u00e9al Corporate Venture Capital Fund, and Weiss, U.S. Hedge Fund - Business Wire",
-      "review_url": "https://news.google.com/rss/articles/CBMikwJBVV95cUxNVnBJeGFzRDN6R242d1hGdjFlRmhBZlgwdEhVOVF3MnBKUE45STh1NnVrZldEWEJxY20yb3hnc0lYWkY1MmNaOGJjSjMxa1YwUHZTRXc1RTM2a2gyWnk0QjVEWmFSaTE2U3JwbnphdTcxT3RORV90VXRhV1A4N0Z0TUJTd0V6QkVpSE1GaE16eElIYkJod0FxX3UtTFNKUGMtelJ6OVh6R3MyT2dSZEd4bGdEbzBJeFhGXzBOLVk3djJTRy1oeVBSYlBEV0hGY3R4SzZKU3Zucy1VdUE1X3lWSXg1NjZHS2lEZjdDTTdaOHR5OVl4bXM4R2ZqWkFMel80MWhoOFRkbldackt0TWk1dmtTdw?oc=5",
+      "review_headline": "OliX Pharmaceuticals secures KRW 110 billion investment from L\u2019Or\u00e9al venture fund and Weiss Asset Management - Global Cosmetics News",
+      "review_url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxQT0lZbUNIelM2ekRGckFXY2ZubXc2MXJZeVJaeTdtZGY4R0N2OFNjdHlHVXNtajl4YW9TR0FkNURzaWwyal9iQWF0YU11OHFUWU5ncF9IOUtCalNzRkdiRGJndE1WTTYwMlhyNEFUbzZIekdpV0gzeGZlLWk2LW9SUUZURXJDOW1uRmpVdEdKZHQ1QWZpTXA4ZG1RV28xMk1xajhfUzhCZ1U3aGF5Vzk4bm5pUlVLaEhOcjhOSlg3SE9JOGZ5ZzhQeWFLWkJjVlJ0dk94NmtfSjNFLUhi?oc=5",
       "proposed_funding": "",
       "proposed_stage": "",
-      "found_at": "2026-06-28T10:33:02Z"
+      "found_at": "2026-07-04T10:19:54Z"
     },
     {
       "name": "Pathos AI",
@@ -864,11 +864,11 @@
       "funding": "Public (Nasdaq: TEM). Raised ~$1.1B+ pre-IPO.",
       "stage": "public",
       "needs_review": true,
-      "review_headline": "Alethea Capital Management LLC Makes New Investment in Tempus AI, Inc. $TEM - MarketBeat",
-      "review_url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQVERnZWd4emkyR0owcGdDX3pobXpFVk5XMmUtT3Jub29kZmkwYVA1YVpfRnlnZjRNRlFhSEplNlB0VVhKYVZKVDU2S2Z1QXZCSXVYWC11UzA5cmRuME0zRHJPdE03YTJrQWxHTHd5bEdfS3dmVDlBQ1Y5ZjhCbnU4OVdMNnEwelpiOUxrZDNtazBTeVJteE5zSno5OTVxVi1DTG1ud1RwRXlKd1pGY21UN2o1MTR0SkZGZFluakM4WTZDNDZobndfbmdfSU9EQQ?oc=5",
-      "proposed_funding": "",
+      "review_headline": "Baer Investment Advisory LLC Invests $1 Million in Tempus AI, Inc. $TEM - MarketBeat",
+      "review_url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPMnFtMTJ1Mm1pYS00T3Q0Zk9hRkpocEtfSlNCVUJrOVNPOWZCX2tuUkdlMnpRVmFBaVoyMGphOExHVS02cmdfSzQydlM4LWtzb3R5dzhpd3M5MUEzNUJ0eWhGc3lKQko3Wk9fZjZQOG5POHNyWi1JMzAzV3p2UnRkRnRheFVvX00tRnUwYUh6ZHloMmFRN2t5UWhxR1FjdTJ6S0tMdkc1elRTelQ5c3o3YzhYX3B5T0dGQW5HczlDSkZ5SUJBeXRz?oc=5",
+      "proposed_funding": "$1M",
       "proposed_stage": "",
-      "found_at": "2026-07-03T10:46:29Z"
+      "found_at": "2026-07-04T10:20:37Z"
     },
     {
       "name": "Verily Health",
@@ -886,11 +886,11 @@
       "funding": "$65B",
       "stage": "public",
       "needs_review": true,
-      "review_headline": "Anthropic\u2019s Alibaba fight raises a trillion-dollar IPO question: How defensible is frontier AI? - Fortune",
-      "review_url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPb25faXRlLXJybEd4VGk2OVRSWnJjR1hYQkl5NzdPd2hlcnRtWXJJaDV0UVZhdTFBVVc4UTZrbjIxM3dpSlhYZ2JHbDRWMVRFSFpCNHE0TkZQaV95aVdVZWQ4YXdNME5Fc0plOHpNY29fYjQwZXNKcDE3QXd4ZkFiMHZXSnVTVzhra0FwQnVOdEVXamd4dHZYRERHWktBNXRuSlo1dnpB?oc=5",
-      "proposed_funding": "",
-      "proposed_stage": "public",
-      "found_at": "2026-07-03T10:46:29Z"
+      "review_headline": "OpenAI, Anthropic backer MGX raises one of the biggest AI funds ever as it closes at $49 billion - CNBC",
+      "review_url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBHbFU4aXJOSjk1bERSTUtrcXNybi1TZWlvQ1k3YUF2cjZZdEFBYlN5czd3Zm54TzQ3eng5b2xkeFRRVmFyNDZxMXNzU2tZOUllUmN1bFZTMGNDOUpqVHpiX1B6TnNIODFjTVNWRS1lZkrSAXZBVV95cUxNdVhpbEZnVVkwRTFMa0pqNTN3UVlQbGIwdVN4Z0hlUVl5VFp3VkdvVlZ5Q0hSRHVPbmhpR0s4YUtQajMxUVYzTXRGblRzekdyZlVFSWdjUW9Zam5TUTkyWkdDREJqNHhETzR5MGFMd2RueC1acmdR?oc=5",
+      "proposed_funding": "$49B",
+      "proposed_stage": "",
+      "found_at": "2026-07-04T10:20:37Z"
     },
     {
       "name": "Google DeepMind",
@@ -930,11 +930,11 @@
       "funding": "$30B",
       "stage": "public",
       "needs_review": true,
-      "review_headline": "SoftBank Secures $40 Billion Bridge Loan for OpenAI Investment - Let's Data Science",
-      "review_url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQd1pYVmN6SmR1VUQtaFpYMHBGLWFrd19iSWhOOUswOXVuSXZNTTlyLXRZN05GM1dDTWZ2T2t6Z3JqVGFqdHNOZWxIYWNsYTNqY3NqQXpFQWJIT2lXUWdhdHpNNWJLbVVfdndkeDg1V0xZZ0FmenVhTHAyQTBsNjhzbGpIcjJjZncwdFU0c2NrbkpId3dDMVQxVVdWTUxOZUxKUFVWZQ?oc=5",
-      "proposed_funding": "$40B",
+      "review_headline": "OpenAI, Anthropic backer MGX raises one of the biggest AI funds ever as it closes at $49 billion - CNBC",
+      "review_url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBHbFU4aXJOSjk1bERSTUtrcXNybi1TZWlvQ1k3YUF2cjZZdEFBYlN5czd3Zm54TzQ3eng5b2xkeFRRVmFyNDZxMXNzU2tZOUllUmN1bFZTMGNDOUpqVHpiX1B6TnNIODFjTVNWRS1lZkrSAXZBVV95cUxNdVhpbEZnVVkwRTFMa0pqNTN3UVlQbGIwdVN4Z0hlUVl5VFp3VkdvVlZ5Q0hSRHVPbmhpR0s4YUtQajMxUVYzTXRGblRzekdyZlVFSWdjUW9Zam5TUTkyWkdDREJqNHhETzR5MGFMd2RueC1acmdR?oc=5",
+      "proposed_funding": "$49B",
       "proposed_stage": "",
-      "found_at": "2026-07-02T10:49:07Z"
+      "found_at": "2026-07-04T10:20:38Z"
     },
     {
       "name": "Sakana AI",
@@ -1095,11 +1095,11 @@
       "funding": "Public (LSE: SYNC). NAV ~\u00a31B+.",
       "stage": "public",
       "needs_review": true,
-      "review_headline": "Syncona's discount cited as opportunity, but investment bank reckons it might need a catalyst - Yahoo Finance UK",
-      "review_url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQRmdKdlpXUWRQREZsRkI5czhDc2tLWmJ2TXJfb0lUWW9RMDBOT3dCbEVSQ21HaDUzZUJ6VW03cFJRVHF6eWNoS0RjNmFiNi04UGRQS0ZBZ2kyUVdGVnQzejU0a3NDejJ3Z09nWnNpT0pBTVo5bnd4bWZFWXhXcHBJU2kyZlY3enlFN195QUY1SzN5SDBscXg3cFh2cw?oc=5",
+      "review_headline": "Syncona appoints veteran investment specialist Norman Crighton to board - TipRanks",
+      "review_url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQQ3NXWkUydHVoMVMyd3RVdGpnb3VVb20zZU1xRGdwUkR1MmpEYXEyczNHRUNESUVLQ3hnWWx3VHZpVFl0QW1XOWI4aU9zc2FUV2pDbk5fazBiOXcxN0FiUGpsRUhpc25ZRGJJc3EyZE9ueDgzSW1HaU9YSzdzQnZZMWNyRlJqN3J6Tzc2ZEdzS3lmTWpneXlTdUdpb2V6ODQ5UTN5cTJON3FhemVMaDJOM2lYRXFfOVl1Mi1CX2hYYjU?oc=5",
       "proposed_funding": "",
       "proposed_stage": "",
-      "found_at": "2026-06-20T10:38:53Z"
+      "found_at": "2026-07-04T10:20:41Z"
     },
     {
       "name": "Biotech TV",
