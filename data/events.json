@@ -1,10 +1,10 @@
 [
   {
-    "name": "Ship AI — Craftsmanship Night",
-    "date": "2026-07-02",
-    "end_date": "2026-07-02",
+    "name": "Tech Enablement Series: How AI Can Support the Entire Sales and Business Development Cycle",
+    "date": "2026-07-09",
+    "end_date": "2026-07-09",
     "location": "Boston, MA, USA",
-    "url": "leihzavg",
+    "url": "polsky-07-09-2026-event-1736",
     "type": "meetup",
     "tags": [
       "AI",
@@ -16,11 +16,11 @@
     "auto": true
   },
   {
-    "name": "AI Engineer Morning Run",
-    "date": "2026-07-02",
-    "end_date": "2026-07-02",
+    "name": "Build AI with AWS Experts - July 10 2026",
+    "date": "2026-07-10",
+    "end_date": "2026-07-10",
     "location": "Boston, MA, USA",
-    "url": "lo0yh15f",
+    "url": "ucty0xxt",
     "type": "meetup",
     "tags": [
       "AI",
@@ -32,171 +32,11 @@
     "auto": true
   },
   {
-    "name": "Mem0 Build Room: Coworking Near AI Engineer World’s Fair",
-    "date": "2026-07-02",
-    "end_date": "2026-07-03",
+    "name": "Volunteer with Gardeneers at Homan Rails Farm (Volunteering Untapped Chicago)",
+    "date": "2026-07-11",
+    "end_date": "2026-07-11",
     "location": "Boston, MA, USA",
-    "url": "mem0-gan0",
-    "type": "meetup",
-    "tags": [
-      "AI",
-      "biology"
-    ],
-    "virtual": false,
-    "description": "",
-    "source": "luma",
-    "auto": true
-  },
-  {
-    "name": "AI Engineer Fair Closing Happy Hour by vLLM & Novita",
-    "date": "2026-07-02",
-    "end_date": "2026-07-03",
-    "location": "Boston, MA, USA",
-    "url": "t42gxwnp",
-    "type": "meetup",
-    "tags": [
-      "AI",
-      "biology"
-    ],
-    "virtual": false,
-    "description": "",
-    "source": "luma",
-    "auto": true
-  },
-  {
-    "name": "AI Engineer Trivia Night",
-    "date": "2026-07-02",
-    "end_date": "2026-07-03",
-    "location": "Boston, MA, USA",
-    "url": "k9z2sucw",
-    "type": "meetup",
-    "tags": [
-      "AI",
-      "biology"
-    ],
-    "virtual": false,
-    "description": "",
-    "source": "luma",
-    "auto": true
-  },
-  {
-    "name": "AI Engineer BBQ",
-    "date": "2026-07-03",
-    "end_date": "2026-07-03",
-    "location": "Boston, MA, USA",
-    "url": "6qu28qi1",
-    "type": "meetup",
-    "tags": [
-      "AI",
-      "biology"
-    ],
-    "virtual": false,
-    "description": "",
-    "source": "luma",
-    "auto": true
-  },
-  {
-    "name": "{AI} in Production",
-    "date": "2026-07-03",
-    "end_date": "2026-07-03",
-    "location": "Boston, MA, USA",
-    "url": "5kvakl4z",
-    "type": "meetup",
-    "tags": [
-      "AI",
-      "biology"
-    ],
-    "virtual": false,
-    "description": "",
-    "source": "luma",
-    "auto": true
-  },
-  {
-    "name": "AI x Variant Interpretation",
-    "date": "2026-07-03",
-    "end_date": "2026-07-03",
-    "location": "Boston, MA, USA",
-    "url": "2g3ft8wj",
-    "type": "meetup",
-    "tags": [
-      "AI",
-      "biology"
-    ],
-    "virtual": false,
-    "description": "",
-    "source": "luma",
-    "auto": true
-  },
-  {
-    "name": "AI Engineer World's Fair Rooftop Afterparty w/ Apify × Massive × TopK",
-    "date": "2026-07-03",
-    "end_date": "2026-07-03",
-    "location": "Boston, MA, USA",
-    "url": "aie-sf-afterparty",
-    "type": "meetup",
-    "tags": [
-      "AI",
-      "biology"
-    ],
-    "virtual": false,
-    "description": "",
-    "source": "luma",
-    "auto": true
-  },
-  {
-    "name": "Day One AI: Founders & CEOs Dinner",
-    "date": "2026-07-03",
-    "end_date": "2026-07-03",
-    "location": "Boston, MA, USA",
-    "url": "7z0ouecm",
-    "type": "meetup",
-    "tags": [
-      "AI",
-      "biology"
-    ],
-    "virtual": false,
-    "description": "",
-    "source": "luma",
-    "auto": true
-  },
-  {
-    "name": "Physical AI Open House – The Residency × Mission Robotics",
-    "date": "2026-07-03",
-    "end_date": "2026-07-03",
-    "location": "Boston, MA, USA",
-    "url": "residency-mr-open-house",
-    "type": "meetup",
-    "tags": [
-      "AI",
-      "biology"
-    ],
-    "virtual": false,
-    "description": "",
-    "source": "luma",
-    "auto": true
-  },
-  {
-    "name": "Clear your Brain Fog",
-    "date": "2026-07-03",
-    "end_date": "2026-07-04",
-    "location": "Boston, MA, USA",
-    "url": "wwcce1yc",
-    "type": "meetup",
-    "tags": [
-      "AI",
-      "biology"
-    ],
-    "virtual": false,
-    "description": "",
-    "source": "luma",
-    "auto": true
-  },
-  {
-    "name": "Valkyrie AI & Investment Frontiers Series: Session 1",
-    "date": "2026-07-04",
-    "end_date": "2026-07-04",
-    "location": "Boston, MA, USA",
-    "url": "k16gt8bb",
+    "url": "0d23qy9x",
     "type": "meetup",
     "tags": [
       "AI",
@@ -223,6 +63,22 @@
     "virtual": false,
     "description": "International Society for Computational Biology flagship conference — the premier meeting in bioinformatics and computational biology.",
     "auto": false
+  },
+  {
+    "name": "#SAVERHYTHMHOOD FUNDRAISER (CAFE BHUTI: SUMMER EDITION)",
+    "date": "2026-07-12",
+    "end_date": "2026-07-12",
+    "location": "Boston, MA, USA",
+    "url": "wn5t0oe1",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
   },
   {
     "name": "AI for Realtors - Advanced",
