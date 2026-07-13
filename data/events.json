@@ -1,53 +1,5 @@
 [
   {
-    "name": "Tech Enablement Series: How AI Can Support the Entire Sales and Business Development Cycle",
-    "date": "2026-07-09",
-    "end_date": "2026-07-09",
-    "location": "Boston, MA, USA",
-    "url": "polsky-07-09-2026-event-1736",
-    "type": "meetup",
-    "tags": [
-      "AI",
-      "biology"
-    ],
-    "virtual": false,
-    "description": "",
-    "source": "luma",
-    "auto": true
-  },
-  {
-    "name": "Build AI with AWS Experts - July 10 2026",
-    "date": "2026-07-10",
-    "end_date": "2026-07-10",
-    "location": "Boston, MA, USA",
-    "url": "ucty0xxt",
-    "type": "meetup",
-    "tags": [
-      "AI",
-      "biology"
-    ],
-    "virtual": false,
-    "description": "",
-    "source": "luma",
-    "auto": true
-  },
-  {
-    "name": "Volunteer with Gardeneers at Homan Rails Farm (Volunteering Untapped Chicago)",
-    "date": "2026-07-11",
-    "end_date": "2026-07-11",
-    "location": "Boston, MA, USA",
-    "url": "0d23qy9x",
-    "type": "meetup",
-    "tags": [
-      "AI",
-      "biology"
-    ],
-    "virtual": false,
-    "description": "",
-    "source": "luma",
-    "auto": true
-  },
-  {
     "name": "ISMB/ECCB 2026",
     "date": "2026-07-12",
     "end_date": "2026-07-16",
@@ -63,22 +15,6 @@
     "virtual": false,
     "description": "International Society for Computational Biology flagship conference — the premier meeting in bioinformatics and computational biology.",
     "auto": false
-  },
-  {
-    "name": "#SAVERHYTHMHOOD FUNDRAISER (CAFE BHUTI: SUMMER EDITION)",
-    "date": "2026-07-12",
-    "end_date": "2026-07-12",
-    "location": "Boston, MA, USA",
-    "url": "wn5t0oe1",
-    "type": "meetup",
-    "tags": [
-      "AI",
-      "biology"
-    ],
-    "virtual": false,
-    "description": "",
-    "source": "luma",
-    "auto": true
   },
   {
     "name": "AI for Realtors - Advanced",
@@ -118,6 +54,70 @@
     "end_date": "2026-07-15",
     "location": "Boston, MA, USA",
     "url": "align-ai-chicago",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
+    "name": "AI Workshop & LapTop jobs",
+    "date": "2026-07-16",
+    "end_date": "2026-07-17",
+    "location": "Boston, MA, USA",
+    "url": "bhaiworkshop",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
+    "name": "Grassroots action workshop: Postcards to congress against dangerous AI",
+    "date": "2026-07-18",
+    "end_date": "2026-07-19",
+    "location": "Boston, MA, USA",
+    "url": "5xz2pcqe",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
+    "name": "🩵 Mermaid Mode: Coastal Mommy & Me Mat Pilates",
+    "date": "2026-07-22",
+    "end_date": "2026-07-22",
+    "location": "Boston, MA, USA",
+    "url": "1zp1u83m",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
+    "name": "AI Coding and Automation 101 with Claude Code, Chat, Design and Cowork",
+    "date": "2026-07-24",
+    "end_date": "2026-07-25",
+    "location": "Boston, MA, USA",
+    "url": "iwlqrcbq",
     "type": "meetup",
     "tags": [
       "AI",
