@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-15T10:10:50Z",
+  "last_updated": "2026-07-16T10:18:51Z",
   "companies": [
     {
       "name": "XtalPi",
@@ -886,11 +886,11 @@
       "funding": "$65B",
       "stage": "public",
       "needs_review": true,
-      "review_headline": "Mulling AI investment, Anthropic lobbied Australia on copyright law - Tech Xplore",
-      "review_url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQeGZQM21kQ3VNR0lpRzc3WFVEWE9wNVlFREl4SFk1N21CUEFoM19KcGtTVmIxNFlQVDJfMzd0bTdWbWxKXzlETzVxT2dyRm40MWZEZnBaNFo5eTduM2tub0JZanV6X2x3QXdJXzlhRE1kVXNfdU9qdGhDZ2ZNUDFhZVo1V3hSNHM?oc=5",
-      "proposed_funding": "",
+      "review_headline": "From 'heartburn' to $14 billion: Inside Menlo's early Anthropic investment that broke all the rules. - Business Insider",
+      "review_url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQSFVJM1B2QXVsTTJmbE9zUGJ0c2FEajcwdm1VM0ZtWGFSMXNtbFQ5eXVVcS1MWjJCLWZNU3FnYWJ4X2VMNU9EaTJfbFZQaEJ2SHh3c2xXMk5SN3VUZDhJMlJ2ZDQwckpoVTYyNTFMZ0txV3FKNTFBWGFVdkczeVlqQWxxc1BMZjF3THoxT0N3WmtRMlNwQ3RyOENqNzMtckc0SUkzTzZJWQ?oc=5",
+      "proposed_funding": "$14B",
       "proposed_stage": "",
-      "found_at": "2026-07-14T10:07:04Z"
+      "found_at": "2026-07-16T10:18:47Z"
     },
     {
       "name": "Google DeepMind",
