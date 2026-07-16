@@ -13,47 +13,31 @@
       "genomics"
     ],
     "virtual": false,
-    "description": "International Society for Computational Biology flagship conference \u2014 the premier meeting in bioinformatics and computational biology.",
+    "description": "International Society for Computational Biology flagship conference — the premier meeting in bioinformatics and computational biology.",
     "auto": false
   },
   {
-    "name": "AI for Realtors - Advanced",
-    "date": "2026-07-14",
-    "end_date": "2026-07-14",
-    "location": "Boston, MA, USA",
-    "url": "db7ixh8l",
-    "type": "meetup",
-    "tags": [
-      "AI",
-      "biology"
-    ],
-    "virtual": false,
-    "description": "",
-    "source": "luma",
-    "auto": true
-  },
-  {
-    "name": "Flow State: An Evening on AI and Community",
-    "date": "2026-07-14",
-    "end_date": "2026-07-15",
-    "location": "Boston, MA, USA",
-    "url": "hy554e2g",
-    "type": "meetup",
-    "tags": [
-      "AI",
-      "biology"
-    ],
-    "virtual": false,
-    "description": "",
-    "source": "luma",
-    "auto": true
-  },
-  {
-    "name": "ALIGN AI Executive Summit, Chicago",
+    "name": "AI Innovation Studio 课程发布会",
     "date": "2026-07-15",
-    "end_date": "2026-07-15",
+    "end_date": "2026-07-31",
     "location": "Boston, MA, USA",
-    "url": "align-ai-chicago",
+    "url": "9e92trj9",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
+    "name": "Lunch Talk #3: AI Course Introduction",
+    "date": "2026-07-15",
+    "end_date": "2026-08-01",
+    "location": "Boston, MA, USA",
+    "url": "x6qnmdql",
     "type": "meetup",
     "tags": [
       "AI",
@@ -81,6 +65,262 @@
     "auto": true
   },
   {
+    "name": "Sony SH800 Training @ 930 Brittan",
+    "date": "2026-07-16",
+    "end_date": "2026-07-16",
+    "location": "Boston, MA, USA",
+    "url": "kvfmbqw2",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
+    "name": "Workshop: Mastering AI Observability",
+    "date": "2026-07-16",
+    "end_date": "2026-07-17",
+    "location": "Boston, MA, USA",
+    "url": "ai_workshop_sf",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
+    "name": "Build From the Dock: How Open Source Built the AI Revolution",
+    "date": "2026-07-17",
+    "end_date": "2026-07-17",
+    "location": "Boston, MA, USA",
+    "url": "uor5i8hg",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
+    "name": "Build From the Dock: How Open Source Built the AI Revolution",
+    "date": "2026-07-17",
+    "end_date": "2026-07-17",
+    "location": "Boston, MA, USA",
+    "url": "xrcwi14v",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
+    "name": "Find the Revenue Moments in Your AI Product🍗🍺Seamate Crazy Thursday",
+    "date": "2026-07-17",
+    "end_date": "2026-07-17",
+    "location": "Boston, MA, USA",
+    "url": "86og7yme",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
+    "name": "Mahjong Party for AI Builders",
+    "date": "2026-07-17",
+    "end_date": "2026-07-17",
+    "location": "Boston, MA, USA",
+    "url": "agr7hntb",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
+    "name": "Product Development in the Age of AI (1st session)",
+    "date": "2026-07-17",
+    "end_date": "2026-07-17",
+    "location": "Boston, MA, USA",
+    "url": "75g7qyoj",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
+    "name": "Bits in Bio Discussion: Genomics, Dx, and Data",
+    "date": "2026-07-17",
+    "end_date": "2026-07-17",
+    "location": "Boston, MA, USA",
+    "url": "8bkuhv4x",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
+    "name": "Dovetail Sun’s Out: SF launch party",
+    "date": "2026-07-17",
+    "end_date": "2026-07-17",
+    "location": "Boston, MA, USA",
+    "url": "y45mbic8",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
+    "name": "Generating Revenue for SaaS, AI or Fintech Startups and Platforms with AI & Agentics",
+    "date": "2026-07-17",
+    "end_date": "2026-07-17",
+    "location": "Boston, MA, USA",
+    "url": "angellaunchjuly16",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
+    "name": "Physical AI Builders Night - 🤖 Robotics & Embodied AI",
+    "date": "2026-07-17",
+    "end_date": "2026-07-17",
+    "location": "Boston, MA, USA",
+    "url": "lb0cubd5",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
+    "name": "AI x Biosecurity — LatchBio Benchmark Launch",
+    "date": "2026-07-17",
+    "end_date": "2026-07-17",
+    "location": "Boston, MA, USA",
+    "url": "4s00vb76",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
+    "name": "Autonomous 2026 - Moonlake AI Happy Hour.",
+    "date": "2026-07-17",
+    "end_date": "2026-07-17",
+    "location": "Boston, MA, USA",
+    "url": "lk9se5mi",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
+    "name": "Early Access: How to build with AI for non-coders",
+    "date": "2026-07-17",
+    "end_date": "2026-07-17",
+    "location": "Boston, MA, USA",
+    "url": "Minds1",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
+    "name": "Craft Night | Paint Party! Colorful Exploration Stations To Try Three New Techniques",
+    "date": "2026-07-17",
+    "end_date": "2026-07-17",
+    "location": "Boston, MA, USA",
+    "url": "balloonpainting",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
+    "name": "HUD x Fireworks AI | RL Catan Tournament",
+    "date": "2026-07-17",
+    "end_date": "2026-07-17",
+    "location": "Boston, MA, USA",
+    "url": "hud-fireworks-catan",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
     "name": "Grassroots action workshop: Postcards to congress against dangerous AI",
     "date": "2026-07-18",
     "end_date": "2026-07-19",
@@ -97,7 +337,7 @@
     "auto": true
   },
   {
-    "name": "\ud83e\ude75 Mermaid Mode: Coastal Mommy & Me Mat Pilates",
+    "name": "🩵 Mermaid Mode: Coastal Mommy & Me Mat Pilates",
     "date": "2026-07-22",
     "end_date": "2026-07-22",
     "location": "Boston, MA, USA",
@@ -193,7 +433,7 @@
       "clinical"
     ],
     "virtual": false,
-    "description": "American Society of Human Genetics annual meeting \u2014 a key forum for AI-driven genetics and genomics research.",
+    "description": "American Society of Human Genetics annual meeting — a key forum for AI-driven genetics and genomics research.",
     "auto": false
   },
   {
@@ -210,11 +450,11 @@
       "digital health"
     ],
     "virtual": false,
-    "description": "Annual congress focused on biodata, AI and precision medicine \u2014 bringing together data scientists, clinicians and industry leaders.",
+    "description": "Annual congress focused on biodata, AI and precision medicine — bringing together data scientists, clinicians and industry leaders.",
     "auto": false
   },
   {
-    "name": "NeurIPS 2026 \u2014 ML for Biology Workshop",
+    "name": "NeurIPS 2026 — ML for Biology Workshop",
     "date": "2026-12-05",
     "end_date": "2026-12-06",
     "location": "TBC",
@@ -227,7 +467,7 @@
       "computational"
     ],
     "virtual": false,
-    "description": "Annual machine learning for biology workshop co-located with NeurIPS \u2014 a key venue for AI \u00d7 biology research presentations.",
+    "description": "Annual machine learning for biology workshop co-located with NeurIPS — a key venue for AI × biology research presentations.",
     "auto": false
   }
 ]
