@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-19T09:59:12Z",
+  "last_updated": "2026-07-20T11:09:35Z",
   "companies": [
     {
       "name": "XtalPi",
@@ -886,11 +886,11 @@
       "funding": "$65B",
       "stage": "public",
       "needs_review": true,
-      "review_headline": "From 'heartburn' to $14 billion: Inside Menlo's early Anthropic investment that broke all the rules. - Business Insider",
-      "review_url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQSFVJM1B2QXVsTTJmbE9zUGJ0c2FEajcwdm1VM0ZtWGFSMXNtbFQ5eXVVcS1MWjJCLWZNU3FnYWJ4X2VMNU9EaTJfbFZQaEJ2SHh3c2xXMk5SN3VUZDhJMlJ2ZDQwckpoVTYyNTFMZ0txV3FKNTFBWGFVdkczeVlqQWxxc1BMZjF3THoxT0N3WmtRMlNwQ3RyOENqNzMtckc0SUkzTzZJWQ?oc=5",
-      "proposed_funding": "$14B",
-      "proposed_stage": "",
-      "found_at": "2026-07-18T09:41:34Z"
+      "review_headline": "Anthropic's Potential $1.2 Trillion IPO Could Make This Stock a Major Beneficiary - The Motley Fool",
+      "review_url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOZzBDMTNHQ1VocjJEenI4RTJSMUNmLUJQc3dHQ1NSU25vUnJ6MnRLRjExVFIydXNoZnhCR0MyUlowYnk3U1YwNFJkT3dsV0IzTVNmOHhxa085eWxNd2VPenlLTFU5SlNRRkVqOWpHbUlHYXgwamU0cTU1TlpOenNZYXcxSy1kRnJxU2pzT1E4bUZFeHlUUVc4SQ?oc=5",
+      "proposed_funding": "",
+      "proposed_stage": "public",
+      "found_at": "2026-07-20T11:09:30Z"
     },
     {
       "name": "Google DeepMind",
