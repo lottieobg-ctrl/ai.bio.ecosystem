@@ -1,23 +1,6 @@
 [
   {
-    "name": "ISMB/ECCB 2026",
-    "date": "2026-07-12",
-    "end_date": "2026-07-16",
-    "location": "TBC",
-    "url": "https://www.iscb.org/ismb2026",
-    "type": "conference",
-    "tags": [
-      "bioinformatics",
-      "computational biology",
-      "AI",
-      "genomics"
-    ],
-    "virtual": false,
-    "description": "International Society for Computational Biology flagship conference — the premier meeting in bioinformatics and computational biology.",
-    "auto": false
-  },
-  {
-    "name": "AI Innovation Studio 课程发布会",
+    "name": "AI Innovation Studio \u8bfe\u7a0b\u53d1\u5e03\u4f1a",
     "date": "2026-07-15",
     "end_date": "2026-07-31",
     "location": "Boston, MA, USA",
@@ -65,7 +48,7 @@
     "auto": true
   },
   {
-    "name": "An Evening with OpenMax · The AI That Replaced 80% of Our Team",
+    "name": "An Evening with OpenMax \u00b7 The AI That Replaced 80% of Our Team",
     "date": "2026-07-21",
     "end_date": "2026-07-21",
     "location": "Boston, MA, USA",
@@ -145,7 +128,7 @@
     "auto": true
   },
   {
-    "name": "🩵 Mermaid Mode: Coastal Mommy & Me Mat Pilates",
+    "name": "\ud83e\ude75 Mermaid Mode: Coastal Mommy & Me Mat Pilates",
     "date": "2026-07-22",
     "end_date": "2026-07-22",
     "location": "Boston, MA, USA",
@@ -257,7 +240,7 @@
     "auto": true
   },
   {
-    "name": "13th Peninsula Value Economy X Sustainability (Climate) Co-Work Day — AI, Health",
+    "name": "13th Peninsula Value Economy X Sustainability (Climate) Co-Work Day \u2014 AI, Health",
     "date": "2026-07-22",
     "end_date": "2026-07-22",
     "location": "Boston, MA, USA",
@@ -353,7 +336,7 @@
       "clinical"
     ],
     "virtual": false,
-    "description": "American Society of Human Genetics annual meeting — a key forum for AI-driven genetics and genomics research.",
+    "description": "American Society of Human Genetics annual meeting \u2014 a key forum for AI-driven genetics and genomics research.",
     "auto": false
   },
   {
@@ -370,11 +353,11 @@
       "digital health"
     ],
     "virtual": false,
-    "description": "Annual congress focused on biodata, AI and precision medicine — bringing together data scientists, clinicians and industry leaders.",
+    "description": "Annual congress focused on biodata, AI and precision medicine \u2014 bringing together data scientists, clinicians and industry leaders.",
     "auto": false
   },
   {
-    "name": "NeurIPS 2026 — ML for Biology Workshop",
+    "name": "NeurIPS 2026 \u2014 ML for Biology Workshop",
     "date": "2026-12-05",
     "end_date": "2026-12-06",
     "location": "TBC",
@@ -387,7 +370,7 @@
       "computational"
     ],
     "virtual": false,
-    "description": "Annual machine learning for biology workshop co-located with NeurIPS — a key venue for AI × biology research presentations.",
+    "description": "Annual machine learning for biology workshop co-located with NeurIPS \u2014 a key venue for AI \u00d7 biology research presentations.",
     "auto": false
   }
 ]
