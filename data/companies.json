@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-20T11:09:35Z",
+  "last_updated": "2026-07-21T10:32:07Z",
   "companies": [
     {
       "name": "XtalPi",
@@ -886,11 +886,11 @@
       "funding": "$65B",
       "stage": "public",
       "needs_review": true,
-      "review_headline": "Anthropic's Potential $1.2 Trillion IPO Could Make This Stock a Major Beneficiary - The Motley Fool",
-      "review_url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOZzBDMTNHQ1VocjJEenI4RTJSMUNmLUJQc3dHQ1NSU25vUnJ6MnRLRjExVFIydXNoZnhCR0MyUlowYnk3U1YwNFJkT3dsV0IzTVNmOHhxa085eWxNd2VPenlLTFU5SlNRRkVqOWpHbUlHYXgwamU0cTU1TlpOenNZYXcxSy1kRnJxU2pzT1E4bUZFeHlUUVc4SQ?oc=5",
-      "proposed_funding": "",
-      "proposed_stage": "public",
-      "found_at": "2026-07-20T11:09:30Z"
+      "review_headline": "Inference startup Infinity raises $15M from Touring Capital, OpenAI and Anthropic researchers - TechCrunch",
+      "review_url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPaWg1aWRZV3ZuMkNSSE5XbUhYeGVwMkVzcy1BSnVCNmZDRS1veHl1LVhYNmVLb2JjZnljQzBzNEIzVlRQVUhBS0J4NFB2Ul91QWcxbHNoVUxwR2N0MUNGNU54SGdhTjVxQmk5c0xnZlpqWWRhbFZQdmJUZWJnVTB5OG5JTFN6WjI4eXY0QnJlNHl6WVlwN084aF94TFRUNmVoMnV6eTBkd3NVQUl5YUVPRjBQZ1VhdE55VUt4cmt2cUg1XzA?oc=5",
+      "proposed_funding": "$15M",
+      "proposed_stage": "",
+      "found_at": "2026-07-21T10:32:01Z"
     },
     {
       "name": "Google DeepMind",
@@ -930,11 +930,11 @@
       "funding": "$30B",
       "stage": "public",
       "needs_review": true,
-      "review_headline": "OpenAI Staffers Are Funding a Rival Super PAC to Take on Their Boss - WIRED",
-      "review_url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOQ0pvcFYxQVNQS0VHdzdOeENPa0RxbEExUnVXWlhZWV9nNmFzV052QkhWVHBUSWNHclMwSXBsVV9OdFZNZ0lBejFPOEFZS0ZxU3REZEJjTG14czM4ZS1acDBnMWo3bmVCVnNzVXRtX1JhcE1zLUVoLTVrbEphZjduZnZmV1lsc2xEZGZlLUZOak05Yk5ZdkRiSGtR?oc=5",
-      "proposed_funding": "",
+      "review_headline": "Inference startup Infinity raises $15M from Touring Capital, OpenAI and Anthropic researchers - TechCrunch",
+      "review_url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPaWg1aWRZV3ZuMkNSSE5XbUhYeGVwMkVzcy1BSnVCNmZDRS1veHl1LVhYNmVLb2JjZnljQzBzNEIzVlRQVUhBS0J4NFB2Ul91QWcxbHNoVUxwR2N0MUNGNU54SGdhTjVxQmk5c0xnZlpqWWRhbFZQdmJUZWJnVTB5OG5JTFN6WjI4eXY0QnJlNHl6WVlwN084aF94TFRUNmVoMnV6eTBkd3NVQUl5YUVPRjBQZ1VhdE55VUt4cmt2cUg1XzA?oc=5",
+      "proposed_funding": "$15M",
       "proposed_stage": "",
-      "found_at": "2026-07-19T09:59:06Z"
+      "found_at": "2026-07-21T10:32:01Z"
     },
     {
       "name": "Sakana AI",
