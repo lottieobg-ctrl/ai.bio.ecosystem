@@ -1,6 +1,6 @@
 [
   {
-    "name": "AI Innovation Studio \u8bfe\u7a0b\u53d1\u5e03\u4f1a",
+    "name": "AI Innovation Studio 课程发布会",
     "date": "2026-07-15",
     "end_date": "2026-07-31",
     "location": "Boston, MA, USA",
@@ -21,230 +21,6 @@
     "end_date": "2026-08-01",
     "location": "Boston, MA, USA",
     "url": "x6qnmdql",
-    "type": "meetup",
-    "tags": [
-      "AI",
-      "biology"
-    ],
-    "virtual": false,
-    "description": "",
-    "source": "luma",
-    "auto": true
-  },
-  {
-    "name": "Honest Feedback: AI Startups",
-    "date": "2026-07-20",
-    "end_date": "2026-07-21",
-    "location": "Boston, MA, USA",
-    "url": "3ckvw4k5",
-    "type": "meetup",
-    "tags": [
-      "AI",
-      "biology"
-    ],
-    "virtual": false,
-    "description": "",
-    "source": "luma",
-    "auto": true
-  },
-  {
-    "name": "An Evening with OpenMax \u00b7 The AI That Replaced 80% of Our Team",
-    "date": "2026-07-21",
-    "end_date": "2026-07-21",
-    "location": "Boston, MA, USA",
-    "url": "cocoai-ssmw",
-    "type": "meetup",
-    "tags": [
-      "AI",
-      "biology"
-    ],
-    "virtual": false,
-    "description": "",
-    "source": "luma",
-    "auto": true
-  },
-  {
-    "name": "RSVP: Experience Kintsugi: An Intro to the World of Pottery Repair",
-    "date": "2026-07-21",
-    "end_date": "2026-07-21",
-    "location": "Boston, MA, USA",
-    "url": "a2m5h4le",
-    "type": "meetup",
-    "tags": [
-      "AI",
-      "biology"
-    ],
-    "virtual": false,
-    "description": "",
-    "source": "luma",
-    "auto": true
-  },
-  {
-    "name": "Scrappy AI Founders Play Soccer",
-    "date": "2026-07-21",
-    "end_date": "2026-07-21",
-    "location": "Boston, MA, USA",
-    "url": "6fme6obs",
-    "type": "meetup",
-    "tags": [
-      "AI",
-      "biology"
-    ],
-    "virtual": false,
-    "description": "",
-    "source": "luma",
-    "auto": true
-  },
-  {
-    "name": "2026 West Coast IBM Data and AI Scale Storage New User Seminar",
-    "date": "2026-07-21",
-    "end_date": "2026-07-22",
-    "location": "Boston, MA, USA",
-    "url": "7zc3uwvx",
-    "type": "meetup",
-    "tags": [
-      "AI",
-      "biology"
-    ],
-    "virtual": false,
-    "description": "",
-    "source": "luma",
-    "auto": true
-  },
-  {
-    "name": "AI Creators Meetup: Build, Experiment & Get Featured",
-    "date": "2026-07-21",
-    "end_date": "2026-07-21",
-    "location": "Boston, MA, USA",
-    "url": "hw66kom7",
-    "type": "meetup",
-    "tags": [
-      "AI",
-      "biology"
-    ],
-    "virtual": false,
-    "description": "",
-    "source": "luma",
-    "auto": true
-  },
-  {
-    "name": "\ud83e\ude75 Mermaid Mode: Coastal Mommy & Me Mat Pilates",
-    "date": "2026-07-22",
-    "end_date": "2026-07-22",
-    "location": "Boston, MA, USA",
-    "url": "1zp1u83m",
-    "type": "meetup",
-    "tags": [
-      "AI",
-      "biology"
-    ],
-    "virtual": false,
-    "description": "",
-    "source": "luma",
-    "auto": true
-  },
-  {
-    "name": "Hands-on training: Building agents with ClickHouse, Langfuse, and LibreChat",
-    "date": "2026-07-22",
-    "end_date": "2026-07-22",
-    "location": "Boston, MA, USA",
-    "url": "clickh-9f9d",
-    "type": "meetup",
-    "tags": [
-      "AI",
-      "biology"
-    ],
-    "virtual": false,
-    "description": "",
-    "source": "luma",
-    "auto": true
-  },
-  {
-    "name": "Daytona AI Researchers - Stanford, July 2026",
-    "date": "2026-07-22",
-    "end_date": "2026-07-22",
-    "location": "Boston, MA, USA",
-    "url": "ai-researchers",
-    "type": "meetup",
-    "tags": [
-      "AI",
-      "biology"
-    ],
-    "virtual": false,
-    "description": "",
-    "source": "luma",
-    "auto": true
-  },
-  {
-    "name": "19th San Jose Hardware Meetup @ BigHat Bio | AI/ML in Lab Automation",
-    "date": "2026-07-22",
-    "end_date": "2026-07-22",
-    "location": "Boston, MA, USA",
-    "url": "4b27iipd",
-    "type": "meetup",
-    "tags": [
-      "AI",
-      "biology"
-    ],
-    "virtual": false,
-    "description": "",
-    "source": "luma",
-    "auto": true
-  },
-  {
-    "name": "OpenAI Build Week Community Meetup - San Francisco",
-    "date": "2026-07-22",
-    "end_date": "2026-07-22",
-    "location": "Boston, MA, USA",
-    "url": "codex-meetup-convex-jul21-2026",
-    "type": "meetup",
-    "tags": [
-      "AI",
-      "biology"
-    ],
-    "virtual": false,
-    "description": "",
-    "source": "luma",
-    "auto": true
-  },
-  {
-    "name": "AI Safety Founders - Co-Founder Mingle",
-    "date": "2026-07-22",
-    "end_date": "2026-07-22",
-    "location": "Boston, MA, USA",
-    "url": "cdcxusgk",
-    "type": "meetup",
-    "tags": [
-      "AI",
-      "biology"
-    ],
-    "virtual": false,
-    "description": "",
-    "source": "luma",
-    "auto": true
-  },
-  {
-    "name": "Stop AI/Laborfest: AI in Education",
-    "date": "2026-07-22",
-    "end_date": "2026-07-22",
-    "location": "Boston, MA, USA",
-    "url": "d1c2hvra",
-    "type": "meetup",
-    "tags": [
-      "AI",
-      "biology"
-    ],
-    "virtual": false,
-    "description": "",
-    "source": "luma",
-    "auto": true
-  },
-  {
-    "name": "13th Peninsula Value Economy X Sustainability (Climate) Co-Work Day \u2014 AI, Health",
-    "date": "2026-07-22",
-    "end_date": "2026-07-22",
-    "location": "Boston, MA, USA",
-    "url": "doiktjsn",
     "type": "meetup",
     "tags": [
       "AI",
@@ -336,7 +112,7 @@
       "clinical"
     ],
     "virtual": false,
-    "description": "American Society of Human Genetics annual meeting \u2014 a key forum for AI-driven genetics and genomics research.",
+    "description": "American Society of Human Genetics annual meeting — a key forum for AI-driven genetics and genomics research.",
     "auto": false
   },
   {
@@ -353,11 +129,11 @@
       "digital health"
     ],
     "virtual": false,
-    "description": "Annual congress focused on biodata, AI and precision medicine \u2014 bringing together data scientists, clinicians and industry leaders.",
+    "description": "Annual congress focused on biodata, AI and precision medicine — bringing together data scientists, clinicians and industry leaders.",
     "auto": false
   },
   {
-    "name": "NeurIPS 2026 \u2014 ML for Biology Workshop",
+    "name": "NeurIPS 2026 — ML for Biology Workshop",
     "date": "2026-12-05",
     "end_date": "2026-12-06",
     "location": "TBC",
@@ -370,7 +146,7 @@
       "computational"
     ],
     "virtual": false,
-    "description": "Annual machine learning for biology workshop co-located with NeurIPS \u2014 a key venue for AI \u00d7 biology research presentations.",
+    "description": "Annual machine learning for biology workshop co-located with NeurIPS — a key venue for AI × biology research presentations.",
     "auto": false
   }
 ]
