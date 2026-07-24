@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-23T10:31:52Z",
+  "last_updated": "2026-07-24T10:27:08Z",
   "companies": [
     {
       "name": "XtalPi",
@@ -358,11 +358,11 @@
       "funding": "Public (Nasdaq: ABSI). Raised ~$200M pre-IPO.",
       "stage": "public",
       "needs_review": true,
-      "review_headline": "Eli Lilly dives into hair loss treatments with investment in AI startup Absci | STAT - STAT",
-      "review_url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE8tX29TTTQ5X1E1ZDExSVpHLTFuMGtaV1o5NXlod0d6Zk5QNjZFN2U4Z3JJYnJvWVpuZnFnT1loTUVnV3lZTHBGdFZFTFhHSGZWOXdQUF83Wm9TVUFjWjk4LWZiRzBKUWZJSmVwMU5OQi1Tc2xra0RMc3V2NzJhQQ?oc=5",
-      "proposed_funding": "",
+      "review_headline": "Absci Raises $100 Million In Equity To Fund AI-Designed Hair Loss And Endometriosis Program - Yahoo Finance",
+      "review_url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQWmt1Z003TDFHdHlTU3JPSmlJYzBmX0VnZDFEVEhWN0tVLVhDVXE5WWZsWmpHSjA5VGZPOVNxZWx3WFdpSHAtWWZ6aVR6bjdOQjBva1Joczd3Zk1sanNzTl9GZFUxNnhqTlhUZmhmWkJaandxOTBOUG10bDBzbDd6X21GV0FZSUQ5Q2JnekdQd3kxT05zd1Fr?oc=5",
+      "proposed_funding": "$100M",
       "proposed_stage": "",
-      "found_at": "2026-07-04T10:19:01Z"
+      "found_at": "2026-07-24T10:25:15Z"
     },
     {
       "name": "Aignostics",
@@ -861,14 +861,14 @@
     },
     {
       "name": "Tempus AI",
-      "funding": "Public (Nasdaq: TEM). Raised ~$1.1B+ pre-IPO.",
-      "stage": "public",
+      "funding": "$2B",
+      "stage": "series-a",
       "needs_review": true,
-      "review_headline": "Guggenheim raises Tempus AI stock price target to $65 on estimates - Investing.com Nigeria",
-      "review_url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQWWU0cmFhRXhTTW15SnVYYjlDT0lrRDU0RXpSdW9sYlBFV01RRVd5a2RkdnBienBlVnRrVnRSWUozb0ttTC1ZNlo1ZTBvbUstcnB2VXZua2dIc2F4ZG8xTEFmdVRKaWdXU0QtMjFPRUw3enhXNzNabEFNaUM4SWN5Y1I4R0lkM2tRaW9uU0pCcTFRbl8yZGM2SjJLTHUxYnhwN2xTRlVPSHVLMndNVXdGaS1ad2ZsTW9QeGVJYy1xQXdXeHow?oc=5",
-      "proposed_funding": "",
-      "proposed_stage": "",
-      "found_at": "2026-07-23T10:31:45Z"
+      "review_headline": "Chutes & Ladders: Data breach clouts Clover, OpenAI agent escapes sandbox to attack Hugging Face, Precision\u2019s surface BCI achieves thought control, Tempus AI $1.5B Personalis buy, Karoo Health\u2019s $16.2M Series A - Telehealth and Telecare Aware",
+      "review_url": "https://news.google.com/rss/articles/CBMiugJBVV95cUxPUk1JU1VpUldkcmtKVEhnUGJwN21wRWt0YWVRV2JYV3hhVG1VN0RPaVRvclhvalRUaUZUYmlHZlp4SWxfcG1CVmJvOTZQYWtMTy05ZWd6dDRFMk5GZUZ1ZEtYZksxT01FazZlYVBna2pheFF5aW11RGhVQTdteENZcGNBUmxKRFE4Si1uNV8wVmhtNTA3dG1DWmZRdHNUMV9CQWV5cXI5b0VqNjZEWkg2VDF1RjAyVHZteVIxZHFmQXd2UnM3UElEMFI1MXE4NUpmUWVZdG5TUUpfSkhKdHRfZG13aGhQbThKOE93eUsxcUlLV0gtZUttdkwyZnNRMWQwb1U1TzNQT294M1paRENSY3M2MV9uai1sNmhHS1YzdzBMUFpzWjNHblpVYmZSV0lFSExQaGVwVXpEdw?oc=5",
+      "proposed_funding": "$2B",
+      "proposed_stage": "series-a",
+      "found_at": "2026-07-24T10:27:01Z"
     },
     {
       "name": "Verily Health",
