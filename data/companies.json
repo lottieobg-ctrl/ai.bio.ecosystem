@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-25T09:56:44Z",
+  "last_updated": "2026-07-26T10:08:41Z",
   "companies": [
     {
       "name": "XtalPi",
@@ -226,11 +226,11 @@
       "funding": "$400M",
       "stage": "series-c",
       "needs_review": true,
-      "review_headline": "Chai Discovery Secures $400M Series C to Propel AI-Driven Molecular Innovation - SynBioBeta",
-      "review_url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOXzV2Tl9UMzBqYjB1QlNlcW8tWVQwVEV2YVVSbjBzdngwOTRhWWR1dkJmeUUwaUJXQmhOVkNYQncxbE9lZW53NmhNVDRVQklNVlROUlJrX1NXM1hMYVRvaVlmTVVIR1Q3M3o1Q0lSR1UtWWJxeDBVWW5WRkp6NzJRVEJ0V3hSZm91elJIOXJfaXNvcHBzWlJDYlhWMjhybUp3SE9pRU1rMEhDYUFDZmc?oc=5",
+      "review_headline": "Chai Discovery, an A.I. Drug Start-Up, Raises $400 Million - The New York Times",
+      "review_url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNeDlRODFkM0tGYnRSSUdHMGFBYU5YUGdzaWFEcHpDa2tuX0hTUFJ3dXhYVEVSRzBLN1lrbTlyN2M5bDY1Mm10VWtiN2hELVZlZTYtMzdocEVoVTUyUHhHTDR6eHc4ZWsyM2lpWnkzQXpmVDgwNkRjRThtSHZyWnE0Z1NxM2toRzd4SS12WEt4WU9YVWhSeUww?oc=5",
       "proposed_funding": "$400M",
-      "proposed_stage": "series-c",
-      "found_at": "2026-07-22T10:30:41Z"
+      "proposed_stage": "",
+      "found_at": "2026-07-26T10:06:33Z"
     },
     {
       "name": "Profluent",
@@ -930,11 +930,11 @@
       "funding": "$30B",
       "stage": "public",
       "needs_review": true,
-      "review_headline": "House AI \u2018kill switch\u2019 bill unveiled as OpenAI hack raises alarms - Politico",
-      "review_url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPVllZVDU1VkNKYWd4ZXc3ZldlNFlIdXR1clJCeS1RQVZCR1N3dl9yVXNIWFJ1UGFWc2MweVJGWnJEbk95dzUzZktFRjBKZXlDSGYzMV9QWmxvZExKaUFFVjRxaUlaUmRVT1VfdWplZWY4b3dHOFVHT25IeGgyYURhMDFIR0RlOF8zMzJwamhHTEhBSzVpcGhKZ1JVSW44aHkzZGhOQlJ2WGlQOGQtS1VhRGNSWQ?oc=5",
-      "proposed_funding": "",
-      "proposed_stage": "",
-      "found_at": "2026-07-23T10:31:46Z"
+      "review_headline": "Nvidia\u2019s Huang Says $30B OpenAI Investment May Be Last Pre-IPO Deal - Stocktwits",
+      "review_url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOR2dmdHo3Z0dMR0pQaXh6ZEVMZ3B4eVVxSmRhcTE3SmEtS3RTVjB1X0Z2dEMtLWxwdlZYdEYtY0pDOUNhcTJoTjI5eW11U3ItejgwWjlGdVUxWHoyZXB3QzVzNFM3WnZqSEdnRlUzajRRYUhIdnVfaFRzcDJ5WDVQVFVNbGpVZDdTdzRNQXprWWFyME9Fb0QzMVNhdlM1eFV2clY1R0ZVeENSWm1iMDhsR2hOT1JBWXotX1B3WWsxeGNOQU1aMzlr?oc=5",
+      "proposed_funding": "$30B",
+      "proposed_stage": "public",
+      "found_at": "2026-07-26T10:08:35Z"
     },
     {
       "name": "Sakana AI",
