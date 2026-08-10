@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-26T10:58:07Z",
+  "last_updated": "2026-08-10T09:41:54Z",
   "companies": [
     {
       "name": "XtalPi",
@@ -223,14 +223,14 @@
     },
     {
       "name": "Chai Discovery",
-      "funding": "$230M total \u2014 $30M seed (Sep 2024) \u00b7 $70M Series A (Aug 2025) \u00b7 $130M Series B (Dec 2025). Valuation: $1.3B.",
-      "stage": "series-b",
+      "funding": "$400M",
+      "stage": "series-c",
       "needs_review": true,
-      "review_headline": "Pfizer and Eli Lilly Bet on AI Drug Discovery Startup Chai Discovery\u2019s $400 Million Funding Round - Earnings Season Preview - newsline.com",
-      "review_url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQeHhaQUl3RGJoYUdKcGhBc1Zmd1ZiTmlPeFhxWTdXWHg1aUQzUWU2T0dieEh4MkFfcmxsaUZ3Nmd4UWtpRDlIUVB5dTE4enE0eWROSXFVTkNMR0dyWVlkTEx2U0VaTVVyMUdiU3liOFo3UlgzMGNiVy1OaHlvUlZvZjBWbnJ3eFNqWWlTcjdOVEVmemQ2UHBNZ3RSTXBuajk0STczSlYyeFc4YVhqRW9lVkdHMTdqeF9FbFE1NHJaV1Z6Wk5jeWJqUkRGSkJHM0E?oc=5",
+      "review_headline": "Chai Discovery, an A.I. Drug Start-Up, Raises $400 Million - The New York Times",
+      "review_url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNeDlRODFkM0tGYnRSSUdHMGFBYU5YUGdzaWFEcHpDa2tuX0hTUFJ3dXhYVEVSRzBLN1lrbTlyN2M5bDY1Mm10VWtiN2hELVZlZTYtMzdocEVoVTUyUHhHTDR6eHc4ZWsyM2lpWnkzQXpmVDgwNkRjRThtSHZyWnE0Z1NxM2toRzd4SS12WEt4WU9YVWhSeUww?oc=5",
       "proposed_funding": "$400M",
       "proposed_stage": "",
-      "found_at": "2026-06-26T10:56:12Z"
+      "found_at": "2026-08-08T08:50:10Z"
     },
     {
       "name": "Profluent",
@@ -358,11 +358,11 @@
       "funding": "Public (Nasdaq: ABSI). Raised ~$200M pre-IPO.",
       "stage": "public",
       "needs_review": true,
-      "review_headline": "Eli Lilly dives into hair loss treatments with investment in AI startup Absci - statnews.com",
-      "review_url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE8tX29TTTQ5X1E1ZDExSVpHLTFuMGtaV1o5NXlod0d6Zk5QNjZFN2U4Z3JJYnJvWVpuZnFnT1loTUVnV3lZTHBGdFZFTFhHSGZWOXdQUF83Wm9TVUFjWjk4LWZiRzBKUWZJSmVwMU5OQi1Tc2xra0RMc3V2NzJhQQ?oc=5",
+      "review_headline": "Absci Corp (ABSI) Risk Assessment: Volatility, Financial Risk & Investment Risk - TradingKey",
+      "review_url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE04WFJfcWZCQ1RYQlplMTBkYnZVU2o3YmhyTEhLWnlES3FENm1OR243c1dIQXZWRlU5cTZId1BOU0p5UEFRX1gwaE5MS0lUbi1NY000dkFGV1NIM1l3UTJlaGlQYTNRTXp4V2M2NTBn?oc=5",
       "proposed_funding": "",
       "proposed_stage": "",
-      "found_at": "2026-06-25T10:48:56Z"
+      "found_at": "2026-08-03T11:34:23Z"
     },
     {
       "name": "Aignostics",
@@ -446,11 +446,11 @@
       "funding": "$100M+ total \u2014 $73M Series B (Nov 2024), led by IVP. Previous investors: Index Ventures, Kindred Capital.",
       "stage": "series-b",
       "needs_review": true,
-      "review_headline": "Dying river in Biblical \u2018cradle of civilization\u2019 raises scary spectre of end times - AOL.com",
-      "review_url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOLWZMV3o4dkpuQjlqd0NFTEVkdFlwdzhZeGpBQ2JSbkRtc2JrMXUxa0FOS292LTZQZUtSZFhOZUpiUEYxa2tzNkpXdGJYS2syUmxFenk4akQwRFVoWXpUdWhLa3JnOWNoMHJhQUxhbTVSLUZROWJsUFBJX01wa1NzRmNvOEczRUk0OGE5VQ?oc=5",
+      "review_headline": "Vettes, Jets & Rockets car show raises funds for Cradle of Aviation Museum - Herald Community Newspapers",
+      "review_url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNT0FzMXZvaGU2R0pKVEhKdEI0WGRZUi15YnRWUE5ta09BR2lJeEJtTFl5bFhDczNhUWtkQ1B3MGR2Sm92N1d4SnJWT1B2anpzSnpxYzBPLUJnZUlsRGt1NWhsRFRqV0pNbVB5LWlRVnU4THJ5VHluc1AzVkpPT3VFSzB5VFhuWEdhWHdaclZYcnluejBGZEtoMHVzZEdnUU1wNTdROHp4TUNDMTdjUldZcEdOQlJpa2xaRW8yNWl3?oc=5",
       "proposed_funding": "",
       "proposed_stage": "",
-      "found_at": "2026-06-21T11:21:37Z"
+      "found_at": "2026-08-04T10:46:12Z"
     },
     {
       "name": "Deep Genomics",
@@ -468,11 +468,11 @@
       "funding": "$596M",
       "stage": "public",
       "needs_review": true,
-      "review_headline": "Eikon Therapeutics Ord Shs (EIKN) Risk Assessment: Volatility, Financial Risk & Investment Risk - TradingKey",
-      "review_url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE1ZWkQ2VUNVVmZTZFltbkI1UVBkazV3QUtTQzVGRllNY1VTUjNBTkl1QXgyMEJVT1RUREhRZUtKbHJxUEttNXItTV9mZGJyRmVWY2ZsZmhpamhXdEl1Tl9IU3hfdTZjMFN0blNBUDR6eUJNdUxMT3dv?oc=5",
+      "review_headline": "Eikon Therapeutics Ord Shs (EIKN) Valuation: PE, PB & Fair Value Analysis - TradingKey",
+      "review_url": "https://news.google.com/rss/articles/CBMickFVX3lxTE00Zy1aUTM0Z0xjd21xVXZSNVhtRnF2eHdNM2F5RlJkSUEyUXVuSGtTN0E4MVROVE5oZWl4enQzQlByMW1DNUVqcHl0a0RoZFN3SW5DdzRvMWEzdk85LVV0bzZyQ0t1cjd1N3hBQW5wUW10QQ?oc=5",
       "proposed_funding": "",
       "proposed_stage": "",
-      "found_at": "2026-06-23T11:24:44Z"
+      "found_at": "2026-08-03T11:34:43Z"
     },
     {
       "name": "Enveda",
@@ -502,10 +502,10 @@
       "stage": "public",
       "needs_review": true,
       "review_headline": "Ginkgo Bioworks Holdings Inc (DNA) Risk Assessment: Volatility, Financial Risk & Investment Risk - TradingKey",
-      "review_url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFAyU3plYzNucXk3SUVjaGJ5b2FUTF9nYjBuNm1TelNSWUNlVHp1c2V1a0JkTy00V1BYZ2VLQUtXTEgxVEh6MC15c1RUc1UwdVdhT0RST25JdC1veFhfU2gtNGl4SUI4b2xUeGJaY3dNR3V6Mm9naGc?oc=5",
+      "review_url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1QRGlCWU5WeThEbDNfbGc4dnNfSEEtdi1QTTJEOXhjZTY1VXhHVjY4MFMzVEtEd0ZoRU83RU0yMzNsOXQwVXRTT2kzaDdlUHR2ZWN0ODZEVFlrV09nOUoyd2ZGMTVhSFJMN3FKYQ?oc=5",
       "proposed_funding": "",
       "proposed_stage": "",
-      "found_at": "2026-06-21T11:21:48Z"
+      "found_at": "2026-08-03T11:34:49Z"
     },
     {
       "name": "Healx",
@@ -556,11 +556,11 @@
       "funding": "$2B",
       "stage": "series-b",
       "needs_review": true,
-      "review_headline": "Wilson Sonsini Advises Isomorphic Labs on $2.1 Billion Series B Investment Round - Wilson Sonsini",
-      "review_url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNaWxnOVhyaFlJX1BMQVBnemN5eHhkRThNYy1PUVRsaklSUUVSaUFKbnVhMEN3WHNGZUNkZHlfSHhKeU9YYmJYMGlvLXVabDhTM0hTalhrdlVDMXI2TlRBeTdvbW10UEF5OWxScDhXbnozVVlmVi1STkt6Ui1yMkRGUHNQc2xiTlo0QndnX3QzckEzMk9TNUFLOV9lMHFaZGRvdzF2T3ZDU0Ruc0hYa0JWckh3dU9YQ0EwdGY2S0ZPVQ?oc=5",
-      "proposed_funding": "$2B",
-      "proposed_stage": "series-b",
-      "found_at": "2026-06-15T14:34:57Z"
+      "review_headline": "Demis Hassabis's Isomorphic Labs: $2.7B Raised, Trials Due This Year - StartupHub.ai",
+      "review_url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPeExJLW5QVjd2bTdaQ2NZMGg4bEtuZlpYdk9XTkt5Ti1lOEFLd2MtVXVNZ0hUZjRHUDdpQ01kdzlBZUFrWC1XVlBSTkVKZW5rZlcxQjVSR3kyZEZlRGFFcGFpbDZCd3d6dHlpNmI5ODA2SWNHSE4tUTdieUw1T2FqREVwU1RyTVJKdFFBTTFSR1d6Wmw0d2RXQVRSeHUxWWlwcnhfZHQwR2JhMGFuZW5tYTZFUzd0UV9LWFE?oc=5",
+      "proposed_funding": "$3B",
+      "proposed_stage": "",
+      "found_at": "2026-07-04T10:19:45Z"
     },
     {
       "name": "Kailera Therapeutics",
@@ -611,22 +611,22 @@
       "funding": "~\u00a350M total \u2014 Series B. Traded on AIM (London Stock Exchange).",
       "stage": "series-b",
       "needs_review": true,
-      "review_headline": "OliX raises \u20a9110 bil. from L'Or\u00e9al venture fund and Weiss Asset Management - koreabiomed.com",
-      "review_url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1OX2FiQVdPaTBzZF8wTnRTZmdEY0hIZlozcXNUMER2MGRBVDZ6ckRUQ1ZIcGUxSGo2cGM2Zy1KTDZKRDdmU0ctNFJTdTBQN0tUb0RYbzZ1RzhCYWt3NjR3OU5LRkE1MHY1cVBfQVFn0gFyQVVfeXFMTXI5S3N5VnhzeklRUklDSU9iRS00QVJjcjJIVWFyczRCT3JXanpOSzBPVEppT3FJZlJVM1FmYXlmVmU5LVRIWTd6TnJfQ3pUdkFTUHVnUWwzaTcwU1h6a0ZPM0dRYWVYRGxtZm50c19BZXRR?oc=5",
-      "proposed_funding": "",
+      "review_headline": "Chip startup Olix raises $312m at $3.3bn valuation, backed by UK gov\u2019t Sovereign AI venture fund - Data Center Dynamics",
+      "review_url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPTTY1Vl8wMHRFOC14NlNKT25vM25Sc051ZUwxSWF6WkFCaHBrVmN6YVdaeXlXb0FxbFhhZkI3MDFJVWd5bTJ4dzZleURONmo1NHh5M29nSlFRUGpxaF9MdXJza09rcEtMT3Y0Y3pRczFlbTYzZVI4SC1OLWwyNUhnbEx6OWhoTk1henpqMHY3d3NjRGlEVFF0S0RkRG5ZbzJibk1lV2NodU1Xc2ppT2EzT3FnZkpvZjNadlZHb1huekd0NlpSNGp0Smpyc19WQTBU?oc=5",
+      "proposed_funding": "$312M",
       "proposed_stage": "",
-      "found_at": "2026-06-26T10:57:22Z"
+      "found_at": "2026-08-08T08:51:26Z"
     },
     {
       "name": "Pathos AI",
-      "funding": "$467M total \u2014 Series A, B and C. Backed by A-Star, Coatue Management.",
-      "stage": "series-c",
+      "funding": "$3B",
+      "stage": "series-d",
       "needs_review": true,
-      "review_headline": "Pathos AI acquires majority stake in DeuterOncology - The Pharma Letter",
-      "review_url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQem1Qd2JraW83bVBwZFZrcC1SV1MwMnRDVzl2U3ZvSXU2SGFDWVk0MGJGMmYtZm9VLWYxaUtuU2YtZUVNN1hLa2oxNkpSTnUxV3YyTFU5ZnZlQUhMLS1JTVFQVE92eVJDMXR0aHg4S3RBODZMVkZoTm5jRFVKdGFqNmJKZ0xqemVKUll6SGdacUtTUFdPMm51dm5qMi0?oc=5",
-      "proposed_funding": "",
-      "proposed_stage": "acquired",
-      "found_at": "2026-05-15T15:40:07Z"
+      "review_headline": "Exclusive: Pathos AI signs two deals, plans to raise Series E at $3B valuation - Endpoints News",
+      "review_url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNa05UN29GMXJFV2RPaDlSQlo1dU5ucWtHYVY2eURuQ25IekVnaHlsNk9MbUpGQ0J0MktfdXpyekJuNzNWRElHTlRuUGZTejJPT0lpMWRlZ191ZnRQUFNGTVhaRlJ5dXMtSmllMnIyQU9ZUDhMaHFJMjBmRnNodW9uUFR5Tm5GN3BpVEpvVHdIU3RrQ0NaVDVxSEFTZWVhNGFpdEE?oc=5",
+      "proposed_funding": "$3B",
+      "proposed_stage": "series-d",
+      "found_at": "2026-08-05T10:43:31Z"
     },
     {
       "name": "Phylo Bio",
@@ -655,22 +655,22 @@
       "funding": "$121M",
       "stage": "series-c",
       "needs_review": true,
-      "review_headline": "Recursion Pharmaceuticals Series C \u00b7 $121M raised \u00b7 (2019) - StartupHub.ai",
-      "review_url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPZFE1OXRUblhvVlY5Q21XaVE2RHRpZ2FWVlc4aVJEc0N5Tld2Ujl6XzFETDFQRjNKbnpKVVgxMUkxVXk1NXlyY2doMVYwTTNaS01lVjNhd3ZSaWFqMDNqOGljcF9EeEV2VVN3VmhkeXdfSXN2NUZ4QlNVNlFvel9xTWM5aTU5czNRSzVV?oc=5",
-      "proposed_funding": "$121M",
-      "proposed_stage": "series-c",
-      "found_at": "2026-06-22T13:41:50Z"
+      "review_headline": "Recursion Pharmaceuticals (RXRX) Reported Q2 Revenue Pressure, Is The Valuation Gap Too Wide? - simplywall.st",
+      "review_url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxPNVZNaFU3dHllVU55NmZCVVk4TGtnRUxpRUNULURXdmRaVmpxNWFHRV91UjJaN2VsdmV0TlBrQ1pKajN2d2RjZ0YtTGU1dEs2X013Q3dmcWRHak14S1ZMeTAwT2RLekRZOGhYenVzREZ0Rjg1YmFDVDVoM3RFWVV0alpYaFRvWEpkU3gwNkJaNzVOc2Y0Y1JybC00eHNnQXNqQjlGcFdqaG9VRlNIVTlMcU5zazdjendLS3llOGFRa0tWZ29pYWhfTmF4aHpYa0dHNG9JanlhNWczWkI5THpXa3BCZTBJVU9FWGNVTk40MUNTbFhO0gH0AUFVX3lxTE81Vk1oVTd0eWVVTnk2ZkJVWThMa2dFTGlFQ1QtRFd2ZFpWanE1YUdFX3VSMlo3ZWx2ZXROUGtDWkpqM3Z3ZGNnRi1MZTV0SzZfTXdDd2ZxZEdqTXhLVkx5MDBPZEt6RFk4aFh6dXNERnRGODViYUNUNWgzdEVZVXRqWlhoVG9YSmRTeDA2Qlo3NU5zZjRjUnJsLTR4c2dBc2pCOUZwV2pob1VGU0hVOUxxTnNrN2N6d0tLeWU4YVFrS1Znb2lhaF9OYXhoelhrR0c0b0lqeWE1ZzNaQjlMeldrcEJlMElVT0VYY1VOTjQxQ1NsWE4?oc=5",
+      "proposed_funding": "",
+      "proposed_stage": "",
+      "found_at": "2026-08-09T08:53:02Z"
     },
     {
       "name": "Relay Therapeutics",
       "funding": "Public (Nasdaq: RLAY). Raised ~$800M+ pre-IPO.",
       "stage": "public",
       "needs_review": true,
-      "review_headline": "Relay Therapeutics Inc (RLAY) Risk Assessment: Volatility, Financial Risk & Investment Risk - TradingKey",
-      "review_url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9sOFpZZnhIb2FxRHdyXy1iYjRyVldxU09pYXIwYTlsNXBKd29UUjRVbkFiVmRIcmpRVGFLT0dFN1FSVDJOS1ZTbWQwWk1aUl9WOU9kYmxjcUY3QUlVTWM5MlpJd3FxNTFsRk5QVnhWM0RIdVA1Nlc0?oc=5",
+      "review_headline": "Citizens raises Relay Therapeutics stock price target on progress By Investing.com - Investing.com Canada",
+      "review_url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPVUd2cXpCamEyZUh0NjVSU3IyZlBjc1pjM0dGNDUxWkhsTEwtRGRYLUNxTHdaS2s5NHdRWnhkT0ZkRF8xZExtTndjUTdJYmI4VkpuYUVicFVmbWMzTHpBQW92RVM4VV9DNUNQeENyNkFGRmpYeEhVTmVKQzVvdDJMZjhoYldTZ1MwT2lpWG1MR1RtcGlnM2pmQkVHQVNzNVVpbXpPTkUxRXFPTWpUeDN6Wk1jOGk1UWZIeXJWLXRDeHgwNzJ0?oc=5",
       "proposed_funding": "",
       "proposed_stage": "",
-      "found_at": "2026-06-25T10:49:51Z"
+      "found_at": "2026-08-10T09:41:10Z"
     },
     {
       "name": "Relation Therapeutics",
@@ -754,11 +754,11 @@
       "funding": "~$50M total \u2014 Series B. Backed by Octopus Ventures, LocalGlobe.",
       "stage": "series-b",
       "needs_review": true,
-      "review_headline": "Automata Network Derivatives: Funding Rates, Liquidations - TradingView",
-      "review_url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBSS05DLVRpSjJmYVliWm92VkNjYWd2TTRLOEdQQkNmaG5GRXRLS2xGS2dsbWhwTE1DVDRpTHBfVjlHLUV3STFsNzFvWlY5eEFaYmQxbnlWVWw3RWJhMWtxYlplMFhNQQ?oc=5",
+      "review_headline": "Automata Rare Earth Corp. announced that it expects to receive CAD 3 million in funding - marketscreener.com",
+      "review_url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxOc3pZZlBwLUtvM2p0dGUzREZPcDV1MWNEV3dQWlBPbWJ6dzF4dGRiRnNMQ3BoR2dnX3NDSndRNUpoYjFxMG5WUktFaWxKR1NWWl9HdkoxcjdBVjl1NUtnY2s2b1ZhWFJSbXJFS2V3UnZPN0FHTWJhRWlXbFVIV3dvTmtCeTF4R3p5VXZBeFpLWm9Pa3N2d1pUanNUcWZxRG9EZ3RBTTBMTExORlFjbmU0MVMxTDk2RDhfTnN2N1lWUHRsY3Y1Q2VHZHRhbExCOG5wTUNHeTV3?oc=5",
       "proposed_funding": "",
       "proposed_stage": "",
-      "found_at": "2026-05-15T15:40:27Z"
+      "found_at": "2026-07-15T10:10:26Z"
     },
     {
       "name": "Benchling",
@@ -769,7 +769,7 @@
       "review_url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOUkN1ZldkNGFtcFIxSEdnSlRUWVdZS2dSRjAxTUF3ZXQ1RHY0dXEwaGFTUzBrLVAzQWk3NHRjX3NxZWx6M3VjbkFnQnFDUVAydHNhalRRMkZfUnVnZHVkVkZBY21nd1paTFR0Tkg0YnF3YUlNZS0wQlF1cENDRFhGVVdUZnV2RTlpZXNTWFlOc0FlV21QbU1ETjM3QWJUNTc0cVI5Ti1yXzZuWTFX?oc=5",
       "proposed_funding": "",
       "proposed_stage": "",
-      "found_at": "2026-05-16T11:35:13Z"
+      "found_at": "2026-08-08T08:51:48Z"
     },
     {
       "name": "Edison Scientific",
@@ -787,11 +787,11 @@
       "funding": "Public (Nasdaq: PACB). Raised ~$200M+ pre-IPO.",
       "stage": "public",
       "needs_review": true,
-      "review_headline": "Here's Why You Should Add PacBio Stock to Your Portfolio Now - Zacks Investment Research",
-      "review_url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPZlBSc0hxcUstUkVCUDMwa2J6VWFMdVdBRkVRekdaS0NfRzVlam1NX2Vnbk9VZ3AzczZOSjFCaE1iRkpZTFZja3RFT3g4ZmxaNUIwNW9xYUlqaHl5c3pRWkZvcWl2ZUcxaThfcFJMVXV2Tk5QWjFqT0s0YmgxVzdQS0ZTYmtsdHVMMHd5Mi02R0pmR3d4Uld3X3gyd2VUN1JKdGc?oc=5",
+      "review_headline": "PacBio Q2 Earnings Meet Estimates, Revenues Miss, 2026 Sales View Cut - Zacks Investment Research",
+      "review_url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNN0JCamVDSHZnMlZQX0hJRkR1TnU0bnR4NmNoVDY1ZUtTTWF4dV9paWZEVXRnUHpGQnV1S0s0b1lGeDNmbXhpUlo3NHhCY0hYLXppbDZMMjRCTFluYTZpV1pobUJ6Y2oyTGJsTE1sUnN5VUIzVE95UHhCZzJOc3lIZFhXQjZLRWpXb0JLVF90UEcxUWswdVpPYW9tRUtrVUpSVDJmQzlMYmk0TVQ3?oc=5",
       "proposed_funding": "",
       "proposed_stage": "",
-      "found_at": "2026-06-10T18:19:09Z"
+      "found_at": "2026-08-08T08:51:50Z"
     },
     {
       "name": "Gleamer",
@@ -949,14 +949,14 @@
     },
     {
       "name": "Tempus AI",
-      "funding": "Public (Nasdaq: TEM). Raised ~$1.1B+ pre-IPO.",
-      "stage": "public",
+      "funding": "$2B",
+      "stage": "series-a",
       "needs_review": true,
-      "review_headline": "How The Tempus AI (TEM) Investment Story Is Shifting As Analysts Rework Their Models - Yahoo Finance",
-      "review_url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPcHpqLTBxaURLeXlYbGExemlaT0R0OGQyaU9TTGFlUmhFaDNKZG4wTThuczRfaE5CZkU3MVZ5R0FQZ2diQTdtTDVUWjN6dUZwTEwtdndiTFFBcHBHRWhMNTBnSUpvSFdYYU1wSS02XzhyT2h4RFk0YXBtWkQ3VEVVTW81ZmFMY1lrZFBzMmJManJDNEtnQ2JZZEk0ejloZkhS?oc=5",
-      "proposed_funding": "",
+      "review_headline": "Tempus AI buys Personalis for $1.5B; UCSF Health, Kleiner Perkins and Doerr Capital launch health AI accelerator; Candid Health raises $120M - VatorNews",
+      "review_url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxNQjEwQUNITXktWTJhMzNrblFjSk9BWHRrU3R0WW12YWx3OEhwTTFrX1RsYW91dnBxZDJ2NDBvREprbU4zM0VQS1M2N0kzbm9FOVI0RmNKb3E5Qk5vN01zeFpYTzlwaE9nNGJneTJ0dzJsNFZTUjNJeTdHTm55aS13V2hBTHpjWkNxbUxfV240eFk0eHpaQ1VEaTg1Qlc2OW5tV0ZGc0JpeDlPZUFpdmo4ektQS2dnSU9qTnpybGUxdUJ5NnFObUwtdFpXWDlvV1JfOUt3dEV6dWg5LWJEbVZnTzNGUzRKN0Jh?oc=5",
+      "proposed_funding": "$2B",
       "proposed_stage": "",
-      "found_at": "2026-06-26T10:58:03Z"
+      "found_at": "2026-08-09T08:53:37Z"
     },
     {
       "name": "Verily Health",
@@ -974,11 +974,11 @@
       "funding": "$65B",
       "stage": "public",
       "needs_review": true,
-      "review_headline": "After betting the firm on Anthropic, Menlo Ventures raises victorious $3B fund - TechCrunch",
-      "review_url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPaS1vdXZ1Vk1wTUpra0FCd2ZKTnNwQzhzWndER0FaRXNSNW5aTUhQeFZMVVc5c1ZpMHotSHZFTWZzMC1NM0l5ZmxNQzJFUGNUVnBta2FidkNsQjJrdmh3TVN4RERlek84c1BTQVd6NU9LX1ZzSU43ZlNwd3ByaG5uS1dPYmowLVFHX2JWZVh1SGJxc00yZnNnN2trRWpsMV9lNkdFaEx5Ukt4SU9CV3V6Mw?oc=5",
-      "proposed_funding": "$3B",
-      "proposed_stage": "",
-      "found_at": "2026-06-26T10:58:03Z"
+      "review_headline": "Anthropic IPO Plans Put AI Valuation Under a Sharper Market Lens - Bitcoin Foundation",
+      "review_url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPVzNUdG9ZUWcyR3JqbTlzNHhYcHFMamQwSkUzYW9MWl9oTkNLQlJoV052ellKa3BVTTZzZFN1cHV2NkYzcEtwS0s1WjFyV0g3R3FoNHozOW1RNEl4dUpyWTFwM1paWkl0UkpSWGkxQVB3bl9MZGVXS3A4N0pXeGdyTEVFcktRdUh2bHlfUzIxQWx6bzhJY0tGSW5NVkhjeUliR1VlNmVneXdmS0QzNDRjY2lIWVlyN3dBU0xEby0wUQ?oc=5",
+      "proposed_funding": "",
+      "proposed_stage": "public",
+      "found_at": "2026-08-10T09:41:48Z"
     },
     {
       "name": "Google DeepMind",
@@ -1018,11 +1018,11 @@
       "funding": "$30B",
       "stage": "public",
       "needs_review": true,
-      "review_headline": "AM Need to Know: OpenAI considers IPO delay, Apple raises hardware prices & more (SPX:) - Seeking Alpha",
-      "review_url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxORkowZlBkZmVPSE5ZZS1neVFTRFhFUDg2LWRwMTlpUnV0OWExVExmSk9mdk1VUlFEX3VjeGI1OHVXeUpadm9HVUM5WVY2N2dXam9CY0NZX0F4d0lLOXR4MW9icDFqcGxfZU1Id2NWNzBGLVpUNy1GLUFPTXMxaWw0akROZFJaZEM0ZnpzOWE0cWx0NGJsY05QZkp4WFdYSzJJQTQwdFhxVHk2cHdBSTJOTl9mbmc?oc=5",
+      "review_headline": "Amazon completes $50bn investment in OpenAI - Financial Times",
+      "review_url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNaEFvajk1QWYtT0dWV0NBbFd5QTJKR0s4eHNLR3N0eV9yV0Q4NXkyS3R2UjFoRDlXWTROdHNBU1NtTENFS1BGLUVQaVEwc1ViTmhuY2FDeW5NZm5MVDB3azVTRjVKRGtEVTFfSlhETkRLTUdaY0ZVXzRERnRWYUVZNkVEaEs?oc=5",
       "proposed_funding": "",
-      "proposed_stage": "public",
-      "found_at": "2026-06-26T10:58:04Z"
+      "proposed_stage": "",
+      "found_at": "2026-08-10T09:41:48Z"
     },
     {
       "name": "Sakana AI",
@@ -1183,11 +1183,11 @@
       "funding": "Public (LSE: SYNC). NAV ~\u00a31B+.",
       "stage": "public",
       "needs_review": true,
-      "review_headline": "Syncona's discount cited as opportunity, but investment bank reckons it might need a catalyst - Yahoo Finance UK",
-      "review_url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQRmdKdlpXUWRQREZsRkI5czhDc2tLWmJ2TXJfb0lUWW9RMDBOT3dCbEVSQ21HaDUzZUJ6VW03cFJRVHF6eWNoS0RjNmFiNi04UGRQS0ZBZ2kyUVdGVnQzejU0a3NDejJ3Z09nWnNpT0pBTVo5bnd4bWZFWXhXcHBJU2kyZlY3enlFN195QUY1SzN5SDBscXg3cFh2cw?oc=5",
+      "review_headline": "Syncona's discount cited as opportunity, but investment bank reckons it might need a catalyst - Proactive Investors",
+      "review_url": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxNckU0S1BiT291eWJDNlRWa25oeEJwMzQ4UDZVQm5aMzVfM1M0OGk0NE1zRjlua0szclpYRU1zWkJ6NXFlXzVjc0IzbnpGNjZCQndHdUZBZVhlTmNRMWRGbHpvVms4ZEQzSUVUdXBpZ2Q0VVFGZFZHQzFCTWRSVExlVVZzYXBSTGlaZ2hLNGRXRUdZYzlzR3FCR3BlVHF3cFdPS1ZhSnNJNlZjRUxoSFJ4c0tVUGZfQkVIRW05eGNKTUoyQzBmQ0FCaHVFazJqbmpkdGJVa0ZreEFWZXpseE1zWldMenUwb2xQY0IyODAwVFg3Z2F1dEVVeA?oc=5",
       "proposed_funding": "",
       "proposed_stage": "",
-      "found_at": "2026-06-20T10:38:53Z"
+      "found_at": "2026-07-12T09:59:06Z"
     },
     {
       "name": "Biotech TV",
