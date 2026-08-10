@@ -19,7 +19,9 @@ COMPANIES = [
     "Automata", "Benchling", "Edison Scientific", "PacBio", "Phylo", "Drosera Bio",
     "Gleamer", "Kaiko", "Medra", "Nabla", "Optellum", "Owkin", "Tempus AI",
     "Anthropic", "OpenAI", "Sakana AI",
-    "Syncona", "Fractile", "Doubleword",
+    "Syncona", "Fractile", "Doubleword", "PathAI", "Nucleai",
+    "Orakl Oncology", "Generare", "Brink Therapeutics", "Axiom Bio",
+    "Valid Therapeutics", "biotx.ai",
 ]
 
 DATA_PATH = Path(__file__).parent.parent / "data" / "companies.json"
