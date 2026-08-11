@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-10T09:41:54Z",
+  "last_updated": "2026-08-11T09:08:21Z",
   "companies": [
     {
       "name": "XtalPi",
@@ -446,11 +446,11 @@
       "funding": "$100M+ total \u2014 $73M Series B (Nov 2024), led by IVP. Previous investors: Index Ventures, Kindred Capital.",
       "stage": "series-b",
       "needs_review": true,
-      "review_headline": "Vettes, Jets & Rockets car show raises funds for Cradle of Aviation Museum - Herald Community Newspapers",
+      "review_headline": "Vettes, Jets & Rockets car show raises funds for Cradle of Aviation Museum - liherald.com",
       "review_url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNT0FzMXZvaGU2R0pKVEhKdEI0WGRZUi15YnRWUE5ta09BR2lJeEJtTFl5bFhDczNhUWtkQ1B3MGR2Sm92N1d4SnJWT1B2anpzSnpxYzBPLUJnZUlsRGt1NWhsRFRqV0pNbVB5LWlRVnU4THJ5VHluc1AzVkpPT3VFSzB5VFhuWEdhWHdaclZYcnluejBGZEtoMHVzZEdnUU1wNTdROHp4TUNDMTdjUldZcEdOQlJpa2xaRW8yNWl3?oc=5",
       "proposed_funding": "",
       "proposed_stage": "",
-      "found_at": "2026-08-04T10:46:12Z"
+      "found_at": "2026-08-11T09:06:40Z"
     },
     {
       "name": "Deep Genomics",
@@ -666,11 +666,11 @@
       "funding": "Public (Nasdaq: RLAY). Raised ~$800M+ pre-IPO.",
       "stage": "public",
       "needs_review": true,
-      "review_headline": "Citizens raises Relay Therapeutics stock price target on progress By Investing.com - Investing.com Canada",
-      "review_url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPVUd2cXpCamEyZUh0NjVSU3IyZlBjc1pjM0dGNDUxWkhsTEwtRGRYLUNxTHdaS2s5NHdRWnhkT0ZkRF8xZExtTndjUTdJYmI4VkpuYUVicFVmbWMzTHpBQW92RVM4VV9DNUNQeENyNkFGRmpYeEhVTmVKQzVvdDJMZjhoYldTZ1MwT2lpWG1MR1RtcGlnM2pmQkVHQVNzNVVpbXpPTkUxRXFPTWpUeDN6Wk1jOGk1UWZIeXJWLXRDeHgwNzJ0?oc=5",
+      "review_headline": "Citizens raises Relay Therapeutics stock price target on progress - Investing.com",
+      "review_url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOMW9qTnM1aFQtc3lwTUtTRVZEdUlHMWVBY0hmSjFiWnJ0clZLaTlaUVprUEJaSVVmN0VNempYcVBMWjBrOG5vMFZRTUZpRmZteDQwZnpkYTlBdm1Rd0oyTVFGazI2bll1S0o4eGVjWDlIN0MyZEdyVjhBYWJuZGs4SlBaR1I1bV92NlRyWTNWTkFmdldpSG9jaVBId0dHR1o1Nmx0aTBlckpiUmVhNVNvVUQyTEdYMi1UbWY5ektsTFZ0enM?oc=5",
       "proposed_funding": "",
       "proposed_stage": "",
-      "found_at": "2026-08-10T09:41:10Z"
+      "found_at": "2026-08-11T09:07:21Z"
     },
     {
       "name": "Relation Therapeutics",
@@ -839,7 +839,7 @@
     },
     {
       "name": "PathAI",
-      "funding": "~$100M+ total — Series B/C. Backed by 8VC, Bessemer, General Catalyst.",
+      "funding": "~$100M+ total \u2014 Series B/C. Backed by 8VC, Bessemer, General Catalyst.",
       "stage": "series-c",
       "needs_review": false,
       "review_headline": "",
@@ -850,7 +850,7 @@
     },
     {
       "name": "Nucleai",
-      "funding": "~€30M+ total — venture financing and strategic partnerships in digital pathology and spatial biology.",
+      "funding": "~\u20ac30M+ total \u2014 venture financing and strategic partnerships in digital pathology and spatial biology.",
       "stage": "series-b",
       "needs_review": false,
       "review_headline": "",
@@ -861,7 +861,7 @@
     },
     {
       "name": "Orakl Oncology",
-      "funding": "€11M total — Seed (Dec 2024). Backed by Singular, Bpifrance.",
+      "funding": "\u20ac11M total \u2014 Seed (Dec 2024). Backed by Singular, Bpifrance.",
       "stage": "seed",
       "needs_review": false,
       "review_headline": "",
@@ -872,7 +872,7 @@
     },
     {
       "name": "Generare",
-      "funding": "~€25M total — €5M Seed (Oct 2024) + €20M Series A (Apr 2026). Backed by Teampact Ventures, Galion.exe.",
+      "funding": "~\u20ac25M total \u2014 \u20ac5M Seed (Oct 2024) + \u20ac20M Series A (Apr 2026). Backed by Teampact Ventures, Galion.exe.",
       "stage": "series-a",
       "needs_review": false,
       "review_headline": "",
@@ -883,7 +883,7 @@
     },
     {
       "name": "Brink Therapeutics",
-      "funding": "~€3.5M total — Seed. Backed by Kurma Partners, Breega.",
+      "funding": "~\u20ac3.5M total \u2014 Seed. Backed by Kurma Partners, Breega.",
       "stage": "seed",
       "needs_review": false,
       "review_headline": "",
@@ -894,7 +894,7 @@
     },
     {
       "name": "Axiom Bio",
-      "funding": "$15M total — Seed (Apr 2025). Backed by Amplify Partners, Dimension Capital, Zetta Venture Partners.",
+      "funding": "$15M total \u2014 Seed (Apr 2025). Backed by Amplify Partners, Dimension Capital, Zetta Venture Partners.",
       "stage": "seed",
       "needs_review": false,
       "review_headline": "",
@@ -905,7 +905,7 @@
     },
     {
       "name": "Valid Therapeutics",
-      "funding": "~$6.9M total — Seed (Jan 2025). Undisclosed investors.",
+      "funding": "~$6.9M total \u2014 Seed (Jan 2025). Undisclosed investors.",
       "stage": "seed",
       "needs_review": false,
       "review_headline": "",
@@ -916,7 +916,7 @@
     },
     {
       "name": "biotx.ai",
-      "funding": "~$2.3M total — early-stage across multiple rounds. Backed by Ocama Partners, Oxonian Ventures, JLABS; supported by SPRIN-D.",
+      "funding": "~$2.3M total \u2014 early-stage across multiple rounds. Backed by Ocama Partners, Oxonian Ventures, JLABS; supported by SPRIN-D.",
       "stage": "seed",
       "needs_review": false,
       "review_headline": "",
@@ -1015,14 +1015,14 @@
     },
     {
       "name": "OpenAI",
-      "funding": "$30B",
+      "funding": "$7B",
       "stage": "public",
       "needs_review": true,
-      "review_headline": "Amazon completes $50bn investment in OpenAI - Financial Times",
-      "review_url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNaEFvajk1QWYtT0dWV0NBbFd5QTJKR0s4eHNLR3N0eV9yV0Q4NXkyS3R2UjFoRDlXWTROdHNBU1NtTENFS1BGLUVQaVEwc1ViTmhuY2FDeW5NZm5MVDB3azVTRjVKRGtEVTFfSlhETkRLTUdaY0ZVXzRERnRWYUVZNkVEaEs?oc=5",
-      "proposed_funding": "",
-      "proposed_stage": "",
-      "found_at": "2026-08-10T09:41:48Z"
+      "review_headline": "OpenAI wraps $7 billion share sale ahead of potential IPO - CNBC",
+      "review_url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQTks4emg2RHNjcWNnN3VfdzZWbU14cXdMT2VzbnlnX0VLNEVCUEM1R2FkV1p5R3cwZ1ZTRGZmSUFkYTNVS1JoYVNxdWlNRmlVQnRSRlA1dnNCSmh5UU5IampSbFV6VU1wY0tTbjVqeU5XTXk3ZW9CTlhOelk1TmFsLUVRZm9pY09sLWNFRG5FN0QwTUQ1NXl1eEpn0gGfAUFVX3lxTFBQSlFVcGFVMkEzOExGdzJGLWxNZS1Mcmd3YWJLdkhrWUd1V0tLM2NrdWtKcTVOOC1aRllzQTBybDcySGJXcW9hV1lUU3Z6dE95NnpJRW0xTGVnMGRuMWExRWo4SFp4WVlYbE9EbHF1SmQzNnl4aWVRcXo1dnEwM3VXc0p5NER5SVVtRUJ1TFgxSUtNdk5OTDBQakhuNEJHaw?oc=5",
+      "proposed_funding": "$7B",
+      "proposed_stage": "public",
+      "found_at": "2026-08-11T09:07:56Z"
     },
     {
       "name": "Sakana AI",
