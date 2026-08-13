@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-12T09:19:44Z",
+  "last_updated": "2026-08-13T09:20:47Z",
   "companies": [
     {
       "name": "XtalPi",
@@ -226,11 +226,11 @@
       "funding": "$400M",
       "stage": "series-c",
       "needs_review": true,
-      "review_headline": "Chai Discovery, an A.I. Drug Start-Up, Raises $400 Million - nytimes.com",
-      "review_url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNeDlRODFkM0tGYnRSSUdHMGFBYU5YUGdzaWFEcHpDa2tuX0hTUFJ3dXhYVEVSRzBLN1lrbTlyN2M5bDY1Mm10VWtiN2hELVZlZTYtMzdocEVoVTUyUHhHTDR6eHc4ZWsyM2lpWnkzQXpmVDgwNkRjRThtSHZyWnE0Z1NxM2toRzd4SS12WEt4WU9YVWhSeUww?oc=5",
+      "review_headline": "Chai Discovery Secures $400M Series C to Propel AI-Driven Molecular Innovation - SynBioBeta",
+      "review_url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOXzV2Tl9UMzBqYjB1QlNlcW8tWVQwVEV2YVVSbjBzdngwOTRhWWR1dkJmeUUwaUJXQmhOVkNYQncxbE9lZW53NmhNVDRVQklNVlROUlJrX1NXM1hMYVRvaVlmTVVIR1Q3M3o1Q0lSR1UtWWJxeDBVWW5WRkp6NzJRVEJ0V3hSZm91elJIOXJfaXNvcHBzWlJDYlhWMjhybUp3SE9pRU1rMEhDYUFDZmc?oc=5",
       "proposed_funding": "$400M",
-      "proposed_stage": "",
-      "found_at": "2026-08-12T09:17:23Z"
+      "proposed_stage": "series-c",
+      "found_at": "2026-08-13T09:18:24Z"
     },
     {
       "name": "Profluent",
@@ -358,11 +358,11 @@
       "funding": "Public (Nasdaq: ABSI). Raised ~$200M pre-IPO.",
       "stage": "public",
       "needs_review": true,
-      "review_headline": "Absci (ABSI) Is Up 11.0% After Lilly Backs ABS-201 With US$40 Million Investment \u2013 Has The Bull Case Changed? - Yahoo Finance UK",
-      "review_url": "https://news.google.com/rss/articles/CBMiekFVX3lxTFAyQjhHdVNlVy1HSFFYdjExSnV1T3RhdTBrWEpmeG54YmstNktwcG5YazZpckQ4Q3lfLUxkUElPakVMNFl0dUJYSWNQSEljNWZlRHJoYTdWWl8zMmJ5ZkR4R0RXZWJKbms2NlhkUlhEeEM5QWVSMERiOVZn?oc=5",
+      "review_headline": "Absci (ABSI) Is Up 11.0% After Lilly Backs ABS-201 With US$40 Million Investment \u2013 Has The Bull Case Changed? - Yahoo Finance",
+      "review_url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxObnJVMFV1WHF5eVNGV2dRaE5oeUEtejBIdGtCYUI0NWlJakpsNExxdXYxdGxEYjBrMU9pMlM3SkpvNkljdnc1dXM0c1NraUhENnpRY2N6S1FDUGYzV1dudTFhRFZlczZ0bnpzZHdZVTNScm1WVGdVZDBaTGhoVGJXNU1PdU1fTVJYU2c?oc=5",
       "proposed_funding": "$40M",
       "proposed_stage": "",
-      "found_at": "2026-08-12T09:17:49Z"
+      "found_at": "2026-08-13T09:18:50Z"
     },
     {
       "name": "Aignostics",
@@ -765,11 +765,11 @@
       "funding": "$200M+ total \u2014 Series F. Valuation ~$4.5B. Backed by Benchmark, Sequoia, Thrive Capital.",
       "stage": "series-c",
       "needs_review": true,
-      "review_headline": "Benchling - 2026 Funding Rounds & List of Investors - tracxn.com",
+      "review_headline": "Benchling - 2026 Funding Rounds & List of Investors - Tracxn",
       "review_url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOUkN1ZldkNGFtcFIxSEdnSlRUWVdZS2dSRjAxTUF3ZXQ1RHY0dXEwaGFTUzBrLVAzQWk3NHRjX3NxZWx6M3VjbkFnQnFDUVAydHNhalRRMkZfUnVnZHVkVkZBY21nd1paTFR0Tkg0YnF3YUlNZS0wQlF1cENDRFhGVVdUZnV2RTlpZXNTWFlOc0FlV21QbU1ETjM3QWJUNTc0cVI5Ti1yXzZuWTFX?oc=5",
       "proposed_funding": "",
       "proposed_stage": "",
-      "found_at": "2026-08-12T09:18:59Z"
+      "found_at": "2026-08-13T09:20:00Z"
     },
     {
       "name": "Edison Scientific",
@@ -952,11 +952,11 @@
       "funding": "$2B",
       "stage": "series-a",
       "needs_review": true,
-      "review_headline": "Tempus AI buys Personalis for $1.5B; UCSF Health, Kleiner Perkins and Doerr Capital launch health AI accelerator; Candid Health raises $120M - VatorNews",
-      "review_url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxNQjEwQUNITXktWTJhMzNrblFjSk9BWHRrU3R0WW12YWx3OEhwTTFrX1RsYW91dnBxZDJ2NDBvREprbU4zM0VQS1M2N0kzbm9FOVI0RmNKb3E5Qk5vN01zeFpYTzlwaE9nNGJneTJ0dzJsNFZTUjNJeTdHTm55aS13V2hBTHpjWkNxbUxfV240eFk0eHpaQ1VEaTg1Qlc2OW5tV0ZGc0JpeDlPZUFpdmo4ektQS2dnSU9qTnpybGUxdUJ5NnFObUwtdFpXWDlvV1JfOUt3dEV6dWg5LWJEbVZnTzNGUzRKN0Jh?oc=5",
-      "proposed_funding": "$2B",
+      "review_headline": "Is Tempus AI Worth Buying as Growth Improves but Valuation Stays High? - The Globe and Mail",
+      "review_url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxNSV91b29CTGJiV05PU29QcWRwLUJkM2dYbHRGc2xVdGFrMWNVc3VqMmZ3RGtZeUprZkp4UVVNYVhMOEF6WlJ5NkhuUGZZWHVGUGo1S0pkSE9XQXgzM2hBeXh1eXNLZnlzVVdLa0NQNEVhQVB4RmFoMW1jQXJoVk8ycUx1QkNLLUl6V0dzVS1OZ1dsNUFVQUVWZnZNeGdST3FLeWpydkdYRVhhOWd0T2dDMkgxTm9uYkx3Z0J6VWU3RTlTaklsZ2FOUUdEV0RMdDJJSTdZSGRMN1hvd0pCWGF1N0M4Vy1NSXMw?oc=5",
+      "proposed_funding": "",
       "proposed_stage": "",
-      "found_at": "2026-08-09T08:53:37Z"
+      "found_at": "2026-08-13T09:20:21Z"
     },
     {
       "name": "Verily Health",
@@ -974,11 +974,11 @@
       "funding": "$65B",
       "stage": "public",
       "needs_review": true,
-      "review_headline": "Exclusive | AMD and Anthropic Sign Major Chips-and-Investment Deal - WSJ",
-      "review_url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOQ0JyTjctQkJmSjRQbWFnczFFNW5GV0M1dzNiNjZEWDJFemFFeElQdnlCcWRPRWZEMlFIWS00YmxxeXpfdHNYb2ktbXhNV1h4c05oZ1BpQ3VvbWU4YURPYU82TDJpdm04Y3pvYjEtN3U2RlpOdHdfUW5rZTBQZFFZNWJKazFwempZX0pBSklVR19TdzA0MVE?oc=5",
-      "proposed_funding": "",
+      "review_headline": "Microsoft logs $3.2B from Anthropic investment, but OpenAI was a mixed bag - TechCrunch",
+      "review_url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQekpTZld4azJTblR3SDJPX1E4YVlUaW40VC1ZcklUTTFDa1F0bmJjR3hOM0JwNEFBTnRtSFNYUWw0WS1IMVRKSE50dnBKQmt6NlpUR2xpS1QwQjd1WGhwT0NTdW9fXzlJVmFUVGIxVTFWOEpUTjNodzRRSktBR2xyTUxDTmxTQUhleHdHTHg4SlFCVmt3ZGNZMnlnWkhIRnU4RWZoVFlfM0tFZkE?oc=5",
+      "proposed_funding": "$3B",
       "proposed_stage": "",
-      "found_at": "2026-08-12T09:19:18Z"
+      "found_at": "2026-08-13T09:20:21Z"
     },
     {
       "name": "Google DeepMind",
@@ -1018,11 +1018,11 @@
       "funding": "$7B",
       "stage": "public",
       "needs_review": true,
-      "review_headline": "Former OpenAI executive Kevin Weil has sought a valuation of at least $750 million for his new AI science startup - Business Insider",
-      "review_url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNTHpvM1d0Zk04MXJwdWthcVkwempzQVF2Y2g2WnQ1RlkwXzYydFJHcnFoaWZTWnc0R3hGWWpfYUYxT2JnODRVejJGLWpIX1drajBtMmlqU2xRQmQyZHh4b3E4N3RHdV9hX1pjOHctaEVaTWZEU1FrX3V3RzBTMGE1M1RJcVRUQmYyUG9vLTRZeEEzQQ?oc=5",
-      "proposed_funding": "$750M",
+      "review_headline": "OpenAI-backed Thrive Holdings raises $2B to bring AI to the enterprise - TechCrunch",
+      "review_url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQLWloUTdtYTlOZTdjeVZ5d2tFd2wxbzJzWlJFR1R5Y3hURjVzQk1zaUE5Z2dOdFNtN0k2V0VOREpFeVFYeFhwMVFXVWxiUzJ1Zm1WbGRETFdZcXNwZll1bDBNN2pGQmZEMENSczhfZU1XcVlGY0o3UVJXWmlnVi0wS3MxNHJ5bE9ZN3VuN0dMX0h2YmhtYldrSVAtOE82RmNlUGNsN2Q0QQ?oc=5",
+      "proposed_funding": "$2B",
       "proposed_stage": "",
-      "found_at": "2026-08-12T09:19:19Z"
+      "found_at": "2026-08-13T09:20:22Z"
     },
     {
       "name": "Sakana AI",
