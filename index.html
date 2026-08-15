@@ -291,8 +291,10 @@ input[type="text"]::placeholder { color: #111827; }
 .venn-wrap { display: flex; gap: 28px; flex-wrap: wrap; align-items: flex-start; }
 .venn-svg-wrap { flex: 1 1 480px; min-width: 320px; }
 .venn-svg-wrap svg { width: 100%; height: auto; }
-.venn-region-label { font-family: 'Roobert', sans-serif; font-weight: 700; font-size: 13px; }
-.venn-co-label { font-family: 'IBM Plex Mono', monospace; font-size: 8.5px; }
+.venn-region-label { font-family: 'Roobert', sans-serif; font-weight: 700; font-size: 15px; }
+.venn-co-label { font-family: 'IBM Plex Mono', monospace; font-size: 10px; line-height: 1.3; color: #0f172a; width: 100%; height: 100%; overflow: hidden; }
+.venn-co-label ul { list-style: none; margin: 0; padding: 0; }
+.venn-co-label li { white-space: nowrap; }
 .venn-cell-note { font-size: 11px; color: var(--muted); margin-top: 10px; }
 .modcov-wrap { flex: 1 1 380px; min-width: 300px; max-height: 460px; overflow-y: auto; }
 .modcov-table { width: 100%; border-collapse: collapse; font-size: 11px; }
@@ -313,8 +315,9 @@ input[type="text"]::placeholder { color: #111827; }
 @media (max-width: 900px) { .access-tier-grid { grid-template-columns: 1fr; } }
 
 /* Model size: bar + scatter */
-.size-charts-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
-@media (max-width: 900px) { .size-charts-grid { grid-template-columns: 1fr; } }
+.size-charts-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 24px; }
+@media (max-width: 1200px) { .size-charts-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 640px) { .size-charts-grid { grid-template-columns: 1fr; } }
 .size-bar-list { display: flex; flex-direction: column; gap: 9px; margin-top: 4px; }
 .size-bar-row { display: grid; grid-template-columns: 150px 1fr 52px; align-items: center; gap: 8px; }
 .size-bar-name { font-size: 11px; color: var(--text); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
@@ -3763,46 +3766,63 @@ function renderFMModalities(){
       <td>${yn(m.cell,'#94a3b8')}</td>
     </tr>`).join('');
 
-  const group = (pred) => MODALITY_COVERAGE.filter(pred).map(m=>m.name).join(' · ');
-  const dnaOnly = group(m=>m.dna&&!m.rna&&!m.protein);
-  const rnaOnly = group(m=>m.rna&&!m.dna&&!m.protein);
-  const dnaRna = group(m=>m.dna&&m.rna&&!m.protein);
-  const core3 = group(m=>m.dna&&m.rna&&m.protein&&!m.small);
-  const core4 = group(m=>m.dna&&m.rna&&m.protein&&m.small);
-  const proteinOnly = group(m=>m.protein&&!m.dna&&!m.rna&&!m.small);
-  const proteinSmall = group(m=>m.protein&&m.small&&!m.dna&&!m.rna);
-  const smallOnly = group(m=>m.small&&!m.protein);
-  const pathOnly = group(m=>m.path);
-  const cellNote = group(m=>m.cell);
+  // Short labels for the diagram itself (the table above already has full "Company (model)" names)
+  const SHORT_NAME = {
+    'Prima Mente (Pleiades)':'Prima Mente', 'Variant Bio':'Variant Bio', 'Verge Genomics':'Verge Genomics',
+    'Arc (Evo 1/2)':'Arc (Evo 1/2)', 'Basecamp (EDEN)':'EDEN', 'Radical Numerics':'Radical Numerics', 'Chai (Chai-1)':'Chai',
+    'Boltz (Boltz-2)':'Boltz-2', 'DeepMind (AlphaFold 3)':'AlphaFold 3',
+    'Atomic AI (ATOM-1)':'Atomic AI', 'Inceptive':'Inceptive',
+    'AbCellera':'AbCellera', 'Absci (AB-GEN)':'Absci', 'Boltz (BoltzProt-1)':'BoltzProt-1', 'Earendil Labs':'Earendil',
+    'EvolutionaryScale (ESMC/ESM-3)':'EvolutionaryScale', 'Generate (Chroma)':'Generate', 'Latent Labs (Latent-X)':'Latent Labs', 'Profluent (ProGen3)':'Profluent',
+    'Iambic (NeuralPlexer2)':'Iambic', 'Isomorphic Labs':'Isomorphic',
+    'Boltz (BoltzMol-1)':'BoltzMol-1', 'Evotec (PanHunter)':'Evotec', 'Genesis (GEMS)':'Genesis', 'Insilico (Pharma.AI)':'Insilico', 'Schrödinger':'Schrödinger', 'XtalPi (ID4)':'XtalPi',
+    'Bioptimus (H-optimus)':'Bioptimus', 'Noetik':'Noetik', 'Tempus':'Tempus', 'Valo Health (Opal)':'Valo Health',
+  };
+  const group = (pred) => MODALITY_COVERAGE.filter(pred).map(m=>SHORT_NAME[m.name]||m.name);
+  const list = (names) => `<ul>${names.map(n=>`<li>${n}</li>`).join('')}</ul>`;
+  const dnaOnly = list(group(m=>m.dna&&!m.rna&&!m.protein));
+  const rnaOnly = list(group(m=>m.rna&&!m.dna&&!m.protein));
+  const dnaRna = list(group(m=>m.dna&&m.rna&&!m.protein));
+  // DNA∩RNA∩Protein core — includes the small-molecule-too models (Boltz-2, AlphaFold3) as well,
+  // since a true 4-circle overlap region isn't geometrically representable with simple circles
+  // (matches how the original slide places them near the same central cluster).
+  const core = list(group(m=>m.dna&&m.rna&&m.protein));
+  const proteinOnly = list(group(m=>m.protein&&!m.dna&&!m.rna&&!m.small));
+  const proteinSmall = list(group(m=>m.protein&&m.small&&!m.dna&&!m.rna));
+  const smallOnly = list(group(m=>m.small&&!m.protein));
+  const pathOnly = list(group(m=>m.path));
+  const cellNote = MODALITY_COVERAGE.filter(m=>m.cell).map(m=>m.name).join(' · ');
 
+  // Circle geometry + text-box placements below are numerically verified (each foreignObject box
+  // checked to sit fully inside/outside the right circles with a safety margin) — see /tmp/venn_v3.py
+  // during development. Don't hand-tweak coordinates without re-checking containment.
   document.getElementById('fmModalities').innerHTML = `
     <div class="fm-chart">
       <div class="fm-title">Bio AI model modalities</div>
       <div class="fm-sub">Which part of biology each model works on, and where coverage overlaps</div>
       <div class="venn-wrap">
         <div class="venn-svg-wrap">
-          <svg viewBox="0 0 760 500" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="230" cy="190" r="150" fill="#00b896" fill-opacity="0.10" stroke="#00b896" stroke-width="2"/>
-            <circle cx="390" cy="190" r="150" fill="#2563eb" fill-opacity="0.10" stroke="#2563eb" stroke-width="2"/>
-            <circle cx="310" cy="320" r="170" fill="#7c3aed" fill-opacity="0.08" stroke="#7c3aed" stroke-width="2"/>
-            <circle cx="470" cy="350" r="140" fill="#ea580c" fill-opacity="0.08" stroke="#ea580c" stroke-width="2"/>
-            <circle cx="680" cy="90" r="72" fill="#475569" fill-opacity="0.10" stroke="#475569" stroke-width="2"/>
+          <svg viewBox="0 0 1180 950" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="280" cy="260" r="250" fill="#00b896" fill-opacity="0.09" stroke="#00b896" stroke-width="2.5"/>
+            <circle cx="620" cy="260" r="250" fill="#2563eb" fill-opacity="0.09" stroke="#2563eb" stroke-width="2.5"/>
+            <circle cx="450" cy="570" r="340" fill="#7c3aed" fill-opacity="0.07" stroke="#7c3aed" stroke-width="2.5"/>
+            <circle cx="860" cy="690" r="220" fill="#ea580c" fill-opacity="0.08" stroke="#ea580c" stroke-width="2.5"/>
+            <circle cx="1050" cy="110" r="90" fill="#475569" fill-opacity="0.10" stroke="#475569" stroke-width="2.5"/>
 
-            <text x="110" y="90" class="venn-region-label" fill="#00b896">DNA</text>
-            <text x="440" y="90" class="venn-region-label" fill="#2563eb">RNA</text>
-            <text x="185" y="440" class="venn-region-label" fill="#7c3aed">Protein</text>
-            <text x="560" y="460" class="venn-region-label" fill="#ea580c">Small molecule</text>
-            <text x="645" y="45" class="venn-region-label" fill="#475569">Pathology</text>
+            <text x="140" y="70" class="venn-region-label" fill="#00b896">DNA</text>
+            <text x="700" y="70" class="venn-region-label" fill="#2563eb">RNA</text>
+            <text x="290" y="580" class="venn-region-label" fill="#7c3aed">Protein</text>
+            <text x="800" y="585" class="venn-region-label" fill="#ea580c">Small molecule</text>
+            <text x="990" y="45" class="venn-region-label" fill="#475569">Pathology</text>
 
-            <foreignObject x="60" y="105" width="150" height="90"><div xmlns="http://www.w3.org/1999/xhtml" class="venn-co-label">${dnaOnly}</div></foreignObject>
-            <foreignObject x="410" y="105" width="150" height="70"><div xmlns="http://www.w3.org/1999/xhtml" class="venn-co-label">${rnaOnly}</div></foreignObject>
-            <foreignObject x="250" y="105" width="140" height="50"><div xmlns="http://www.w3.org/1999/xhtml" class="venn-co-label">${dnaRna}</div></foreignObject>
-            <foreignObject x="235" y="220" width="150" height="70"><div xmlns="http://www.w3.org/1999/xhtml" class="venn-co-label">${core3}</div></foreignObject>
-            <foreignObject x="345" y="300" width="150" height="60"><div xmlns="http://www.w3.org/1999/xhtml" class="venn-co-label">${core4}</div></foreignObject>
-            <foreignObject x="120" y="330" width="160" height="110"><div xmlns="http://www.w3.org/1999/xhtml" class="venn-co-label">${proteinOnly}</div></foreignObject>
-            <foreignObject x="380" y="380" width="150" height="50"><div xmlns="http://www.w3.org/1999/xhtml" class="venn-co-label">${proteinSmall}</div></foreignObject>
-            <foreignObject x="500" y="420" width="160" height="80"><div xmlns="http://www.w3.org/1999/xhtml" class="venn-co-label">${smallOnly}</div></foreignObject>
-            <foreignObject x="615" y="60" width="140" height="90"><div xmlns="http://www.w3.org/1999/xhtml" class="venn-co-label">${pathOnly}</div></foreignObject>
+            <foreignObject x="160" y="90" width="130" height="90"><div xmlns="http://www.w3.org/1999/xhtml" class="venn-co-label">${dnaOnly}</div></foreignObject>
+            <foreignObject x="640" y="90" width="130" height="90"><div xmlns="http://www.w3.org/1999/xhtml" class="venn-co-label">${rnaOnly}</div></foreignObject>
+            <foreignObject x="405" y="155" width="90" height="40"><div xmlns="http://www.w3.org/1999/xhtml" class="venn-co-label">${dnaRna}</div></foreignObject>
+            <foreignObject x="400" y="255" width="100" height="75"><div xmlns="http://www.w3.org/1999/xhtml" class="venn-co-label">${core}</div></foreignObject>
+            <foreignObject x="280" y="600" width="190" height="170"><div xmlns="http://www.w3.org/1999/xhtml" class="venn-co-label">${proteinOnly}</div></foreignObject>
+            <foreignObject x="697" y="575" width="65" height="55"><div xmlns="http://www.w3.org/1999/xhtml" class="venn-co-label">${proteinSmall}</div></foreignObject>
+            <foreignObject x="850" y="610" width="160" height="130"><div xmlns="http://www.w3.org/1999/xhtml" class="venn-co-label">${smallOnly}</div></foreignObject>
+            <foreignObject x="985" y="65" width="130" height="90"><div xmlns="http://www.w3.org/1999/xhtml" class="venn-co-label">${pathOnly}</div></foreignObject>
           </svg>
           <div class="venn-cell-note"><strong>Cell modality</strong> (not drawn as its own circle — only 2 models): ${cellNote}</div>
         </div>
@@ -3890,6 +3910,17 @@ function renderFMSizeCharts(){
       <div class="size-bar-val">${d.params}B</div>
     </div>`).join('');
 
+  // Training data (tokens) — only the models with a disclosed figure (same set as the scatter below)
+  const tokenData = SIZE_SCATTER_DATA.map(d=>({name:d.name, tokens:d.tokens, highlight:d.type==='eden'}));
+  const maxTokens = Math.max(...tokenData.map(d=>d.tokens));
+  const tokenSorted = [...tokenData].sort((a,b)=>a.tokens-b.tokens);
+  const tokenBarRows = tokenSorted.map(d=>`
+    <div class="size-bar-row">
+      <div class="size-bar-name${d.highlight?' highlight':''}">${d.name}</div>
+      <div class="size-bar-track"><div class="size-bar-fill${d.highlight?' highlight':''}" style="width:${Math.max(2,d.tokens/maxTokens*100)}%"></div></div>
+      <div class="size-bar-val">${d.tokens}T</div>
+    </div>`).join('');
+
   const W=420, H=320, PAD_L=44, PAD_B=32, PAD_T=14, PAD_R=14;
   const xMin=5, xMax=110, yMin=0.2, yMax=13;
   const lx = v => PAD_L + (Math.log10(v)-Math.log10(xMin))/(Math.log10(xMax)-Math.log10(xMin)) * (W-PAD_L-PAD_R);
@@ -3915,8 +3946,12 @@ function renderFMSizeCharts(){
   document.getElementById('fmSizeCharts').innerHTML = `
     <div class="fm-chart">
       <div class="fm-title">Bio AI model size</div>
-      <div class="fm-sub">Parameters, and parameters vs. training data scale. Data-scale/benchmark comparisons for the rest of the field aren't available yet, so this is params-only for now.</div>
+      <div class="fm-sub">Parameters, training data scale, and parameters vs. training data together. Benchmark comparisons for the rest of the field aren't available yet, so training-data figures below only cover the models with a disclosed number.</div>
       <div class="size-charts-grid">
+        <div>
+          <div style="font-size:11px;color:var(--muted);margin-bottom:8px">Training data (trillions of tokens) — disclosed models only</div>
+          <div class="size-bar-list">${tokenBarRows}</div>
+        </div>
         <div>
           <div style="font-size:11px;color:var(--muted);margin-bottom:8px">Parameters (billions)</div>
           <div class="size-bar-list">${barRows}</div>
