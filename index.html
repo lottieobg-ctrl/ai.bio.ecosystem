@@ -144,22 +144,29 @@ input[type="text"]::placeholder { color: #111827; }
 .cat-automation .chip { background: var(--cyan-dim); border-color: var(--cyan-border); color: var(--cyan-text); }
 .cat-automation .chip:hover { background: rgba(8,145,178,0.1); border-color: var(--cyan); color: var(--cyan); transform: translateY(-1px); box-shadow: 0 2px 8px rgba(8,145,178,0.1); }
 
-/* INTEL TAB */
-.intel-tab-btn { color: #d97706 !important; border-color: #fde68a !important; background: #fffbeb !important; }
-.intel-tab-btn.active { color: #ffffff !important; background: #d97706 !important; border-color: #d97706 !important; box-shadow: 0 2px 8px rgba(217,119,6,0.3) !important; }
-#panel-intel { flex: 1; }
-#panel-intel.active { display: flex; flex-direction: column; }
-.intel-gate { flex: 1; display: flex; align-items: center; justify-content: center; padding: 60px 48px; }
+/* SITE GATE (whole-app password) */
+#appRoot { display: flex; flex-direction: column; flex: 1; min-height: 0; }
+.site-gate { flex: 1; display: flex; align-items: center; justify-content: center; padding: 60px 48px; background: var(--bg); }
+.site-gate-box { background: var(--bg2); border: 1px solid var(--border); border-radius: 16px; padding: 40px 44px; max-width: 380px; width: 100%; text-align: center; box-shadow: var(--shadow-md); }
+.site-gate-icon { font-size: 28px; margin-bottom: 16px; opacity: 0.6; }
+.site-gate-title { font-family: 'Roobert', sans-serif; font-size: 22px; font-weight: 800; color: var(--text); margin-bottom: 8px; }
+.site-gate-sub { font-size: 12px; color: var(--muted); margin-bottom: 28px; line-height: 1.6; }
+.site-pw-input { width: 100%; background: var(--bg); border: 1px solid var(--border); color: var(--text); padding: 10px 14px; font-family: 'IBM Plex Mono', monospace; font-size: 13px; border-radius: 7px; outline: none; margin-bottom: 12px; text-align: center; letter-spacing: 0.08em; transition: border-color 0.2s; }
+.site-pw-input:focus { border-color: var(--teal); box-shadow: 0 0 0 3px var(--teal-dim); }
+.site-pw-btn { width: 100%; background: var(--teal); border: 1px solid var(--teal); color: #ffffff; padding: 10px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; border-radius: 7px; cursor: pointer; transition: all 0.15s; }
+.site-pw-btn:hover { background: #009e83; border-color: #009e83; }
+.site-pw-err { font-size: 12px; color: #dc2626; margin-top: 10px; min-height: 16px; }
 
-.intel-gate-box { background: var(--bg2); border: 1px solid var(--border); border-radius: 16px; padding: 40px 44px; max-width: 380px; width: 100%; text-align: center; box-shadow: var(--shadow-md); }
-.intel-gate-icon { font-size: 28px; margin-bottom: 16px; opacity: 0.5; }
-.intel-gate-title { font-family: 'Roobert', sans-serif; font-size: 22px; font-weight: 800; color: #d97706; margin-bottom: 8px; }
-.intel-gate-sub { font-size: 12px; color: var(--muted); margin-bottom: 28px; line-height: 1.6; }
-.intel-pw-input { width: 100%; background: var(--bg); border: 1px solid var(--border); color: var(--text); padding: 10px 14px; font-family: 'IBM Plex Mono', monospace; font-size: 13px; border-radius: 7px; outline: none; margin-bottom: 12px; text-align: center; letter-spacing: 0.08em; transition: border-color 0.2s; }
-.intel-pw-input:focus { border-color: #d97706; box-shadow: 0 0 0 3px rgba(217,119,6,0.1); }
-.intel-pw-btn { width: 100%; background: #d97706; border: 1px solid #d97706; color: #ffffff; padding: 10px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; border-radius: 7px; cursor: pointer; transition: all 0.15s; }
-.intel-pw-btn:hover { background: #b45309; border-color: #b45309; }
-.intel-pw-err { font-size: 12px; color: #dc2626; margin-top: 10px; min-height: 16px; }
+/* SUB-TABS (secondary nav row under a parent tab) */
+.subtab-bar { display: none; padding: 10px 48px; gap: 6px; border-bottom: 1px solid var(--border); background: var(--bg); flex-shrink: 0; }
+.subtab-bar.visible { display: flex; }
+.subtab-btn { padding: 6px 16px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 600; color: var(--muted); background: var(--bg2); border: 1px solid var(--border); cursor: pointer; border-radius: 6px; letter-spacing: 0.06em; text-transform: uppercase; transition: all 0.15s; }
+.subtab-btn:hover { color: var(--text); background: #e8edf5; border-color: #cbd5e1; }
+.subtab-btn.active { color: #ffffff; background: var(--teal); border-color: var(--teal); font-weight: 700; }
+
+/* Content chrome (reused by Foundation Model Comparison + Commercial Comparisons panels) */
+#panel-fm, #panel-pipeline, #panel-pharma, #panel-profiles { flex: 1; }
+#panel-fm.active, #panel-pipeline.active, #panel-pharma.active, #panel-profiles.active { display: flex; flex-direction: column; }
 .intel-content { padding: 36px 48px 80px; }
 .intel-header { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 32px; flex-wrap: wrap; gap: 16px; }
 .intel-header-title { font-family: 'Roobert', sans-serif; font-size: 28px; font-weight: 800; color: var(--text); letter-spacing: -0.02em; }
@@ -279,6 +286,106 @@ input[type="text"]::placeholder { color: #111827; }
 .fm-table th[data-sort]:hover { color: var(--text); }
 .fm-sort-arrow { font-size: 11px; color: var(--muted); }
 @media (max-width: 720px) { .pipeline-stage-row th:first-child { min-width: 90px; } .pipeline-company-row td:first-child { font-size: 11px; } }
+
+/* Modalities venn + coverage table */
+.venn-wrap { display: flex; gap: 28px; flex-wrap: wrap; align-items: flex-start; }
+.venn-svg-wrap { flex: 1 1 480px; min-width: 320px; }
+.venn-svg-wrap svg { width: 100%; height: auto; }
+.venn-region-label { font-family: 'Roobert', sans-serif; font-weight: 700; font-size: 13px; }
+.venn-co-label { font-family: 'IBM Plex Mono', monospace; font-size: 8.5px; }
+.venn-cell-note { font-size: 11px; color: var(--muted); margin-top: 10px; }
+.modcov-wrap { flex: 1 1 380px; min-width: 300px; max-height: 460px; overflow-y: auto; }
+.modcov-table { width: 100%; border-collapse: collapse; font-size: 11px; }
+.modcov-table th { position: sticky; top: 0; background: var(--bg2); text-align: center; font-size: 9px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); font-weight: 600; padding: 6px 4px; border-bottom: 2px solid var(--border); }
+.modcov-table th:first-child { text-align: left; }
+.modcov-table td { padding: 5px 4px; border-top: 1px solid #f1f5f9; text-align: center; }
+.modcov-table td:first-child { text-align: left; white-space: nowrap; color: var(--text); font-weight: 500; }
+.modcov-dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
+
+/* Accessibility tiers */
+.access-tier-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.access-tier-card { border-radius: 10px; overflow: hidden; border: 1px solid var(--border); }
+.access-tier-hdr { padding: 10px 16px; font-family: 'Roobert', sans-serif; font-weight: 700; font-size: 13px; color: #ffffff; }
+.access-tier-body { background: var(--bg2); padding: 14px 16px; }
+.access-tier-body ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.access-tier-body li { font-size: 11.5px; line-height: 1.55; color: var(--text); }
+.access-tier-body li strong { color: var(--text); }
+@media (max-width: 900px) { .access-tier-grid { grid-template-columns: 1fr; } }
+
+/* Model size: bar + scatter */
+.size-charts-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+@media (max-width: 900px) { .size-charts-grid { grid-template-columns: 1fr; } }
+.size-bar-list { display: flex; flex-direction: column; gap: 9px; margin-top: 4px; }
+.size-bar-row { display: grid; grid-template-columns: 150px 1fr 52px; align-items: center; gap: 8px; }
+.size-bar-name { font-size: 11px; color: var(--text); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.size-bar-name.highlight { color: #d97706; font-weight: 700; }
+.size-bar-track { background: var(--bg); border-radius: 4px; height: 12px; position: relative; }
+.size-bar-fill { height: 100%; border-radius: 4px; background: rgba(0,184,150,0.55); }
+.size-bar-fill.highlight { background: #d97706; }
+.size-bar-val { font-size: 10.5px; color: var(--muted); text-align: right; white-space: nowrap; }
+.scatter-wrap svg { width: 100%; height: auto; }
+.scatter-legend { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 10px; }
+.scatter-legend-item { display: flex; align-items: center; gap: 6px; font-size: 11px; color: var(--muted); }
+.scatter-legend-swatch { width: 9px; height: 9px; flex-shrink: 0; }
+
+/* Frontier AI integrations + API pricing tables */
+.wide-table-scroll { overflow-x: auto; }
+.frontier-table, .api-table { border-collapse: collapse; font-size: 11.5px; width: 100%; min-width: 760px; }
+.frontier-table th, .api-table th { text-align: left; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); font-weight: 700; padding: 8px 12px; border-bottom: 2px solid var(--border); white-space: nowrap; vertical-align: bottom; }
+.frontier-table td, .api-table td { padding: 10px 12px; border-top: 1px solid #f1f5f9; vertical-align: top; line-height: 1.5; }
+.frontier-table tr:hover td, .api-table tr:hover td { background: #fafbfd; }
+.ft-lab { font-weight: 700; color: var(--text); white-space: nowrap; }
+.ft-lab-sub { font-size: 10px; color: var(--muted); font-weight: 400; }
+.ft-entry { margin-bottom: 8px; }
+.ft-entry:last-child { margin-bottom: 0; }
+.ft-entry-name { font-weight: 600; color: var(--text); }
+.ft-entry-note { color: var(--muted); font-size: 10.5px; }
+.pill { display: inline-block; font-size: 8.5px; font-weight: 700; letter-spacing: 0.04em; padding: 1px 6px; border-radius: 3px; margin-right: 5px; text-transform: uppercase; vertical-align: middle; }
+.pill-mcp { background: rgba(0,184,150,0.14); color: #007a64; }
+.pill-skill { background: rgba(37,99,235,0.1); color: #2563eb; }
+.pill-apicli { background: rgba(124,58,237,0.1); color: #7c3aed; }
+.pill-hosted { background: rgba(234,88,12,0.1); color: #ea580c; }
+.pill-buildson { background: rgba(107,114,128,0.12); color: #4b5563; }
+.pill-metered { background: rgba(0,184,150,0.14); color: #007a64; }
+.pill-free { background: rgba(37,99,235,0.1); color: #2563eb; }
+.pill-flatfee { background: rgba(124,58,237,0.1); color: #7c3aed; }
+.pill-undisclosed { background: rgba(107,114,128,0.12); color: #4b5563; }
+.pill-internal { background: rgba(217,119,6,0.1); color: #b45309; }
+.api-notes { color: var(--muted); font-size: 10.5px; max-width: 260px; }
+
+/* Business Models (Commercial Comparisons) */
+.bizmodel-cat-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-bottom: 10px; }
+@media (max-width: 1000px) { .bizmodel-cat-grid { grid-template-columns: repeat(2, 1fr); } }
+.bizmodel-cat-card { background: rgba(124,58,237,0.06); border: 1px solid rgba(124,58,237,0.2); border-radius: 10px; padding: 14px 16px; }
+.bizmodel-cat-title { font-family: 'Roobert', sans-serif; font-weight: 700; font-size: 13px; color: #7c3aed; margin-bottom: 8px; }
+.bizmodel-cat-desc { font-size: 11px; color: var(--text); line-height: 1.55; margin-bottom: 8px; }
+.bizmodel-cat-examples { font-size: 10.5px; color: var(--muted); line-height: 1.6; }
+.bizmodel-quote { font-size: 12px; font-style: italic; color: var(--muted); text-align: center; padding: 14px 24px; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin: 18px 0 28px; line-height: 1.6; }
+.bizmodel-detail-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin-bottom: 28px; }
+.bizmodel-co-card { background: var(--bg2); border: 1px solid var(--border); border-radius: 10px; padding: 14px 16px; box-shadow: var(--shadow); }
+.bizmodel-co-name { font-family: 'Roobert', sans-serif; font-weight: 700; font-size: 13px; color: var(--text); }
+.bizmodel-co-raised { font-size: 10px; color: var(--muted); margin: 2px 0 8px; }
+.bizmodel-co-body { font-size: 11px; color: var(--text); line-height: 1.6; }
+.bizmodel-co-body strong { color: var(--text); }
+.bizmodel-still { background: rgba(107,114,128,0.06); border: 1px dashed rgba(107,114,128,0.3); border-radius: 10px; padding: 14px 16px; font-size: 11.5px; color: var(--muted); line-height: 1.6; }
+
+/* Pharma Deals: network + matrix */
+.deal-legend { display: flex; gap: 20px; flex-wrap: wrap; margin-bottom: 16px; }
+.deal-legend-item { display: flex; align-items: center; gap: 7px; font-size: 11px; color: var(--muted); }
+.deal-legend-line { width: 20px; height: 3px; border-radius: 2px; }
+.deal-net-wrap svg { width: 100%; height: auto; }
+.deal-net-label { font-family: 'IBM Plex Mono', monospace; font-size: 9.5px; fill: var(--text); }
+.deal-matrix-scroll { overflow-x: auto; margin-top: 8px; }
+.deal-matrix-table { border-collapse: collapse; font-size: 11px; width: 100%; min-width: 900px; }
+.deal-matrix-table th { text-align: left; font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); font-weight: 700; padding: 8px 12px; border-bottom: 2px solid var(--border); white-space: nowrap; }
+.deal-matrix-table td { padding: 9px 12px; border-top: 1px solid #f1f5f9; vertical-align: top; line-height: 1.5; }
+.deal-matrix-table tr:hover td { background: #fafbfd; }
+.dm-pharma { font-weight: 700; color: var(--text); white-space: nowrap; }
+.dm-entry { margin-bottom: 6px; }
+.dm-entry:last-child { margin-bottom: 0; }
+.dm-co { font-weight: 600; }
+.dm-val { color: var(--muted); font-size: 10.5px; }
+.dm-empty { color: var(--muted); font-style: italic; }
 
 /* Investor sub-headings */
 .investor-subhead { width: 100%; font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); padding: 14px 0 6px; border-bottom: 1px solid var(--border); margin-bottom: 4px; font-weight: 700; flex-basis: 100%; }
@@ -514,6 +621,20 @@ footer { padding: 16px 48px; border-top: 1px solid var(--border); display: flex;
 </head>
 <body>
 
+<!-- SITE GATE -->
+<div class="site-gate" id="siteGate">
+  <div class="site-gate-box">
+    <div class="site-gate-icon">⬡</div>
+    <div class="site-gate-title">AI × Biology Ecosystem</div>
+    <div class="site-gate-sub">Basecamp Research — internal use only</div>
+    <input class="site-pw-input" id="sitePwInput" type="password" placeholder="Password" onkeydown="if(event.key==='Enter')checkSitePw()">
+    <button class="site-pw-btn" onclick="checkSitePw()">Access</button>
+    <div class="site-pw-err" id="sitePwErr"></div>
+  </div>
+</div>
+
+<div id="appRoot" style="display:none">
+
 <div class="header">
   <h1>AI <span class="x">×</span> Biology<br>Ecosystem</h1>
   <div class="header-meta">
@@ -525,8 +646,16 @@ footer { padding: 16px 48px; border-top: 1px solid var(--border); display: flex;
 
 
 <div class="tab-bar">
+  <button class="tab-btn active" data-parent="aibiomap" onclick="switchTab('directory')">⊞ &nbsp;AI BIO Map</button>
+  <button class="tab-btn" data-parent="fmcompare" onclick="switchTab('fm')">⬡ &nbsp;Foundation Model Comparison</button>
+  <button class="tab-btn" data-parent="commercial" onclick="switchTab('pipeline')">◈ &nbsp;Commercial Comparisons</button>
+  <button class="tab-btn" data-parent="news" onclick="switchTab('news')">◎ &nbsp;News</button>
+  <button class="tab-btn" data-parent="events" onclick="switchTab('events')">◈ &nbsp;Events</button>
+</div>
+
+<div class="subtab-bar visible" id="subtabBar-aibiomap">
   <div class="tab-with-dd">
-    <button class="tab-btn active" onclick="switchTab('directory',this)">⊞ &nbsp;Directory</button>
+    <button class="subtab-btn active" data-tab="directory" onclick="switchTab('directory')">⊞ &nbsp;Directory</button>
     <div class="tab-dd">
       <div class="tab-dd-inner">
         <div class="tab-dd-item" onclick="jumpToCategory(null)"><div class="tab-dd-dot" style="background:#64748b"></div>All categories</div>
@@ -542,10 +671,14 @@ footer { padding: 16px 48px; border-top: 1px solid var(--border); display: flex;
       </div>
     </div>
   </div>
-  <button class="tab-btn" onclick="switchTab('map',this)">◉ &nbsp;World Map</button>
-  <button class="tab-btn" onclick="switchTab('news',this)">◎ &nbsp;News</button>
-  <button class="tab-btn" onclick="switchTab('events',this)">◈ &nbsp;Events</button>
-  <button class="tab-btn intel-tab-btn" onclick="switchTab('intel',this)">⬡ &nbsp;Intel</button>
+  <button class="subtab-btn" data-tab="map" onclick="switchTab('map')">◉ &nbsp;Map</button>
+</div>
+
+<div class="subtab-bar" id="subtabBar-commercial">
+  <button class="subtab-btn active" data-tab="pipeline" onclick="switchTab('pipeline')">Pipeline &amp; Clinical Development</button>
+  <button class="subtab-btn" data-tab="pharma" onclick="switchTab('pharma')">Pharma Deals</button>
+  <button class="subtab-btn" data-tab="profiles" onclick="switchTab('profiles')">Competitor Profiles</button>
+  <button class="subtab-btn" data-tab="bizmodels" onclick="switchTab('bizmodels')">Business Models</button>
 </div>
 
 <!-- DIRECTORY -->
@@ -924,45 +1057,105 @@ footer { padding: 16px 48px; border-top: 1px solid var(--border); display: flex;
   </div>
 </div>
 
-<div class="panel" id="panel-intel">
-  <div class="intel-gate" id="intelGate">
-    <div class="intel-gate-box">
-      <div class="intel-gate-icon">⬡</div>
-      <div class="intel-gate-title">Competitive Intel</div>
-      <div class="intel-gate-sub">Internal use only — Basecamp Research team</div>
-      <input class="intel-pw-input" id="intelPwInput" type="password" placeholder="Password" onkeydown="if(event.key==='Enter')checkIntelPw()">
-      <button class="intel-pw-btn" onclick="checkIntelPw()">Access</button>
-      <div class="intel-pw-err" id="intelPwErr"></div>
-    </div>
-  </div>
-  <div class="intel-content" id="intelContent" style="display:none">
+<!-- FOUNDATION MODEL COMPARISON -->
+<div class="panel" id="panel-fm">
+  <div class="intel-content">
     <div class="intel-header">
       <div>
-        <div class="intel-header-title">Competitive Intelligence</div>
-        <div class="intel-header-sub">Basecamp Research — internal only</div>
+        <div class="intel-header-title">Foundation Model Comparison</div>
+        <div class="intel-header-sub">Models, training data &amp; benchmarks across the field</div>
       </div>
-      <div class="intel-sel" id="intelSel"></div>
+      <div class="intel-sel" id="fmSel"></div>
     </div>
 
     <!-- View: Overview (default) -->
-    <div id="intelViewOverview">
-      <div id="pipelineChart"></div>
+    <div id="fmViewOverview">
       <div id="fmChart"></div>
+      <div id="fmModalities"></div>
+      <div id="fmAccessibility"></div>
+      <div id="fmSizeCharts"></div>
+      <div id="fmIntegrations"></div>
+      <div id="fmApiPricing"></div>
     </div>
 
     <!-- View: All-competitors matrix -->
-    <div id="intelViewAll" style="display:none">
-      <button class="intel-back-btn" onclick="intelShowOverview()">← Back to overview</button>
-      <div id="intelAllGrid"></div>
+    <div id="fmViewAll" style="display:none">
+      <button class="intel-back-btn" onclick="intelShowOverview('fm')">← Back to overview</button>
+      <div id="fmAllGrid"></div>
     </div>
 
     <!-- View: Competitor comparison (shown when a competitor is selected) -->
-    <div id="intelViewCompare" style="display:none">
-      <button class="intel-back-btn" onclick="intelShowOverview()">← Back to overview</button>
-      <div class="intel-compare-header" id="intelCompareHeader"></div>
-      <div class="intel-takeaways" id="intelTakeaways"></div>
-      <div id="intelGrid"></div>
+    <div id="fmViewCompare" style="display:none">
+      <button class="intel-back-btn" onclick="intelShowOverview('fm')">← Back to overview</button>
+      <div class="intel-compare-header" id="fmCompareHeader"></div>
+      <div class="intel-takeaways" id="fmTakeaways"></div>
+      <div id="fmGrid"></div>
     </div>
+  </div>
+</div>
+
+<!-- COMMERCIAL: PIPELINE & CLINICAL DEVELOPMENT -->
+<div class="panel" id="panel-pipeline">
+  <div class="intel-content">
+    <div id="pipelineChart"></div>
+  </div>
+</div>
+
+<!-- COMMERCIAL: PHARMA DEALS -->
+<div class="panel" id="panel-pharma">
+  <div class="intel-content">
+    <div class="intel-header">
+      <div>
+        <div class="intel-header-title">Pharma Deals</div>
+        <div class="intel-header-sub">Which AI-bio companies are partnering with which pharma, and how</div>
+      </div>
+    </div>
+    <div id="pharmaDealsRoot"></div>
+  </div>
+</div>
+
+<!-- COMMERCIAL: COMPETITOR PROFILES -->
+<div class="panel" id="panel-profiles">
+  <div class="intel-content">
+    <div class="intel-header">
+      <div>
+        <div class="intel-header-title">Competitor Profiles</div>
+        <div class="intel-header-sub">Basecamp Research — funding, pipeline &amp; monetisation vs tracked competitors</div>
+      </div>
+      <div class="intel-sel" id="profilesSel"></div>
+    </div>
+
+    <!-- View: Overview (default) -->
+    <div id="profilesViewOverview">
+      <p style="font-size:13px;color:var(--muted)">Select a competitor above to compare against Basecamp Research, or view all competitors at once.</p>
+    </div>
+
+    <!-- View: All-competitors matrix -->
+    <div id="profilesViewAll" style="display:none">
+      <button class="intel-back-btn" onclick="intelShowOverview('profiles')">← Back to overview</button>
+      <div id="profilesAllGrid"></div>
+    </div>
+
+    <!-- View: Competitor comparison (shown when a competitor is selected) -->
+    <div id="profilesViewCompare" style="display:none">
+      <button class="intel-back-btn" onclick="intelShowOverview('profiles')">← Back to overview</button>
+      <div class="intel-compare-header" id="profilesCompareHeader"></div>
+      <div class="intel-takeaways" id="profilesTakeaways"></div>
+      <div id="profilesGrid"></div>
+    </div>
+  </div>
+</div>
+
+<!-- COMMERCIAL: BUSINESS MODELS -->
+<div class="panel" id="panel-bizmodels">
+  <div class="intel-content">
+    <div class="intel-header">
+      <div>
+        <div class="intel-header-title">Business Models</div>
+        <div class="intel-header-sub">How AI-bio companies are turning models into revenue</div>
+      </div>
+    </div>
+    <div id="bizmodelsRoot"></div>
   </div>
 </div>
 
@@ -980,6 +1173,8 @@ footer { padding: 16px 48px; border-top: 1px solid var(--border); display: flex;
     </a>
   </div>
 </footer>
+
+</div> <!-- /appRoot -->
 
 <!-- REVIEW NOTICE -->
 <div class="review-notice" id="reviewNotice">
@@ -1902,10 +2097,7 @@ fetch('./data/companies.json')
 
 // ── DIRECTORY DROPDOWN ──
 function jumpToCategory(cat){
-  document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));
-  document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
-  document.getElementById('panel-directory').classList.add('active');
-  document.querySelector('.tab-with-dd .tab-btn').classList.add('active');
+  switchTab('directory');
   activeCat = cat;
   document.querySelectorAll('.leg').forEach(l=>l.classList.toggle('active-filter', l.dataset.filter===cat));
   applyFilters();
@@ -1913,15 +2105,42 @@ function jumpToCategory(cat){
 }
 
 // ── TABS ──
+// Parent tab each panel belongs to, and which parents have a visible sub-tab row.
+const TAB_PARENT = { directory:'aibiomap', map:'aibiomap', fm:'fmcompare', pipeline:'commercial', pharma:'commercial', profiles:'commercial', bizmodels:'commercial', news:'news', events:'events' };
+
 let mapReady=false;
-function switchTab(tab,btn){
+let _pharmaRendered=false;
+let _bizmodelsRendered=false;
+function switchTab(tab){
   document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));
-  document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
   document.getElementById('panel-'+tab).classList.add('active');
-  btn.classList.add('active');
+
   if(tab==='map'&&!mapReady){ buildMap(); mapReady=true; }
   if(tab==='news'){ loadNews(); }
   if(tab==='events'&&!_eventsLoaded){ loadEvents(); _eventsLoaded=true; }
+  if(tab==='pipeline'){ renderPipelineChart(); }
+  if(tab==='fm'){ if(!document.getElementById('fmSel').children.length) _buildIntelSel('fm'); intelShowOverview('fm'); }
+  if(tab==='profiles'){ if(!document.getElementById('profilesSel').children.length) _buildIntelSel('profiles'); intelShowOverview('profiles'); }
+  if(tab==='pharma'&&!_pharmaRendered){ renderPharmaDeals(); _pharmaRendered=true; }
+  if(tab==='bizmodels'&&!_bizmodelsRendered){ renderBusinessModels(); _bizmodelsRendered=true; }
+
+  // Parent tab-bar active state
+  const parent = TAB_PARENT[tab];
+  document.querySelectorAll('.tab-bar > .tab-btn').forEach(b=>b.classList.toggle('active', b.dataset.parent===parent));
+
+  // Sub-tab bar visibility + active state
+  document.querySelectorAll('.subtab-bar').forEach(sb=>sb.classList.remove('visible'));
+  const bar = document.getElementById('subtabBar-'+parent);
+  if(bar){
+    bar.classList.add('visible');
+    bar.querySelectorAll('[data-tab]').forEach(sb=>sb.classList.toggle('active', sb.dataset.tab===tab));
+  }
+}
+
+// Jump straight to a competitor's profile (used by pipeline chart dots/links)
+function goToProfile(id){
+  switchTab('profiles');
+  renderIntelCompare('profiles', id);
 }
 
 // ── LEAFLET MAP ──
@@ -2529,25 +2748,22 @@ function renderEvents(filter){
   content.innerHTML = html;
 }
 
-// ── INTEL TAB ──
-const _INTEL_PW = 'beyondknownbiology';
-let _intelUnlocked = sessionStorage.getItem('intelUnlocked') === '1';
-let _intelActive = 'chai';
-
-function checkIntelPw(){
-  const val = document.getElementById('intelPwInput').value;
-  if(val === _INTEL_PW){
-    _intelUnlocked = true;
-    sessionStorage.setItem('intelUnlocked','1');
-    document.getElementById('intelGate').style.display = 'none';
-    document.getElementById('intelContent').style.display = 'block';
-    // Build selector buttons so they're ready, then show overview
-    _buildIntelSel();
-    intelShowOverview();
+// ── SITE-WIDE GATE ──
+const _SITE_PW = 'beyondknownbiology';
+function checkSitePw(){
+  const val = document.getElementById('sitePwInput').value;
+  if(val === _SITE_PW){
+    sessionStorage.setItem('siteUnlocked','1');
+    document.getElementById('siteGate').style.display = 'none';
+    document.getElementById('appRoot').style.display = '';
   } else {
-    document.getElementById('intelPwErr').textContent = 'Incorrect password.';
-    document.getElementById('intelPwInput').value = '';
+    document.getElementById('sitePwErr').textContent = 'Incorrect password.';
+    document.getElementById('sitePwInput').value = '';
   }
+}
+if(sessionStorage.getItem('siteUnlocked') === '1'){
+  document.getElementById('siteGate').style.display = 'none';
+  document.getElementById('appRoot').style.display = '';
 }
 
 const BASECAMP = {
@@ -2643,14 +2859,14 @@ function renderPipelineChart() {
       if (i !== co.stage) return '<td></td>';
       const color = co.highlight ? PIPELINE_HIGHLIGHT_COLOR : PIPELINE_COLORS[co.stage];
       const cls = co.highlight ? ' highlight' : '';
-      const clickAttr = co.intelId ? ` onclick="renderIntel('${co.intelId}')"` : '';
+      const clickAttr = co.intelId ? ` onclick="goToProfile('${co.intelId}')"` : '';
       const cursor = co.intelId ? ';cursor:pointer' : '';
       const tooltip = co.intelId ? `${co.name}: ${co.note} — click to compare` : `${co.name}: ${co.note}`;
       return `<td><div class="pipeline-dot${cls}"${clickAttr} style="background:${color}${cursor}" title="${tooltip}"></div></td>`;
     }).join('');
     const nameCls = co.highlight ? ' highlight' : '';
     const nameContent = co.intelId
-      ? `<span class="pipeline-name-link" onclick="renderIntel('${co.intelId}')" title="Compare with Basecamp Research">${co.name}</span>`
+      ? `<span class="pipeline-name-link" onclick="goToProfile('${co.intelId}')" title="Compare with Basecamp Research">${co.name}</span>`
       : co.name;
     return `<tr class="pipeline-company-row">
       <td class="${nameCls}">${nameContent}</td>${cells}
@@ -2869,16 +3085,16 @@ const INTEL_COMPETITORS = {
     techPartners:'OpenAI (investor)',
     monetisation:'<strong>SaaS / API</strong><br>Commercial API access for Chai-2 antibody design · Chai-1 open-source for community adoption · Internal therapeutic pipeline (future revenue) · Undisclosed enterprise licensing',
     takeaways:{
-      br:['Vastly larger & more novel training data — 9.7T tokens vs undisclosed but likely smaller',
-          'Older, more operationally proven (2019 vs 2023)',
-          'Cross-modality: proteins, nucleic acids, enzymes, agriculture in one model',
-          'Unique biodiversity moat — data Chai cannot replicate',
-          'NVIDIA, PacBio & Anthropic as strategic tech stack partners'],
-      comp:['4× more capital raised ($230M vs $60M) — longer runway',
-            'Unicorn valuation ($1.3B) signals strong market conviction',
-            'Wet lab for rapid in-house design-test cycles',
-            'Chai-1 openly benchmarked & rivals AlphaFold3 — high credibility',
-            'Backed by OpenAI — deep LLM infrastructure advantage'],
+      br:[{t:'Vastly larger & more novel training data — 9.7T tokens vs undisclosed but likely smaller',s:'m'},
+          {t:'Older, more operationally proven (2019 vs 2023)',s:'b'},
+          {t:'Cross-modality: proteins, nucleic acids, enzymes, agriculture in one model',s:'m'},
+          {t:'Unique biodiversity moat — data Chai cannot replicate',s:'m'},
+          {t:'NVIDIA, PacBio & Anthropic as strategic tech stack partners',s:'b'}],
+      comp:[{t:'4× more capital raised ($230M vs $60M) — longer runway',s:'b'},
+            {t:'Unicorn valuation ($1.3B) signals strong market conviction',s:'b'},
+            {t:'Wet lab for rapid in-house design-test cycles',s:'m'},
+            {t:'Chai-1 openly benchmarked & rivals AlphaFold3 — high credibility',s:'m'},
+            {t:'Backed by OpenAI — deep LLM infrastructure advantage',s:'b'}],
     }
   },
   profluent:{
@@ -2904,16 +3120,16 @@ const INTEL_COMPETITORS = {
     techPartners:'Undisclosed',
     monetisation:'<strong>Platform licensing</strong><br>Enterprise platform licensing (ProGen2) · Pharma partnerships — Eli Lilly deal · OpenCRISPR-1 open-source with commercial support tier · Protein engineering services',
     takeaways:{
-      br:['9.7T nucleotide tokens vs ~280M sequences — 34× richer training signal',
-          'Novel biodiversity sequences spanning 1M+ species — Profluent cannot access this data',
-          'EDEN spans DNA, RNA, protein; ProGen2 is protein-only',
-          'Cross-domain: drug + industrial biotech + agriculture',
-          'Trillion Gene Atlas = continuously expanding proprietary dataset'],
-      comp:['ProGen2 6.4B params specifically optimised for protein function',
-            'OpenCRISPR-1 in active use at thousands of labs — proven real-world utility',
-            'First published functional AI proteins (Nature Biotech 2023) — field-defining',
-            'Eli Lilly partnership validates commercial traction',
-            '3× more capital raised ($180M vs $60M)'],
+      br:[{t:'9.7T nucleotide tokens vs ~280M sequences — 34× richer training signal',s:'m'},
+          {t:'Novel biodiversity sequences spanning 1M+ species — Profluent cannot access this data',s:'m'},
+          {t:'EDEN spans DNA, RNA, protein; ProGen2 is protein-only',s:'m'},
+          {t:'Cross-domain: drug + industrial biotech + agriculture',s:'b'},
+          {t:'Trillion Gene Atlas = continuously expanding proprietary dataset',s:'m'}],
+      comp:[{t:'ProGen2 6.4B params specifically optimised for protein function',s:'m'},
+            {t:'OpenCRISPR-1 in active use at thousands of labs — proven real-world utility',s:'m'},
+            {t:'First published functional AI proteins (Nature Biotech 2023) — field-defining',s:'m'},
+            {t:'Eli Lilly partnership validates commercial traction',s:'b'},
+            {t:'3× more capital raised ($180M vs $60M)',s:'b'}],
     }
   },
   isomorphic:{
@@ -2939,16 +3155,16 @@ const INTEL_COMPETITORS = {
     techPartners:'Alphabet / Google · DeepMind',
     monetisation:'<strong>Pharma partnerships</strong><br>Large pharma milestone + royalty deals — $3B+ potential (Lilly ~$1.7B, Novartis ~$1.2B, J&amp;J) · No standalone product or API licensing · Revenue entirely partnership-driven',
     takeaways:{
-      br:['Unique biodiversity data moat — Isomorphic uses standard structural databases',
-          'EDEN trained on novel sequences unavailable to any competitor',
-          'Independent company — more agile, broader application mandate than Alphabet subsidiary',
-          'Cross-domain (drug + industrial + agriculture) vs pure drug design',
-          'Genuinely novel training data; Isomorphic depends on PDB (public)'],
-      comp:['43× more capital ($2.6B vs $60M) — incomparable execution resources',
-            'AlphaFold3 — the most trusted model in biology, SOTA on all benchmarks',
-            '$3B+ active pharma deals with Lilly, Novartis and J&J',
-            '~400 staff vs ~80 — far greater execution capacity',
-            'Alphabet infrastructure and Google DeepMind talent pipeline'],
+      br:[{t:'Unique biodiversity data moat — Isomorphic uses standard structural databases',s:'m'},
+          {t:'EDEN trained on novel sequences unavailable to any competitor',s:'m'},
+          {t:'Independent company — more agile, broader application mandate than Alphabet subsidiary',s:'b'},
+          {t:'Cross-domain (drug + industrial + agriculture) vs pure drug design',s:'b'},
+          {t:'Genuinely novel training data; Isomorphic depends on PDB (public)',s:'m'}],
+      comp:[{t:'43× more capital ($2.6B vs $60M) — incomparable execution resources',s:'b'},
+            {t:'AlphaFold3 — the most trusted model in biology, SOTA on all benchmarks',s:'m'},
+            {t:'$3B+ active pharma deals with Lilly, Novartis and J&J',s:'b'},
+            {t:'~400 staff vs ~80 — far greater execution capacity',s:'b'},
+            {t:'Alphabet infrastructure and Google DeepMind talent pipeline',s:'b'}],
     }
   },
   boltz:{
@@ -2975,16 +3191,16 @@ const INTEL_COMPETITORS = {
     techPartners:'None disclosed',
     monetisation:'<strong>Open source + pharma partnerships</strong><br>Model weights open-source (MIT licence) · Hosted API with usage-based pricing · Pharma collaboration deals (Takeda) · Commercial drug discovery agent services',
     takeaways:{
-      br:['9.7T proprietary tokens vs PDB-only (public) — irreplicable data advantage',
-          '$60M commercial backing vs undisclosed seed — far greater operational runway',
-          'EDEN broader: sequence generation across 1M+ species; Boltz limited to known PDB structures',
-          'Established operations (2019) with commercial pipeline vs 2024 academic spinout',
-          'Applications across drug, industrial and agricultural biology'],
-      comp:['Fully open-source with 1M+ downloads — extraordinary community validation',
-            'Boltz-2 approaches FEP accuracy 1,000× faster — potentially transformative benchmark',
-            'Three models covering folding + affinity + binder design',
-            'Takeda collaboration validates enterprise pharma demand for open-source AI models',
-            'Massive academic adoption = future pipeline of users and collaborators'],
+      br:[{t:'9.7T proprietary tokens vs PDB-only (public) — irreplicable data advantage',s:'m'},
+          {t:'$60M commercial backing vs undisclosed seed — far greater operational runway',s:'b'},
+          {t:'EDEN broader: sequence generation across 1M+ species; Boltz limited to known PDB structures',s:'m'},
+          {t:'Established operations (2019) with commercial pipeline vs 2024 academic spinout',s:'b'},
+          {t:'Applications across drug, industrial and agricultural biology',s:'b'}],
+      comp:[{t:'Fully open-source with 1M+ downloads — extraordinary community validation',s:'m'},
+            {t:'Boltz-2 approaches FEP accuracy 1,000× faster — potentially transformative benchmark',s:'m'},
+            {t:'Three models covering folding + affinity + binder design',s:'m'},
+            {t:'Takeda collaboration validates enterprise pharma demand for open-source AI models',s:'b'},
+            {t:'Massive academic adoption = future pipeline of users and collaborators',s:'b'}],
     }
   },
   prima:{
@@ -3009,16 +3225,16 @@ const INTEL_COMPETITORS = {
     techPartners:'NVIDIA · Nebius · Oxford · Stanford · Salk Institute · Dementia Platform UK',
     monetisation:'<strong>Pre-revenue</strong><br>Undisclosed (seed-stage) · Likely: platform licensing + therapeutic pipeline milestones · Potential sovereign/Middle East capital partnerships given Dubai presence',
     takeaways:{
-      br:['Published model (EDEN-28B, Jan 2026) vs no named public model from Prima Mente',
-          'Larger team (~80 vs ~30) and significantly more capital ($60M vs undisclosed seed)',
-          '9.7T training tokens with named benchmarks vs undisclosed data strategy',
-          'Broader domain coverage: drug + industrial + agriculture vs neurology-only',
-          'Established pharma and tech partnerships vs early-stage network'],
-      comp:['Generates own proprietary experimental data — similar philosophy to BR, applied to neurology',
-            'Dubai office = access to Middle East capital and regulatory environments',
-            'Strong academic network: Oxford, Stanford, Edinburgh, Salk Institute',
-            'Tightly focused neurology thesis may enable faster clinical translation',
-            'NVIDIA + Nebius compute partnerships for training infrastructure'],
+      br:[{t:'Published model (EDEN-28B, Jan 2026) vs no named public model from Prima Mente',s:'m'},
+          {t:'Larger team (~80 vs ~30) and significantly more capital ($60M vs undisclosed seed)',s:'b'},
+          {t:'9.7T training tokens with named benchmarks vs undisclosed data strategy',s:'m'},
+          {t:'Broader domain coverage: drug + industrial + agriculture vs neurology-only',s:'b'},
+          {t:'Established pharma and tech partnerships vs early-stage network',s:'b'}],
+      comp:[{t:'Generates own proprietary experimental data — similar philosophy to BR, applied to neurology',s:'m'},
+            {t:'Dubai office = access to Middle East capital and regulatory environments',s:'b'},
+            {t:'Strong academic network: Oxford, Stanford, Edinburgh, Salk Institute',s:'b'},
+            {t:'Tightly focused neurology thesis may enable faster clinical translation',s:'b'},
+            {t:'NVIDIA + Nebius compute partnerships for training infrastructure',s:'b'}],
     }
   },
   variant:{
@@ -3043,16 +3259,16 @@ const INTEL_COMPETITORS = {
     techPartners:'Undisclosed',
     monetisation:'<strong>Pharma partnerships</strong><br>Pharma partnership deals (Boehringer Ingelheim, Novo Nordisk) · Milestone + royalty model · Benefit-sharing: 4% revenue + 4% equity to source communities · No platform licensing',
     takeaways:{
-      br:['EDEN-28B = generative foundation model; Variant uses AI as a discovery tool on human data',
-          '9.7T tokens across 1M+ species vs human-only population cohorts',
-          'Broader application domains — not limited to human therapeutics',
-          'Data from natural biodiversity captures evolutionary solutions absent in human genomes',
-          'Foundation model builder vs genetics-guided drug hunter — different value proposition'],
-      comp:['Human genetics targets have ~2× higher clinical success rates vs phenotypic screening',
-            'Active $B-scale pharma deals with Boehringer Ingelheim and Novo Nordisk',
-            'Pipeline in preclinical/lead optimisation — further advanced clinically than BR',
-            'SoftBank Vision Fund + two major pharma deals = strong commercial validation',
-            'Benefit-sharing model (4% revenue + 4% equity) = ethical leadership in the space'],
+      br:[{t:'EDEN-28B = generative foundation model; Variant uses AI as a discovery tool on human data',s:'m'},
+          {t:'9.7T tokens across 1M+ species vs human-only population cohorts',s:'m'},
+          {t:'Broader application domains — not limited to human therapeutics',s:'b'},
+          {t:'Data from natural biodiversity captures evolutionary solutions absent in human genomes',s:'m'},
+          {t:'Foundation model builder vs genetics-guided drug hunter — different value proposition',s:'b'}],
+      comp:[{t:'Human genetics targets have ~2× higher clinical success rates vs phenotypic screening',s:'b'},
+            {t:'Active $B-scale pharma deals with Boehringer Ingelheim and Novo Nordisk',s:'b'},
+            {t:'Pipeline in preclinical/lead optimisation — further advanced clinically than BR',s:'b'},
+            {t:'SoftBank Vision Fund + two major pharma deals = strong commercial validation',s:'b'},
+            {t:'Benefit-sharing model (4% revenue + 4% equity) = ethical leadership in the space',s:'b'}],
     }
   },
   esm3:{
@@ -3077,16 +3293,16 @@ const INTEL_COMPETITORS = {
     techPartners:'Chan Zuckerberg Biohub (parent) · NVentures · Amazon AWS',
     monetisation:'<strong>Non-profit</strong><br>Acquired by Chan Zuckerberg Biohub (non-profit, Nov 2025) — open science mandate post-acquisition · Pre-acquisition: commercial API access planned · Weights freely available (open source)',
     takeaways:{
-      br:['9.7T nucleotide tokens vs 2.78B protein sequences — more diverse data across species',
-          'Data from 1M+ novel species; ESM3 trained primarily on catalogued/known proteins',
-          'Multi-modal output: DNA, RNA and protein; ESM3 is protein-only',
-          'Commercial pipeline and $60M funding; ESM3 (pre-acquisition) was open science',
-          'Biodiversity data captures evolutionary diversity unavailable in standard databases'],
-      comp:['ESM3 has 98B parameters vs 28B — over 3× larger model',
-            'First AI model to demonstrate functional novel protein generation (esmGFP, Nature 2024)',
-            'Fully open source — weights freely available, massive global adoption',
-            'Chan Zuckerberg Biohub backing provides extraordinary long-term philanthropic resources',
-            'Simultaneous sequence/structure/function reasoning in one unified model'],
+      br:[{t:'9.7T nucleotide tokens vs 2.78B protein sequences — more diverse data across species',s:'m'},
+          {t:'Data from 1M+ novel species; ESM3 trained primarily on catalogued/known proteins',s:'m'},
+          {t:'Multi-modal output: DNA, RNA and protein; ESM3 is protein-only',s:'m'},
+          {t:'Commercial pipeline and $60M funding; ESM3 (pre-acquisition) was open science',s:'b'},
+          {t:'Biodiversity data captures evolutionary diversity unavailable in standard databases',s:'m'}],
+      comp:[{t:'ESM3 has 98B parameters vs 28B — over 3× larger model',s:'m'},
+            {t:'First AI model to demonstrate functional novel protein generation (esmGFP, Nature 2024)',s:'m'},
+            {t:'Fully open source — weights freely available, massive global adoption',s:'m'},
+            {t:'Chan Zuckerberg Biohub backing provides extraordinary long-term philanthropic resources',s:'b'},
+            {t:'Simultaneous sequence/structure/function reasoning in one unified model',s:'m'}],
     }
   },
   evo2:{
@@ -3111,16 +3327,16 @@ const INTEL_COMPETITORS = {
     techPartners:'CZI · NVIDIA · AWS (compute)',
     monetisation:'<strong>Non-profit</strong><br>Non-profit open science — no commercial model · Philanthropic funding (CZI, Patrick Collison, Patrick Hsu) · MIT licence: free for all uses including commercial · No API fees or licensing',
     takeaways:{
-      br:['9.7T tokens from 1M+ species vs 9.3T tokens from 128K whole genomes — similar scale, fundamentally different data source',
-          'EDEN trained on natural biodiversity (rare novel organisms); Evo 2 on catalogued whole genomes',
-          'EDEN outputs therapeutic proteins, genetic medicines; Evo 2 is DNA analysis/generation',
-          'Commercial pipeline and $60M funding; Evo 2 has no-IP, open-science mandate',
-          'BR data captures biodiversity not represented in any genomic database; Evo 2 uses known genomes'],
-      comp:['Evo 2 has 40B parameters vs EDEN\'s 28B; trained on comparable token scale',
-            'Fully open source (MIT licence) — widest possible research adoption',
-            'Whole-genome context: understands regulatory, non-coding and structural genomic elements',
-            'Published in Nature (March 2026) — peer-reviewed at the highest level',
-            'Non-profit model = no commercial pressure, long-term scientific mandate'],
+      br:[{t:'9.7T tokens from 1M+ species vs 9.3T tokens from 128K whole genomes — similar scale, fundamentally different data source',s:'m'},
+          {t:'EDEN trained on natural biodiversity (rare novel organisms); Evo 2 on catalogued whole genomes',s:'m'},
+          {t:'EDEN outputs therapeutic proteins, genetic medicines; Evo 2 is DNA analysis/generation',s:'m'},
+          {t:'Commercial pipeline and $60M funding; Evo 2 has no-IP, open-science mandate',s:'b'},
+          {t:'BR data captures biodiversity not represented in any genomic database; Evo 2 uses known genomes',s:'m'}],
+      comp:[{t:'Evo 2 has 40B parameters vs EDEN\'s 28B; trained on comparable token scale',s:'m'},
+            {t:'Fully open source (MIT licence) — widest possible research adoption',s:'m'},
+            {t:'Whole-genome context: understands regulatory, non-coding and structural genomic elements',s:'m'},
+            {t:'Published in Nature (March 2026) — peer-reviewed at the highest level',s:'m'},
+            {t:'Non-profit model = no commercial pressure, long-term scientific mandate',s:'b'}],
     }
   },
   insilico:{
@@ -3145,16 +3361,16 @@ const INTEL_COMPETITORS = {
     techPartners:'NVIDIA (BioNeMo/NeMo) · Microsoft Discovery (Nach01) · Amazon AWS · Liquid AI (LFM2)',
     monetisation:'<strong>Public company</strong><br>HKEX-listed public company (Dec 2025) · Pharma.AI SaaS licensing (PandaOmics, Chemistry42, inClinico) · Drug pipeline milestones + royalties · R&amp;D co-development deals (cumulative deal value $4.6B by 2025)',
     takeaways:{
-      br:['EDEN is a biodiversity discovery engine; Insilico is an end-to-end AI drug discovery platform with clinical validation',
-          'BCR generates truly novel biology from unexplored species; Insilico optimises chemistry on known targets',
-          'BCR has a wet lab data edge; Insilico strengths are pipeline depth and clinical proof',
-          'BCR in early pipeline (stage 1); Insilico has drugs in Phase II — 10-year head start in translational AI',
-          'BCR biodiversity data is a unique structural moat; Insilico advantage is pharma platform revenue'],
-      comp:['Only AI drug company with Phase II clinical proof-of-concept (Nature Medicine 2025) — first in industry',
-            'Publicly listed (HKEX) — transparency and capital market validation',
-            '$4.6B cumulative deal value with 13 of top 20 global pharma companies',
-            '11-year track record; Nach0 open source on HuggingFace; full platform publicly deployed',
-            'Pharma.AI monetisation model scales independently of internal pipeline outcomes'],
+      br:[{t:'EDEN is a biodiversity discovery engine; Insilico is an end-to-end AI drug discovery platform with clinical validation',s:'b'},
+          {t:'BCR generates truly novel biology from unexplored species; Insilico optimises chemistry on known targets',s:'m'},
+          {t:'BCR has a wet lab data edge; Insilico strengths are pipeline depth and clinical proof',s:'b'},
+          {t:'BCR in early pipeline (stage 1); Insilico has drugs in Phase II — 10-year head start in translational AI',s:'b'},
+          {t:'BCR biodiversity data is a unique structural moat; Insilico advantage is pharma platform revenue',s:'b'}],
+      comp:[{t:'Only AI drug company with Phase II clinical proof-of-concept (Nature Medicine 2025) — first in industry',s:'b'},
+            {t:'Publicly listed (HKEX) — transparency and capital market validation',s:'b'},
+            {t:'$4.6B cumulative deal value with 13 of top 20 global pharma companies',s:'b'},
+            {t:'11-year track record; Nach0 open source on HuggingFace; full platform publicly deployed',s:'m'},
+            {t:'Pharma.AI monetisation model scales independently of internal pipeline outcomes',s:'b'}],
     }
   },
   bioptimus:{
@@ -3181,16 +3397,16 @@ const INTEL_COMPETITORS = {
     techPartners:'Amazon Web Services (SageMaker) · NVIDIA · Owkin · 10x Genomics · Broad Clinical Labs',
     monetisation:'<strong>SaaS / Platform</strong><br>SaaS/API licensing for H-Optimus (via Amazon SageMaker) · Enterprise pharma contracts · M-Optimus multi-modal platform (emerging) · H-Optimus-0 open source for research adoption / funnel',
     takeaways:{
-      br:['EDEN models proteins and genetic medicines; Bioptimus models pathology tissue and multi-omic readouts — orthogonal data modalities',
-          'BCR wet lab data is sequence-based; Bioptimus wet lab equivalents are digitised slides + transcriptomics',
-          'Both are foundation model platform companies, but serving different steps of the drug discovery value chain',
-          'BCR designs novel molecules; Bioptimus predicts drug response and disease biology from tissue',
-          'BCR is a better fit for target identification + molecule design; Bioptimus for companion diagnostics + patient stratification'],
-      comp:['H-Optimus-1 #1 on all major pathology benchmarks — unambiguous model quality leader',
-            'World\'s largest clinically-linked pathology dataset is a structural data moat',
-            '16 of top 20 pharma companies already using platform — strong commercial traction at $76M raised',
-            'M-Optimus integrates modalities no competitor combines in one model',
-            'Amazon SageMaker distribution gives enterprise-scale deployment without custom infrastructure'],
+      br:[{t:'EDEN models proteins and genetic medicines; Bioptimus models pathology tissue and multi-omic readouts — orthogonal data modalities',s:'m'},
+          {t:'BCR wet lab data is sequence-based; Bioptimus wet lab equivalents are digitised slides + transcriptomics',s:'m'},
+          {t:'Both are foundation model platform companies, but serving different steps of the drug discovery value chain',s:'b'},
+          {t:'BCR designs novel molecules; Bioptimus predicts drug response and disease biology from tissue',s:'m'},
+          {t:'BCR is a better fit for target identification + molecule design; Bioptimus for companion diagnostics + patient stratification',s:'b'}],
+      comp:[{t:'H-Optimus-1 #1 on all major pathology benchmarks — unambiguous model quality leader',s:'m'},
+            {t:'World\'s largest clinically-linked pathology dataset is a structural data moat',s:'m'},
+            {t:'16 of top 20 pharma companies already using platform — strong commercial traction at $76M raised',s:'b'},
+            {t:'M-Optimus integrates modalities no competitor combines in one model',s:'m'},
+            {t:'Amazon SageMaker distribution gives enterprise-scale deployment without custom infrastructure',s:'b'}],
     }
   },
   latent:{
@@ -3217,16 +3433,16 @@ const INTEL_COMPETITORS = {
     techPartners:'AWS · NVIDIA · Nebius (Blackwell B300 compute, Mar 2026)',
     monetisation:'<strong>Freemium / Enterprise</strong><br>No-code web platform (freemium / subscription) · Partner access tier for Latent-X2 · Enterprise R&amp;D partnerships with biopharma (undisclosed) · Academic access programme (2026)',
     takeaways:{
-      br:['EDEN generates novel proteins from unexplored biodiversity; Latent Labs designs binders targeting known protein structures',
-          'BCR wet lab produces training data from real organisms; Latent Labs relies entirely on public PDB + AlphaFold',
-          'BCR output is novel sequence diversity; Latent Labs output is designed binders for given targets',
-          'Latent-Y agentic pipeline is closest competitor to a fully autonomous drug design system',
-          'BCR data moat (1M+ novel species) gives a long-term differentiation that public-data competitors cannot replicate'],
-      comp:['Latent-X achieves 91–100% experimental hit rates — industry-leading wet lab validation without internal wet lab',
-            'Angel backers include Jeff Dean, Dario Amodei and Aidan Gomez — extraordinary technical signal',
-            'Latent-Y autonomous agent represents next-generation paradigm: AI runs the full design cycle',
-            'Three models shipped in under 18 months — fastest model iteration cadence of any comparator',
-            'Small team (~23 people) generating outsized research output: 3 arXiv papers with concrete benchmarks'],
+      br:[{t:'EDEN generates novel proteins from unexplored biodiversity; Latent Labs designs binders targeting known protein structures',s:'m'},
+          {t:'BCR wet lab produces training data from real organisms; Latent Labs relies entirely on public PDB + AlphaFold',s:'m'},
+          {t:'BCR output is novel sequence diversity; Latent Labs output is designed binders for given targets',s:'m'},
+          {t:'Latent-Y agentic pipeline is closest competitor to a fully autonomous drug design system',s:'m'},
+          {t:'BCR data moat (1M+ novel species) gives a long-term differentiation that public-data competitors cannot replicate',s:'m'}],
+      comp:[{t:'Latent-X achieves 91–100% experimental hit rates — industry-leading wet lab validation without internal wet lab',s:'m'},
+            {t:'Angel backers include Jeff Dean, Dario Amodei and Aidan Gomez — extraordinary technical signal',s:'b'},
+            {t:'Latent-Y autonomous agent represents next-generation paradigm: AI runs the full design cycle',s:'m'},
+            {t:'Three models shipped in under 18 months — fastest model iteration cadence of any comparator',s:'m'},
+            {t:'Small team (~23 people) generating outsized research output: 3 arXiv papers with concrete benchmarks',s:'b'}],
     }
   },
   radical:{
@@ -3251,16 +3467,16 @@ const INTEL_COMPETITORS = {
     techPartners:'NVIDIA (Blackwell data centre under construction)',
     monetisation:'<strong>SaaS / API + biodefense</strong><br>API licensing + proprietary fine-tuned models · Milestone payments from diagnostic and biodefense partners · Explicit dual mandate: design lab and defense lab are the same entity · Future open-source releases restricted (Evo weights were used to write the world\'s first complete AI-generated bacteriophage genome)',
     takeaways:{
-      br:['EDEN wet lab data from 1M+ novel species is irreplicable; Radical Numerics extends public genomic databases',
-          'EDEN generates therapeutic proteins and genetic medicines; Radical Numerics models genomic sequence and annotation',
-          'BCR has established commercial operations (2019); Radical Numerics launched from stealth June 2026',
-          'BCR biodiversity data spans unexplored organisms unavailable in any public database',
-          'BCR has an active therapeutic pipeline; Radical Numerics is a pure platform at seed stage'],
-      comp:['Founded by the Evo / Evo 2 team — the most credentialed genomics AI group now working commercially',
-            '$50M seed (Jun 2026) with Emergence Capital lead — extraordinary early-stage institutional backing',
-            'Omnii: first aligned large-scale gLM; first to beat every specialised model family across benchmarks',
-            'Explicit dual mandate: "the design lab and the defense lab need to be the same entity" — unique positioning for government + pharma',
-            'NVIDIA Blackwell data centre under construction — serious compute infrastructure at seed stage'],
+      br:[{t:'EDEN wet lab data from 1M+ novel species is irreplicable; Radical Numerics extends public genomic databases',s:'m'},
+          {t:'EDEN generates therapeutic proteins and genetic medicines; Radical Numerics models genomic sequence and annotation',s:'m'},
+          {t:'BCR has established commercial operations (2019); Radical Numerics launched from stealth June 2026',s:'b'},
+          {t:'BCR biodiversity data spans unexplored organisms unavailable in any public database',s:'m'},
+          {t:'BCR has an active therapeutic pipeline; Radical Numerics is a pure platform at seed stage',s:'b'}],
+      comp:[{t:'Founded by the Evo / Evo 2 team — the most credentialed genomics AI group now working commercially',s:'b'},
+            {t:'$50M seed (Jun 2026) with Emergence Capital lead — extraordinary early-stage institutional backing',s:'b'},
+            {t:'Omnii: first aligned large-scale gLM; first to beat every specialised model family across benchmarks',s:'m'},
+            {t:'Explicit dual mandate: "the design lab and the defense lab need to be the same entity" — unique positioning for government + pharma',s:'b'},
+            {t:'NVIDIA Blackwell data centre under construction — serious compute infrastructure at seed stage',s:'b'}],
     }
   },
 };
@@ -3271,36 +3487,121 @@ function val(v, adv){
 }
 function tag(bool){ return bool ? '<span class="intel-tag intel-tag-yes">Yes</span>' : '<span class="intel-tag intel-tag-no">No</span>'; }
 
-function _buildIntelSel(){
-  const selEl = document.getElementById('intelSel');
+// Section definitions, tagged by which tab they belong to:
+//  'fm'        → Foundation Model Comparison (models, data & training, credibility/benchmarks)
+//  'commercial'→ Commercial Comparisons → Competitor Profiles (funding, pipeline & partnerships)
+const INTEL_SECTIONS = {
+  funding: {
+    tab:'commercial', label:'Funding & Business',
+    compareRows:(b,c)=>[
+      ['Total raised',         val(b.totalRaised,'neu'),   val(c.totalRaised,'comp')],
+      ['Last round',           val(b.lastRound+' · '+b.lastRoundDate,'neu'), val(c.lastRound+' · '+c.lastRoundDate,'comp')],
+      ['Valuation',            val(b.valuation,'neu'),     val(c.valuation,'comp')],
+      ['Key investors',        val(b.investors,'neu'),     val(c.investors,'neu')],
+      ['Founded',              val(b.founded,'br'),        val(c.founded,'neu')],
+      ['HQ',                   val(b.hq,'neu'),            val(c.hq,'neu')],
+      ['Est. headcount',       val(b.headcount,'br'),      val(c.headcount,'neu')],
+      ['Monetisation model',   val(b.monetisation,'neu'),  val(c.monetisation,'neu')],
+    ],
+    matrixRows:(bcrCell,cell,comps)=>[
+      `<tr><td class="iat-label">Total raised</td>${bcrCell(BASECAMP.totalRaised)}${comps.map(c=>cell(c.totalRaised)).join('')}</tr>`,
+      `<tr><td class="iat-label">Last round</td>${bcrCell(BASECAMP.lastRound+' · '+BASECAMP.lastRoundDate)}${comps.map(c=>cell(c.lastRound+' · '+c.lastRoundDate)).join('')}</tr>`,
+      `<tr><td class="iat-label">Valuation</td>${bcrCell(BASECAMP.valuation)}${comps.map(c=>cell(c.valuation)).join('')}</tr>`,
+      `<tr><td class="iat-label">Founded / HQ</td>${bcrCell(BASECAMP.founded+' · '+BASECAMP.hq)}${comps.map(c=>cell(c.founded+' · '+c.hq)).join('')}</tr>`,
+      `<tr><td class="iat-label">Est. headcount</td>${bcrCell(BASECAMP.headcount)}${comps.map(c=>cell(c.headcount)).join('')}</tr>`,
+      `<tr><td class="iat-label">Monetisation</td>${bcrCell(BASECAMP.monetisation)}${comps.map(c=>cell(c.monetisation)).join('')}</tr>`,
+    ],
+  },
+  models: {
+    tab:'fm', label:'AI Models',
+    compareRows:(b,c)=>[
+      ['Flagship model(s)',  val(b.models.map(m=>m.name).join(' · '),'br'),  val(c.models.map(m=>m.name).join(' · '),'neu')],
+      ['Parameters',         val(b.models.map(m=>m.params).join(', '),'br'), val(c.models.map(m=>m.params||'N/D').join(', '),'neu')],
+      ['Model purpose',      val(b.models[0].purpose,'br'), val(c.models.map(m=>m.name+': '+m.purpose).join('<br>'),'neu')],
+      ['Open source',        val(tag(b.models[0].openSource),'neu'), val(tag(c.models.some(m=>m.openSource)),'neu')],
+      ['Training data',      val(b.trainingData,'br'),    val(c.trainingData,'neu')],
+      ['Training tokens',    val(b.trainingTokens,'br'),  val(c.trainingTokens,'neu')],
+    ],
+    matrixRows:(bcrCell,cell,comps)=>[
+      `<tr><td class="iat-label">Flagship model(s)</td>${bcrCell(BASECAMP.models.map(m=>m.name).join(' · '))}${comps.map(c=>cell(c.models.map(m=>m.name).join(' · '))).join('')}</tr>`,
+      `<tr><td class="iat-label">Parameters</td>${bcrCell(BASECAMP.models.map(m=>m.params).join(', '))}${comps.map(c=>cell(c.models.map(m=>m.params||'N/D').join(', '))).join('')}</tr>`,
+      `<tr><td class="iat-label">Open source</td>${bcrCell(tag(BASECAMP.models[0].openSource))}${comps.map(c=>cell(tag(c.models.some(m=>m.openSource)))).join('')}</tr>`,
+    ],
+  },
+  dataMoat: {
+    tab:'fm', label:'Data & Scientific Moat',
+    compareRows:(b,c)=>[
+      ['Data scale',         val(b.dataScale,'br'),       val(c.dataScale,'neu')],
+      ['Data uniqueness',    val(b.dataUniqueness,'br'),  val(c.dataUniqueness,'neu')],
+      ['Integrated wet lab', val(tag(b.wetLab),'neu'),    val(tag(c.wetLab),'comp')],
+    ],
+    matrixRows:(bcrCell,cell,comps)=>[
+      `<tr><td class="iat-label">Training tokens</td>${bcrCell(BASECAMP.trainingTokens)}${comps.map(c=>cell(c.trainingTokens)).join('')}</tr>`,
+      `<tr><td class="iat-label">Data uniqueness</td>${bcrCell(BASECAMP.dataUniqueness)}${comps.map(c=>cell(c.dataUniqueness)).join('')}</tr>`,
+      `<tr><td class="iat-label">Wet lab</td>${bcrCell(tag(BASECAMP.wetLab))}${comps.map(c=>cell(tag(c.wetLab))).join('')}</tr>`,
+    ],
+  },
+  pipeline: {
+    tab:'commercial', label:'Pipeline & Partnerships',
+    compareRows:(b,c)=>[
+      ['Pipeline targets',   val(b.pipelineTargets,'neu'),  val(c.pipelineTargets,'neu')],
+      ['Therapeutic areas',  val(b.therapAreas,'br'),       val(c.therapAreas,'neu')],
+      ['Pipeline stage',     val(b.pipelineStage,'neu'),    val(c.pipelineStage,'neu')],
+      ['Pharma partners',    val(b.pharmaPartners,'neu'),   val(c.pharmaPartners,'neu')],
+      ['Tech partners',      val(b.techPartners,'br'),      val(c.techPartners,'neu')],
+    ],
+    matrixRows:(bcrCell,cell,comps)=>[
+      `<tr><td class="iat-label">Pipeline stage</td>${bcrCell(BASECAMP.pipelineStage)}${comps.map(c=>cell(c.pipelineStage)).join('')}</tr>`,
+      `<tr><td class="iat-label">Pharma partners</td>${bcrCell(BASECAMP.pharmaPartners)}${comps.map(c=>cell(c.pharmaPartners)).join('')}</tr>`,
+      `<tr><td class="iat-label">Tech partners</td>${bcrCell(BASECAMP.techPartners)}${comps.map(c=>cell(c.techPartners)).join('')}</tr>`,
+    ],
+  },
+  credibility: {
+    tab:'fm', label:'Credibility & Benchmarks',
+    compareRows:(b,c)=>[
+      ['Key publications',   val(b.publications,'neu'),   val(c.publications,'comp')],
+      ['Benchmarks',         val(b.benchmarks,'neu'),     val(c.benchmarks,'comp')],
+    ],
+    matrixRows:(bcrCell,cell,comps)=>[
+      `<tr><td class="iat-label">Benchmarks</td>${bcrCell(BASECAMP.benchmarks)}${comps.map(c=>cell(c.benchmarks)).join('')}</tr>`,
+      `<tr><td class="iat-label">Key publications</td>${bcrCell(BASECAMP.publications)}${comps.map(c=>cell(c.publications)).join('')}</tr>`,
+    ],
+  },
+};
+
+// scope: 'fm' (Foundation Model Comparison) or 'profiles' (Commercial Comparisons → Competitor Profiles)
+function _scopeSections(scope){
+  const tabKey = scope==='fm' ? 'fm' : 'commercial';
+  return Object.values(INTEL_SECTIONS).filter(s=>s.tab===tabKey);
+}
+function _takeawayScope(scope){ return scope==='fm' ? 'm' : 'b'; }
+
+function _buildIntelSel(scope){
+  const selEl = document.getElementById(scope+'Sel');
   const compBtns = Object.values(INTEL_COMPETITORS).map(c=>
-    `<button class="intel-sel-btn" data-cid="${c.id}" onclick="renderIntel('${c.id}')">${c.name}</button>`
+    `<button class="intel-sel-btn" data-cid="${c.id}" onclick="renderIntelCompare('${scope}','${c.id}')">${c.name}</button>`
   ).join('');
-  const allBtn = `<button class="intel-sel-btn" data-cid="" id="intelSelAll" onclick="renderIntelAll()" style="font-weight:700">All competitors</button>`;
+  const allBtn = `<button class="intel-sel-btn" data-cid="" id="${scope}SelAll" onclick="renderIntelAllMatrix('${scope}')" style="font-weight:700">All competitors</button>`;
   selEl.innerHTML = allBtn + compBtns;
 }
 
-function renderIntelAll(){
-  document.getElementById('intelViewOverview').style.display = 'none';
-  document.getElementById('intelViewCompare').style.display = 'none';
-  document.getElementById('intelViewAll').style.display = '';
+function renderIntelAllMatrix(scope){
+  document.getElementById(scope+'ViewOverview').style.display = 'none';
+  document.getElementById(scope+'ViewCompare').style.display = 'none';
+  document.getElementById(scope+'ViewAll').style.display = '';
 
   // Update selector active state
-  document.getElementById('intelSel').querySelectorAll('.intel-sel-btn').forEach(b=>{
+  document.getElementById(scope+'Sel').querySelectorAll('.intel-sel-btn').forEach(b=>{
     b.classList.remove('active');
     b.style.color=''; b.style.borderColor=''; b.style.background='';
   });
-  const allBtn = document.getElementById('intelSelAll');
-  if(allBtn){ allBtn.classList.add('active'); allBtn.style.color='#d97706'; allBtn.style.borderColor='rgba(245,158,11,0.4)'; allBtn.style.background='rgba(217,119,6,0.06)'; }
+  const allBtn = document.getElementById(scope+'SelAll');
+  if(allBtn){ allBtn.classList.add('active'); allBtn.style.color='#00b896'; allBtn.style.borderColor='var(--teal-border)'; allBtn.style.background='var(--teal-dim)'; }
 
   const comps = Object.values(INTEL_COMPETITORS);
-  const BCR_COLOR = '#d97706';
-  const BCR_COLOR_DIM = 'rgba(217,119,6,0.04)';
-  const BCR_COLOR_BORDER = 'rgba(245,158,11,0.3)';
 
   function cell(v){ return `<td>${v ?? '<span class="iat-na">—</span>'}</td>`; }
   function bcrCell(v){ return `<td class="iat-bcr">${v ?? '<span class="iat-na">—</span>'}</td>`; }
-  function tagYN(bool){ return bool ? '<span class="intel-tag intel-tag-yes">Yes</span>' : '<span class="intel-tag intel-tag-no">No</span>'; }
   function sectionRow(label){ return `<tr class="intel-all-section"><td colspan="${2 + comps.length}">${label}</td></tr>`; }
 
   const colHeaders = `<tr>
@@ -3309,32 +3610,11 @@ function renderIntelAll(){
     ${comps.map(c=>`<th class="iat-comp" style="color:${c.color};border-bottom-color:${c.color}">${c.name}</th>`).join('')}
   </tr>`;
 
-  const rows = [
-    sectionRow('Funding &amp; Business'),
-    `<tr><td class="iat-label">Total raised</td>${bcrCell(BASECAMP.totalRaised)}${comps.map(c=>cell(c.totalRaised)).join('')}</tr>`,
-    `<tr><td class="iat-label">Last round</td>${bcrCell(BASECAMP.lastRound+' · '+BASECAMP.lastRoundDate)}${comps.map(c=>cell(c.lastRound+' · '+c.lastRoundDate)).join('')}</tr>`,
-    `<tr><td class="iat-label">Valuation</td>${bcrCell(BASECAMP.valuation)}${comps.map(c=>cell(c.valuation)).join('')}</tr>`,
-    `<tr><td class="iat-label">Founded / HQ</td>${bcrCell(BASECAMP.founded+' · '+BASECAMP.hq)}${comps.map(c=>cell(c.founded+' · '+c.hq)).join('')}</tr>`,
-    `<tr><td class="iat-label">Est. headcount</td>${bcrCell(BASECAMP.headcount)}${comps.map(c=>cell(c.headcount)).join('')}</tr>`,
-    `<tr><td class="iat-label">Monetisation</td>${bcrCell(BASECAMP.monetisation)}${comps.map(c=>cell(c.monetisation)).join('')}</tr>`,
-    sectionRow('AI Models'),
-    `<tr><td class="iat-label">Flagship model(s)</td>${bcrCell(BASECAMP.models.map(m=>m.name).join(' · '))}${comps.map(c=>cell(c.models.map(m=>m.name).join(' · '))).join('')}</tr>`,
-    `<tr><td class="iat-label">Parameters</td>${bcrCell(BASECAMP.models.map(m=>m.params).join(', '))}${comps.map(c=>cell(c.models.map(m=>m.params||'N/D').join(', '))).join('')}</tr>`,
-    `<tr><td class="iat-label">Open source</td>${bcrCell(tagYN(BASECAMP.models[0].openSource))}${comps.map(c=>cell(tagYN(c.models.some(m=>m.openSource)))).join('')}</tr>`,
-    sectionRow('Data &amp; Training'),
-    `<tr><td class="iat-label">Training tokens</td>${bcrCell(BASECAMP.trainingTokens)}${comps.map(c=>cell(c.trainingTokens)).join('')}</tr>`,
-    `<tr><td class="iat-label">Data uniqueness</td>${bcrCell(BASECAMP.dataUniqueness)}${comps.map(c=>cell(c.dataUniqueness)).join('')}</tr>`,
-    sectionRow('Pipeline &amp; Partnerships'),
-    `<tr><td class="iat-label">Wet lab</td>${bcrCell(tagYN(BASECAMP.wetLab))}${comps.map(c=>cell(tagYN(c.wetLab))).join('')}</tr>`,
-    `<tr><td class="iat-label">Pipeline stage</td>${bcrCell(BASECAMP.pipelineStage)}${comps.map(c=>cell(c.pipelineStage)).join('')}</tr>`,
-    `<tr><td class="iat-label">Pharma partners</td>${bcrCell(BASECAMP.pharmaPartners)}${comps.map(c=>cell(c.pharmaPartners)).join('')}</tr>`,
-    `<tr><td class="iat-label">Tech partners</td>${bcrCell(BASECAMP.techPartners)}${comps.map(c=>cell(c.techPartners)).join('')}</tr>`,
-    sectionRow('Credibility'),
-    `<tr><td class="iat-label">Benchmarks</td>${bcrCell(BASECAMP.benchmarks)}${comps.map(c=>cell(c.benchmarks)).join('')}</tr>`,
-    `<tr><td class="iat-label">Key publications</td>${bcrCell(BASECAMP.publications)}${comps.map(c=>cell(c.publications)).join('')}</tr>`,
-  ].join('');
+  const rows = _scopeSections(scope).map(sec =>
+    sectionRow(sec.label) + sec.matrixRows(bcrCell, cell, comps).join('')
+  ).join('');
 
-  document.getElementById('intelAllGrid').innerHTML = `
+  document.getElementById(scope+'AllGrid').innerHTML = `
     <div class="intel-all-chart">
       <div class="intel-all-title">BCR vs All Competitors</div>
       <div class="intel-all-sub">Basecamp Research compared to all tracked competitors — scroll right to see all</div>
@@ -3347,33 +3627,42 @@ function renderIntelAll(){
     </div>`;
 }
 
-function intelShowOverview(){
-  renderPipelineChart();
-  renderFMChart();
-  document.getElementById('intelViewOverview').style.display = '';
-  document.getElementById('intelViewCompare').style.display = 'none';
-  document.getElementById('intelViewAll').style.display = 'none';
-  // Clear active state on all selector buttons
-  document.querySelectorAll('.intel-sel-btn').forEach(b=>{
+let _fmExtrasRendered = false;
+function intelShowOverview(scope){
+  if(scope==='fm'){
+    renderFMChart();
+    if(!_fmExtrasRendered){
+      renderFMModalities();
+      renderFMAccessibility();
+      renderFMSizeCharts();
+      renderFMIntegrations();
+      renderFMApiPricing();
+      _fmExtrasRendered = true;
+    }
+  }
+  document.getElementById(scope+'ViewOverview').style.display = '';
+  document.getElementById(scope+'ViewCompare').style.display = 'none';
+  document.getElementById(scope+'ViewAll').style.display = 'none';
+  // Clear active state on this scope's selector buttons
+  document.querySelectorAll('#'+scope+'Sel .intel-sel-btn').forEach(b=>{
     b.classList.remove('active');
     b.style.color=''; b.style.borderColor=''; b.style.background='';
   });
 }
 
-function renderIntel(id){
-  _intelActive = id;
-
+function renderIntelCompare(scope, id){
   // Switch to comparison view
-  document.getElementById('intelViewOverview').style.display = 'none';
-  document.getElementById('intelViewAll').style.display = 'none';
-  document.getElementById('intelViewCompare').style.display = '';
+  document.getElementById(scope+'ViewOverview').style.display = 'none';
+  document.getElementById(scope+'ViewAll').style.display = 'none';
+  document.getElementById(scope+'ViewCompare').style.display = '';
 
   const comp = INTEL_COMPETITORS[id];
-  document.getElementById('intelCompareHeader').textContent = `Basecamp Research  ×  ${comp.name}`;
+  document.getElementById(scope+'CompareHeader').textContent = `Basecamp Research  ×  ${comp.name}`;
 
   // Selector buttons — build once if not yet built, then update active state
-  if(!document.getElementById('intelSel').children.length) _buildIntelSel();
-  document.getElementById('intelSel').querySelectorAll('.intel-sel-btn').forEach(b=>{
+  const selEl = document.getElementById(scope+'Sel');
+  if(!selEl.children.length) _buildIntelSel(scope);
+  selEl.querySelectorAll('.intel-sel-btn').forEach(b=>{
     const cId = b.dataset.cid;
     if(!cId){ b.classList.remove('active'); b.style.color=''; b.style.borderColor=''; b.style.background=''; return; }
     const c = INTEL_COMPETITORS[cId];
@@ -3383,69 +3672,20 @@ function renderIntel(id){
     else { b.style.color=''; b.style.borderColor=''; b.style.background=''; }
   });
 
-  // Takeaways — update competitor box color dynamically
-  document.getElementById('intelTakeaways').innerHTML = `
+  // Takeaways — filtered to this scope, competitor box color dynamic
+  const tScope = _takeawayScope(scope);
+  document.getElementById(scope+'Takeaways').innerHTML = `
     <div class="intel-tbox br">
       <div class="intel-tbox-title">Basecamp Research strengths</div>
-      <ul>${comp.takeaways.br.map(t=>`<li>${t}</li>`).join('')}</ul>
+      <ul>${comp.takeaways.br.filter(t=>t.s===tScope).map(t=>`<li>${t.t}</li>`).join('')}</ul>
     </div>
     <div class="intel-tbox comp" style="border-color:${comp.colorBorder}">
       <div class="intel-tbox-title" style="color:${comp.color}">${comp.name} strengths</div>
-      <ul>${comp.takeaways.comp.map(t=>`<li>${t}</li>`).join('')}</ul>
+      <ul>${comp.takeaways.comp.filter(t=>t.s===tScope).map(t=>`<li>${t.t}</li>`).join('')}</ul>
     </div>`;
 
-  // Comparison table
-  const sections = [
-    {
-      label:'Funding & Business',
-      rows:[
-        ['Total raised',         val(BASECAMP.totalRaised,'neu'),   val(comp.totalRaised,'comp')],
-        ['Last round',           val(BASECAMP.lastRound+' · '+BASECAMP.lastRoundDate,'neu'), val(comp.lastRound+' · '+comp.lastRoundDate,'comp')],
-        ['Valuation',            val(BASECAMP.valuation,'neu'),     val(comp.valuation,'comp')],
-        ['Key investors',        val(BASECAMP.investors,'neu'),     val(comp.investors,'neu')],
-        ['Founded',              val(BASECAMP.founded,'br'),        val(comp.founded,'neu')],
-        ['HQ',                   val(BASECAMP.hq,'neu'),            val(comp.hq,'neu')],
-        ['Est. headcount',       val(BASECAMP.headcount,'br'),      val(comp.headcount,'neu')],
-        ['Monetisation model',   val(BASECAMP.monetisation,'neu'),  val(comp.monetisation,'neu')],
-      ]
-    },
-    {
-      label:'AI Models',
-      rows:[
-        ['Flagship model(s)',  val(BASECAMP.models.map(m=>m.name).join(' · '),'br'),  val(comp.models.map(m=>m.name).join(' · '),'neu')],
-        ['Parameters',         val(BASECAMP.models.map(m=>m.params).join(', '),'br'), val(comp.models.map(m=>m.params||'N/D').join(', '),'neu')],
-        ['Model purpose',      val(BASECAMP.models[0].purpose,'br'), val(comp.models.map(m=>m.name+': '+m.purpose).join('<br>'),'neu')],
-        ['Open source',        val(tag(BASECAMP.models[0].openSource),'neu'), val(tag(comp.models.some(m=>m.openSource)),'neu')],
-        ['Training data',      val(BASECAMP.trainingData,'br'),    val(comp.trainingData,'neu')],
-        ['Training tokens',    val(BASECAMP.trainingTokens,'br'),  val(comp.trainingTokens,'neu')],
-      ]
-    },
-    {
-      label:'Data & Scientific Moat',
-      rows:[
-        ['Data scale',         val(BASECAMP.dataScale,'br'),       val(comp.dataScale,'neu')],
-        ['Data uniqueness',    val(BASECAMP.dataUniqueness,'br'),  val(comp.dataUniqueness,'neu')],
-        ['Integrated wet lab', val(tag(BASECAMP.wetLab),'neu'),    val(tag(comp.wetLab),'comp')],
-      ]
-    },
-    {
-      label:'Pipeline & Partnerships',
-      rows:[
-        ['Pipeline targets',   val(BASECAMP.pipelineTargets,'neu'),  val(comp.pipelineTargets,'neu')],
-        ['Therapeutic areas',  val(BASECAMP.therapAreas,'br'),       val(comp.therapAreas,'neu')],
-        ['Pipeline stage',     val(BASECAMP.pipelineStage,'neu'),    val(comp.pipelineStage,'neu')],
-        ['Pharma partners',    val(BASECAMP.pharmaPartners,'neu'),   val(comp.pharmaPartners,'neu')],
-        ['Tech partners',      val(BASECAMP.techPartners,'br'),      val(comp.techPartners,'neu')],
-      ]
-    },
-    {
-      label:'Credibility & Benchmarks',
-      rows:[
-        ['Key publications',   val(BASECAMP.publications,'neu'),   val(comp.publications,'comp')],
-        ['Benchmarks',         val(BASECAMP.benchmarks,'neu'),     val(comp.benchmarks,'comp')],
-      ]
-    },
-  ];
+  // Comparison table — only the sections that belong to this scope
+  const sections = _scopeSections(scope).map(sec=>({label:sec.label, rows:sec.compareRows(BASECAMP, comp)}));
 
   const coHeader = `
     <div class="intel-co-header">
@@ -3465,23 +3705,627 @@ function renderIntel(id){
         </div>`).join('')}
     </div>`).join('');
 
-  document.getElementById('intelGrid').innerHTML = coHeader + rows;
+  document.getElementById(scope+'Grid').innerHTML = coHeader + rows;
 }
 
-// Handle tab switching for intel (check auth)
-const _origSwitchTab = switchTab;
-switchTab = function(tab, btn){
-  _origSwitchTab(tab, btn);
-  if(tab === 'intel'){
-    if(_intelUnlocked){
-      document.getElementById('intelGate').style.display = 'none';
-      document.getElementById('intelContent').style.display = 'block';
-      // Ensure selector buttons exist, then show overview
-      if(!document.getElementById('intelSel').children.length) _buildIntelSel();
-      intelShowOverview();
-    }
-  }
+// ══════════════════════════════════════════════════════════════
+// FOUNDATION MODEL COMPARISON — extra sections (BCR/EDEN monetisation deck, Jul 2026)
+// ══════════════════════════════════════════════════════════════
+
+// ── Modalities: venn diagram + coverage table ──
+const MODALITY_COVERAGE = [
+  {name:'Prima Mente (Pleiades)', dna:1,rna:0,protein:0,small:0,path:0,cell:0},
+  {name:'Variant Bio', dna:1,rna:0,protein:0,small:0,path:0,cell:0},
+  {name:'Verge Genomics', dna:1,rna:0,protein:0,small:0,path:0,cell:0},
+  {name:'Arc (Evo 1/2)', dna:1,rna:1,protein:0,small:0,path:0,cell:0},
+  {name:'Basecamp (EDEN)', dna:1,rna:1,protein:1,small:0,path:0,cell:0},
+  {name:'Radical Numerics', dna:1,rna:1,protein:1,small:0,path:0,cell:0},
+  {name:'Boltz (Boltz-2)', dna:1,rna:1,protein:1,small:1,path:0,cell:0},
+  {name:'Chai (Chai-1)', dna:1,rna:1,protein:1,small:0,path:0,cell:0},
+  {name:'DeepMind (AlphaFold 3)', dna:1,rna:1,protein:1,small:1,path:0,cell:0},
+  {name:'Atomic AI (ATOM-1)', dna:0,rna:1,protein:0,small:0,path:0,cell:0},
+  {name:'Inceptive', dna:0,rna:1,protein:0,small:0,path:0,cell:0},
+  {name:'Xaira (X-Cell)', dna:0,rna:1,protein:0,small:0,path:0,cell:1},
+  {name:'AbCellera', dna:0,rna:0,protein:1,small:0,path:0,cell:0},
+  {name:'Absci (AB-GEN)', dna:0,rna:0,protein:1,small:0,path:0,cell:0},
+  {name:'Boltz (BoltzProt-1)', dna:0,rna:0,protein:1,small:0,path:0,cell:0},
+  {name:'Earendil Labs', dna:0,rna:0,protein:1,small:0,path:0,cell:0},
+  {name:'EvolutionaryScale (ESMC/ESM-3)', dna:0,rna:0,protein:1,small:0,path:0,cell:0},
+  {name:'Generate (Chroma)', dna:0,rna:0,protein:1,small:0,path:0,cell:0},
+  {name:'Latent Labs (Latent-X)', dna:0,rna:0,protein:1,small:0,path:0,cell:0},
+  {name:'Profluent (ProGen3)', dna:0,rna:0,protein:1,small:0,path:0,cell:0},
+  {name:'Iambic (NeuralPlexer2)', dna:0,rna:0,protein:1,small:1,path:0,cell:0},
+  {name:'Isomorphic Labs', dna:0,rna:0,protein:1,small:1,path:0,cell:0},
+  {name:'Boltz (BoltzMol-1)', dna:0,rna:0,protein:0,small:1,path:0,cell:0},
+  {name:'Evotec (PanHunter)', dna:0,rna:0,protein:0,small:1,path:0,cell:0},
+  {name:'Genesis (GEMS)', dna:0,rna:0,protein:0,small:1,path:0,cell:0},
+  {name:'Insilico (Pharma.AI)', dna:0,rna:0,protein:0,small:1,path:0,cell:0},
+  {name:'Schrödinger', dna:0,rna:0,protein:0,small:1,path:0,cell:0},
+  {name:'XtalPi (ID4)', dna:0,rna:0,protein:0,small:1,path:0,cell:0},
+  {name:'Bioptimus (H-optimus)', dna:0,rna:0,protein:0,small:0,path:1,cell:0},
+  {name:'Noetik', dna:0,rna:0,protein:0,small:0,path:1,cell:0},
+  {name:'Tempus', dna:0,rna:0,protein:0,small:0,path:1,cell:0},
+  {name:'Valo Health (Opal)', dna:0,rna:0,protein:0,small:0,path:1,cell:0},
+  {name:'Recursion (Phenom)', dna:0,rna:0,protein:0,small:0,path:0,cell:1},
+];
+
+function renderFMModalities(){
+  const dot = c => `<span class="modcov-dot" style="background:${c}"></span>`;
+  const yn = (v,c) => v ? dot(c) : '';
+  const rows = MODALITY_COVERAGE.map(m=>`
+    <tr>
+      <td>${m.name}</td>
+      <td>${yn(m.dna,'#00b896')}</td>
+      <td>${yn(m.rna,'#2563eb')}</td>
+      <td>${yn(m.protein,'#7c3aed')}</td>
+      <td>${yn(m.small,'#ea580c')}</td>
+      <td>${yn(m.path,'#475569')}</td>
+      <td>${yn(m.cell,'#94a3b8')}</td>
+    </tr>`).join('');
+
+  const group = (pred) => MODALITY_COVERAGE.filter(pred).map(m=>m.name).join(' · ');
+  const dnaOnly = group(m=>m.dna&&!m.rna&&!m.protein);
+  const rnaOnly = group(m=>m.rna&&!m.dna&&!m.protein);
+  const dnaRna = group(m=>m.dna&&m.rna&&!m.protein);
+  const core3 = group(m=>m.dna&&m.rna&&m.protein&&!m.small);
+  const core4 = group(m=>m.dna&&m.rna&&m.protein&&m.small);
+  const proteinOnly = group(m=>m.protein&&!m.dna&&!m.rna&&!m.small);
+  const proteinSmall = group(m=>m.protein&&m.small&&!m.dna&&!m.rna);
+  const smallOnly = group(m=>m.small&&!m.protein);
+  const pathOnly = group(m=>m.path);
+  const cellNote = group(m=>m.cell);
+
+  document.getElementById('fmModalities').innerHTML = `
+    <div class="fm-chart">
+      <div class="fm-title">Bio AI model modalities</div>
+      <div class="fm-sub">Which part of biology each model works on, and where coverage overlaps</div>
+      <div class="venn-wrap">
+        <div class="venn-svg-wrap">
+          <svg viewBox="0 0 760 500" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="230" cy="190" r="150" fill="#00b896" fill-opacity="0.10" stroke="#00b896" stroke-width="2"/>
+            <circle cx="390" cy="190" r="150" fill="#2563eb" fill-opacity="0.10" stroke="#2563eb" stroke-width="2"/>
+            <circle cx="310" cy="320" r="170" fill="#7c3aed" fill-opacity="0.08" stroke="#7c3aed" stroke-width="2"/>
+            <circle cx="470" cy="350" r="140" fill="#ea580c" fill-opacity="0.08" stroke="#ea580c" stroke-width="2"/>
+            <circle cx="680" cy="90" r="72" fill="#475569" fill-opacity="0.10" stroke="#475569" stroke-width="2"/>
+
+            <text x="110" y="90" class="venn-region-label" fill="#00b896">DNA</text>
+            <text x="440" y="90" class="venn-region-label" fill="#2563eb">RNA</text>
+            <text x="185" y="440" class="venn-region-label" fill="#7c3aed">Protein</text>
+            <text x="560" y="460" class="venn-region-label" fill="#ea580c">Small molecule</text>
+            <text x="645" y="45" class="venn-region-label" fill="#475569">Pathology</text>
+
+            <foreignObject x="60" y="105" width="150" height="90"><div xmlns="http://www.w3.org/1999/xhtml" class="venn-co-label">${dnaOnly}</div></foreignObject>
+            <foreignObject x="410" y="105" width="150" height="70"><div xmlns="http://www.w3.org/1999/xhtml" class="venn-co-label">${rnaOnly}</div></foreignObject>
+            <foreignObject x="250" y="105" width="140" height="50"><div xmlns="http://www.w3.org/1999/xhtml" class="venn-co-label">${dnaRna}</div></foreignObject>
+            <foreignObject x="235" y="220" width="150" height="70"><div xmlns="http://www.w3.org/1999/xhtml" class="venn-co-label">${core3}</div></foreignObject>
+            <foreignObject x="345" y="300" width="150" height="60"><div xmlns="http://www.w3.org/1999/xhtml" class="venn-co-label">${core4}</div></foreignObject>
+            <foreignObject x="120" y="330" width="160" height="110"><div xmlns="http://www.w3.org/1999/xhtml" class="venn-co-label">${proteinOnly}</div></foreignObject>
+            <foreignObject x="380" y="380" width="150" height="50"><div xmlns="http://www.w3.org/1999/xhtml" class="venn-co-label">${proteinSmall}</div></foreignObject>
+            <foreignObject x="500" y="420" width="160" height="80"><div xmlns="http://www.w3.org/1999/xhtml" class="venn-co-label">${smallOnly}</div></foreignObject>
+            <foreignObject x="615" y="60" width="140" height="90"><div xmlns="http://www.w3.org/1999/xhtml" class="venn-co-label">${pathOnly}</div></foreignObject>
+          </svg>
+          <div class="venn-cell-note"><strong>Cell modality</strong> (not drawn as its own circle — only 2 models): ${cellNote}</div>
+        </div>
+        <div class="modcov-wrap">
+          <table class="modcov-table">
+            <thead><tr><th>Company (model)</th><th>DNA</th><th>RNA</th><th>Protein</th><th>Small mol</th><th>Pathology</th><th>Cell</th></tr></thead>
+            <tbody>${rows}</tbody>
+          </table>
+        </div>
+      </div>
+    </div>`;
+}
+
+// ── Accessibility tiers ──
+const ACCESS_TIERS = [
+  { title:'Fully open', color:'#00b896', items:[
+    ['Evo 2','Apache 2.0, commercial use OK'],
+    ['Boltz-2','MIT licence permitting academic and commercial use'],
+    ['Chai-1','Apache 2.0, commercial OK (Chai-2 is not)'],
+    ['H-optimus-0','Open source; commercial use OK (H-optimus-1 is not)'],
+    ['Chroma','Code open; weights via a free API key (non-commercial)'],
+  ]},
+  { title:'Free with restrictions', color:'#d97706', items:[
+    ['AlphaFold 3','Free server but usage-capped'],
+    ['ProGen3','Model weights released under a non-commercial usage licence on GitHub/Hugging Face; commercial use goes through licensing / an early-access programme'],
+    ['ESMC','300M (open licence), 600M (non-commercial), 6B (via API)'],
+    ['Latent-X','Free to use on their web platform right now, but weights aren’t released'],
+  ]},
+  { title:'Not free', color:'#475569', items:[
+    ['NeuralPlexer2','v1 code was open; v2 is platform-only'],
+    ['H-optimus-1','Academic access + commercial licensing'],
+    ['Everything else','EDEN, Isomorphic, Insilico, Schrödinger, Tempus, Valo, XtalPi, Evotec, Genesis, Absci, AbCellera, Atomic AI, Variant Bio, Verge, Inceptive, Noetik'],
+  ]},
+];
+
+function renderFMAccessibility(){
+  const cards = ACCESS_TIERS.map(t=>`
+    <div class="access-tier-card">
+      <div class="access-tier-hdr" style="background:${t.color}">${t.title}</div>
+      <div class="access-tier-body">
+        <ul>${t.items.map(([name,note])=>`<li><strong>${name}:</strong> ${note}</li>`).join('')}</ul>
+      </div>
+    </div>`).join('');
+
+  document.getElementById('fmAccessibility').innerHTML = `
+    <div class="fm-chart">
+      <div class="fm-title">Bio AI model accessibility</div>
+      <div class="fm-sub">Licensing terms across the field — what you can actually run, and for what</div>
+      <div class="access-tier-grid">${cards}</div>
+    </div>`;
+}
+
+// ── Model size: parameter bar chart + params-vs-training-data scatter ──
+const SIZE_BAR_DATA = [
+  {name:'Bioptimus (H-optimus-0)', params:0.1},
+  {name:'Bioptimus (H-optimus-1)', params:0.1},
+  {name:'Xaira Therapeutics (X-Cell)', params:2},
+  {name:'BioHub (ESMC)', params:3},
+  {name:'Arc Institute (Evo 1)', params:3},
+  {name:'Prima Mente (Pleiades)', params:3.5},
+  {name:'BCR (EDEN)', params:28, highlight:true},
+  {name:'Arc Institute (Evo 2)', params:40},
+  {name:'Profluent (ProGen3)', params:46},
+  {name:'BioHub (ESM3)', params:98},
+];
+
+const SIZE_SCATTER_DATA = [
+  {name:'Evo 1', params:7, tokens:0.3, type:'nuc'},
+  {name:'Pleiades', params:7, tokens:1.7, type:'nuc'},
+  {name:'EDEN', params:28, tokens:10, type:'eden'},
+  {name:'Evo 2', params:40, tokens:9, type:'nuc'},
+  {name:'ProGen3', params:46, tokens:1.3, type:'amino'},
+  {name:'ESM-3', params:98, tokens:0.6, type:'amino'},
+];
+const SCATTER_COLORS = {nuc:'#2563eb', amino:'#00b896', eden:'#d97706'};
+const SCATTER_LABELS = {nuc:'Nucleotide / genomic tokens', amino:'Amino-acid tokens', eden:'EDEN (Basecamp)'};
+
+function renderFMSizeCharts(){
+  const maxParams = Math.max(...SIZE_BAR_DATA.map(d=>d.params));
+  const sorted = [...SIZE_BAR_DATA].sort((a,b)=>a.params-b.params);
+  const barRows = sorted.map(d=>`
+    <div class="size-bar-row">
+      <div class="size-bar-name${d.highlight?' highlight':''}">${d.name}</div>
+      <div class="size-bar-track"><div class="size-bar-fill${d.highlight?' highlight':''}" style="width:${Math.max(2,d.params/maxParams*100)}%"></div></div>
+      <div class="size-bar-val">${d.params}B</div>
+    </div>`).join('');
+
+  const W=420, H=320, PAD_L=44, PAD_B=32, PAD_T=14, PAD_R=14;
+  const xMin=5, xMax=110, yMin=0.2, yMax=13;
+  const lx = v => PAD_L + (Math.log10(v)-Math.log10(xMin))/(Math.log10(xMax)-Math.log10(xMin)) * (W-PAD_L-PAD_R);
+  const ly = v => (H-PAD_B) - (Math.log10(v)-Math.log10(yMin))/(Math.log10(yMax)-Math.log10(yMin)) * (H-PAD_B-PAD_T);
+  const xTicks=[5,10,20,50,100], yTicks=[0.2,1,2,5,10];
+
+  const gridlines = [
+    ...xTicks.map(v=>`<line x1="${lx(v)}" y1="${PAD_T}" x2="${lx(v)}" y2="${H-PAD_B}" stroke="#e2e8f0" stroke-width="1"/><text x="${lx(v)}" y="${H-PAD_B+16}" font-size="9" text-anchor="middle" fill="#1a2433">${v}</text>`),
+    ...yTicks.map(v=>`<line x1="${PAD_L}" y1="${ly(v)}" x2="${W-PAD_R}" y2="${ly(v)}" stroke="#e2e8f0" stroke-width="1"/><text x="${PAD_L-6}" y="${ly(v)+3}" font-size="9" text-anchor="end" fill="#1a2433">${v}</text>`),
+  ].join('');
+
+  const points = SIZE_SCATTER_DATA.map(d=>{
+    const x=lx(d.params), y=ly(d.tokens), c=SCATTER_COLORS[d.type];
+    const shape = d.type==='amino'
+      ? `<path d="M${x},${y-6} L${x+6},${y+5} L${x-6},${y+5} Z" fill="${c}"/>`
+      : `<circle cx="${x}" cy="${y}" r="6" fill="${c}"/>`;
+    return `${shape}<text x="${x+9}" y="${y+3}" font-size="10" fill="#050a10">${d.name}</text>`;
+  }).join('');
+
+  const legend = Object.keys(SCATTER_LABELS).map(k=>`
+    <div class="scatter-legend-item"><div class="scatter-legend-swatch" style="background:${SCATTER_COLORS[k]}"></div>${SCATTER_LABELS[k]}</div>`).join('');
+
+  document.getElementById('fmSizeCharts').innerHTML = `
+    <div class="fm-chart">
+      <div class="fm-title">Bio AI model size</div>
+      <div class="fm-sub">Parameters, and parameters vs. training data scale. Data-scale/benchmark comparisons for the rest of the field aren't available yet, so this is params-only for now.</div>
+      <div class="size-charts-grid">
+        <div>
+          <div style="font-size:11px;color:var(--muted);margin-bottom:8px">Parameters (billions)</div>
+          <div class="size-bar-list">${barRows}</div>
+        </div>
+        <div class="scatter-wrap">
+          <div style="font-size:11px;color:var(--muted);margin-bottom:8px">Parameters vs. training data (log scale)</div>
+          <svg viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg">
+            ${gridlines}
+            <line x1="${PAD_L}" y1="${PAD_T}" x2="${PAD_L}" y2="${H-PAD_B}" stroke="#1a2433" stroke-width="1"/>
+            <line x1="${PAD_L}" y1="${H-PAD_B}" x2="${W-PAD_R}" y2="${H-PAD_B}" stroke="#1a2433" stroke-width="1"/>
+            <text x="${W/2}" y="${H-4}" font-size="9" text-anchor="middle" fill="#1a2433">Parameters (billions)</text>
+            <text x="12" y="${H/2}" font-size="9" text-anchor="middle" fill="#1a2433" transform="rotate(-90,12,${H/2})">Training data (T tokens)</text>
+            ${points}
+          </svg>
+          <div class="scatter-legend">${legend}</div>
+        </div>
+      </div>
+    </div>`;
+}
+
+// ── Frontier AI × bio-model integrations ──
+const FRONTIER_INTEGRATIONS = [
+  { lab:'Anthropic', sub:'Claude / Claude Science',
+    integrated:[
+      {tags:['mcp'], name:'EDEN', note:'Basecamp Research · Claude Science — AMP + vaccine design †'},
+      {tags:['skill'], name:'Evo 2', note:'Arc Institute · Claude Science — genomics'},
+      {tags:['mcp'], name:'OpenFold3', note:'OpenFold Consortium · Claude Science — structure'},
+      {tags:['skill'], name:'Boltz-2', note:'Boltz · Claude Science — structure & affinity'},
+      {tags:['mcp'], name:'+60 connectors', note:'data & tools — PubMed, 10x, ChEMBL...'},
+      {tags:['apicli'], name:'BoltzProt-1 / BoltzMol-1', note:'Boltz · in Claude Code — protein design & hit discovery'},
+    ], builtInHouse:[], backedSpunOut:[] },
+  { lab:'OpenAI', sub:'ChatGPT / Codex',
+    integrated:[
+      {tags:['mcp'], name:'Life Sciences Plugin', note:"OpenAI's own bundle · in Codex — 50+ tools & databases"},
+      {tags:['apicli'], name:'BoltzProt-1 / BoltzMol-1', note:'Boltz · in Codex — protein design & hit discovery'},
+    ],
+    builtInHouse:[
+      {name:'GPT-RosaInd', note:'OpenAI — life-sciences reasoning model (2026)'},
+      {name:'GPT-4b micro', note:'OpenAI with Retro Biosciences — protein engineering'},
+    ],
+    backedSpunOut:[{name:'Chai Discovery', note:'investor · biomolecular models'}] },
+  { lab:'Google DeepMind', sub:'Gemini',
+    integrated:[{tags:['apicli'], name:'BoltzProt-1 / BoltzMol-1', note:'Boltz · in Gemini CLI — protein design & hit discovery'}],
+    builtInHouse:[
+      {name:'AlphaFold 3', note:'DeepMind — structure & interactions'},
+      {name:'AlphaGenome', note:'DeepMind — genome / DNA'},
+      {name:'TxGemma', note:'DeepMind — therapeutic-development LLM'},
+    ],
+    backedSpunOut:[{name:'Isomorphic Labs', note:'DeepMind spin-out · drug design'}] },
+  { lab:'Microsoft', sub:'Copilot / Azure AI Foundry',
+    integrated:[],
+    builtInHouse:[
+      {name:'BioEmu', note:'MSR · Azure AI Foundry — protein dynamics / ensembles'},
+      {name:'EvoDiff', note:'MSR · Azure AI Foundry — protein sequence design'},
+    ], backedSpunOut:[] },
+  { lab:'Meta', sub:'',
+    integrated:[],
+    builtInHouse:[{name:'ESM / ESMFold', note:'Meta — protein language models'}],
+    backedSpunOut:[{name:'EvolutionaryScale', note:'spun out of Meta · 2024 — ESM3'}] },
+  { lab:'NVIDIA', sub:'BioNeMo — compute/hosting substrate ‡',
+    integrated:[
+      {tags:['hosted'], name:'ESM3', note:'EvolutionaryScale — protein design'},
+      {tags:['hosted'], name:'Recursion', note:'hosted models — phenomics'},
+      {tags:['hosted'], name:'Boltz-2', note:'Boltz — structure & affinity'},
+      {tags:['buildson'], name:'EDEN', note:'Basecamp Research — trains on BioNeMo'},
+      {tags:['hosted'], name:'OpenFold', note:'OpenFold Consortium — structure'},
+      {tags:['buildson'], name:'Chai', note:'Chai Discovery — model development'},
+      {tags:['buildson'], name:'Dyno, Terray, Natera, Apheris + others', note:'on BioNeMo'},
+    ],
+    builtInHouse:[{name:'Clara', note:'NVIDIA — RNAPro, ReaSyn v2'}],
+    backedSpunOut:[{name:'Recursion', note:'investor · $50M · 2023 · via NVentures'}] },
+  { lab:'Amazon / AWS', sub:'Bedrock · SageMaker · HealthOmics — substrate ‡',
+    integrated:[
+      {tags:['hosted'], name:'ESM3', note:'EvolutionaryScale — SageMaker / Bedrock / HealthOmics'},
+      {tags:['hosted'], name:'+ open bio FMs', note:'Bedrock catalogue — structure & sequence'},
+    ],
+    builtInHouse:[{name:'Bio Discovery', note:'AWS — agentic discovery platform (2026)'}],
+    backedSpunOut:[{name:'EvolutionaryScale', note:'investor · seed round'}] },
+];
+
+const TAG_LABEL = {mcp:'MCP', skill:'skill', apicli:'API/CLI', hosted:'hosted', buildson:'builds-on'};
+
+function renderFMIntegrations(){
+  const entryHtml = e => `<div class="ft-entry">${(e.tags||[]).map(t=>`<span class="pill pill-${t}">${TAG_LABEL[t]}</span>`).join('')}<span class="ft-entry-name">${e.name}</span><div class="ft-entry-note">${e.note}</div></div>`;
+  const colHtml = list => list.length ? list.map(entryHtml).join('') : '<span class="dm-empty">—</span>';
+
+  const rows = FRONTIER_INTEGRATIONS.map(r=>`
+    <tr>
+      <td class="ft-lab">${r.lab}${r.sub?`<div class="ft-lab-sub">${r.sub}</div>`:''}</td>
+      <td>${colHtml(r.integrated)}</td>
+      <td>${colHtml(r.builtInHouse)}</td>
+      <td>${colHtml(r.backedSpunOut)}</td>
+    </tr>`).join('');
+
+  document.getElementById('fmIntegrations').innerHTML = `
+    <div class="fm-chart">
+      <div class="fm-title">Frontier AI × bio-model integrations</div>
+      <div class="fm-sub">
+        <span class="pill pill-mcp">MCP</span> Model Context Protocol connector ·
+        <span class="pill pill-skill">skill</span> native BioNeMo skill ·
+        <span class="pill pill-apicli">API/CLI</span> API, SDK or coding-agent command line ·
+        <span class="pill pill-hosted">hosted</span> served on a cloud/compute substrate ·
+        <span class="pill pill-buildson">builds-on</span> company trains/develops its model on that substrate
+      </div>
+      <div class="wide-table-scroll">
+        <table class="frontier-table">
+          <thead><tr><th>Frontier AI</th><th>Integrated / callable</th><th>Built in-house</th><th>Backed / spun out</th></tr></thead>
+          <tbody>${rows}</tbody>
+        </table>
+      </div>
+      <p style="margin-top:12px;font-size:10.5px;color:var(--muted);line-height:1.6">
+        † Basecamp Research's EDEN is available as a Claude connector for antimicrobial-peptide / antibiotic and vaccine-target design.
+        ‡ NVIDIA BioNeMo, AWS and Azure AI Foundry are compute / hosting layers, not LLM labs — shown as the substrate beneath the integrations.
+        Both Anthropic (Claude Science) and OpenAI (Codex Life Sciences plugin, 2026) now run open connector layers; Google, Microsoft and Meta lean on their own models.
+        Boltz's June 2026 agentic API (BoltzProt-1 protein design, BoltzMol-1 hit discovery) integrates with Claude Code, OpenAI Codex and Gemini CLI — distinct from Boltz-2, the structure/affinity research model hosted on BioNeMo.
+        Distinct from "powered-by": firms such as EvolutionaryScale, Manifold and FutureHouse build their products on these LLMs rather than being integrated into them.
+      </p>
+    </div>`;
+}
+
+// ── API access & pricing ──
+const API_PRICING = [
+  {model:'Boltz-2 / BoltzMol-1 / BoltzProt-1', company:'Boltz', fee:'Per-run<br><span style="color:var(--muted);font-size:10px">confirmed</span>',
+    pricing:[{tag:'metered',text:'From $0.025 per prediction, no minimum'}],
+    access:'Open weights (Boltz-2) + hosted pipelines',
+    notes:'Only bills for compounds actually scored. No subscription, no upfront commitment.'},
+  {model:'AlphaFold 3', company:'DeepMind / Isomorphic Labs', fee:'Free tier: rate-limited, not a fee<br><span style="color:var(--muted);font-size:10px">commercial: undisclosed</span>',
+    pricing:[{tag:'free',text:'Non-commercial (30 jobs/day cap)'},{tag:'undisclosed',text:'Commercial: no public per-run or subscription price'}],
+    access:'Closed weights (server); academic weights open',
+    notes:"Isomorphic's real commercial vehicle is milestone-based pharma deals (see deal matrix), not a software fee."},
+  {model:'ProGen3', company:'Profluent', fee:'Unknown — possibly royalty-based, not a software fee',
+    pricing:[{tag:'undisclosed',text:'"Licence molecule assets" or early-access API, BD-gated'}],
+    access:'Closed',
+    notes:'Language suggests asset/royalty licensing (like a pharma deal) may be the real commercial path, not per-run API revenue.'},
+  {model:'ESM C (ESMC)', company:'EvolutionaryScale', fee:'Free (300M/600M)<br><span style="color:var(--muted);font-size:10px">6B: usage-based (exact metering unit not confirmed)</span>',
+    pricing:[{tag:'free',text:'Open weights, self-hosted'},{tag:'metered',text:'6B via AWS SageMaker marketplace'}],
+    access:'Open (300M/600M) + closed (6B)',
+    notes:'ESM3 (generative) is separate and commercial use is direct-inquiry only — likely negotiated, not metered.'},
+  {model:'Chai-1 / Chai-2', company:'Chai Discovery', fee:'Free (Chai-1)<br>Upfront / annual (Chai-2)<br><span style="color:var(--muted);font-size:10px">confirmed, not per-run</span>',
+    pricing:[{tag:'free',text:'Chai-1 (Apache 2.0)'},{tag:'flatfee',text:'Chai-2: annual access fee'}],
+    access:'Open (Chai-1) + closed (Chai-2)',
+    notes:'Lilly deal reportedly adds a third layer: a discovery royalty (~0.5–5%) on top of the flat access fee.'},
+  {model:'LatentX', company:'Latent Labs', fee:'Unknown — no public structure of any kind',
+    pricing:[{tag:'undisclosed',text:''}],
+    access:'Closed',
+    notes:'Beta platform, partnership-gated. Could be per-run, flat fee, or royalty — not published.'},
+  {model:'NeuralPlexer2', company:'Iambic Therapeutics', fee:'N/A — not sold',
+    pricing:[{tag:'internal',text:'Internal only'}],
+    access:'Closed, in-house',
+    notes:"Powers Iambic's own pipeline (e.g. IAM1363); no external fee structure exists."},
+  {model:'H-Optimus-1', company:'Bioptimus', fee:'Free (research)<br><span style="color:var(--muted);font-size:10px">commercial: usage-based assumed, not confirmed</span>',
+    pricing:[{tag:'free',text:'Open weights, non-commercial'},{tag:'undisclosed',text:'AWS Marketplace billing detail not disclosed'}],
+    access:'Open (research) + marketplace (commercial)',
+    notes:'Histopathology, not molecule design. AWS listing may be per-call or a flat marketplace subscription — not specified publicly.'},
+  {model:'OpenFold3', company:'OpenFold Consortium', fee:'Free — no fee at all',
+    pricing:[{tag:'free',text:'Fully open-source, self-hosted'}],
+    access:'Open weights',
+    notes:'You only pay your own compute. Monetization happens indirectly via hosts (NVIDIA, Tamarind).'},
+  {model:'BioNeMo NIM microservices', company:'NVIDIA', fee:'Per-run (free-tier credits, then metered)<br>Upfront / annual for production (AI Enterprise licence)',
+    pricing:[{tag:'metered',text:'Free tier: 1,000 credits, 40 req/min'},{tag:'flatfee',text:'AI Enterprise: per-GPU/node annual licence, independent of usage'}],
+    access:'Hosts many of the above as containerized endpoints',
+    notes:'Two different structures depending on scale: pay-as-you-go for light use, flat subscription for production deployment.'},
+  {model:'EDEN', company:'Basecamp Research', fee:'N/A — no structure yet',
+    pricing:[{tag:'undisclosed',text:'Not yet priced'}],
+    access:'Closed',
+    notes:'For reference: the only model here with no API, fee, or licence structure of any kind, per-run or otherwise.'},
+];
+
+function renderFMApiPricing(){
+  const rows = API_PRICING.map(r=>`
+    <tr>
+      <td><strong>${r.model}</strong></td>
+      <td>${r.company}</td>
+      <td>${r.fee}</td>
+      <td>${r.pricing.map(p=>`<span class="pill pill-${p.tag}">${p.tag==='flatfee'?'flat fee':p.tag}</span> ${p.text}`).join('<br>')}</td>
+      <td>${r.access}</td>
+      <td class="api-notes">${r.notes}</td>
+    </tr>`).join('');
+
+  document.getElementById('fmApiPricing').innerHTML = `
+    <div class="fm-chart">
+      <div class="fm-title">AI-bio model APIs: access &amp; pricing</div>
+      <div class="fm-sub">
+        <span class="pill pill-metered">metered</span> pay per prediction ·
+        <span class="pill pill-free">free/open</span> no cost for the stated use case ·
+        <span class="pill pill-flatfee">licence/enterprise</span> annual fee or negotiated terms ·
+        <span class="pill pill-internal">internal only</span> not externally monetized
+      </div>
+      <div class="wide-table-scroll">
+        <table class="api-table">
+          <thead><tr><th>Model</th><th>Company</th><th>Fee structure</th><th>Pricing</th><th>Access model</th><th>Notes</th></tr></thead>
+          <tbody>${rows}</tbody>
+        </table>
+      </div>
+      <p style="margin-top:12px;font-size:10.5px;color:var(--muted);line-height:1.6">"Confirmed" fee structures are stated directly by the company; "unconfirmed/unclear" rows are inferred from indirect evidence and should not be treated as fact. Pricing reflects publicly disclosed terms as of mid-2026.</p>
+    </div>`;
+}
+
+// ══════════════════════════════════════════════════════════════
+// COMMERCIAL COMPARISONS — Business Models sub-tab
+// ══════════════════════════════════════════════════════════════
+const BIZMODEL_CATEGORIES = [
+  {key:'drug', title:'Become the drug company', desc:'Revenue comes from the drugs, not the model. Out-license or co-develop assets (generated through the model) with pharma for upfront + milestones + royalties, while building an internal clinical pipeline.', examples:'Isomorphic Labs · Insilico Medicine · Chai Discovery · Xaira Therapeutics · Profluent'},
+  {key:'open', title:'Open core + enterprise layer', desc:'Revenue comes from access to a better/custom version of the model. Give the base model away to drive adoption and validation, then charge for custom models, enterprise deployment (e.g. API) or advanced features.', examples:'Boltz Bio · Latent Labs · Bioptimus'},
+  {key:'data', title:'Data play + platform licensing', desc:'Revenue comes from ongoing access to run queries against private data. The differentiated dataset is the asset — partners pay to query it or run it against their own proprietary data.', examples:'Variant Bio · Bioptimus'},
+  {key:'nonrev', title:'Non-revenue generating / philanthropy', desc:'No clear revenue yet. Well-funded, technically strong, but no proven revenue engine, or funded by philanthropy rather than commercial demand.', examples:'EvolutionaryScale · Arc Institute (Evo 2)'},
+];
+
+const BIZMODEL_DETAILS = {
+  drug: [
+    {name:'Isomorphic Labs', raised:'$2.68B Series B (May 2026)', area:'small molecules', body:'Pharma deals: Lilly ($45M upfront to discover small-molecule therapies + $1.7B in milestones), Novartis, J&amp;J. Now building an internal pipeline (oncology, immunology) — first IND expected end of 2026.'},
+    {name:'Chai Discovery', raised:'$230M raised', area:'', body:'<strong>Eli Lilly deal:</strong> Lilly will deploy Chai\'s frontier AI platform to design novel biologic therapeutics for multiple targets, using a bespoke model trained on Lilly\'s own proprietary data.<br><strong>Open core + enterprise layer too:</strong> Chai-1 (structure prediction) is open-sourced for community credibility; Chai-2 (antibody design) is gated, selective access for vetted pharma partners.'},
+    {name:'Insilico Medicine', raised:'$292M raised', area:'', body:'Out-licensing deals: Lilly (up to $2.75B), Menarini ($550M), Exelixis ($80M upfront). Own lead asset (rentosertib, fibrosis) already in Phase 2. Also runs an enterprise software subscription (13 of top 20 pharma) — no open core.'},
+    {name:'Xaira Therapeutics', raised:'$1.3B raised', area:'', body:'Looking for partners to develop preclinical models for a specific disease area of interest, and for a licensing deal. No disease areas, programs or candidates declared publicly yet. Focused on "really hard targets and large molecule therapeutics".'},
+    {name:'Profluent', raised:'$150M raised', area:'antibodies, gene editing', body:'Lilly: up to $2.25B in development and commercial milestones. Profluent applies its AI models to design and optimise site-specific recombinases for multiple genomic targets; Lilly gets an exclusive licence to advance selected recombinases through in vivo research, preclinical development, clinical studies and commercialisation.'},
+  ],
+  open: [
+    {name:'Boltz Bio', raised:'$28M seed', area:'', body:'<strong>Open core + API:</strong> Boltz-1/2 fully open; API — same models, 200 free predictions/month, then from $0.025 per molecule.<br><strong>Enterprise layer:</strong> multi-year exclusive model deal with Pfizer (built on Pfizer\'s data); Takeda gets org-wide access to Boltz\'s proprietary models (BoltzMol-1, BoltzProt-1).'},
+    {name:'Latent Labs', raised:'$50M raised', area:'', body:'No open core any more — used to have a public model, LatentX (protein binder design). Enterprise layer: LatentY will be available to selected partners only.'},
+    {name:'Bioptimus', raised:'$76M raised', area:'', body:'<strong>Open core:</strong> H-Optimus-0 (pathology prediction) is freely available.<br><strong>Enterprise layer:</strong> M-Optimus (multimodal model) for select pharma clients.<br><strong>Data moat:</strong> STELA database — the proprietary data engine, stays internal, feeds M-Optimus.'},
+  ],
+  data: [
+    {name:'Variant Bio', raised:'$200M in combined pharma deals', area:'', body:'Launched Inference — partners upload their own data or query Variant\'s proprietary dataset directly. Multi-year deals incl. $120M with Boehringer Ingelheim (kidney disease).'},
+    {name:'Bioptimus', raised:'$76M raised', area:'', body:'Same STELA data-engine play as above — H-Optimus-0 open core drives adoption; M-Optimus + STELA access is the data-play revenue layer for pharma clients. Bioptimus genuinely spans both this category and open core + enterprise.'},
+  ],
+  nonrev: [
+    {name:'EvolutionaryScale / BioHub', raised:'$142M raised → acquired', area:'', body:'Open source: ESM3 open for research.'},
+    {name:'Arc Institute (Evo 2)', raised:'$650M raised in philanthropic funding', area:'', body:'Open core: Evo2 model is freely available.'},
+  ],
 };
+
+function renderBusinessModels(){
+  const catCards = BIZMODEL_CATEGORIES.map(c=>`
+    <div class="bizmodel-cat-card">
+      <div class="bizmodel-cat-title">${c.title}</div>
+      <div class="bizmodel-cat-desc">${c.desc}</div>
+      <div class="bizmodel-cat-examples"><strong>Examples:</strong> ${c.examples}</div>
+    </div>`).join('');
+
+  const detailSections = BIZMODEL_CATEGORIES.map(c=>{
+    const cards = (BIZMODEL_DETAILS[c.key]||[]).map(d=>`
+      <div class="bizmodel-co-card">
+        <div class="bizmodel-co-name">${d.name}</div>
+        <div class="bizmodel-co-raised">${d.raised}${d.area?' · '+d.area:''}</div>
+        <div class="bizmodel-co-body">${d.body}</div>
+      </div>`).join('');
+    return `
+      <div class="fm-title" style="margin-top:8px">${c.title}</div>
+      <div class="bizmodel-detail-grid">${cards}</div>`;
+  }).join('');
+
+  document.getElementById('bizmodelsRoot').innerHTML = `
+    <div class="fm-chart">
+      <div class="fm-title">How are AI-bio companies generating revenue?</div>
+      <div class="fm-sub">Many companies blend more than one of these models — few pick just one</div>
+      <div class="bizmodel-cat-grid">${catCards}</div>
+      <div class="bizmodel-quote">"No one has figured out the right business model for how AI companies commercialize in life sciences. If anybody says they have a formula, they're just full of it." — Eric Nguyen (Radical Numerics), June 2026</div>
+      ${detailSections}
+      <div class="fm-title" style="margin-top:8px">Still figuring it out</div>
+      <div class="bizmodel-still">
+        <strong>Prima Mente</strong> and <strong>Radical Numerics</strong> ($50M seed) haven't settled on a model yet — Radical Numerics is considering a mix of API access, licensing, custom fine-tuned models and milestone payments. No clear revenue engine established for either.
+      </div>
+      <p style="margin-top:8px;font-size:11px;color:var(--muted)">Getting bought is also an exit/outcome in its own right — e.g. Coefficient Bio.</p>
+    </div>`;
+}
+
+// ══════════════════════════════════════════════════════════════
+// COMMERCIAL COMPARISONS — Pharma Deals sub-tab
+// ══════════════════════════════════════════════════════════════
+const PHARMA_DEALS = [
+  {pharma:'Lilly', molecule:[
+      {co:'Isomorphic', val:'$1.7B · 2024', note:'small-molecule targets'},
+      {co:'Genesis', val:'$670M · 2022', note:'challenging targets'},
+      {co:'Insilico', val:'$2.75B · 2026', note:'oral therapeutics'},
+      {co:'Profluent', val:'$2.25B', note:'genetic medicine'},
+      {co:'XtalPi', val:'$250M · 2023', note:'small-molecule discovery'},
+      {co:'Superluminal', val:'$1.3B · 2025', note:'GPCRs (obesity)'},
+    ], model:[{co:'Chai', val:'undisclosed · 2026', note:'bespoke model on Lilly\'s data †'}], broad:[]},
+  {pharma:'Takeda', molecule:[
+      {co:'Iambic', val:'$1.7B · 2026', note:'oncology, GI & inflammation'},
+      {co:'Nabla Bio', val:'$1B+ · 2025', note:'de novo antibodies'},
+      {co:'Insilico', val:'$600M · 2026', note:'multi-area discovery'},
+    ], model:[{co:'Boltz', val:'undisclosed · 2026', note:'org-wide model licence'}], broad:[]},
+  {pharma:'Novartis', molecule:[
+      {co:'Isomorphic', val:'$1.2B · 2024', note:'3 targets'},
+      {co:'Generate', val:'$1B+ · 2024', note:'protein-based therapeutics'},
+    ], model:[], broad:[{co:'Microsoft', val:'undisclosed · 2019', note:'org-wide AI & data lab'}]},
+  {pharma:'Bayer', molecule:[
+      {co:'Recursion', val:'$1.5B · 2023', note:'precision oncology'},
+      {co:'Aignostics', val:'undisclosed · 2024', note:'target ID (computational pathology)'},
+    ], model:[{co:'Iambic', val:'undisclosed · 2026', note:'small-molecule discovery'}], broad:[{co:'Cradle', val:'undisclosed · 2026', note:'antibody platform (3-yr)'}]},
+  {pharma:'Sanofi', molecule:[
+      {co:'Earendil', val:'$2.5B · 2026', note:'autoimmune / inflammation'},
+      {co:'Recursion', val:'~$130M · 2022', note:'oncology & immunology ‡§'},
+    ], model:[], broad:[]},
+  {pharma:'J&amp;J', molecule:[
+      {co:'Isomorphic', val:'undisclosed · 2026', note:'targets undisclosed'},
+      {co:'Proxima', val:'undisclosed · 2022', note:'protein degraders'},
+    ], model:[], broad:[]},
+  {pharma:'Menarini', molecule:[{co:'Insilico', val:'$550M · 2024-25', note:'oncology (KAT6, ER+ breast)'}], model:[], broad:[]},
+  {pharma:'Exelixis', molecule:[{co:'Insilico', val:'$80M up front · 2023', note:'oncology (USP1, BRCA-mut)'}], model:[], broad:[]},
+  {pharma:'Amgen', molecule:[{co:'Generate', val:'~$1.9B · 2022', note:'multiple targets'}], model:[], broad:[]},
+  {pharma:'BMS', molecule:[
+      {co:'Proxima', val:'$674M · 2024', note:'molecular glues'},
+      {co:'insitro', val:'undisclosed · 2020', note:'ALS (neuroscience)'},
+      {co:'Exscientia', val:'$1.2B · 2021', note:'oncology & immunology ‡'},
+      {co:'Nabla Bio', val:'undisclosed · 2024', note:'de novo antibodies'},
+    ], model:[], broad:[]},
+  {pharma:'Roche', molecule:[
+      {co:'Recursion', val:'$12B · 2021', note:'neuroscience & GI onco'},
+      {co:'Genesis', val:'undisclosed', note:'via Genentech'},
+    ], model:[], broad:[]},
+  {pharma:'Merck (KGaA) ¶', molecule:[{co:'Recursion', val:'$674M · 2023', note:'oncology & immunology'}], model:[], broad:[]},
+  {pharma:'Merck &amp; Co ¶', molecule:[], model:[], broad:[{co:'Protillion', val:'$510M · 2026', note:'protein-design training data (Prot-MaP)'}]},
+  {pharma:'Novo Nordisk', molecule:[
+      {co:'Valo Health', val:'$4.6B · 2023', note:'cardiometabolic (obesity, T2D, CV)'},
+      {co:'Cellular Intelligence', val:'undisclosed · 2026', note:'Parkinson\'s cell therapy ‖'},
+    ], model:[], broad:[{co:'OpenAI', val:'undisclosed · 2026', note:'enterprise-wide, discovery to commercial ops'}]},
+  {pharma:'AstraZeneca', molecule:[
+      {co:'Absci', val:'$247M · 2023', note:'oncology'},
+      {co:'Nabla Bio', val:'undisclosed · 2024', note:'de novo antibodies'},
+    ], model:[
+      {co:'Verge', val:'$840M · 2023', note:'rare neuro ‡'},
+      {co:'Immunai', val:'$37.5M · 2026', note:'AMICA-OS oncology clinical dev ‡'},
+    ], broad:[]},
+  {pharma:'Gilead', molecule:[{co:'insitro', val:'$1B+ · 2019', note:'NASH / MASH'}], model:[], broad:[]},
+  {pharma:'AbbVie', molecule:[{co:'AbCellera', val:'undisclosed · 2022', note:'antibody discovery (up to 5 targets)'}], model:[], broad:[]},
+  {pharma:'Incyte', molecule:[{co:'Genesis', val:'$1B+ · 2026', note:'oncology & I&amp;I'}], model:[], broad:[]},
+  {pharma:'Almirall', molecule:[{co:'Absci', val:'$650M · 2023', note:'dermatology'}], model:[], broad:[]},
+  {pharma:'Pfizer', molecule:[], model:[
+      {co:'Boltz', val:'undisclosed · 2026', note:'bespoke model on Pfizer\'s data †'},
+      {co:'Chai', val:'undisclosed · 2026', note:'Chai-3 + custom model'},
+      {co:'XtalPi', val:'undisclosed · 2025', note:'molecular-modelling platform'},
+    ], broad:[]},
+  {pharma:'GSK', molecule:[], model:[
+      {co:'Boltz', val:'undisclosed · 2026', note:'platform + models on GSK\'s data †'},
+      {co:'Noetik', val:'$50M · 2026', note:'virtual-cell models (onco)'},
+    ], broad:[]},
+  {pharma:'Boehringer Ingelheim', molecule:[], model:[], broad:[{co:'Variant Bio', val:'~$120M', note:'kidney disease (genetic data)'}]},
+];
+
+function renderPharmaDeals(){
+  const entryHtml = (e) => `<div class="dm-entry"><span class="dm-co">${e.co}</span> <span class="dm-val">${e.val}</span><br><span class="dm-val">${e.note}</span></div>`;
+  const colHtml = (list) => list.length ? list.map(entryHtml).join('') : '<span class="dm-empty">—</span>';
+
+  const rows = PHARMA_DEALS.map(p=>`
+    <tr>
+      <td class="dm-pharma">${p.pharma}</td>
+      <td>${colHtml(p.molecule)}</td>
+      <td>${colHtml(p.model)}</td>
+      <td>${colHtml(p.broad)}</td>
+    </tr>`).join('');
+
+  // Network diagram — derived from the same dataset as the matrix above
+  const edges = [];
+  PHARMA_DEALS.forEach(p=>{
+    p.molecule.forEach(e=>edges.push({pharma:p.pharma, co:e.co, type:'molecule'}));
+    p.model.forEach(e=>edges.push({pharma:p.pharma, co:e.co, type:'model'}));
+    p.broad.forEach(e=>edges.push({pharma:p.pharma, co:e.co, type:'broad'}));
+  });
+  const pharmaList = PHARMA_DEALS.map(p=>p.pharma);
+  const coList = [...new Set(edges.map(e=>e.co))].sort();
+
+  const rowH = 20, topPad = 20, leftX = 190, rightX = 520, W = 700;
+  const H = topPad*2 + Math.max(pharmaList.length, coList.length) * rowH;
+  const pharmaY = {}; pharmaList.forEach((p,i)=>pharmaY[p]=topPad+i*rowH);
+  const coY = {}; coList.forEach((c,i)=>coY[c]=topPad+i*rowH);
+  const TYPE_COLOR = {molecule:'#00b896', model:'#ea580c', broad:'#7c3aed'};
+
+  const lines = edges.map(e=>`<line x1="${leftX}" y1="${pharmaY[e.pharma]}" x2="${rightX}" y2="${coY[e.co]}" stroke="${TYPE_COLOR[e.type]}" stroke-width="1.2" stroke-opacity="0.45"/>`).join('');
+  const pharmaLabels = pharmaList.map(p=>`<text x="${leftX-8}" y="${pharmaY[p]+3}" text-anchor="end" class="deal-net-label" font-weight="700">${p}</text>`).join('');
+  const coLabels = coList.map(c=>`<text x="${rightX+8}" y="${coY[c]+3}" class="deal-net-label">${c}</text>`).join('');
+
+  document.getElementById('pharmaDealsRoot').innerHTML = `
+    <div class="fm-chart">
+      <div class="fm-title">Pharma deal network</div>
+      <div class="fm-sub">Every disclosed pharma ↔ AI-bio company relationship, coloured by deal type</div>
+      <div class="deal-legend">
+        <div class="deal-legend-item"><div class="deal-legend-line" style="background:${TYPE_COLOR.molecule}"></div><strong>Molecule-linked</strong> — value tied to a specific drug programme (out-licensing / co-development)</div>
+        <div class="deal-legend-item"><div class="deal-legend-line" style="background:${TYPE_COLOR.model}"></div><strong>Model-linked</strong> — the model itself (or a version customised on pharma data) is what's being sold</div>
+        <div class="deal-legend-item"><div class="deal-legend-line" style="background:${TYPE_COLOR.broad}"></div><strong>Broad capability &amp; data</strong> — org-wide AI or data partnership</div>
+      </div>
+      <div class="deal-net-wrap">
+        <svg viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg">
+          ${lines}
+          ${pharmaLabels}
+          ${coLabels}
+        </svg>
+      </div>
+    </div>
+
+    <div class="fm-chart">
+      <div class="fm-title">AI-bio pharma deals</div>
+      <div class="fm-sub">Molecule-linked, model-linked and broad-capability deals by pharma — gaps are visible by what's missing from a row</div>
+      <div class="deal-matrix-scroll">
+        <table class="deal-matrix-table">
+          <thead><tr><th>Pharma</th><th>Molecule-linked</th><th>Model-linked</th><th>Broad capability &amp; data</th></tr></thead>
+          <tbody>${rows}</tbody>
+        </table>
+      </div>
+      <p style="margin-top:12px;font-size:10.5px;color:var(--muted);line-height:1.7">
+        Values are total potential deal value incl. milestones unless an up-front figure is noted.
+        † Bespoke model on the pharma's own data (the product is the model, so no separate indication). ‡ Sanofi also has ties to OpenAI / Formation Bio, BioMap; AstraZeneca also to BenevolentAI. Immunai's $37.5M/2026 figure is the latest of three expansions to an ongoing multi-year deal (through 2027) — not a cumulative total.
+        § Exscientia merged into Recursion (2024), so Sanofi's and BMS's programmes are now one company.
+        ¶ Merck KGaA (Darmstadt) and Merck &amp; Co (US) are unrelated firms sharing a historical name. Protillion's Prot-MaP is a training-data generation platform, not a foundation model itself.
+        ‖ Reverse structure: Novo Nordisk out-licensed this asset to Cellular Intelligence and took an equity stake, remaining eligible for milestones/royalties.
+      </p>
+    </div>`;
+}
 
 </script>
 </body>
