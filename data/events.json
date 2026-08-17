@@ -1,21 +1,5 @@
 [
   {
-    "name": "Founder Fridays: The AI Collective x Unstuck Labs",
-    "date": "2026-08-14",
-    "end_date": "2026-08-14",
-    "location": "Boston, MA, USA",
-    "url": "aic-dc-8-14",
-    "type": "meetup",
-    "tags": [
-      "AI",
-      "biology"
-    ],
-    "virtual": false,
-    "description": "",
-    "source": "luma",
-    "auto": true
-  },
-  {
     "name": "Future of Work with AI: Session 4 - \"Be-Skilled\"",
     "date": "2026-08-19",
     "end_date": "2026-08-20",
