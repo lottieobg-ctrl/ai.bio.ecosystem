@@ -16,6 +16,38 @@
     "auto": true
   },
   {
+    "name": "SoulSearch Phoenix-Glendale Enlightenment Expo - Psychic & Healing Fair",
+    "date": "2026-08-22",
+    "end_date": "2026-08-24",
+    "location": "Boston, MA, USA",
+    "url": "phoenix-glendale-az",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
+    "name": "PauseAI Phoenix Monthly Social 🍨",
+    "date": "2026-08-22",
+    "end_date": "2026-08-22",
+    "location": "Boston, MA, USA",
+    "url": "zznihsoq",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
     "name": "Future of Work with AI: Session 5 - \"The Window\"",
     "date": "2026-08-26",
     "end_date": "2026-08-27",
@@ -48,6 +80,54 @@
     "auto": true
   },
   {
+    "name": "Workshop Wednesday- 18 Years of Crypto & Blockchain",
+    "date": "2026-08-27",
+    "end_date": "2026-08-27",
+    "location": "Boston, MA, USA",
+    "url": "i72lzhxu",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
+    "name": "AZ AI Syndicate - Fall Kickoff",
+    "date": "2026-08-28",
+    "end_date": "2026-08-28",
+    "location": "Boston, MA, USA",
+    "url": "gy00ges0",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
+    "name": "AI Film 3: AI Entertainment Con",
+    "date": "2026-09-17",
+    "end_date": "2026-09-20",
+    "location": "Boston, MA, USA",
+    "url": "u5eggp69",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
     "name": "Biotech Week Boston 2026",
     "date": "2026-09-21",
     "end_date": "2026-09-25",
@@ -63,6 +143,22 @@
     "virtual": false,
     "description": "Annual celebration of the Boston biotech ecosystem with programming, tours and networking across the cluster.",
     "auto": false
+  },
+  {
+    "name": "HeyGen AI Class",
+    "date": "2026-09-23",
+    "end_date": "2026-09-23",
+    "location": "Boston, MA, USA",
+    "url": "nhptvbcb",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
   },
   {
     "name": "HLTH 2026",
@@ -112,7 +208,7 @@
       "clinical"
     ],
     "virtual": false,
-    "description": "American Society of Human Genetics annual meeting \u2014 a key forum for AI-driven genetics and genomics research.",
+    "description": "American Society of Human Genetics annual meeting — a key forum for AI-driven genetics and genomics research.",
     "auto": false
   },
   {
@@ -129,11 +225,11 @@
       "digital health"
     ],
     "virtual": false,
-    "description": "Annual congress focused on biodata, AI and precision medicine \u2014 bringing together data scientists, clinicians and industry leaders.",
+    "description": "Annual congress focused on biodata, AI and precision medicine — bringing together data scientists, clinicians and industry leaders.",
     "auto": false
   },
   {
-    "name": "NeurIPS 2026 \u2014 ML for Biology Workshop",
+    "name": "NeurIPS 2026 — ML for Biology Workshop",
     "date": "2026-12-05",
     "end_date": "2026-12-06",
     "location": "TBC",
@@ -146,7 +242,7 @@
       "computational"
     ],
     "virtual": false,
-    "description": "Annual machine learning for biology workshop co-located with NeurIPS \u2014 a key venue for AI \u00d7 biology research presentations.",
+    "description": "Annual machine learning for biology workshop co-located with NeurIPS — a key venue for AI × biology research presentations.",
     "auto": false
   }
 ]
