@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-20T08:49:13Z",
+  "last_updated": "2026-08-21T08:51:26Z",
   "companies": [
     {
       "name": "XtalPi",
@@ -611,11 +611,11 @@
       "funding": "~\u00a350M total \u2014 Series B. Traded on AIM (London Stock Exchange).",
       "stage": "series-b",
       "needs_review": true,
-      "review_headline": "Chip startup Olix raises $312m at $3.3bn valuation, backed by UK gov\u2019t Sovereign AI venture fund - Data Center Dynamics",
-      "review_url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPTTY1Vl8wMHRFOC14NlNKT25vM25Sc051ZUwxSWF6WkFCaHBrVmN6YVdaeXlXb0FxbFhhZkI3MDFJVWd5bTJ4dzZleURONmo1NHh5M29nSlFRUGpxaF9MdXJza09rcEtMT3Y0Y3pRczFlbTYzZVI4SC1OLWwyNUhnbEx6OWhoTk1henpqMHY3d3NjRGlEVFF0S0RkRG5ZbzJibk1lV2NodU1Xc2ppT2EzT3FnZkpvZjNadlZHb1huekd0NlpSNGp0Smpyc19WQTBU?oc=5",
-      "proposed_funding": "$312M",
+      "review_headline": "James Dacombe\u2019s Olix raises at $3.3bn valuation - Sifted",
+      "review_url": "https://news.google.com/rss/articles/CBMifEFVX3lxTFBLZE41NDFCM0RDRndraVpmaVh6Qk9ISi01VUd1NUhRNDRnd19peWhuY2dOcjJYemRXaDN4bEFHRDA0Q0VtYmRfZnhBM0xlS0llNkNMM1ZSNEppSTluMXpZYlVNMThxa0Z2Q0h3OTRIckxhendEazl3bngyclM?oc=5",
+      "proposed_funding": "",
       "proposed_stage": "",
-      "found_at": "2026-08-17T08:52:17Z"
+      "found_at": "2026-08-21T08:50:14Z"
     },
     {
       "name": "Pathos AI",
@@ -666,11 +666,11 @@
       "funding": "Public (Nasdaq: RLAY). Raised ~$800M+ pre-IPO.",
       "stage": "public",
       "needs_review": true,
-      "review_headline": "Alphabet Inc. Makes New Investment in Relay Therapeutics, Inc. $RLAY - MarketBeat",
-      "review_url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQcDd3Z0hwYmw2ck5ldnVuYkFmVkxZbWFTM2JrVXNncmc5SXNDbjdFWldRbUIteHpKSG9jN01GeXFrSklieEZaTzNEZXZhQ0FFYXY1OEtJQmlCNEhfUkIzSl8yYkIxdWJGQUM4NVFVT1JCS09XdGVLb3NzYkU3N1lxRThRSjZ3dXZUMDE0VUdPUFdWX3EydG1PTEZvb1lfMEt3bXBWWlhIUzFSRnBON0l1TWNnajYtUTZuYktsMno1SzM5RE0?oc=5",
+      "review_headline": "H.C. Wainwright raises Relay Therapeutics price target to $29 - Investing.com",
+      "review_url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOamNidmc3dHQtbHdzVVJESkJzOEg0d1lveXhnWUlFenNJdjhUaUVuX0pEOEV0ZUtyV2U5OWtkbmpQczVsbW4yVUhKQjM4NGpPX2FWTGdzeG1iSldYOXNBbW1PX0F5Q3Jickhkb2dCVzJYYUhRZk1McVlrOXBFZlBqUVJXUUZGcFJrR2ltcGllOGRJUXZjOTNKZTZZczFOc3JodXpXNVRKUDFQd3VkenJEWVVSS2JXZTZXbG95OFdKcFpmUm13?oc=5",
       "proposed_funding": "",
       "proposed_stage": "",
-      "found_at": "2026-08-20T08:48:14Z"
+      "found_at": "2026-08-21T08:50:21Z"
     },
     {
       "name": "Relation Therapeutics",
@@ -765,11 +765,11 @@
       "funding": "$200M+ total \u2014 Series F. Valuation ~$4.5B. Backed by Benchmark, Sequoia, Thrive Capital.",
       "stage": "series-c",
       "needs_review": true,
-      "review_headline": "How Cognizant\u2019s AI-Powered Benchling Deployment at Kyowa Kirin (CTSH) Has Changed Its Investment Story - simplywall.st",
-      "review_url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxPSUczYk1tSjI3dTB0eW5yeXdMbWF0SWszYmRuaEVCckhjdkFtM2d6bUFNdS16X1M4bTNHUlB0ZWlSNUV0VzNreHhKUmxXd1ZpMVRjdDRsZnNkU0pvOGNQaWIzemdTRXBXZXM5U0oxcTdVclZuLWhGUndUVWRPazdYT2lxcnhfSV9qalRicEVRTkY3YVo3ejBKY0pkMWJhMmFhdHNjZzY0M2xRQW5hM210REtEVTZsdjg1N0UwSnpkSDJwZU5mMlpIdWltSEZhTDlESEhsVi01VTF4MUdwSlo4MzhjONIB6AFBVV95cUxPM1pvR3R5UjNMY28yeEZZNU13MUdnc2lIZlBxYUt5Z2dwaFdJS0VGcm0xdkVFOElLSk03cm9WUXhLMWItaVJHVHctclA0ZVViME1VdHFYUjVUbFhMVmpMMnJEMUdSUVBHOHVjX1ZwVl81YmlLN2lMNTlKVUtZZ2dXRjNYRVdsM2E5QVpBTVAtbkJQbEotZUxxeFdvY0RZampKaFVBbk8yaEE0WmRpd2p2a0xoRFZOMXVCcXZPSTlMQXNRT2FDU19UY2tkUkViUG1NazVudU5keWdTOHVjS1JJM0lRWUZ4WkIz?oc=5",
+      "review_headline": "Benchling - 2026 Funding Rounds & List of Investors - Tracxn",
+      "review_url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOUkN1ZldkNGFtcFIxSEdnSlRUWVdZS2dSRjAxTUF3ZXQ1RHY0dXEwaGFTUzBrLVAzQWk3NHRjX3NxZWx6M3VjbkFnQnFDUVAydHNhalRRMkZfUnVnZHVkVkZBY21nd1paTFR0Tkg0YnF3YUlNZS0wQlF1cENDRFhGVVdUZnV2RTlpZXNTWFlOc0FlV21QbU1ETjM3QWJUNTc0cVI5Ti1yXzZuWTFX?oc=5",
       "proposed_funding": "",
       "proposed_stage": "",
-      "found_at": "2026-08-17T08:52:39Z"
+      "found_at": "2026-08-21T08:50:39Z"
     },
     {
       "name": "Edison Scientific",
@@ -787,11 +787,11 @@
       "funding": "Public (Nasdaq: PACB). Raised ~$200M+ pre-IPO.",
       "stage": "public",
       "needs_review": true,
-      "review_headline": "PacBio Q2 Earnings Meet Estimates, Revenues Miss, 2026 Sales View Cut - Zacks Investment Research",
-      "review_url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNN0JCamVDSHZnMlZQX0hJRkR1TnU0bnR4NmNoVDY1ZUtTTWF4dV9paWZEVXRnUHpGQnV1S0s0b1lGeDNmbXhpUlo3NHhCY0hYLXppbDZMMjRCTFluYTZpV1pobUJ6Y2oyTGJsTE1sUnN5VUIzVE95UHhCZzJOc3lIZFhXQjZLRWpXb0JLVF90UEcxUWswdVpPYW9tRUtrVUpSVDJmQzlMYmk0TVQ3?oc=5",
+      "review_headline": "SPRQ-Nx on Vega raises the bar for benchtop HiFi sequencing - PacBio",
+      "review_url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOODhxM1BUSjllSXZSMm1WUzNvYVNOOEJSb245Y2drU2Nub2g5SkQzQWJpbC1aa1IxaFhlMERTTnBxYncxYm1ZcUNVb0lIV2pwQk1iMmc4YlV2WWxjYWZtWmNianVjLWE2a1EwYUszTlpRb0Z0bmVmN0NlNV9sWTdpc3ltdkV0UUN5Qi1fUzM4UQ?oc=5",
       "proposed_funding": "",
       "proposed_stage": "",
-      "found_at": "2026-08-08T08:51:50Z"
+      "found_at": "2026-08-21T08:50:43Z"
     },
     {
       "name": "Gleamer",
@@ -974,11 +974,11 @@
       "funding": "$6B",
       "stage": "acquired",
       "needs_review": true,
-      "review_headline": "OpenAI Raises the Safety Bar on Anthropic; Anthropic Expands Its Revenue Lead - The Information",
-      "review_url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNeGE2ek0wODJIN3VVWUZtdTVZam5wLXB2cmtsRGZqWWZWbVhZSlp2NmNGZ2RUQk5sRmRYalQxWko3ZjNVeXAyY1ZIaUJVQXl4eHR5NDRQT0FWemdOVlQ0ajctb0pjc3NqaDNpR3lBWE1LLXBOX05nb3o5NW5PeHQ5VWNlbFhlME1UODlwdjhMVEROeFBWZnVVVm9hZ2RxaWEwLVlUZG9tX0FQRnNEMkJQdWlhSEhQZFFJb0E?oc=5",
+      "review_headline": "Anthropic Expects to Match or Top SpaceX\u2019s Record IPO Size - Bloomberg.com",
+      "review_url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPZjdKM3p6TTVON2FNcXFDRVhHd056NU03dGQxNzFYYkNYc09xWDhwS1hETzdFUkoyVkpWM0o1VENSaENzWnIwODBmUThla2dsUWF5UkRuWThvVmRsRVdCZHhCaDVQZ2NYSVdLU2J4aHdaZ19OeDY5LUREbVg1cmR6ZmZxVk5OcG5YX0lHMmFUelNSYjNoVVBJVWNYdENoeFFZdmxEQVBPSDNsQWdIMFdtQnJn?oc=5",
       "proposed_funding": "",
-      "proposed_stage": "",
-      "found_at": "2026-08-20T08:48:52Z"
+      "proposed_stage": "public",
+      "found_at": "2026-08-21T08:51:02Z"
     },
     {
       "name": "Google DeepMind",
@@ -1018,11 +1018,11 @@
       "funding": "$30B",
       "stage": "public",
       "needs_review": true,
-      "review_headline": "OpenAI Raises the Safety Bar on Anthropic; Anthropic Expands Its Revenue Lead - The Information",
-      "review_url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNeGE2ek0wODJIN3VVWUZtdTVZam5wLXB2cmtsRGZqWWZWbVhZSlp2NmNGZ2RUQk5sRmRYalQxWko3ZjNVeXAyY1ZIaUJVQXl4eHR5NDRQT0FWemdOVlQ0ajctb0pjc3NqaDNpR3lBWE1LLXBOX05nb3o5NW5PeHQ5VWNlbFhlME1UODlwdjhMVEROeFBWZnVVVm9hZ2RxaWEwLVlUZG9tX0FQRnNEMkJQdWlhSEhQZFFJb0E?oc=5",
+      "review_headline": "OpenAI and Anthropic Fuel California\u2019s Record-Setting Investment Surge - PYMNTS.com",
+      "review_url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNWnJHTWx3NUJDM1NNWWlQY2JoYUxKUm52RlI4SHVfdU16TGZESWdCLVpobFdING5xV0JiRlBDQk0yTHZvYXdCdHVkUGpTdjAyanV0MEdLdjJzTXZBZE8yS290ZlRFNm5fYlBqUndncWdsYjhyUFh5WGxKbXFreG1MMWZWY3MtdThQdTBfRnlFeV9tcEpuY0FIazVydEVud3REWTF3UHpjV0RLODlvWjJtVUUzVkNQRFpVTkI0Y3doRQ?oc=5",
       "proposed_funding": "",
       "proposed_stage": "",
-      "found_at": "2026-08-20T08:48:52Z"
+      "found_at": "2026-08-21T08:51:02Z"
     },
     {
       "name": "Sakana AI",
