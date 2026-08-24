@@ -1,42 +1,10 @@
 [
   {
-    "name": "Future of Work with AI: Session 4 - \"Be-Skilled\"",
-    "date": "2026-08-19",
-    "end_date": "2026-08-20",
-    "location": "Boston, MA, USA",
-    "url": "imtt3687",
-    "type": "meetup",
-    "tags": [
-      "AI",
-      "biology"
-    ],
-    "virtual": false,
-    "description": "",
-    "source": "luma",
-    "auto": true
-  },
-  {
     "name": "SoulSearch Phoenix-Glendale Enlightenment Expo - Psychic & Healing Fair",
     "date": "2026-08-22",
     "end_date": "2026-08-24",
     "location": "Boston, MA, USA",
     "url": "phoenix-glendale-az",
-    "type": "meetup",
-    "tags": [
-      "AI",
-      "biology"
-    ],
-    "virtual": false,
-    "description": "",
-    "source": "luma",
-    "auto": true
-  },
-  {
-    "name": "PauseAI Phoenix Monthly Social 🍨",
-    "date": "2026-08-22",
-    "end_date": "2026-08-22",
-    "location": "Boston, MA, USA",
-    "url": "zznihsoq",
     "type": "meetup",
     "tags": [
       "AI",
