@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-24T08:58:05Z",
+  "last_updated": "2026-08-25T08:52:49Z",
   "companies": [
     {
       "name": "XtalPi",
@@ -666,11 +666,11 @@
       "funding": "Public (Nasdaq: RLAY). Raised ~$800M+ pre-IPO.",
       "stage": "public",
       "needs_review": true,
-      "review_headline": "H.C. Wainwright Maintains Relay Therapeutics(RLAY.US) With Buy Rating, Raises Target Price to $29 - Moomoo",
-      "review_url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOZUpDTFZPU0luM285WUZzUmV3VkdIbXM4M3F1ckdtU2JaOTg2MXlhZlEzZFNfcXBmYVlDd25VMFNzSnd5eHBpcHZWYnk4Zll5clc3a1h2QnptUWZ1cGN0OUZWa2FyXzNlaDZfeFdZR2ZzZGNsdzBZbmZBc0Q2NW9OX3BfVGZVeGNJUDZXbXU0NXdmSFExYW5pZ3h1b0lodWxvMGFOQjVyaHB4N3ZXUlp2cjB6Y3I?oc=5",
+      "review_headline": "H.C. Wainwright raises Relay Therapeutics price target to $29 - Investing.com",
+      "review_url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNamtEX2MyRE1RbkhMQlpiZGF0RVp3TGRrWjdaWGFJWEcxOFBlRWZxNWx5aG9uN1M5MWlVRWl2Y3g3UzlPWW1lM2xLaDlXM09RdzN6YmwxcjE3TWh1enlKUHpSWFFaQ1ROTEZiTDBVc3V2eldKRXNnNmV1SldiV1I1OFBzaEUwMmRQVGRMT3FWdDNTZXFQaTdFNldUXzFFdDlyd1ExWDl2dmxxRFRwS0dRT2NqdEhKcUxvLWc?oc=5",
       "proposed_funding": "",
       "proposed_stage": "",
-      "found_at": "2026-08-24T08:56:57Z"
+      "found_at": "2026-08-25T08:51:50Z"
     },
     {
       "name": "Relation Therapeutics",
@@ -971,14 +971,14 @@
     },
     {
       "name": "Anthropic",
-      "funding": "$6B",
-      "stage": "acquired",
+      "funding": "$14M",
+      "stage": "seed",
       "needs_review": true,
-      "review_headline": "OpenAI and Anthropic Fuel California\u2019s Record-Setting Investment Surge - PYMNTS.com",
-      "review_url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNWnJHTWx3NUJDM1NNWWlQY2JoYUxKUm52RlI4SHVfdU16TGZESWdCLVpobFdING5xV0JiRlBDQk0yTHZvYXdCdHVkUGpTdjAyanV0MEdLdjJzTXZBZE8yS290ZlRFNm5fYlBqUndncWdsYjhyUFh5WGxKbXFreG1MMWZWY3MtdThQdTBfRnlFeV9tcEpuY0FIazVydEVud3REWTF3UHpjV0RLODlvWjJtVUUzVkNQRFpVTkI0Y3doRQ?oc=5",
-      "proposed_funding": "",
-      "proposed_stage": "",
-      "found_at": "2026-08-24T08:57:40Z"
+      "review_headline": "EntropyIO raises $14M seed and $40M Anthropic HYPE stake to list frontier assets on Hyperliquid - CryptoRank",
+      "review_url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE10QnBUdkRqUkNma0h3QWgweXhRdXJkOVhtU0liSUI1MU8zM2d1LXA2ZDFfd01SOEdFRDBBWDVaUC1WR1RucDdKQ0Nid3FCcFVGaEJHT3pUUzE2aWMtZm0weGRGZkhuQlIyRzhmaGhyVktGREF5OERrTQ?oc=5",
+      "proposed_funding": "$14M",
+      "proposed_stage": "seed",
+      "found_at": "2026-08-25T08:52:28Z"
     },
     {
       "name": "Google DeepMind",
@@ -1018,11 +1018,11 @@
       "funding": "$30B",
       "stage": "public",
       "needs_review": true,
-      "review_headline": "OpenAI Raises the Safety Bar on Anthropic; Anthropic Expands Its Revenue Lead - The Information",
-      "review_url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNeGE2ek0wODJIN3VVWUZtdTVZam5wLXB2cmtsRGZqWWZWbVhZSlp2NmNGZ2RUQk5sRmRYalQxWko3ZjNVeXAyY1ZIaUJVQXl4eHR5NDRQT0FWemdOVlQ0ajctb0pjc3NqaDNpR3lBWE1LLXBOX05nb3o5NW5PeHQ5VWNlbFhlME1UODlwdjhMVEROeFBWZnVVVm9hZ2RxaWEwLVlUZG9tX0FQRnNEMkJQdWlhSEhQZFFJb0E?oc=5",
+      "review_headline": "OpenAI and Anthropic Fuel California\u2019s Record-Setting Investment Surge - PYMNTS.com",
+      "review_url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNWnJHTWx3NUJDM1NNWWlQY2JoYUxKUm52RlI4SHVfdU16TGZESWdCLVpobFdING5xV0JiRlBDQk0yTHZvYXdCdHVkUGpTdjAyanV0MEdLdjJzTXZBZE8yS290ZlRFNm5fYlBqUndncWdsYjhyUFh5WGxKbXFreG1MMWZWY3MtdThQdTBfRnlFeV9tcEpuY0FIazVydEVud3REWTF3UHpjV0RLODlvWjJtVUUzVkNQRFpVTkI0Y3doRQ?oc=5",
       "proposed_funding": "",
       "proposed_stage": "",
-      "found_at": "2026-08-22T08:39:25Z"
+      "found_at": "2026-08-25T08:52:28Z"
     },
     {
       "name": "Sakana AI",
