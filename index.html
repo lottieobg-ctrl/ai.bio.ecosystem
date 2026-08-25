@@ -239,6 +239,8 @@ input[type="text"]::placeholder { color: #111827; }
 .pipeline-dot { width: 14px; height: 14px; border-radius: 50%; margin: 0 auto; transition: transform 0.15s; cursor: default; }
 .pipeline-dot:hover { transform: scale(1.3); }
 .pipeline-dot.highlight { box-shadow: 0 0 0 3px rgba(217,119,6,0.25); }
+.pipeline-dot-link { display: block; width: 100%; text-decoration: none; }
+.pipeline-dot-link .pipeline-dot { cursor: pointer; }
 .pipeline-legend { display: flex; align-items: center; gap: 20px; margin-top: 14px; flex-wrap: wrap; }
 .pipeline-legend-item { display: flex; align-items: center; gap: 6px; font-size: 11px; color: var(--muted); }
 .pipeline-legend-dot { width: 10px; height: 10px; border-radius: 50%; }
@@ -289,12 +291,21 @@ input[type="text"]::placeholder { color: #111827; }
 
 /* Modalities venn + coverage table */
 .venn-wrap { display: flex; gap: 28px; flex-wrap: wrap; align-items: flex-start; }
-.venn-svg-wrap { flex: 1 1 480px; min-width: 320px; }
-.venn-svg-wrap svg { width: 100%; height: auto; }
-.venn-region-label { font-family: 'Roobert', sans-serif; font-weight: 700; font-size: 15px; }
-.venn-co-label { font-family: 'IBM Plex Mono', monospace; font-size: 10px; line-height: 1.3; color: #0f172a; width: 100%; height: 100%; overflow: hidden; }
-.venn-co-label ul { list-style: none; margin: 0; padding: 0; }
-.venn-co-label li { white-space: nowrap; }
+.venn-svg-wrap { flex: 1 1 560px; min-width: 340px; }
+.venn-stage { position: relative; width: 100%; aspect-ratio: 1360 / 1130; }
+.venn-svg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; overflow: visible; }
+.venn-title { font-family: 'Roobert', sans-serif; font-weight: 700; font-size: 17px; }
+.venn-label { position: absolute; overflow: visible; }
+.venn-label ul { list-style: none; margin: 0; padding: 0; }
+.venn-label li {
+  font-family: 'IBM Plex Mono', monospace; font-size: clamp(9.5px, 1.05vw, 13px); line-height: 1.4;
+  color: #0f172a; white-space: nowrap; cursor: default; position: relative; z-index: 1;
+  padding: 1px 3px; margin: 0 -3px; border-radius: 3px; transform-origin: left center;
+  transition: transform 0.15s ease, background 0.15s ease, box-shadow 0.15s ease;
+}
+.venn-label li:hover { transform: scale(1.6); z-index: 50; background: #ffffff; box-shadow: 0 3px 12px rgba(15,23,42,0.25); }
+.venn-also-note { position: absolute; font-size: clamp(9px, 0.95vw, 11.5px); color: var(--muted); line-height: 1.4; }
+.venn-also-note strong { color: var(--text); }
 .venn-cell-note { font-size: 11px; color: var(--muted); margin-top: 10px; }
 .modcov-wrap { flex: 1 1 380px; min-width: 300px; max-height: 460px; overflow-y: auto; }
 .modcov-table { width: 100%; border-collapse: collapse; font-size: 11px; }
@@ -2801,30 +2812,30 @@ const PIPELINE_STAGES = [
 
 // stage index: 0=Model Building, 1=Target Discovery, 2=Preclinical, 3=Phase I, 4=Phase II-III, 5=Approved
 const PIPELINE_COMPANIES = [
-  {name:'Recursion',          stage:4, note:'Multiple Phase II programmes (incl. Exscientia assets)'},
-  {name:'Insilico Medicine',  stage:4, note:'ISM001-055 (IPF) Phase II — among first AI-designed drugs in clinic', intelId:'insilico'},
-  {name:'Nimbus Therapeutics',stage:4, note:'TYK2 inhibitor sold to Gilead (approved as Sotyktu); new pipeline Phase I–II'},
-  {name:'AbCellera',          stage:4, note:'ABCL635 (hot flashes) Phase II; multiple Phase I programmes'},
-  {name:'Schrödinger',        stage:3, note:'SGR-1505 (MCL) in Phase I/II'},
-  {name:'Verge Genomics',     stage:3, note:'VRG50635 (ALS PI3Kα activator) Phase I'},
-  {name:'Isomorphic Labs',    stage:3, note:'Phase I programmes via Lilly, Novartis and J&J partnerships', intelId:'isomorphic'},
-  {name:'Evotec',             stage:2, note:'Many preclinical programmes via CRO and co-ownership model'},
-  {name:'XtalPi',             stage:2, note:'Multiple preclinical programmes across pharma partners'},
-  {name:'Chai Discovery',     stage:2, note:'Preclinical antibody programmes via Chai-2 platform', intelId:'chai'},
-  {name:'Variant Bio',        stage:2, note:'Preclinical in inflammation, fibrosis and muscle disorders', intelId:'variant'},
-  {name:'Valo Health',        stage:2, note:'Several preclinical programmes in cardiometabolic disease'},
-  {name:'Owkin',              stage:2, note:'Federated learning applied to oncology biomarker programmes'},
-  {name:'BenevolentAI',       stage:1, note:'Platform rebuild after Phase II setbacks; targets identified'},
-  {name:'Profluent',          stage:1, note:'OpenCRISPR-1 in active lab use; therapeutic pipeline early-stage', intelId:'profluent'},
-  {name:'Basecamp Research',  stage:1, note:'EDEN-28B applied to therapeutic protein and genetic medicine design', highlight:true},
-  {name:'Xaira',              stage:1, note:'Generative platform; therapeutic applications beginning'},
-  {name:'Boltz Bio',          stage:0, note:'Open-source platform; no internal pipeline', intelId:'boltz'},
-  {name:'Radical Numerics',  stage:0, note:'Omnii genomics foundation model; no internal drug pipeline — API platform + biodefense contracts', intelId:'radical'},
-  {name:'Bioptimus',          stage:0, note:'H-Optimus / M-Optimus pathology & multiomics platform; no internal drug pipeline', intelId:'bioptimus'},
-  {name:'Latent Labs',        stage:0, note:'Latent-X / Latent-X2 / Latent-Y protein binder design platform; no internal pipeline', intelId:'latent'},
-  {name:'Prima Mente',        stage:0, note:'Foundation model in development; neurology focus', intelId:'prima'},
-  {name:'ESM3 (EvolutionaryScale)', stage:0, note:'Open-source protein foundation model; no therapeutic pipeline', intelId:'esm3'},
-  {name:'Evo 2 (Arc Institute)',    stage:0, note:'Open-source DNA foundation model; open science mandate', intelId:'evo2'},
+  {name:'Recursion',          stage:4, note:'Multiple Phase II programmes (incl. Exscientia assets)', url:'https://www.recursion.com/pipeline'},
+  {name:'Insilico Medicine',  stage:4, note:'ISM001-055 (IPF) Phase II — among first AI-designed drugs in clinic', intelId:'insilico', url:'https://clinicaltrials.gov/study/NCT05938920'},
+  {name:'Nimbus Therapeutics',stage:4, note:'TYK2 inhibitor sold to Gilead (approved as Sotyktu); new pipeline Phase I–II', url:'https://www.nimbustx.com/pipeline-targets/'},
+  {name:'AbCellera',          stage:4, note:'ABCL635 (hot flashes) Phase II; multiple Phase I programmes', url:'https://clinicaltrials.gov/study/NCT07118891'},
+  {name:'Schrödinger',        stage:3, note:'SGR-1505 (MCL) in Phase I/II', url:'https://clinicaltrials.gov/study/NCT05544019'},
+  {name:'Verge Genomics',     stage:3, note:'VRG50635 (ALS PI3Kα activator) Phase I', url:'https://clinicaltrials.gov/study/NCT06215755'},
+  {name:'Isomorphic Labs',    stage:3, note:'Phase I programmes via Lilly, Novartis and J&J partnerships', intelId:'isomorphic', url:'https://www.isomorphiclabs.com/news'},
+  {name:'Evotec',             stage:2, note:'Many preclinical programmes via CRO and co-ownership model', url:'https://www.evotec.com/company/our-partners/co-owned-pipeline/by-research-phase'},
+  {name:'XtalPi',             stage:2, note:'Multiple preclinical programmes across pharma partners', url:'https://en.xtalpi.com/drug-discovery/'},
+  {name:'Chai Discovery',     stage:2, note:'Preclinical antibody programmes via Chai-2 platform', intelId:'chai', url:'https://www.chaidiscovery.com/news'},
+  {name:'Variant Bio',        stage:2, note:'Preclinical in inflammation, fibrosis and muscle disorders', intelId:'variant', url:'https://www.variantbio.com/pipeline'},
+  {name:'Valo Health',        stage:2, note:'Several preclinical programmes in cardiometabolic disease', url:'https://www.valohealth.com/press/valo-health-and-novo-nordisk-to-collaborate-to-discover-and-develop-novel-treatments-for-cardiometabolic-diseases-using-human-data-and-artificial-intelligence'},
+  {name:'Owkin',              stage:2, note:'Federated learning applied to oncology biomarker programmes', url:'https://www.owkin.com/pipeline/pipeline'},
+  {name:'BenevolentAI',       stage:1, note:'Platform rebuild after Phase II setbacks; targets identified', url:'https://www.benevolent.com'},
+  {name:'Profluent',          stage:1, note:'OpenCRISPR-1 in active lab use; therapeutic pipeline early-stage', intelId:'profluent', url:'https://www.profluent.bio/modality/opencrispr'},
+  {name:'Basecamp Research',  stage:1, note:'EDEN-28B applied to therapeutic protein and genetic medicine design', highlight:true, url:'https://basecamp-research.com/wp-content/uploads/2026/01/BCR_Designing-programmable-therapeutics-with-the-EDEN-family-of-foundation-models.pdf'},
+  {name:'Xaira',              stage:1, note:'Generative platform; therapeutic applications beginning', url:'https://www.xaira.com/our-approach'},
+  {name:'Boltz Bio',          stage:0, note:'Open-source platform; no internal pipeline', intelId:'boltz', url:'https://github.com/jwohlwend/boltz'},
+  {name:'Radical Numerics',  stage:0, note:'Omnii genomics foundation model; no internal drug pipeline — API platform + biodefense contracts', intelId:'radical', url:'https://www.radicalnumerics.ai/blog/omnii-health-preview'},
+  {name:'Bioptimus',          stage:0, note:'H-Optimus / M-Optimus pathology & multiomics platform; no internal drug pipeline', intelId:'bioptimus', url:'https://www.bioptimus.com/m-optimus'},
+  {name:'Latent Labs',        stage:0, note:'Latent-X / Latent-X2 / Latent-Y protein binder design platform; no internal pipeline', intelId:'latent', url:'https://www.latentlabs.com/latent-x/'},
+  {name:'Prima Mente',        stage:0, note:'Foundation model in development; neurology focus', intelId:'prima', url:'https://www.primamente.com'},
+  {name:'ESM3 (EvolutionaryScale)', stage:0, note:'Open-source protein foundation model; no therapeutic pipeline', intelId:'esm3', url:'https://www.evolutionaryscale.ai/blog/esm3-release'},
+  {name:'Evo 2 (Arc Institute)',    stage:0, note:'Open-source DNA foundation model; open science mandate', intelId:'evo2', url:'https://arcinstitute.org/tools/evo'},
 ];
 
 const PIPELINE_COLORS = [
@@ -2862,10 +2873,12 @@ function renderPipelineChart() {
       if (i !== co.stage) return '<td></td>';
       const color = co.highlight ? PIPELINE_HIGHLIGHT_COLOR : PIPELINE_COLORS[co.stage];
       const cls = co.highlight ? ' highlight' : '';
-      const clickAttr = co.intelId ? ` onclick="goToProfile('${co.intelId}')"` : '';
-      const cursor = co.intelId ? ';cursor:pointer' : '';
-      const tooltip = co.intelId ? `${co.name}: ${co.note} — click to compare` : `${co.name}: ${co.note}`;
-      return `<td><div class="pipeline-dot${cls}"${clickAttr} style="background:${color}${cursor}" title="${tooltip}"></div></td>`;
+      const tooltip = `${co.name}: ${co.note}${co.url ? ' — click to view reference' : ''}`;
+      const dot = `<div class="pipeline-dot${cls}" style="background:${color}" title="${tooltip}"></div>`;
+      const cell = co.url
+        ? `<a class="pipeline-dot-link" href="${co.url}" target="_blank" rel="noopener noreferrer" aria-label="Reference: ${co.name}">${dot}</a>`
+        : dot;
+      return `<td>${cell}</td>`;
     }).join('');
     const nameCls = co.highlight ? ' highlight' : '';
     const nameContent = co.intelId
@@ -2888,7 +2901,7 @@ function renderPipelineChart() {
   document.getElementById('pipelineChart').innerHTML = `
     <div class="pipeline-chart">
       <div class="pipeline-title">Pipeline & Clinical Development</div>
-      <div class="pipeline-sub">Where each company sits across the development continuum — hover dots for details</div>
+      <div class="pipeline-sub">Where each company sits across the development continuum — hover a dot for details, click it to open the reference (trial page or pipeline source); click a linked name to compare with Basecamp Research</div>
       <table class="pipeline-table">
         <thead>${groupHeaders}${stageHeaders}</thead>
         <tbody>${rows}</tbody>
@@ -3724,7 +3737,7 @@ const MODALITY_COVERAGE = [
   {name:'Basecamp (EDEN)', dna:1,rna:1,protein:1,small:0,path:0,cell:0},
   {name:'Radical Numerics', dna:1,rna:1,protein:1,small:0,path:0,cell:0},
   {name:'Boltz (Boltz-2)', dna:1,rna:1,protein:1,small:1,path:0,cell:0},
-  {name:'Chai (Chai-1)', dna:1,rna:1,protein:1,small:0,path:0,cell:0},
+  {name:'Chai (Chai-1)', dna:1,rna:1,protein:1,small:1,path:0,cell:0},
   {name:'DeepMind (AlphaFold 3)', dna:1,rna:1,protein:1,small:1,path:0,cell:0},
   {name:'Atomic AI (ATOM-1)', dna:0,rna:1,protein:0,small:0,path:0,cell:0},
   {name:'Inceptive', dna:0,rna:1,protein:0,small:0,path:0,cell:0},
@@ -3783,9 +3796,9 @@ function renderFMModalities(){
   const dnaOnly = list(group(m=>m.dna&&!m.rna&&!m.protein));
   const rnaOnly = list(group(m=>m.rna&&!m.dna&&!m.protein));
   const dnaRna = list(group(m=>m.dna&&m.rna&&!m.protein));
-  // DNA∩RNA∩Protein core — includes the small-molecule-too models (Boltz-2, AlphaFold3) as well,
-  // since a true 4-circle overlap region isn't geometrically representable with simple circles
-  // (matches how the original slide places them near the same central cluster).
+  // DNA∩RNA∩Protein core — includes the small-molecule-too models (Boltz-2, AlphaFold3, Chai-1) as
+  // well, since a true 4-circle overlap region isn't geometrically representable with simple circles
+  // (matches how the original slide handled this with a separate "Also in small molecule" callout).
   const core = list(group(m=>m.dna&&m.rna&&m.protein));
   const proteinOnly = list(group(m=>m.protein&&!m.dna&&!m.rna&&!m.small));
   const proteinSmall = list(group(m=>m.protein&&m.small&&!m.dna&&!m.rna));
@@ -3793,37 +3806,65 @@ function renderFMModalities(){
   const pathOnly = list(group(m=>m.path));
   const cellNote = MODALITY_COVERAGE.filter(m=>m.cell).map(m=>m.name).join(' · ');
 
-  // Circle geometry + text-box placements below are numerically verified (each foreignObject box
-  // checked to sit fully inside/outside the right circles with a safety margin) — see /tmp/venn_v3.py
-  // during development. Don't hand-tweak coordinates without re-checking containment.
+  // Circle geometry + every box below is numerically verified (each checked to sit fully
+  // inside/outside the right circles, and the 5 title points checked to sit outside every
+  // circle) rather than hand-guessed — see /tmp/venn_v4.py during development. Don't hand-tweak
+  // any coordinate without re-checking containment the same way.
+  const VW = 1360, VH = 1130;
+  const CIRC = {
+    dna:     {cx:370, cy:350, r:250, color:'#00b896'},
+    rna:     {cx:710, cy:350, r:250, color:'#2563eb'},
+    protein: {cx:540, cy:660, r:340, color:'#7c3aed'},
+    small:   {cx:950, cy:780, r:220, color:'#ea580c'},
+    path:    {cx:1140,cy:200, r:90,  color:'#475569'},
+  };
+  const TITLES = {
+    dna:{x:75,y:340,label:'DNA'}, rna:{x:1005,y:340,label:'RNA'},
+    protein:{x:470,y:1040,label:'Protein'}, small:{x:980,y:1040,label:'Small molecule'},
+    path:{x:1150,y:70,label:'Pathology'},
+  };
+  const pct = (x,y,w,h) => `left:${(x/VW*100).toFixed(2)}%;top:${(y/VH*100).toFixed(2)}%;width:${(w/VW*100).toFixed(2)}%;height:${(h/VH*100).toFixed(2)}%`;
+  // leader line from each title point to the nearest edge of its own circle
+  const leader = (key) => {
+    const c = CIRC[key], t = TITLES[key];
+    const dx = t.x-c.cx, dy = t.y-c.cy, d = Math.hypot(dx,dy)||1;
+    const ex = c.cx + c.r*dx/d, ey = c.cy + c.r*dy/d;
+    return `<line x1="${ex.toFixed(0)}" y1="${ey.toFixed(0)}" x2="${t.x}" y2="${t.y}" stroke="${c.color}" stroke-width="1.5" stroke-dasharray="3,3" opacity="0.6"/>`;
+  };
+
+  const circlesSvg = Object.values(CIRC).map(c=>`<circle cx="${c.cx}" cy="${c.cy}" r="${c.r}" fill="${c.color}" fill-opacity="0.08" stroke="${c.color}" stroke-width="2.5"/>`).join('');
+  const leadersSvg = Object.keys(CIRC).map(leader).join('');
+  const ANCHOR = {dna:'end', rna:'start', protein:'middle', small:'middle', path:'middle'};
+  const titlesSvg = Object.entries(TITLES).map(([key,t])=>`<text x="${t.x}" y="${t.y}" class="venn-title" text-anchor="${ANCHOR[key]}" fill="${CIRC[key].color}">${t.label}</text>`).join('');
+
+  const labelBoxes = [
+    {box:pct(250,180,130,90), html:dnaOnly},
+    {box:pct(730,180,130,90), html:rnaOnly},
+    {box:pct(495,245,90,40),  html:dnaRna},
+    {box:pct(490,345,100,75), html:core},
+    {box:pct(370,690,190,170),html:proteinOnly},
+    {box:pct(787,665,65,55),  html:proteinSmall},
+    {box:pct(940,700,160,130),html:smallOnly},
+    {box:pct(1075,155,130,90),html:pathOnly},
+  ].map(l=>`<div class="venn-label" style="${l.box}">${l.html}</div>`).join('');
+
+  const alsoSmallMol = `<div class="venn-also-note" style="${pct(940,845,180,60)}"><strong>Also in small molecule:</strong> Boltz (Boltz-2) · DeepMind (AlphaFold3) · Chai (Chai-1)</div>`;
+
   document.getElementById('fmModalities').innerHTML = `
     <div class="fm-chart">
       <div class="fm-title">Bio AI model modalities</div>
-      <div class="fm-sub">Which part of biology each model works on, and where coverage overlaps</div>
+      <div class="fm-sub">Which part of biology each model works on, and where coverage overlaps — hover a name to enlarge it</div>
       <div class="venn-wrap">
         <div class="venn-svg-wrap">
-          <svg viewBox="0 0 1180 950" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="280" cy="260" r="250" fill="#00b896" fill-opacity="0.09" stroke="#00b896" stroke-width="2.5"/>
-            <circle cx="620" cy="260" r="250" fill="#2563eb" fill-opacity="0.09" stroke="#2563eb" stroke-width="2.5"/>
-            <circle cx="450" cy="570" r="340" fill="#7c3aed" fill-opacity="0.07" stroke="#7c3aed" stroke-width="2.5"/>
-            <circle cx="860" cy="690" r="220" fill="#ea580c" fill-opacity="0.08" stroke="#ea580c" stroke-width="2.5"/>
-            <circle cx="1050" cy="110" r="90" fill="#475569" fill-opacity="0.10" stroke="#475569" stroke-width="2.5"/>
-
-            <text x="140" y="70" class="venn-region-label" fill="#00b896">DNA</text>
-            <text x="700" y="70" class="venn-region-label" fill="#2563eb">RNA</text>
-            <text x="290" y="580" class="venn-region-label" fill="#7c3aed">Protein</text>
-            <text x="800" y="585" class="venn-region-label" fill="#ea580c">Small molecule</text>
-            <text x="990" y="45" class="venn-region-label" fill="#475569">Pathology</text>
-
-            <foreignObject x="160" y="90" width="130" height="90"><div xmlns="http://www.w3.org/1999/xhtml" class="venn-co-label">${dnaOnly}</div></foreignObject>
-            <foreignObject x="640" y="90" width="130" height="90"><div xmlns="http://www.w3.org/1999/xhtml" class="venn-co-label">${rnaOnly}</div></foreignObject>
-            <foreignObject x="405" y="155" width="90" height="40"><div xmlns="http://www.w3.org/1999/xhtml" class="venn-co-label">${dnaRna}</div></foreignObject>
-            <foreignObject x="400" y="255" width="100" height="75"><div xmlns="http://www.w3.org/1999/xhtml" class="venn-co-label">${core}</div></foreignObject>
-            <foreignObject x="280" y="600" width="190" height="170"><div xmlns="http://www.w3.org/1999/xhtml" class="venn-co-label">${proteinOnly}</div></foreignObject>
-            <foreignObject x="697" y="575" width="65" height="55"><div xmlns="http://www.w3.org/1999/xhtml" class="venn-co-label">${proteinSmall}</div></foreignObject>
-            <foreignObject x="850" y="610" width="160" height="130"><div xmlns="http://www.w3.org/1999/xhtml" class="venn-co-label">${smallOnly}</div></foreignObject>
-            <foreignObject x="985" y="65" width="130" height="90"><div xmlns="http://www.w3.org/1999/xhtml" class="venn-co-label">${pathOnly}</div></foreignObject>
-          </svg>
+          <div class="venn-stage">
+            <svg class="venn-svg" viewBox="0 0 ${VW} ${VH}" xmlns="http://www.w3.org/2000/svg">
+              ${circlesSvg}
+              ${leadersSvg}
+              ${titlesSvg}
+            </svg>
+            ${labelBoxes}
+            ${alsoSmallMol}
+          </div>
           <div class="venn-cell-note"><strong>Cell modality</strong> (not drawn as its own circle — only 2 models): ${cellNote}</div>
         </div>
         <div class="modcov-wrap">
@@ -4259,7 +4300,9 @@ const PHARMA_DEALS = [
       {co:'insitro', val:'undisclosed · 2020', note:'ALS (neuroscience)'},
       {co:'Exscientia', val:'$1.2B · 2021', note:'oncology & immunology ‡'},
       {co:'Nabla Bio', val:'undisclosed · 2024', note:'de novo antibodies'},
-    ], model:[], broad:[]},
+    ], model:[
+      {co:'Chai', val:'undisclosed · 2026', note:'molecular folding & de novo antibody design across BMS\'s discovery portfolio'},
+    ], broad:[]},
   {pharma:'Roche', molecule:[
       {co:'Recursion', val:'$12B · 2021', note:'neuroscience & GI onco'},
       {co:'Genesis', val:'undisclosed', note:'via Genentech'},
