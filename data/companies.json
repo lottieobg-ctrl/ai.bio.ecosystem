@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-25T08:52:49Z",
+  "last_updated": "2026-08-26T08:54:26Z",
   "companies": [
     {
       "name": "XtalPi",
@@ -952,11 +952,11 @@
       "funding": "$2B",
       "stage": "series-a",
       "needs_review": true,
-      "review_headline": "Tempus AI Stock Slides As $1.5B Personalis Bet Raises Stakes - timothysykes.com",
-      "review_url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9QNG4zTlBEam5EclRXOVpjWHJNRk9iWENyaldFN3ZDSkxrVnpNZ1JpbG96MDd2V2x6TEo2OUstc2RzaW5BWjlVLXpOeDZuU2JnOW52V214OWdjZHZTaGVYQWw0VnI1UFpuaE81M2xjQ3hyRUFjSEg0?oc=5",
-      "proposed_funding": "$2B",
+      "review_headline": "BTIG Maintains Tempus AI(TEM.US) With Buy Rating, Raises Target Price to $80 - Moomoo",
+      "review_url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQLVgyWlJCdWlFT2txaERqb0hfcWdmTHNlVlEwaHh6OElNZkZuOUx5bU5qY3k0OHhKT00tNnJzaGtNT1c0dkpndkp2ZkVhakNOZlI1eFRRU0lTTXhsdVJBZTh6bFgwbGhGLVNRUnRsNlZqeVhLcUR1V3o2RTF4RGc3dlMxeGtpLU5jdjRRT0M3RHZrZE8xT3dKTW1KeDBFYl9mQUxTZA?oc=5",
+      "proposed_funding": "",
       "proposed_stage": "",
-      "found_at": "2026-08-20T08:48:51Z"
+      "found_at": "2026-08-26T08:54:02Z"
     },
     {
       "name": "Verily Health",
@@ -974,11 +974,11 @@
       "funding": "$14M",
       "stage": "seed",
       "needs_review": true,
-      "review_headline": "EntropyIO raises $14M seed and $40M Anthropic HYPE stake to list frontier assets on Hyperliquid - CryptoRank",
-      "review_url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE10QnBUdkRqUkNma0h3QWgweXhRdXJkOVhtU0liSUI1MU8zM2d1LXA2ZDFfd01SOEdFRDBBWDVaUC1WR1RucDdKQ0Nid3FCcFVGaEJHT3pUUzE2aWMtZm0weGRGZkhuQlIyRzhmaGhyVktGREF5OERrTQ?oc=5",
-      "proposed_funding": "$14M",
-      "proposed_stage": "seed",
-      "found_at": "2026-08-25T08:52:28Z"
+      "review_headline": "Funding better evaluations of AI\u2019s impact on wellbeing - Anthropic",
+      "review_url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5DNElZcS10WnJ1NHJEdmtYNkxUT1JQZ3plaDhZejA4UENGVlliUzRqM19sejJyOEFZbW9zbTZyZmpsZGpmOGYtaDc2T1pFTThXUG9wQi1nUFl3cVhIVDJyQVd6QnBsa2M?oc=5",
+      "proposed_funding": "",
+      "proposed_stage": "",
+      "found_at": "2026-08-26T08:54:02Z"
     },
     {
       "name": "Google DeepMind",
@@ -1018,11 +1018,11 @@
       "funding": "$30B",
       "stage": "public",
       "needs_review": true,
-      "review_headline": "OpenAI and Anthropic Fuel California\u2019s Record-Setting Investment Surge - PYMNTS.com",
-      "review_url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNWnJHTWx3NUJDM1NNWWlQY2JoYUxKUm52RlI4SHVfdU16TGZESWdCLVpobFdING5xV0JiRlBDQk0yTHZvYXdCdHVkUGpTdjAyanV0MEdLdjJzTXZBZE8yS290ZlRFNm5fYlBqUndncWdsYjhyUFh5WGxKbXFreG1MMWZWY3MtdThQdTBfRnlFeV9tcEpuY0FIazVydEVud3REWTF3UHpjV0RLODlvWjJtVUUzVkNQRFpVTkI0Y3doRQ?oc=5",
-      "proposed_funding": "",
+      "review_headline": "OpenAI Investment Could Spur SoftBank\u2019s $20B Bond Deal - Yellow.com",
+      "review_url": "https://news.google.com/rss/articles/CBMickFVX3lxTE1mZlRsVFRKaklfTGVWQm9DRTJkVUlPa0JSWDJEMFBuTXRvQVkzWjIzak5ITE9fUXdkNFNNT0ZfSmIwdE9lZGdHenlCVGFDbUwzMzB6YlpvUWJIZEhNZnF3bmxvZzFYeXphRlZ6TmpwWVJXQQ?oc=5",
+      "proposed_funding": "$20B",
       "proposed_stage": "",
-      "found_at": "2026-08-25T08:52:28Z"
+      "found_at": "2026-08-26T08:54:03Z"
     },
     {
       "name": "Sakana AI",
