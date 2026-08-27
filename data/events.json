@@ -1,42 +1,10 @@
 [
   {
-    "name": "SoulSearch Phoenix-Glendale Enlightenment Expo - Psychic & Healing Fair",
-    "date": "2026-08-22",
-    "end_date": "2026-08-24",
-    "location": "Boston, MA, USA",
-    "url": "phoenix-glendale-az",
-    "type": "meetup",
-    "tags": [
-      "AI",
-      "biology"
-    ],
-    "virtual": false,
-    "description": "",
-    "source": "luma",
-    "auto": true
-  },
-  {
     "name": "Future of Work with AI: Session 5 - \"The Window\"",
     "date": "2026-08-26",
     "end_date": "2026-08-27",
     "location": "Boston, MA, USA",
     "url": "fn4bz872",
-    "type": "meetup",
-    "tags": [
-      "AI",
-      "biology"
-    ],
-    "virtual": false,
-    "description": "",
-    "source": "luma",
-    "auto": true
-  },
-  {
-    "name": "Iowa AI Center of Excellence - AI Showcase Event",
-    "date": "2026-08-26",
-    "end_date": "2026-08-26",
-    "location": "Boston, MA, USA",
-    "url": "s20of6zp",
     "type": "meetup",
     "tags": [
       "AI",
@@ -64,11 +32,75 @@
     "auto": true
   },
   {
+    "name": "[vibe coded] build a second brain 💅🏼🧠🤝💻⚡️",
+    "date": "2026-08-27",
+    "end_date": "2026-08-28",
+    "location": "Boston, MA, USA",
+    "url": "play-d90v",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
     "name": "AZ AI Syndicate - Fall Kickoff",
     "date": "2026-08-28",
     "end_date": "2026-08-28",
     "location": "Boston, MA, USA",
     "url": "gy00ges0",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
+    "name": "Executive CIO Dinner: Leveraging AI Agents",
+    "date": "2026-08-28",
+    "end_date": "2026-08-28",
+    "location": "Boston, MA, USA",
+    "url": "chicago-AI-dinner",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
+    "name": "Coffee and Paint Workshop With Mafer",
+    "date": "2026-08-29",
+    "end_date": "2026-08-29",
+    "location": "Boston, MA, USA",
+    "url": "5eqh7ob3",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
+    "name": "Summer Send-Off Fundraiser Cookout",
+    "date": "2026-08-30",
+    "end_date": "2026-08-30",
+    "location": "Boston, MA, USA",
+    "url": "o5pw4wlh",
     "type": "meetup",
     "tags": [
       "AI",
@@ -176,7 +208,7 @@
       "clinical"
     ],
     "virtual": false,
-    "description": "American Society of Human Genetics annual meeting \u2014 a key forum for AI-driven genetics and genomics research.",
+    "description": "American Society of Human Genetics annual meeting — a key forum for AI-driven genetics and genomics research.",
     "auto": false
   },
   {
@@ -193,11 +225,11 @@
       "digital health"
     ],
     "virtual": false,
-    "description": "Annual congress focused on biodata, AI and precision medicine \u2014 bringing together data scientists, clinicians and industry leaders.",
+    "description": "Annual congress focused on biodata, AI and precision medicine — bringing together data scientists, clinicians and industry leaders.",
     "auto": false
   },
   {
-    "name": "NeurIPS 2026 \u2014 ML for Biology Workshop",
+    "name": "NeurIPS 2026 — ML for Biology Workshop",
     "date": "2026-12-05",
     "end_date": "2026-12-06",
     "location": "TBC",
@@ -210,7 +242,7 @@
       "computational"
     ],
     "virtual": false,
-    "description": "Annual machine learning for biology workshop co-located with NeurIPS \u2014 a key venue for AI \u00d7 biology research presentations.",
+    "description": "Annual machine learning for biology workshop co-located with NeurIPS — a key venue for AI × biology research presentations.",
     "auto": false
   }
 ]
