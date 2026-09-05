@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-04T12:40:33Z",
+  "last_updated": "2026-09-05T11:48:16Z",
   "companies": [
     {
       "name": "XtalPi",
@@ -446,11 +446,11 @@
       "funding": "$100M+ total \u2014 $73M Series B (Nov 2024), led by IVP. Previous investors: Index Ventures, Kindred Capital.",
       "stage": "series-b",
       "needs_review": true,
-      "review_headline": "Cradle Revenue 2023: $5M Est. ARR, $29.9M Raised - GetLatka",
-      "review_url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE5rRXFmVzE5T0pFN1Vjc0lIRDdhRC02TlRacVZjSnJTQy0xWnVzVWYyUW1mT2dSdGVHcmV1OHhQamxUaldkVW9CQmc3MHhFdw?oc=5",
-      "proposed_funding": "$5M",
+      "review_headline": "WFP halves food aid to occupied West Bank as funding for UN agency collapses - thecradle.co",
+      "review_url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQOWpVWmhRc0dobkwzckswRUJNQ0RiTG9XV1J0c2dCWXQxSU5Gb1J6VnZIRnJGMFI1T2FJbUl1azBJLXdyQmU0dkhHV3ZpbXBDODU1cm5pNXdLTHVsOFZLdHlZQmdSRTdCNlh1UHA5RGpqMHhfRzNVT0wzYzZQQnlXTUNYb2oxOGxuX1ZlYXBlVzdxNWRETFNILVlKelh2RE42OVRlbm9PbkdhUQ?oc=5",
+      "proposed_funding": "",
       "proposed_stage": "",
-      "found_at": "2026-08-22T08:38:09Z"
+      "found_at": "2026-09-05T11:46:36Z"
     },
     {
       "name": "Deep Genomics",
@@ -974,11 +974,11 @@
       "funding": "$14M",
       "stage": "seed",
       "needs_review": true,
-      "review_headline": "Funding better evaluations of AI\u2019s impact on wellbeing - Anthropic",
-      "review_url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5DNElZcS10WnJ1NHJEdmtYNkxUT1JQZ3plaDhZejA4UENGVlliUzRqM19sejJyOEFZbW9zbTZyZmpsZGpmOGYtaDc2T1pFTThXUG9wQi1nUFl3cVhIVDJyQVd6QnBsa2M?oc=5",
+      "review_headline": "Which Investors Will Get Rich From Anthropic\u2019s IPO? - The New York Times",
+      "review_url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPWTR5VzNmN3BqcWFjdy1mVHBjNzVSYmxwN05WSTlZZ05qa1Joa1ZJalBmYlI3bHJOU3YyVXJ1eDdFR2lsNXFSNEdpbExjSFVtbnE1dEh0ejYwbDVhdEEySVczYTZtc1pEZEZaWlF5clZOTWppWXFNZHo1WGcteEd1YmhEdUVEUklKaXc?oc=5",
       "proposed_funding": "",
-      "proposed_stage": "",
-      "found_at": "2026-09-04T12:40:08Z"
+      "proposed_stage": "public",
+      "found_at": "2026-09-05T11:47:51Z"
     },
     {
       "name": "Google DeepMind",
@@ -1018,11 +1018,11 @@
       "funding": "$30B",
       "stage": "public",
       "needs_review": true,
-      "review_headline": "OpenAI Begins Staggered Astra Rollout as Brockman Raises AGI Question - citybiz",
-      "review_url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPUUhOdDA4VEtaRVl2c1RsazJNRlF3dWYxb1JPaFRadjFnYWl2N2g0OTl3SmdoeDBySzRDdVVlVC1kUWlPR0VnU3Z4bkVxeFlIeFl4enBleDUyZzdyTkFqMmI5WmxPVlVJN2hrT2ZBYXp6ODRYNDBFZXNLaVhSSVljUmRRYzVKeVlSbC1UcXBjWkFaWFhacFRnQ0ptZUdyb3RpQ2JIS3hoVGkxQTVQ?oc=5",
+      "review_headline": "Nvidia\u2019s (NVDA) Investment in OpenAI Highlights Circular Financing Concerns - Yahoo Finance",
+      "review_url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPQW8wMDljcy04TExXUEYtd1dJMmYza3V5QVd3bzJfVy0yY2NjZjJJMEM5M1pCa3J6N3E0UmFwR28wZUdKMHhqejR5Q0Q2R2dvcDJFTmNqNHJkTW1mOU9PNzhaTm9JUEwxRG00X1ZSd3A5ejJMLXZBd0FuUXhnbHRFdjdNaUxOblhCV0pwcHBlRFViVjk0OFpLUDRySk1hT19BaHRORXlFMDE?oc=5",
       "proposed_funding": "",
       "proposed_stage": "",
-      "found_at": "2026-09-04T12:40:09Z"
+      "found_at": "2026-09-05T11:47:52Z"
     },
     {
       "name": "Sakana AI",
