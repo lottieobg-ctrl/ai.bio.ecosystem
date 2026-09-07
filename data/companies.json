@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-06T12:06:10Z",
+  "last_updated": "2026-09-07T14:11:40Z",
   "companies": [
     {
       "name": "XtalPi",
@@ -534,11 +534,11 @@
       "funding": "~$400M total \u2014 Series C. Backed by Warburg Pincus, B Capital.",
       "stage": "series-c",
       "needs_review": true,
-      "review_headline": "InSilico Medicine Raises US$305 Million via Zero Coupon Convertible Bonds - TipRanks",
+      "review_headline": "InSilico Medicine Raises US$305 Million via Zero Coupon Convertible Bonds - tipranks.com",
       "review_url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNQjhLRW96YzlfbXdqcXRsTEpFTHc3WXJBMzAwbm5xclM2OHBIeURZZnpIc0VaYWxVTzZBbENWN3NraHpVMkJ0NlhIZE9sRllrS1FfSVI4ZVlqeWpkWFl0QVVldWxHM3gwajZxckh3NzdCLXFMdm1DcUJ5TTcxUlhkcXpVNlhEWW5UelVJWUZsMlQ2bUJUZ2hQWllvc2Ntd0YyeTR4cXJvOW5FWnBtcGZ2cWpPLXpEeE1WWjhYaXVvcE1KUQ?oc=5",
       "proposed_funding": "$305M",
       "proposed_stage": "",
-      "found_at": "2026-09-04T12:39:07Z"
+      "found_at": "2026-09-07T14:10:11Z"
     },
     {
       "name": "insitro",
@@ -949,14 +949,14 @@
     },
     {
       "name": "Tempus AI",
-      "funding": "$2B",
-      "stage": "series-a",
+      "funding": "$2M",
+      "stage": "public",
       "needs_review": true,
-      "review_headline": "Piper Sandler Upgrades Tempus AI(TEM.US) to Buy Rating, Raises Target Price to $76 - Moomoo",
-      "review_url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQV2FTSDF2V09kRmNqUk9RVzFCeGFqdlJ4SnlTS28zQS1NdlZJNDJTY3g3Ry1qOWJDcWFLR0lYaVhOc2tRVmRYazduczVBRjRtd2NSVTNWaUEtbUlVbk84eVdLdTZ2Z3lJVGNBSUtiV2ZzNzFqME4yZmJiR1g3RzloVExCbGMwb2ZLbDJlVmJsaXBiaVlDMFhrYS0zNFVRYnp2dkJV?oc=5",
-      "proposed_funding": "",
-      "proposed_stage": "",
-      "found_at": "2026-09-06T12:05:44Z"
+      "review_headline": "Public Employees Retirement System of Ohio Makes New $1.77 Million Investment in Tempus AI, Inc. $TEM - MarketBeat",
+      "review_url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxOSXhhT1NYazVQVFc2RmdzSlZkUnk5ZDlIYklHN0NLdlNxdW85cHFfTVp6MC1iNXdqT3VKcGY4XzFTdjhSdTlMUjlyZ29BUkYyTnUxMGRXMWZwWnhzNXJWTlZ5ZGNEUzlCa0gzV2ZBUVZJT29EaEZLTjE1N3RnaUpwNlFKNC1PRTB6VHA0VzlOM3l2enhwQ09vVHZaWkpHYlViU2gxeUVESTRUY21FQS00blJvbXA2cHRWUGZHSTdmZWtfT1daREFtZnlqQ3BrQkpNUFhlZzhlaDhhMDQ3LWZiVFdVNkhHRTFiQ0JrYVpR?oc=5",
+      "proposed_funding": "$2M",
+      "proposed_stage": "public",
+      "found_at": "2026-09-07T14:11:13Z"
     },
     {
       "name": "Verily Health",
@@ -1018,11 +1018,11 @@
       "funding": "$30B",
       "stage": "public",
       "needs_review": true,
-      "review_headline": "Nvidia\u2019s Huang Says $30B OpenAI Investment May Be Last Pre-IPO Deal - stocktwits.com",
-      "review_url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOR2dmdHo3Z0dMR0pQaXh6ZEVMZ3B4eVVxSmRhcTE3SmEtS3RTVjB1X0Z2dEMtLWxwdlZYdEYtY0pDOUNhcTJoTjI5eW11U3ItejgwWjlGdVUxWHoyZXB3QzVzNFM3WnZqSEdnRlUzajRRYUhIdnVfaFRzcDJ5WDVQVFVNbGpVZDdTdzRNQXprWWFyME9Fb0QzMVNhdlM1eFV2clY1R0ZVeENSWm1iMDhsR2hOT1JBWXotX1B3WWsxeGNOQU1aMzlr?oc=5",
-      "proposed_funding": "$30B",
-      "proposed_stage": "public",
-      "found_at": "2026-09-06T12:05:45Z"
+      "review_headline": "'Extreme Caution': OpenAI chief scientist Jakub Pachocki raises alarm over rising machine intelligence - Firstpost",
+      "review_url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxPNXY3Tm54QUNZa1RrQlFLSHQ1VTE1Zjk1WExfWFFJVWZ3VjNCeXNRM2dJV3FXTERTOFB2VGR1WXRuQ0Y4VnlabWdZZUZVSF9ya1RXSDdxNTh6N0tlQWluaHNHQW1ZdW94NThqU3pSS0pWSnRldDQ4Q2dhR00tRHFCN0FkNDY4RExSSHpGcFk2SHE4dTAwRk5FbWZaUERTYWpJMjdLb05pcFFORG9DMkJBQjkwSjN0QmFReEwxUkM5cGxvend6cUVaYno2ajc5UVk0Vk1palV2OE5URGRj0gHiAUFVX3lxTE52SVZqcjBPM28zazlyc21zV0xpYUVXak5rNkF0amxFdkNlUVd4VUNyTjNKRjhjZmpOZVBZTGZjS2pJcE55SlhWbnZja25ILThwNnlscW42RDQyc3JoT3hwU0hEWERyaFQ5eFJkcElZMUE5Zm5haHhYVDRPQ08yNmp4czg0OGV2XzY1N1NoYU1DMll6NXBieC1EelZWN1JiaTAzSzhRUWlndmpXSkM3Tm5UdGlfdzM5Q05ZQVNMM2RzT1VmT0Q1UXhxYzZiTGRGZFFyT01PSmo1QXljREhpQUdMNnc?oc=5",
+      "proposed_funding": "",
+      "proposed_stage": "",
+      "found_at": "2026-09-07T14:11:14Z"
     },
     {
       "name": "Sakana AI",
