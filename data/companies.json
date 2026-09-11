@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-10T12:52:16Z",
+  "last_updated": "2026-09-11T12:47:14Z",
   "companies": [
     {
       "name": "XtalPi",
@@ -952,11 +952,11 @@
       "funding": "$2M",
       "stage": "public",
       "needs_review": true,
-      "review_headline": "Public Employees Retirement System of Ohio Makes New $1.77 Million Investment in Tempus AI, Inc. $TEM - MarketBeat",
-      "review_url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxOSXhhT1NYazVQVFc2RmdzSlZkUnk5ZDlIYklHN0NLdlNxdW85cHFfTVp6MC1iNXdqT3VKcGY4XzFTdjhSdTlMUjlyZ29BUkYyTnUxMGRXMWZwWnhzNXJWTlZ5ZGNEUzlCa0gzV2ZBUVZJT29EaEZLTjE1N3RnaUpwNlFKNC1PRTB6VHA0VzlOM3l2enhwQ09vVHZaWkpHYlViU2gxeUVESTRUY21FQS00blJvbXA2cHRWUGZHSTdmZWtfT1daREFtZnlqQ3BrQkpNUFhlZzhlaDhhMDQ3LWZiVFdVNkhHRTFiQ0JrYVpR?oc=5",
-      "proposed_funding": "$2M",
-      "proposed_stage": "public",
-      "found_at": "2026-09-07T14:11:13Z"
+      "review_headline": "H.C. Wainwright raises Tempus AI stock price target to $66 - Investing.com",
+      "review_url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQSEZ1bWJBVTB5b19xcEI0RVMtQWFpX28yVVlmSk9VdmoyLWc1LXM0SGYyRWJuSEdqd1NiSVlaMzNYRUg5b1FzTjN5SFM0MDE1QzEwVGRRNGJ3VFlWMEtQVERVV2lIQktKTlAxVGVlaEZRTmt3THB0b1pURVg1Y1hDNWlvOWhIcTFlOWJIRFIyMy1sNXhWZ0cwT0l0Q0NXSDhzRHNBSl9lNTE2ZUE3OTFHRFhOaXhwdw?oc=5",
+      "proposed_funding": "",
+      "proposed_stage": "",
+      "found_at": "2026-09-11T12:46:48Z"
     },
     {
       "name": "Verily Health",
@@ -974,11 +974,11 @@
       "funding": "$14M",
       "stage": "seed",
       "needs_review": true,
-      "review_headline": "OpenAI, Anthropic Seek Investment-Grade Ratings Post Potential IPOs to Cut AI Borrowing Costs: Report - Yahoo Finance",
-      "review_url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQNTNDYnVCTzVSTGhJY0stZDFGdHJ4SDh1ZVR0V0dveGVSVkVfT3FGTGs1RERucU5oWEUzTnJCb1c4eXlRb0pENUtJbmhRRGlvcGdaR2F1YkNSS1hSTzc5Q0hkQ1ZzNExrTEd6RDdlZlVZeThzVUJoMU1LamJnZ1lrT0NYLTJVSWI5VHpmOWhTSnRJZktYX3BaV1JVMlNETTVNYl9HeQ?oc=5",
+      "review_headline": "T. ROWE PRICE WORKS WITH ANTHROPIC TO BRING CLAUDE TO MORE OF ITS INVESTMENT PROCESS - PR Newswire",
+      "review_url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPMUtuQkdXQW53Mm10enJDdzd4WHVZY2dtQzFGaTBHQTdQRXk5ejRCVFpjVmQ3Tng0VHV1V2c1NVI5Mkk5X0QybkZXTW1aTHlXTDhlYlJmNmY2cWI4TDJBNWt2WWJFdV96dXJPTE1GOGdzYTlvZ2I4RXc4OExnSy0tdGI1ZklVLV9yMFN0Q19EbGRPcnE2S3BvUjBJR3NZTUVVeVlnNzhTb3B6MF9jYlJJM0ZwTXB5U21HOVRTZGlwOEpTbkdjM2IyVDBfM3U3YzZsOGlORlBn?oc=5",
       "proposed_funding": "",
       "proposed_stage": "",
-      "found_at": "2026-09-09T12:54:15Z"
+      "found_at": "2026-09-11T12:46:49Z"
     },
     {
       "name": "Google DeepMind",
@@ -1018,11 +1018,11 @@
       "funding": "$30B",
       "stage": "public",
       "needs_review": true,
-      "review_headline": "Funding grants for new research into AI and teen development - OpenAI",
+      "review_headline": "Funding grants for new research into AI and teen development - openai.com",
       "review_url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1qb0ZUX3hIM2JQZGx0T0xoTVdER2JqcHBRSGktMF9IUkJfQklIdzU5NmxsMVpKYmk5cG40NHZES1RwLUNybmRsaXBETVNrbzNBbk5zbDRrVGVaVjVLM1dENm5QcGJodTNkOFE?oc=5",
       "proposed_funding": "",
       "proposed_stage": "",
-      "found_at": "2026-09-09T12:54:15Z"
+      "found_at": "2026-09-11T12:46:49Z"
     },
     {
       "name": "Sakana AI",
