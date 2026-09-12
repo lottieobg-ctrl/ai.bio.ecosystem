@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-11T12:47:14Z",
+  "last_updated": "2026-09-12T12:07:07Z",
   "companies": [
     {
       "name": "XtalPi",
@@ -358,11 +358,11 @@
       "funding": "Public (Nasdaq: ABSI). Raised ~$200M pre-IPO.",
       "stage": "public",
       "needs_review": true,
-      "review_headline": "BTIG Maintains Absci Corp(ABSI.US) With Buy Rating, Raises Target Price to $16 - Moomoo",
+      "review_headline": "BTIG Maintains Absci Corp(ABSI.US) With Buy Rating, Raises Target Price to $16 - moomoo.com",
       "review_url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOejRuS1VYbm1MNEtuUWFwWktzNzhKY2tZSS1aZURhQWpOWVl4cEhnX3JKVkpNSC12SzYxdkVoQjNEZjBKd2JnVFRBQk5jWDlxanlNRl9mUEE3UWVNY29ZSHo2RlBiYzFLME9mQUZENDViUHd6eHU2NFRuR3psMldQdjd2QkhOaWhiNnFjM1FaZ0kwaEVQdHliQVNyLUlEWGRva3kyWDFGdw?oc=5",
       "proposed_funding": "",
       "proposed_stage": "",
-      "found_at": "2026-09-09T12:52:31Z"
+      "found_at": "2026-09-12T12:04:58Z"
     },
     {
       "name": "Aignostics",
@@ -974,11 +974,11 @@
       "funding": "$14M",
       "stage": "seed",
       "needs_review": true,
-      "review_headline": "T. ROWE PRICE WORKS WITH ANTHROPIC TO BRING CLAUDE TO MORE OF ITS INVESTMENT PROCESS - PR Newswire",
-      "review_url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPMUtuQkdXQW53Mm10enJDdzd4WHVZY2dtQzFGaTBHQTdQRXk5ejRCVFpjVmQ3Tng0VHV1V2c1NVI5Mkk5X0QybkZXTW1aTHlXTDhlYlJmNmY2cWI4TDJBNWt2WWJFdV96dXJPTE1GOGdzYTlvZ2I4RXc4OExnSy0tdGI1ZklVLV9yMFN0Q19EbGRPcnE2S3BvUjBJR3NZTUVVeVlnNzhTb3B6MF9jYlJJM0ZwTXB5U21HOVRTZGlwOEpTbkdjM2IyVDBfM3U3YzZsOGlORlBn?oc=5",
+      "review_headline": "EXCLUSIVE: Nvidia in talks to invest in Anthropic\u2019s mega IPO, sources say - Reuters",
+      "review_url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPbmduYjZNYlh4TmVDd3dMTzZmU21ud1Q5WVVaYXBOM2hUQ201U2tjeDhoWHd6ZjhlQzdtUWxiNmFibkRpc2VlcmxjbWMzTWljZ0ZZSkF6VHFPWnJVUFQwc2g4RDNtb1FCWjN1R3BBcFRzUHkyTXJiRXZpa0NxV29IWFc1LV9lUXh0bXc3TWNrSHZhT0lPTVU2dEswYWhSVUw2SzFkRkVmSHU0S3c?oc=5",
       "proposed_funding": "",
-      "proposed_stage": "",
-      "found_at": "2026-09-11T12:46:49Z"
+      "proposed_stage": "public",
+      "found_at": "2026-09-12T12:06:42Z"
     },
     {
       "name": "Google DeepMind",
@@ -1018,11 +1018,11 @@
       "funding": "$30B",
       "stage": "public",
       "needs_review": true,
-      "review_headline": "Funding grants for new research into AI and teen development - openai.com",
+      "review_headline": "Funding grants for new research into AI and teen development - OpenAI",
       "review_url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1qb0ZUX3hIM2JQZGx0T0xoTVdER2JqcHBRSGktMF9IUkJfQklIdzU5NmxsMVpKYmk5cG40NHZES1RwLUNybmRsaXBETVNrbzNBbk5zbDRrVGVaVjVLM1dENm5QcGJodTNkOFE?oc=5",
       "proposed_funding": "",
       "proposed_stage": "",
-      "found_at": "2026-09-11T12:46:49Z"
+      "found_at": "2026-09-12T12:06:42Z"
     },
     {
       "name": "Sakana AI",
