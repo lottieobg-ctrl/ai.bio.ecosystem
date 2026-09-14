@@ -1,10 +1,10 @@
 [
   {
-    "name": "Chicago | How Businesses Use AI",
-    "date": "2026-09-09",
-    "end_date": "2026-09-10",
+    "name": "AI LAB at WFG TITLE",
+    "date": "2026-09-15",
+    "end_date": "2026-09-15",
     "location": "Boston, MA, USA",
-    "url": "claude-lfbf",
+    "url": "3k71fg9l",
     "type": "meetup",
     "tags": [
       "AI",
@@ -21,6 +21,22 @@
     "end_date": "2026-09-20",
     "location": "Boston, MA, USA",
     "url": "u5eggp69",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
+    "name": "Becoming An AI Agent Commander - In person workshop",
+    "date": "2026-09-18",
+    "end_date": "2026-09-18",
+    "location": "Boston, MA, USA",
+    "url": "2ldeodrv",
     "type": "meetup",
     "tags": [
       "AI",
@@ -49,11 +65,43 @@
     "auto": false
   },
   {
+    "name": "Where is AI in 2026 and Where is it Going?",
+    "date": "2026-09-22",
+    "end_date": "2026-09-22",
+    "location": "Boston, MA, USA",
+    "url": "aisap-rpl5",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
     "name": "HeyGen AI Class",
     "date": "2026-09-23",
     "end_date": "2026-09-23",
     "location": "Boston, MA, USA",
     "url": "nhptvbcb",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
+    "name": "Executive Dinner: Leveraging AI Agents",
+    "date": "2026-09-29",
+    "end_date": "2026-09-29",
+    "location": "Boston, MA, USA",
+    "url": "lvcdhxzn",
     "type": "meetup",
     "tags": [
       "AI",
