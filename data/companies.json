@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-14T14:58:24Z",
+  "last_updated": "2026-09-15T13:24:33Z",
   "companies": [
     {
       "name": "XtalPi",
@@ -434,12 +434,12 @@
       "name": "Chemify",
       "funding": "~$100M total \u2014 Series A/B. Backed by Lux Capital.",
       "stage": "series-a",
-      "needs_review": false,
-      "review_headline": "",
-      "review_url": "",
-      "proposed_funding": "",
+      "needs_review": true,
+      "review_headline": "Chemify targets 'hyperscaler' status with \u00a320m state funding package - Sky News",
+      "review_url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPM09RVG9Gc1dCMVNGRjhkbXI4ejBuM2I0YkFoRXVOSUJ5Rmh3WlpULWpXVjBXNUNpTXlSc0R5Yl92T3FUSm1xSVMtOUlyYnV2WGpjejJCcGoyQ29GVHVXVC1oZjNVZWRPaWZYbXhjNWZEY3pMd3hKRWVHTjZNX1luNVAyMTZwV1Y4ejlQODR0RlpzWDluaEtvSkh2eFV5T0pIS29F?oc=5",
+      "proposed_funding": "$20M",
       "proposed_stage": "",
-      "found_at": ""
+      "found_at": "2026-09-15T13:22:47Z"
     },
     {
       "name": "Cradle",
@@ -567,11 +567,11 @@
       "funding": "$719M",
       "stage": "public",
       "needs_review": true,
-      "review_headline": "Atlas Venture Life Science Advisors LLC Makes New Investment in Kailera Therapeutics, Inc. $KLRA - marketbeat.com",
+      "review_headline": "Atlas Venture Life Science Advisors LLC Makes New Investment in Kailera Therapeutics, Inc. $KLRA - MarketBeat",
       "review_url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxNUWltdWZYSnlnMC02dmMxcVFxOVBDWldnbEd2SnRDcGJIY0pQbms2XzNsUVA0YU4xTENMWVMyX2pwYThSeTkzZjJobGxRS0xTOVVoSnZRQVFCVnlBc1ZlckZaNUdDLV8wY0NNZk1qYTlaa1dOZHVGNVpVMnhMMlg4OUowNjFmLWFXaElOOXRBQk1Ub0p0Q2RnRFZ4UElET1RJTkFYQXc3SXRQQjRRVjZMSDdMaWQzLUhQeS1iWnUyY01ha0xobHJlYTkwcHRaMVdWUThPcy10MVJQVFRYdnhmUm1KU05rZlZvUVE?oc=5",
       "proposed_funding": "",
       "proposed_stage": "",
-      "found_at": "2026-09-14T14:56:54Z"
+      "found_at": "2026-09-15T13:23:15Z"
     },
     {
       "name": "Lila Biosciences",
@@ -809,11 +809,11 @@
       "funding": "~$30M total \u2014 Series B.",
       "stage": "series-b",
       "needs_review": true,
-      "review_headline": "Kaiko raises $110 million led by S&P Global to expand 24/7 market data infrastructure - CoinDesk",
-      "review_url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOVHFQZ3dwVGZEMUdrT2NtZkxHOVNkWFJqM1ZWUE5QV0NRdVpzWlJYZlFaR19KOFR5SUVuRHJuY3gzX3k5ZDBTSWZXNDZyYV8yV2NTY096U1ZXZG9OdlQ4c1lsOWJuSDAwa2tCTUZqWHFQY2J2bkJaVjhTczJ5WHFWNExNRlRKdmw5aW5JaWtmZHpTS0l2Z1NFRTlhOVNHR3NxZ2RkVm51SUJMMm9JQ3pZZnFUMzhYZVAyU2txbklhaFgyS0FjcXpzeVFLNA?oc=5",
-      "proposed_funding": "$110M",
+      "review_headline": "Kaiko raises $53M to grow its crypto data platform - SiliconANGLE",
+      "review_url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQSTJrZmFVM0hSenh1SXFIeTNiZ3pkV05Nd0d3ZFdFSDB3TUlieTR4QzdWclFNZ0FOM216bTgwRm1HZkpkUjZNU25lZlpJeFJwZW5ReElMbzljOE9kMm10UlNzUktjWVp5XzVCalMtVFpnNDNDcEs0UHNtaE9rUXl6WXN1M0JuOEQ5WVgzYU1JQQ?oc=5",
+      "proposed_funding": "$53M",
       "proposed_stage": "",
-      "found_at": "2026-09-14T14:57:42Z"
+      "found_at": "2026-09-15T13:23:57Z"
     },
     {
       "name": "Medra",
@@ -952,11 +952,11 @@
       "funding": "$2M",
       "stage": "public",
       "needs_review": true,
-      "review_headline": "H.C. Wainwright raises Tempus AI stock price target to $66 By Investing.com - Investing.com Nigeria",
-      "review_url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPM2o2am9xT3c2YlpTNXc0eHJhOGdtVXVGejEtZmwwbnJLaGhBaS16b1ZOSGRXV2FJdEw4UkdFMDdTZHdOdG1nZ09MTnBKS3ozV2ZlaGZIbUg4RUpueEkyOG9xY2g2SGU4Qkhsdl9BbGU3VzJYQ3JwVFZRendyVWllbzRETlpQcngtdjBNMWRRU2RBeE96NFZYbkt2ZFlNZ0paZTlXWGlkTmRrYTdIZTZjSUxnZmR4YTg?oc=5",
+      "review_headline": "H.C. Wainwright raises Tempus AI stock price target to $66 - Investing.com",
+      "review_url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQSEZ1bWJBVTB5b19xcEI0RVMtQWFpX28yVVlmSk9VdmoyLWc1LXM0SGYyRWJuSEdqd1NiSVlaMzNYRUg5b1FzTjN5SFM0MDE1QzEwVGRRNGJ3VFlWMEtQVERVV2lIQktKTlAxVGVlaEZRTmt3THB0b1pURVg1Y1hDNWlvOWhIcTFlOWJIRFIyMy1sNXhWZ0cwT0l0Q0NXSDhzRHNBSl9lNTE2ZUE3OTFHRFhOaXhwdw?oc=5",
       "proposed_funding": "",
       "proposed_stage": "",
-      "found_at": "2026-09-14T14:57:55Z"
+      "found_at": "2026-09-15T13:24:08Z"
     },
     {
       "name": "Verily Health",
@@ -974,11 +974,11 @@
       "funding": "$10B",
       "stage": "public",
       "needs_review": true,
-      "review_headline": "Anthropic\u2019s $2 trillion IPO is taking shape as Nvidia considers a $10 billion investment - calcalistech.com",
-      "review_url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5ZLUYwdWJsd3RMdVhYcUpQU2F5ZGVQOTlaR0pSdWtoVEhLMlN4TlJHc0xhSWFuV0E3TzBsYTVMS3ZRRGZZaEh4VHNBVFFxMGxnRjlCRndlOUh3ZkJmX2tCS3Q4ZUZxNVE?oc=5",
-      "proposed_funding": "$10B",
-      "proposed_stage": "public",
-      "found_at": "2026-09-14T14:57:56Z"
+      "review_headline": "What a $10,000 Investment in Amazon Now Would Be Worth if Its Anthropic Stake Gets Marked at $2 Trillion - The Motley Fool",
+      "review_url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQS0lpUGFFbHdMNE5nTElURlBYTU9ZV2JVQm1DZlE1bWdQY3BWQnRXaXUxZG9ERUxvSXp2MUlwTkhYQlhXdTBGOVhwbnR5em96VC1ub2dTUlFEeE43OEFuVDJ4ZHpKU3dOZEg5eWIzenB5RUF3dUJXTVBxWVVNdzAzOXpEODhfQzc3SmpXOXZjaERtQm8?oc=5",
+      "proposed_funding": "",
+      "proposed_stage": "",
+      "found_at": "2026-09-15T13:24:08Z"
     },
     {
       "name": "Google DeepMind",
@@ -1018,11 +1018,11 @@
       "funding": "$30B",
       "stage": "public",
       "needs_review": true,
-      "review_headline": "SoftBank Gets Upsized $11.9 Billion Loan in OpenAI Funding Push - Bloomberg.com",
-      "review_url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNTEMxeXVSa29wMkM4aVJMNWFSd3NTMUtXU1czYjVreEx0eGJyOXc3VGE0X1hlWVpPS2FzZ3huZWY1eHprdzI0Ykw4Y210WEk0SUNxdGRzZ043N1hYWTZ3c0Z1VWVKSGUtcjU0OElobHZjMEM3QlBYSVpQTWF2UFR2Q3JKd19vR1V0WGo3Yl9LSHR5NHNSSGo2Z1pRNkN2WURQVWpfLTBBc2ZTeFBGTWV1TE1Jcw?oc=5",
-      "proposed_funding": "$12B",
+      "review_headline": "Funding grants for new research into AI and teen development - openai.com",
+      "review_url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE52TkhYUFNHRXc4cEFtc1NHeFNMV3NDaWoxTFhSaWdqQXFsNk9tZFBjU3NPbndPZnJfX2lNdldSUHlvSzRUV2J3djQzOENoUGwwbGZDS3NOQVNDamhMVl9oVjc2YUp4TDl5WkdLZkEzamp2Qms?oc=5",
+      "proposed_funding": "",
       "proposed_stage": "",
-      "found_at": "2026-09-14T14:57:57Z"
+      "found_at": "2026-09-15T13:24:09Z"
     },
     {
       "name": "Sakana AI",
