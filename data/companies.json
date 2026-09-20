@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-19T12:27:02Z",
+  "last_updated": "2026-09-20T13:01:11Z",
   "companies": [
     {
       "name": "XtalPi",
@@ -358,11 +358,11 @@
       "funding": "Public (Nasdaq: ABSI). Raised ~$200M pre-IPO.",
       "stage": "public",
       "needs_review": true,
-      "review_headline": "BTIG Maintains Absci Corp(ABSI.US) With Buy Rating, Raises Target Price to $16 - moomoo.com",
+      "review_headline": "BTIG Maintains Absci Corp(ABSI.US) With Buy Rating, Raises Target Price to $16 - Moomoo",
       "review_url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOejRuS1VYbm1MNEtuUWFwWktzNzhKY2tZSS1aZURhQWpOWVl4cEhnX3JKVkpNSC12SzYxdkVoQjNEZjBKd2JnVFRBQk5jWDlxanlNRl9mUEE3UWVNY29ZSHo2RlBiYzFLME9mQUZENDViUHd6eHU2NFRuR3psMldQdjd2QkhOaWhiNnFjM1FaZ0kwaEVQdHliQVNyLUlEWGRva3kyWDFGdw?oc=5",
       "proposed_funding": "",
       "proposed_stage": "",
-      "found_at": "2026-09-19T12:25:04Z"
+      "found_at": "2026-09-20T12:59:13Z"
     },
     {
       "name": "Aignostics",
@@ -435,11 +435,11 @@
       "funding": "~$100M total \u2014 Series A/B. Backed by Lux Capital.",
       "stage": "series-a",
       "needs_review": true,
-      "review_headline": "Chemify Raises \u00a322M in Grants - FinSMEs",
-      "review_url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1sVkFkRUJZRS1VLV9SZ3M0MzRPa0wxQ3BRRXBrRGpBTENPYnV6NmJMczRMLVY1VmdyUVBxTmMyRkpjak5uYk5uQzVTMmc3UVhfSDdmWnpkUzhTX3FKeVkzdE1YcVR6Y19kclJKMW9US3Y0Unc?oc=5",
-      "proposed_funding": "$22M",
+      "review_headline": "Chemify targets 'hyperscaler' status with \u00a320m state funding package - Sky News",
+      "review_url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPM09RVG9Gc1dCMVNGRjhkbXI4ejBuM2I0YkFoRXVOSUJ5Rmh3WlpULWpXVjBXNUNpTXlSc0R5Yl92T3FUSm1xSVMtOUlyYnV2WGpjejJCcGoyQ29GVHVXVC1oZjNVZWRPaWZYbXhjNWZEY3pMd3hKRWVHTjZNX1luNVAyMTZwV1Y4ejlQODR0RlpzWDluaEtvSkh2eFV5T0pIS29F?oc=5",
+      "proposed_funding": "$20M",
       "proposed_stage": "",
-      "found_at": "2026-09-17T13:17:37Z"
+      "found_at": "2026-09-20T12:59:27Z"
     },
     {
       "name": "Cradle",
@@ -809,11 +809,11 @@
       "funding": "~$30M total \u2014 Series B.",
       "stage": "series-b",
       "needs_review": true,
-      "review_headline": "Crypto VC funding: Kaiko leads $180M week - Crypto News",
-      "review_url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE82bXZCelNqS3FLSVVPTllMZ1ctdmFWWmNnYVRuMlN3TnhBazhOeE0zQ0RQQ2Q2SERXb2xJa3BnUWIzQmExanpCMTAzTEdKX2JmRUdSSURXRmIxYjBXU3lKWkEtY2NIVXFSTnQyM21HRkFxalVsMDRj?oc=5",
-      "proposed_funding": "$180M",
+      "review_headline": "Crypto data firm Kaiko secures $110 million funding round led by S&P Global - Reuters",
+      "review_url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPWkI5aGljZE4zRG9EdFJuNEs4bmVINHVRSkY5Zmp4alhsc2JyVkJKSW42R2VWdFdxbG96aF8xQzZ3dXdPMXNoVG1xelh0QlRfMjRjOEJ6Z0ZCSkZDMjlmNnVseHlSQlh3NG5IcGRILVBEYm9TRDhOOFBNeEoyY1Z1TUEyUjhVY2ZsTThYZVR3SmdqdE5ialR6UV9mZWpyc2F2dkFhQ2dneUZJY0tuMWQySGtOOWt4Y3FQX2ZnWFh0bmNGZzJD?oc=5",
+      "proposed_funding": "$110M",
       "proposed_stage": "",
-      "found_at": "2026-09-19T12:26:26Z"
+      "found_at": "2026-09-20T13:00:38Z"
     },
     {
       "name": "Medra",
@@ -974,11 +974,11 @@
       "funding": "$10B",
       "stage": "public",
       "needs_review": true,
-      "review_headline": "Anthropic Pursues IPO Despite Its A.I. Safety Warnings - The New York Times",
-      "review_url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBzNk1Xck9GUE41UTZPc1p6elBuenQyZnA3bEg0WFEyeHNLNXBfNXZmZUNIOUtodnVSaWFXRGtueDFzenhuMS1xYVBvSjIwM0RQM25fSWtoVUszVmJCZEg5Q2RFb1llLVNlOEN4VjR1eDg0dWJyc09tN0QxNnZQeWc?oc=5",
+      "review_headline": "Funding better evaluations of AI\u2019s impact on wellbeing - Anthropic",
+      "review_url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5DNElZcS10WnJ1NHJEdmtYNkxUT1JQZ3plaDhZejA4UENGVlliUzRqM19sejJyOEFZbW9zbTZyZmpsZGpmOGYtaDc2T1pFTThXUG9wQi1nUFl3cVhIVDJyQVd6QnBsa2M?oc=5",
       "proposed_funding": "",
-      "proposed_stage": "public",
-      "found_at": "2026-09-19T12:26:38Z"
+      "proposed_stage": "",
+      "found_at": "2026-09-20T13:00:47Z"
     },
     {
       "name": "Google DeepMind",
