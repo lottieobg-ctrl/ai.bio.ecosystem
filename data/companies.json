@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-22T13:20:36Z",
+  "last_updated": "2026-09-23T13:34:23Z",
   "companies": [
     {
       "name": "XtalPi",
@@ -333,14 +333,14 @@
     },
     {
       "name": "Basecamp Research",
-      "funding": "$60M USD total \u2014 Series B. Backed by Balderton Capital.",
-      "stage": "series-b",
-      "needs_review": false,
-      "review_headline": "",
-      "review_url": "",
-      "proposed_funding": "",
-      "proposed_stage": "",
-      "found_at": ""
+      "funding": "$140M",
+      "stage": "series-c",
+      "needs_review": true,
+      "review_headline": "Anthropic-, Nvidia-Backed Basecamp Research Raise $140M Series C Financing Toward Advancing AI-Designed Drugs - Genetic Engineering and Biotechnology News",
+      "review_url": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxPYnpEcGhycTNuOTZwTmFBWUxVaXBTZ2tQT1d5a3BMSFVEcFUwZ05YQ3M4enlwSjRDU1FOZmpZdmQ5Vm91MU5KTXVfaVVPRm9mU2lIdGN1aXlzM2sySG5sWWR4NS1HNF94STdtUEpRdjRkZzI3R0dsRkdNbmdxZGhQeFBRM1hlZ1pGVlhwRFVhU0R3Wll6M2JZUl9oWDJ3ZlZFT3N1elllVXp3UWRRd05hREZhUW5hdGYxSlFwNVp6Nm5ma2tmWl9QYUhaZzBwVGlNVER1SlRpV2o3VkxPTFduQTREVmRwZFdiQktwSVpuSVdSLUNQbTh5dQ?oc=5",
+      "proposed_funding": "$140M",
+      "proposed_stage": "series-c",
+      "found_at": "2026-09-23T13:32:24Z"
     },
     {
       "name": "Prima Mente",
@@ -479,11 +479,11 @@
       "funding": "Undisclosed early-stage funding.",
       "stage": "seed",
       "needs_review": true,
-      "review_headline": "Enveda Biosciences Revenue 2025: $70.1M ARR, $1B Valuation - GetLatka",
-      "review_url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE5JTkpCTTI0VUdpdmRxd01jMnYxaFZnbDcxN04tUENXYmd1cjdJbTFYeVFWTWdOYVdyWEM5ZHJGRDFhdmVGQjB1UmRtRWVVS3U2UC1sMHZNbw?oc=5",
-      "proposed_funding": "$70M",
+      "review_headline": "Enveda Raises $311 Million From Leading AI and Biotech Investors to Bring Pharma Into the 21st Century - BioSpace",
+      "review_url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxOdzMzTGJWSWItdDBCMmJ2Rl9nTXctZUY3YWNhQUs5bWV5RkdkRkcyV21lT2xXYW1IVHR4Q1hXME01LVI1V3VPWGdfOVRMdTZGN2pqbkNmNnVvcVlJSlM2T2FROGdJblV4cHZtSGRybU16ZVItTEgzWWxwZEtYVUpVX2VxVUhuQ2M0eWJtaUktWkJFNmlMTHh5VVU2bXg4TnlmWHBfejZjbng0WWZmS01xYWQxVXJvUWFZQ3NaNzB3UFNkdmpjLTM2ZFBzMGFMYmt5SkhJSnVQUTY?oc=5",
+      "proposed_funding": "$311M",
       "proposed_stage": "",
-      "found_at": "2026-09-22T13:18:48Z"
+      "found_at": "2026-09-23T13:32:49Z"
     },
     {
       "name": "Expression Edits",
@@ -567,11 +567,11 @@
       "funding": "$719M",
       "stage": "public",
       "needs_review": true,
-      "review_headline": "Atlas Venture Life Science Advisors LLC Makes New Investment in Kailera Therapeutics, Inc. $KLRA - marketbeat.com",
+      "review_headline": "Atlas Venture Life Science Advisors LLC Makes New Investment in Kailera Therapeutics, Inc. $KLRA - MarketBeat",
       "review_url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxNUWltdWZYSnlnMC02dmMxcVFxOVBDWldnbEd2SnRDcGJIY0pQbms2XzNsUVA0YU4xTENMWVMyX2pwYThSeTkzZjJobGxRS0xTOVVoSnZRQVFCVnlBc1ZlckZaNUdDLV8wY0NNZk1qYTlaa1dOZHVGNVpVMnhMMlg4OUowNjFmLWFXaElOOXRBQk1Ub0p0Q2RnRFZ4UElET1RJTkFYQXc3SXRQQjRRVjZMSDdMaWQzLUhQeS1iWnUyY01ha0xobHJlYTkwcHRaMVdWUThPcy10MVJQVFRYdnhmUm1KU05rZlZvUVE?oc=5",
       "proposed_funding": "",
       "proposed_stage": "",
-      "found_at": "2026-09-22T13:19:08Z"
+      "found_at": "2026-09-23T13:33:08Z"
     },
     {
       "name": "Lila Biosciences",
@@ -971,14 +971,14 @@
     },
     {
       "name": "Anthropic",
-      "funding": "$10B",
-      "stage": "public",
+      "funding": "$140M",
+      "stage": "series-c",
       "needs_review": true,
-      "review_headline": "History Says This Low-Cost Investment Could Outperform Anthropic -- and You Might Already Own It - The Motley Fool",
-      "review_url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOdE1qRWdPSm14YVlxQ0QtS1pVNkRSMkt5VEU3cVpvbWlVQkZPaU0tenhxbE1jWkxrVGJtOC1oSmdmVXFEZEsxOXNXS25feGZ4Q0RfVzZKRWZmeEVGNmpkal9ROERpclh5dGxXcDRxa3c0cFJxUExQWTZRVnVuWmFxYzhfWVNiQnZLZVZ6NHF4Q3pqR2tBNXc?oc=5",
-      "proposed_funding": "",
-      "proposed_stage": "",
-      "found_at": "2026-09-22T13:20:06Z"
+      "review_headline": "Anthropic-, Nvidia-Backed Basecamp Research Raise $140M Series C Financing Toward Advancing AI-Designed Drugs - Genetic Engineering and Biotechnology News",
+      "review_url": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxPYnpEcGhycTNuOTZwTmFBWUxVaXBTZ2tQT1d5a3BMSFVEcFUwZ05YQ3M4enlwSjRDU1FOZmpZdmQ5Vm91MU5KTXVfaVVPRm9mU2lIdGN1aXlzM2sySG5sWWR4NS1HNF94STdtUEpRdjRkZzI3R0dsRkdNbmdxZGhQeFBRM1hlZ1pGVlhwRFVhU0R3Wll6M2JZUl9oWDJ3ZlZFT3N1elllVXp3UWRRd05hREZhUW5hdGYxSlFwNVp6Nm5ma2tmWl9QYUhaZzBwVGlNVER1SlRpV2o3VkxPTFduQTREVmRwZFdiQktwSVpuSVdSLUNQbTh5dQ?oc=5",
+      "proposed_funding": "$140M",
+      "proposed_stage": "series-c",
+      "found_at": "2026-09-23T13:34:00Z"
     },
     {
       "name": "Google DeepMind",
@@ -1018,11 +1018,11 @@
       "funding": "$30B",
       "stage": "public",
       "needs_review": true,
-      "review_headline": "SoftBank launches $11 billion bonds to fund OpenAI investment - Reuters",
-      "review_url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQRFpJSWkxMGJsX2cyM3pnVGxFdi0yU3BIRHd0RUM0MUZwWE42WTJhVmwwLUNQUkNhakRLQW1xZWlSMTRWZElIZXNQWFZEbWdpX1Z0aXctRzkxT1VvdlhxZFBSclJNQzlFSUM1cXc4by0yOU51bmZDYUxhdi1GS0RLbzB1VUpqMVRoeGpVTkRjSTltcEdtdldZVldpQ1RtcFJmdkl3VGowWll5cmxFSHE4SnVzOGVYWGEzZDhPOTNDSzNUZ2MxeExISmVyS1FwY01pc1dlcDdR?oc=5",
-      "proposed_funding": "$11B",
+      "review_headline": "SoftBank takes orders for $10 billion in bonds to fund OpenAI investment, term sheet shows - \u30a2\u30e9\u30d6\u30cb\u30e5\u30fc\u30b9",
+      "review_url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPVFJ5dDdTSWVQX2RzUk1WcGI5aVoyVFZVNkZULW1XUnhNYWI4N2RtYlZXZVktNTF3XzJSY2taSlVXOXpNODN4a1N3MWc0TTUwelB4RXlHYXBRUjIxYkZZbEZnNGxRRVhSdXdRNTFNQzZ2ZTJxRFFFUVZuUFY3LXFMUE1Wc3dBdjVSTXJ4cTlRQ3RwOV93eHVSVDVBUUd0eDFYRDJzZEN0SGh5bjB3bGR3cXlocDVWNWdPbkRQMUtOLS1pQmpiRHdfRTFZdTM?oc=5",
+      "proposed_funding": "$10B",
       "proposed_stage": "",
-      "found_at": "2026-09-21T15:02:19Z"
+      "found_at": "2026-09-23T13:34:01Z"
     },
     {
       "name": "Sakana AI",
