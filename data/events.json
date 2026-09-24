@@ -17,54 +17,6 @@
     "auto": false
   },
   {
-    "name": "Where is AI in 2026 and Where is it Going?",
-    "date": "2026-09-22",
-    "end_date": "2026-09-22",
-    "location": "Boston, MA, USA",
-    "url": "aisap-rpl5",
-    "type": "meetup",
-    "tags": [
-      "AI",
-      "biology"
-    ],
-    "virtual": false,
-    "description": "",
-    "source": "luma",
-    "auto": true
-  },
-  {
-    "name": "Boost Your Real Estate Marketing with AI",
-    "date": "2026-09-22",
-    "end_date": "2026-09-22",
-    "location": "Boston, MA, USA",
-    "url": "pchirxyi",
-    "type": "meetup",
-    "tags": [
-      "AI",
-      "biology"
-    ],
-    "virtual": false,
-    "description": "",
-    "source": "luma",
-    "auto": true
-  },
-  {
-    "name": "HeyGen AI Class",
-    "date": "2026-09-23",
-    "end_date": "2026-09-23",
-    "location": "Boston, MA, USA",
-    "url": "nhptvbcb",
-    "type": "meetup",
-    "tags": [
-      "AI",
-      "biology"
-    ],
-    "virtual": false,
-    "description": "",
-    "source": "luma",
-    "auto": true
-  },
-  {
     "name": "Bittensor Commons Announces Exploit Summit, A Two-Day Decentralized AI Conference in Montreal, September 28-29, 2026 - Digital Journal",
     "date": "2026-09-28",
     "end_date": "2026-09-28",
@@ -76,7 +28,7 @@
       "biology"
     ],
     "virtual": false,
-    "description": "Bittensor Commons Announces Exploit Summit, A Two-Day Decentralized AI Conference in Montreal, September 28-29, 2026\u00a0\u00a0Digital Journal",
+    "description": "Bittensor Commons Announces Exploit Summit, A Two-Day Decentralized AI Conference in Montreal, September 28-29, 2026  Digital Journal",
     "auto": true
   },
   {
@@ -91,7 +43,7 @@
       "biology"
     ],
     "virtual": false,
-    "description": "Bittensor Commons Announces Exploit Summit, A Two-Day Decentralized AI Conference in Montreal, September 28-29, 2026\u00a0\u00a0TMX Newsfile",
+    "description": "Bittensor Commons Announces Exploit Summit, A Two-Day Decentralized AI Conference in Montreal, September 28-29, 2026  TMX Newsfile",
     "auto": true
   },
   {
@@ -158,7 +110,7 @@
       "clinical"
     ],
     "virtual": false,
-    "description": "American Society of Human Genetics annual meeting \u2014 a key forum for AI-driven genetics and genomics research.",
+    "description": "American Society of Human Genetics annual meeting — a key forum for AI-driven genetics and genomics research.",
     "auto": false
   },
   {
@@ -175,11 +127,11 @@
       "digital health"
     ],
     "virtual": false,
-    "description": "Annual congress focused on biodata, AI and precision medicine \u2014 bringing together data scientists, clinicians and industry leaders.",
+    "description": "Annual congress focused on biodata, AI and precision medicine — bringing together data scientists, clinicians and industry leaders.",
     "auto": false
   },
   {
-    "name": "NeurIPS 2026 \u2014 ML for Biology Workshop",
+    "name": "NeurIPS 2026 — ML for Biology Workshop",
     "date": "2026-12-05",
     "end_date": "2026-12-06",
     "location": "TBC",
@@ -192,7 +144,7 @@
       "computational"
     ],
     "virtual": false,
-    "description": "Annual machine learning for biology workshop co-located with NeurIPS \u2014 a key venue for AI \u00d7 biology research presentations.",
+    "description": "Annual machine learning for biology workshop co-located with NeurIPS — a key venue for AI × biology research presentations.",
     "auto": false
   }
 ]
