@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-23T13:34:23Z",
+  "last_updated": "2026-09-24T13:29:33Z",
   "companies": [
     {
       "name": "XtalPi",
@@ -336,11 +336,11 @@
       "funding": "$140M",
       "stage": "series-c",
       "needs_review": true,
-      "review_headline": "Anthropic-, Nvidia-Backed Basecamp Research Raise $140M Series C Financing Toward Advancing AI-Designed Drugs - Genetic Engineering and Biotechnology News",
-      "review_url": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxPYnpEcGhycTNuOTZwTmFBWUxVaXBTZ2tQT1d5a3BMSFVEcFUwZ05YQ3M4enlwSjRDU1FOZmpZdmQ5Vm91MU5KTXVfaVVPRm9mU2lIdGN1aXlzM2sySG5sWWR4NS1HNF94STdtUEpRdjRkZzI3R0dsRkdNbmdxZGhQeFBRM1hlZ1pGVlhwRFVhU0R3Wll6M2JZUl9oWDJ3ZlZFT3N1elllVXp3UWRRd05hREZhUW5hdGYxSlFwNVp6Nm5ma2tmWl9QYUhaZzBwVGlNVER1SlRpV2o3VkxPTFduQTREVmRwZFdiQktwSVpuSVdSLUNQbTh5dQ?oc=5",
+      "review_headline": "Basecamp Research raises $140M to advance AI-designed therapeutics - PR Newswire",
+      "review_url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQSWZSZnMwZFlZMnNLa0NRS0ZXUjVpU05hV2hJeU4tYmVmSC1feGRwRmF2T3dHTnpvRW11cE9sbkVaa2dmRDN1VENDT3RYTUJob0ZRNE9PU2I5djZ3SjRfVGM1U3RxdnZjeUV4RmdzX2ItNlFrUDVyYW5VZ0ZmeGt4NmlWV2EyVTVkWWdCS1ViWEZwYWloa3JTcGFHZnk3Yk1EMUFpOThrUGc2aGFoUnVvRFpXNzhFQnRuVDR1TDZn?oc=5",
       "proposed_funding": "$140M",
-      "proposed_stage": "series-c",
-      "found_at": "2026-09-23T13:32:24Z"
+      "proposed_stage": "",
+      "found_at": "2026-09-24T13:27:41Z"
     },
     {
       "name": "Prima Mente",
@@ -399,14 +399,14 @@
     },
     {
       "name": "BigHat Biosciences",
-      "funding": "$75M total \u2014 $6M seed \u00b7 $36M Series A \u00b7 $33M Series B. Backed by General Catalyst.",
-      "stage": "series-b",
-      "needs_review": false,
-      "review_headline": "",
-      "review_url": "",
-      "proposed_funding": "",
-      "proposed_stage": "",
-      "found_at": ""
+      "funding": "$75M",
+      "stage": "series-c",
+      "needs_review": true,
+      "review_headline": "BigHat Biosciences Announces $75 Million Series C Financing to Advance AI-Designed Therapeutics and Leading Agentic Data Platform for Rapid Protein Design - Business Wire",
+      "review_url": "https://news.google.com/rss/articles/CBMiuAJBVV95cUxOc3lJUGptTEtvSnUwOGJvX2ZNbXY3MVFCa1ZXeFI4eXNVUXM5UVpDb0tGeXFGTzdYbVRUcmlOclpsNEVYOHhoaGZqMTViaUdGZXJRajBOQml5bUNzeDR0RW1EMmkzZFBITmExZEtuRklCa1UxTVFFSVNyaC1nMmlieFJCRlBIdkZLQ295SkZiVEtDazl1ejBubVFBTDkyUHJKZGp0QWp5X3V1eVR6Nzhkb0h2OG9UOHNEd3ZYRllnazBEeEtPcDJwbWRUN2V2Mm9IaW5heUlGWThFMlVKRHZkTk5HSGR0eGRndGpnY3AtRkV5c284RTlsdXF4RFFKckZIaW1VUGZNSmdtR1pXMzRDcVlmeWthSmRMTFk0S3JMcmgxZ0tqSGVkOE40bEZjRGdaMGkzVWJ5S2o?oc=5",
+      "proposed_funding": "$75M",
+      "proposed_stage": "series-c",
+      "found_at": "2026-09-24T13:27:52Z"
     },
     {
       "name": "Causaly",
@@ -435,11 +435,11 @@
       "funding": "~$100M total \u2014 Series A/B. Backed by Lux Capital.",
       "stage": "series-a",
       "needs_review": true,
-      "review_headline": "Chemify targets 'hyperscaler' status with \u00a320m state funding package - Sky News",
-      "review_url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPM09RVG9Gc1dCMVNGRjhkbXI4ejBuM2I0YkFoRXVOSUJ5Rmh3WlpULWpXVjBXNUNpTXlSc0R5Yl92T3FUSm1xSVMtOUlyYnV2WGpjejJCcGoyQ29GVHVXVC1oZjNVZWRPaWZYbXhjNWZEY3pMd3hKRWVHTjZNX1luNVAyMTZwV1Y4ejlQODR0RlpzWDluaEtvSkh2eFV5T0pIS29F?oc=5",
-      "proposed_funding": "$20M",
+      "review_headline": "Chemify Raises \u00a322M in Grants - FinSMEs",
+      "review_url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1sVkFkRUJZRS1VLV9SZ3M0MzRPa0wxQ3BRRXBrRGpBTENPYnV6NmJMczRMLVY1VmdyUVBxTmMyRkpjak5uYk5uQzVTMmc3UVhfSDdmWnpkUzhTX3FKeVkzdE1YcVR6Y19kclJKMW9US3Y0Unc?oc=5",
+      "proposed_funding": "$22M",
       "proposed_stage": "",
-      "found_at": "2026-09-20T12:59:27Z"
+      "found_at": "2026-09-24T13:27:55Z"
     },
     {
       "name": "Cradle",
@@ -476,14 +476,14 @@
     },
     {
       "name": "Enveda",
-      "funding": "Undisclosed early-stage funding.",
-      "stage": "seed",
+      "funding": "$311M",
+      "stage": "series-d",
       "needs_review": true,
-      "review_headline": "Enveda Raises $311 Million From Leading AI and Biotech Investors to Bring Pharma Into the 21st Century - BioSpace",
-      "review_url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxOdzMzTGJWSWItdDBCMmJ2Rl9nTXctZUY3YWNhQUs5bWV5RkdkRkcyV21lT2xXYW1IVHR4Q1hXME01LVI1V3VPWGdfOVRMdTZGN2pqbkNmNnVvcVlJSlM2T2FROGdJblV4cHZtSGRybU16ZVItTEgzWWxwZEtYVUpVX2VxVUhuQ2M0eWJtaUktWkJFNmlMTHh5VVU2bXg4TnlmWHBfejZjbng0WWZmS01xYWQxVXJvUWFZQ3NaNzB3UFNkdmpjLTM2ZFBzMGFMYmt5SkhJSnVQUTY?oc=5",
+      "review_headline": "Enveda reaps $311M series E to feed ambition to become a \u2018household name\u2019 - Fierce Biotech",
+      "review_url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNdWFQZnhQYkJpalBIajlwNzhETE5DM0w5YnM4UWRxWHN2XzVrOUduV3FmWGZWVEhKRzRuUEtzWnFGeTVsRkh4bHZzZmZaSS15RXBHeWhmRWlmTkpxNmtkVXI0cTJYcnJSdk1CUnZTNnk4cFdfQnpaVDFUUkhHOUZ0LV9RQ3VoT3QyYUdPazIzc1NJX3JZU1FaZ2I4YWlRWjZWbnhZ?oc=5",
       "proposed_funding": "$311M",
-      "proposed_stage": "",
-      "found_at": "2026-09-23T13:32:49Z"
+      "proposed_stage": "series-d",
+      "found_at": "2026-09-24T13:28:01Z"
     },
     {
       "name": "Expression Edits",
@@ -974,11 +974,11 @@
       "funding": "$140M",
       "stage": "series-c",
       "needs_review": true,
-      "review_headline": "Anthropic-, Nvidia-Backed Basecamp Research Raise $140M Series C Financing Toward Advancing AI-Designed Drugs - Genetic Engineering and Biotechnology News",
-      "review_url": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxPYnpEcGhycTNuOTZwTmFBWUxVaXBTZ2tQT1d5a3BMSFVEcFUwZ05YQ3M4enlwSjRDU1FOZmpZdmQ5Vm91MU5KTXVfaVVPRm9mU2lIdGN1aXlzM2sySG5sWWR4NS1HNF94STdtUEpRdjRkZzI3R0dsRkdNbmdxZGhQeFBRM1hlZ1pGVlhwRFVhU0R3Wll6M2JZUl9oWDJ3ZlZFT3N1elllVXp3UWRRd05hREZhUW5hdGYxSlFwNVp6Nm5ma2tmWl9QYUhaZzBwVGlNVER1SlRpV2o3VkxPTFduQTREVmRwZFdiQktwSVpuSVdSLUNQbTh5dQ?oc=5",
-      "proposed_funding": "$140M",
-      "proposed_stage": "series-c",
-      "found_at": "2026-09-23T13:34:00Z"
+      "review_headline": "Ex-Anthropic Staffers\u2019 Self-Improving AI Startup in Talks to Raise at $5 Billion Value - Bloomberg",
+      "review_url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQNEttTkpIMmxhV3RwcFQ5R2pMTUV0NUpPNmhBbUx6bWpNZFpkMmJhWE9ka29ObnNZLW1MTS1ETHZITmNJVjBzR2tNVWd6bndyYndPTTA0MXB0Y2hCNzhQbFZNQU5HM1FnZkx2MFAzQ3h1LW9CM0xGUW0zVkI2MU9QYm1GRGhtb2xPU1hFVDU4OWlVeXlzeG44VkU0RFM0RWJ6OEF2LVhzeW5CS3hBY0dId3pUXzJFbG92cHNYeA?oc=5",
+      "proposed_funding": "$5B",
+      "proposed_stage": "",
+      "found_at": "2026-09-24T13:29:09Z"
     },
     {
       "name": "Google DeepMind",
@@ -1018,11 +1018,11 @@
       "funding": "$30B",
       "stage": "public",
       "needs_review": true,
-      "review_headline": "SoftBank takes orders for $10 billion in bonds to fund OpenAI investment, term sheet shows - \u30a2\u30e9\u30d6\u30cb\u30e5\u30fc\u30b9",
-      "review_url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPVFJ5dDdTSWVQX2RzUk1WcGI5aVoyVFZVNkZULW1XUnhNYWI4N2RtYlZXZVktNTF3XzJSY2taSlVXOXpNODN4a1N3MWc0TTUwelB4RXlHYXBRUjIxYkZZbEZnNGxRRVhSdXdRNTFNQzZ2ZTJxRFFFUVZuUFY3LXFMUE1Wc3dBdjVSTXJ4cTlRQ3RwOV93eHVSVDVBUUd0eDFYRDJzZEN0SGh5bjB3bGR3cXlocDVWNWdPbkRQMUtOLS1pQmpiRHdfRTFZdTM?oc=5",
-      "proposed_funding": "$10B",
+      "review_headline": "SoftBank raises $11bn in record junk bond offering to fund OpenAI bet - Financial Times",
+      "review_url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOVjlidU5qLXBlVDNsbl9xUkJGVm1BTlZFMDVjTXdvemduRDk1cUhpQWNEQXRtdmctaExIVVZWQU50SHEzUHdpSU9OUGNIVjc4RWdERXZIMTVsVjd3akRxU0k1NHYzTXFxQkp4Q2hfQnh0dGtrRUhVZVdjZ0w3R1RkTlhiUXQ?oc=5",
+      "proposed_funding": "",
       "proposed_stage": "",
-      "found_at": "2026-09-23T13:34:01Z"
+      "found_at": "2026-09-24T13:29:09Z"
     },
     {
       "name": "Sakana AI",
@@ -1183,11 +1183,11 @@
       "funding": "Public (LSE: SYNC). NAV ~\u00a31B+.",
       "stage": "public",
       "needs_review": true,
-      "review_headline": "Oxford and Pioneer secure leading life sciences investment firm Syncona Investment Management Ltd at Victoria House - Oxford Properties",
+      "review_headline": "Oxford and Pioneer secure leading life sciences investment firm Syncona Investment Management Ltd at Victoria House - oxfordproperties.com",
       "review_url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxNN0ZMOUhOSDJBeDdnaWw1N0xiOFdPSTRpVnBfUnhLLUpJeFpJOGhtOEdrVV80UXQ3NGVDaW0yU19JeFZRY1NVcFZfcHpySTJHWnRvRTJlVU9iLTBrRXR1bk1Jbm54UUV3Xy11bjU5Q2dSbkdPbGppX2VZZTFzOTEwcHBaSHdzUkVUcGpKNTlkSWgyYU1mQWNka0h1d1phWFFwMmRUVGdDd0NrYlBmRGRmNWtwVE10TnphNGoyNmpQa2NNdUVXUGFXZnBPbVV6ajFuS1ZZUEZBREhFNjkxY3E5eGs3ZlNOaGtO?oc=5",
       "proposed_funding": "",
       "proposed_stage": "",
-      "found_at": "2026-09-22T13:20:10Z"
+      "found_at": "2026-09-24T13:29:13Z"
     },
     {
       "name": "Biotech TV",
