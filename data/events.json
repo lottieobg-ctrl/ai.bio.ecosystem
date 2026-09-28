@@ -47,11 +47,91 @@
     "auto": true
   },
   {
+    "name": "DC Nightowls Open Coworking x AI Collective",
+    "date": "2026-09-28",
+    "end_date": "2026-09-29",
+    "location": "Boston, MA, USA",
+    "url": "kyaik5bh",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
     "name": "Executive Dinner: Leveraging AI Agents",
     "date": "2026-09-29",
     "end_date": "2026-09-29",
     "location": "Boston, MA, USA",
     "url": "lvcdhxzn",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
+    "name": "🧠 AI Founders Roundtable with The AI Collective DC x Avahi",
+    "date": "2026-09-29",
+    "end_date": "2026-09-30",
+    "location": "Boston, MA, USA",
+    "url": "avahi-dc-0926",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
+    "name": "AI'll Drink to That: Happy Hour with Cara",
+    "date": "2026-09-29",
+    "end_date": "2026-09-29",
+    "location": "Boston, MA, USA",
+    "url": "jayk89cp",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
+    "name": "AI Demo Night: Persistent AI Agents (Grok Bot & Hermes Agents)",
+    "date": "2026-09-29",
+    "end_date": "2026-09-30",
+    "location": "Boston, MA, USA",
+    "url": "cwzr9s9c",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
+    "name": "The AI Era & What It Means To Be Human (w/ The AI Collective)",
+    "date": "2026-09-30",
+    "end_date": "2026-10-01",
+    "location": "Boston, MA, USA",
+    "url": "aic-dc-9-30",
     "type": "meetup",
     "tags": [
       "AI",
