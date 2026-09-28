@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-27T13:49:33Z",
+  "last_updated": "2026-09-28T16:42:24Z",
   "companies": [
     {
       "name": "XtalPi",
@@ -267,14 +267,14 @@
     },
     {
       "name": "NOETIK",
-      "funding": "Undisclosed. GSK committed $50M upfront for model access (early 2026).",
+      "funding": "$40M",
       "stage": "series-a",
-      "needs_review": false,
-      "review_headline": "",
-      "review_url": "",
-      "proposed_funding": "",
-      "proposed_stage": "",
-      "found_at": ""
+      "needs_review": true,
+      "review_headline": "Exclusive: Noetik raises $40M Series A to advance AI ambitions in cancer \u2014 with an unlikely lead investor - Endpoints News",
+      "review_url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQbml0SEttR3NjRVJHbFI2VTFMdzJjU1Z6QngyZEpoRC1ZQWxPVmgzT1hvRWtoZWduTkUxbDZxUTBQeDNhbG9mSjNRRFg1bTJBNHZqUUlfSURsOWUtcFBOcWdpSnl4dGlENGRqODROclFPeGdYMUhrLWpsOGRTaC1MN0hFbWZ4WXhOZjdYMlZ2bnRHNjRMcHBCdGpzd3g2cGxmMmd2eXZLREQ3MHc2bDZUYlhRbTJ2dw?oc=5",
+      "proposed_funding": "$40M",
+      "proposed_stage": "series-a",
+      "found_at": "2026-09-28T16:40:02Z"
     },
     {
       "name": "Inceptive",
@@ -809,11 +809,11 @@
       "funding": "~$30M total \u2014 Series B.",
       "stage": "series-b",
       "needs_review": true,
-      "review_headline": "Crypto data firm Kaiko secures $110 million funding round led by S&P Global - reuters.com",
+      "review_headline": "Crypto data firm Kaiko secures $110 million funding round led by S&P Global - Reuters",
       "review_url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPWkI5aGljZE4zRG9EdFJuNEs4bmVINHVRSkY5Zmp4alhsc2JyVkJKSW42R2VWdFdxbG96aF8xQzZ3dXdPMXNoVG1xelh0QlRfMjRjOEJ6Z0ZCSkZDMjlmNnVseHlSQlh3NG5IcGRILVBEYm9TRDhOOFBNeEoyY1Z1TUEyUjhVY2ZsTThYZVR3SmdqdE5ialR6UV9mZWpyc2F2dkFhQ2dneUZJY0tuMWQySGtOOWt4Y3FQX2ZnWFh0bmNGZzJD?oc=5",
       "proposed_funding": "$110M",
       "proposed_stage": "",
-      "found_at": "2026-09-27T13:49:02Z"
+      "found_at": "2026-09-28T16:41:50Z"
     },
     {
       "name": "Medra",
@@ -974,11 +974,11 @@
       "funding": "$140M",
       "stage": "series-c",
       "needs_review": true,
-      "review_headline": "What you Need to Know AboutClaude's Maker, Anthropic IPO - TradingKey",
-      "review_url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNa28tTl93WVB4VlNSanNWbTJpaFFyVzFqV1poNkFtRkc2cG93ZDVmaTZkdDhNSTcxdzNTZml3NW9NLXNuc3ViZlZPTkZTc0tGZmFCRGkwOXpYb0g0aG1zVzRuRVJFYTFDWmROQm5LSmlfd0Zrd19kblFBczMySkJ3RFNNekRicWlDcXNZc1NvcVZvOFZ1Tk93clhBYVF4dw?oc=5",
+      "review_headline": "Anthropic IPO 2026: What Investors Need To Know & How To Get Exposure Today With AI ETF AGIX - KraneShares",
+      "review_url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQVV9JS0JaaDhJb3Rud2oyVE4zdFdfM1ZRRmtTaC1WYy1QemFUcVJTSG9YUW9oZ05XbUlWcWpEZkNTNDZreWNXdXUxc0k1ckdEV2Vxby1wUjRuQ2JpSURpaXNsdFhqV09XQ0dSczl1T3J1aWtpaGJjNTVUVXVFMEFLREFRZHpUQkZ2T3JUYmJBUTNsZWxWVnJxdEZxZXYxSVpqVEFyQkJmeUpucWN6NHA5X21maW8?oc=5",
       "proposed_funding": "",
       "proposed_stage": "public",
-      "found_at": "2026-09-27T13:49:08Z"
+      "found_at": "2026-09-28T16:41:58Z"
     },
     {
       "name": "Google DeepMind",
@@ -1018,11 +1018,11 @@
       "funding": "$30B",
       "stage": "public",
       "needs_review": true,
-      "review_headline": "SoftBank launches $11 billion bonds to fund OpenAI investment - reuters.com",
-      "review_url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQRFpJSWkxMGJsX2cyM3pnVGxFdi0yU3BIRHd0RUM0MUZwWE42WTJhVmwwLUNQUkNhakRLQW1xZWlSMTRWZElIZXNQWFZEbWdpX1Z0aXctRzkxT1VvdlhxZFBSclJNQzlFSUM1cXc4by0yOU51bmZDYUxhdi1GS0RLbzB1VUpqMVRoeGpVTkRjSTltcEdtdldZVldpQ1RtcFJmdkl3VGowWll5cmxFSHE4SnVzOGVYWGEzZDhPOTNDSzNUZ2MxeExISmVyS1FwY01pc1dlcDdR?oc=5",
-      "proposed_funding": "$11B",
+      "review_headline": "Biossil raises $153-million in OpenAI-led funding to bring resuscitated drugs to market - The Globe and Mail",
+      "review_url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQejdibkh0RkpwV25TMk4wbDRtN3B4ajk3TWtWZXhiMDNLa1I2TnRLMzN0d2t6N1BOc0tJSUkzU3IydXYyRXh4RnhYRUs4MzlES3FTTmxpa0pVbmt4UkpnN0pRTHVGa1pDTFdZUVROOFVIdXFjNGdUdDR5SUc2emdvZktiUG0taEdWLVdmeHZLVWtDMUhtNkFIMVFZVWg1dw?oc=5",
+      "proposed_funding": "",
       "proposed_stage": "",
-      "found_at": "2026-09-27T13:49:09Z"
+      "found_at": "2026-09-28T16:41:58Z"
     },
     {
       "name": "Sakana AI",
