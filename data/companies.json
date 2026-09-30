@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-29T14:47:59Z",
+  "last_updated": "2026-09-30T14:51:15Z",
   "companies": [
     {
       "name": "XtalPi",
@@ -336,11 +336,11 @@
       "funding": "$140M",
       "stage": "series-c",
       "needs_review": true,
-      "review_headline": "AI Drug Designer Basecamp Research Raises $140M Series C - Wowtale",
-      "review_url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5Ba0k3QWF2S1RSTk8wLXBxd0l5YVlWeXlYT0phbVJadDM3X3g0S2Q2UEFwLXdjR3IyT3NSWkJXY0p4M1p3eGx5YTRyREFZUEhWLTRV?oc=5",
+      "review_headline": "AI drug discovery startup Basecamp Research raises $140M - SiliconANGLE",
+      "review_url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNYl9NV2IxVS1waXo1bDVtSjc2a1JJeVctVDlub2xISE5HY3lieUpGcHFfbWs3ekI1dWZ2MnNOdzVmdUIzeTFqNnF0djM4S1ZDdnI3c1drTElxekpQVGZBRFBwdTFxbm1wdzVmRmlwRUVkWWJkZktKNHRfTm5CVHVQUEl6SkFQNHVQdi1NbWM1emYzcXhmLUdR?oc=5",
       "proposed_funding": "$140M",
-      "proposed_stage": "series-c",
-      "found_at": "2026-09-29T14:46:05Z"
+      "proposed_stage": "",
+      "found_at": "2026-09-30T14:49:02Z"
     },
     {
       "name": "Prima Mente",
@@ -435,11 +435,11 @@
       "funding": "~$100M total \u2014 Series A/B. Backed by Lux Capital.",
       "stage": "series-a",
       "needs_review": true,
-      "review_headline": "Chemify Raises \u00a322M in Grants - finsmes.com",
+      "review_headline": "Chemify Raises \u00a322M in Grants - FinSMEs",
       "review_url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1sVkFkRUJZRS1VLV9SZ3M0MzRPa0wxQ3BRRXBrRGpBTENPYnV6NmJMczRMLVY1VmdyUVBxTmMyRkpjak5uYk5uQzVTMmc3UVhfSDdmWnpkUzhTX3FKeVkzdE1YcVR6Y19kclJKMW9US3Y0Unc?oc=5",
       "proposed_funding": "$22M",
       "proposed_stage": "",
-      "found_at": "2026-09-29T14:46:19Z"
+      "found_at": "2026-09-30T14:49:22Z"
     },
     {
       "name": "Cradle",
@@ -699,11 +699,11 @@
       "funding": "$60M",
       "stage": "series-b",
       "needs_review": true,
-      "review_headline": "Superluminal Medicines Announces Oversubscribed $60 Million Series B Financing to Advance Lead Program in Rare Genetic Forms of Obesity into the Clinic - PR Newswire",
+      "review_headline": "Superluminal Medicines Announces Oversubscribed $60 Million Series B Financing to Advance Lead Program in Rare Genetic Forms of Obesity into the Clinic - prnewswire.com",
       "review_url": "https://news.google.com/rss/articles/CBMirwJBVV95cUxOVER1NTdnVl94MGc3bXFJQjJYU0xGRmxBcHZVNll1OW1VcUxEajYtT3VGMDdRWkV6WTI1MEplTl93bFJMTldzcXdRNE9tQkYwcFBRWWpiMDktVmFURmxvd2NEUzdzUy16UEZGdWV3bzdLS0VLT1B4T3BmanlXd3VLZk41dWxNMDhSdHdEZmRvUVpScExJMDROVDVvVFVwOHdBYUVRTG0zRzhweFRIRG1KN1pPQkhCMnhvVGZMQVpSSk9ONFNVQmVXOTFTd2NOZ3NtZDgtcnJzN1Z4LUhRQ3VaR2s5WHdROExwcEl1VHJoZ2FJdktCRXc0M3Fway1nMnlpS2p2eUtjWWJySjlCR2Zrc3dkOUFiRmF4VXgzY0ZVUzlES1JUS3pRSFBIaFFIMzg?oc=5",
       "proposed_funding": "$60M",
       "proposed_stage": "series-b",
-      "found_at": "2026-09-04T12:39:32Z"
+      "found_at": "2026-09-30T14:50:18Z"
     },
     {
       "name": "Terray Therapeutics",
@@ -974,11 +974,11 @@
       "funding": "$140M",
       "stage": "series-c",
       "needs_review": true,
-      "review_headline": "Anthropic IPO Prospectus Warns Its AI Could Pose \u2018Existential Risks To Humanity\u2019 - Forbes",
-      "review_url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNYkxab0QyUjlGT2k1ZUN3QTZDYXRneUxLNjA4RjlZOGh6WFFLdnllQXdwU0xibklaZU1idUFXbTlmVVlianE5MDhtaExaQzlDRDVlTk1EcmxVVXRNM1BmOXlUcTQzWkR3dHFFbGY2ck5hLTdxWlFaRVN1aC1wZGlJWkEzOEdnajZHSVNrQkpHZlg3dzR0c3NIMnZrNGg5OFpHNUw4RTN3amZxeFFmRWx0cUw4U3ByQUpuaTlDQXNDRU1uV0lkdm1YTkdHVkY?oc=5",
+      "review_headline": "Anthropic raises alarm over Chinese GLM-5.3 model\u2019s elite hacking ability - South China Morning Post",
+      "review_url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQcFNYWHJZZHY5d01zSUdta0lSNlRpNnhWeDZjUHJVRGFWbkphaDBQamRnX1ZOblJhLTFBZklPdFFKTkl0UGtCTkx6RGF6NTg0dkJOTjQwNEg3MExxRm9ESE4tbTN0NDN3bFJWMXFZbVd0NDNVb2JFeHJjTWtpM3U2ZktMazVMNnF5LVdJRVBmVzludzl6Y2NoTFQwNkM4Rzg4RXQwcWdDMlRPMHNkazFCV3d4cnYtOU82Z0hralhYY3NSMHfSAcMBQVVfeXFMTzFhQlFMWEdlclNCWDZ5cGo1R2Q0b3lqS2dPMnVlQlFMcDVrN213YXZ5QnBac3B2TDBsSDd0V1hyc2dHSHpfV01XelZZZ0hvRkxKZm1WY0psMTUzTG52UnNnYTlzWFliZ1hqT1VUUWhiNWI5Ui1qVzlTcFJwY2czbW5iY3dfc01ZN2diaC0wNWMxNmZOOVJMMmhQYjdqSW1iV2NJX1Y3dHNaZmlpck5fdFE1SUJBOVdtLTZEQXRONGMtZFZj?oc=5",
       "proposed_funding": "",
-      "proposed_stage": "public",
-      "found_at": "2026-09-29T14:47:35Z"
+      "proposed_stage": "",
+      "found_at": "2026-09-30T14:50:48Z"
     },
     {
       "name": "Google DeepMind",
@@ -1018,11 +1018,11 @@
       "funding": "$30B",
       "stage": "public",
       "needs_review": true,
-      "review_headline": "OpenAI sparked Hugging Face bids with early investment offer ahead of Nvidia's $13 billion deal - CNBC",
-      "review_url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQMThSYmpsQmN6bHcxbk1TSTN3a0xPaHdqOS0wYS1hUWhOQzREbWpSVzlvalkzY0ozWkxWcVo3Z0lzQ3NiOUN1MnBMQVNiTkxjTzVadkZXSWJ5NjM2VzRaS0EzekJrWWZ0VDVRWXdDUXQ5b3Q1SzF3MGJUTUZpMDFTb1ZKbWlJaGxsQkhvU2hGcGExQjZ3VXhBNVMtM3RrazNmT0hBUnVBVVlaYm_SAbABQVVfeXFMTmdDc3RWWTlJSWQ5UnJjanBJQVM2Y1RmZUR5cTBfVlJpa19kSjBPTFc5dUtUNTJrSXlXaVpjS2xfQUlwSzRZT2dHVVJmWHFDMUFSOHZZc1FKTkRrNEhwRWFUekh2WExSdmpiaFdOQndZRS1sUURDbV96RFhheUk4U0VSNk5iSllmTGFCX05uYjB6QnQ3UXE4MGF5bEI1b3VyX282OE8xX2FpUmJoYnlQZFY?oc=5",
-      "proposed_funding": "$13B",
+      "review_headline": "OpenAI targets $30 billion funding at $1.4 trillion valuation, Bloomberg News reports - Reuters",
+      "review_url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNTW5MdG1uUmc5OGRYalhONHdTSDZpOXQ4Y09pNF9Bc2tBb3RwYksyZ0d5V0J1SHI2akpadEVlUnJjNUVGRnVDVmtJTktRaGVfNWVVRUdlX2hXdlotYkJZZU56b0NHclcwb3ZCcWhzWGVhcXNPWDRBSC1acUoxUkRTVXhmUmw1dVhQRUlxVkIyOUhNLVA1Rko5dFNVMlVKekVSZnl0UE5OQnRJUEl5eEFYTEpxM3VfSnlSWGJCTXItbjJmUllQZnRKNlYyQVRxaUU?oc=5",
+      "proposed_funding": "$30B",
       "proposed_stage": "",
-      "found_at": "2026-09-29T14:47:36Z"
+      "found_at": "2026-09-30T14:50:48Z"
     },
     {
       "name": "Sakana AI",
@@ -1183,11 +1183,11 @@
       "funding": "Public (LSE: SYNC). NAV ~\u00a31B+.",
       "stage": "public",
       "needs_review": true,
-      "review_headline": "Syncona : Investment Management Limited announces changes to leadership team to support portfolio value creation - marketscreener.com",
-      "review_url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxNQ0dCSHN4czM4M2czeUVKUlNBZXFtdDM5Vk5xX01vbVlDZlJ4N2ZFeXlCWHJSRm81SXZuY3I1RFdTRmN0aHg2R3BONkdKU0ZldTFiMks5c3hCOE1RVGxhaVlXcEhrU3pCbTNVckM1YXVSQzN5UU1qVS1XZjFYRVNZc2ZnYVVYbVZ1cEZjVmNZdXNiLW5JQ2pEWWZCWG5XaVZCcExjUTU2UjFoUW1jLVZQVkExNENTQlZvckw4YnByVUZub1QtRGtra3FfaFppM0ViZlNTQmRyV1ZUS1g4TDNiYXR5MzlHUQ?oc=5",
+      "review_headline": "Syncona Investment Management announces leadership changes By Investing.com - Investing.com India",
+      "review_url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPb2R3bExRT3lNMWtHSDdBZDEtaXlUSk9maEJvcVZTNzlNbUc1eU1pUmJNLWt6TTZNTVJSZkNDeEdnU0RrZDY5S1hDSHZwZnY1Z0dZRE9nSU5FNWk2WU1xYkpRTFVHcHZqeGFLbXNaTG92UDFoMWw3UFhtbWotVlJLSlplMUh0Yk5TbzllLU1uZlRTNHdGeHlHdUNDRzJtZHZCS29fcjJjZHVQRC1fVlRIOVM3bktMQ1h5bklF?oc=5",
       "proposed_funding": "",
       "proposed_stage": "",
-      "found_at": "2026-09-29T14:47:39Z"
+      "found_at": "2026-09-30T14:50:52Z"
     },
     {
       "name": "Biotech TV",
