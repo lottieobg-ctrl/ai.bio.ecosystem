@@ -1,115 +1,5 @@
 [
   {
-    "name": "Bittensor Commons Announces Exploit Summit, A Two-Day Decentralized AI Conference in Montreal, September 28-29, 2026 - Digital Journal",
-    "date": "2026-09-28",
-    "end_date": "2026-09-28",
-    "location": "TBC",
-    "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPVGlKNVd0OWcwNFE5eHcyTmlZSnJoWktuOFdJRlhmSUZxWkVEcXl5dWltVndxdEhHcDlGaTY2RmJ3b1dYR0QyNTlZdVpLNzBQcXJpOGxSNzNTZEF3TWk4c1dhWGZETXdPSUQ2WmlVaFRVY1J1TE1QdzA0aG9xYzZDRkRTYWtGX0RUb1ZKSWNKZGdQMXlFdF9fR1ZlZEFaVk1hUmhLMEZpeHE?oc=5",
-    "type": "conference",
-    "tags": [
-      "AI",
-      "biology"
-    ],
-    "virtual": false,
-    "description": "Bittensor Commons Announces Exploit Summit, A Two-Day Decentralized AI Conference in Montreal, September 28-29, 2026\u00a0\u00a0Digital Journal",
-    "auto": true
-  },
-  {
-    "name": "Bittensor Commons Announces Exploit Summit, A Two-Day Decentralized AI Conference in Montreal, September 28-29, 2026 - TMX Newsfile",
-    "date": "2026-09-28",
-    "end_date": "2026-09-28",
-    "location": "TBC",
-    "url": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxNSnhjV0pEMFdhQ1AyN2piZGZGemJXeDR5SE82YVVlZ2pxdWtHYzFRQnhlMUI3RTZUUWFyazlVQzdCdDNRc3F4VXY4NDFGTnFJek5RSzlXelpUSUtyUEZsRHlzejFYTzBkVTJMbGZjcFpGU2VCdU8yX0VHNDh0YnAzMG50c2xselM5RkJ4VUQ4OFQ0emMwZlRCeHZJSDF3c0Z6RTNCWlFIajFyWFBjcnk5alFZd19iVnRvQlFhLWtVNUVQbmRybDJPa0ttV0JvbXFEdUVqdFBLZVhHM0otaDl0MmVNRzhfUlc1bEhr?oc=5",
-    "type": "conference",
-    "tags": [
-      "AI",
-      "biology"
-    ],
-    "virtual": false,
-    "description": "Bittensor Commons Announces Exploit Summit, A Two-Day Decentralized AI Conference in Montreal, September 28-29, 2026\u00a0\u00a0TMX Newsfile",
-    "auto": true
-  },
-  {
-    "name": "DC Nightowls Open Coworking x AI Collective",
-    "date": "2026-09-28",
-    "end_date": "2026-09-29",
-    "location": "Boston, MA, USA",
-    "url": "kyaik5bh",
-    "type": "meetup",
-    "tags": [
-      "AI",
-      "biology"
-    ],
-    "virtual": false,
-    "description": "",
-    "source": "luma",
-    "auto": true
-  },
-  {
-    "name": "Executive Dinner: Leveraging AI Agents",
-    "date": "2026-09-29",
-    "end_date": "2026-09-29",
-    "location": "Boston, MA, USA",
-    "url": "lvcdhxzn",
-    "type": "meetup",
-    "tags": [
-      "AI",
-      "biology"
-    ],
-    "virtual": false,
-    "description": "",
-    "source": "luma",
-    "auto": true
-  },
-  {
-    "name": "\ud83e\udde0 AI Founders Roundtable with The AI Collective DC x Avahi",
-    "date": "2026-09-29",
-    "end_date": "2026-09-30",
-    "location": "Boston, MA, USA",
-    "url": "avahi-dc-0926",
-    "type": "meetup",
-    "tags": [
-      "AI",
-      "biology"
-    ],
-    "virtual": false,
-    "description": "",
-    "source": "luma",
-    "auto": true
-  },
-  {
-    "name": "AI'll Drink to That: Happy Hour with Cara",
-    "date": "2026-09-29",
-    "end_date": "2026-09-29",
-    "location": "Boston, MA, USA",
-    "url": "jayk89cp",
-    "type": "meetup",
-    "tags": [
-      "AI",
-      "biology"
-    ],
-    "virtual": false,
-    "description": "",
-    "source": "luma",
-    "auto": true
-  },
-  {
-    "name": "AI Demo Night: Persistent AI Agents (Grok Bot & Hermes Agents)",
-    "date": "2026-09-29",
-    "end_date": "2026-09-30",
-    "location": "Boston, MA, USA",
-    "url": "cwzr9s9c",
-    "type": "meetup",
-    "tags": [
-      "AI",
-      "biology"
-    ],
-    "virtual": false,
-    "description": "",
-    "source": "luma",
-    "auto": true
-  },
-  {
     "name": "The AI Era & What It Means To Be Human (w/ The AI Collective)",
     "date": "2026-09-30",
     "end_date": "2026-10-01",
@@ -173,7 +63,7 @@
       "clinical"
     ],
     "virtual": false,
-    "description": "American Society of Human Genetics annual meeting \u2014 a key forum for AI-driven genetics and genomics research.",
+    "description": "American Society of Human Genetics annual meeting — a key forum for AI-driven genetics and genomics research.",
     "auto": false
   },
   {
@@ -190,11 +80,11 @@
       "digital health"
     ],
     "virtual": false,
-    "description": "Annual congress focused on biodata, AI and precision medicine \u2014 bringing together data scientists, clinicians and industry leaders.",
+    "description": "Annual congress focused on biodata, AI and precision medicine — bringing together data scientists, clinicians and industry leaders.",
     "auto": false
   },
   {
-    "name": "NeurIPS 2026 \u2014 ML for Biology Workshop",
+    "name": "NeurIPS 2026 — ML for Biology Workshop",
     "date": "2026-12-05",
     "end_date": "2026-12-06",
     "location": "TBC",
@@ -207,7 +97,7 @@
       "computational"
     ],
     "virtual": false,
-    "description": "Annual machine learning for biology workshop co-located with NeurIPS \u2014 a key venue for AI \u00d7 biology research presentations.",
+    "description": "Annual machine learning for biology workshop co-located with NeurIPS — a key venue for AI × biology research presentations.",
     "auto": false
   }
 ]
