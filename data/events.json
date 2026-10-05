@@ -1,10 +1,74 @@
 [
   {
-    "name": "The AI Era & What It Means To Be Human (w/ The AI Collective)",
-    "date": "2026-09-30",
-    "end_date": "2026-10-01",
+    "name": "Sip & Surf AI",
+    "date": "2026-10-06",
+    "end_date": "2026-10-06",
     "location": "Boston, MA, USA",
-    "url": "aic-dc-9-30",
+    "url": "surfsip1",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
+    "name": "Nonprofit Finance Leadership Dinner- Responsible Use of AI.",
+    "date": "2026-10-07",
+    "end_date": "2026-10-07",
+    "location": "Boston, MA, USA",
+    "url": "c7irofl0",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
+    "name": "Become An AI Agent Commander In Under 30 Days - In person workshop",
+    "date": "2026-10-09",
+    "end_date": "2026-10-09",
+    "location": "Boston, MA, USA",
+    "url": "3j88o7cu",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
+    "name": "SoulSearch Scottsdale Enlightenment Expo Psychic & Healing Fair",
+    "date": "2026-10-10",
+    "end_date": "2026-10-12",
+    "location": "Boston, MA, USA",
+    "url": "scottsdale-az",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
+    "name": "Pilates & Paint",
+    "date": "2026-10-10",
+    "end_date": "2026-10-11",
+    "location": "Boston, MA, USA",
+    "url": "z33bzvve",
     "type": "meetup",
     "tags": [
       "AI",
@@ -31,6 +95,54 @@
     "virtual": false,
     "description": "Leading health innovation conference connecting companies, investors and payers transforming healthcare with AI and technology.",
     "auto": false
+  },
+  {
+    "name": "Replace Your Marketing Team With AI, and Add 2–3 Extra Deals a Month",
+    "date": "2026-10-13",
+    "end_date": "2026-10-13",
+    "location": "Boston, MA, USA",
+    "url": "i6so3nl0",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
+    "name": "October Sustainability Professionals Happy Hour",
+    "date": "2026-10-15",
+    "end_date": "2026-10-15",
+    "location": "Boston, MA, USA",
+    "url": "6cg6h4xu",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
+    "name": "Appetizers & Appraisals",
+    "date": "2026-10-16",
+    "end_date": "2026-10-16",
+    "location": "Boston, MA, USA",
+    "url": "z5kwb3jc",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
   },
   {
     "name": "Bio Europe 2026",
