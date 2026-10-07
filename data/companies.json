@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-06T14:59:36Z",
+  "last_updated": "2026-10-07T15:27:48Z",
   "companies": [
     {
       "name": "XtalPi",
@@ -358,11 +358,11 @@
       "funding": "Public (Nasdaq: ABSI). Raised ~$200M pre-IPO.",
       "stage": "public",
       "needs_review": true,
-      "review_headline": "BTIG Maintains Absci Corp(ABSI.US) With Buy Rating, Raises Target Price to $16 - Moomoo",
-      "review_url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOejRuS1VYbm1MNEtuUWFwWktzNzhKY2tZSS1aZURhQWpOWVl4cEhnX3JKVkpNSC12SzYxdkVoQjNEZjBKd2JnVFRBQk5jWDlxanlNRl9mUEE3UWVNY29ZSHo2RlBiYzFLME9mQUZENDViUHd6eHU2NFRuR3psMldQdjd2QkhOaWhiNnFjM1FaZ0kwaEVQdHliQVNyLUlEWGRva3kyWDFGdw?oc=5",
+      "review_headline": "Insiders See US$933.2k Investment In Absci Jump Last Week - Moomoo",
+      "review_url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQNTRjOFN2Smw5NWphVjBlc3NpcEhPajBYbmF6aW9lNnByMjJKUWphSk5tYl9JNmtFdk8wYUl1VlItVGhMZmJ5T2xSQUxlU3pYY3QzbnE0R3Z2MEV6Z0g2UW1VUENEMmxIUVA2akZjemVuSDc2MGhIdUdLSEh5bWlaOE43Y0NpLXhyUWZmbDIwRXRSYmxLZUdNWnNZZjU?oc=5",
       "proposed_funding": "",
       "proposed_stage": "",
-      "found_at": "2026-09-20T12:59:13Z"
+      "found_at": "2026-10-07T15:25:50Z"
     },
     {
       "name": "Aignostics",
@@ -435,11 +435,11 @@
       "funding": "~$100M total \u2014 Series A/B. Backed by Lux Capital.",
       "stage": "series-a",
       "needs_review": true,
-      "review_headline": "Chemify targets 'hyperscaler' status with \u00a320m state funding package - news.sky.com",
+      "review_headline": "Chemify targets 'hyperscaler' status with \u00a320m state funding package - Sky News",
       "review_url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPM09RVG9Gc1dCMVNGRjhkbXI4ejBuM2I0YkFoRXVOSUJ5Rmh3WlpULWpXVjBXNUNpTXlSc0R5Yl92T3FUSm1xSVMtOUlyYnV2WGpjejJCcGoyQ29GVHVXVC1oZjNVZWRPaWZYbXhjNWZEY3pMd3hKRWVHTjZNX1luNVAyMTZwV1Y4ejlQODR0RlpzWDluaEtvSkh2eFV5T0pIS29F?oc=5",
       "proposed_funding": "$20M",
       "proposed_stage": "",
-      "found_at": "2026-10-06T14:58:01Z"
+      "found_at": "2026-10-07T15:26:03Z"
     },
     {
       "name": "Cradle",
@@ -718,14 +718,14 @@
     },
     {
       "name": "WhiteLab Genomics",
-      "funding": "~$25M total \u2014 Series A. Backed by Omnes Capital, Leaps by Bayer.",
-      "stage": "series-a",
+      "funding": "$26M",
+      "stage": "series-b",
       "needs_review": true,
-      "review_headline": "Paris-based WhiteLab Genomics raises \u20ac23.2 million to accelerate AI-driven genomic medicine development - EU-Startups",
-      "review_url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPeWctX0p5SEtRNHpwQlpscGNpRFR6Rl95NC1BOGY2ZnpkeW0zSzk1MEwxQjBUemtzX2JmT0dsTjFEME9uRlVtR045TXpCMEdkT2hlNnZfMVlyUWF0M2Vsc0F5bjA2UnRmWGY5RkhXc3JPdWplaGZRRVFHa0pKVGVRRVBwREFDNGp6Rjlab1dNREZnQkFHejRVLUJfcXk0QTU1N0kyWVhBTUgyTHJtZzBFekctd2RaRGx4bzJBVlRXa3hHTldsR1hNWFBWSDFjc21XZ093QXVqbw?oc=5",
-      "proposed_funding": "$23M",
-      "proposed_stage": "",
-      "found_at": "2026-10-06T14:58:52Z"
+      "review_headline": "WhiteLab Genomics Raises $26 Million Series B To Build AI-Designed Bio-Assets - Pulse 2.0",
+      "review_url": "https://news.google.com/rss/articles/CBMickFVX3lxTE1MbzhpVFhjTFBLNEJzWmY5Q2JqeDBhU1lUVEQtM0FUMjRGUVRZY1ZPNnJVbUhsdmd1ZUd6aWpqR2RDbk14S1ptVWFaLUlWMEx4NXVHUXdIa3BoYy1UeXlDWjk1RGgycHVBdmFseUtpVkJJd9IBd0FVX3lxTE5hSFhTREJpbzBlUlpza0dfdERIMFMzUmdYZ2NmQ1VCUGxSQUczWU5ZWHNPY0VjN2hvZ1d2S0JnVl8xZ09EcjJIZmZmZ29qUXVndnRWWDFDZ0MydjF6RmVITERtSG45YjdiOWg0RGRPV3B4Wld4Y1FV?oc=5",
+      "proposed_funding": "$26M",
+      "proposed_stage": "series-b",
+      "found_at": "2026-10-07T15:26:58Z"
     },
     {
       "name": "Xaira",
@@ -974,11 +974,11 @@
       "funding": "$140M",
       "stage": "series-c",
       "needs_review": true,
-      "review_headline": "Broadcom\u2019s Massive $42 Billion Chip-Buying Deal with Anthropic Raises Circular Financing Worries - finance.yahoo.com",
+      "review_headline": "Broadcom\u2019s Massive $42 Billion Chip-Buying Deal with Anthropic Raises Circular Financing Worries - Yahoo Finance",
       "review_url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNRXZHU1pUTHFVT2paaHFVOEJ4WnB1d05EbXc3NlBQTE01dV9fMXBtal8xcFdjX0VYTlVFVVE5WHZtYWw2d0k0UDlCSUhxejc4ZUs2Y0ZXRmk3V2oySzVxRGE5UjhJZF9aZDAteDdtOU9mUHdNZEF1UjY2VHRzc1ZSTG8wdWNrc3Z6eE1kTlFyTzh3NzBPUnpYbThzOWE?oc=5",
       "proposed_funding": "$42B",
       "proposed_stage": "",
-      "found_at": "2026-10-06T14:59:14Z"
+      "found_at": "2026-10-07T15:27:24Z"
     },
     {
       "name": "Google DeepMind",
@@ -1018,11 +1018,11 @@
       "funding": "$30B",
       "stage": "public",
       "needs_review": true,
-      "review_headline": "SoftBank completes final phase of $30 billion investment in OpenAI - Reuters",
-      "review_url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNZ0ZDMDNNS0hZT0xNc01aV0RzMkxtS2lLaUZ6cnlZX19DQS1LajRmSHdrSzVoZ3J4bGNfYmFPbXJCTTBRX1dydEpYTlgxWXVRSmJOMHZ3VERsSVV4aGRYZS1oclNzQUVzb0ZxU2dtOWpNMGI2NHpQdkE5MUZ4TlhnbUoxRDQ1UGJmbHd4Y0MzOEZZTWxaQlprekZ3ZnJRNnJZdjJ2NV9OYjRhUEhpT0VUUlc1U0tldw?oc=5",
-      "proposed_funding": "$30B",
+      "review_headline": "SoftBank Doubles Down on OpenAI With Massive $10 Billion Investment - Cloud Wars",
+      "review_url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQVTJjLTdTSlpMTHFRSzMzdGN6TV9nX2ItdXZYcUlVY2VhMV9OTXhDYzduTG5aNXp3NHUxckMtNkJGSjg1bVdVbDZlT1prWHNHWmtkNU1pVFhHbk9uX2lMSVI0OFpTRFZFWjgtNUdEY2Z1NDhKQnhpOUc0V21pajhxR3lLaGhUWm5DS3FtYnFpSGExNW5OcFJsOV9JRmJuQzIzS3JTd2QyTVV2Mkk?oc=5",
+      "proposed_funding": "$10B",
       "proposed_stage": "",
-      "found_at": "2026-10-04T13:53:35Z"
+      "found_at": "2026-10-07T15:27:24Z"
     },
     {
       "name": "Sakana AI",
