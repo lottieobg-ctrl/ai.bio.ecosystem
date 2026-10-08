@@ -1,37 +1,5 @@
 [
   {
-    "name": "Sip & Surf AI",
-    "date": "2026-10-06",
-    "end_date": "2026-10-06",
-    "location": "Boston, MA, USA",
-    "url": "surfsip1",
-    "type": "meetup",
-    "tags": [
-      "AI",
-      "biology"
-    ],
-    "virtual": false,
-    "description": "",
-    "source": "luma",
-    "auto": true
-  },
-  {
-    "name": "Nonprofit Finance Leadership Dinner- Responsible Use of AI.",
-    "date": "2026-10-07",
-    "end_date": "2026-10-07",
-    "location": "Boston, MA, USA",
-    "url": "c7irofl0",
-    "type": "meetup",
-    "tags": [
-      "AI",
-      "biology"
-    ],
-    "virtual": false,
-    "description": "",
-    "source": "luma",
-    "auto": true
-  },
-  {
     "name": "Become An AI Agent Commander In Under 30 Days - In person workshop",
     "date": "2026-10-09",
     "end_date": "2026-10-09",
@@ -97,7 +65,7 @@
     "auto": false
   },
   {
-    "name": "Replace Your Marketing Team With AI, and Add 2\u20133 Extra Deals a Month",
+    "name": "Replace Your Marketing Team With AI, and Add 2–3 Extra Deals a Month",
     "date": "2026-10-13",
     "end_date": "2026-10-13",
     "location": "Boston, MA, USA",
@@ -175,7 +143,7 @@
       "clinical"
     ],
     "virtual": false,
-    "description": "American Society of Human Genetics annual meeting \u2014 a key forum for AI-driven genetics and genomics research.",
+    "description": "American Society of Human Genetics annual meeting — a key forum for AI-driven genetics and genomics research.",
     "auto": false
   },
   {
@@ -192,11 +160,11 @@
       "digital health"
     ],
     "virtual": false,
-    "description": "Annual congress focused on biodata, AI and precision medicine \u2014 bringing together data scientists, clinicians and industry leaders.",
+    "description": "Annual congress focused on biodata, AI and precision medicine — bringing together data scientists, clinicians and industry leaders.",
     "auto": false
   },
   {
-    "name": "NeurIPS 2026 \u2014 ML for Biology Workshop",
+    "name": "NeurIPS 2026 — ML for Biology Workshop",
     "date": "2026-12-05",
     "end_date": "2026-12-06",
     "location": "TBC",
@@ -209,7 +177,7 @@
       "computational"
     ],
     "virtual": false,
-    "description": "Annual machine learning for biology workshop co-located with NeurIPS \u2014 a key venue for AI \u00d7 biology research presentations.",
+    "description": "Annual machine learning for biology workshop co-located with NeurIPS — a key venue for AI × biology research presentations.",
     "auto": false
   }
 ]
