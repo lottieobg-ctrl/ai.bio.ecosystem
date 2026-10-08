@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-07T15:27:48Z",
+  "last_updated": "2026-10-08T15:29:33Z",
   "companies": [
     {
       "name": "XtalPi",
@@ -556,11 +556,11 @@
       "funding": "$2B",
       "stage": "series-b",
       "needs_review": true,
-      "review_headline": "Demis Hassabis's Isomorphic Labs: $2.7B Raised, Trials Due This Year - StartupHub.ai",
-      "review_url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPeExJLW5QVjd2bTdaQ2NZMGg4bEtuZlpYdk9XTkt5Ti1lOEFLd2MtVXVNZ0hUZjRHUDdpQ01kdzlBZUFrWC1XVlBSTkVKZW5rZlcxQjVSR3kyZEZlRGFFcGFpbDZCd3d6dHlpNmI5ODA2SWNHSE4tUTdieUw1T2FqREVwU1RyTVJKdFFBTTFSR1d6Wmw0d2RXQVRSeHUxWWlwcnhfZHQwR2JhMGFuZW5tYTZFUzd0UV9LWFE?oc=5",
-      "proposed_funding": "$3B",
+      "review_headline": "Alphabet\u2019s Isomorphic Labs in Funding Talks for at Least $40 Billion Value - Bloomberg.com",
+      "review_url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNek1hZ0tORjJNVDJFUmZYNXJ6aVhoWEJpMnZVQzJaS3NoTXRMcGJwQ2VzbXpadkJpZlFKejRKSWZSSkZaYkg0WEtYS3RyZGFvVXcxSHduS0tGUDNFSWkzMFREVDhJcmpGMnBQQlQyTHRJTGlPNTh1RFE1OGxNZmZlR3pSVHdscVlHZXJYTmR0cS1LSVB0TDNvUVIxVVFCeEp0QjVNUnM4V01Kb19CaFhrRUdHc3hOLXYyVXBPTFdnMm92UQ?oc=5",
+      "proposed_funding": "$40B",
       "proposed_stage": "",
-      "found_at": "2026-07-04T10:19:45Z"
+      "found_at": "2026-10-08T15:28:19Z"
     },
     {
       "name": "Kailera Therapeutics",
@@ -721,11 +721,11 @@
       "funding": "$26M",
       "stage": "series-b",
       "needs_review": true,
-      "review_headline": "WhiteLab Genomics Raises $26 Million Series B To Build AI-Designed Bio-Assets - Pulse 2.0",
-      "review_url": "https://news.google.com/rss/articles/CBMickFVX3lxTE1MbzhpVFhjTFBLNEJzWmY5Q2JqeDBhU1lUVEQtM0FUMjRGUVRZY1ZPNnJVbUhsdmd1ZUd6aWpqR2RDbk14S1ptVWFaLUlWMEx4NXVHUXdIa3BoYy1UeXlDWjk1RGgycHVBdmFseUtpVkJJd9IBd0FVX3lxTE5hSFhTREJpbzBlUlpza0dfdERIMFMzUmdYZ2NmQ1VCUGxSQUczWU5ZWHNPY0VjN2hvZ1d2S0JnVl8xZ09EcjJIZmZmZ29qUXVndnRWWDFDZ0MydjF6RmVITERtSG45YjdiOWg0RGRPV3B4Wld4Y1FV?oc=5",
+      "review_headline": "WhiteLab Genomics raises $26m to advance AI-designed genomic medicines - Drug Target Review",
+      "review_url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNWENadUpWaHVNRk02TC16c2dEeGQxTWhmQzdDR0I3anlvTjhSTVlvSlJ4OGwyOUdMMHplamVxOHJtRUxPcktLOXBKWGtVVC1VdEt1WWRqU0N4MzRCODhNZFpmcUZfck01cUtoLXp2dk96MEd6NFVDSWY2MVJfYnFVNjc4WjI0bHFYckJqLUQwbWxIQlhCeHhXMVV0bVdyOERVWnI2NkxhUDhRelI3RmJfS1E3Yi1iNWI5Rk1XZ0pwOGE?oc=5",
       "proposed_funding": "$26M",
-      "proposed_stage": "series-b",
-      "found_at": "2026-10-07T15:26:58Z"
+      "proposed_stage": "",
+      "found_at": "2026-10-08T15:28:49Z"
     },
     {
       "name": "Xaira",
@@ -938,14 +938,14 @@
     },
     {
       "name": "Owkin",
-      "funding": "~$250M total \u2014 Series C. Backed by Fidelity, BPI France, NVIDIA.",
-      "stage": "series-c",
+      "funding": "$25M",
+      "stage": "seed",
       "needs_review": true,
-      "review_headline": "OWKIN Revenue 2023: $101.4M Est. ARR, $1B Valuation (2022) - GetLatka",
-      "review_url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE02ZkN5UDcybm9vS01JSDBjUlg3TlRUZ2RsTTFvWXZXSE8tSDdMUzVheDhCRkpTNGhqM3dPeHhSbmc1OHF0UU1ZUnBIMzVaTXZaMHc?oc=5",
-      "proposed_funding": "$101M",
-      "proposed_stage": "",
-      "found_at": "2026-10-06T14:59:13Z"
+      "review_headline": "Owkin alum raises $25m seed to build world model for human cells - Sifted",
+      "review_url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1uM2JubXJvbmYxcVZ4WUQ2cTVvcW5OOFl6UXYxU3JHWGl5VFMxYks2SlRtNUIwQmoycE9HV3hXSVBDZ1ItQjc0SXVxRUViTExySjYtMmJfcS1EOTZKaG83ZkZBSndZcjBxbDdnQXM1OGJxUmVNekxULWNXckRoeUE?oc=5",
+      "proposed_funding": "$25M",
+      "proposed_stage": "seed",
+      "found_at": "2026-10-08T15:29:11Z"
     },
     {
       "name": "Tempus AI",
@@ -974,11 +974,11 @@
       "funding": "$140M",
       "stage": "series-c",
       "needs_review": true,
-      "review_headline": "Broadcom\u2019s Massive $42 Billion Chip-Buying Deal with Anthropic Raises Circular Financing Worries - Yahoo Finance",
-      "review_url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNRXZHU1pUTHFVT2paaHFVOEJ4WnB1d05EbXc3NlBQTE01dV9fMXBtal8xcFdjX0VYTlVFVVE5WHZtYWw2d0k0UDlCSUhxejc4ZUs2Y0ZXRmk3V2oySzVxRGE5UjhJZF9aZDAteDdtOU9mUHdNZEF1UjY2VHRzc1ZSTG8wdWNrc3Z6eE1kTlFyTzh3NzBPUnpYbThzOWE?oc=5",
-      "proposed_funding": "$42B",
-      "proposed_stage": "",
-      "found_at": "2026-10-07T15:27:24Z"
+      "review_headline": "Anthropic IPO Investors Struggle to Put a Price on Rogue AI Risk - Bloomberg.com",
+      "review_url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOME9TY0hsNDBoX2Y5UmhoWkZKYlJTUTRHeWhqR3ZRQnhrc3FIZDFVRUhDY1V1N2p4dGJycnViMGxUb3JkSUhTWktYNnZfMGdrbWdRQWxuejIxM2ZZanEydWpTNzFwRU9TVURiZlUteXFvaExLd0V5dC1PZFoyVkVGQURCWHMzRU9XcmMzdUEtS1NkaFZVTXlfQ0dwd2RpZ3cyd2Y3N2c5U3hFT3BwM0k5UFVVWHhOQQ?oc=5",
+      "proposed_funding": "",
+      "proposed_stage": "public",
+      "found_at": "2026-10-08T15:29:12Z"
     },
     {
       "name": "Google DeepMind",
@@ -1018,11 +1018,11 @@
       "funding": "$30B",
       "stage": "public",
       "needs_review": true,
-      "review_headline": "SoftBank Doubles Down on OpenAI With Massive $10 Billion Investment - Cloud Wars",
-      "review_url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQVTJjLTdTSlpMTHFRSzMzdGN6TV9nX2ItdXZYcUlVY2VhMV9OTXhDYzduTG5aNXp3NHUxckMtNkJGSjg1bVdVbDZlT1prWHNHWmtkNU1pVFhHbk9uX2lMSVI0OFpTRFZFWjgtNUdEY2Z1NDhKQnhpOUc0V21pajhxR3lLaGhUWm5DS3FtYnFpSGExNW5OcFJsOV9JRmJuQzIzS3JTd2QyTVV2Mkk?oc=5",
-      "proposed_funding": "$10B",
+      "review_headline": "OpenAI Reportedly In Talks With UAE Funds For $30B Funding \u2013 Even As Its AI Agents Raise Fresh Concerns - Yahoo Finance",
+      "review_url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOeXd2WjNBT3U3TVRLS2pyNW55WVlqUDllendSaFF2RVU2a3RsRDl2eWx3am5uQ2FNb19HcGxkQ0pvdjhBU2drRlI4ODJvTzhGZEVpRmt6dHdnTlB4RlBqVHdsdGZoM0VXNnpjUGtlWl9oUjBVVTZ4akJUR2tsYks4Vm9OY1diQWEzNFhfTDRTbGstYnRrV1FzTlVIeXRWQQ?oc=5",
+      "proposed_funding": "$30B",
       "proposed_stage": "",
-      "found_at": "2026-10-07T15:27:24Z"
+      "found_at": "2026-10-08T15:29:12Z"
     },
     {
       "name": "Sakana AI",
@@ -1183,11 +1183,11 @@
       "funding": "Public (LSE: SYNC). NAV ~\u00a31B+.",
       "stage": "public",
       "needs_review": true,
-      "review_headline": "Syncona Investment Management announces leadership changes By Investing.com - Investing.com",
-      "review_url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNWm5hUjhBOUZCQUUtWjRtSGxFWXVXOXBMbzFVV0xsTXkybXJldUliZmE0d0VhY2lqT2R0US0xWTVUTnNzcWdQQTVUUHYwOFJRNTR4U0lIUzR6VHphSnV0MnJ6UFg3SnlLSlk2czdWdW1JaEJjVlBjWUd0U1NqNHpESG13UmdYVXV1d3VqRFViX3hYUHVLd2loUWE0TFNuekZubGRqMmU3bm90ZDYwcWFzZW1lYV9aQQ?oc=5",
+      "review_headline": "Syncona Investment Management announces leadership changes By Investing.com - Investing.com Nigeria",
+      "review_url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNTXZDclN1cm5qQm1aeC0yLUIzUHFER3dNUm9mVnBxcl9vS2tEOWJFdWpUYnp5NjJqb3hhWWZRa0drUVB3cnN0Y1Bfcm01eEVFdkliaUtieXBWWDZMTHUtd1J2VUE1c1U4YjVCcklkYmpmdzg4Mzh4Y1JGN3BfTmgxRGNROExPNUJkMjc0aHUyb2d4OXJHR3pMMXk0bThTTHlPbEJDRnNFaENOWm5saEcyS3dRRlVqcjJHblhz?oc=5",
       "proposed_funding": "",
       "proposed_stage": "",
-      "found_at": "2026-10-03T13:15:57Z"
+      "found_at": "2026-10-08T15:29:13Z"
     },
     {
       "name": "Biotech TV",
