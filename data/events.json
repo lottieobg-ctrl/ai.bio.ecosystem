@@ -1,42 +1,10 @@
 [
   {
-    "name": "Become An AI Agent Commander In Under 30 Days - In person workshop",
-    "date": "2026-10-09",
-    "end_date": "2026-10-09",
-    "location": "Boston, MA, USA",
-    "url": "3j88o7cu",
-    "type": "meetup",
-    "tags": [
-      "AI",
-      "biology"
-    ],
-    "virtual": false,
-    "description": "",
-    "source": "luma",
-    "auto": true
-  },
-  {
     "name": "SoulSearch Scottsdale Enlightenment Expo Psychic & Healing Fair",
     "date": "2026-10-10",
     "end_date": "2026-10-12",
     "location": "Boston, MA, USA",
     "url": "scottsdale-az",
-    "type": "meetup",
-    "tags": [
-      "AI",
-      "biology"
-    ],
-    "virtual": false,
-    "description": "",
-    "source": "luma",
-    "auto": true
-  },
-  {
-    "name": "Pilates & Paint",
-    "date": "2026-10-10",
-    "end_date": "2026-10-11",
-    "location": "Boston, MA, USA",
-    "url": "z33bzvve",
     "type": "meetup",
     "tags": [
       "AI",
@@ -81,6 +49,22 @@
     "auto": true
   },
   {
+    "name": "Take Your Ai to the Next Level 202",
+    "date": "2026-10-14",
+    "end_date": "2026-10-14",
+    "location": "Boston, MA, USA",
+    "url": "5cxtytcu",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
     "name": "October Sustainability Professionals Happy Hour",
     "date": "2026-10-15",
     "end_date": "2026-10-15",
@@ -97,11 +81,59 @@
     "auto": true
   },
   {
+    "name": "Ai Lunch & Learn - In Person Free Workshop In Tempe AZ",
+    "date": "2026-10-15",
+    "end_date": "2026-10-15",
+    "location": "Boston, MA, USA",
+    "url": "to4lcxzd",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
     "name": "Appetizers & Appraisals",
     "date": "2026-10-16",
     "end_date": "2026-10-16",
     "location": "Boston, MA, USA",
     "url": "z5kwb3jc",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
+    "name": "The Nevado Exchange | Hosted by: Nevado AI",
+    "date": "2026-10-20",
+    "end_date": "2026-10-20",
+    "location": "Boston, MA, USA",
+    "url": "mllm7leg",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
+    "name": "FaithTech Create PHX",
+    "date": "2026-10-22",
+    "end_date": "2026-10-22",
+    "location": "Boston, MA, USA",
+    "url": "62k8a8kv",
     "type": "meetup",
     "tags": [
       "AI",
