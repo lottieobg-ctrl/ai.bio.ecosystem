@@ -1,21 +1,5 @@
 [
   {
-    "name": "SoulSearch Scottsdale Enlightenment Expo Psychic & Healing Fair",
-    "date": "2026-10-10",
-    "end_date": "2026-10-12",
-    "location": "Boston, MA, USA",
-    "url": "scottsdale-az",
-    "type": "meetup",
-    "tags": [
-      "AI",
-      "biology"
-    ],
-    "virtual": false,
-    "description": "",
-    "source": "luma",
-    "auto": true
-  },
-  {
     "name": "HLTH 2026",
     "date": "2026-10-11",
     "end_date": "2026-10-14",
@@ -31,38 +15,6 @@
     "virtual": false,
     "description": "Leading health innovation conference connecting companies, investors and payers transforming healthcare with AI and technology.",
     "auto": false
-  },
-  {
-    "name": "Replace Your Marketing Team With AI, and Add 2\u20133 Extra Deals a Month",
-    "date": "2026-10-13",
-    "end_date": "2026-10-13",
-    "location": "Boston, MA, USA",
-    "url": "i6so3nl0",
-    "type": "meetup",
-    "tags": [
-      "AI",
-      "biology"
-    ],
-    "virtual": false,
-    "description": "",
-    "source": "luma",
-    "auto": true
-  },
-  {
-    "name": "Take Your Ai to the Next Level 202",
-    "date": "2026-10-14",
-    "end_date": "2026-10-14",
-    "location": "Boston, MA, USA",
-    "url": "5cxtytcu",
-    "type": "meetup",
-    "tags": [
-      "AI",
-      "biology"
-    ],
-    "virtual": false,
-    "description": "",
-    "source": "luma",
-    "auto": true
   },
   {
     "name": "October Sustainability Professionals Happy Hour",
@@ -97,11 +49,155 @@
     "auto": true
   },
   {
+    "name": "Powering the AI Decade",
+    "date": "2026-10-15",
+    "end_date": "2026-10-15",
+    "location": "Boston, MA, USA",
+    "url": "5re315wi",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
+    "name": "Powering the AI Decade",
+    "date": "2026-10-15",
+    "end_date": "2026-10-15",
+    "location": "Boston, MA, USA",
+    "url": "3pz5tnn6",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
+    "name": "Fed AI Leaders Summit",
+    "date": "2026-10-15",
+    "end_date": "2026-10-15",
+    "location": "Boston, MA, USA",
+    "url": "onesixone-q7on",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
+    "name": "\"Power Over Pain\" Book Launch Celebration",
+    "date": "2026-10-15",
+    "end_date": "2026-10-15",
+    "location": "Boston, MA, USA",
+    "url": "7zrs0ey0",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
+    "name": "Payment Systems in the Age of AI:The Asia-Pacific Experience",
+    "date": "2026-10-15",
+    "end_date": "2026-10-16",
+    "location": "Boston, MA, USA",
+    "url": "810llmpu",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
     "name": "Appetizers & Appraisals",
     "date": "2026-10-16",
     "end_date": "2026-10-16",
     "location": "Boston, MA, USA",
     "url": "z5kwb3jc",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
+    "name": "Founder Fridays: The AI Collective x Unstuck Labs",
+    "date": "2026-10-16",
+    "end_date": "2026-10-16",
+    "location": "Boston, MA, USA",
+    "url": "8ob2yd6k",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
+    "name": "A Conversation with Jamaica’s Minister of Foreign Affairs & Foreign Trade + Networking Reception",
+    "date": "2026-10-16",
+    "end_date": "2026-10-16",
+    "location": "Boston, MA, USA",
+    "url": "vfpqtrww",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
+    "name": "Mental Health First Aid Training",
+    "date": "2026-10-17",
+    "end_date": "2026-10-17",
+    "location": "Boston, MA, USA",
+    "url": "wbm3cvdh",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
+    "name": "AI Walks - DCA - DCSTW Edition 🤖",
+    "date": "2026-10-17",
+    "end_date": "2026-10-17",
+    "location": "Boston, MA, USA",
+    "url": "kd1brb8c",
     "type": "meetup",
     "tags": [
       "AI",
@@ -175,7 +271,7 @@
       "clinical"
     ],
     "virtual": false,
-    "description": "American Society of Human Genetics annual meeting \u2014 a key forum for AI-driven genetics and genomics research.",
+    "description": "American Society of Human Genetics annual meeting — a key forum for AI-driven genetics and genomics research.",
     "auto": false
   },
   {
@@ -192,11 +288,11 @@
       "digital health"
     ],
     "virtual": false,
-    "description": "Annual congress focused on biodata, AI and precision medicine \u2014 bringing together data scientists, clinicians and industry leaders.",
+    "description": "Annual congress focused on biodata, AI and precision medicine — bringing together data scientists, clinicians and industry leaders.",
     "auto": false
   },
   {
-    "name": "NeurIPS 2026 \u2014 ML for Biology Workshop",
+    "name": "NeurIPS 2026 — ML for Biology Workshop",
     "date": "2026-12-05",
     "end_date": "2026-12-06",
     "location": "TBC",
@@ -209,7 +305,7 @@
       "computational"
     ],
     "virtual": false,
-    "description": "Annual machine learning for biology workshop co-located with NeurIPS \u2014 a key venue for AI \u00d7 biology research presentations.",
+    "description": "Annual machine learning for biology workshop co-located with NeurIPS — a key venue for AI × biology research presentations.",
     "auto": false
   }
 ]
