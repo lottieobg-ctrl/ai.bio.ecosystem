@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-18T12:34:57Z",
+  "last_updated": "2026-10-19T15:29:26Z",
   "companies": [
     {
       "name": "XtalPi",
@@ -974,11 +974,11 @@
       "funding": "$140M",
       "stage": "series-c",
       "needs_review": true,
-      "review_headline": "Anthropic\u2019s AI worm research raises new fears about smart device security - Scientific American",
-      "review_url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNdFYtR2M5U2ZLTHJRamRPMk1UQm1Lb05jWjdTRUJCVEdJZnRRQ1p1ZzREeGZ3MGpoSVBHNTAxcUpfNGxBT01kVFVJb1AzXzVqZjNvTUZWc09WMHRFQi1NcVZsWnBDeGdoRVZtUDVsUTBDb1NUWEREZnV3SGRVWVdnaHdfTElaX2JvV21XYWdIcWRUdGxnR3Y0c0NaMU40NU1aa0g1VnFfSGZzMnVRRi03d2RPblRGOGc?oc=5",
+      "review_headline": "Anthropic raises prospect of AI cash handouts for the public - Yahoo Finance",
+      "review_url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPUm9maENVNEhwUzEzRG9tT3JkVHdfSmhJUXZEN1d6TEN1Sk9wM0RRYVBiVWFpOExoVUZMbVVJRjBCRHNIUk9iSUxib1B5MXRkZm02ckw5aWZ1dElKcWlTRVdFcDJybTFoZHZnRmhCekU0RWdYT2luZ3hLTml4YVg0QjkzbnZWcjltcGZpazFvREtoZ3g2QVZuUXc2ZFFtUQ?oc=5",
       "proposed_funding": "",
-      "proposed_stage": "",
-      "found_at": "2026-10-18T12:34:32Z"
+      "proposed_stage": "public",
+      "found_at": "2026-10-19T15:28:59Z"
     },
     {
       "name": "Google DeepMind",
@@ -1018,11 +1018,11 @@
       "funding": "$30B",
       "stage": "public",
       "needs_review": true,
-      "review_headline": "Watch OpenAI Arrest Raises AI Espionage Concerns - Bloomberg",
+      "review_headline": "Watch OpenAI Arrest Raises AI Espionage Concerns - Bloomberg.com",
       "review_url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPTi1qWVZ5OGhUanRjQkhGREcwSnFCQ1VsazVCSlhFNXMxV2tzODNSZU1sTWxQLXpuaEZyMjB4Z3d6R3lCX1NXZEhqeVkzSWo0Q24yMHpiaWpUamhyUEtRcVNfeDhINWNPMWdKMThQUWhCbGt5VThFdi1uZXdmMGVDRW9JTWZMTVpCb1RoQzV1bEJhMkVWbnB2NS1XaUlqZw?oc=5",
       "proposed_funding": "",
       "proposed_stage": "",
-      "found_at": "2026-10-18T12:34:32Z"
+      "found_at": "2026-10-19T15:29:00Z"
     },
     {
       "name": "Sakana AI",
