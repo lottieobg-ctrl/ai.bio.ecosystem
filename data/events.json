@@ -1,154 +1,170 @@
 [
   {
-    "name": "AI Export Controls and Trusted Access in the US-India Technology Corridor: Closed-Door Roundtable",
-    "date": "2026-10-19",
-    "end_date": "2026-10-19",
-    "location": "Boston, MA, USA",
-    "url": "k1810s4z",
-    "type": "meetup",
-    "tags": [
-      "AI",
-      "biology"
-    ],
-    "virtual": false,
-    "description": "",
-    "source": "luma",
-    "auto": true
-  },
-  {
-    "name": "Accelerating America\u2019s AI Future",
-    "date": "2026-10-19",
-    "end_date": "2026-10-19",
-    "location": "Boston, MA, USA",
-    "url": "stationdc-cx51",
-    "type": "meetup",
-    "tags": [
-      "AI",
-      "biology"
-    ],
-    "virtual": false,
-    "description": "",
-    "source": "luma",
-    "auto": true
-  },
-  {
-    "name": "Open Coworking x AI Collective",
-    "date": "2026-10-19",
-    "end_date": "2026-10-20",
-    "location": "Boston, MA, USA",
-    "url": "z0n023c3",
-    "type": "meetup",
-    "tags": [
-      "AI",
-      "biology"
-    ],
-    "virtual": false,
-    "description": "",
-    "source": "luma",
-    "auto": true
-  },
-  {
-    "name": "The Nevado Exchange | Hosted by: Nevado AI",
-    "date": "2026-10-20",
-    "end_date": "2026-10-20",
-    "location": "Boston, MA, USA",
-    "url": "mllm7leg",
-    "type": "meetup",
-    "tags": [
-      "AI",
-      "biology"
-    ],
-    "virtual": false,
-    "description": "",
-    "source": "luma",
-    "auto": true
-  },
-  {
-    "name": "Cowork Session: No-Code AI Workflows (DCSTW)",
-    "date": "2026-10-20",
-    "end_date": "2026-10-20",
-    "location": "Boston, MA, USA",
-    "url": "aibuild-oawn",
-    "type": "meetup",
-    "tags": [
-      "AI",
-      "biology"
-    ],
-    "virtual": false,
-    "description": "",
-    "source": "luma",
-    "auto": true
-  },
-  {
-    "name": "George Mason University Walkout to Freeze AI (Arlington Campus)",
-    "date": "2026-10-20",
-    "end_date": "2026-10-20",
-    "location": "Boston, MA, USA",
-    "url": "pma4h9xv",
-    "type": "meetup",
-    "tags": [
-      "AI",
-      "biology"
-    ],
-    "virtual": false,
-    "description": "",
-    "source": "luma",
-    "auto": true
-  },
-  {
-    "name": "Understanding AI Risk & How to Get Involved: An Introduction by WISE",
-    "date": "2026-10-20",
-    "end_date": "2026-10-21",
-    "location": "Boston, MA, USA",
-    "url": "8rmjshm2",
-    "type": "meetup",
-    "tags": [
-      "AI",
-      "biology"
-    ],
-    "virtual": false,
-    "description": "",
-    "source": "luma",
-    "auto": true
-  },
-  {
-    "name": "NoVA Create: From AI Skeptic to Shipping Software - A Designer's Questionable Adventure",
-    "date": "2026-10-20",
-    "end_date": "2026-10-20",
-    "location": "Boston, MA, USA",
-    "url": "8epgnlih",
-    "type": "meetup",
-    "tags": [
-      "AI",
-      "biology"
-    ],
-    "virtual": false,
-    "description": "",
-    "source": "luma",
-    "auto": true
-  },
-  {
-    "name": "Real Talk: AI Workflows for VC & Startup Operators",
-    "date": "2026-10-21",
-    "end_date": "2026-10-21",
-    "location": "Boston, MA, USA",
-    "url": "r52837uu",
-    "type": "meetup",
-    "tags": [
-      "AI",
-      "biology"
-    ],
-    "virtual": false,
-    "description": "",
-    "source": "luma",
-    "auto": true
-  },
-  {
     "name": "FaithTech Create PHX",
     "date": "2026-10-22",
     "end_date": "2026-10-22",
     "location": "Boston, MA, USA",
     "url": "62k8a8kv",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
+    "name": "NAIA Monthly Members Breakfast",
+    "date": "2026-10-22",
+    "end_date": "2026-10-22",
+    "location": "Boston, MA, USA",
+    "url": "mvf5s04h",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
+    "name": "Community Connect #8 | Where to Grow: The Capital Region's Next Life Sciences Chapter",
+    "date": "2026-10-22",
+    "end_date": "2026-10-22",
+    "location": "Boston, MA, USA",
+    "url": "y0ozputb",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
+    "name": "GRC AI Labs | AI Agent Building Workshop",
+    "date": "2026-10-22",
+    "end_date": "2026-10-22",
+    "location": "Boston, MA, USA",
+    "url": "m2x3ji9b",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
+    "name": "DMV OpenAI Forum Meetup",
+    "date": "2026-10-22",
+    "end_date": "2026-10-22",
+    "location": "Boston, MA, USA",
+    "url": "4kojwitv",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
+    "name": "AI at the Ballot Box: Women Leaders on the Future of AI & Elections",
+    "date": "2026-10-22",
+    "end_date": "2026-10-23",
+    "location": "Boston, MA, USA",
+    "url": "dyly9eoc",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
+    "name": "OFFSIDE. Where AI Crosses the Line",
+    "date": "2026-10-22",
+    "end_date": "2026-10-23",
+    "location": "Boston, MA, USA",
+    "url": "89b41ppk",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
+    "name": "🎹 AI, CMMC & Cocktails: Compliance in a Different Key",
+    "date": "2026-10-22",
+    "end_date": "2026-10-23",
+    "location": "Boston, MA, USA",
+    "url": "rdxf801t",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
+    "name": "Sustainable Urbanization DC Happy Hour",
+    "date": "2026-10-23",
+    "end_date": "2026-10-23",
+    "location": "Boston, MA, USA",
+    "url": "dxmtb624",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
+    "name": "Outdoor Discussion Walk: Future of AI Education | a16z Academy",
+    "date": "2026-10-24",
+    "end_date": "2026-10-24",
+    "location": "Boston, MA, USA",
+    "url": "ai-pphj",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
+    "name": "Fall Bike and Bird: Kingman Island and Anacostia Trail",
+    "date": "2026-10-25",
+    "end_date": "2026-10-25",
+    "location": "Boston, MA, USA",
+    "url": "ifc2x0vd",
     "type": "meetup",
     "tags": [
       "AI",
@@ -190,7 +206,7 @@
       "clinical"
     ],
     "virtual": false,
-    "description": "American Society of Human Genetics annual meeting \u2014 a key forum for AI-driven genetics and genomics research.",
+    "description": "American Society of Human Genetics annual meeting — a key forum for AI-driven genetics and genomics research.",
     "auto": false
   },
   {
@@ -207,11 +223,11 @@
       "digital health"
     ],
     "virtual": false,
-    "description": "Annual congress focused on biodata, AI and precision medicine \u2014 bringing together data scientists, clinicians and industry leaders.",
+    "description": "Annual congress focused on biodata, AI and precision medicine — bringing together data scientists, clinicians and industry leaders.",
     "auto": false
   },
   {
-    "name": "NeurIPS 2026 \u2014 ML for Biology Workshop",
+    "name": "NeurIPS 2026 — ML for Biology Workshop",
     "date": "2026-12-05",
     "end_date": "2026-12-06",
     "location": "TBC",
@@ -224,7 +240,7 @@
       "computational"
     ],
     "virtual": false,
-    "description": "Annual machine learning for biology workshop co-located with NeurIPS \u2014 a key venue for AI \u00d7 biology research presentations.",
+    "description": "Annual machine learning for biology workshop co-located with NeurIPS — a key venue for AI × biology research presentations.",
     "auto": false
   }
 ]
