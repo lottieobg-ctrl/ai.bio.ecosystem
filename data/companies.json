@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-26T15:05:46Z",
+  "last_updated": "2026-10-27T14:19:27Z",
   "companies": [
     {
       "name": "XtalPi",
@@ -655,11 +655,11 @@
       "funding": "$121M",
       "stage": "series-c",
       "needs_review": true,
-      "review_headline": "Morgan Stanley Maintains Recursion Pharmaceuticals(RXRX.US) With Hold Rating, Raises Target Price to $5.9 - Moomoo",
-      "review_url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPenBIZTRfV3pBWGFZQlQxOVR4ekROWGRza01CS01NQzlKcFBnVVhsNWJOYTA2MjdnR3pYYWctdVowMTRqanhJWW1VSFI2dEh3WHpGOUhpaV90NkE5eEhNandqd0hDcjhBWkNoY3k5RzJuS0VTV0hSeUNkMXFSeG54VUtZUHUxdHgxT3dSLXNkdnM1d2pjS3R4T29ja21yUGhuNGNJT3RqMXZ5ZE1nNEFRblhvcFEybno5d3pJS3JUZnhCdjg?oc=5",
+      "review_headline": "Recursion Pharmaceuticals (RXRX) Lands Sanofi Milestone And Trial Updates, Is The Valuation Already Too Rich? - Simply Wall Street",
+      "review_url": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxPMm04XzM0SjhHOXhXTExzaS0tUmduS3hib3NPcVYyNTgzeUtBQ2Y5elZqYlVQRklXdGpsM29kZms0bUdwdXo0bjViWE00Z2xXZ2I1eTlITEd4Vm1JTndmeDN5aUhNYzlRYk5aLUJFUUxxa1huT0ZrQnUzMmYyRmNNbTdheEVpRG9YYnVmd0NrUVpIWlYxSV9Cek82ZHBnUlZYakNNN3ljR29Cb1Brc3o5QkkwWWt3eEcwaHN0RHh4S2FsX2RsdlJaSHpkMTdCWGpsZ0o5MlJjYWh1MDhhT2ZBLXRiTW9la1g3c1p4REhGZlZSSXpsZkHSAfYBQVVfeXFMTzJtOF8zNEo4Rzl4V0xMc2ktLVJnbkt4Ym9zT3FWMjU4M3lLQUNmOXpWamJVUEZJV3RqbDNvZGZrNG1HcHV6NG41YlhNNGdsV2diNXk5SExHeFZtSU53ZngzeWlITWM5UWJOWi1CRVFMcWtYbk9Ga0J1MzJmMkZjTW03YXhFaURvWGJ1ZndDa1FaSFpWMUlfQnpPNmRwZ1JWWGpDTTd5Y0dvQm9Qa3N6OUJJMFlrd3hHMGhzdER4eEthbF9kbHZSWkh6ZDE3QlhqbGdKOTJSY2FodTA4YU9mQS10Yk1vZWtYN3NaeERIRmZWUkl6bGZB?oc=5",
       "proposed_funding": "",
       "proposed_stage": "",
-      "found_at": "2026-10-24T12:35:22Z"
+      "found_at": "2026-10-27T14:18:29Z"
     },
     {
       "name": "Relay Therapeutics",
@@ -974,11 +974,11 @@
       "funding": "$450B",
       "stage": "public",
       "needs_review": true,
-      "review_headline": "VIEW Anthropic IPO filing to put AI investment boom to the test - Reuters",
-      "review_url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPNlJETmo1Z21kOWpEaXF5T25sQTVFTHE3Y3FRMWtHMEVyNlpNMXU0OVllN3dnRTlhRS1kMUx2T3JLZ0psUVJPQ29UMmNDREpWWGFpVUFEcHgxWjFzSFoydHgwR3o2R01sTVJaQjh6NlZHSV9sbFZTQ0RTSXhsSnNIV3Uxc1NVQUJla1ZZb3I2aDdiQ0x3Mm1wOUxvamE5a1k5dFRxRW5rWEVRZEpoZmc?oc=5",
+      "review_headline": "Anthropic Raises Concerns - Bloomberg.com",
+      "review_url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNZ0p1NTdJeG1Ed3l1RVFkQWdBUFFPNUJtVzhtRllJYVJWZFVUUnNrU2dWU09Lck1CbnFSbjFyWlpHVTM0eG82eEc2QjM3NXdiRUdOMGFXWUxKdHZXbXhTN3k1OHdIREY2aV93MlRXRVZwUHlwTnJHTkxUTUhoTTR0MmJKLWFsbUZhZWc?oc=5",
       "proposed_funding": "",
-      "proposed_stage": "public",
-      "found_at": "2026-10-26T15:05:19Z"
+      "proposed_stage": "",
+      "found_at": "2026-10-27T14:19:03Z"
     },
     {
       "name": "Google DeepMind",
@@ -1018,11 +1018,11 @@
       "funding": "$30B",
       "stage": "public",
       "needs_review": true,
-      "review_headline": "OpenAI nears up to $30 billion funding round at $1.25 trillion valuation led by UAE investors - CNBC",
-      "review_url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE4yWm1VRnpOb00tR0ZfUDVmaVh2S1dyNVhia0J4OWJ5anpxRUUtbjhHX19IbHZDUEdlVEc4OEE3aHQxNGw0ajhwR0ZDTFdPcC01YzZ6My1HVW84bzFzRHpnNGdkNnRCSnVrYTZMcnBGMjZVd0tIVUI5cWkxQdIBgAFBVV95cUxPeVdKRHhVdHUwa3ZfVkMxQm1od1YycVNSZURFaU1yeS1jUGhUNVF6MTh1aDdObmNuUks4d2k3empTZFNGUnFmZjYzNWR2VTJNbnlhNzI0dmpZZ0ctR3NwT05yTGdqRU5yaGFzX0FWVFpNY1BnbmVMaldMU3NZXzh1OA?oc=5",
-      "proposed_funding": "$30B",
+      "review_headline": "OpenAI Shifts Value to $1.25 Trillion as Funding Talks Finalize - Bloomberg.com",
+      "review_url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNNlJ6SFpHeHRub3NJR1l1dFg0YzFULWdWX1MtU1A4b1luZTFMMkktcHU0YWdNMi1RMy1Sc3FkVF9WTnhvc0txaV9HX1k1d1cxQVgyOWdWcUU2UVVRXzlNMDdydVc2cmxEQ1FqX0dPeEFqZ3pzZnVGRnZYUzEwR0xfanQycnZPUEp6SkM1ZEo4OV9KOHZrWk9sbElfRmcxVDVmYUhfSmNqODhra1JvYko4MWRLNA?oc=5",
+      "proposed_funding": "",
       "proposed_stage": "",
-      "found_at": "2026-10-23T13:17:50Z"
+      "found_at": "2026-10-27T14:19:04Z"
     },
     {
       "name": "Sakana AI",
