@@ -30,8 +30,24 @@
       "clinical"
     ],
     "virtual": false,
-    "description": "American Society of Human Genetics annual meeting \u2014 a key forum for AI-driven genetics and genomics research.",
+    "description": "American Society of Human Genetics annual meeting — a key forum for AI-driven genetics and genomics research.",
     "auto": false
+  },
+  {
+    "name": "(IN PERSON) The Midlife Reset: Feel like yourself again",
+    "date": "2026-11-06",
+    "end_date": "2026-11-07",
+    "location": "Boston, MA, USA",
+    "url": "p7vzlcyq",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
   },
   {
     "name": "Brain Gym Open House",
@@ -39,6 +55,86 @@
     "end_date": "2026-11-07",
     "location": "Boston, MA, USA",
     "url": "p3bxv2uj",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
+    "name": "Creators and Cocktails: A Post-Panel After Party",
+    "date": "2026-11-07",
+    "end_date": "2026-11-08",
+    "location": "Boston, MA, USA",
+    "url": "gr70c3o0",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
+    "name": "sapphic sip n' paint at as you are",
+    "date": "2026-11-08",
+    "end_date": "2026-11-08",
+    "location": "Boston, MA, USA",
+    "url": "csthekma",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
+    "name": "Forensic Metascience for Policymakers: How AI Can Clean Up the Scientific Record",
+    "date": "2026-11-09",
+    "end_date": "2026-11-10",
+    "location": "Boston, MA, USA",
+    "url": "d2tvndzh",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
+    "name": "The Generative Series Creative Rights Salon: Economy of Human Creative Work in the AI Age, co-hosted with ITIF (Invite Only)",
+    "date": "2026-11-09",
+    "end_date": "2026-11-10",
+    "location": "Boston, MA, USA",
+    "url": "6h2bvpym",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
+    "name": "Lunch with BrainTrust | Washington DC",
+    "date": "2026-11-10",
+    "end_date": "2026-11-10",
+    "location": "Boston, MA, USA",
+    "url": "nqdjowd8",
     "type": "meetup",
     "tags": [
       "AI",
@@ -79,11 +175,11 @@
       "digital health"
     ],
     "virtual": false,
-    "description": "Annual congress focused on biodata, AI and precision medicine \u2014 bringing together data scientists, clinicians and industry leaders.",
+    "description": "Annual congress focused on biodata, AI and precision medicine — bringing together data scientists, clinicians and industry leaders.",
     "auto": false
   },
   {
-    "name": "NeurIPS 2026 \u2014 ML for Biology Workshop",
+    "name": "NeurIPS 2026 — ML for Biology Workshop",
     "date": "2026-12-05",
     "end_date": "2026-12-06",
     "location": "TBC",
@@ -96,7 +192,7 @@
       "computational"
     ],
     "virtual": false,
-    "description": "Annual machine learning for biology workshop co-located with NeurIPS \u2014 a key venue for AI \u00d7 biology research presentations.",
+    "description": "Annual machine learning for biology workshop co-located with NeurIPS — a key venue for AI × biology research presentations.",
     "auto": false
   }
 ]
