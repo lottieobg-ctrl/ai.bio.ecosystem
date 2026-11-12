@@ -1,10 +1,10 @@
 [
   {
-    "name": "Forensic Metascience for Policymakers: How AI Can Clean Up the Scientific Record",
-    "date": "2026-11-09",
-    "end_date": "2026-11-10",
+    "name": "Rails Girls 2026 @ Mux HQ",
+    "date": "2026-11-12",
+    "end_date": "2026-11-13",
     "location": "Boston, MA, USA",
-    "url": "d2tvndzh",
+    "url": "railsgirls2026",
     "type": "meetup",
     "tags": [
       "AI",
@@ -16,11 +16,11 @@
     "auto": true
   },
   {
-    "name": "The Generative Series Creative Rights Salon: Economy of Human Creative Work in the AI Age, co-hosted with ITIF (Invite Only)",
-    "date": "2026-11-09",
-    "end_date": "2026-11-10",
+    "name": "Stanford Computational Medicine Research Colloquium | Responsible AI in Healthcare: From RWE to Agentic Systems",
+    "date": "2026-11-12",
+    "end_date": "2026-11-12",
     "location": "Boston, MA, USA",
-    "url": "6h2bvpym",
+    "url": "kk2bp4fd",
     "type": "meetup",
     "tags": [
       "AI",
@@ -32,11 +32,43 @@
     "auto": true
   },
   {
-    "name": "Lunch with BrainTrust | Washington DC",
-    "date": "2026-11-10",
-    "end_date": "2026-11-10",
+    "name": "Sony MA900 Training @ 1030 Brittan Ave",
+    "date": "2026-11-12",
+    "end_date": "2026-11-12",
     "location": "Boston, MA, USA",
-    "url": "nqdjowd8",
+    "url": "ndk2h3m4",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
+    "name": "How an AI Token Meets the best Product？@Microsoft GCR Incubator🦄",
+    "date": "2026-11-12",
+    "end_date": "2026-11-13",
+    "location": "Boston, MA, USA",
+    "url": "seamate-sb6k",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
+    "name": "Physical AI Conference 2026",
+    "date": "2026-11-12",
+    "end_date": "2026-11-13",
+    "location": "Boston, MA, USA",
+    "url": "y0qs8gra",
     "type": "meetup",
     "tags": [
       "AI",
@@ -64,6 +96,102 @@
     "auto": true
   },
   {
+    "name": "MBC BioLabs AI Discovery Platforms Innovation Forum",
+    "date": "2026-11-13",
+    "end_date": "2026-11-13",
+    "location": "Boston, MA, USA",
+    "url": "n8dbgyky",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
+    "name": "AI, 0-Days in the New Era of Vulnerability Management",
+    "date": "2026-11-13",
+    "end_date": "2026-11-13",
+    "location": "Boston, MA, USA",
+    "url": "l6ftojej",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
+    "name": "Apollo AI Stanford Accelerator | Founders & Builders Meetup",
+    "date": "2026-11-13",
+    "end_date": "2026-11-13",
+    "location": "Boston, MA, USA",
+    "url": "0g-apollo-11-2026",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
+    "name": "Building the FDE Bench: How Top Teams Hire, Ramp and Retain",
+    "date": "2026-11-13",
+    "end_date": "2026-11-13",
+    "location": "Boston, MA, USA",
+    "url": "8cotl6cw",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
+    "name": "Let's Shape the Future of AI",
+    "date": "2026-11-13",
+    "end_date": "2026-11-13",
+    "location": "Boston, MA, USA",
+    "url": "c3vm4bz7",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
+    "name": "Whitepaper Reading [SF] - Defi Papers: No Place to Hide & Active Liquidity On Chain",
+    "date": "2026-11-13",
+    "end_date": "2026-11-13",
+    "location": "Boston, MA, USA",
+    "url": "snrgc7jo",
+    "type": "meetup",
+    "tags": [
+      "AI",
+      "biology"
+    ],
+    "virtual": false,
+    "description": "",
+    "source": "luma",
+    "auto": true
+  },
+  {
     "name": "BioData World Congress 2026",
     "date": "2026-11-18",
     "end_date": "2026-11-19",
@@ -77,11 +205,11 @@
       "digital health"
     ],
     "virtual": false,
-    "description": "Annual congress focused on biodata, AI and precision medicine \u2014 bringing together data scientists, clinicians and industry leaders.",
+    "description": "Annual congress focused on biodata, AI and precision medicine — bringing together data scientists, clinicians and industry leaders.",
     "auto": false
   },
   {
-    "name": "NeurIPS 2026 \u2014 ML for Biology Workshop",
+    "name": "NeurIPS 2026 — ML for Biology Workshop",
     "date": "2026-12-05",
     "end_date": "2026-12-06",
     "location": "TBC",
@@ -94,7 +222,7 @@
       "computational"
     ],
     "virtual": false,
-    "description": "Annual machine learning for biology workshop co-located with NeurIPS \u2014 a key venue for AI \u00d7 biology research presentations.",
+    "description": "Annual machine learning for biology workshop co-located with NeurIPS — a key venue for AI × biology research presentations.",
     "auto": false
   }
 ]
