@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-11T16:01:38Z",
+  "last_updated": "2026-11-12T16:45:03Z",
   "companies": [
     {
       "name": "XtalPi",
@@ -248,11 +248,11 @@
       "funding": "$100M",
       "stage": "series-a",
       "needs_review": true,
-      "review_headline": "BioMap Secured $100M Series A Financing: Advancing Life Science Superintelligence via Self-Evolving Microcosm Model | Xinglian Portfolio Update - eu.36kr.com",
+      "review_headline": "BioMap Secured $100M Series A Financing: Advancing Life Science Superintelligence via Self-Evolving Microcosm Model | Xinglian Portfolio Update - 36Kr",
       "review_url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE1mUV9jWkdfX2ltN1RzMmEtUmxpOGp2dm03LUthcDJ5bUw2OHg1UXNFNEdLSzAwVF9YMjBBNUtpMVFCODBfaHhKd1VwWDVBVWtuX2xR?oc=5",
       "proposed_funding": "$100M",
       "proposed_stage": "series-a",
-      "found_at": "2026-11-10T16:19:03Z"
+      "found_at": "2026-11-12T16:42:51Z"
     },
     {
       "name": "Atomic AI",
@@ -863,12 +863,12 @@
       "name": "Orakl Oncology",
       "funding": "\u20ac11M total \u2014 Seed (Dec 2024). Backed by Singular, Bpifrance.",
       "stage": "seed",
-      "needs_review": false,
-      "review_headline": "",
-      "review_url": "",
-      "proposed_funding": "",
+      "needs_review": true,
+      "review_headline": "Exclusive: Orakl Oncology raises $34m to test cancer drugs on \u2018virtual patients\u2019 - Sifted",
+      "review_url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBEdm5DVGE5WFhCMS1pNzRVaVhjUGFXVGpzNERUS3FTa2FKay1LX3B3X2IwNThsV1ZHQ216bGVJdlBRUjM3bDdkTUlMTjF1MUNSMV9hTE4ySW5qU2x0RGtkeFVkRXR1SXZsY1pjNUlR?oc=5",
+      "proposed_funding": "$34M",
       "proposed_stage": "",
-      "found_at": ""
+      "found_at": "2026-11-12T16:44:50Z"
     },
     {
       "name": "Generare",
@@ -952,11 +952,11 @@
       "funding": "$2M",
       "stage": "public",
       "needs_review": true,
-      "review_headline": "What Tempus AI Stock's Raised Revenue Outlook Means For Shareholders - Simply Wall St",
-      "review_url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxNMVFoOXQ4bzFqakFDeU1MWElkWklOTUZsSF9ZTDZObzNudlhLYTJZQVh5NjhsX1g3clRhdjJuRWNVeG1mbWV6b0J4RmJtamQ5dG5jUlZRdnI5Qktxak9nVTVNNTFncHg3SS1nUm1Id1NNczl3VHhHTXBsV3VFNHBwRUVER21jakNoRmNaTFRwSVlDcjNwZ08xajIyTlJvQzN3MGtvS000YUJFaWVPZlI2OWprZi1fbWlCM2FJcEhhdU9WYkVWNlJZSTNvZzJmTG1IWXhUZ0VVVVJaQdIB3wFBVV95cUxOaGZxa0JxXzI0clp2Ukd6VHR2dnBuZDBrVmN6OWpuWkE3ZGJJdU5KdDFlOFZWMmk3V0oxT0VaQ0lJeEFkRTM2SzRTR19rZXZTb3BKcjNxc1RaZkNBVkFyVkNlZHFqY0YtMTk1RW9GcktLVk53TE54WGZVb2lsRUs2cDYtOWhKZTNsY2ZCSHdmTjFwU3laWGg3VXg1LWNNT2tvYnFDbVpVckplU3BfbkdJeGVBWF9PRlVMdTVvV2p0UEJNSnB4a1R1N0thZm9xa3IyWTFJdldBcm5KcFZwREYw?oc=5",
+      "review_headline": "BTIG raises Tempus AI stock price target to $100 on data deals - Investing.com",
+      "review_url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQZGhJd3pUbGUxVHppS3dGUWpFZnJtWmE4bGJzY1h6ZVJrXzRsak1ldURIek56U2hvc1BqY2h3YUw3TzB6VnRqaXIxVS1mQUxwT1A1LXZZQWItU2FRSHMwcHR3UHdUalFDOHJFMVF5WVFxdVMyaVo2S19sZHNqOENfeWV2Xzg1c3RKT3JTMDNuaUp2WUNFTlpSMUkwaURFU3NteW9hZ18zaWMxZUdrcmhSZGN0WHhlTXd6bjN6NE5n?oc=5",
       "proposed_funding": "",
       "proposed_stage": "",
-      "found_at": "2026-11-11T16:01:19Z"
+      "found_at": "2026-11-12T16:44:45Z"
     },
     {
       "name": "Verily Health",
@@ -974,11 +974,11 @@
       "funding": "$450B",
       "stage": "public",
       "needs_review": true,
-      "review_headline": "Anthropic: We See the Stock as Undervalued in the IPO Pricing Range - Morningstar",
-      "review_url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQY1hSaVQ0ZjlQWE1Oa1JBZXV4YmM4eTM1MmNYMnlTd1hMZ2x2NWFNaWp3NUFjZFRvMWN0azRLZVdQelkwWS13V1F0dFh2eHRjZ1ZuNExQOXd1c2lnUmxsMGNFUUtmeUxmUHloZzJvb3pfOUljQ2lXS25JRDUwWGhtb2hBcGRoRU9iWHZyd1h3NjZOYkE4SW94eFZxbW8?oc=5",
+      "review_headline": "Amazon and Google Will See Big Paydays from Anthropic IPO - The New York Times",
+      "review_url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNclRTcWRENnlRX3NlYnFEWFU3c1d1dEFPRGt1RGZmSk1CeXF0RGxQV203TkVkQVhXMEJncUVjYkNXdDByaGZsWi00eGtRdmg2cmUzczdJLU9GSVAxNVlaNUk0YmVHcXhUSWdfb3dRbzJvaTlxUC1oSGdkRkJFQjQyWVY1dkM?oc=5",
       "proposed_funding": "",
       "proposed_stage": "public",
-      "found_at": "2026-11-11T16:01:19Z"
+      "found_at": "2026-11-12T16:44:46Z"
     },
     {
       "name": "Google DeepMind",
