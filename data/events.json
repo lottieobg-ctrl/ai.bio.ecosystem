@@ -1,85 +1,5 @@
 [
   {
-    "name": "AI Risk: What Can Your AI See, Decide, and Do?",
-    "date": "2026-11-17",
-    "end_date": "2026-11-17",
-    "location": "Boston, MA, USA",
-    "url": "y6ox30p6",
-    "type": "meetup",
-    "tags": [
-      "AI",
-      "biology"
-    ],
-    "virtual": false,
-    "description": "",
-    "source": "luma",
-    "auto": true
-  },
-  {
-    "name": "After NSCEB: What Comes Next for U.S. Biotech Policy",
-    "date": "2026-11-17",
-    "end_date": "2026-11-17",
-    "location": "Boston, MA, USA",
-    "url": "stationdc-yz0z",
-    "type": "meetup",
-    "tags": [
-      "AI",
-      "biology"
-    ],
-    "virtual": false,
-    "description": "",
-    "source": "luma",
-    "auto": true
-  },
-  {
-    "name": "OpenAI Student Collective X Project LIFT Build your own Personal Assistant (Free GPT Plus & Codex Tokens)",
-    "date": "2026-11-17",
-    "end_date": "2026-11-18",
-    "location": "Boston, MA, USA",
-    "url": "zjegnttn",
-    "type": "meetup",
-    "tags": [
-      "AI",
-      "biology"
-    ],
-    "virtual": false,
-    "description": "",
-    "source": "luma",
-    "auto": true
-  },
-  {
-    "name": "AI Safety Meetup and Happy Hour",
-    "date": "2026-11-17",
-    "end_date": "2026-11-18",
-    "location": "Boston, MA, USA",
-    "url": "nbed0k5e",
-    "type": "meetup",
-    "tags": [
-      "AI",
-      "biology"
-    ],
-    "virtual": false,
-    "description": "",
-    "source": "luma",
-    "auto": true
-  },
-  {
-    "name": "Happy Hour for the Most Important AI Hire",
-    "date": "2026-11-17",
-    "end_date": "2026-11-18",
-    "location": "Boston, MA, USA",
-    "url": "tscfhdf2",
-    "type": "meetup",
-    "tags": [
-      "AI",
-      "biology"
-    ],
-    "virtual": false,
-    "description": "",
-    "source": "luma",
-    "auto": true
-  },
-  {
     "name": "BioData World Congress 2026",
     "date": "2026-11-18",
     "end_date": "2026-11-19",
@@ -93,7 +13,7 @@
       "digital health"
     ],
     "virtual": false,
-    "description": "Annual congress focused on biodata, AI and precision medicine \u2014 bringing together data scientists, clinicians and industry leaders.",
+    "description": "Annual congress focused on biodata, AI and precision medicine — bringing together data scientists, clinicians and industry leaders.",
     "auto": false
   },
   {
@@ -145,7 +65,7 @@
     "auto": true
   },
   {
-    "name": "NeurIPS 2026 \u2014 ML for Biology Workshop",
+    "name": "NeurIPS 2026 — ML for Biology Workshop",
     "date": "2026-12-05",
     "end_date": "2026-12-06",
     "location": "TBC",
@@ -158,7 +78,7 @@
       "computational"
     ],
     "virtual": false,
-    "description": "Annual machine learning for biology workshop co-located with NeurIPS \u2014 a key venue for AI \u00d7 biology research presentations.",
+    "description": "Annual machine learning for biology workshop co-located with NeurIPS — a key venue for AI × biology research presentations.",
     "auto": false
   }
 ]
