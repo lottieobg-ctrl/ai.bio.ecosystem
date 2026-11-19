@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-18T17:09:02Z",
+  "last_updated": "2026-11-19T17:16:21Z",
   "companies": [
     {
       "name": "XtalPi",
@@ -248,11 +248,11 @@
       "funding": "$100M",
       "stage": "series-a",
       "needs_review": true,
-      "review_headline": "BioMap Secured $100M Series A Financing: Advancing Life Science Superintelligence via Self-Evolving Microcosm Model | Xinglian Portfolio Update - eu.36kr.com",
+      "review_headline": "BioMap Secured $100M Series A Financing: Advancing Life Science Superintelligence via Self-Evolving Microcosm Model | Xinglian Portfolio Update - 36Kr",
       "review_url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE1mUV9jWkdfX2ltN1RzMmEtUmxpOGp2dm03LUthcDJ5bUw2OHg1UXNFNEdLSzAwVF9YMjBBNUtpMVFCODBfaHhKd1VwWDVBVWtuX2xR?oc=5",
       "proposed_funding": "$100M",
       "proposed_stage": "series-a",
-      "found_at": "2026-11-18T17:06:30Z"
+      "found_at": "2026-11-19T17:13:54Z"
     },
     {
       "name": "Atomic AI",
@@ -754,11 +754,11 @@
       "funding": "~$50M total \u2014 Series B. Backed by Octopus Ventures, LocalGlobe.",
       "stage": "series-b",
       "needs_review": true,
-      "review_headline": "NieR: Automata developers working on fix after update accidentally raises Steam version\u2019s file size from 50GB to 366GB - AUTOMATON",
-      "review_url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxQb2U0Ykg2U3A2ajZTb0F6eHN1ZFZXQ0EwckdDN3pvWXU4WWVpNGljM05yVzY5dVYtQlZFZkRHVjVwblRqMUYtV3I1bVduUmJiMFhMNnoydmxxcmRKaWZCU2dtRzRaeDBVU1RnZWZ5emd2MXYwcG5YXzNjZ1Iwd0U5alp6UFVOSXJkSkdZbnZfeDhaX2RXUVZHcExhSVdiVGoxa0hTQ2FTU2pUR0dWNkhsQ0lFUkZiUmtyVHNGbFRkcjB0UFlXMnI2RGpubnhOT0tQSm1rdWhlbHh0RlBYTFFmSDkxWW1RNEhK?oc=5",
+      "review_headline": "AI startup Perceptive Automata emerges from stealth with seed funding from First Round - PEI Private Equity",
+      "review_url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPRlpkYTQ1UUJrVVdSU3dYT01QaExzM0pMbHduWjRaTzlFR29ram9xd2drUGFkWGZCNGpSR2p6NGdPQU15NktaWE5KczhTczdBQVNlVEp2ZUJBcjk4UVpXVlBJT1Jjb2hWVXRONG5LWVc1ZzVVQll1azJfS0VfWnhQQ2JwRUhrTWVtb3N1Q3RWbWRrLTFPa08tQmJBdTBNZC1WUDVhRFNSeFRNU29RZkpZa19LemFJSTB4WWIyYWhxaXE2bUVXTzFpSzRn?oc=5",
       "proposed_funding": "",
-      "proposed_stage": "",
-      "found_at": "2026-11-06T15:51:23Z"
+      "proposed_stage": "seed",
+      "found_at": "2026-11-19T17:15:36Z"
     },
     {
       "name": "Benchling",
@@ -974,11 +974,11 @@
       "funding": "$450B",
       "stage": "public",
       "needs_review": true,
-      "review_headline": "How Nvidia\u2019s (NVDA) Planned $10 Billion Anthropic Investment Deepens Its AI Ties - Yahoo Finance",
-      "review_url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNUl9HZ01GLXRSczBheFExZ2ZUbThOcnBQUGJvUjFBRmJvLTcyTXliWExFQzRsQlBmeE4yNWR0dExrZ3pOT25DaHprWERqQkxZOFlETnU2cnNQalNFaVNvT0VIR212ZXh3WVViV21oNFhhaVNvRTBfel9vR3FVd2xhQklCSE9GTmEwR2xKbjE5a2hXdEp4WGJkTl9n?oc=5",
-      "proposed_funding": "$10B",
-      "proposed_stage": "",
-      "found_at": "2026-11-18T17:08:41Z"
+      "review_headline": "Investors scramble for a piece of AI giant Anthropic in blockbuster IPO - NPR",
+      "review_url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQX0doUFFYbC13ZkRzVklYaXZncGdPM0IzQUR6QnRGRmxDdXcyaGJrNnlIUWZYQWdnRXd2RnBPc3E2RUQ5RVh5aE9nYm0xYkhYLUN6SktFUFBuekVSbnhMMTNGSlBfUnFCU1B5YkRERnAwUFA5ck44ZnBNdGMxdzZtV05NMkhpTHV3ZGZBaHhB?oc=5",
+      "proposed_funding": "",
+      "proposed_stage": "public",
+      "found_at": "2026-11-19T17:16:00Z"
     },
     {
       "name": "Google DeepMind",
@@ -1018,11 +1018,11 @@
       "funding": "$30B",
       "stage": "public",
       "needs_review": true,
-      "review_headline": "OpenAI Stock IPO: Expected Valuation, Timeline and Investment Options - SmartAsset",
-      "review_url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE15OEdhUlNaM0Z5cjB2VFdVbU5kYlU1VXNKcGF6YXpBbVZvTEhSTnFNbWo1LUZPdkxmbG1FcGJSRTI0bkgwTWxLNERtVFQ2S1lvaXpqaC03RWVoa1FJN1E?oc=5",
-      "proposed_funding": "",
-      "proposed_stage": "public",
-      "found_at": "2026-11-18T17:08:42Z"
+      "review_headline": "OpenAI Raises Less Than Half of $30 Billion Target in Latest Round - WSJ",
+      "review_url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQTW9TMmVsZkc2b05TYkloVW41X050RjdtZ1F5U01TRnJOSEthYTJpcDdPWVhJb0FvRGEteHgtbVhSS0lOVEZ3T2N5MTNpSUNWNXpETThZR0RvcFQwY2Q5R3ctRUFvM1ZtdFdMaXhGSnpPM2FiLUhORXNrem84cUpfVGpuQ0VmaGNsZUlxUVQ0dk4zQUE2cWFzUk8yM1R3cjc3dEczVw?oc=5",
+      "proposed_funding": "$30B",
+      "proposed_stage": "",
+      "found_at": "2026-11-19T17:16:01Z"
     },
     {
       "name": "Sakana AI",
