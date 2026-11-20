@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-19T17:16:21Z",
+  "last_updated": "2026-11-20T16:54:41Z",
   "companies": [
     {
       "name": "XtalPi",
@@ -248,11 +248,11 @@
       "funding": "$100M",
       "stage": "series-a",
       "needs_review": true,
-      "review_headline": "BioMap Secured $100M Series A Financing: Advancing Life Science Superintelligence via Self-Evolving Microcosm Model | Xinglian Portfolio Update - 36Kr",
+      "review_headline": "BioMap Secured $100M Series A Financing: Advancing Life Science Superintelligence via Self-Evolving Microcosm Model | Xinglian Portfolio Update - eu.36kr.com",
       "review_url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE1mUV9jWkdfX2ltN1RzMmEtUmxpOGp2dm03LUthcDJ5bUw2OHg1UXNFNEdLSzAwVF9YMjBBNUtpMVFCODBfaHhKd1VwWDVBVWtuX2xR?oc=5",
       "proposed_funding": "$100M",
       "proposed_stage": "series-a",
-      "found_at": "2026-11-19T17:13:54Z"
+      "found_at": "2026-11-20T16:52:22Z"
     },
     {
       "name": "Atomic AI",
@@ -864,11 +864,11 @@
       "funding": "$34M",
       "stage": "series-a",
       "needs_review": true,
-      "review_headline": "Orakl Oncology Raises $34M Series A to Expand AI Cancer Drug Prediction - Unite.AI",
-      "review_url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPNXNwSXBSeldKRkZOQW5ocUxPZ3llSndfZmxQQmpkN3NJUkdSY1h4NWdEcEZXTlZYcHNvZEk1NHRHSTdOU1lHWFBOakdQczdhd201T1BlelU2UEpIWE5zd29FdVRnSnR4eVdvc29Zdnh0UHJBb1ljQnNyb0FIYUZvMUk4cjZiM1BEamw0b0huM3FvNXR0a2dF?oc=5",
+      "review_headline": "Orakl Oncology Raises $34M in Series A Funding - FinSMEs",
+      "review_url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOeG51YTNMLWttNkdYanJYN2tpWVppYnFiZm9UQ0tsYXR6XzlCQU9CVW9aTTU0d0loN0piTHNmTjlmMHpWVXg4SkJEaDRjMHBPcHdtQWhEYlp5cGFRaWhnQWpsNWFISENGd2RHMm11dFZmcUZnTFZKem1FRUt6OXNGSGZvTVExOHFLeFE?oc=5",
       "proposed_funding": "$34M",
       "proposed_stage": "series-a",
-      "found_at": "2026-11-17T17:32:34Z"
+      "found_at": "2026-11-20T16:54:28Z"
     },
     {
       "name": "Generare",
@@ -974,11 +974,11 @@
       "funding": "$450B",
       "stage": "public",
       "needs_review": true,
-      "review_headline": "Investors scramble for a piece of AI giant Anthropic in blockbuster IPO - NPR",
-      "review_url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQX0doUFFYbC13ZkRzVklYaXZncGdPM0IzQUR6QnRGRmxDdXcyaGJrNnlIUWZYQWdnRXd2RnBPc3E2RUQ5RVh5aE9nYm0xYkhYLUN6SktFUFBuekVSbnhMMTNGSlBfUnFCU1B5YkRERnAwUFA5ck44ZnBNdGMxdzZtV05NMkhpTHV3ZGZBaHhB?oc=5",
-      "proposed_funding": "",
-      "proposed_stage": "public",
-      "found_at": "2026-11-19T17:16:00Z"
+      "review_headline": "Anthropic raises $93.5 billion total as underwriters scoop up \u2018greenshoe\u2019 overallotment - CNBC",
+      "review_url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBFTVBJTG4td0xyYWJNdUpwM2hqSzNKMVdWZG5QMGxGN184UXU0SXdqY1pORWk1Q2J6YVdRM3dncVRneldLSXhzZ0p0azF2QmsxNGM0YzZxcFBSZ282UGh0MXVPX1dUckI4cWxWNtIBckFVX3lxTFAtcXZnZF9OcHBTcTNMVWVGN1lrVVRORHZCMVFDWFZyQk5PY1ppQVRJajByR0JMT1R4d2hlUURiNUdqZk9mb3EtUzVDSWM1SllIbFg4NmJTTEFUX3hocFMweWFKZW9odmNkaWptOUtabzl1dw?oc=5",
+      "proposed_funding": "$94B",
+      "proposed_stage": "",
+      "found_at": "2026-11-20T16:54:22Z"
     },
     {
       "name": "Google DeepMind",
@@ -1018,11 +1018,11 @@
       "funding": "$30B",
       "stage": "public",
       "needs_review": true,
-      "review_headline": "OpenAI Raises Less Than Half of $30 Billion Target in Latest Round - WSJ",
-      "review_url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQTW9TMmVsZkc2b05TYkloVW41X050RjdtZ1F5U01TRnJOSEthYTJpcDdPWVhJb0FvRGEteHgtbVhSS0lOVEZ3T2N5MTNpSUNWNXpETThZR0RvcFQwY2Q5R3ctRUFvM1ZtdFdMaXhGSnpPM2FiLUhORXNrem84cUpfVGpuQ0VmaGNsZUlxUVQ0dk4zQUE2cWFzUk8yM1R3cjc3dEczVw?oc=5",
-      "proposed_funding": "$30B",
+      "review_headline": "OpenAI rewrites ChatGPT Business Hub terms after legal language raises concerns - Digiday",
+      "review_url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPMHY2dFIzZkNmam5CdVdlYmpQUnJ3ZklzcHItbHUxbXBwOE80cWlnNXI5c0hHMWFESXJ6SjU3YnBhRnpqRTFWZ2hCSHRocGQyZlBfdTV3bEl0VHpteGhWSThrZ3E2QVBLbjFpVEZYN0JuN0lmODlRd2ZJQmxXdTdoaVZ5QlN0TVJOMUtmc3FyeFp0N1B5dnRlT2JZdXF1cVRSR3A0RXlUeUhEQQ?oc=5",
+      "proposed_funding": "",
       "proposed_stage": "",
-      "found_at": "2026-11-19T17:16:01Z"
+      "found_at": "2026-11-20T16:54:22Z"
     },
     {
       "name": "Sakana AI",
