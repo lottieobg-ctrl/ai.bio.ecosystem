@@ -17,54 +17,6 @@
     "auto": false
   },
   {
-    "name": "Neuro-Symbolic AI Meetup: Where Knowledge Graphs Meet LLMs",
-    "date": "2026-11-18",
-    "end_date": "2026-11-19",
-    "location": "Boston, MA, USA",
-    "url": "5chti8qr",
-    "type": "meetup",
-    "tags": [
-      "AI",
-      "biology"
-    ],
-    "virtual": false,
-    "description": "",
-    "source": "luma",
-    "auto": true
-  },
-  {
-    "name": "FinRegLab x Flourish Ventures Roundtable: Bank-Deployed AI",
-    "date": "2026-11-19",
-    "end_date": "2026-11-19",
-    "location": "Boston, MA, USA",
-    "url": "vurp429a",
-    "type": "meetup",
-    "tags": [
-      "AI",
-      "biology"
-    ],
-    "virtual": false,
-    "description": "",
-    "source": "luma",
-    "auto": true
-  },
-  {
-    "name": "FinRegLab x Flourish Ventures Roundtable: Liability in Consumer Financial AI Tools",
-    "date": "2026-11-19",
-    "end_date": "2026-11-19",
-    "location": "Boston, MA, USA",
-    "url": "yo3qlr79",
-    "type": "meetup",
-    "tags": [
-      "AI",
-      "biology"
-    ],
-    "virtual": false,
-    "description": "",
-    "source": "luma",
-    "auto": true
-  },
-  {
     "name": "NeurIPS 2026 — ML for Biology Workshop",
     "date": "2026-12-05",
     "end_date": "2026-12-06",
